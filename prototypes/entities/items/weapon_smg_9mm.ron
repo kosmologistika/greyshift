@@ -1,0 +1,32 @@
+[
+    (
+        type: "Entity",
+        id: "weapon_smg_9mm",
+        parents: ["base_gun"],
+        components: {
+            "DisplayName": (name: "9mm SMG"),
+            "Item": (size: Medium),
+            // tg parity: ballistic automatics fire every 0.2s.
+            "Gun": (fire_sound: Some((source: Path("audio/weapons/guns/c-20r.ogg"), volume_db: -3.0, pitch_var: 0.05, range_tiles: 26.0)), fire_rate: 5.0, selected_mode: FullAuto, available_modes: [FullAuto, SemiAuto]),
+            "RecoilKick": (px: 2.5),
+            "Container": (max_count: Some(1), max_item_size: Some(Medium)),
+            "SlotWhitelist": (tags: ["magazine_pistol_9mm", "magazine_pistol_9mm_extended"]),
+            "InternalContainer": (),
+            "SpreadConfig": (base: 0.05, growth_per_shot: 0.04, decay_per_sec: 1.5, max: 0.4),
+            "Glidable": (),
+            "PlacementLayer": Free,
+            "Appearance": (
+                sprite: (rsi: "textures/objects/weapons/guns/smgs/c20r", state: "icon"),
+                depth: BelowMobs,
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "weapon_smg_9mm_loaded",
+        parents: ["weapon_smg_9mm"],
+        components: {
+            "StartingContents": (contents: ["pistol_mag_9mm_extended"]),
+        },
+    ),
+]

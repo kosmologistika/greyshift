@@ -1,0 +1,8 @@
+lobby-title = ЛОББИ
+lobby-status-waiting = Ожидание игроков
+lobby-status-starting = Раунд начнётся через
+lobby-status-in-progress = Раунд идёт
+    .next = Ожидание следующего раунда
+lobby-not-ready = ГОТОВ?
+lobby-ready = ГОТОВ!
+lobby-observe = НАБЛЮДАТЬ

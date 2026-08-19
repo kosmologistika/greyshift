@@ -1,0 +1,20 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "Taken from space-wizards/space-station-14 Resources/Textures/Structures/Windows/window.rsi, originally https://github.com/vgstation-coders/vgstation13/raw/99cc2ab62d65a3a7b554dc7b21ff5f57c835f973/icons/turf/walls.dmi and modified by Swept, transparency tweaked by Ubaser",
+    ],
+    states: [
+        (name: "full"),
+        // Corner pieces: the direction picks which quadrant of the tile the
+        // art sits in, the number is the neighbour fill mask
+        (name: "window0", directions: Four),
+        (name: "window1", directions: Four),
+        (name: "window2", directions: Four),
+        (name: "window3", directions: Four),
+        (name: "window4", directions: Four),
+        (name: "window5", directions: Four),
+        (name: "window6", directions: Four),
+        (name: "window7", directions: Four),
+    ],
+)

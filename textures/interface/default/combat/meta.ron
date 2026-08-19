@@ -1,0 +1,13 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "https://github.com/tgstation/tgstation/commits/038707f0b1dec77bce817a2ccb804419547b86b0/icons/hud/screen_midnight.dmi",
+        "togglefull_flash (first frame) from https://github.com/tgstation/tgstation/commits/d08cd9dbee72c1e78d814232b9d53d5fb54d8cf8/icons/hud/screen_gen.dmi",
+    ],
+    states: [
+        (name: "combat_off"),
+        (name: "combat"),
+        (name: "togglefull_flash"),
+    ],
+)

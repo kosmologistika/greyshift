@@ -1,0 +1,14 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "Taken from space-station-14 at Resources/Textures/Structures/Doors/MineralDoors/wood_door.rsi, itself taken from tgstation at https://github.com/tgstation/tgstation/commit/a5eaa18d2192ef9dd7c8d5b8f4ff22bcf304cdd1",
+    ],
+    // Retimed from the source's 0.2s frames to match the airlock's 0.6s transit.
+    states: [
+        (name: "closed"),
+        (name: "open"),
+        (name: "opening", delays: [[0.1, 0.1, 0.1, 0.1, 0.1, 0.1]], loops: false),
+        (name: "closing", delays: [[0.1, 0.1, 0.1, 0.1, 0.1, 0.1]], loops: false),
+    ],
+)

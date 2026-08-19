@@ -1,0 +1,20 @@
+[
+    (
+        type: "Entity",
+        id: "crowbar",
+        parents: ["base_melee_weapon"],
+        components: {
+            "DisplayName": (name: "crowbar"),
+            "Item": (size: Small),
+            "MeleeWeapon": (hit_sound: Some((source: Path("audio/weapons/genhit3.ogg"), volume_db: -3.0, pitch_var: 0.08)), shape: Thrust(len: 1), damage: {Blunt: 8}, cooldown: 0.6, icon_facing_deg: 80),
+            "DamageOnHit": (damage: {Blunt: 8}),
+            "KnockbackOnHit": (tiles: 1),
+            "Glidable": (),
+            "PlacementLayer": Free,
+            "Appearance": (
+                sprite: (rsi: "textures/objects/tools/crowbar", state: "icon"),
+                depth: BelowMobs,
+            ),
+        },
+    ),
+]

@@ -1,0 +1,11 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "Taken from tgstation at commit 376684351da724cc125097ba3905d4b498365570, icons/effects/effects.dmi firing_effect states (added in tgstation PR 79212). Barrel offset is baked into each direction's art, so the effect renders at the shooter's center",
+    ],
+    states: [
+        (name: "firing_effect", directions: Eight, delays: [[0.1, 0.1, 0.1, 0.05], [0.1, 0.1, 0.1, 0.05], [0.1, 0.1, 0.1, 0.05], [0.1, 0.1, 0.1, 0.05], [0.1, 0.1, 0.1, 0.05], [0.1, 0.1, 0.1, 0.05], [0.1, 0.1, 0.1, 0.05], [0.1, 0.1, 0.1, 0.05]], loops: false),
+        (name: "firing_effect_red", directions: Eight, delays: [[0.1, 0.1, 0.1, 0.05], [0.1, 0.1, 0.1, 0.05], [0.1, 0.1, 0.1, 0.05], [0.1, 0.1, 0.1, 0.05], [0.1, 0.1, 0.1, 0.05], [0.1, 0.1, 0.1, 0.05], [0.1, 0.1, 0.1, 0.05], [0.1, 0.1, 0.1, 0.05]], loops: false),
+    ],
+)

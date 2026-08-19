@@ -1,0 +1,44 @@
+[
+    (
+        type: "Entity",
+        id: "mob_human",
+        components: {
+            "DisplayName": (name: "human"),
+            "Mob": (),
+            "Movable": (),
+            "Glidable": (),
+            "Pullable": (),
+            "Crawler": (),
+            "Damageable": (),
+            "MobThresholds": (thresholds: {0: Alive, 100: Dead}),
+            "MeleeWeapon": (
+                shape: Thrust(len: 1), damage: {Blunt: 5}, cooldown: 0.5,
+                swing_sound: Some((source: Path("audio/weapons/swing.ogg"), volume_db: -18.0, pitch_var: 0.12, range_tiles: 9.0)),
+                hit_sound: Some((source: Collection("unarmed_hit"), volume_db: -6.0, pitch_var: 0.1)),
+            ),
+            // A laser sears, a bullet thuds, a blade opens and a fist slaps -
+            // the blow decides, not the body. Beats whatever struck it, so a
+            // bullet into a person is never a ricochet off steel.
+            "StruckSound": (
+                by_type: {
+                    Heat: (source: Collection("flesh_seared"), volume_db: -4.0, pitch_var: 0.1),
+                    Piercing: (source: Collection("flesh_pierced"), volume_db: -4.0, pitch_var: 0.1),
+                    Slash: (source: Path("audio/weapons/slash.ogg"), volume_db: -4.0, pitch_var: 0.1),
+                    Blunt: (source: Path("audio/effects/meatslap.ogg"), volume_db: -4.0, pitch_var: 0.1),
+                },
+                // A hook carries no DamageOnHit, so it has no dominant type to
+                // look up. Without this a body hit by one lands in silence.
+                default: Some((source: Path("audio/effects/meatslap.ogg"), volume_db: -6.0, pitch_var: 0.1)),
+            ),
+            "Footsteps": (
+                crawl: Some((source: Path("audio/footsteps/crawl1.ogg"), volume_db: -16.0, pitch_var: 0.05, range_tiles: 3.0)),
+            ),
+            "Hands": (),
+            "Eyes": (),
+            "Appearance": (
+                sprite: (rsi: "textures/mobs/human", state: "idle"),
+                depth: Mobs,
+            ),
+        },
+    ),
+]

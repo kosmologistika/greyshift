@@ -1,0 +1,33 @@
+[
+    (
+        type: "Entity",
+        id: "weapon_rifle_mosin",
+        parents: ["base_gun"],
+        components: {
+            "DisplayName": (name: "Mosin-Nagant"),
+            "Item": (size: Large),
+            "Gun": (fire_sound: Some((source: Path("audio/weapons/guns/atreides.ogg"), volume_db: 0.0, pitch_var: 0.05, range_tiles: 34.0)), fire_rate: 1.0, selected_mode: SemiAuto, available_modes: [SemiAuto]),
+            "RecoilKick": (px: 6.0),
+            "AmmoStore": (rounds: 0, capacity: 5),
+            "ShotSpec": (projectile_proto: "bullet_762"),
+            "Ejects": (spent_casing: Some("casing_762")),
+            "LoadsCartridge": (windup_secs: 1.0),
+            "ManualCycle": (),
+            "SpreadConfig": (base: 0.005, growth_per_shot: 0.02, decay_per_sec: 0.5, max: 0.1),
+            "Glidable": (),
+            "PlacementLayer": Free,
+            "Appearance": (
+                sprite: (rsi: "textures/objects/weapons/guns/snipers/bolt_gun_wood", state: "base"),
+                depth: BelowMobs,
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "weapon_rifle_mosin_loaded",
+        parents: ["weapon_rifle_mosin"],
+        components: {
+            "AmmoStore": (rounds: 5),
+        },
+    ),
+]

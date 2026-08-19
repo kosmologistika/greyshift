@@ -1,0 +1,29 @@
+[
+    (
+        type: "Entity",
+        id: "wall_solid",
+        parents: ["wall_base"],
+        components: {
+            "DisplayName": (name: "solid wall"),
+            "Damageable": (),
+            // Tougher than an airlock (100) or a window (50) - a wall is the
+            // slowest thing on the station to chew through. Drops nothing yet:
+            // there is no material sheet to spawn.
+            "Destructible": (thresholds: [
+                (
+                    trigger: TotalDamage(150),
+                    behaviors: [
+                        PlaySound((source: Collection("destroy_metal"), volume_db: -2.0, pitch_var: 0.08)),
+                        Destroy,
+                    ],
+                ),
+            ]),
+            "StruckSound": (default: Some((source: Collection("hit_metal"), volume_db: -4.0, pitch_var: 0.1))),
+            "IconSmooth": (state_prefix: "solid"),
+            "Appearance": (
+                sprite: (rsi: "textures/structures/walls/solid", state: "default"),
+                depth: Walls,
+            ),
+        },
+    ),
+]

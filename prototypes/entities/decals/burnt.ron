@@ -1,0 +1,46 @@
+[
+    (
+        type: "Entity",
+        id: "decal_burnt",
+        abstract: true,
+        components: {
+            "DisplayName": (name: "scorch mark"),
+            "PlacementLayer": Decal,
+            "Scenery": (),
+            "Appearance": (depth: FloorOverlay),
+            "SpriteTint": ((red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_burnt_0",
+        parents: ["decal_burnt"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/burnt", state: "burnt_0")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_burnt_1",
+        parents: ["decal_burnt"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/burnt", state: "burnt_1")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_burnt_2",
+        parents: ["decal_burnt"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/burnt", state: "burnt_2")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_burnt_3",
+        parents: ["decal_burnt"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/burnt", state: "burnt_3")),
+        },
+    ),
+]

@@ -1,0 +1,12 @@
+[
+    (
+        files: [
+            "floor1.ogg", "floor2.ogg", "floor3.ogg", "floor4.ogg", "floor5.ogg",
+            "plating1.ogg", "plating2.ogg", "plating3.ogg", "plating4.ogg", "plating5.ogg",
+            "crawl1.ogg",
+        ],
+        license: "CC-BY-SA-3.0",
+        copyright: "tgstation/tgstation, sound/effects/footstep",
+        source: "https://github.com/tgstation/tgstation",
+    ),
+]

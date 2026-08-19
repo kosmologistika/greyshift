@@ -1,0 +1,15 @@
+[
+    (
+        type: "Entity",
+        id: "wall_base",
+        abstract: true,
+        components: {
+            "Solid": (),
+            "BlocksAttack": (),
+            "Occluder": (),
+            "PlacementLayer": Solid,
+            // Every wall smooths against every other, whatever it is made of
+            "IconSmooth": (key: "wall"),
+        },
+    ),
+]

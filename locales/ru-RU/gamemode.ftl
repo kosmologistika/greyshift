@@ -1,0 +1,11 @@
+gamemode-scoreboard = СЧЁТ
+gamemode-match-timer = ОСТАЛОСЬ
+gamemode-match-won = МАТЧ ВЫИГРАН
+gamemode-match-draw = НИЧЬЯ
+gamemode-match-timeout = ВРЕМЯ ВЫШЛО
+gamemode-round-won = РАУНД ВЫИГРАН
+gamemode-round-ended = РАУНД ОКОНЧЕН
+gamemode-round-abandoned = НЕ ХВАТАЕТ ИГРОКОВ
+gamemode-round-aborted = РАУНД ПРЕРВАН
+gamemode-scope-cancelled = ОТМЕНЕНО
+gamemode-no-map = НЕТ КАРТЫ

@@ -1,0 +1,12 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "Taken from space-wizards/space-station-14 Resources/Textures/Objects/Tools/crowbar.rsi, originally from tgstation at commit eea0599511b088fdab9d43e562210cdbd51c6a98",
+    ],
+    states: [
+        (name: "icon"),
+        (name: "inhand-left", directions: Four),
+        (name: "inhand-right", directions: Four),
+    ],
+)

@@ -1,0 +1,10 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "Taken from space-wizards/RobustToolbox Resources/Textures/error.rsi/error.png",
+    ],
+    states: [
+        (name: "error", delays: [[0.1, 0.1, 0.1, 0.1]]),
+    ],
+)

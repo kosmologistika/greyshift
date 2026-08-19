@@ -1,0 +1,12 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-NC-SA-3.0",
+    copyright: [
+        "Taken from space-wizards/space-station-14 Resources/Textures/Objects/Weapons/Melee/fireaxe.rsi, taken and modified by Taral from goonstation at commit b99c5dff45a6527bbf698bc00f7d24b8ca75a806",
+    ],
+    states: [
+        (name: "icon"),
+        (name: "inhand-left", directions: Four),
+        (name: "inhand-right", directions: Four),
+    ],
+)

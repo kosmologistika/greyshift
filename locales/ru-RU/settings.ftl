@@ -1,0 +1,16 @@
+settings-title = НАСТРОЙКИ
+settings-tab-general = ОБЩИЕ
+settings-tab-controls = УПРАВЛЕНИЕ
+settings-tab-sound = ЗВУК
+settings-tab-language = ЯЗЫК
+settings-sound-master = ГРОМКОСТЬ
+settings-sound-sfx = ЭФФЕКТЫ
+settings-category-gameplay = ИГРА
+settings-category-replay = ПОВТОР
+settings-category-tools = ИНСТРУМЕНТЫ
+settings-reset = СБРОСИТЬ ВСЕ
+settings-back = НАЗАД
+settings-logs = ПАПКА ЛОГОВ
+settings-press-key = > НАЖМИТЕ КЛАВИШУ <
+settings-ui-scale = МАСШТАБ ИНТЕРФЕЙСА
+settings-ui-scale-auto = АВТО ({ $scale }X)

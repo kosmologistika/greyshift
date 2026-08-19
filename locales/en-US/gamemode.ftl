@@ -1,0 +1,11 @@
+gamemode-scoreboard = SCORE
+gamemode-match-timer = TIME LEFT
+gamemode-match-won = MATCH WON
+gamemode-match-draw = MATCH DRAWN
+gamemode-match-timeout = TIME UP
+gamemode-round-won = ROUND WON
+gamemode-round-ended = ROUND ENDED
+gamemode-round-abandoned = NOT ENOUGH PLAYERS
+gamemode-round-aborted = ROUND ABORTED
+gamemode-scope-cancelled = CANCELLED
+gamemode-no-map = NO MAP

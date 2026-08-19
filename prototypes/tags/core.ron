@@ -1,0 +1,22 @@
+[
+    // Magazine families. A family is a physical fit, not a caliber: the drum
+    // and the pistol mag are both 9mm and do not interchange.
+    (
+        type: "Tag",
+        id: "magazine_pistol_9mm",
+    ),
+    (
+        type: "Tag",
+        id: "magazine_pistol_9mm_extended",
+    ),
+    (
+        type: "Tag",
+        id: "magazine_minigun",
+    ),
+    // Energy weapons draw from a cell rather than a magazine, so the slot takes
+    // any cell that fits by size.
+    (
+        type: "Tag",
+        id: "power_cell",
+    ),
+]

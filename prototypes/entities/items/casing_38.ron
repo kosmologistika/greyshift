@@ -1,0 +1,16 @@
+[
+    (
+        type: "Entity",
+        id: "casing_38",
+        components: {
+            "DisplayName": (name: ".38 spent casing"),
+            "Item": (size: Tiny),
+            "Glidable": (),
+            "PlacementLayer": Free,
+            "Appearance": (
+                sprite: (rsi: "textures/objects/weapons/guns/ammunition/casings/ammo_casing", state: "base-spent"),
+                depth: BelowMobs,
+            ),
+        },
+    ),
+]

@@ -1,0 +1,14 @@
+[
+    (
+        type: "Role",
+        id: "role_default",
+        name: "role-default",
+        body: "mob_human",
+    ),
+    (
+        type: "Role",
+        id: "role_observer",
+        name: "role-observer",
+        body: "mob_ghost",
+    ),
+]

@@ -1,0 +1,34 @@
+[
+    (
+        type: "Entity",
+        id: "rule_load_map",
+        hide_spawn_menu: true,
+        components: {
+            "LoadMapRule": (),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "rule_spawn_players",
+        hide_spawn_menu: true,
+        components: {
+            "SpawnPlayersRule": (),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "rule_last_alive",
+        hide_spawn_menu: true,
+        components: {
+            "LastAliveRule": (),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "rule_match_time_limit",
+        hide_spawn_menu: true,
+        components: {
+            "TimeLimitRule": (secs: 180),
+        },
+    ),
+]

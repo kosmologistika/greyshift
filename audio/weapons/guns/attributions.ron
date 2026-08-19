@@ -1,0 +1,33 @@
+[
+    (
+        files: ["mk58.ogg", "mateba.ogg", "atreides.ogg", "c-20r.ogg", "minigun.ogg"],
+        license: "CC-BY-SA-3.0",
+        copyright: "CM-SS13, via space-wizards/space-station-14",
+        source: "https://gitlab.com/cmdevs/colonial-warfare/-/tree/32cb5892413243cc74bb2d11df8e3085f8ef1164/sound/weapons",
+    ),
+    (
+        files: ["taser2.ogg"],
+        license: "CC-BY-SA-3.0",
+        copyright: "space-wizards/space-station-14, Resources/Audio/Weapons/Guns/Gunshots",
+        source: "https://github.com/space-wizards/space-station-14",
+    ),
+    (
+        files: ["harpoon.ogg"],
+        license: "CC0-1.0",
+        copyright: "space-wizards/space-station-14, Resources/Audio/Weapons/Guns/Gunshots",
+        source: "https://github.com/space-wizards/space-station-14",
+    ),
+    (
+        // ric4.ogg is deliberately absent: it is unattributed upstream.
+        files: ["ric1.ogg", "ric2.ogg", "ric3.ogg", "ric5.ogg"],
+        license: "CC-BY-SA-3.0",
+        copyright: "tgstation, via space-wizards/space-station-14",
+        source: "https://github.com/tgstation/tgstation/tree/7501504b0ea029d2cf1c0336d09db5c0959aa412/sound/weapons/effects",
+    ),
+    (
+        files: ["energy_metal1.ogg", "energy_metal2.ogg"],
+        license: "CC-BY-SA-3.0",
+        copyright: "Citadel Station 13, remixed to mono by metalgearsloth, via space-wizards/space-station-14",
+        source: "https://github.com/Citadel-Station-13/Citadel-Station-13-RP/tree/cc701aedb633d83eae8339a8b3712ad8ad99cca0/sound",
+    ),
+]

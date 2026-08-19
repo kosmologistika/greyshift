@@ -1,0 +1,42 @@
+// Wall-mounted fixtures. The entity sits on the *floor* tile beside the wall,
+// not on the wall itself: the tile stays walkable, and the wall is a neighbouring
+// occluder cell so shadows fall right with `PointLight.offset` left at zero.
+// `Facing` names the wall it hangs on, and the RSI's frame for that direction is
+// already drawn against that edge of the cell - which is why no sprite offset
+// exists anywhere. Colours are linear RGB; (1.0, 0.776, 0.617) is SS14's 5000K
+// #FFE4CE converted.
+[
+    (
+        type: "Entity",
+        id: "wall_light",
+        abstract: true,
+        components: {
+            "WallMount": (),
+            "PlacementLayer": WallMount,
+            "Facing": (South),
+            "Appearance": (depth: WallMounted),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "wall_light_tube",
+        parents: ["wall_light"],
+        components: {
+            "PointLight": (color: (1.0, 0.776, 0.617), energy: 1.5, radius: 8.0),
+            "Appearance": (
+                sprite: (rsi: "textures/structures/lighting/light_tube", state: "base"),
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "wall_light_small",
+        parents: ["wall_light"],
+        components: {
+            "PointLight": (color: (1.0, 0.776, 0.617), energy: 0.9, radius: 4.5),
+            "Appearance": (
+                sprite: (rsi: "textures/structures/lighting/light_small", state: "base"),
+            ),
+        },
+    ),
+]

@@ -1,0 +1,12 @@
+[
+    (
+        type: "GameMode",
+        id: "deathmatch",
+        name: "Deathmatch",
+        rules: [
+            "rule_deathmatch_min_players",
+            "rule_deathmatch_matches",
+            "rule_deathmatch_score",
+        ],
+    ),
+]

@@ -1,0 +1,39 @@
+[
+    (
+        files: [
+            "glass_smack.ogg",
+            "metal_thud1.ogg", "metal_thud2.ogg", "metal_thud3.ogg",
+        ],
+        license: "CC-BY-SA-3.0",
+        copyright: "space-wizards/space-station-14, Resources/Audio/Effects",
+        source: "https://github.com/space-wizards/space-station-14",
+    ),
+    (
+        files: [
+            "bullet_meat1.ogg", "bullet_meat2.ogg", "bullet_meat3.ogg", "bullet_meat4.ogg",
+            "energy_meat1.ogg", "energy_meat2.ogg",
+        ],
+        license: "CC-BY-SA-3.0",
+        copyright: "Citadel Station 13, remixed to mono by metalgearsloth, via space-wizards/space-station-14",
+        source: "https://github.com/Citadel-Station-13/Citadel-Station-13-RP/tree/cc701aedb633d83eae8339a8b3712ad8ad99cca0/sound",
+    ),
+    (
+        files: ["meatslap.ogg"],
+        license: "CC-BY-SA-3.0",
+        copyright: "space-wizards/space-station-14, Resources/Audio/Effects/Footsteps",
+        source: "https://github.com/space-wizards/space-station-14",
+    ),
+    (
+        // Destruction, not impact - SS14's WindowShatter / WoodDestroy /
+        // MetalSlam. Their MetalBreak is unusable: two files CC-BY-NC and
+        // three unattributed, so metal breakage borrows MetalSlam.
+        files: [
+            "window_shatter1.ogg", "window_shatter2.ogg", "window_shatter3.ogg",
+            "wood_destroy1.ogg", "wood_destroy2.ogg", "wood_destroy3.ogg",
+            "metal_slam1.ogg", "metal_slam2.ogg", "metal_slam3.ogg",
+        ],
+        license: "CC-BY-SA-3.0",
+        copyright: "space-wizards/space-station-14, Resources/Audio/Effects",
+        source: "https://github.com/space-wizards/space-station-14",
+    ),
+]

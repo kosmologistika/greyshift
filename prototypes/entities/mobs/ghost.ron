@@ -1,0 +1,25 @@
+[
+    (
+        type: "Entity",
+        id: "mob_ghost",
+        components: {
+            "DisplayName": (name: "ghost"),
+            "Mob": (),
+            "Movable": (),
+            "Glidable": (),
+            "BaseMoveSpeed": (2.0),
+            "IgnoresMobs": (),
+            "IgnoreSolid": (),
+            "Intangible": (),
+            "Ghost": (),
+            "GhostPvsLayer": (),
+            "GhostPvsSight": (),
+            "Eyes": (draw_fov: false),
+            "Appearance": (
+                sprite: (rsi: "textures/mobs/ghost_human", state: "idle"),
+                depth: Mobs,
+                unlit: true,
+            ),
+        },
+    ),
+]

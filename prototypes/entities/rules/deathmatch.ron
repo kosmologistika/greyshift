@@ -1,0 +1,34 @@
+[
+    (
+        type: "Entity",
+        id: "rule_deathmatch_matches",
+        hide_spawn_menu: true,
+        components: {
+            "MatchSequenceRule": (
+                maps: ["pudge_wars", "test_room"],
+                rules: [
+                    "rule_spawn_players",
+                    "rule_last_alive",
+                    "rule_match_time_limit",
+                ],
+                intermission_secs: 0,
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "rule_deathmatch_min_players",
+        hide_spawn_menu: true,
+        components: {
+            "MinPlayersRule": (count: 2),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "rule_deathmatch_score",
+        hide_spawn_menu: true,
+        components: {
+            "MatchScoreRule": (target: 3),
+        },
+    ),
+]

@@ -1,0 +1,14 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "Taken from space-wizards/space-station-14 Resources/Textures/Structures/Lighting/LightPosts/small_light_post.rsi, by ko4erga (discord)",
+    ],
+    states: [
+        (name: "base"),
+        (name: "glow"),
+        (name: "empty"),
+        (name: "broken"),
+        (name: "burned"),
+    ],
+)

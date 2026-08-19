@@ -1,0 +1,39 @@
+[
+    (
+        type: "Entity",
+        id: "spawn_point",
+        abstract: true,
+        components: {
+            "Marker": (),
+            "SpawnPoint": (),
+            "PlacementLayer": Free,
+            "Appearance": (
+                sprite: (rsi: "textures/markers/spawn_point", state: "any"),
+                depth: Overlays,
+                unlit: true,
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "spawn_point_any",
+        parents: ["spawn_point"],
+        components: {
+            "DisplayName": (name: "any spawn point"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "spawn_point_observer",
+        parents: ["spawn_point"],
+        components: {
+            "DisplayName": (name: "observer spawn point"),
+            "SpawnPoint": (role: "role_observer"),
+            "Appearance": (
+                sprite: (rsi: "textures/markers/spawn_point", state: "observer"),
+                depth: Overlays,
+                unlit: true,
+            ),
+        },
+    ),
+]

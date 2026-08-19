@@ -1,0 +1,36 @@
+[
+    (
+        type: "Entity",
+        id: "weapon_revolver_38",
+        parents: ["base_gun"],
+        components: {
+            "DisplayName": (name: ".38 revolver"),
+            "Item": (size: Small),
+            "Gun": (fire_sound: Some((source: Path("audio/weapons/guns/mateba.ogg"), volume_db: -1.0, pitch_var: 0.05, range_tiles: 28.0)), fire_rate: 2.0, selected_mode: SemiAuto, available_modes: [SemiAuto]),
+            "RecoilKick": (px: 5.0),
+            "AmmoStore": (rounds: 0, capacity: 6),
+            "ShotSpec": (projectile_proto: "bullet_38"),
+            "Ejects": (live_round: Some("cartridge_38"), spent_casing: Some("casing_38")),
+            "LoadsCartridge": (),
+            // A cylinder keeps its brass until it is swung out, and only takes
+            // rounds while it is.
+            "OpensByHand": (),
+            "RetainsBrass": (),
+            "SpreadConfig": (base: 0.02, growth_per_shot: 0.05, decay_per_sec: 2.0, max: 0.2),
+            "Glidable": (),
+            "PlacementLayer": Free,
+            "Appearance": (
+                sprite: (rsi: "textures/objects/weapons/guns/revolvers/deckard", state: "base"),
+                depth: BelowMobs,
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "weapon_revolver_38_loaded",
+        parents: ["weapon_revolver_38"],
+        components: {
+            "AmmoStore": (rounds: 6),
+        },
+    ),
+]

@@ -1,0 +1,76 @@
+// Light prototypes for the `light_test` map. `light` is the abstract base:
+// a `PointLight` emitter, a small_light_post `Appearance`, and a solid blocker
+// on the `Solid` placement layer (one per tile, like walls). The test variants
+// inherit it and override only the `PointLight` fields that differ from default
+// (color/energy/radius). NOTE on reflect RON: `[f32;3]` color and `Vec2` offset
+// are written as TUPLES - `color: (r, g, b)`, `offset: (x, y)` - not `[..]`/`(x:..)`.
+[
+    (
+        type: "Entity",
+        id: "light",
+        abstract: true,
+        components: {
+            "PointLight": (),
+            "Solid": (),
+            "PlacementLayer": Solid,
+            "Appearance": (
+                sprite: (rsi: "textures/structures/lighting/small_light_post", state: "base"),
+                depth: BelowMobs,
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "test_light",
+        parents: ["light"],
+        components: {},
+    ),
+    (
+        type: "Entity",
+        id: "test_light_red",
+        parents: ["light"],
+        components: {
+            "PointLight": (color: (1.0, 0.1, 0.1), energy: 1.5, radius: 6.0),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "test_light_green",
+        parents: ["light"],
+        components: {
+            "PointLight": (color: (0.1, 1.0, 0.1), energy: 1.5, radius: 6.0),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "test_light_blue",
+        parents: ["light"],
+        components: {
+            "PointLight": (color: (0.2, 0.4, 1.0), energy: 1.5, radius: 6.0),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "test_light_bright",
+        parents: ["light"],
+        components: {
+            "PointLight": (color: (1.0, 0.95, 0.85), energy: 4.0, radius: 9.0),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "test_light_dim",
+        parents: ["light"],
+        components: {
+            "PointLight": (color: (1.0, 0.95, 0.85), energy: 0.5, radius: 4.0),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "test_light_noshadow",
+        parents: ["light"],
+        components: {
+            "PointLight": (color: (1.0, 0.95, 0.85), energy: 1.5, radius: 6.0, cast_shadows: false),
+        },
+    ),
+]

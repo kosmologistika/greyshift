@@ -1,0 +1,10 @@
+[
+    (
+        type: "Map",
+        id: "test_room",
+        name: "Test Room",
+        map_path: "maps/test_room.map.ron",
+        min_players: 1,
+        max_players: 8,
+    ),
+]

@@ -1,0 +1,16 @@
+settings-title = SETTINGS
+settings-tab-general = GENERAL
+settings-tab-controls = CONTROLS
+settings-tab-sound = SOUND
+settings-tab-language = LANGUAGE
+settings-sound-master = MASTER
+settings-sound-sfx = EFFECTS
+settings-category-gameplay = GAMEPLAY
+settings-category-replay = REPLAY
+settings-category-tools = TOOLS
+settings-reset = RESET ALL
+settings-back = BACK
+settings-logs = OPEN LOGS
+settings-press-key = > PRESS A KEY <
+settings-ui-scale = UI SCALE
+settings-ui-scale-auto = AUTO ({ $scale }X)

@@ -1,0 +1,10 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "Taken from space-wizards/space-station-14 Resources/Textures/Effects/arcs.rsi, originally from tgstation at commit c545428822f1ee0d402b812221518632dbe198cb; frame delays shortened to fit the swing ghost lifetime",
+    ],
+    states: [
+        (name: "punch", delays: [[0.06, 0.06, 0.06, 0.06, 0.06]], loops: false),
+    ],
+)

@@ -1,0 +1,34 @@
+[
+    (
+        type: "Entity",
+        id: "weapon_rifle_burst_pulse",
+        parents: ["base_gun"],
+        components: {
+            "DisplayName": (name: "pulse burst rifle"),
+            "Item": (size: Large),
+            "Gun": (fire_sound: Some((source: Path("audio/weapons/guns/c-20r.ogg"), volume_db: -2.0, pitch_var: 0.05, range_tiles: 26.0)), 
+                fire_rate: 2.0,
+                selected_mode: Burst(count: 3, internal_rate: 12.0),
+                available_modes: [Burst(count: 3, internal_rate: 12.0), SemiAuto],
+            ),
+            "Container": (max_count: Some(1), max_item_size: Some(Medium)),
+            "SlotWhitelist": (tags: ["magazine_pistol_9mm", "magazine_pistol_9mm_extended"]),
+            "InternalContainer": (),
+            "SpreadConfig": (base: 0.02, growth_per_shot: 0.03, decay_per_sec: 1.5, max: 0.2),
+            "Glidable": (),
+            "PlacementLayer": Free,
+            "Appearance": (
+                sprite: (rsi: "textures/objects/weapons/guns/battery/pulse_carbine", state: "icon"),
+                depth: BelowMobs,
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "weapon_rifle_burst_pulse_loaded",
+        parents: ["weapon_rifle_burst_pulse"],
+        components: {
+            "StartingContents": (contents: ["pistol_mag_9mm_extended"]),
+        },
+    ),
+]

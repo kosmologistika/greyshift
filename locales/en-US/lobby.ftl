@@ -1,0 +1,8 @@
+lobby-title = LOBBY
+lobby-status-waiting = Waiting for players
+lobby-status-starting = Round starts in
+lobby-status-in-progress = Round in progress
+    .next = Waiting for next round
+lobby-not-ready = READY?
+lobby-ready = READY!
+lobby-observe = OBSERVE

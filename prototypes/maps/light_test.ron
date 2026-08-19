@@ -1,0 +1,10 @@
+[
+    (
+        type: "Map",
+        id: "light_test",
+        name: "Lighting Test Bench",
+        map_path: "maps/light_test.map.ron",
+        min_players: 1,
+        max_players: 8,
+    ),
+]

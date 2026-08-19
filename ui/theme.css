@@ -1,0 +1,551 @@
+@font-face {
+    font-family: "PixCyrillic";
+    src: url("fonts/PixCyrillic.ttf");
+}
+
+@font-face {
+    font-family: "m6x11";
+    src: url("fonts/m6x11.ttf");
+}
+
+@font-face {
+    font-family: "PressStart2P";
+    src: url("fonts/PressStart2P.ttf");
+}
+
+:root {
+    /* Colour tokens drawn from the HUD art itself: the combat toggle's
+       charcoal frame ramp (16161a / 27272d / 36363c / 3c3c42) and its
+       steel-blue figure ramp (384f5a / 5a7a8f / 859db5) */
+    --bg-screen: #16161a;
+    --bg-surface: #1e1e24;
+    --bg-panel: #27272d;
+    --bg-hover: #36363c;
+    --bg-overlay: rgba(10, 10, 13, 0.8);
+    --border-dim: #46464e;
+    --text-bright: #ffffff;
+    --text-primary: #e8e8ec;
+    --text-dim: #9a9aa6;
+    --text-disabled: #64646e;
+    --accent: #859db5;
+    --danger: #e06c75;
+
+    /* Button tints: multiplied over the grayscale 9-slice art, so each is
+       the colour of the sprite's brightest pixel */
+    --btn-secondary: #52525e;
+    --btn-secondary-hover: #686876;
+    --btn-primary: #4c697a;
+    --btn-primary-hover: #5a7a8f;
+    --btn-danger: #a05560;
+    --btn-danger-hover: #c06a76;
+    --btn-success: #60a055;
+    --btn-success-hover: #76c06a;
+    --btn-disabled: #26262c;
+    --panel-tint: #3c3c46;
+    --well-tint: #42424c;
+
+    /* Type ramp: whole physical pixels at UiScale(2.0) */
+    --font-title: 18px;
+    --font-heading: 13px;
+    --font-body: 10px;
+    --font-small: 9px;
+
+    /* Spacing scale */
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+
+    --hover-fade: 0.08s;
+
+    font-family: "PixCyrillic";
+    font-size: var(--font-body);
+    color: var(--text-primary);
+    -bevy-font-smooth: none;
+    line-height: 1.0;
+}
+
+/* Full-screen centred column, the shape every screen root shares. Kept off
+   :root so a stylesheet attached to a lone widget doesn't inherit it */
+.screen-root {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.overlay {
+    background-color: var(--bg-overlay);
+}
+
+.screen {
+    background-color: var(--bg-screen);
+}
+
+.title {
+    font-size: var(--font-title);
+}
+
+/* The game's name on the main menu: triple the title scale keeps the
+   pixel grid intact */
+.logo {
+    font-size: 54px;
+    color: var(--text-bright);
+}
+
+.heading {
+    font-size: var(--font-heading);
+    margin-top: var(--space-2);
+}
+
+.dim {
+    color: var(--text-dim);
+    font-size: var(--font-small);
+}
+
+.mono {
+    font-family: "PressStart2P";
+    font-size: 9px;
+}
+
+.c-bright { color: var(--text-bright); }
+.c-primary { color: var(--text-primary); }
+.c-dim { color: var(--text-dim); }
+.c-accent { color: var(--accent); }
+.c-danger { color: var(--danger); }
+
+.panel {
+    flex-direction: column;
+    align-items: stretch;
+    -bevy-image: url("textures/interface/panel.png");
+    -bevy-image-mode: sliced(4px);
+    -bevy-image-color: var(--panel-tint);
+}
+
+.settings-panel {
+    width: 320px;
+    height: 300px;
+}
+
+.pause-panel {
+    width: 200px;
+}
+
+.join-panel {
+    width: 240px;
+}
+
+/* The panel art draws in the content box, so the panel itself never pads;
+   this inner wrapper carries the spacing for whatever sits in the frame.
+   Its row gap is also the one true title-to-content offset - no spacers */
+.pad {
+    flex-grow: 1;
+    min-height: 0px;
+    padding: var(--space-3);
+    flex-direction: column;
+    align-items: stretch;
+    row-gap: var(--space-2);
+}
+
+/* Past the strict fit the UI space is shorter than the big panels; the
+   compact class on the styling root shrinks them to keep fitting. Sits
+   before .pad.tight so tight pads stay the tighter of the two. The panel
+   size pair must match COMPACT_SPACE in crates/client/src/ui/mod.rs */
+.compact .settings-panel {
+    width: 288px;
+    height: 240px;
+}
+
+.compact .pad {
+    padding: var(--space-2);
+    row-gap: var(--space-1);
+}
+
+.pad.center {
+    align-items: center;
+}
+
+.pad.tight {
+    padding: 3px var(--space-2);
+    row-gap: 1px;
+}
+
+.tab-bar {
+    border-bottom: 1px solid var(--border-dim);
+    column-gap: var(--space-2);
+}
+
+.tab {
+    padding: var(--space-1) var(--space-2);
+    column-gap: 3px;
+    border-bottom: 2px solid transparent;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    transition: border-bottom-color var(--hover-fade);
+}
+
+.tab:hover {
+    border-bottom-color: var(--border-dim);
+}
+
+.tab.active {
+    border-bottom-color: var(--accent);
+}
+
+.tab.active text {
+    color: var(--text-primary);
+}
+
+.body {
+    flex-grow: 1;
+    min-height: 0px;
+    flex-direction: column;
+    align-items: stretch;
+    row-gap: var(--space-1);
+}
+
+.list-row {
+    flex-grow: 1;
+    min-height: 0px;
+    align-items: stretch;
+    column-gap: var(--space-1);
+}
+
+.rebind-row {
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px 0px;
+}
+
+.volume-row {
+    width: 100%;
+    align-items: center;
+    column-gap: var(--space-2);
+    padding: var(--space-1) 0px;
+}
+
+.volume-label {
+    flex-grow: 1;
+}
+
+.percent {
+    width: 36px;
+    color: var(--text-dim);
+    font-family: "m6x11";
+    font-size: 11px;
+}
+
+.reset-row {
+    justify-content: flex-end;
+}
+
+.footer {
+    justify-content: space-between;
+}
+
+/* Buttons: one grayscale 9-slice, kind = tint. Raised at rest, swaps to the
+   inset art while pressed, with the label nudged down a pixel. Tab buttons
+   stay flat, so the sprite hangs off .btn rather than the element */
+.btn {
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    -bevy-image: url("textures/interface/button.png");
+    -bevy-image-mode: sliced(4px);
+    -bevy-image-color: var(--btn-secondary);
+    transition: -bevy-image-color var(--hover-fade);
+}
+
+.btn:hover {
+    -bevy-image-color: var(--btn-secondary-hover);
+}
+
+.btn:active {
+    -bevy-image: url("textures/interface/button_pressed.png");
+}
+
+.btn:active text {
+    top: 1px;
+}
+
+.btn text {
+    margin: 2px 6px;
+}
+
+.btn.primary {
+    -bevy-image-color: var(--btn-primary);
+}
+
+.btn.primary:hover {
+    -bevy-image-color: var(--btn-primary-hover);
+}
+
+.btn.danger {
+    -bevy-image-color: var(--btn-danger);
+}
+
+.btn.danger:hover {
+    -bevy-image-color: var(--btn-danger-hover);
+}
+
+.btn.success {
+    -bevy-image-color: var(--btn-success);
+}
+
+.btn.success:hover {
+    -bevy-image-color: var(--btn-success-hover);
+}
+
+.wide {
+    width: 130px;
+    min-height: 26px;
+}
+
+.bind {
+    width: 104px;
+    min-height: 22px;
+    font-family: "m6x11";
+    font-size: 11px;
+}
+
+/* The capture prompt is localized; m6x11 has no Cyrillic, so it falls
+   back to the full-coverage face while listening */
+.prompt {
+    font-family: "PixCyrillic";
+    font-size: var(--font-small);
+}
+
+.corner-br {
+    position: absolute;
+    bottom: var(--space-3);
+    right: var(--space-3);
+}
+
+.corner-br text {
+    margin: 8px 14px;
+}
+
+.full {
+    width: 100%;
+    min-height: 28px;
+}
+
+.lang.active text {
+    color: var(--accent);
+}
+
+.scale-options {
+    column-gap: var(--space-1);
+    row-gap: var(--space-1);
+    flex-wrap: wrap;
+}
+
+.scale.active text {
+    color: var(--accent);
+}
+
+.menu-col {
+    width: 200px;
+    flex-direction: column;
+    align-items: stretch;
+    row-gap: var(--space-2);
+}
+
+/* Border colour and padding stay Rust-owned: focus swaps the colour per
+   frame, and the padding is bound to the label anchor constant */
+.field {
+    width: 100%;
+    min-width: 0px;
+    min-height: 24px;
+    font-size: 12px;
+    border-width: 1px;
+    align-items: center;
+    overflow-x: clip;
+    background-color: var(--bg-screen);
+}
+
+.btn.disabled, .btn.disabled:hover {
+    -bevy-image-color: var(--btn-disabled);
+}
+
+.btn.disabled:active {
+    -bevy-image: url("textures/interface/button.png");
+}
+
+.btn.disabled:active text {
+    top: 0px;
+}
+
+.btn.disabled text, .btn.disabled:hover text {
+    color: var(--text-disabled);
+}
+
+.chat-sidebar {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    border-left: 1px solid var(--border-dim);
+    background-color: var(--bg-surface);
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.chat-buttons {
+    padding: 6px;
+    column-gap: var(--space-1);
+    background-color: var(--bg-screen);
+}
+
+.small {
+    min-height: 18px;
+}
+
+.chat-tabs {
+    background-color: var(--bg-screen);
+    border-bottom: 1px solid var(--border-dim);
+    padding: 0px var(--space-1);
+    column-gap: 2px;
+}
+
+.badge {
+    font-family: "PressStart2P";
+    font-size: 8px;
+    color: var(--danger);
+}
+
+.chat-log {
+    flex-grow: 1;
+    min-height: 0px;
+    padding: var(--space-1);
+    column-gap: 2px;
+    align-items: stretch;
+}
+
+.composer {
+    width: 230px;
+    border: 1px solid var(--border-dim);
+    background-color: var(--bg-overlay);
+    padding: var(--space-1);
+    column-gap: var(--space-1);
+    align-items: stretch;
+}
+
+/* Log lines: colour is semantic per channel, breaking inside spaceless runs
+   so no pasted wall of characters escapes the column */
+.line {
+    -bevy-line-break: word-or-character;
+}
+
+.rule {
+    height: 1px;
+    flex-grow: 1;
+    background-color: var(--danger);
+}
+
+.divider {
+    align-items: center;
+    column-gap: var(--space-1);
+    margin: 2px 0px;
+}
+
+/* Context menu popups stay flat: rows arrive async, so no pad wrapper */
+.popup {
+    min-width: 56px;
+    flex-direction: column;
+    border: 1px solid var(--border-dim);
+    background-color: var(--bg-panel);
+}
+
+.menu-row {
+    width: 100%;
+    padding: 1px 5px;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: var(--font-small);
+    background-color: transparent;
+    transition: background-color var(--hover-fade);
+}
+
+.menu-row:hover {
+    background-color: var(--bg-hover);
+}
+
+.storage {
+    position: absolute;
+    bottom: 64px;
+    left: 40%;
+    min-width: 40px;
+    min-height: 40px;
+    column-gap: var(--space-1);
+    padding: 6px;
+    border: 1px solid var(--border-dim);
+    background-color: var(--bg-overlay);
+}
+
+.slot-cell {
+    width: 32px;
+    height: 32px;
+    background-color: var(--bg-panel);
+    transition: background-color var(--hover-fade);
+}
+
+.slot-cell:hover {
+    background-color: var(--bg-hover);
+}
+
+.examine {
+    position: absolute;
+    left: 38%;
+    top: 55%;
+    max-width: 360px;
+    flex-direction: column;
+    row-gap: 2px;
+    padding: var(--space-2);
+    border: 1px solid var(--border-dim);
+    background-color: var(--bg-overlay);
+}
+
+/* Scroll region: bevy's widgets drive thumb geometry and scroll position;
+   colours and widths live here */
+.scroll-list {
+    flex-grow: 1;
+    flex-basis: 0px;
+    min-height: 0px;
+    flex-direction: column;
+    align-items: stretch;
+    row-gap: var(--space-1);
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.scrollbar {
+    width: 7px;
+    -bevy-image: url("textures/interface/well.png");
+    -bevy-image-mode: sliced(2px);
+    -bevy-image-color: var(--well-tint);
+}
+
+.scrollbar-thumb {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    background-color: var(--border-dim);
+}
+
+/* Slider: the fill's width is Rust-driven from the value */
+.slider {
+    width: 110px;
+    height: 12px;
+    border: 1px solid var(--border-dim);
+    padding: 1px;
+    background-color: var(--bg-screen);
+}
+
+.slider-fill {
+    height: 100%;
+    background-color: var(--accent);
+}

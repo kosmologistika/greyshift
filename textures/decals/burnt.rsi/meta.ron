@@ -1,0 +1,13 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "burnt_* from space-wizards/space-station-14 Resources/Textures/Decals/burnt.rsi (states burnt1..4), originally from https://github.com/BeeStation/BeeStation-Hornet/blob/master/icons/turf/turf_damage.dmi at f2d6fbdf36aa0951049498cf28e028a38e32fe0b",
+    ],
+    states: [
+        (name: "burnt_0"),
+        (name: "burnt_1"),
+        (name: "burnt_2"),
+        (name: "burnt_3"),
+    ],
+)

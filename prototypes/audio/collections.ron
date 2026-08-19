@@ -1,0 +1,131 @@
+// A collection is picked from by a rotating cursor, so consecutive plays always
+// differ. Adding a take is a one-line edit here rather than a change to every
+// prototype that makes the noise.
+[
+    (
+        type: "SoundCollection",
+        id: "melee_hit",
+        files: [
+            "audio/weapons/genhit3.ogg",
+            "audio/weapons/slash.ogg",
+            "audio/weapons/pierce.ogg",
+        ],
+    ),
+    (
+        type: "SoundCollection",
+        id: "unarmed_hit",
+        files: [
+            "audio/weapons/boxingpunch1.ogg",
+            "audio/weapons/boxingpunch2.ogg",
+            "audio/weapons/boxingpunch3.ogg",
+        ],
+    ),
+    (
+        type: "SoundCollection",
+        id: "bullet_ricochet",
+        files: [
+            "audio/weapons/guns/ric1.ogg",
+            "audio/weapons/guns/ric2.ogg",
+            "audio/weapons/guns/ric3.ogg",
+            "audio/weapons/guns/ric5.ogg",
+        ],
+    ),
+    (
+        type: "SoundCollection",
+        id: "energy_impact",
+        files: [
+            "audio/weapons/guns/energy_metal1.ogg",
+            "audio/weapons/guns/energy_metal2.ogg",
+        ],
+    ),
+    // SS14's GlassSmack: what a window makes when struck. Their glass_crack
+    // set is the destruction sound, which is a different event.
+    (
+        type: "SoundCollection",
+        id: "hit_glass",
+        files: ["audio/effects/glass_smack.ogg"],
+    ),
+    (
+        type: "SoundCollection",
+        id: "hit_metal",
+        files: [
+            "audio/effects/metal_thud1.ogg",
+            "audio/effects/metal_thud2.ogg",
+            "audio/effects/metal_thud3.ogg",
+        ],
+    ),
+    // SS14 uses a boxing punch for its wooden structures; its chop.ogg is
+    // unattributed upstream and wood_destroy is again a destruction sound.
+    (
+        type: "SoundCollection",
+        id: "hit_wood",
+        files: ["audio/weapons/boxingpunch1.ogg"],
+    ),
+    (
+        type: "SoundCollection",
+        id: "flesh_pierced",
+        files: [
+            "audio/effects/bullet_meat1.ogg",
+            "audio/effects/bullet_meat2.ogg",
+            "audio/effects/bullet_meat3.ogg",
+            "audio/effects/bullet_meat4.ogg",
+        ],
+    ),
+    (
+        type: "SoundCollection",
+        id: "flesh_seared",
+        files: [
+            "audio/effects/energy_meat1.ogg",
+            "audio/effects/energy_meat2.ogg",
+        ],
+    ),
+    (
+        type: "SoundCollection",
+        id: "destroy_window",
+        files: [
+            "audio/effects/window_shatter1.ogg",
+            "audio/effects/window_shatter2.ogg",
+            "audio/effects/window_shatter3.ogg",
+        ],
+    ),
+    (
+        type: "SoundCollection",
+        id: "destroy_wood",
+        files: [
+            "audio/effects/wood_destroy1.ogg",
+            "audio/effects/wood_destroy2.ogg",
+            "audio/effects/wood_destroy3.ogg",
+        ],
+    ),
+    (
+        type: "SoundCollection",
+        id: "destroy_metal",
+        files: [
+            "audio/effects/metal_slam1.ogg",
+            "audio/effects/metal_slam2.ogg",
+            "audio/effects/metal_slam3.ogg",
+        ],
+    ),
+    (
+        type: "SoundCollection",
+        id: "footstep_plating",
+        files: [
+            "audio/footsteps/plating1.ogg",
+            "audio/footsteps/plating2.ogg",
+            "audio/footsteps/plating3.ogg",
+            "audio/footsteps/plating4.ogg",
+            "audio/footsteps/plating5.ogg",
+        ],
+    ),
+    (
+        type: "SoundCollection",
+        id: "footstep_floor",
+        files: [
+            "audio/footsteps/floor1.ogg",
+            "audio/footsteps/floor2.ogg",
+            "audio/footsteps/floor3.ogg",
+            "audio/footsteps/floor4.ogg",
+            "audio/footsteps/floor5.ogg",
+        ],
+    ),
+]

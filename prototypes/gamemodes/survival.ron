@@ -1,0 +1,11 @@
+[
+    (
+        type: "GameMode",
+        id: "survival",
+        name: "Survival",
+        rules: [
+            "rule_load_map",
+            "rule_spawn_players",
+        ],
+    ),
+]

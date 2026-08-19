@@ -1,0 +1,14 @@
+// Integration-test fixture, not content: a bare floor arena with no items,
+// windows or lights, so "what is on the map" assertions see only what the test
+// put there. `TestPair` pins `game.fallback_map` to it - deleting this breaks
+// every test that enters a round.
+[
+    (
+        type: "Map",
+        id: "test_bare_arena",
+        name: "Test Bare Arena",
+        map_path: "maps/testing/bare_arena.map.ron",
+        min_players: 1,
+        max_players: 8,
+    ),
+]

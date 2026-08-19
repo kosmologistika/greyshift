@@ -1,0 +1,32 @@
+[
+    (
+        type: "Entity",
+        id: "weapon_laser_pistol",
+        parents: ["base_gun"],
+        components: {
+            "DisplayName": (name: "laser pistol"),
+            "Item": (size: Small),
+            "Gun": (fire_sound: Some((source: Path("audio/weapons/guns/taser2.ogg"), volume_db: -4.0, pitch_var: 0.05, range_tiles: 22.0)), fire_rate: 3.0, selected_mode: SemiAuto, available_modes: [SemiAuto]),
+            "RecoilKick": (px: 2.0),
+            "ShotSpec": (projectile_proto: "projectile_laser_red", cost: 25),
+            "Container": (max_count: Some(1), max_item_size: Some(Small)),
+            "SlotWhitelist": (tags: ["power_cell"]),
+            "InternalContainer": (),
+            "SpreadConfig": (base: 0.01, growth_per_shot: 0.04, decay_per_sec: 2.0, max: 0.2),
+            "Glidable": (),
+            "PlacementLayer": Free,
+            "Appearance": (
+                sprite: (rsi: "textures/objects/weapons/guns/battery/pulse_pistol", state: "icon"),
+                depth: BelowMobs,
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "weapon_laser_pistol_loaded",
+        parents: ["weapon_laser_pistol"],
+        components: {
+            "StartingContents": (contents: ["power_cell_small"]),
+        },
+    ),
+]

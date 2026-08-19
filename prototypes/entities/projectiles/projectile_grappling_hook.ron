@@ -1,0 +1,20 @@
+[
+    (
+        type: "Entity",
+        id: "projectile_grappling_hook",
+        components: {
+            "PullShooterOnHit": (),
+            "StopsAtBlocksAttack": (),
+            "AlignToFlight": (),
+            "StopsOnFirstDamageable": (),
+            "MaxFlightRange": (tiles: 8),
+            "FlightSpeed": (tiles_per_sec: 30.0),
+            "DespawnOnFlightEnd": (),
+            "Appearance": (
+                sprite: (rsi: "textures/objects/weapons/guns/launchers/grappling_gun", state: "hook"),
+                depth: Effects,
+                sprite_offset_radians: -1.5707964,
+            ),
+        },
+    ),
+]

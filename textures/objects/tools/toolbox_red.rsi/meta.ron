@@ -1,0 +1,13 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "Taken from space-wizards/space-station-14 Resources/Textures/Objects/Tools/Toolboxes/toolbox_red.rsi, originally from baystation at commit a929584d9db319eb7484113221be25cfa1d5dc09",
+    ],
+    states: [
+        (name: "icon"),
+        (name: "icon-open"),
+        (name: "inhand-left", directions: Four),
+        (name: "inhand-right", directions: Four),
+    ],
+)

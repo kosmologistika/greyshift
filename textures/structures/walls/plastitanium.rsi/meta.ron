@@ -1,0 +1,20 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "Taken from space-wizards/space-station-14 Resources/Textures/Structures/Walls/plastitanium.rsi, originally from tgstation at commit dfb73d28e68aa56c34c7c539448f713b78b6d4d5 and modified",
+    ],
+    states: [
+        (name: "default"),
+        // Corner pieces: the direction picks which quadrant of the tile the
+        // art sits in, the number is the neighbour fill mask
+        (name: "plastitanium0", directions: Four),
+        (name: "plastitanium1", directions: Four),
+        (name: "plastitanium2", directions: Four),
+        (name: "plastitanium3", directions: Four),
+        (name: "plastitanium4", directions: Four),
+        (name: "plastitanium5", directions: Four),
+        (name: "plastitanium6", directions: Four),
+        (name: "plastitanium7", directions: Four),
+    ],
+)

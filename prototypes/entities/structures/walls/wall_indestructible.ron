@@ -1,0 +1,17 @@
+[
+    (
+        type: "Entity",
+        id: "wall_indestructible",
+        parents: ["wall_base"],
+        // Map shells are built from this. It stays out of the damage model
+        // entirely, so making `wall_solid` breakable never perforates one
+        components: {
+            "DisplayName": (name: "indestructible wall"),
+            "IconSmooth": (state_prefix: "plastitanium"),
+            "Appearance": (
+                sprite: (rsi: "textures/structures/walls/plastitanium", state: "default"),
+                depth: Walls,
+            ),
+        },
+    ),
+]

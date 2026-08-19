@@ -1,0 +1,11 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "Taken from tgstation at commit 376684351da724cc125097ba3905d4b498365570, icons/effects/effects.dmi impact_effect states (impact_laser variants added in tgstation PR 79212)",
+    ],
+    states: [
+        (name: "impact_bullet", delays: [[0.1, 0.1, 0.1, 0.1, 0.1]], loops: false),
+        (name: "impact_laser_wall", delays: [[0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 1.0]], loops: false),
+    ],
+)

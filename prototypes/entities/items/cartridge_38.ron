@@ -1,0 +1,17 @@
+[
+    (
+        type: "Entity",
+        id: "cartridge_38",
+        components: {
+            "DisplayName": (name: ".38 cartridge"),
+            "Item": (size: Tiny),
+            "Cartridge": (projectile_proto: "bullet_38"),
+            "Glidable": (),
+            "PlacementLayer": Free,
+            "Appearance": (
+                sprite: (rsi: "textures/objects/weapons/guns/ammunition/casings/ammo_casing", state: "base"),
+                depth: BelowMobs,
+            ),
+        },
+    ),
+]

@@ -1,0 +1,24 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "Taken from InterBay13 at https://github.com/AndySok/InterBay13/commit/84824582fe1381d9ea6282b9da407994ab8ab509, backpack sling sprite edited by Boaz1111, wield sprites by RiceMar1244. Reagent fill sprites by RedBookcase on Github.",
+    ],
+    states: [
+        (name: "base"),
+        (name: "base1"),
+        (name: "bolt-open"),
+        (name: "inhand-left", directions: Four),
+        (name: "inhand-left-fill-1", directions: Four),
+        (name: "inhand-right", directions: Four),
+        (name: "inhand-right-fill-1", directions: Four),
+        (name: "wielded-inhand-left", directions: Four),
+        (name: "wielded-inhand-left-fill-1", directions: Four),
+        (name: "wielded-inhand-right", directions: Four),
+        (name: "wielded-inhand-right-fill-1", directions: Four),
+        (name: "equipped-BACKPACK", directions: Four),
+        (name: "equipped-back-fill-1", directions: Four),
+        (name: "equipped-SUITSTORAGE", directions: Four),
+        (name: "equipped-suitstorage-fill-1", directions: Four),
+    ],
+)

@@ -1,0 +1,15 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "Taken from space-wizards/space-station-14 Resources/Textures/Structures/Wallmounts/Lighting/light_tube.rsi, from CEV-Eris icons/obj/lighting.dmi, edited by Ubaser",
+        "Direction slots swapped from upstream: ours names the wall the fixture hangs on, SS14 names the way its light shines",
+    ],
+    states: [
+        (name: "base", directions: Four),
+        (name: "glow", directions: Four),
+        (name: "empty", directions: Four),
+        (name: "broken", directions: Four),
+        (name: "burned", directions: Four),
+    ],
+)

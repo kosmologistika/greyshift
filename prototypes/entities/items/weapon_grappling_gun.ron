@@ -1,0 +1,22 @@
+[
+    (
+        type: "Entity",
+        id: "weapon_grappling_gun",
+        parents: ["base_gun"],
+        components: {
+            "DisplayName": (name: "grappling gun"),
+            "Item": (size: Medium),
+            "Gun": (fire_sound: Some((source: Path("audio/weapons/guns/harpoon.ogg"), volume_db: -4.0, pitch_var: 0.05, range_tiles: 16.0)), fire_rate: 1.0, selected_mode: SemiAuto, available_modes: [SemiAuto]),
+            "AmmoStore": (rounds: 1, capacity: 1),
+            "ShotSpec": (projectile_proto: "projectile_grappling_hook"),
+            "RegenAmmo": (units_per_sec: 0.2),
+            "SpreadConfig": (base: 0.0, growth_per_shot: 0.0, decay_per_sec: 1.0, max: 0.0),
+            "Glidable": (),
+            "PlacementLayer": Free,
+            "Appearance": (
+                sprite: (rsi: "textures/objects/weapons/guns/launchers/grappling_gun", state: "base"),
+                depth: BelowMobs,
+            ),
+        },
+    ),
+]

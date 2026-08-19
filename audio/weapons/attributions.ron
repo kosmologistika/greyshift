@@ -1,0 +1,28 @@
+[
+    (
+        files: ["genhit3.ogg"],
+        license: "CC-BY-SA-3.0",
+        copyright: "tgstation, via space-wizards/space-station-14",
+        source: "https://github.com/tgstation/tgstation/blob/a7f525bce9a359ab5282fc754078cd4b5678a006/sound/weapons/genhit3.ogg",
+    ),
+    (
+        files: ["slash.ogg", "pierce.ogg"],
+        license: "CC-BY-SA-3.0",
+        copyright: "tgstation, via space-wizards/space-station-14",
+        source: "https://github.com/tgstation/tgstation/commit/106cd26fc00851a51dd362f3131120318d848a53",
+    ),
+    (
+        files: ["boxingpunch1.ogg", "boxingpunch2.ogg", "boxingpunch3.ogg"],
+        license: "CC-BY-3.0",
+        copyright: "space-wizards/space-station-14, Resources/Audio/Weapons",
+        source: "https://github.com/space-wizards/space-station-14",
+    ),
+    (
+        // SS14's Misc/woosh.ogg. Their own swing sound is punchmiss.ogg, which
+        // is unattributed upstream and so cannot be taken.
+        files: ["swing.ogg"],
+        license: "CC-BY-SA-3.0",
+        copyright: "SciFiSounds via freesound.org, edited by august-sun, via space-wizards/space-station-14",
+        source: "https://freesound.org/people/SciFiSounds/sounds/529925/",
+    ),
+]
