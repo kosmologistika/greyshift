@@ -14,6 +14,22 @@
             "WallMount": (),
             "PlacementLayer": WallMount,
             "Facing": (South),
+            // No `Damageable`, so nothing can reach this trigger yet: the
+            // fixture stands on walkable floor and would eat every swing and
+            // stray round aimed at that tile. #203 moves where it is struck,
+            // and the 10 goes live then - glass on a bracket, against a
+            // table's 40 and a wall's 150. `Demolish` ignores the trigger and
+            // runs the behaviors, which is what breaks it with its wall.
+            "Destructible": (thresholds: [
+                (
+                    trigger: TotalDamage(10),
+                    behaviors: [
+                        PlaySound((source: Collection("destroy_window"), volume_db: -2.0, pitch_var: 0.08)),
+                        SpawnEntities({"glass_shard": (min: 1, max: 1)}),
+                        Destroy,
+                    ],
+                ),
+            ]),
             "Appearance": (depth: WallMounted),
         },
     ),
@@ -22,6 +38,7 @@
         id: "wall_light_tube",
         parents: ["wall_light"],
         components: {
+            "DisplayName": (name: "light tube"),
             "PointLight": (color: (1.0, 0.776, 0.617), energy: 1.5, radius: 8.0),
             "Appearance": (
                 sprite: (rsi: "textures/structures/lighting/light_tube", state: "base"),
@@ -33,6 +50,7 @@
         id: "wall_light_small",
         parents: ["wall_light"],
         components: {
+            "DisplayName": (name: "small light"),
             "PointLight": (color: (1.0, 0.776, 0.617), energy: 0.9, radius: 4.5),
             "Appearance": (
                 sprite: (rsi: "textures/structures/lighting/light_small", state: "base"),
