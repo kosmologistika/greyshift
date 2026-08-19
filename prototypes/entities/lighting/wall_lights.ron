@@ -14,8 +14,12 @@
             "WallMount": (),
             "PlacementLayer": WallMount,
             "Facing": (South),
-            // Glass on a bracket: the softest thing on the station by a wide
-            // margin, next to a table's 40 and a wall's 150.
+            // No `Damageable`, so nothing can reach this trigger yet: the
+            // fixture stands on walkable floor and would eat every swing and
+            // stray round aimed at that tile. #203 moves where it is struck,
+            // and the 10 goes live then - glass on a bracket, against a
+            // table's 40 and a wall's 150. `Demolish` ignores the trigger and
+            // runs the behaviors, which is what breaks it with its wall.
             "Destructible": (thresholds: [
                 (
                     trigger: TotalDamage(10),
