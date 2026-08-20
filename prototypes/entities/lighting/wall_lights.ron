@@ -42,11 +42,11 @@
             "PointLight": (color: (1.0, 0.776, 0.617), energy: 1.5, radius: 8.0),
             "Appearance": (
                 sprite: (rsi: "textures/structures/lighting/light_tube", state: "base"),
+                // The lit part of the fixture, drawn over the housing and out
+                // of the lighting multiply. Without it a lamp is a grey bar in
+                // the dark room it is supposed to be lighting
+                layers: [(state: "glow", unshaded: true)],
             ),
-            // The lit part of the fixture, drawn over the housing and out of
-            // the lighting multiply. Without it a lamp is a grey bar in the
-            // dark room it is supposed to be lighting
-            "SpriteLayers": (layers: [(state: "glow", unshaded: true)]),
         },
     ),
     (
@@ -58,11 +58,11 @@
             "PointLight": (color: (1.0, 0.776, 0.617), energy: 0.9, radius: 4.5),
             "Appearance": (
                 sprite: (rsi: "textures/structures/lighting/light_small", state: "base"),
+                // The lit part of the fixture, drawn over the housing and out
+                // of the lighting multiply. Without it a lamp is a grey bar in
+                // the dark room it is supposed to be lighting
+                layers: [(state: "glow", unshaded: true)],
             ),
-            // The lit part of the fixture, drawn over the housing and out of
-            // the lighting multiply. Without it a lamp is a grey bar in the
-            // dark room it is supposed to be lighting
-            "SpriteLayers": (layers: [(state: "glow", unshaded: true)]),
         },
     ),
 ]

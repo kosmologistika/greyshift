@@ -36,14 +36,15 @@
             "Appearance": (
                 sprite: (rsi: "textures/structures/doors/airlock", state: "closed"),
                 depth: Doors,
+                // The status light, over the body and out of the lighting
+                // multiply so it reads in a dark corridor. Which `*_unlit`
+                // state it shows, and whether it shows at all, is the client's
+                // answer to the door's state - a closed airlock with nothing
+                // to report hides it
+                layers: [
+                    (key: Some("light"), state: "deny_unlit", unshaded: true, visible: false),
+                ],
             ),
-            // The status light, over the body and out of the lighting multiply
-            // so it reads in a dark corridor. Which `*_unlit` state it shows,
-            // and whether it shows at all, is the client's answer to the door's
-            // state - a closed airlock with nothing to report hides it
-            "SpriteLayers": (layers: [
-                (key: Some("light"), state: "deny_unlit", unshaded: true, visible: false),
-            ]),
         },
     ),
 ]
