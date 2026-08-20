@@ -52,4 +52,36 @@
             "Appearance": (sprite: (rsi: "textures/decals/blood", state: "pool")),
         },
     ),
+    (
+        type: "Entity",
+        id: "decal_blood_line",
+        parents: ["decal_blood"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/blood", state: "line")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_blood_drip_0",
+        parents: ["decal_blood"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/blood", state: "drip_0")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_blood_drip_1",
+        parents: ["decal_blood"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/blood", state: "drip_1")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_blood_drip_2",
+        parents: ["decal_blood"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/blood", state: "drip_2")),
+        },
+    ),
 ]
