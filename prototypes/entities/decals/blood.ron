@@ -85,6 +85,24 @@
             "Appearance": (sprite: (rsi: "textures/decals/blood", state: "drip_2")),
         },
     ),
+    // One heavy mark for a hit that landed all at once - a shotgun blast, a
+    // burst that stayed on target - rotated to the blow like the line.
+    (
+        type: "Entity",
+        id: "decal_blood_burst_0",
+        parents: ["decal_blood"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/blood", state: "burst_0")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_blood_burst_1",
+        parents: ["decal_blood"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/blood", state: "burst_1")),
+        },
+    ),
     // Painted onto the wall's own tile in the WallOverlay band, which draws
     // over the wall art and under anything standing in front of it. Reuses the
     // undirected splat art: a splatter has no grain to point anywhere.
