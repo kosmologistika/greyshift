@@ -11,6 +11,14 @@
             "PassesEnergyProjectiles": (),
             "StruckSound": (default: Some((source: Collection("hit_glass"), volume_db: -4.0, pitch_var: 0.1))),
             "Damageable": (),
+            // All, not Brute: a laser cracks glass like a crowbar does.
+            "DamageVisuals": (overlays: {
+                All: (rsi: "textures/structures/windows/cracks", steps: [
+                    (at: 10, state: "cracks_1"),
+                    (at: 25, state: "cracks_2"),
+                    (at: 40, state: "cracks_3"),
+                ]),
+            }),
             "Destructible": (thresholds: [
                 (
                     trigger: TotalDamage(50),

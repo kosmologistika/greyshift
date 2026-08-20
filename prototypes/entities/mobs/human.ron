@@ -11,6 +11,29 @@
             "Crawler": (),
             "Damageable": (),
             "MobThresholds": (thresholds: {0: Alive, 100: Dead}),
+            // Art steps authored at 10..100; the last moves down to 85 so the
+            // worst state reads "one hit from death" on someone still standing
+            // instead of only dressing corpses.
+            "DamageVisuals": (overlays: {
+                // The brute masters are grayscale; SS14 paints them #FF0000
+                // at draw time, and unpainted they read as soot.
+                Brute: (rsi: "textures/mobs/effects/brute_damage", tint: Some((red: 1.0, green: 0.0, blue: 0.0, alpha: 1.0)), steps: [
+                    (at: 10, state: "brute_10"),
+                    (at: 20, state: "brute_20"),
+                    (at: 30, state: "brute_30"),
+                    (at: 50, state: "brute_50"),
+                    (at: 70, state: "brute_70"),
+                    (at: 85, state: "brute_100"),
+                ]),
+                Burn: (rsi: "textures/mobs/effects/burn_damage", steps: [
+                    (at: 10, state: "burn_10"),
+                    (at: 20, state: "burn_20"),
+                    (at: 30, state: "burn_30"),
+                    (at: 50, state: "burn_50"),
+                    (at: 70, state: "burn_70"),
+                    (at: 85, state: "burn_100"),
+                ]),
+            }),
             "MeleeWeapon": (
                 shape: Thrust(len: 1), damage: {Blunt: 5}, cooldown: 0.5,
                 swing_sound: Some((source: Path("audio/weapons/swing.ogg"), volume_db: -18.0, pitch_var: 0.12, range_tiles: 9.0)),

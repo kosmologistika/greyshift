@@ -1,0 +1,15 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "Taken from space-wizards/space-station-14 Resources/Textures/Mobs/Effects/burn_damage.rsi (the Chest_Burn_* states, worn here as whole-body overlays), originally https://github.com/Citadel-Station-13/Citadel-Station-13/blob/971ddef989f7f4f365a714ef3d4df5dea2d53d9a/icons/mob/dam_mob.dmi, 100 drawn by Ubaser",
+    ],
+    states: [
+        (name: "burn_10", directions: Four),
+        (name: "burn_20", directions: Four),
+        (name: "burn_30", directions: Four),
+        (name: "burn_50", directions: Four),
+        (name: "burn_70", directions: Four),
+        (name: "burn_100", directions: Four),
+    ],
+)
