@@ -85,4 +85,42 @@
             "Appearance": (sprite: (rsi: "textures/decals/blood", state: "drip_2")),
         },
     ),
+    // On the floor tile beside the wall, facing it, drawn in the WallMounted
+    // band - the same placement every wall fixture uses. Reuses the undirected
+    // splat art: a splatter has no grain to point anywhere.
+    (
+        type: "Entity",
+        id: "decal_blood_wall",
+        abstract: true,
+        parents: ["decal_blood"],
+        components: {
+            "DisplayName": (name: "blood spatter"),
+            "PlacementLayer": WallMount,
+            "Appearance": (depth: WallMounted),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_blood_wall_0",
+        parents: ["decal_blood_wall"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/blood", state: "splat_0"), depth: WallMounted),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_blood_wall_1",
+        parents: ["decal_blood_wall"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/blood", state: "splat_2"), depth: WallMounted),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_blood_wall_2",
+        parents: ["decal_blood_wall"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/blood", state: "splat_3"), depth: WallMounted),
+        },
+    ),
 ]
