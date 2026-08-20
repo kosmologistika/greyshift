@@ -15,7 +15,9 @@
             // worst state reads "one hit from death" on someone still standing
             // instead of only dressing corpses.
             "DamageVisuals": (overlays: {
-                Brute: (rsi: "textures/mobs/effects/brute_damage", steps: [
+                // The brute masters are grayscale; SS14 paints them #FF0000
+                // at draw time, and unpainted they read as soot.
+                Brute: (rsi: "textures/mobs/effects/brute_damage", tint: Some((red: 1.0, green: 0.0, blue: 0.0, alpha: 1.0)), steps: [
                     (at: 10, state: "brute_10"),
                     (at: 20, state: "brute_20"),
                     (at: 30, state: "brute_30"),
