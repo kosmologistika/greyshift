@@ -1,0 +1,15 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "Taken from space-wizards/space-station-14 Resources/Textures/Mobs/Effects/brute_damage.rsi (the Chest_Brute_* states, worn here as whole-body overlays), drawn by Ubaser",
+    ],
+    states: [
+        (name: "brute_10", directions: Four),
+        (name: "brute_20", directions: Four),
+        (name: "brute_30", directions: Four),
+        (name: "brute_50", directions: Four),
+        (name: "brute_70", directions: Four),
+        (name: "brute_100", directions: Four),
+    ],
+)
