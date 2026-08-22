@@ -497,14 +497,13 @@
     background-color: var(--bg-hover);
 }
 
-/* Emote wheel: slice positions are computed in Rust (a circle is not a
-   flexbox); only the visuals live here */
+/* Emote wheel: hub and slice positions are computed in Rust (a circle is
+   not a flexbox, and the hub follows the cursor); only the visuals live
+   here. The fullscreen root is the click eater */
 .emote-wheel {
     position: absolute;
     width: 100%;
     height: 100%;
-    justify-content: center;
-    align-items: center;
 }
 
 .emote-wheel-hub {
