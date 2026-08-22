@@ -56,6 +56,8 @@
             "Footsteps": (
                 crawl: Some((source: Path("audio/footsteps/crawl1.ogg"), volume_db: -16.0, pitch_var: 0.05, range_tiles: 3.0)),
             ),
+            "Voice": ("human"),
+            "Deathgasp": (),
             "Hands": (),
             "Eyes": (),
             "Appearance": (

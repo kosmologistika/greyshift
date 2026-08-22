@@ -497,6 +497,32 @@
     background-color: var(--bg-hover);
 }
 
+/* Emote wheel: hub and slice positions are computed in Rust (a circle is
+   not a flexbox, and the hub follows the cursor); only the visuals live
+   here. The fullscreen root is the click eater */
+.emote-wheel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+
+.emote-slice {
+    width: 56px;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2px;
+    padding: 4px;
+    border: 1px solid var(--border-dim);
+    background-color: var(--bg-overlay);
+    transition: background-color var(--hover-fade);
+    font-size: var(--font-small);
+}
+
+.emote-slice:hover {
+    background-color: var(--bg-hover);
+}
+
 .examine {
     position: absolute;
     left: 38%;

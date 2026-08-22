@@ -1,0 +1,50 @@
+// The starter roster. Voice-colored sounds (scream, laugh, deathgasp) live
+// in the voice map (voices.ron); a clap is a clap for everyone, so its sound
+// rides the emote itself. Salute is deliberately silent.
+[
+    (
+        type: "Emote",
+        id: "scream",
+        name: "emote-name-scream",
+        category: Vocal,
+        icon: "textures/interface/emotes/scream.png",
+        message: "emote-msg-scream",
+        triggers: ["scream", "screams", "shriek", "shrieks", "yell", "yells"],
+    ),
+    (
+        type: "Emote",
+        id: "laugh",
+        name: "emote-name-laugh",
+        category: Vocal,
+        icon: "textures/interface/emotes/laugh.png",
+        message: "emote-msg-laugh",
+        triggers: ["laugh", "laughs", "giggle", "giggles", "chuckle", "chuckles"],
+    ),
+    (
+        type: "Emote",
+        id: "clap",
+        name: "emote-name-clap",
+        category: Hands,
+        icon: "textures/interface/emotes/clap.png",
+        message: "emote-msg-clap",
+        triggers: ["clap", "claps", "applaud", "applauds"],
+        sound: Some((source: Collection("clap"), volume_db: -6.0, pitch_var: 0.08, range_tiles: 7.0)),
+    ),
+    (
+        type: "Emote",
+        id: "salute",
+        name: "emote-name-salute",
+        category: Hands,
+        icon: "textures/interface/emotes/salute.png",
+        message: "emote-msg-salute",
+        triggers: ["salute", "salutes"],
+    ),
+    (
+        type: "Emote",
+        id: "deathgasp",
+        name: "emote-name-deathgasp",
+        category: Vocal,
+        message: "emote-msg-deathgasp",
+        server_only: true,
+    ),
+]

@@ -1,0 +1,14 @@
+[
+    (
+        files: ["clap.png", "laugh.png", "salute.png"],
+        license: "CC-BY-SA-3.0",
+        copyright: "Created by Sarahon, via space-wizards/space-station-14 Resources/Textures/Interface/Emotes",
+        source: "https://github.com/Sarahon",
+    ),
+    (
+        files: ["scream.png"],
+        license: "CC-BY-SA-3.0",
+        copyright: "Created by lzk228, based on a sprite by Sarahon, via space-wizards/space-station-14 Resources/Textures/Interface/Emotes",
+        source: "https://github.com/lzk228",
+    ),
+]
