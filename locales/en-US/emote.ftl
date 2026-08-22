@@ -9,3 +9,5 @@ emote-msg-laugh = laughs.
 emote-msg-clap = claps.
 emote-msg-salute = salutes.
 emote-msg-deathgasp = seizes up and falls limp...
+
+emote-denied-cooldown = You are emoting too quickly.
