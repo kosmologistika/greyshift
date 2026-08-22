@@ -128,4 +128,44 @@
             "audio/footsteps/floor5.ogg",
         ],
     ),
+    (
+        type: "SoundCollection",
+        id: "scream_male",
+        files: [
+            "audio/voice/human/malescream_1.ogg",
+            "audio/voice/human/malescream_2.ogg",
+            "audio/voice/human/malescream_3.ogg",
+            "audio/voice/human/malescream_4.ogg",
+            "audio/voice/human/malescream_5.ogg",
+        ],
+    ),
+    (
+        type: "SoundCollection",
+        id: "laugh_male",
+        files: [
+            "audio/voice/human/manlaugh1.ogg",
+            "audio/voice/human/manlaugh2.ogg",
+        ],
+    ),
+    (
+        type: "SoundCollection",
+        id: "deathgasp_male",
+        files: [
+            "audio/voice/human/male_deathgasp_1.ogg",
+            "audio/voice/human/male_deathgasp_2.ogg",
+            "audio/voice/human/male_deathgasp_3.ogg",
+            "audio/voice/human/male_deathgasp_4.ogg",
+            "audio/voice/human/male_deathgasp_5.ogg",
+        ],
+    ),
+    (
+        type: "SoundCollection",
+        id: "clap",
+        files: [
+            "audio/emotes/clap1.ogg",
+            "audio/emotes/clap2.ogg",
+            "audio/emotes/clap3.ogg",
+            "audio/emotes/clap4.ogg",
+        ],
+    ),
 ]

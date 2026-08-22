@@ -1,0 +1,15 @@
+// How a body sounds, keyed by emote id. #187 extends the same reference with
+// speech barks, so a mob screams and speaks in the same register. Ranges stay
+// at or under the 9-tile PVS radius: these sounds are anchored to the mob, and
+// a listener past replication would drop them.
+[
+    (
+        type: "Voice",
+        id: "human",
+        emotes: {
+            "scream": (source: Collection("scream_male"), volume_db: -4.0, pitch_var: 0.125, range_tiles: 9.0),
+            "laugh": (source: Collection("laugh_male"), volume_db: -6.0, pitch_var: 0.125, range_tiles: 9.0),
+            "deathgasp": (source: Collection("deathgasp_male"), volume_db: -4.0, pitch_var: 0.05, range_tiles: 9.0),
+        },
+    ),
+]
