@@ -8,6 +8,7 @@
         id: "human",
         emotes: {
             "scream": (source: Collection("scream_male"), volume_db: -4.0, pitch_var: 0.125, range_tiles: 9.0),
+            "pain": (source: Collection("scream_male"), volume_db: -4.0, pitch_var: 0.125, range_tiles: 9.0),
             "laugh": (source: Collection("laugh_male"), volume_db: -6.0, pitch_var: 0.125, range_tiles: 9.0),
             "deathgasp": (source: Collection("deathgasp_male"), volume_db: -4.0, pitch_var: 0.05, range_tiles: 9.0),
         },
