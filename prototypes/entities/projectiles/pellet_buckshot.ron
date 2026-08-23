@@ -18,7 +18,9 @@
             "Appearance": (
                 sprite: (rsi: "textures/objects/weapons/guns/projectiles/projectiles_tg", state: "pellet"),
                 depth: Effects,
-                sprite_offset_radians: 1.5707964,
+                // The tg sprite points the other way up than the projectiles2
+                // family, so the flight offset flips sign
+                sprite_offset_radians: -1.5707964,
             ),
         },
     ),
