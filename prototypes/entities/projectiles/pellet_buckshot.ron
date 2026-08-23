@@ -16,7 +16,7 @@
             "MuzzleFx": (sprite: (rsi: "textures/effects/muzzle_flash", state: "firing_effect")),
             "ImpactFx": (sprite: (rsi: "textures/effects/impact_fx", state: "impact_bullet")),
             "Appearance": (
-                sprite: (rsi: "textures/objects/weapons/guns/projectiles/projectiles2", state: "buckshot"),
+                sprite: (rsi: "textures/objects/weapons/guns/projectiles/projectiles_tg", state: "pellet"),
                 depth: Effects,
                 sprite_offset_radians: 1.5707964,
             ),
