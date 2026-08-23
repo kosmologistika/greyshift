@@ -30,4 +30,10 @@
         copyright: "Citadel Station 13, remixed to mono by metalgearsloth, via space-wizards/space-station-14",
         source: "https://github.com/Citadel-Station-13/Citadel-Station-13-RP/tree/cc701aedb633d83eae8339a8b3712ad8ad99cca0/sound",
     ),
+    (
+        files: ["shotgun.ogg", "batrifle_cock.ogg"],
+        license: "CC-BY-SA-3.0",
+        copyright: "CEV-Eris, via space-wizards/space-station-14",
+        source: "https://github.com/discordia-space/CEV-Eris/tree/01f7518e0f8177734a6579aba2bbf76024aa96c4/sound/weapons/guns",
+    ),
 ]
