@@ -11,6 +11,8 @@
             "AmmoStore": (rounds: 0, capacity: 5),
             "ShotSpec": (projectile_proto: "bullet_762"),
             "Ejects": (spent_casing: Some("casing_762")),
+            // A bolt gun keeps the fired case chambered until the stroke
+            "RetainsBrass": (),
             "LoadsCartridge": (windup_secs: 1.0),
             "ManualCycle": (),
             "SpreadConfig": (base: 0.005, growth_per_shot: 0.02, decay_per_sec: 0.5, max: 0.1),
