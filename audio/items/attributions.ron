@@ -1,0 +1,14 @@
+[
+    (
+        files: ["crowbar_pickup.ogg", "crowbar_drop.ogg"],
+        license: "CC-BY-SA-3.0",
+        copyright: "tgstation, sound/items/handling/tools",
+        source: "https://github.com/tgstation/tgstation/tree/376684351da7/sound/items/handling/tools",
+    ),
+    (
+        files: ["toolbox_pickup.ogg", "toolbox_drop.ogg"],
+        license: "CC-BY-SA-3.0",
+        copyright: "tgstation, sound/items/handling/toolbox",
+        source: "https://github.com/tgstation/tgstation/tree/376684351da7/sound/items/handling/toolbox",
+    ),
+]

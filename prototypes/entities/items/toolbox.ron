@@ -5,6 +5,10 @@
         components: {
             "DisplayName": (name: "toolbox"),
             "Item": (size: Medium),
+            "ItemSounds": (
+                pickup: Some((source: Path("audio/items/toolbox_pickup.ogg"), volume_db: -16.0, pitch_var: 0.05, range_tiles: 7.0)),
+                drop: Some((source: Path("audio/items/toolbox_drop.ogg"), volume_db: -14.0, pitch_var: 0.05, range_tiles: 7.0)),
+            ),
             "Container": (max_volume: Some(16), max_item_size: Some(Small)),
             "Pullable": (),
             "Glidable": (),
