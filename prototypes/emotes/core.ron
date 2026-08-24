@@ -47,4 +47,12 @@
         message: "emote-msg-deathgasp",
         server_only: true,
     ),
+    (
+        type: "Emote",
+        id: "pain",
+        name: "emote-name-pain",
+        category: Vocal,
+        message: "emote-msg-pain",
+        server_only: true,
+    ),
 ]

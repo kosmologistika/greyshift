@@ -58,6 +58,7 @@
             ),
             "Voice": ("human"),
             "Deathgasp": (),
+            "PainScream": (),
             "Hands": (),
             "Eyes": (),
             "Appearance": (
