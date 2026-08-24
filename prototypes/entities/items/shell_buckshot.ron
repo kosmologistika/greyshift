@@ -1,0 +1,37 @@
+[
+    (
+        type: "Entity",
+        id: "shell_buckshot",
+        components: {
+            "DisplayName": (name: "buckshot shell"),
+            "Tags": (["shell_shotgun"]),
+            "Item": (size: Tiny),
+            // A shell is its own one-round store: the tube holds shells, not
+            // counters, which is what lets mixed loads fire in chamber order.
+            "AmmoStore": (rounds: 1, capacity: 1),
+            "ShotSpec": (projectile_proto: "pellet_buckshot", pellets: 6),
+            "RetainsBrass": (),
+            "Ejects": (spent_casing: Some("casing_shotgun")),
+            "Glidable": (),
+            "PlacementLayer": Free,
+            "Appearance": (
+                sprite: (rsi: "textures/objects/weapons/guns/ammunition/casings/shotgun_shell", state: "base"),
+                depth: BelowMobs,
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "casing_shotgun",
+        components: {
+            "DisplayName": (name: "spent shotgun shell"),
+            "Item": (size: Tiny),
+            "Glidable": (),
+            "PlacementLayer": Free,
+            "Appearance": (
+                sprite: (rsi: "textures/objects/weapons/guns/ammunition/casings/shotgun_shell", state: "base-spent"),
+                depth: BelowMobs,
+            ),
+        },
+    ),
+]

@@ -10,11 +10,11 @@
             "RecoilKick": (px: 6.0),
             "AmmoStore": (rounds: 0, capacity: 5),
             "ShotSpec": (projectile_proto: "bullet_762"),
-            "Ejects": (spent_casing: Some("casing_762")),
+            "Ejects": (live_round: Some("cartridge_762"), spent_casing: Some("casing_762")),
             // A bolt gun keeps the fired case chambered until the stroke
             "RetainsBrass": (),
             "LoadsCartridge": (windup_secs: 1.0),
-            "ManualCycle": (),
+            "ManualCycle": (rack_sound: Some((source: Path("audio/weapons/guns/batrifle_cock.ogg"), volume_db: -4.0, pitch_var: 0.05, range_tiles: 10.0))),
             "SpreadConfig": (base: 0.005, growth_per_shot: 0.02, decay_per_sec: 0.5, max: 0.1),
             "Glidable": (),
             "PlacementLayer": Free,

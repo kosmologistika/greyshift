@@ -101,6 +101,10 @@
             prototype: "plating",
         ),
         (
+            pos: (-3, -6),
+            prototype: "weapon_shotgun_pump_loaded",
+        ),
+        (
             pos: (-2, -6),
             prototype: "plating",
         ),
@@ -117,12 +121,28 @@
             prototype: "plating",
         ),
         (
+            pos: (0, -6),
+            prototype: "weapon_shotgun_double_loaded",
+        ),
+        (
             pos: (1, -6),
             prototype: "plating",
         ),
         (
+            pos: (1, -6),
+            prototype: "shell_buckshot",
+        ),
+        (
+            pos: (1, -6),
+            prototype: "shell_buckshot",
+        ),
+        (
             pos: (2, -6),
             prototype: "plating",
+        ),
+        (
+            pos: (2, -6),
+            prototype: "weapon_shotgun_sawn_loaded",
         ),
         (
             pos: (3, -6),
@@ -651,8 +671,24 @@
             prototype: "plating",
         ),
         (
+            pos: (-2, 5),
+            prototype: "weapon_shotgun_sawn_loaded",
+        ),
+        (
+            pos: (-2, 5),
+            prototype: "shell_buckshot",
+        ),
+        (
+            pos: (-2, 5),
+            prototype: "shell_buckshot",
+        ),
+        (
             pos: (-1, 5),
             prototype: "plating",
+        ),
+        (
+            pos: (-1, 5),
+            prototype: "weapon_shotgun_double_loaded",
         ),
         (
             pos: (0, 5),
@@ -665,6 +701,10 @@
         (
             pos: (1, 5),
             prototype: "plating",
+        ),
+        (
+            pos: (1, 5),
+            prototype: "weapon_shotgun_pump_loaded",
         ),
         (
             pos: (2, 5),

@@ -1477,6 +1477,26 @@
             prototype: "weapon_rifle_mosin_loaded",
         ),
         (
+            pos: (-3, -2),
+            prototype: "weapon_shotgun_pump_loaded",
+        ),
+        (
+            pos: (-2, -2),
+            prototype: "weapon_shotgun_double_loaded",
+        ),
+        (
+            pos: (-1, -2),
+            prototype: "weapon_shotgun_sawn_loaded",
+        ),
+        (
+            pos: (0, -2),
+            prototype: "shell_buckshot",
+        ),
+        (
+            pos: (0, -2),
+            prototype: "shell_buckshot",
+        ),
+        (
             pos: (-2, -1),
             prototype: "weapon_smg_9mm_loaded",
         ),

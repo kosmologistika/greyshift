@@ -19,4 +19,10 @@
         type: "Tag",
         id: "power_cell",
     ),
+    // Shotgun shells are their own one-round stores; every 12-gauge tube
+    // takes the same family.
+    (
+        type: "Tag",
+        id: "shell_shotgun",
+    ),
 ]

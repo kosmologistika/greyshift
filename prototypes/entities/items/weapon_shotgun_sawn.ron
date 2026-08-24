@@ -1,0 +1,34 @@
+[
+    (
+        type: "Entity",
+        id: "weapon_shotgun_sawn",
+        parents: ["base_gun"],
+        components: {
+            "DisplayName": (name: "sawn-off shotgun"),
+            // Small is the whole point: it hides in a bag, and the wild cone
+            // is the price.
+            "Item": (size: Small),
+            "Gun": (fire_sound: Some((source: Path("audio/weapons/guns/shotgun.ogg"), volume_db: -1.0, pitch_var: 0.05, range_tiles: 30.0)), fire_rate: 3.0, selected_mode: SemiAuto, available_modes: [SemiAuto, Burst(count: 2, internal_rate: 14.0)]),
+            "RecoilKick": (px: 8.0),
+            "Container": (max_count: Some(2), max_item_size: Some(Tiny)),
+            "SlotWhitelist": (tags: ["shell_shotgun"]),
+            "InternalContainer": (),
+            "OpensByHand": (),
+            "SpreadConfig": (base: 0.28, growth_per_shot: 0.05, decay_per_sec: 2.0, max: 0.45),
+            "Glidable": (),
+            "PlacementLayer": Free,
+            "Appearance": (
+                sprite: (rsi: "textures/objects/weapons/guns/shotguns/sawn", state: "icon"),
+                depth: BelowMobs,
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "weapon_shotgun_sawn_loaded",
+        parents: ["weapon_shotgun_sawn"],
+        components: {
+            "StartingContents": (contents: ["shell_buckshot", "shell_buckshot"]),
+        },
+    ),
+]
