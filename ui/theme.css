@@ -497,17 +497,13 @@
     background-color: var(--bg-hover);
 }
 
-/* In-game HUD. Every anchor is absolute against the HUD root, which already
-   stops short of the chat sidebar. `display` deliberately never appears here:
-   Rust drives each widget's visibility from replicated state, and a rule
-   setting it would be reapplied over that every frame */
+/* In-game HUD. Anchoring is NOT here: every surface hangs off a zone root
+   positioned by `hud::zone::zone_node`, so these rules only describe a
+   widget's own interior. `display` is absent for the same kind of reason -
+   Rust drives visibility from replicated state, and a rule setting it would
+   be reapplied over that every frame */
 .hud-hands {
-    position: absolute;
-    bottom: 16px;
-    left: 0px;
-    right: 0px;
     flex-direction: row;
-    justify-content: center;
 }
 
 .hud-hand {
@@ -524,12 +520,7 @@
 }
 
 .hud-health {
-    position: absolute;
-    right: 16px;
-    top: 0px;
-    bottom: 0px;
     flex-direction: column;
-    justify-content: center;
 }
 
 .hud-health-doll {
@@ -542,9 +533,6 @@
    right to left, so row-reverse and column-reverse put the first-registered
    button nearest the corner */
 .hud-bar {
-    position: absolute;
-    right: 16px;
-    bottom: 16px;
     flex-direction: row-reverse;
     align-items: flex-end;
     column-gap: 2px;
