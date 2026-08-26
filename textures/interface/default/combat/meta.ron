@@ -3,7 +3,7 @@
     license: "CC-BY-SA-3.0",
     copyright: [
         "https://github.com/tgstation/tgstation/commits/038707f0b1dec77bce817a2ccb804419547b86b0/icons/hud/screen_midnight.dmi",
-        "togglefull_flash from https://github.com/tgstation/tgstation/commits/d08cd9dbee72c1e78d814232b9d53d5fb54d8cf8/icons/hud/screen_gen.dmi, all 39 frames as a horizontal strip",
+        "togglefull_flash from https://github.com/tgstation/tgstation/commits/d08cd9dbee72c1e78d814232b9d53d5fb54d8cf8/icons/hud/screen_gen.dmi, all 39 frames",
     ],
     states: [
         (name: "combat_off"),
