@@ -7,6 +7,7 @@ input-action-pull = Pull
 input-action-follow = Follow
 input-action-face = Face
 input-action-crawl = Crawl
+input-action-walk = Walk
 input-action-swap-hand = Swap Hand
 input-action-context-menu = Context Menu
 input-action-replay-pause = Pause / Resume

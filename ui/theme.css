@@ -517,6 +517,86 @@
     background-color: var(--bg-hover);
 }
 
+/* In-game HUD. Anchoring is NOT here: every surface hangs off a zone root
+   positioned by `hud::zone::zone_node`, so these rules only describe a
+   widget's own interior. `display` is absent for the same kind of reason -
+   Rust drives visibility from replicated state, and a rule setting it would
+   be reapplied over that every frame */
+.hud-hands {
+    flex-direction: row;
+}
+
+.hud-hand {
+    width: 32px;
+    height: 32px;
+}
+
+.hud-hand-overlay {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 32px;
+    height: 32px;
+}
+
+.hud-health {
+    flex-direction: column;
+}
+
+.hud-health-doll {
+    width: 32px;
+    height: 32px;
+}
+
+/* Button cluster, following tg's bottom-right grid: full tiles on the bottom
+   row, half-height strips stacked above them on a 17px pitch. Columns fill
+   right to left, so row-reverse and column-reverse put the first-registered
+   button nearest the corner */
+.hud-bar {
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    column-gap: 2px;
+}
+
+.hud-bar-column {
+    flex-direction: column-reverse;
+    align-items: center;
+    row-gap: 2px;
+}
+
+/* Rest-state dim so hover can brighten: the art is opaque, so a background
+   tint would never show through it */
+.hud-button {
+    -bevy-image-color: #c0c0c0;
+    transition: -bevy-image-color var(--hover-fade);
+}
+
+.hud-button:hover {
+    -bevy-image-color: #ffffff;
+}
+
+.hud-button:active {
+    -bevy-image-color: #8a8a8a;
+}
+
+.hud-tile {
+    width: 32px;
+    height: 32px;
+}
+
+.hud-strip {
+    width: 32px;
+    height: 15px;
+}
+
+.hud-button-overlay {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 32px;
+    height: 32px;
+}
+
 /* Emote wheel: hub and slice positions are computed in Rust (a circle is
    not a flexbox, and the hub follows the cursor); only the visuals live
    here. The fullscreen root is the click eater */
