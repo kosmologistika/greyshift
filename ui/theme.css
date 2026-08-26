@@ -497,6 +497,98 @@
     background-color: var(--bg-hover);
 }
 
+/* In-game HUD. Every anchor is absolute against the HUD root, which already
+   stops short of the chat sidebar. `display` deliberately never appears here:
+   Rust drives each widget's visibility from replicated state, and a rule
+   setting it would be reapplied over that every frame */
+.hud-hands {
+    position: absolute;
+    bottom: 16px;
+    left: 0px;
+    right: 0px;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.hud-hand {
+    width: 32px;
+    height: 32px;
+}
+
+.hud-hand-overlay {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 32px;
+    height: 32px;
+}
+
+.hud-health {
+    position: absolute;
+    right: 16px;
+    top: 0px;
+    bottom: 0px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hud-health-doll {
+    width: 32px;
+    height: 32px;
+}
+
+/* Button cluster, following tg's bottom-right grid: full tiles on the bottom
+   row, half-height strips stacked above them on a 17px pitch. Columns fill
+   right to left, so row-reverse and column-reverse put the first-registered
+   button nearest the corner */
+.hud-bar {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    column-gap: 2px;
+}
+
+.hud-bar-column {
+    flex-direction: column-reverse;
+    align-items: center;
+    row-gap: 2px;
+}
+
+/* Rest-state dim so hover can brighten: the art is opaque, so a background
+   tint would never show through it */
+.hud-button {
+    -bevy-image-color: #c0c0c0;
+    transition: -bevy-image-color var(--hover-fade);
+}
+
+.hud-button:hover {
+    -bevy-image-color: #ffffff;
+}
+
+.hud-button:active {
+    -bevy-image-color: #8a8a8a;
+}
+
+.hud-tile {
+    width: 32px;
+    height: 32px;
+}
+
+.hud-strip {
+    width: 32px;
+    height: 15px;
+}
+
+.hud-button-overlay {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 32px;
+    height: 32px;
+}
+
 /* Emote wheel: hub and slice positions are computed in Rust (a circle is
    not a flexbox, and the hub follows the cursor); only the visuals live
    here. The fullscreen root is the click eater */
