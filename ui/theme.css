@@ -434,6 +434,26 @@
     align-items: stretch;
 }
 
+/* The lobby's bounded chat card. Fixed size so the lobby stays a centred
+   block rather than a column that grows with the backlog; the height is
+   what the menu leaves at the 640x360 logical viewport */
+.lobby-chat {
+    width: 360px;
+    height: 160px;
+    border: 1px solid var(--border-dim);
+    background-color: var(--bg-surface);
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.lobby-composer {
+    border-top: 1px solid var(--border-dim);
+    background-color: var(--bg-overlay);
+    padding: var(--space-1);
+    column-gap: var(--space-1);
+    align-items: stretch;
+}
+
 /* Log lines: colour is semantic per channel, breaking inside spaceless runs
    so no pasted wall of characters escapes the column */
 .line {
