@@ -1,0 +1,111 @@
+// The human body plan (#215). Parts are invisible child entities - the mob's
+// own layers draw them - so a part carries only its ledger and its rules.
+// Sever bars drop once the mob is past half its death bar or dead - the
+// wounded come apart (SeverSpec::bar). Against the fire axe (Slash 25) that
+// means: a healthy mob never loses a limb (60 is three same-limb hits it
+// will not live to collect), while one sharp blow strips a limb off anyone
+// badly hurt (wounded bar 25) - most kills shed a limb from a victim still
+// breathing. The head's wounded bar (100) sits exactly at the death
+// threshold, so the living lose it only to one enormous sharp blow - a
+// part's meter never exceeds the mob's total. On a corpse the torso also
+// leaves the routing draw, so a carver strips the limbs and then works on
+// the head.
+[
+    (
+        type: "Entity",
+        id: "base_body_part",
+        abstract: true,
+        components: {
+            "Damageable": (),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "part_head",
+        parents: ["base_body_part"],
+        components: {
+            "BodyPart": (kind: Head, weight: 6, sever: Some((types: [Slash], threshold: 200, wounded: Some(100))), severed_prop: Some("severed_head")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "part_arm_left",
+        parents: ["base_body_part"],
+        components: {
+            "BodyPart": (kind: Arm, side: Some(Left), weight: 15, sever: Some((types: [Slash], threshold: 60, wounded: Some(25))), severed_prop: Some("severed_arm")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "part_arm_right",
+        parents: ["base_body_part"],
+        components: {
+            "BodyPart": (kind: Arm, side: Some(Right), weight: 15, sever: Some((types: [Slash], threshold: 60, wounded: Some(25))), severed_prop: Some("severed_arm")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "part_leg_left",
+        parents: ["base_body_part"],
+        components: {
+            "BodyPart": (kind: Leg, side: Some(Left), weight: 12, sever: Some((types: [Slash], threshold: 60, wounded: Some(25))), severed_prop: Some("severed_leg")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "part_leg_right",
+        parents: ["base_body_part"],
+        components: {
+            "BodyPart": (kind: Leg, side: Some(Right), weight: 12, sever: Some((types: [Slash], threshold: 60, wounded: Some(25))), severed_prop: Some("severed_leg")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "base_severed_part",
+        abstract: true,
+        parents: ["base_melee_weapon"],
+        components: {
+            "Item": (size: Medium),
+            "MeleeWeapon": (shape: Thrust(len: 1), damage: {Blunt: 5}, cooldown: 0.7),
+            "DamageOnHit": (damage: {Blunt: 3}),
+            "Glidable": (),
+            "PlacementLayer": Free,
+        },
+    ),
+    (
+        type: "Entity",
+        id: "severed_head",
+        parents: ["base_severed_part"],
+        components: {
+            "DisplayName": (name: "severed head"),
+            "Appearance": (
+                sprite: (rsi: "textures/mobs/human_parts", state: "head_m"),
+                depth: BelowMobs,
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "severed_arm",
+        parents: ["base_severed_part"],
+        components: {
+            "DisplayName": (name: "severed arm"),
+            "Appearance": (
+                sprite: (rsi: "textures/mobs/human_parts", state: "l_arm"),
+                depth: BelowMobs,
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "severed_leg",
+        parents: ["base_severed_part"],
+        components: {
+            "DisplayName": (name: "severed leg"),
+            "Appearance": (
+                sprite: (rsi: "textures/mobs/human_parts", state: "l_leg"),
+                depth: BelowMobs,
+            ),
+        },
+    ),
+]
