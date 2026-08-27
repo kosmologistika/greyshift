@@ -11,6 +11,10 @@
             "Crawler": (),
             "Damageable": (),
             "MobThresholds": (thresholds: {0: Alive, 100: Dead}),
+            "Body": (
+                parts: ["part_head", "part_arm_left", "part_arm_right", "part_leg_left", "part_leg_right"],
+                torso_weight: 40,
+            ),
             // Art steps authored at 10..100; the last moves down to 85 so the
             // worst state reads "one hit from death" on someone still standing
             // instead of only dressing corpses.
@@ -61,9 +65,23 @@
             "PainScream": (),
             "Hands": (),
             "Eyes": (),
+            // Composed from the syndicate part sheets so a severed part can
+            // vanish from the sprite (client body_visuals toggles the keyed
+            // layers). The base "full" state stays for anything that reads
+            // the base sprite as an icon; hide_base keeps it off the map.
+            // The sheets are pre-colored - no tint, a multiply turns them brown.
             "Appearance": (
-                sprite: (rsi: "textures/mobs/human", state: "idle"),
+                sprite: (rsi: "textures/mobs/human_parts", state: "full"),
                 depth: Mobs,
+                hide_base: true,
+                layers: [
+                    (state: "l_leg", key: Some("part_leg_left"), order: -5),
+                    (state: "r_leg", key: Some("part_leg_right"), order: -5),
+                    (state: "torso_m", order: -4),
+                    (state: "l_arm", key: Some("part_arm_left"), order: -3),
+                    (state: "r_arm", key: Some("part_arm_right"), order: -3),
+                    (state: "head_m", key: Some("part_head"), order: -2),
+                ],
             ),
         },
     ),
