@@ -1,4 +1,5 @@
 (
+    version: 1,
     entities: [
         (
             pos: (-12, -12),
@@ -621,6 +622,13 @@
             prototype: "plating",
         ),
         (
+            pos: (2, -8),
+            prototype: "wall_light_tube",
+            components: {
+                "Facing": (North),
+            },
+        ),
+        (
             pos: (3, -8),
             prototype: "plating",
         ),
@@ -639,6 +647,13 @@
         (
             pos: (6, -8),
             prototype: "floor_steel",
+        ),
+        (
+            pos: (6, -8),
+            prototype: "wall_light_tube",
+            components: {
+                "Facing": (West),
+            },
         ),
         (
             pos: (7, -8),
@@ -709,6 +724,13 @@
             prototype: "plating",
         ),
         (
+            pos: (-4, -7),
+            prototype: "wall_light_tube",
+            components: {
+                "Facing": (North),
+            },
+        ),
+        (
             pos: (-3, -7),
             prototype: "plating",
         ),
@@ -759,10 +781,6 @@
         (
             pos: (6, -7),
             prototype: "floor_steel",
-        ),
-        (
-            pos: (6, -7),
-            prototype: "test_light",
         ),
         (
             pos: (7, -7),
@@ -859,6 +877,10 @@
         (
             pos: (-3, -6),
             prototype: "plating",
+        ),
+        (
+            pos: (-3, -6),
+            prototype: "wall_light_tube",
         ),
         (
             pos: (-2, -6),
@@ -961,6 +983,10 @@
             prototype: "floor_steel",
         ),
         (
+            pos: (-8, -5),
+            prototype: "wall_light_tube",
+        ),
+        (
             pos: (-7, -5),
             prototype: "floor_steel",
         ),
@@ -1015,6 +1041,10 @@
         (
             pos: (6, -5),
             prototype: "floor_steel",
+        ),
+        (
+            pos: (6, -5),
+            prototype: "wall_light_tube",
         ),
         (
             pos: (7, -5),
@@ -1077,10 +1107,6 @@
             prototype: "floor_steel",
         ),
         (
-            pos: (-5, -4),
-            prototype: "test_light",
-        ),
-        (
             pos: (-4, -4),
             prototype: "floor_steel",
         ),
@@ -1131,10 +1157,6 @@
         (
             pos: (4, -4),
             prototype: "floor_steel",
-        ),
-        (
-            pos: (4, -4),
-            prototype: "test_light",
         ),
         (
             pos: (5, -4),
@@ -1337,6 +1359,10 @@
             prototype: "floor_steel",
         ),
         (
+            pos: (-7, -2),
+            prototype: "wall_light_tube",
+        ),
+        (
             pos: (-6, -2),
             prototype: "floor_steel",
         ),
@@ -1357,6 +1383,10 @@
             prototype: "plating",
         ),
         (
+            pos: (-3, -2),
+            prototype: "weapon_shotgun_pump_loaded",
+        ),
+        (
             pos: (-2, -2),
             prototype: "floor_steel",
         ),
@@ -1365,12 +1395,28 @@
             prototype: "test_light",
         ),
         (
+            pos: (-2, -2),
+            prototype: "weapon_shotgun_double_loaded",
+        ),
+        (
             pos: (-1, -2),
             prototype: "floor_steel",
         ),
         (
+            pos: (-1, -2),
+            prototype: "weapon_shotgun_sawn_loaded",
+        ),
+        (
             pos: (0, -2),
             prototype: "floor_steel",
+        ),
+        (
+            pos: (0, -2),
+            prototype: "shell_buckshot",
+        ),
+        (
+            pos: (0, -2),
+            prototype: "shell_buckshot",
         ),
         (
             pos: (1, -2),
@@ -1391,6 +1437,10 @@
         (
             pos: (5, -2),
             prototype: "floor_steel",
+        ),
+        (
+            pos: (5, -2),
+            prototype: "wall_light_tube",
         ),
         (
             pos: (6, -2),
@@ -1477,26 +1527,6 @@
             prototype: "weapon_rifle_mosin_loaded",
         ),
         (
-            pos: (-3, -2),
-            prototype: "weapon_shotgun_pump_loaded",
-        ),
-        (
-            pos: (-2, -2),
-            prototype: "weapon_shotgun_double_loaded",
-        ),
-        (
-            pos: (-1, -2),
-            prototype: "weapon_shotgun_sawn_loaded",
-        ),
-        (
-            pos: (0, -2),
-            prototype: "shell_buckshot",
-        ),
-        (
-            pos: (0, -2),
-            prototype: "shell_buckshot",
-        ),
-        (
             pos: (-2, -1),
             prototype: "weapon_smg_9mm_loaded",
         ),
@@ -1533,10 +1563,6 @@
             prototype: "floor_steel",
         ),
         (
-            pos: (3, -1),
-            prototype: "test_light",
-        ),
-        (
             pos: (4, -1),
             prototype: "floor_steel",
         ),
@@ -1557,12 +1583,15 @@
             prototype: "floor_steel",
         ),
         (
-            pos: (8, -1),
-            prototype: "floor_steel",
+            pos: (7, -1),
+            prototype: "wall_light_tube",
+            components: {
+                "Facing": (West),
+            },
         ),
         (
             pos: (8, -1),
-            prototype: "test_light",
+            prototype: "floor_steel",
         ),
         (
             pos: (9, -1),
@@ -1601,12 +1630,15 @@
             prototype: "floor_steel",
         ),
         (
-            pos: (-9, 0),
-            prototype: "test_light",
+            pos: (-8, 0),
+            prototype: "floor_steel",
         ),
         (
             pos: (-8, 0),
-            prototype: "floor_steel",
+            prototype: "wall_light_tube",
+            components: {
+                "Facing": (East),
+            },
         ),
         (
             pos: (-7, 0),
@@ -1769,6 +1801,13 @@
             prototype: "floor_steel",
         ),
         (
+            pos: (-5, 1),
+            prototype: "wall_light_tube",
+            components: {
+                "Facing": (East),
+            },
+        ),
+        (
             pos: (-4, 1),
             prototype: "plating",
         ),
@@ -1787,6 +1826,13 @@
         (
             pos: (-3, 1),
             prototype: "plating",
+        ),
+        (
+            pos: (-3, 1),
+            prototype: "wall_light_tube",
+            components: {
+                "Facing": (West),
+            },
         ),
         (
             pos: (-2, 1),
@@ -1835,6 +1881,13 @@
         (
             pos: (5, 1),
             prototype: "floor_steel",
+        ),
+        (
+            pos: (5, 1),
+            prototype: "wall_light_tube",
+            components: {
+                "Facing": (North),
+            },
         ),
         (
             pos: (6, 1),
@@ -1941,6 +1994,13 @@
             prototype: "plating",
         ),
         (
+            pos: (-1, 2),
+            prototype: "wall_light_tube",
+            components: {
+                "Facing": (North),
+            },
+        ),
+        (
             pos: (0, 2),
             prototype: "plating",
         ),
@@ -2041,16 +2101,16 @@
             prototype: "plating",
         ),
         (
+            pos: (-7, 3),
+            prototype: "wall_light_tube",
+        ),
+        (
             pos: (-6, 3),
             prototype: "plating",
         ),
         (
             pos: (-5, 3),
             prototype: "floor_steel",
-        ),
-        (
-            pos: (-5, 3),
-            prototype: "test_light",
         ),
         (
             pos: (-4, 3),
@@ -2107,10 +2167,6 @@
         (
             pos: (4, 3),
             prototype: "floor_steel",
-        ),
-        (
-            pos: (4, 3),
-            prototype: "test_light",
         ),
         (
             pos: (5, 3),
@@ -2197,6 +2253,10 @@
             prototype: "floor_steel",
         ),
         (
+            pos: (-1, 4),
+            prototype: "wall_light_tube",
+        ),
+        (
             pos: (0, 4),
             prototype: "floor_steel",
         ),
@@ -2223,6 +2283,13 @@
         (
             pos: (6, 4),
             prototype: "floor_steel",
+        ),
+        (
+            pos: (6, 4),
+            prototype: "wall_light_tube",
+            components: {
+                "Facing": (North),
+            },
         ),
         (
             pos: (7, 4),
@@ -2369,6 +2436,13 @@
             prototype: "floor_steel",
         ),
         (
+            pos: (8, 5),
+            prototype: "wall_light_tube",
+            components: {
+                "Facing": (West),
+            },
+        ),
+        (
             pos: (9, 5),
             prototype: "floor_steel",
         ),
@@ -2413,10 +2487,6 @@
             prototype: "floor_steel",
         ),
         (
-            pos: (-7, 6),
-            prototype: "test_light",
-        ),
-        (
             pos: (-6, 6),
             prototype: "floor_steel",
         ),
@@ -2445,10 +2515,6 @@
             prototype: "plating",
         ),
         (
-            pos: (-2, 6),
-            prototype: "test_light",
-        ),
-        (
             pos: (-1, 6),
             prototype: "floor_steel",
         ),
@@ -2471,6 +2537,10 @@
         (
             pos: (3, 6),
             prototype: "plating",
+        ),
+        (
+            pos: (3, 6),
+            prototype: "wall_light_tube",
         ),
         (
             pos: (4, 6),
@@ -2551,6 +2621,13 @@
         (
             pos: (-5, 7),
             prototype: "floor_steel",
+        ),
+        (
+            pos: (-5, 7),
+            prototype: "wall_light_tube",
+            components: {
+                "Facing": (East),
+            },
         ),
         (
             pos: (-4, 7),
@@ -2679,6 +2756,13 @@
         (
             pos: (-2, 8),
             prototype: "floor_steel",
+        ),
+        (
+            pos: (-2, 8),
+            prototype: "wall_light_tube",
+            components: {
+                "Facing": (North),
+            },
         ),
         (
             pos: (-1, 8),
@@ -2942,7 +3026,7 @@
         ),
         (
             pos: (-2, 10),
-            prototype: "test_light",
+            prototype: "wall_light_tube",
         ),
         (
             pos: (-1, 10),
