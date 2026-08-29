@@ -44,8 +44,14 @@
                 sprite: (rsi: "textures/structures/lighting/light_tube", state: "base"),
                 // The lit part of the fixture, drawn over the housing and out
                 // of the lighting multiply. Without it a lamp is a grey bar in
-                // the dark room it is supposed to be lighting
-                layers: [(state: "glow", unshaded: true)],
+                // the dark room it is supposed to be lighting. The soft glow
+                // over it is a sprite rather than a screen-space quad, so it
+                // hangs on the fixture and line of sight hides it with the
+                // fixture - it cannot spill past the wall the light stops at
+                layers: [
+                    (state: "glow", unshaded: true),
+                    (rsi: Some("textures/effects/light_glow"), state: "glow", unshaded: true),
+                ],
             ),
         },
     ),
@@ -58,7 +64,10 @@
             "PointLight": (color: (1.0, 0.776, 0.617), energy: 0.9, radius: 4.5),
             "Appearance": (
                 sprite: (rsi: "textures/structures/lighting/light_small", state: "base"),
-                layers: [(state: "glow", unshaded: true)],
+                layers: [
+                    (state: "glow", unshaded: true),
+                    (rsi: Some("textures/effects/light_glow"), state: "glow", unshaded: true),
+                ],
             ),
         },
     ),

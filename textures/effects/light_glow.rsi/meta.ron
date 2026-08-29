@@ -1,0 +1,10 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "Generated for rust-station-13 by Morbo: a soft radial falloff placed against each wall edge, so a mounted fixture's glow sits on the fixture rather than on its tile centre",
+    ],
+    states: [
+        (name: "glow", directions: Four),
+    ],
+)
