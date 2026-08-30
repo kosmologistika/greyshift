@@ -49,8 +49,8 @@
                 // hangs on the fixture and line of sight hides it with the
                 // fixture - it cannot spill past the wall the light stops at
                 layers: [
-                    (state: "glow", unshaded: true),
-                    (rsi: Some("textures/effects/light_glow"), state: "glow", unshaded: true),
+                    (state: "glow", shading: Unshaded),
+                    (rsi: Some("textures/effects/light_glow"), state: "glow", shading: Unshaded),
                 ],
             ),
         },
@@ -65,8 +65,8 @@
             "Appearance": (
                 sprite: (rsi: "textures/structures/lighting/light_small", state: "base"),
                 layers: [
-                    (state: "glow", unshaded: true),
-                    (rsi: Some("textures/effects/light_glow"), state: "glow", unshaded: true),
+                    (state: "glow", shading: Unshaded),
+                    (rsi: Some("textures/effects/light_glow"), state: "glow", shading: Unshaded),
                 ],
             ),
         },

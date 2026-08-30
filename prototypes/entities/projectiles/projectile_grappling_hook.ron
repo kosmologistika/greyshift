@@ -4,9 +4,8 @@
         id: "projectile_grappling_hook",
         components: {
             "PullShooterOnHit": (),
-            "StopsAtBlocksAttack": (),
+            "FlightRules": (stops_at_blocks_attack: true, stops_on_first_damageable: true),
             "AlignToFlight": (),
-            "StopsOnFirstDamageable": (),
             "MaxFlightRange": (tiles: 8),
             "FlightSpeed": (tiles_per_sec: 30.0),
             "DespawnOnFlightEnd": (),

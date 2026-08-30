@@ -10,7 +10,7 @@
             "Appearance": (
                 sprite: (rsi: "textures/markers/spawn_point", state: "any"),
                 depth: Overlays,
-                unlit: true,
+                shading: Unlit,
             ),
         },
     ),
@@ -32,7 +32,7 @@
             "Appearance": (
                 sprite: (rsi: "textures/markers/spawn_point", state: "observer"),
                 depth: Overlays,
-                unlit: true,
+                shading: Unlit,
             ),
         },
     ),

@@ -42,7 +42,7 @@
                 // answer to the door's state - a closed airlock with nothing
                 // to report hides it
                 layers: [
-                    (key: Some("light"), state: "deny_unlit", unshaded: true, visible: false),
+                    (key: Some("light"), state: "deny_unlit", shading: Unshaded, visible: false),
                 ],
             ),
         },
