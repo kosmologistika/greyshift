@@ -742,6 +742,12 @@
     -bevy-image-color: var(--bg-hover);
 }
 
+/* Declared before the rarity tints so a landed gold frame stays gold even
+   while locked or unaffordable - the landing flash is the payoff frame. */
+.slot-frame.disabled {
+    -bevy-image-color: var(--btn-disabled);
+}
+
 /* Rarity speaks only once the reel lands; the classes arrive with the stop. */
 .slot-frame.uncommon {
     -bevy-image-color: var(--btn-primary);
@@ -753,10 +759,6 @@
 
 .slot-frame.rare .slot-name {
     color: #dbdd4c;
-}
-
-.slot-frame.disabled {
-    -bevy-image-color: var(--btn-disabled);
 }
 
 /* The window the spin happens in: a dark well the art swaps inside. */
