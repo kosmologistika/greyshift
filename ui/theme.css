@@ -675,3 +675,151 @@
     height: 100%;
     background-color: var(--accent);
 }
+
+/* The death shop's slot machine: big reels over the killer-cam, the staple
+   strip under them. Frames are buttons, so the whole reel is the click.
+   The head gets a dark chip, or the balance drowns in the map art. */
+.slot-head {
+    flex-direction: row;
+    align-items: baseline;
+    column-gap: var(--space-2);
+    background-color: var(--bg-overlay);
+    padding: var(--space-1) var(--space-2);
+}
+
+.slot-balance,
+.slot-price {
+    flex-direction: row;
+    align-items: baseline;
+    column-gap: 2px;
+    flex-shrink: 0;
+}
+
+.slot-balance text {
+    color: var(--accent);
+}
+
+.slot-credit,
+.slot-value {
+    margin: 0px;
+}
+
+.slot-status-text {
+    font-size: var(--font-small);
+}
+
+.slot-countdown {
+    font-size: var(--font-small);
+    color: var(--text-dim);
+}
+
+.slot-reels {
+    flex-direction: row;
+    column-gap: var(--space-3);
+    align-items: stretch;
+}
+
+.slot-frame {
+    width: 104px;
+    flex-direction: column;
+    align-items: stretch;
+    -bevy-image: url("textures/interface/panel.png");
+    -bevy-image-mode: sliced(4px);
+    -bevy-image-color: var(--panel-tint);
+    transition: -bevy-image-color var(--hover-fade);
+}
+
+/* The panel art draws in the content box, so this inner pad carries the
+   spacing - the same split as .panel and .pad. */
+.slot-frame-pad {
+    flex-direction: column;
+    align-items: center;
+    row-gap: var(--space-1);
+    padding: var(--space-2);
+}
+
+.slot-frame:hover {
+    -bevy-image-color: var(--bg-hover);
+}
+
+/* Declared before the rarity tints so a landed gold frame stays gold even
+   while locked or unaffordable - the landing flash is the payoff frame. */
+.slot-frame.disabled {
+    -bevy-image-color: var(--btn-disabled);
+}
+
+/* Rarity speaks only once the reel lands; the classes arrive with the stop. */
+.slot-frame.uncommon {
+    -bevy-image-color: var(--btn-primary);
+}
+
+.slot-frame.rare {
+    -bevy-image-color: #8a8433;
+}
+
+.slot-frame.rare .slot-name {
+    color: #dbdd4c;
+}
+
+/* The window the spin happens in: a dark well the art swaps inside. */
+.slot-window {
+    width: 72px;
+    height: 72px;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-screen);
+}
+
+.slot-art {
+    width: 64px;
+    height: 64px;
+}
+
+/* Capped to the frame's inner width so a long weapon name wraps inside the
+   art instead of pushing through its border. */
+.slot-name {
+    color: var(--text-bright);
+    font-size: var(--font-small);
+    margin: 0px;
+    max-width: 88px;
+}
+
+.slot-frame.disabled .slot-name,
+.slot-staple.disabled .slot-staple-name {
+    color: var(--text-disabled);
+}
+
+.slot-price text {
+    color: var(--accent);
+}
+
+.slot-frame.disabled .slot-price text,
+.slot-staple.disabled .slot-price text {
+    color: var(--text-disabled);
+}
+
+/* Rides the bottom edge while the reels hold the center. */
+.slot-staples {
+    flex-direction: row;
+    column-gap: var(--space-2);
+    margin-bottom: var(--space-4);
+}
+
+.slot-staple {
+    flex-direction: row;
+    align-items: center;
+    column-gap: var(--space-1);
+    padding: var(--space-1) var(--space-2);
+}
+
+.slot-staple-icon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.slot-staple-name {
+    color: var(--text-bright);
+    font-size: var(--font-small);
+    margin: 0px;
+}
