@@ -24,6 +24,16 @@
         source: "https://github.com/tgstation/tgstation",
     ),
     (
+        files: [
+            "slot_lever_start.ogg",
+            "slot_lever_stop.ogg",
+            "slot_jackpot.ogg",
+        ],
+        license: "CC-BY-SA-3.0",
+        copyright: "tgstation/tgstation, sound/machines/lever/lever_start.ogg, lever_stop.ogg and sound/machines/roulette/roulettejackpot.ogg",
+        source: "https://github.com/tgstation/tgstation",
+    ),
+    (
         files: ["meatslap.ogg"],
         license: "CC-BY-SA-3.0",
         copyright: "space-wizards/space-station-14, Resources/Audio/Effects/Footsteps",
