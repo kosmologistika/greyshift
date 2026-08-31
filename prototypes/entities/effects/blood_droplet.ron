@@ -5,8 +5,6 @@
         abstract: true,
         components: {
             "DisplayName": (name: "blood droplet"),
-            "StopsAtSolid": (),
-            "HitsNothing": (),
             "DespawnOnFlightEnd": (),
             "SpriteTint": ((red: 0.4863, green: 0.0, blue: 0.0, alpha: 1.0)),
             "FadeIn": (secs: 0.08),

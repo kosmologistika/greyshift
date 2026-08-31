@@ -5,9 +5,8 @@
         parents: ["base_ballistic_projectile"],
         components: {
             "DamageOnHit": (damage: {Piercing: 8}),
-            "StopsAtBlocksAttack": (),
+            "FlightRules": (stops_at_blocks_attack: true, stops_on_first_damageable: true),
             "AlignToFlight": (),
-            "StopsOnFirstDamageable": (),
             "MaxFlightRange": (tiles: 20),
             "FlightSpeed": (tiles_per_sec: 12.5),
             "DespawnOnFlightEnd": (),

@@ -6,9 +6,8 @@
         components: {
             "DamageOnHit": (damage: {Heat: 14}),
             "EnergyProjectile": (),
-            "StopsAtBlocksAttack": (),
+            "FlightRules": (stops_at_blocks_attack: true, stops_on_first_damageable: true),
             "AlignToFlight": (),
-            "StopsOnFirstDamageable": (),
             "MaxFlightRange": (tiles: 20),
             // tg parity: bullets and standard lasers fly 1.25 tiles per
             // decisecond there (12.5 t/s); revisit once the beam-line

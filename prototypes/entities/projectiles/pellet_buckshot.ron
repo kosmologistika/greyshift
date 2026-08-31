@@ -5,9 +5,8 @@
         parents: ["base_ballistic_projectile"],
         components: {
             "DamageOnHit": (damage: {Piercing: 5}),
-            "StopsAtBlocksAttack": (),
+            "FlightRules": (stops_at_blocks_attack: true, stops_on_first_damageable: true),
             "AlignToFlight": (),
-            "StopsOnFirstDamageable": (),
             // Short by design: the fan does the mid-range falloff, the hard
             // cap keeps a scattergun out of rifle duels.
             "MaxFlightRange": (tiles: 8),
