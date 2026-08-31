@@ -70,7 +70,6 @@
             "DamageOnHit": (damage: {Blunt: 3}),
             "Glidable": (),
             "PlacementLayer": Free,
-            "Severed": (),
         },
     ),
     (
