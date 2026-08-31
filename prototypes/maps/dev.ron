@@ -1,0 +1,10 @@
+[
+    (
+        type: "Map",
+        id: "dev",
+        name: "Dev",
+        map_path: "maps/dev.map.ron",
+        min_players: 1,
+        max_players: 8,
+    ),
+]
