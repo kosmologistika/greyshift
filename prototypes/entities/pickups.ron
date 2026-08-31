@@ -1,0 +1,39 @@
+[
+    // Arena supply pads: walk-over stations that fire only when they change
+    // something, then go dark for their respawn window. The numbers are
+    // dials; maps place these like furniture.
+    (
+        type: "Entity",
+        id: "pickup_medkit",
+        components: {
+            "DisplayName": (name: "medkit station"),
+            "Pickup": (
+                effect: FullHeal,
+                respawn_secs: 30,
+                sound: Some((source: Path("audio/effects/pickup_heal.ogg"), volume_db: -4.0, range_tiles: 12.0)),
+            ),
+            "Appearance": (
+                sprite: (rsi: "textures/objects/pickups", state: "medkit"),
+                depth: BelowMobs,
+            ),
+            "PlacementLayer": Free,
+        },
+    ),
+    (
+        type: "Entity",
+        id: "pickup_ammo",
+        components: {
+            "DisplayName": (name: "ammo crate"),
+            "Pickup": (
+                effect: RefillGuns,
+                respawn_secs: 25,
+                sound: Some((source: Path("audio/effects/pickup_heal.ogg"), volume_db: -4.0, range_tiles: 12.0)),
+            ),
+            "Appearance": (
+                sprite: (rsi: "textures/objects/weapons/guns/ammunition/magazine/lightrifle/light_rifle_box", state: "base"),
+                depth: BelowMobs,
+            ),
+            "PlacementLayer": Free,
+        },
+    ),
+]

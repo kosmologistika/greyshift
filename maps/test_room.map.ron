@@ -3288,5 +3288,13 @@
             pos: (11, 11),
             prototype: "wall_indestructible",
         ),
+        (
+            pos: (-6, 0),
+            prototype: "pickup_medkit",
+        ),
+        (
+            pos: (5, 0),
+            prototype: "pickup_ammo",
+        ),
     ],
 )

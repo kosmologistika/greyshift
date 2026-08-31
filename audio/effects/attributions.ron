@@ -24,6 +24,12 @@
         source: "https://github.com/tgstation/tgstation",
     ),
     (
+        files: ["pickup_heal.ogg"],
+        license: "CC-BY-SA-3.0",
+        copyright: "tgstation/tgstation, sound/effects/magic/staff_healing.ogg",
+        source: "https://github.com/tgstation/tgstation",
+    ),
+    (
         files: [
             "slot_lever_start.ogg",
             "slot_lever_stop.ogg",
