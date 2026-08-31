@@ -1,0 +1,12 @@
+[
+    (
+        type: "GameMode",
+        id: "blood_money",
+        name: "Blood Money",
+        rules: [
+            "rule_blood_money_min_players",
+            "rule_blood_money_matches",
+            "rule_blood_money_best_of",
+        ],
+    ),
+]

@@ -1,0 +1,87 @@
+// Blood Money with its wall-clock dials turned to test speed: no reveal lock,
+// a two-second backstop, one-second decay. The suite runs on wall time for
+// these, so every second here is a second of test runtime.
+[
+    (
+        type: "GameMode",
+        id: "blood_money_fast",
+        name: "Blood Money (fast)",
+        rules: [
+            "rule_blood_money_min_players",
+            "rule_bmt_matches",
+            "rule_bmt_best_of",
+        ],
+    ),
+    (
+        type: "Entity",
+        id: "rule_bmt_matches",
+        hide_spawn_menu: true,
+        components: {
+            "MatchSequenceRule": (
+                maps: ["test_bare_arena"],
+                rules: [
+                    "rule_bmt_shop",
+                    "rule_bmt_economy",
+                    "rule_bmt_target",
+                    "rule_bmt_decay",
+                ],
+                intermission_secs: 0,
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "rule_bmt_best_of",
+        hide_spawn_menu: true,
+        components: {
+            "BestOfRule": (matches: 3),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "rule_bmt_shop",
+        hide_spawn_menu: true,
+        components: {
+            "ShopRule": (
+                start: 100,
+                floor: 50,
+                rolled: 3,
+                lock_secs: 0,
+                backstop_secs: 2,
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "rule_bmt_economy",
+        hide_spawn_menu: true,
+        components: {
+            // Coin life stays above the ~1s replication round-trip, or the
+            // client-side assertions race the decay.
+            "CoinEconomyRule": (
+                drip_per_sec: 1,
+                drip_below: 150,
+                crumb: 5,
+                bounty: 50,
+                pile_value: 5,
+                coin_life_secs: 3,
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "rule_bmt_target",
+        hide_spawn_menu: true,
+        components: {
+            "CoinTargetRule": (target: 1000, secs: 480),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "rule_bmt_decay",
+        hide_spawn_menu: true,
+        components: {
+            "CorpseDecayRule": (secs: 1),
+        },
+    ),
+]
