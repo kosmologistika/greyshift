@@ -1,0 +1,80 @@
+[
+    (
+        type: "Entity",
+        id: "rule_blood_money_min_players",
+        hide_spawn_menu: true,
+        components: {
+            "MinPlayersRule": (count: 2),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "rule_blood_money_matches",
+        hide_spawn_menu: true,
+        components: {
+            "MatchSequenceRule": (
+                maps: ["pudge_wars", "test_room"],
+                rules: [
+                    "rule_blood_money_shop",
+                    "rule_blood_money_economy",
+                    "rule_blood_money_target",
+                    "rule_blood_money_corpse_decay",
+                ],
+                intermission_secs: 10,
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "rule_blood_money_best_of",
+        hide_spawn_menu: true,
+        components: {
+            "BestOfRule": (matches: 3),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "rule_blood_money_shop",
+        hide_spawn_menu: true,
+        components: {
+            "ShopRule": (
+                start: 100,
+                floor: 50,
+                rolled: 3,
+                lock_secs: 5,
+                backstop_secs: 15,
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "rule_blood_money_economy",
+        hide_spawn_menu: true,
+        components: {
+            "CoinEconomyRule": (
+                drip_per_sec: 1,
+                drip_below: 150,
+                crumb: 5,
+                bounty: 50,
+                pile_value: 5,
+                coin_life_secs: 20,
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "rule_blood_money_target",
+        hide_spawn_menu: true,
+        components: {
+            "CoinTargetRule": (target: 1000, secs: 480),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "rule_blood_money_corpse_decay",
+        hide_spawn_menu: true,
+        components: {
+            "CorpseDecayRule": (secs: 20),
+        },
+    ),
+]

@@ -18,6 +18,12 @@
         source: "https://github.com/Citadel-Station-13/Citadel-Station-13-RP/tree/cc701aedb633d83eae8339a8b3712ad8ad99cca0/sound",
     ),
     (
+        files: ["coin_ding.ogg", "coin_drop.ogg"],
+        license: "CC-BY-SA-3.0",
+        copyright: "tgstation/tgstation, sound/effects/coin2.ogg and sound/machines/coindrop.ogg",
+        source: "https://github.com/tgstation/tgstation",
+    ),
+    (
         files: ["meatslap.ogg"],
         license: "CC-BY-SA-3.0",
         copyright: "space-wizards/space-station-14, Resources/Audio/Effects/Footsteps",

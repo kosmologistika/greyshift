@@ -1,0 +1,13 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "coin_gold: taken from space-wizards/space-station-14 Resources/Textures/Objects/Misc/coins.rsi, originally from vgstation13 at https://github.com/vgstation-coders/vgstation13/blob/15121b534f4ef10339d96412e22fe3ce4d15a45d/icons/obj/coins.dmi",
+        "coinshot: taken from tgstation/tgstation icons/obj/weapons/guns/projectiles.dmi (the marksman revolver's ricoshot coin); grayscale master, tinted at draw time like tg tints it #dbdd4c",
+    ],
+    states: [
+        (name: "coin_gold"),
+        (name: "coinshot", delays: [[0.1, 0.1, 0.1, 0.1]]),
+        (name: "coinshot_still"),
+    ],
+)

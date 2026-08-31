@@ -1,0 +1,21 @@
+[
+    (
+        type: "Entity",
+        id: "coin_handful",
+        components: {
+            "DisplayName": (name: "handful of coins"),
+            "CoinPile": (value: 1),
+            "PlacementLayer": Free,
+            // Thrown out of the victim like blood; the launch authors the
+            // stop-and-bounce rules, the marker makes the landing settle.
+            "SettlesOnLanding": (),
+            // tg's marksman coin is a grayscale master, tinted #dbdd4c at
+            // draw time - same deal here.
+            "SpriteTint": ((red: 0.859, green: 0.867, blue: 0.298, alpha: 1.0)),
+            "Appearance": (
+                sprite: (rsi: "textures/objects/coins", state: "coinshot"),
+                depth: BelowMobs,
+            ),
+        },
+    ),
+]
