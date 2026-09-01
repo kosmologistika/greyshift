@@ -1,0 +1,30 @@
+[
+    (
+        type: "Entity",
+        id: "effect_stun",
+        components: {
+            "DisplayName": (name: "stunned"),
+            "StatusEffect": (),
+            "Grants": (flags: [Immobilized, HandsBlocked], reason: "intent-denied-stunned"),
+            "DropsHeld": (),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "effect_knockdown",
+        components: {
+            "DisplayName": (name: "knocked down"),
+            "StatusEffect": (),
+            "Grants": (flags: [Floored], reason: "intent-denied-knocked-down"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "effect_slowed",
+        components: {
+            "DisplayName": (name: "slowed"),
+            "StatusEffect": (),
+            "SlowsBy": (factor: 0.5),
+        },
+    ),
+]
