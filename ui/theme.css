@@ -589,6 +589,67 @@
     height: 15px;
 }
 
+/* Alert strip: one 32px plate per cause on the local body with the cause's
+   icon over it, stacked down the right edge from the corner the way tg does,
+   newest effects lowest. Only plates with a self-verb answer to hover */
+.hud-alerts {
+    flex-direction: column;
+    align-items: flex-end;
+    row-gap: 2px;
+}
+
+.hud-alert {
+    width: 32px;
+    height: 32px;
+    justify-content: center;
+    align-items: center;
+    -bevy-image-color: #c0c0c0;
+}
+
+.hud-alert-icon {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 32px;
+    height: 32px;
+}
+
+.hud-alert-clickable {
+    transition: -bevy-image-color var(--hover-fade);
+}
+
+.hud-alert-clickable:hover {
+    -bevy-image-color: #ffffff;
+}
+
+.hud-alert-clickable:active {
+    -bevy-image-color: #8a8a8a;
+}
+
+/* The hover card hangs off the plate's left edge, the column being on the
+   right rail */
+.hud-alert-tooltip {
+    position: absolute;
+    top: 0px;
+    right: 36px;
+    width: 150px;
+}
+
+.hud-alert-tooltip-body {
+    flex-direction: column;
+    padding: 4px 6px;
+    row-gap: 2px;
+}
+
+/* The seconds left sit over the figure on a dark pad, clear of the caption
+   the SS14 icons carry along their bottom edge */
+.hud-alert-countdown {
+    font-size: 11px;
+    color: #ffffff;
+    background-color: #000000b0;
+    padding: 0px 2px;
+}
+
 .hud-button-overlay {
     position: absolute;
     top: 0px;

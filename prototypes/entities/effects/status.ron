@@ -7,6 +7,11 @@
             "StatusEffect": (),
             "Grants": (flags: [Immobilized, HandsBlocked], reason: "intent-denied-stunned"),
             "DropsHeld": (),
+            "EffectAlert": (
+                icon: "textures/interface/alerts/status/stun.png",
+                name: "alert-stunned-name",
+                desc: "alert-stunned-desc",
+            ),
         },
     ),
     (
@@ -16,6 +21,11 @@
             "DisplayName": (name: "knocked down"),
             "StatusEffect": (),
             "Grants": (flags: [Floored], reason: "intent-denied-knocked-down"),
+            "EffectAlert": (
+                icon: "textures/interface/alerts/status/knocked_down.png",
+                name: "alert-knocked-down-name",
+                desc: "alert-knocked-down-desc",
+            ),
         },
     ),
     (

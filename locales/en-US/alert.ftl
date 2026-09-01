@@ -1,0 +1,10 @@
+alert-prone-name = Downed
+alert-prone-desc = You are lying on the floor. Click to get up.
+alert-pulling-name = Pulling
+alert-pulling-desc = You are dragging something along. Click to let go.
+alert-pulled-name = Pulled
+alert-pulled-desc = Someone is dragging you along. Click to break free.
+alert-stunned-name = Stunned
+alert-stunned-desc = You cannot move or use your hands until it wears off.
+alert-knocked-down-name = Knocked down
+alert-knocked-down-desc = You cannot get up until it wears off.

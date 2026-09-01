@@ -1,0 +1,17 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "pulling, pulled: Taken from space-wizards/space-station-14 Resources/Textures/Interface/Alerts/Pull at commit 0fa1208ec2ee6a42f919379aa58b3a9eec452530",
+        "knocked_down: Taken from space-wizards/space-station-14 Resources/Textures/Interface/Alerts/stunnable.rsi at commit dec2d42a1d1b87924c312dce94ba9c60411ab54d, made by Princess Chesseballs, Pronana on Github https://github.com/Pronana",
+        "stun: Taken from space-wizards/space-station-14 Resources/Textures/Objects/Weapons/Melee/stunbaton.rsi stunbaton_off at commit b707b788aca0d98650b305480ac91224f23897af, originally from vgstation at https://github.com/vgstation-coders/vgstation13/commit/1cdfb0230cc96d0ba751fa002d04f8aa2f25ad7d; the icon SS14's own Stun alert shows",
+        "plate: the template state of https://github.com/tgstation/tgstation/commits/038707f0b1dec77bce817a2ccb804419547b86b0/icons/hud/screen_midnight.dmi, the skin the HUD buttons are cut from",
+    ],
+    states: [
+        (name: "pulling"),
+        (name: "pulled"),
+        (name: "knocked_down"),
+        (name: "stun"),
+        (name: "plate"),
+    ],
+)
