@@ -27,3 +27,4 @@ input-action-open-storage = Open Storage
 input-action-throw = Throw Item
 input-action-chat-focus = Focus Chat
 input-action-emote-wheel = Emote Wheel
+input-action-scoreboard = Scoreboard

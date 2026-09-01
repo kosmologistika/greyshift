@@ -27,3 +27,4 @@ input-action-open-storage = Открыть хранилище
 input-action-throw = Метнуть предмет
 input-action-chat-focus = Написать в чат
 input-action-emote-wheel = Колесо эмоций
+input-action-scoreboard = Таблица счёта
