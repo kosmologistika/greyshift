@@ -4,7 +4,7 @@
         id: "projectile_meat_hook",
         components: {
             "PullTargetOnHit": (),
-            "KnockdownOnHit": (),
+            "StatusOnHit": (effect: "effect_knockdown", secs: 2.0),
             "FlightRules": (stops_at_blocks_attack: true, stops_on_first_damageable: true),
             "AlignToFlight": (),
             "MaxFlightRange": (tiles: 8),
