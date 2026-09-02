@@ -7,6 +7,7 @@
             "DisplayName": (name: "9mm SMG"),
             "Item": (size: Medium),
             // tg parity: ballistic automatics fire every 0.2s.
+            "GrantsActions": (ids: ["action_fire_mode"], to: Holder),
             "Gun": (fire_sound: Some((source: Path("audio/weapons/guns/c-20r.ogg"), volume_db: -3.0, pitch_var: 0.05, range_tiles: 26.0)), fire_rate: 5.0, selected_mode: FullAuto, available_modes: [FullAuto, SemiAuto]),
             "RecoilKick": (px: 2.5),
             "Container": (max_count: Some(1), max_item_size: Some(Medium)),

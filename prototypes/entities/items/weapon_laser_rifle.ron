@@ -6,6 +6,7 @@
         components: {
             "DisplayName": (name: "laser rifle"),
             "Item": (size: Large),
+            "GrantsActions": (ids: ["action_fire_mode"], to: Holder),
             "Gun": (fire_sound: Some((source: Path("audio/weapons/guns/taser2.ogg"), volume_db: -2.0, pitch_var: 0.05, range_tiles: 26.0)), fire_rate: 5.0, selected_mode: FullAuto, available_modes: [FullAuto, SemiAuto]),
             "RecoilKick": (px: 2.5),
             "ShotSpec": (projectile_proto: "projectile_laser_red", cost: 20),
