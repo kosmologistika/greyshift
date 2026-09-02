@@ -522,13 +522,47 @@
    widget's own interior. `display` is absent for the same kind of reason -
    Rust drives visibility from replicated state, and a rule setting it would
    be reapplied over that every frame */
+/* One row on the bottom edge in tg's order: suit storage, ID, belt, back,
+   the two hands, the two pockets */
 .hud-hands {
     flex-direction: row;
+    column-gap: 2px;
 }
 
 .hud-hand {
     width: 32px;
     height: 32px;
+}
+
+/* An equipment cell: the slot's plate with the worn item drawn over it. The
+   plate's resting colour is explicit so lifting the blocked class restores
+   it, tg dimming a slot nothing can go in to half alpha */
+.hud-slot {
+    width: 32px;
+    height: 32px;
+}
+
+.hud-slot-overlay {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 32px;
+    height: 32px;
+}
+
+.hud-slot-plate {
+    -bevy-image-color: #ffffff;
+}
+
+.hud-slot-blocked {
+    -bevy-image-color: rgba(255, 255, 255, 0.5);
+}
+
+/* The pop-up tray, tg's 3 by 4 grid on a 34px pitch; cells place
+   themselves from the grid table in Rust */
+.hud-tray {
+    width: 100px;
+    height: 134px;
 }
 
 .hud-hand-overlay {
