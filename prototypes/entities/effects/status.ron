@@ -32,4 +32,14 @@
             "SlowsBy": (factor: 0.5),
         },
     ),
+    // A debug wizard: the first granted spell, applied with `effect wizard`
+    (
+        type: "Entity",
+        id: "effect_wizard",
+        components: {
+            "DisplayName": (name: "wizard"),
+            "StatusEffect": (),
+            "GrantsActions": (ids: ["action_blast"], to: EffectMob),
+        },
+    ),
 ]

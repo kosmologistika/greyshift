@@ -650,6 +650,70 @@
     padding: 0px 2px;
 }
 
+/* The action bar: a row of plates on the top-left edge. The root keeps a
+   plate's height when empty so the board under it never jumps */
+.hud-actions {
+    flex-direction: row;
+    column-gap: 2px;
+    min-height: 32px;
+}
+
+.hud-action {
+    width: 32px;
+    height: 32px;
+    justify-content: center;
+    align-items: center;
+    -bevy-image-color: #c0c0c0;
+    transition: -bevy-image-color var(--hover-fade);
+}
+
+.hud-action:hover {
+    -bevy-image-color: #ffffff;
+}
+
+.hud-action:active {
+    -bevy-image-color: #8a8a8a;
+}
+
+/* The icon names its own colour so leaving the blocked state has a rule to
+   fall back to: flair resets only what some rule sets */
+.hud-action-icon {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 32px;
+    height: 32px;
+    -bevy-image-color: #ffffff;
+}
+
+/* A press the gate would refuse: the plate and its icon dim together */
+.hud-action-blocked {
+    -bevy-image-color: #6a6a6a;
+}
+
+.hud-action-blocked:hover {
+    -bevy-image-color: #6a6a6a;
+}
+
+.hud-action-blocked .hud-action-icon {
+    -bevy-image-color: #6a6a6a;
+}
+
+.hud-action-countdown {
+    font-size: 11px;
+    color: #ffffff;
+    background-color: #000000b0;
+    padding: 0px 2px;
+}
+
+/* The hover card hangs under the plate, the row being on the top edge */
+.hud-action-tooltip {
+    position: absolute;
+    top: 36px;
+    left: 0px;
+    width: 180px;
+}
+
 .hud-button-overlay {
     position: absolute;
     top: 0px;

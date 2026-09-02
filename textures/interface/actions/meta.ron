@@ -1,0 +1,10 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "repulse: the repulse state of https://github.com/tgstation/tgstation/blob/39a2434c062737df0f4bfc7050074ea9ccfc25bb/icons/mob/actions/actions_spells.dmi, the button of the Repulse spell",
+    ],
+    states: [
+        (name: "repulse"),
+    ],
+)
