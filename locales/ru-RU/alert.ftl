@@ -1,0 +1,9 @@
+alert-prone-name = Лежите
+alert-prone-desc = Вы лежите на полу. Нажмите, чтобы встать.
+alert-prone-held-desc = Вас сбили с ног, и вы не сможете встать, пока это не пройдёт.
+alert-pulling-name = Тащите
+alert-pulling-desc = Вы тащите кого-то за собой. Нажмите, чтобы отпустить.
+alert-pulled-name = Вас тащат
+alert-pulled-desc = Кто-то тащит вас за собой. Нажмите, чтобы вырваться.
+alert-stunned-name = Оглушены
+alert-stunned-desc = Вы не можете двигаться и действовать руками, пока это не пройдёт.

@@ -7,6 +7,11 @@
             "StatusEffect": (),
             "Grants": (flags: [Immobilized, HandsBlocked], reason: "intent-denied-stunned"),
             "DropsHeld": (),
+            "EffectAlert": (
+                icon: "textures/interface/alerts/status/stun.png",
+                name: "alert-stunned-name",
+                desc: "alert-stunned-desc",
+            ),
         },
     ),
     (
