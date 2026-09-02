@@ -1,0 +1,16 @@
+[
+    (
+        type: "Entity",
+        id: "action_blast",
+        components: {
+            "Action": (
+                icon: Some("textures/interface/actions/repulse.png"),
+                name: "action-blast-name",
+                desc: "action-blast-desc",
+                blocked_by: [HandsBlocked],
+                cooldown_secs: 5.0,
+            ),
+            "Blasts": (radius: 3),
+        },
+    ),
+]
