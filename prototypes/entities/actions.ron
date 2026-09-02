@@ -13,4 +13,18 @@
             "Blasts": (radius: 3),
         },
     ),
+    // Granted by a gun with a mode to switch to; the plate shows the gun
+    // with its current mode in the corner
+    (
+        type: "Entity",
+        id: "action_fire_mode",
+        components: {
+            "Action": (
+                name: "action-fire-mode-name",
+                desc: "action-fire-mode-desc",
+                blocked_by: [HandsBlocked],
+            ),
+            "CyclesFireMode": (),
+        },
+    ),
 ]

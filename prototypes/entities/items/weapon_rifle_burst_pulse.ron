@@ -6,6 +6,7 @@
         components: {
             "DisplayName": (name: "pulse burst rifle"),
             "Item": (size: Large),
+            "GrantsActions": (ids: ["action_fire_mode"], to: Holder),
             "Gun": (fire_sound: Some((source: Path("audio/weapons/guns/c-20r.ogg"), volume_db: -2.0, pitch_var: 0.05, range_tiles: 26.0)), 
                 fire_rate: 2.0,
                 selected_mode: Burst(count: 3, internal_rate: 12.0),

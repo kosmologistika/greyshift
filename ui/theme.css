@@ -706,6 +706,17 @@
     padding: 0px 2px;
 }
 
+/* The word a granter writes in the plate's corner: the fire selector's mode */
+.hud-action-badge {
+    position: absolute;
+    right: 1px;
+    bottom: 1px;
+    font-size: 8px;
+    color: #ffffff;
+    background-color: #000000b0;
+    padding: 0px 1px;
+}
+
 /* The hover card hangs under the plate, the row being on the top edge */
 .hud-action-tooltip {
     position: absolute;
