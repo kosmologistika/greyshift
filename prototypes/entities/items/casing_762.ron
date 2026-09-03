@@ -4,7 +4,7 @@
         id: "casing_762",
         components: {
             "DisplayName": (name: "7.62 spent casing"),
-            "Item": (size: Tiny),
+            "Item": (size: Tiny, held: Nothing),
             "Glidable": (),
             "PlacementLayer": Free,
             "Appearance": (

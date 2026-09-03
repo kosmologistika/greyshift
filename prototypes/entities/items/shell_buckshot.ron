@@ -5,7 +5,7 @@
         components: {
             "DisplayName": (name: "buckshot shell"),
             "Tags": (["shell_shotgun"]),
-            "Item": (size: Tiny),
+            "Item": (size: Tiny, held: Nothing),
             // A shell is its own one-round store: the tube holds shells, not
             // counters, which is what lets mixed loads fire in chamber order.
             "AmmoStore": (rounds: 1, capacity: 1),
@@ -25,7 +25,7 @@
         id: "casing_shotgun",
         components: {
             "DisplayName": (name: "spent shotgun shell"),
-            "Item": (size: Tiny),
+            "Item": (size: Tiny, held: Nothing),
             "Glidable": (),
             "PlacementLayer": Free,
             "Appearance": (

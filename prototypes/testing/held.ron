@@ -1,0 +1,19 @@
+// A held stand-in with no shipped user yet: every item with art of its own
+// draws that, so the bundle is exercised through this one
+[
+    (
+        type: "Entity",
+        id: "held_bundle",
+        hide_spawn_menu: true,
+        components: {
+            "DisplayName": (name: "test bundle"),
+            "Item": (size: Small, held: Bundle),
+            "Glidable": (),
+            "PlacementLayer": Free,
+            "Appearance": (
+                sprite: (rsi: "textures/objects/tools/crowbar", state: "icon"),
+                depth: BelowMobs,
+            ),
+        },
+    ),
+]

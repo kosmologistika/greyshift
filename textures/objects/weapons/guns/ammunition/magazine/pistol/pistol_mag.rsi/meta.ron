@@ -17,5 +17,7 @@
         (name: "inhand-left-stripe", directions: Four),
         (name: "inhand-right-mag", directions: Four),
         (name: "inhand-right-stripe", directions: Four),
+        (name: "inhand-left", directions: Four),
+        (name: "inhand-right", directions: Four),
     ],
 )

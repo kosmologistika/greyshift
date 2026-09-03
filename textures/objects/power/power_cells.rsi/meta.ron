@@ -3,6 +3,7 @@
     license: "CC-BY-SA-3.0",
     copyright: [
         "sprites based on https://github.com/vgstation-coders/vgstation13/commit/1dbcf389b0ec6b2c51b002df5fef8dd1519f8068. power cells edited by EmoGarbage404, potato edited by @Doru991",
+        "In-hand states from https://github.com/tgstation/tgstation/commits/376684351da/icons/mob/inhands/items/devices_lefthand.dmi and devices_righthand.dmi, state cell",
     ],
     states: [
         (name: "potato"),
@@ -14,5 +15,7 @@
         (name: "antique"),
         (name: "o1"),
         (name: "o2"),
+        (name: "inhand-left", directions: Four),
+        (name: "inhand-right", directions: Four),
     ],
 )
