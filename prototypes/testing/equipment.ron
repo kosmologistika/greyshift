@@ -1,0 +1,23 @@
+// Bare wearables for the suite: no art, so nothing draws or needs a sheet.
+[
+    (
+        type: "Entity",
+        id: "test_hat",
+        hide_spawn_menu: true,
+        components: {
+            "DisplayName": (name: "test hat"),
+            "Item": (size: Small),
+            "Clothing": (slots: [Head], speed: 0.5),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "test_belt",
+        hide_spawn_menu: true,
+        components: {
+            "DisplayName": (name: "test belt"),
+            "Item": (size: Medium),
+            "Clothing": (slots: [Belt]),
+        },
+    ),
+]

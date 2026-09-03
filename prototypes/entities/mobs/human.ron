@@ -64,6 +64,10 @@
             "Deathgasp": (),
             "PainScream": (),
             "Hands": (),
+            "Equipment": (
+                slots: [Head, Mask, Eyes, Ears, Neck, Uniform, Suit, Gloves, Shoes, Belt, Back, Id, PocketLeft, PocketRight, SuitStorage],
+                outfit: {Uniform: "jumpsuit_grey", Shoes: "boots_jack"},
+            ),
             "Eyes": (),
             // Composed from the syndicate part sheets so a severed part can
             // vanish from the sprite (client body_visuals toggles the keyed
