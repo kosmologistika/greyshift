@@ -506,15 +506,12 @@
     background-color: var(--bg-overlay);
 }
 
+/* No hover of its own: the item's rim is the one hover signal on every
+   surface an item sits in */
 .slot-cell {
     width: 32px;
     height: 32px;
     background-color: var(--bg-panel);
-    transition: background-color var(--hover-fade);
-}
-
-.slot-cell:hover {
-    background-color: var(--bg-hover);
 }
 
 /* In-game HUD. Anchoring is NOT here: every surface hangs off a zone root
