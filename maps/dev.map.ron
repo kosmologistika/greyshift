@@ -3296,5 +3296,9 @@
             pos: (5, 0),
             prototype: "pickup_ammo",
         ),
+        (
+            pos: (-6, 1),
+            prototype: "pickup_armor",
+        ),
     ],
 )

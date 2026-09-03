@@ -36,4 +36,21 @@
             "PlacementLayer": Free,
         },
     ),
+    (
+        type: "Entity",
+        id: "pickup_armor",
+        components: {
+            "DisplayName": (name: "armor rack"),
+            "Pickup": (
+                effect: Equip(["armor_vest", "helmet_sec"]),
+                respawn_secs: 30,
+                sound: Some((source: Path("audio/effects/pickup_heal.ogg"), volume_db: -4.0, range_tiles: 12.0)),
+            ),
+            "Appearance": (
+                sprite: (rsi: "textures/clothing/suits/armor_vest", state: "icon"),
+                depth: BelowMobs,
+            ),
+            "PlacementLayer": Free,
+        },
+    ),
 ]
