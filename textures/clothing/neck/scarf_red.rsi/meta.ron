@@ -1,0 +1,13 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "Taken from space-wizards/space-station-14 Resources/Textures/Clothing/Neck/Scarfs/red.rsi at commit ae051d290568. Their line: Taken from tgstation at commit https://github.com/tgstation/tgstation/commit/5a73e8f825ff279e82949b9329783a9e3070e2da | In hand sprites sprited by PuroSlavKing (Github) for Space Station 14",
+    ],
+    states: [
+        (name: "icon"),
+        (name: "equipped-NECK", directions: Four),
+        (name: "inhand-left", directions: Four),
+        (name: "inhand-right", directions: Four),
+    ],
+)

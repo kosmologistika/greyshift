@@ -1,0 +1,17 @@
+[
+    (
+        type: "Entity",
+        id: "hat_beret",
+        components: {
+            "DisplayName": (name: "beret"),
+            "Item": (size: Small),
+            "Clothing": (slots: [Head]),
+            "Glidable": (),
+            "PlacementLayer": Free,
+            "Appearance": (
+                sprite: (rsi: "textures/clothing/head/beret", state: "icon"),
+                depth: BelowMobs,
+            ),
+        },
+    ),
+]

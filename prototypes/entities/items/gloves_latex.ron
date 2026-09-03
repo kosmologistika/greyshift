@@ -1,0 +1,17 @@
+[
+    (
+        type: "Entity",
+        id: "gloves_latex",
+        components: {
+            "DisplayName": (name: "latex gloves"),
+            "Item": (size: Small),
+            "Clothing": (slots: [Gloves]),
+            "Glidable": (),
+            "PlacementLayer": Free,
+            "Appearance": (
+                sprite: (rsi: "textures/clothing/hands/latex", state: "icon"),
+                depth: BelowMobs,
+            ),
+        },
+    ),
+]

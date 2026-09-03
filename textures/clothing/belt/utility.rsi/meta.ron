@@ -1,0 +1,13 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "Taken from space-wizards/space-station-14 Resources/Textures/Clothing/Belt/utility.rsi at commit ae051d290568. Their line: Taken from tgstation at commit https://github.com/tgstation/tgstation/commit/c838ba21dae97db345e0113f99596decd1d66039",
+    ],
+    states: [
+        (name: "icon"),
+        (name: "equipped-BELT", directions: Four),
+        (name: "inhand-left", directions: Four),
+        (name: "inhand-right", directions: Four),
+    ],
+)
