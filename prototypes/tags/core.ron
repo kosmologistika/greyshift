@@ -25,4 +25,10 @@
         type: "Tag",
         id: "shell_shotgun",
     ),
+    // What a suit's storage slot takes on top of anything Tiny: sidearms
+    // that ride under an open coat.
+    (
+        type: "Tag",
+        id: "holsterable",
+    ),
 ]

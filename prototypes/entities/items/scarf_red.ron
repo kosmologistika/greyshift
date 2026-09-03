@@ -1,0 +1,17 @@
+[
+    (
+        type: "Entity",
+        id: "scarf_red",
+        components: {
+            "DisplayName": (name: "red scarf"),
+            "Item": (size: Small),
+            "Clothing": (slots: [Neck]),
+            "Glidable": (),
+            "PlacementLayer": Free,
+            "Appearance": (
+                sprite: (rsi: "textures/clothing/neck/scarf_red", state: "icon"),
+                depth: BelowMobs,
+            ),
+        },
+    ),
+]

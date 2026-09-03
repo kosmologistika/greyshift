@@ -1,0 +1,18 @@
+[
+    (
+        type: "Entity",
+        id: "belt_utility",
+        components: {
+            "DisplayName": (name: "utility belt"),
+            "Item": (size: Medium),
+            "Clothing": (slots: [Belt]),
+            "Container": (max_volume: Some(14), max_item_size: Some(Small)),
+            "Glidable": (),
+            "PlacementLayer": Free,
+            "Appearance": (
+                sprite: (rsi: "textures/clothing/belt/utility", state: "icon"),
+                depth: BelowMobs,
+            ),
+        },
+    ),
+]

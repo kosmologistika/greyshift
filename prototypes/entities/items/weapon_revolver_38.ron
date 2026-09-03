@@ -6,6 +6,7 @@
         components: {
             "DisplayName": (name: ".38 revolver"),
             "Item": (size: Small),
+            "Tags": (["holsterable"]),
             "Gun": (fire_sound: Some((source: Path("audio/weapons/guns/mateba.ogg"), volume_db: -1.0, pitch_var: 0.05, range_tiles: 28.0)), fire_rate: 2.0, selected_mode: SemiAuto, available_modes: [SemiAuto]),
             "RecoilKick": (px: 5.0),
             "AmmoStore": (rounds: 0, capacity: 6),

@@ -1,0 +1,17 @@
+[
+    (
+        type: "Entity",
+        id: "headset",
+        components: {
+            "DisplayName": (name: "headset"),
+            "Item": (size: Small),
+            "Clothing": (slots: [Ears]),
+            "Glidable": (),
+            "PlacementLayer": Free,
+            "Appearance": (
+                sprite: (rsi: "textures/clothing/ears/headset", state: "icon"),
+                depth: BelowMobs,
+            ),
+        },
+    ),
+]
