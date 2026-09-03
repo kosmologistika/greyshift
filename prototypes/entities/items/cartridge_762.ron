@@ -4,7 +4,7 @@
         id: "cartridge_762",
         components: {
             "DisplayName": (name: "7.62 cartridge"),
-            "Item": (size: Tiny),
+            "Item": (size: Tiny, held: Nothing),
             "Cartridge": (projectile_proto: "bullet_762"),
             "Glidable": (),
             "PlacementLayer": Free,

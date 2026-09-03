@@ -1,0 +1,11 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "https://github.com/tgstation/tgstation/commits/376684351da/icons/mob/inhands/clothing/suits_lefthand.dmi and suits_righthand.dmi, the nameless default state BYOND draws for any clothing held without in-hand art of its own",
+    ],
+    states: [
+        (name: "inhand-left", directions: Four),
+        (name: "inhand-right", directions: Four),
+    ],
+)

@@ -4,7 +4,7 @@
         id: "cartridge_38",
         components: {
             "DisplayName": (name: ".38 cartridge"),
-            "Item": (size: Tiny),
+            "Item": (size: Tiny, held: Nothing),
             "Cartridge": (projectile_proto: "bullet_38"),
             "Glidable": (),
             "PlacementLayer": Free,
