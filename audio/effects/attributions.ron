@@ -24,6 +24,12 @@
         source: "https://github.com/tgstation/tgstation",
     ),
     (
+        files: ["block_metal1.ogg"],
+        license: "CC-BY-SA-3.0",
+        copyright: "Citadel Station 13, via space-wizards/space-station-14 Resources/Audio/Weapons",
+        source: "https://github.com/Citadel-Station-13/Citadel-Station-13/commit/31c5996a5db8cce0cb431cb1dc20d99cac83f268",
+    ),
+    (
         files: ["pickup_heal.ogg"],
         license: "CC-BY-SA-3.0",
         copyright: "tgstation/tgstation, sound/effects/magic/staff_healing.ogg",
