@@ -555,6 +555,21 @@
     -bevy-image-color: rgba(255, 255, 255, 0.5);
 }
 
+/* The ghost of the held item over a hovered empty slot. The answer is on the
+   plate under it: both references multiply the tint into the item's own
+   pixels, which on a dark sprite over this plate art leaves a smudge */
+.hud-slot-holo {
+    -bevy-image-color: rgba(255, 255, 255, 0.5);
+}
+
+.hud-slot-holo-fits {
+    -bevy-image-color: #00ff00;
+}
+
+.hud-slot-holo-refused {
+    -bevy-image-color: #ff0000;
+}
+
 /* The pop-up tray, tg's 3 by 4 grid on a 34px pitch; cells place
    themselves from the grid table in Rust */
 .hud-tray {
