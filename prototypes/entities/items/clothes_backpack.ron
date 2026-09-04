@@ -1,0 +1,19 @@
+[
+    (
+        type: "Entity",
+        id: "clothes_backpack",
+        components: {
+            "DisplayName": (name: "backpack"),
+            "Item": (size: Large),
+            "Clothing": (slots: [Back]),
+            // tg's backpack takes normal items and fills by bulk
+            "Container": (max_volume: Some(24), max_item_size: Some(Medium)),
+            "Glidable": (),
+            "PlacementLayer": Free,
+            "Appearance": (
+                sprite: (rsi: "textures/clothing/back/backpack", state: "icon"),
+                depth: BelowMobs,
+            ),
+        },
+    ),
+]

@@ -66,7 +66,7 @@
             "Hands": (),
             "Equipment": (
                 slots: [Head, Mask, Eyes, Ears, Neck, Uniform, Suit, Gloves, Shoes, Belt, Back, Id, PocketLeft, PocketRight, SuitStorage],
-                outfit: {Uniform: "jumpsuit_grey", Shoes: "boots_jack", Ears: "headset", Id: "id_card"},
+                outfit: {Uniform: "clothes_jumpsuit_grey", Shoes: "clothes_boots_jack", Ears: "clothes_headset", Id: "clothes_id_card"},
             ),
             "Eyes": (),
             // Composed from the syndicate part sheets so a severed part can

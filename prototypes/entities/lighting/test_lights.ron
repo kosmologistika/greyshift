@@ -21,13 +21,13 @@
     ),
     (
         type: "Entity",
-        id: "test_light",
+        id: "light_test",
         parents: ["light"],
         components: {},
     ),
     (
         type: "Entity",
-        id: "test_light_red",
+        id: "light_test_red",
         parents: ["light"],
         components: {
             "PointLight": (color: (1.0, 0.1, 0.1), energy: 1.5, radius: 6.0),
@@ -35,7 +35,7 @@
     ),
     (
         type: "Entity",
-        id: "test_light_green",
+        id: "light_test_green",
         parents: ["light"],
         components: {
             "PointLight": (color: (0.1, 1.0, 0.1), energy: 1.5, radius: 6.0),
@@ -43,7 +43,7 @@
     ),
     (
         type: "Entity",
-        id: "test_light_blue",
+        id: "light_test_blue",
         parents: ["light"],
         components: {
             "PointLight": (color: (0.2, 0.4, 1.0), energy: 1.5, radius: 6.0),
@@ -51,7 +51,7 @@
     ),
     (
         type: "Entity",
-        id: "test_light_bright",
+        id: "light_test_bright",
         parents: ["light"],
         components: {
             "PointLight": (color: (1.0, 0.95, 0.85), energy: 4.0, radius: 9.0),
@@ -59,7 +59,7 @@
     ),
     (
         type: "Entity",
-        id: "test_light_dim",
+        id: "light_test_dim",
         parents: ["light"],
         components: {
             "PointLight": (color: (1.0, 0.95, 0.85), energy: 0.5, radius: 4.0),
@@ -67,7 +67,7 @@
     ),
     (
         type: "Entity",
-        id: "test_light_noshadow",
+        id: "light_test_noshadow",
         parents: ["light"],
         components: {
             "PointLight": (color: (1.0, 0.95, 0.85), energy: 1.5, radius: 6.0, cast_shadows: false),

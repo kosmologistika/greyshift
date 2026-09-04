@@ -1,0 +1,50 @@
+[
+    (
+        type: "Entity",
+        id: "structure_airlock",
+        components: {
+            "DisplayName": (name: "airlock"),
+            "Door": (
+                state: Closed,
+                open_secs: 0.6,
+                close_secs: 0.6,
+                deny_secs: 0.6,
+                auto_close_secs: Some(5.0),
+            ),
+            // Opens for whoever walks into it, and wears the status lights
+            // that say why when it doesn't.
+            "BumpOpen": (),
+            "Airlock": (),
+            // The obstruction sensor. Cutting it (wires, an AI override) is
+            // what turns the airlock below into something that hurts.
+            "DoorSafety": (),
+            "CrushDamage": ({Blunt: 15}),
+            "StruckSound": (default: Some((source: Collection("hit_metal"), volume_db: -4.0, pitch_var: 0.1))),
+            "Damageable": (),
+            "Destructible": (thresholds: [
+                (
+                    trigger: TotalDamage(100),
+                    behaviors: [PlaySound((source: Collection("destroy_metal"), volume_db: -2.0, pitch_var: 0.08)), Destroy],
+                ),
+            ]),
+            "DoorSounds": (
+                open: Some((source: Path("audio/machines/airlock_open.ogg"), volume_db: -4.0)),
+                close: Some((source: Path("audio/machines/airlock_close.ogg"), volume_db: -4.0)),
+                deny: Some((source: Path("audio/machines/airlock_deny.ogg"), volume_db: -6.0)),
+            ),
+            "PlacementLayer": Solid,
+            "Appearance": (
+                sprite: (rsi: "textures/structures/doors/airlock", state: "closed"),
+                depth: Doors,
+                // The status light, over the body and out of the lighting
+                // multiply so it reads in a dark corridor. Which `*_unlit`
+                // state it shows, and whether it shows at all, is the client's
+                // answer to the door's state - a closed airlock with nothing
+                // to report hides it
+                layers: [
+                    (key: Some("light"), state: "deny_unlit", shading: Unshaded, visible: false),
+                ],
+            ),
+        },
+    ),
+]

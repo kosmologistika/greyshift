@@ -29,7 +29,7 @@
         id: "weapon_shotgun_double_loaded",
         parents: ["weapon_shotgun_double"],
         components: {
-            "StartingContents": (contents: ["shell_buckshot", "shell_buckshot"]),
+            "StartingContents": (contents: ["ammo_shell_buckshot", "ammo_shell_buckshot"]),
         },
     ),
 ]

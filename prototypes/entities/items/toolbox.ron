@@ -1,7 +1,7 @@
 [
     (
         type: "Entity",
-        id: "toolbox_red",
+        id: "tool_toolbox_red",
         components: {
             "DisplayName": (name: "toolbox"),
             "Item": (size: Medium),

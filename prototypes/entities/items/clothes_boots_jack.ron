@@ -1,0 +1,17 @@
+[
+    (
+        type: "Entity",
+        id: "clothes_boots_jack",
+        components: {
+            "DisplayName": (name: "jackboots"),
+            "Item": (size: Medium),
+            "Clothing": (slots: [Shoes]),
+            "Glidable": (),
+            "PlacementLayer": Free,
+            "Appearance": (
+                sprite: (rsi: "textures/clothing/shoes/jackboots", state: "icon"),
+                depth: BelowMobs,
+            ),
+        },
+    ),
+]

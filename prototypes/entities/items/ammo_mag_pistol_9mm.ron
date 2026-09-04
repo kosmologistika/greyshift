@@ -1,0 +1,20 @@
+[
+    (
+        type: "Entity",
+        id: "ammo_mag_pistol_9mm",
+        components: {
+            "DisplayName": (name: "9mm pistol magazine"),
+            "Tags": (["magazine_pistol_9mm"]),
+            "Item": (size: Small),
+            "AmmoStore": (rounds: 15, capacity: 15),
+            "ShotSpec": (projectile_proto: "projectile_bullet_9mm"),
+            "LoadsCartridge": (),
+            "Glidable": (),
+            "PlacementLayer": Free,
+            "Appearance": (
+                sprite: (rsi: "textures/objects/weapons/guns/ammunition/magazine/pistol/pistol_mag", state: "base"),
+                depth: BelowMobs,
+            ),
+        },
+    ),
+]

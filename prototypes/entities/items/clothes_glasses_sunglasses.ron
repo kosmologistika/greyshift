@@ -1,0 +1,17 @@
+[
+    (
+        type: "Entity",
+        id: "clothes_glasses_sunglasses",
+        components: {
+            "DisplayName": (name: "sunglasses"),
+            "Item": (size: Tiny),
+            "Clothing": (slots: [Eyes]),
+            "Glidable": (),
+            "PlacementLayer": Free,
+            "Appearance": (
+                sprite: (rsi: "textures/clothing/eyes/sunglasses", state: "icon"),
+                depth: BelowMobs,
+            ),
+        },
+    ),
+]

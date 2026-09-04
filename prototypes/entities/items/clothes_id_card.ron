@@ -1,0 +1,17 @@
+[
+    (
+        type: "Entity",
+        id: "clothes_id_card",
+        components: {
+            "DisplayName": (name: "identification card"),
+            "Item": (size: Small),
+            "Clothing": (slots: [Id]),
+            "Glidable": (),
+            "PlacementLayer": Free,
+            "Appearance": (
+                sprite: (rsi: "textures/objects/misc/id_card", state: "icon"),
+                depth: BelowMobs,
+            ),
+        },
+    ),
+]

@@ -29,7 +29,7 @@
         id: "weapon_rifle_burst_pulse_loaded",
         parents: ["weapon_rifle_burst_pulse"],
         components: {
-            "StartingContents": (contents: ["pistol_mag_9mm_extended"]),
+            "StartingContents": (contents: ["ammo_mag_pistol_9mm_extended"]),
         },
     ),
 ]

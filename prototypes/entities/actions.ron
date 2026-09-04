@@ -2,6 +2,7 @@
     (
         type: "Entity",
         id: "action_blast",
+        hide_spawn_menu: true,
         components: {
             "Action": (
                 icon: Some("textures/interface/actions/repulse.png"),
@@ -18,6 +19,7 @@
     (
         type: "Entity",
         id: "action_fire_mode",
+        hide_spawn_menu: true,
         components: {
             "Action": (
                 name: "action-fire-mode-name",

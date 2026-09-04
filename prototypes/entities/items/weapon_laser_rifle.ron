@@ -27,7 +27,7 @@
         id: "weapon_laser_rifle_loaded",
         parents: ["weapon_laser_rifle"],
         components: {
-            "StartingContents": (contents: ["power_cell_small"]),
+            "StartingContents": (contents: ["ammo_cell_small"]),
         },
     ),
 ]

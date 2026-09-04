@@ -1,0 +1,17 @@
+[
+    (
+        type: "Entity",
+        id: "clothes_jumpsuit_grey",
+        components: {
+            "DisplayName": (name: "grey jumpsuit"),
+            "Item": (size: Medium),
+            "Clothing": (slots: [Uniform]),
+            "Glidable": (),
+            "PlacementLayer": Free,
+            "Appearance": (
+                sprite: (rsi: "textures/clothing/uniforms/ancient", state: "icon"),
+                depth: BelowMobs,
+            ),
+        },
+    ),
+]
