@@ -520,10 +520,35 @@
    Rust drives visibility from replicated state, and a rule setting it would
    be reapplied over that every frame */
 /* One row on the bottom edge in tg's order: suit storage, ID, belt, back,
-   the two hands, the two pockets */
+   the two hands, the two pockets. The row spans the viewport and the two
+   side groups share the slack evenly, which lands the hands on the centre
+   the pawn stands on however many slots the body has */
 .hud-hands {
+    width: 100%;
     flex-direction: row;
     column-gap: 2px;
+}
+
+.hud-hands-left,
+.hud-hands-right {
+    flex-direction: row;
+    flex-grow: 1;
+    flex-basis: 0px;
+    column-gap: 2px;
+}
+
+.hud-hands-left {
+    justify-content: flex-end;
+}
+
+.hud-hands-right {
+    justify-content: flex-start;
+}
+
+/* Edge to edge, unlike the gapped cells beside them: tg butts the pair up
+   against the centre line (`ui_hand_position`, CENTER-1:16 and CENTER+0:16) */
+.hud-hands-center {
+    flex-direction: row;
 }
 
 .hud-hand {
