@@ -1,0 +1,18 @@
+[
+    (
+        type: "Entity",
+        id: "structure_crystal",
+        components: {
+            "DisplayName": (name: "crystal"),
+            "Movable": (),
+            "PushOnly": (),
+            "Glidable": (),
+            "Pullable": (),
+            "PlacementLayer": Free,
+            "Appearance": (
+                sprite: (rsi: "textures/structures/decoration/crystal", state: "crystal_grey"),
+                depth: BelowMobs,
+            ),
+        },
+    ),
+]

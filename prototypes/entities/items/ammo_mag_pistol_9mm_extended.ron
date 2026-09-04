@@ -1,0 +1,20 @@
+[
+    (
+        type: "Entity",
+        id: "ammo_mag_pistol_9mm_extended",
+        components: {
+            "DisplayName": (name: "9mm extended magazine"),
+            "Tags": (["magazine_pistol_9mm_extended"]),
+            "Item": (size: Small),
+            "AmmoStore": (rounds: 30, capacity: 30),
+            "ShotSpec": (projectile_proto: "projectile_bullet_9mm"),
+            "LoadsCartridge": (),
+            "Glidable": (),
+            "PlacementLayer": Free,
+            "Appearance": (
+                sprite: (rsi: "textures/objects/weapons/guns/ammunition/magazine/pistol/pistol_high_capacity_mag", state: "base"),
+                depth: BelowMobs,
+            ),
+        },
+    ),
+]

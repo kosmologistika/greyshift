@@ -1,0 +1,20 @@
+[
+    (
+        type: "Entity",
+        id: "ammo_mag_minigun_drum",
+        components: {
+            "DisplayName": (name: "minigun drum"),
+            "Tags": (["magazine_minigun"]),
+            "Item": (size: Large),
+            "AmmoStore": (rounds: 500, capacity: 500),
+            "ShotSpec": (projectile_proto: "projectile_bullet_9mm"),
+            "LoadsCartridge": (),
+            "Glidable": (),
+            "PlacementLayer": Free,
+            "Appearance": (
+                sprite: (rsi: "textures/objects/weapons/guns/ammunition/magazine/lightrifle/light_rifle_box", state: "base"),
+                depth: BelowMobs,
+            ),
+        },
+    ),
+]

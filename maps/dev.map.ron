@@ -1,1386 +1,1386 @@
 (
-    version: 1,
+    version: 2,
     entities: [
         (
             pos: (-12, -12),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-12, -12),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (-11, -12),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-11, -12),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (-10, -12),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-10, -12),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (-9, -12),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-9, -12),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (-8, -12),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-8, -12),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (-7, -12),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-7, -12),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (-6, -12),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-6, -12),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (-5, -12),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-5, -12),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (-4, -12),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-4, -12),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (-3, -12),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-3, -12),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (-2, -12),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-2, -12),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (-1, -12),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-1, -12),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (0, -12),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (0, -12),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (1, -12),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (1, -12),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (2, -12),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (2, -12),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (3, -12),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (3, -12),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (4, -12),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (4, -12),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (5, -12),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (5, -12),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (6, -12),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (6, -12),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (7, -12),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (7, -12),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (8, -12),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (8, -12),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (9, -12),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (9, -12),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (10, -12),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (10, -12),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (11, -12),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (11, -12),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (-12, -11),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-12, -11),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (-11, -11),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-10, -11),
-            prototype: "crystal",
+            prototype: "structure_crystal",
         ),
         (
             pos: (-10, -11),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-9, -11),
-            prototype: "crystal",
+            prototype: "structure_crystal",
         ),
         (
             pos: (-9, -11),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-8, -11),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-7, -11),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-6, -11),
-            prototype: "window",
+            prototype: "structure_window",
         ),
         (
             pos: (-6, -11),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-5, -11),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-4, -11),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-3, -11),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-2, -11),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-1, -11),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (0, -11),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (1, -11),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (2, -11),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (3, -11),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (4, -11),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (5, -11),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (6, -11),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (7, -11),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (8, -11),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (9, -11),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (10, -11),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (11, -11),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (11, -11),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (-12, -10),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-12, -10),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (-11, -10),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-10, -10),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-9, -10),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-8, -10),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-7, -10),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-6, -10),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-6, -10),
-            prototype: "door_wood",
+            prototype: "structure_door_wood",
         ),
         (
             pos: (-5, -10),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-4, -10),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-3, -10),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-2, -10),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-1, -10),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (0, -10),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (0, -10),
-            prototype: "test_light",
+            prototype: "light_test",
         ),
         (
             pos: (1, -10),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (2, -10),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (3, -10),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (4, -10),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (5, -10),
-            prototype: "crowbar",
+            prototype: "tool_crowbar",
         ),
         (
             pos: (5, -10),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (6, -10),
-            prototype: "toolbox_red",
+            prototype: "tool_toolbox_red",
         ),
         (
             pos: (6, -10),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (7, -10),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (8, -10),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (9, -10),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (10, -10),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (11, -10),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (11, -10),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (-12, -9),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-12, -9),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (-11, -9),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-10, -9),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-9, -9),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-9, -9),
-            prototype: "test_light_blue",
+            prototype: "light_test_blue",
         ),
         (
             pos: (-8, -9),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-7, -9),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-6, -9),
-            prototype: "window",
+            prototype: "structure_window",
         ),
         (
             pos: (-6, -9),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-5, -9),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-4, -9),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-3, -9),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-2, -9),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-1, -9),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (0, -9),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (1, -9),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (2, -9),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (3, -9),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (4, -9),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (5, -9),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (6, -9),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (7, -9),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (8, -9),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (9, -9),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (9, -9),
-            prototype: "test_light_bright",
+            prototype: "light_test_bright",
         ),
         (
             pos: (10, -9),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (11, -9),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (11, -9),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (-12, -8),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-12, -8),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (-11, -8),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-10, -8),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-9, -8),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-8, -8),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-7, -8),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-6, -8),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-6, -8),
-            prototype: "wall_solid",
+            prototype: "structure_wall_solid",
         ),
         (
             pos: (-5, -8),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-4, -8),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (-3, -8),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (-2, -8),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (-2, -8),
-            prototype: "wall_solid",
+            prototype: "structure_wall_solid",
         ),
         (
             pos: (-1, -8),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (0, -8),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (1, -8),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (1, -8),
-            prototype: "wall_solid",
+            prototype: "structure_wall_solid",
         ),
         (
             pos: (2, -8),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (2, -8),
-            prototype: "wall_light_tube",
+            prototype: "light_wall_tube",
             components: {
                 "Facing": (North),
             },
         ),
         (
             pos: (3, -8),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (4, -8),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (5, -8),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (5, -8),
-            prototype: "wall_solid",
+            prototype: "structure_wall_solid",
         ),
         (
             pos: (6, -8),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (6, -8),
-            prototype: "wall_light_tube",
+            prototype: "light_wall_tube",
             components: {
                 "Facing": (West),
             },
         ),
         (
             pos: (7, -8),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (8, -8),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (9, -8),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (10, -8),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (11, -8),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (11, -8),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (-12, -7),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-12, -7),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (-11, -7),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-10, -7),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-9, -7),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-8, -7),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-7, -7),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-6, -7),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-6, -7),
-            prototype: "wall_solid",
+            prototype: "structure_wall_solid",
         ),
         (
             pos: (-5, -7),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-4, -7),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (-4, -7),
-            prototype: "wall_light_tube",
+            prototype: "light_wall_tube",
             components: {
                 "Facing": (North),
             },
         ),
         (
             pos: (-3, -7),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (-3, -7),
-            prototype: "wall_solid",
+            prototype: "structure_wall_solid",
         ),
         (
             pos: (-2, -7),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (-1, -7),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (0, -7),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (1, -7),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (2, -7),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (2, -7),
-            prototype: "wall_solid",
+            prototype: "structure_wall_solid",
         ),
         (
             pos: (3, -7),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (4, -7),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (5, -7),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (5, -7),
-            prototype: "wall_solid",
+            prototype: "structure_wall_solid",
         ),
         (
             pos: (6, -7),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (7, -7),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (8, -7),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (9, -7),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (10, -7),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (11, -7),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (11, -7),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (-12, -6),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-12, -6),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (-11, -6),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-11, -6),
-            prototype: "wall_solid",
+            prototype: "structure_wall_solid",
         ),
         (
             pos: (-10, -6),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-10, -6),
-            prototype: "airlock",
+            prototype: "structure_airlock",
         ),
         (
             pos: (-9, -6),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-9, -6),
-            prototype: "wall_solid",
+            prototype: "structure_wall_solid",
         ),
         (
             pos: (-8, -6),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-8, -6),
-            prototype: "wall_solid",
+            prototype: "structure_wall_solid",
         ),
         (
             pos: (-7, -6),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-7, -6),
-            prototype: "wall_solid",
+            prototype: "structure_wall_solid",
         ),
         (
             pos: (-6, -6),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-6, -6),
-            prototype: "wall_solid",
+            prototype: "structure_wall_solid",
         ),
         (
             pos: (-5, -6),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-4, -6),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (-4, -6),
-            prototype: "wall_solid",
+            prototype: "structure_wall_solid",
         ),
         (
             pos: (-3, -6),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (-3, -6),
-            prototype: "wall_light_tube",
+            prototype: "light_wall_tube",
         ),
         (
             pos: (-2, -6),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (-1, -6),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (0, -6),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (1, -6),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (2, -6),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (3, -6),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (3, -6),
-            prototype: "wall_solid",
+            prototype: "structure_wall_solid",
         ),
         (
             pos: (4, -6),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (5, -6),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (5, -6),
-            prototype: "wall_solid",
+            prototype: "structure_wall_solid",
         ),
         (
             pos: (6, -6),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (6, -6),
-            prototype: "wall_solid",
+            prototype: "structure_wall_solid",
         ),
         (
             pos: (7, -6),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (7, -6),
-            prototype: "wall_solid",
+            prototype: "structure_wall_solid",
         ),
         (
             pos: (8, -6),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (9, -6),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (10, -6),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (11, -6),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (11, -6),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (-12, -5),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-12, -5),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (-11, -5),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-10, -5),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-9, -5),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-8, -5),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-8, -5),
-            prototype: "wall_light_tube",
+            prototype: "light_wall_tube",
         ),
         (
             pos: (-7, -5),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-6, -5),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-5, -5),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-4, -5),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-3, -5),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-2, -5),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-1, -5),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (0, -5),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (1, -5),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (2, -5),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (3, -5),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (4, -5),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (5, -5),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (6, -5),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (6, -5),
-            prototype: "wall_light_tube",
+            prototype: "light_wall_tube",
         ),
         (
             pos: (7, -5),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (8, -5),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (9, -5),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (10, -5),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (11, -5),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (11, -5),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (-12, -4),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-12, -4),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (-11, -4),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-10, -4),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-9, -4),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-8, -4),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (-7, -4),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (-6, -4),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (-5, -4),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-4, -4),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-3, -4),
-            prototype: "crystal",
+            prototype: "structure_crystal",
         ),
         (
             pos: (-3, -4),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (-2, -4),
-            prototype: "crystal",
+            prototype: "structure_crystal",
         ),
         (
             pos: (-2, -4),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (-1, -4),
-            prototype: "crowbar",
+            prototype: "tool_crowbar",
         ),
         (
             pos: (-1, -4),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (0, -4),
-            prototype: "toolbox_red",
+            prototype: "tool_toolbox_red",
         ),
         (
             pos: (0, -4),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (1, -4),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (2, -4),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (3, -4),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (4, -4),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (5, -4),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (6, -4),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (7, -4),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (8, -4),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (9, -4),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (10, -4),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (11, -4),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (11, -4),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (-12, -3),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-12, -3),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (-11, -3),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-10, -3),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-9, -3),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-8, -3),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (-8, -3),
-            prototype: "wall_solid",
+            prototype: "structure_wall_solid",
         ),
         (
             pos: (-7, -3),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (-7, -3),
-            prototype: "wall_solid",
+            prototype: "structure_wall_solid",
         ),
         (
             pos: (-6, -3),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (-6, -3),
-            prototype: "wall_solid",
+            prototype: "structure_wall_solid",
         ),
         (
             pos: (-5, -3),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-4, -3),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-3, -3),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-2, -3),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (-1, -3),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (-1, -3),
-            prototype: "fireaxe",
+            prototype: "weapon_fireaxe",
         ),
         (
             pos: (0, -3),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (0, -3),
-            prototype: "spear",
+            prototype: "weapon_spear",
         ),
         (
             pos: (1, -3),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (2, -3),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (3, -3),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (4, -3),
-            prototype: "crystal",
+            prototype: "structure_crystal",
         ),
         (
             pos: (4, -3),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (5, -3),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (5, -3),
-            prototype: "wall_solid",
+            prototype: "structure_wall_solid",
         ),
         (
             pos: (6, -3),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (6, -3),
-            prototype: "wall_solid",
+            prototype: "structure_wall_solid",
         ),
         (
             pos: (7, -3),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (7, -3),
-            prototype: "wall_solid",
+            prototype: "structure_wall_solid",
         ),
         (
             pos: (8, -3),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (9, -3),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (10, -3),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (11, -3),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (11, -3),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (-12, -2),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-12, -2),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (-11, -2),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-10, -2),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-9, -2),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-8, -2),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-7, -2),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-7, -2),
-            prototype: "wall_light_tube",
+            prototype: "light_wall_tube",
         ),
         (
             pos: (-6, -2),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-5, -2),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-4, -2),
-            prototype: "window",
+            prototype: "structure_window",
         ),
         (
             pos: (-4, -2),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (-3, -2),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (-3, -2),
@@ -1388,11 +1388,11 @@
         ),
         (
             pos: (-2, -2),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-2, -2),
-            prototype: "test_light",
+            prototype: "light_test",
         ),
         (
             pos: (-2, -2),
@@ -1400,7 +1400,7 @@
         ),
         (
             pos: (-1, -2),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-1, -2),
@@ -1408,119 +1408,119 @@
         ),
         (
             pos: (0, -2),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (0, -2),
-            prototype: "shell_buckshot",
+            prototype: "ammo_shell_buckshot",
         ),
         (
             pos: (0, -2),
-            prototype: "shell_buckshot",
+            prototype: "ammo_shell_buckshot",
         ),
         (
             pos: (1, -2),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (2, -2),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (3, -2),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (4, -2),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (5, -2),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (5, -2),
-            prototype: "wall_light_tube",
+            prototype: "light_wall_tube",
         ),
         (
             pos: (6, -2),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (7, -2),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (8, -2),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (9, -2),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (10, -2),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (11, -2),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (11, -2),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (-12, -1),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-12, -1),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (-11, -1),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-10, -1),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-9, -1),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-8, -1),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-7, -1),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-7, -1),
-            prototype: "wall_solid",
+            prototype: "structure_wall_solid",
         ),
         (
             pos: (-6, -1),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-5, -1),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-4, -1),
-            prototype: "window",
+            prototype: "structure_window",
         ),
         (
             pos: (-4, -1),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (-3, -1),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (-3, -1),
@@ -1532,7 +1532,7 @@
         ),
         (
             pos: (-2, -1),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-1, -1),
@@ -1540,7 +1540,7 @@
         ),
         (
             pos: (-1, -1),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (0, -1),
@@ -1548,121 +1548,121 @@
         ),
         (
             pos: (0, -1),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (1, -1),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (2, -1),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (3, -1),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (4, -1),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (5, -1),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (6, -1),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (6, -1),
-            prototype: "wall_solid",
+            prototype: "structure_wall_solid",
         ),
         (
             pos: (7, -1),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (7, -1),
-            prototype: "wall_light_tube",
+            prototype: "light_wall_tube",
             components: {
                 "Facing": (West),
             },
         ),
         (
             pos: (8, -1),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (9, -1),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (10, -1),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (11, -1),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (11, -1),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (-12, 0),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-12, 0),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (-11, 0),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-10, 0),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-9, 0),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-8, 0),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-8, 0),
-            prototype: "wall_light_tube",
+            prototype: "light_wall_tube",
             components: {
                 "Facing": (East),
             },
         ),
         (
             pos: (-7, 0),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-7, 0),
-            prototype: "wall_solid",
+            prototype: "structure_wall_solid",
         ),
         (
             pos: (-6, 0),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-5, 0),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-4, 0),
-            prototype: "window",
+            prototype: "structure_window",
         ),
         (
             pos: (-4, 0),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (-3, 0),
@@ -1670,15 +1670,15 @@
         ),
         (
             pos: (-3, 0),
-            prototype: "table",
+            prototype: "structure_table",
         ),
         (
             pos: (-3, 0),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (-2, 0),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-2, 0),
@@ -1690,7 +1690,7 @@
         ),
         (
             pos: (-1, 0),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (0, 0),
@@ -1698,122 +1698,122 @@
         ),
         (
             pos: (0, 0),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (1, 0),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (2, 0),
-            prototype: "table",
+            prototype: "structure_table",
         ),
         (
             pos: (2, 0),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (3, 0),
-            prototype: "table",
+            prototype: "structure_table",
         ),
         (
             pos: (3, 0),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (4, 0),
-            prototype: "table",
+            prototype: "structure_table",
         ),
         (
             pos: (4, 0),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (5, 0),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (6, 0),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (6, 0),
-            prototype: "wall_solid",
+            prototype: "structure_wall_solid",
         ),
         (
             pos: (7, 0),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (8, 0),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (9, 0),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (10, 0),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (11, 0),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (11, 0),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (-12, 1),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-12, 1),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (-11, 1),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-10, 1),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-9, 1),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-8, 1),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-7, 1),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-6, 1),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-5, 1),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-5, 1),
-            prototype: "wall_light_tube",
+            prototype: "light_wall_tube",
             components: {
                 "Facing": (East),
             },
         ),
         (
             pos: (-4, 1),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (-4, 1),
-            prototype: "wall_solid",
+            prototype: "structure_wall_solid",
         ),
         (
             pos: (-3, 1),
@@ -1821,15 +1821,15 @@
         ),
         (
             pos: (-3, 1),
-            prototype: "table",
+            prototype: "structure_table",
         ),
         (
             pos: (-3, 1),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (-3, 1),
-            prototype: "wall_light_tube",
+            prototype: "light_wall_tube",
             components: {
                 "Facing": (West),
             },
@@ -1840,7 +1840,7 @@
         ),
         (
             pos: (-2, 1),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-1, 1),
@@ -1848,134 +1848,134 @@
         ),
         (
             pos: (-1, 1),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (0, 1),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (1, 1),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (2, 1),
-            prototype: "table",
+            prototype: "structure_table",
         ),
         (
             pos: (2, 1),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (3, 1),
-            prototype: "table",
+            prototype: "structure_table",
         ),
         (
             pos: (3, 1),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (4, 1),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (5, 1),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (5, 1),
-            prototype: "wall_light_tube",
+            prototype: "light_wall_tube",
             components: {
                 "Facing": (North),
             },
         ),
         (
             pos: (6, 1),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (7, 1),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (8, 1),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (9, 1),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (10, 1),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (11, 1),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (11, 1),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (-12, 2),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-12, 2),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (-11, 2),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-10, 2),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-9, 2),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-8, 2),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (-8, 2),
-            prototype: "wall_solid",
+            prototype: "structure_wall_solid",
         ),
         (
             pos: (-7, 2),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (-7, 2),
-            prototype: "wall_solid",
+            prototype: "structure_wall_solid",
         ),
         (
             pos: (-6, 2),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (-6, 2),
-            prototype: "wall_solid",
+            prototype: "structure_wall_solid",
         ),
         (
             pos: (-5, 2),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-4, 2),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (-4, 2),
-            prototype: "wall_solid",
+            prototype: "structure_wall_solid",
         ),
         (
             pos: (-3, 2),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-3, 2),
@@ -1983,7 +1983,7 @@
         ),
         (
             pos: (-2, 2),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (-2, 2),
@@ -1991,18 +1991,18 @@
         ),
         (
             pos: (-1, 2),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (-1, 2),
-            prototype: "wall_light_tube",
+            prototype: "light_wall_tube",
             components: {
                 "Facing": (North),
             },
         ),
         (
             pos: (0, 2),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (0, 2),
@@ -2010,7 +2010,7 @@
         ),
         (
             pos: (1, 2),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (1, 2),
@@ -2018,1275 +2018,1275 @@
         ),
         (
             pos: (2, 2),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (3, 2),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (4, 2),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (5, 2),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (5, 2),
-            prototype: "wall_solid",
+            prototype: "structure_wall_solid",
         ),
         (
             pos: (6, 2),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (6, 2),
-            prototype: "wall_solid",
+            prototype: "structure_wall_solid",
         ),
         (
             pos: (7, 2),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (7, 2),
-            prototype: "wall_solid",
+            prototype: "structure_wall_solid",
         ),
         (
             pos: (8, 2),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (9, 2),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (10, 2),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (11, 2),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (11, 2),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (-12, 3),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-12, 3),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (-11, 3),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-10, 3),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-9, 3),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-8, 3),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (-7, 3),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (-7, 3),
-            prototype: "wall_light_tube",
+            prototype: "light_wall_tube",
         ),
         (
             pos: (-6, 3),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (-5, 3),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-4, 3),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-3, 3),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (-3, 3),
-            prototype: "minigun_drum",
+            prototype: "ammo_mag_minigun_drum",
         ),
         (
             pos: (-2, 3),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (-2, 3),
-            prototype: "wall_solid",
+            prototype: "structure_wall_solid",
         ),
         (
             pos: (-1, 3),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (-1, 3),
-            prototype: "wall_solid",
+            prototype: "structure_wall_solid",
         ),
         (
             pos: (0, 3),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (0, 3),
-            prototype: "wall_solid",
+            prototype: "structure_wall_solid",
         ),
         (
             pos: (1, 3),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (1, 3),
-            prototype: "wall_solid",
+            prototype: "structure_wall_solid",
         ),
         (
             pos: (2, 3),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (3, 3),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (4, 3),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (5, 3),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (6, 3),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (7, 3),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (8, 3),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (9, 3),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (10, 3),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (11, 3),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (11, 3),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (-12, 4),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-12, 4),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (-11, 4),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-10, 4),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-9, 4),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-8, 4),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-7, 4),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-6, 4),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-5, 4),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-4, 4),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-3, 4),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-2, 4),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-1, 4),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-1, 4),
-            prototype: "wall_light_tube",
+            prototype: "light_wall_tube",
         ),
         (
             pos: (0, 4),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (1, 4),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (2, 4),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (3, 4),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (4, 4),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (5, 4),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (6, 4),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (6, 4),
-            prototype: "wall_light_tube",
+            prototype: "light_wall_tube",
             components: {
                 "Facing": (North),
             },
         ),
         (
             pos: (7, 4),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (8, 4),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (9, 4),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (10, 4),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (11, 4),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (11, 4),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (-12, 5),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-12, 5),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (-11, 5),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-10, 5),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-9, 5),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-8, 5),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-8, 5),
-            prototype: "wall_solid",
+            prototype: "structure_wall_solid",
         ),
         (
             pos: (-7, 5),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-7, 5),
-            prototype: "wall_solid",
+            prototype: "structure_wall_solid",
         ),
         (
             pos: (-6, 5),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-6, 5),
-            prototype: "wall_solid",
+            prototype: "structure_wall_solid",
         ),
         (
             pos: (-5, 5),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-4, 5),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (-3, 5),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (-2, 5),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (-2, 5),
-            prototype: "wall_solid",
+            prototype: "structure_wall_solid",
         ),
         (
             pos: (-1, 5),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (0, 5),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (1, 5),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (2, 5),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (3, 5),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (3, 5),
-            prototype: "wall_solid",
+            prototype: "structure_wall_solid",
         ),
         (
             pos: (4, 5),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (5, 5),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (5, 5),
-            prototype: "wall_solid",
+            prototype: "structure_wall_solid",
         ),
         (
             pos: (6, 5),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (6, 5),
-            prototype: "wall_solid",
+            prototype: "structure_wall_solid",
         ),
         (
             pos: (7, 5),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (7, 5),
-            prototype: "wall_solid",
+            prototype: "structure_wall_solid",
         ),
         (
             pos: (8, 5),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (8, 5),
-            prototype: "wall_light_tube",
+            prototype: "light_wall_tube",
             components: {
                 "Facing": (West),
             },
         ),
         (
             pos: (9, 5),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (10, 5),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (11, 5),
-            prototype: "window",
+            prototype: "structure_window",
         ),
         (
             pos: (11, 5),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (-12, 6),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-12, 6),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (-11, 6),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-10, 6),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-9, 6),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-8, 6),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-7, 6),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-6, 6),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-6, 6),
-            prototype: "wall_solid",
+            prototype: "structure_wall_solid",
         ),
         (
             pos: (-5, 6),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-4, 6),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (-3, 6),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (-3, 6),
-            prototype: "wall_solid",
+            prototype: "structure_wall_solid",
         ),
         (
             pos: (-2, 6),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (-1, 6),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (0, 6),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (1, 6),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (2, 6),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (2, 6),
-            prototype: "wall_solid",
+            prototype: "structure_wall_solid",
         ),
         (
             pos: (3, 6),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (3, 6),
-            prototype: "wall_light_tube",
+            prototype: "light_wall_tube",
         ),
         (
             pos: (4, 6),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (5, 6),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (5, 6),
-            prototype: "wall_solid",
+            prototype: "structure_wall_solid",
         ),
         (
             pos: (6, 6),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (7, 6),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (8, 6),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (9, 6),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (10, 6),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (11, 6),
-            prototype: "window",
+            prototype: "structure_window",
         ),
         (
             pos: (11, 6),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (-12, 7),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-12, 7),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (-11, 7),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-10, 7),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-9, 7),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-8, 7),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-7, 7),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-6, 7),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-6, 7),
-            prototype: "wall_solid",
+            prototype: "structure_wall_solid",
         ),
         (
             pos: (-5, 7),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-5, 7),
-            prototype: "wall_light_tube",
+            prototype: "light_wall_tube",
             components: {
                 "Facing": (East),
             },
         ),
         (
             pos: (-4, 7),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (-4, 7),
-            prototype: "wall_solid",
+            prototype: "structure_wall_solid",
         ),
         (
             pos: (-3, 7),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (-2, 7),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (-1, 7),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (0, 7),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (1, 7),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (1, 7),
-            prototype: "wall_solid",
+            prototype: "structure_wall_solid",
         ),
         (
             pos: (2, 7),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (3, 7),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (4, 7),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (5, 7),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (5, 7),
-            prototype: "wall_solid",
+            prototype: "structure_wall_solid",
         ),
         (
             pos: (6, 7),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (7, 7),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (8, 7),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (9, 7),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (10, 7),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (11, 7),
-            prototype: "window",
+            prototype: "structure_window",
         ),
         (
             pos: (11, 7),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (-12, 8),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-12, 8),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (-11, 8),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-10, 8),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-9, 8),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-8, 8),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-7, 8),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-6, 8),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-5, 8),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-4, 8),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-3, 8),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-2, 8),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-2, 8),
-            prototype: "wall_light_tube",
+            prototype: "light_wall_tube",
             components: {
                 "Facing": (North),
             },
         ),
         (
             pos: (-1, 8),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (0, 8),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (1, 8),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (2, 8),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (3, 8),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (4, 8),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (5, 8),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (6, 8),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (7, 8),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (8, 8),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (9, 8),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (10, 8),
-            prototype: "crystal",
+            prototype: "structure_crystal",
         ),
         (
             pos: (10, 8),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (11, 8),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (11, 8),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (-12, 9),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-12, 9),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (-11, 9),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-10, 9),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-9, 9),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-9, 9),
-            prototype: "test_light_red",
+            prototype: "light_test_red",
         ),
         (
             pos: (-8, 9),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-7, 9),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-6, 9),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-5, 9),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-4, 9),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-4, 9),
-            prototype: "wall_solid",
+            prototype: "structure_wall_solid",
         ),
         (
             pos: (-3, 9),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-3, 9),
-            prototype: "airlock",
+            prototype: "structure_airlock",
         ),
         (
             pos: (-2, 9),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-2, 9),
-            prototype: "wall_solid",
+            prototype: "structure_wall_solid",
         ),
         (
             pos: (-1, 9),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-1, 9),
-            prototype: "door_wood",
+            prototype: "structure_door_wood",
         ),
         (
             pos: (0, 9),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (0, 9),
-            prototype: "wall_solid",
+            prototype: "structure_wall_solid",
         ),
         (
             pos: (1, 9),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (2, 9),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (3, 9),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (4, 9),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (5, 9),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (6, 9),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (7, 9),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (8, 9),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (9, 9),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (9, 9),
-            prototype: "test_light_green",
+            prototype: "light_test_green",
         ),
         (
             pos: (10, 9),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (11, 9),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (11, 9),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (-12, 10),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-12, 10),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (-11, 10),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-10, 10),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-9, 10),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-8, 10),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-8, 10),
-            prototype: "spear",
+            prototype: "weapon_spear",
         ),
         (
             pos: (-7, 10),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-7, 10),
-            prototype: "fireaxe",
+            prototype: "weapon_fireaxe",
         ),
         (
             pos: (-6, 10),
-            prototype: "crowbar",
+            prototype: "tool_crowbar",
         ),
         (
             pos: (-6, 10),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-5, 10),
-            prototype: "toolbox_red",
+            prototype: "tool_toolbox_red",
         ),
         (
             pos: (-5, 10),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-4, 10),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-4, 10),
-            prototype: "wall_solid",
+            prototype: "structure_wall_solid",
         ),
         (
             pos: (-3, 10),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-2, 10),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-2, 10),
-            prototype: "wall_light_tube",
+            prototype: "light_wall_tube",
         ),
         (
             pos: (-1, 10),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (0, 10),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (0, 10),
-            prototype: "wall_solid",
+            prototype: "structure_wall_solid",
         ),
         (
             pos: (1, 10),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (2, 10),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (3, 10),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (4, 10),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (5, 10),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (6, 10),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (7, 10),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (8, 10),
-            prototype: "crystal",
+            prototype: "structure_crystal",
         ),
         (
             pos: (8, 10),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (9, 10),
-            prototype: "crystal",
+            prototype: "structure_crystal",
         ),
         (
             pos: (9, 10),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (10, 10),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (11, 10),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (11, 10),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (-12, 11),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-12, 11),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (-11, 11),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-11, 11),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (-10, 11),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-10, 11),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (-9, 11),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-9, 11),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (-8, 11),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-8, 11),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (-7, 11),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-7, 11),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (-6, 11),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-6, 11),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (-5, 11),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (-5, 11),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (-4, 11),
-            prototype: "window",
+            prototype: "structure_window",
         ),
         (
             pos: (-4, 11),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (-3, 11),
-            prototype: "window",
+            prototype: "structure_window",
         ),
         (
             pos: (-3, 11),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (-2, 11),
-            prototype: "window",
+            prototype: "structure_window",
         ),
         (
             pos: (-2, 11),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (-1, 11),
-            prototype: "window",
+            prototype: "structure_window",
         ),
         (
             pos: (-1, 11),
-            prototype: "plating",
+            prototype: "tile_plating",
         ),
         (
             pos: (0, 11),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (0, 11),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (1, 11),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (1, 11),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (2, 11),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (2, 11),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (3, 11),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (3, 11),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (4, 11),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (4, 11),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (5, 11),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (5, 11),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (6, 11),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (6, 11),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (7, 11),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (7, 11),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (8, 11),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (8, 11),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (9, 11),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (9, 11),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (10, 11),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (10, 11),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (11, 11),
-            prototype: "floor_steel",
+            prototype: "tile_floor_steel",
         ),
         (
             pos: (11, 11),
-            prototype: "wall_indestructible",
+            prototype: "structure_wall_indestructible",
         ),
         (
             pos: (-6, 0),

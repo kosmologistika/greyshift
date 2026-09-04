@@ -23,6 +23,7 @@
         type: "Entity",
         id: "part_head",
         parents: ["base_body_part"],
+        hide_spawn_menu: true,
         components: {
             "BodyPart": (kind: Head, weight: 6, sever: Some((types: [Slash], threshold: 200, wounded: Some(100))), severed_prop: Some("severed_head")),
         },
@@ -31,6 +32,7 @@
         type: "Entity",
         id: "part_arm_left",
         parents: ["base_body_part"],
+        hide_spawn_menu: true,
         components: {
             "BodyPart": (kind: Arm, side: Some(Left), weight: 15, sever: Some((types: [Slash], threshold: 60, wounded: Some(25))), severed_prop: Some("severed_arm")),
         },
@@ -39,6 +41,7 @@
         type: "Entity",
         id: "part_arm_right",
         parents: ["base_body_part"],
+        hide_spawn_menu: true,
         components: {
             "BodyPart": (kind: Arm, side: Some(Right), weight: 15, sever: Some((types: [Slash], threshold: 60, wounded: Some(25))), severed_prop: Some("severed_arm")),
         },
@@ -47,6 +50,7 @@
         type: "Entity",
         id: "part_leg_left",
         parents: ["base_body_part"],
+        hide_spawn_menu: true,
         components: {
             "BodyPart": (kind: Leg, side: Some(Left), weight: 12, sever: Some((types: [Slash], threshold: 60, wounded: Some(25))), severed_prop: Some("severed_leg")),
         },
@@ -55,6 +59,7 @@
         type: "Entity",
         id: "part_leg_right",
         parents: ["base_body_part"],
+        hide_spawn_menu: true,
         components: {
             "BodyPart": (kind: Leg, side: Some(Right), weight: 12, sever: Some((types: [Slash], threshold: 60, wounded: Some(25))), severed_prop: Some("severed_leg")),
         },

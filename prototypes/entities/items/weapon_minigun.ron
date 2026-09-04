@@ -28,7 +28,7 @@
         id: "weapon_minigun_loaded",
         parents: ["weapon_minigun"],
         components: {
-            "StartingContents": (contents: ["minigun_drum"]),
+            "StartingContents": (contents: ["ammo_mag_minigun_drum"]),
         },
     ),
 ]

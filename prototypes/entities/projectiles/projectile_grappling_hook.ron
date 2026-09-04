@@ -2,6 +2,7 @@
     (
         type: "Entity",
         id: "projectile_grappling_hook",
+        hide_spawn_menu: true,
         components: {
             "PullShooterOnHit": (),
             "FlightRules": (stops_at_blocks_attack: true, stops_on_first_damageable: true),

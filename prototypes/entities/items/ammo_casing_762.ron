@@ -1,0 +1,17 @@
+[
+    (
+        type: "Entity",
+        id: "ammo_casing_762",
+        hide_spawn_menu: true,
+        components: {
+            "DisplayName": (name: "7.62 spent casing"),
+            "Item": (size: Tiny, held: Nothing),
+            "Glidable": (),
+            "PlacementLayer": Free,
+            "Appearance": (
+                sprite: (rsi: "textures/objects/weapons/guns/ammunition/casings/ammo_casing", state: "base-spent"),
+                depth: BelowMobs,
+            ),
+        },
+    ),
+]

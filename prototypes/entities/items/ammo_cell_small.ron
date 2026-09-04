@@ -1,0 +1,19 @@
+[
+    (
+        type: "Entity",
+        id: "ammo_cell_small",
+        components: {
+            "DisplayName": (name: "small power cell"),
+            "Tags": (["power_cell"]),
+            "Item": (size: Small),
+            "AmmoStore": (rounds: 500, capacity: 500),
+            "RegenAmmo": (units_per_sec: 5.0),
+            "Glidable": (),
+            "PlacementLayer": Free,
+            "Appearance": (
+                sprite: (rsi: "textures/objects/power/power_cells", state: "small"),
+                depth: BelowMobs,
+            ),
+        },
+    ),
+]

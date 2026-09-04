@@ -2,6 +2,7 @@
     (
         type: "Entity",
         id: "projectile_meat_hook",
+        hide_spawn_menu: true,
         components: {
             "PullTargetOnHit": (),
             "StatusOnHit": (effect: "effect_knockdown", secs: 2.0),

@@ -3,6 +3,7 @@
         type: "Entity",
         id: "projectile_laser_red",
         parents: ["base_energy_projectile"],
+        hide_spawn_menu: true,
         components: {
             "DamageOnHit": (damage: {Heat: 14}),
             "EnergyProjectile": (),

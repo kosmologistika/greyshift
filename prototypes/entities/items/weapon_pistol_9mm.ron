@@ -26,7 +26,7 @@
         id: "weapon_pistol_9mm_loaded",
         parents: ["weapon_pistol_9mm"],
         components: {
-            "StartingContents": (contents: ["pistol_mag_9mm"]),
+            "StartingContents": (contents: ["ammo_mag_pistol_9mm"]),
         },
     ),
 ]

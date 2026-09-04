@@ -1,0 +1,27 @@
+[
+    (
+        type: "Entity",
+        id: "projectile_pellet_buckshot",
+        parents: ["base_ballistic_projectile"],
+        hide_spawn_menu: true,
+        components: {
+            "DamageOnHit": (damage: {Piercing: 5}),
+            "FlightRules": (stops_at_blocks_attack: true, stops_on_first_damageable: true),
+            "AlignToFlight": (),
+            // Short by design: the fan does the mid-range falloff, the hard
+            // cap keeps a scattergun out of rifle duels.
+            "MaxFlightRange": (tiles: 8),
+            "FlightSpeed": (tiles_per_sec: 12.5),
+            "DespawnOnFlightEnd": (),
+            "MuzzleFx": (sprite: (rsi: "textures/effects/muzzle_flash", state: "firing_effect")),
+            "ImpactFx": (sprite: (rsi: "textures/effects/impact_fx", state: "impact_bullet")),
+            "Appearance": (
+                sprite: (rsi: "textures/objects/weapons/guns/projectiles/projectiles_tg", state: "pellet"),
+                depth: Effects,
+                // The tg sprite points the other way up than the projectiles2
+                // family, so the flight offset flips sign
+                sprite_offset_radians: -1.5707964,
+            ),
+        },
+    ),
+]

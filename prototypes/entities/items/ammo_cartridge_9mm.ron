@@ -1,0 +1,17 @@
+[
+    (
+        type: "Entity",
+        id: "ammo_cartridge_9mm",
+        components: {
+            "DisplayName": (name: "9mm cartridge"),
+            "Item": (size: Tiny, held: Nothing),
+            "Cartridge": (projectile_proto: "projectile_bullet_9mm"),
+            "Glidable": (),
+            "PlacementLayer": Free,
+            "Appearance": (
+                sprite: (rsi: "textures/objects/weapons/guns/ammunition/casings/ammo_casing", state: "base"),
+                depth: BelowMobs,
+            ),
+        },
+    ),
+]

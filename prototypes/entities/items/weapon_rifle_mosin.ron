@@ -9,8 +9,8 @@
             "Gun": (fire_sound: Some((source: Path("audio/weapons/guns/atreides.ogg"), volume_db: 0.0, pitch_var: 0.05, range_tiles: 34.0)), fire_rate: 1.0, selected_mode: SemiAuto, available_modes: [SemiAuto]),
             "RecoilKick": (px: 6.0),
             "AmmoStore": (rounds: 0, capacity: 5),
-            "ShotSpec": (projectile_proto: "bullet_762"),
-            "Ejects": (live_round: Some("cartridge_762"), spent_casing: Some("casing_762")),
+            "ShotSpec": (projectile_proto: "projectile_bullet_762"),
+            "Ejects": (live_round: Some("ammo_cartridge_762"), spent_casing: Some("ammo_casing_762")),
             // A bolt gun keeps the fired case chambered until the stroke
             "RetainsBrass": (),
             "LoadsCartridge": (windup_secs: 1.0),
