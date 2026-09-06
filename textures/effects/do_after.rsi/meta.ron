@@ -1,0 +1,11 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "Taken from tgstation at commit 89ac4472f5f, icons/effects/progressbar.dmi: prog_bar_0 as the empty bar frame and the cog. The 32x32 cells are kept as drawn, so placing them one tile above the mob puts the art where tg puts it",
+    ],
+    states: [
+        (name: "bar", directions: One),
+        (name: "cog", directions: One, delays: [[0.1, 0.1, 0.1, 0.1]], loops: true),
+    ],
+)
