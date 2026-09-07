@@ -12,8 +12,9 @@
             "Facing": (South),
             "DebugShooter": (projectile: "projectile_bullet_9mm", interval: 1.0),
             "Appearance": (
-                sprite: (rsi: "textures/objects/weapons/guns/turrets", state: "syndie_lethal"),
+                sprite: (rsi: "textures/objects/weapons/guns/sentry_turret", state: "base"),
                 depth: Furniture,
+                layers: [(state: "lethal")],
             ),
         },
     ),
