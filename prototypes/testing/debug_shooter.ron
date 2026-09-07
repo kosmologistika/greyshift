@@ -11,7 +11,7 @@
             "Solid": (),
             "PlacementLayer": Solid,
             "Facing": (South),
-            "DebugShooter": (projectile: "projectile_bullet_9mm", interval: 1.0, remaining: 20),
+            "DebugShooter": (projectile: "projectile_bullet_9mm", interval: 1.0, remaining: 50),
             "Appearance": (
                 sprite: (rsi: "textures/objects/weapons/guns/sentry_turret", state: "base"),
                 depth: Furniture,
