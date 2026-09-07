@@ -1,0 +1,22 @@
+[
+    // A fixed turret for testing rounds. It opens fire the moment it is placed
+    // and stops when `remaining` runs out; top it up over the inspector or BRP,
+    // or with the Fire verb. Rotate steps it clockwise. Pointing it at a hook
+    // prototype reels the turret itself
+    (
+        type: "Entity",
+        id: "debug_shooter",
+        components: {
+            "DisplayName": (name: "debug shooter"),
+            "Solid": (),
+            "PlacementLayer": Solid,
+            "Facing": (South),
+            "DebugShooter": (projectile: "projectile_bullet_9mm", interval: 1.0, remaining: 50),
+            "Appearance": (
+                sprite: (rsi: "textures/objects/weapons/guns/sentry_turret", state: "base"),
+                depth: Furniture,
+                layers: [(state: "lethal")],
+            ),
+        },
+    ),
+]
