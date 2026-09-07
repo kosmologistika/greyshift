@@ -29,3 +29,4 @@ input-action-chat-focus = Написать в чат
 input-action-emote-wheel = Колесо эмоций
 input-action-scoreboard = Таблица счёта
 input-action-toggle-tray = Показать снаряжение
+input-action-debug-panel = Панель отладки
