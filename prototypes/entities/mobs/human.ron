@@ -11,6 +11,8 @@
             "Crawler": (),
             "Damageable": (),
             "MobThresholds": (thresholds: {0: Alive, 100: Dead}),
+            // SS14's ladder on our death bar: at 80 the sever bars have halved too
+            "SlowOnDamage": (thresholds: {60: 0.7, 80: 0.5}),
             "Body": (
                 parts: ["part_head", "part_arm_left", "part_arm_right", "part_leg_left", "part_leg_right"],
                 torso_weight: 40,
