@@ -1,0 +1,10 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "Taken from space-wizards/space-station-14 Resources/Textures/Objects/Weapons/Guns/Turrets/turrets.rsi, originally https://github.com/tgstation/tgstation/commit/42e0275d860551197687c571c689c270ff423288",
+    ],
+    states: [
+        (name: "syndie_lethal", directions: Eight),
+    ],
+)

@@ -1,0 +1,20 @@
+[
+    // A fixed turret for testing rounds. Set `remaining` on DebugShooter over
+    // the inspector or BRP, or use the Fire verb; Rotate steps it clockwise.
+    // Pointing it at a hook prototype reels the turret itself
+    (
+        type: "Entity",
+        id: "debug_shooter",
+        components: {
+            "DisplayName": (name: "debug shooter"),
+            "Solid": (),
+            "PlacementLayer": Solid,
+            "Facing": (South),
+            "DebugShooter": (projectile: "projectile_bullet_9mm", interval: 1.0),
+            "Appearance": (
+                sprite: (rsi: "textures/objects/weapons/guns/turrets", state: "syndie_lethal"),
+                depth: Furniture,
+            ),
+        },
+    ),
+]
