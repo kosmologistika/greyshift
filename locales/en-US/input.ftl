@@ -29,3 +29,4 @@ input-action-chat-focus = Focus Chat
 input-action-emote-wheel = Emote Wheel
 input-action-scoreboard = Scoreboard
 input-action-toggle-tray = Toggle Equipment
+input-action-debug-panel = Debug Panel
