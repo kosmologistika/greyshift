@@ -1,5 +1,12 @@
 intent-denied-dead = You are dead. The dead cannot act.
+    .popup = dead!
 intent-denied-flight = You are flying through the air.
+    .popup = flying!
 intent-denied-legless = You have no legs to stand on.
+    .popup = no legs!
 intent-denied-stunned = You are stunned.
+    .popup = stunned!
 intent-denied-knocked-down = You are knocked down.
+    .popup = knocked down!
+intent-denied-no-hands = You have no hands.
+    .popup = no hands!

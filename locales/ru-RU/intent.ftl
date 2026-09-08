@@ -1,5 +1,12 @@
 intent-denied-dead = Вы мертвы. Мёртвые не действуют.
+    .popup = мертв!
 intent-denied-flight = Вы летите по воздуху.
+    .popup = в полёте!
 intent-denied-legless = У вас нет ног, чтобы встать.
+    .popup = нет ног!
 intent-denied-stunned = Вы оглушены.
+    .popup = оглушены!
 intent-denied-knocked-down = Вас сбили с ног.
+    .popup = сбиты с ног!
+intent-denied-no-hands = У вас нет рук.
+    .popup = нет рук!
