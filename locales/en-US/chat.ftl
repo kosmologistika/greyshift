@@ -23,3 +23,4 @@ chat-denied-no-body = You have no body to speak with.
 chat-denied-rate-limited = You are sending messages too quickly.
 chat-denied-too-long = That message is too long.
 chat-denied-ooc-disabled = OOC is disabled on this server.
+chat-repeat-badge = x{ $count }
