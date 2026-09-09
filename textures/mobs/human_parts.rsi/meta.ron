@@ -2,15 +2,17 @@
     size: (x: 32, y: 32),
     license: "CC-BY-SA-3.0",
     copyright: [
-        "Taken from space-syndicate/space-station-14 Resources/Textures/Mobs/Species/Human/parts.rsi, originally https://github.com/tgstation/tgstation/blob/8024397cc81c5f47f74cf4279e35728487d0a1a7/icons/mob/human_parts_greyscale.dmi, modified by DrSmugleaf and Ko4erga (discord). Hands and feet composited into the arm and leg states here, a limb severs whole; the full state is recomposed from those merged parts.",
+        "Taken from space-syndicate/space-station-14 Resources/Textures/Mobs/Species/Human/parts.rsi, originally https://github.com/tgstation/tgstation/blob/8024397cc81c5f47f74cf4279e35728487d0a1a7/icons/mob/human_parts_greyscale.dmi, modified by DrSmugleaf and Ko4erga (discord). Hands and feet composited into the arm and leg states here, a limb severs whole; the full state is recomposed from those merged parts. The sheet is a greyscale master: a skin tint multiplies over it.",
     ],
     states: [
         (name: "full", directions: One),
+        (name: "head_f", directions: Four),
         (name: "head_m", directions: Four),
         (name: "l_arm", directions: Four),
         (name: "l_leg", directions: Four),
         (name: "r_arm", directions: Four),
         (name: "r_leg", directions: Four),
+        (name: "torso_f", directions: Four),
         (name: "torso_m", directions: Four),
     ],
 )
