@@ -1,0 +1,30 @@
+[
+    // One placement per room, on any floor cell of it. The server floods from
+    // there at map spawn; the name is what the room is called everywhere
+    (
+        type: "Entity",
+        id: "area",
+        abstract: true,
+        components: {
+            "Area": (),
+            "PvsGlobal": (),
+            "PlacementLayer": Free,
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_station",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "station"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_maintenance",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "maintenance"),
+        },
+    ),
+]

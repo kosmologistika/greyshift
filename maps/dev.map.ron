@@ -3300,5 +3300,13 @@
             pos: (-6, 1),
             prototype: "pickup_armor",
         ),
+        (
+            pos: (0, 0),
+            prototype: "area_station",
+        ),
+        (
+            pos: (-9, -9),
+            prototype: "area_maintenance",
+        ),
     ],
 )

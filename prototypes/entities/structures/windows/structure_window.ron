@@ -6,6 +6,7 @@
             "DisplayName": (name: "window"),
             "Solid": (),
             "BlocksAttack": (),
+            "AreaBoundary": (),
             // Lasers fly through glass untouched; bullets still stop and
             // break it.
             "PassesEnergyProjectiles": (),

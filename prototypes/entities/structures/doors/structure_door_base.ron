@@ -1,0 +1,17 @@
+[
+    // What every door is before it has a motor or a material: it fills its
+    // cell, bounds the rooms either side of it, and can be broken down
+    (
+        type: "Entity",
+        id: "structure_door_base",
+        abstract: true,
+        components: {
+            "AreaBoundary": (),
+            // The obstruction sensor. Cutting it (wires, an AI override) is
+            // what turns a door with CrushDamage into something that hurts
+            "DoorSafety": (),
+            "Damageable": (),
+            "PlacementLayer": Solid,
+        },
+    ),
+]
