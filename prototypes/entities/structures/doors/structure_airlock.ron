@@ -16,8 +16,7 @@
             // that say why when it doesn't.
             "BumpOpen": (),
             "Airlock": (),
-            // The obstruction sensor. Cutting it (wires, an AI override) is
-            // what turns the airlock below into something that hurts.
+            // What the door does to whoever is in it when the safety is cut
             "CrushDamage": ({Blunt: 15}),
             "StruckSound": (default: Some((source: Collection("hit_metal"), volume_db: -4.0, pitch_var: 0.1))),
             "Destructible": (thresholds: [

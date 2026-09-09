@@ -7,6 +7,8 @@
         abstract: true,
         components: {
             "AreaBoundary": (),
+            // The obstruction sensor. Cutting it (wires, an AI override) is
+            // what turns a door with CrushDamage into something that hurts
             "DoorSafety": (),
             "Damageable": (),
             "PlacementLayer": Solid,
