@@ -1,0 +1,21 @@
+[
+    // A map names one of these as its default; an area names one to override
+    // it slot by slot. tg's levels: the hum at 35, a one-shot at 27 of 100
+    (
+        type: "Ambience",
+        id: "station",
+        hum: Some((source: Path("audio/ambience/shipambience.ogg"), volume_db: -9.0)),
+        one_shots: Some((source: Collection("ambience_station"), volume_db: -11.0)),
+    ),
+    (
+        type: "Ambience",
+        id: "maintenance",
+        hum: Some((source: Path("audio/ambience/maintambience.ogg"), volume_db: -12.0)),
+        one_shots: Some((source: Collection("ambience_maintenance"), volume_db: -11.0)),
+    ),
+    (
+        type: "Ambience",
+        id: "arena",
+        music: Some((source: Path("audio/music/endless_space.ogg"), volume_db: -6.0)),
+    ),
+]

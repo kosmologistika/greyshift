@@ -25,6 +25,7 @@
         parents: ["area"],
         components: {
             "DisplayName": (name: "maintenance"),
+            "Area": (ambience: Some("maintenance")),
         },
     ),
 ]
