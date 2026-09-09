@@ -2,6 +2,7 @@
     (
         type: "Entity",
         id: "structure_airlock",
+        parents: ["structure_door_base"],
         components: {
             "DisplayName": (name: "airlock"),
             "Door": (
@@ -15,13 +16,10 @@
             // that say why when it doesn't.
             "BumpOpen": (),
             "Airlock": (),
-            "AreaBoundary": (),
             // The obstruction sensor. Cutting it (wires, an AI override) is
             // what turns the airlock below into something that hurts.
-            "DoorSafety": (),
             "CrushDamage": ({Blunt: 15}),
             "StruckSound": (default: Some((source: Collection("hit_metal"), volume_db: -4.0, pitch_var: 0.1))),
-            "Damageable": (),
             "Destructible": (thresholds: [
                 (
                     trigger: TotalDamage(100),
@@ -33,7 +31,6 @@
                 close: Some((source: Path("audio/machines/airlock_close.ogg"), volume_db: -4.0)),
                 deny: Some((source: Path("audio/machines/airlock_deny.ogg"), volume_db: -6.0)),
             ),
-            "PlacementLayer": Solid,
             "Appearance": (
                 sprite: (rsi: "textures/structures/doors/airlock", state: "closed"),
                 depth: Doors,

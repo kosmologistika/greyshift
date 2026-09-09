@@ -2,6 +2,7 @@
     (
         type: "Entity",
         id: "structure_door_wood",
+        parents: ["structure_door_base"],
         components: {
             "DisplayName": (name: "wooden door"),
             // No BumpOpen: a door with no motor needs a hand on it, so walking
@@ -14,10 +15,7 @@
                 auto_close_secs: None,
             ),
             // No CrushDamage: there is no motor behind it to fear.
-            "DoorSafety": (),
-            "AreaBoundary": (),
             "StruckSound": (default: Some((source: Collection("hit_wood"), volume_db: -4.0, pitch_var: 0.1))),
-            "Damageable": (),
             "Destructible": (thresholds: [
                 (
                     trigger: TotalDamage(60),
@@ -29,7 +27,6 @@
                 close: Some((source: Path("audio/machines/airlock_close.ogg"), volume_db: -4.0)),
                 deny: Some((source: Path("audio/machines/airlock_deny.ogg"), volume_db: -6.0)),
             ),
-            "PlacementLayer": Solid,
             "Appearance": (
                 sprite: (rsi: "textures/structures/doors/door_wood", state: "closed"),
                 depth: Doors,
