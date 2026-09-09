@@ -15,6 +15,7 @@
             // that say why when it doesn't.
             "BumpOpen": (),
             "Airlock": (),
+            "AreaBoundary": (),
             // The obstruction sensor. Cutting it (wires, an AI override) is
             // what turns the airlock below into something that hurts.
             "DoorSafety": (),
