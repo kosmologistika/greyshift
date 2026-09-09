@@ -78,7 +78,7 @@
             // layers) and humanoid_visuals can tint the skin and swap the
             // sex's head and torso. The base "full" state stays for anything
             // that reads the base sprite as an icon; hide_base keeps it off
-            // the map.
+            // the map
             "Appearance": (
                 sprite: (rsi: "textures/mobs/human_parts", state: "full"),
                 depth: Mobs,
