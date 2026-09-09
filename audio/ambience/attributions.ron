@@ -1,0 +1,18 @@
+[
+    (
+        files: [
+            "ambigen1.ogg", "ambigen3.ogg", "ambigen4.ogg", "ambigen5.ogg", "ambigen7.ogg", "ambigen8.ogg",
+            "ambimaint1.ogg", "ambimaint2.ogg", "ambimaint3.ogg", "ambimaint4.ogg", "ambimaint5.ogg",
+            "maintambience.ogg",
+        ],
+        license: "CC-BY-SA-3.0",
+        copyright: "/tg/station, via space-wizards/space-station-14, Resources/Audio/Ambience",
+        source: "https://github.com/tgstation/tgstation/tree/ae9767664701396501af5dcef8e34c4b5add55c9/sound/ambience",
+    ),
+    (
+        files: ["shipambience.ogg"],
+        license: "CC-BY-SA-3.0",
+        copyright: "CEV Eris, via /tg/station and space-wizards/space-station-14",
+        source: "https://github.com/discordia-space/CEV-Eris/blob/e4e40d38424afe88c8a81cf0e3857d8af4ef077f/sound/ambience/shipambience.ogg",
+    ),
+]

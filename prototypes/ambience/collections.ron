@@ -1,0 +1,26 @@
+[
+    // SS14's AmbienceGeneral and AmbienceMaintenance, trimmed to a handful
+    (
+        type: "SoundCollection",
+        id: "ambience_station",
+        files: [
+            "audio/ambience/ambigen1.ogg",
+            "audio/ambience/ambigen3.ogg",
+            "audio/ambience/ambigen4.ogg",
+            "audio/ambience/ambigen5.ogg",
+            "audio/ambience/ambigen7.ogg",
+            "audio/ambience/ambigen8.ogg",
+        ],
+    ),
+    (
+        type: "SoundCollection",
+        id: "ambience_maintenance",
+        files: [
+            "audio/ambience/ambimaint1.ogg",
+            "audio/ambience/ambimaint2.ogg",
+            "audio/ambience/ambimaint3.ogg",
+            "audio/ambience/ambimaint4.ogg",
+            "audio/ambience/ambimaint5.ogg",
+        ],
+    ),
+]
