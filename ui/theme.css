@@ -1152,7 +1152,7 @@
 }
 
 .center-col {
-    width: 140px;
+    width: 210px;
     flex-shrink: 0;
     flex-direction: column;
     align-items: center;
@@ -1164,10 +1164,10 @@
     column-gap: var(--space-2);
 }
 
-/* Three times the 32px cell, whole pixels */
+/* Five times the 32px cell, whole pixels */
 .dummy-large {
-    width: 96px;
-    height: 96px;
+    width: 160px;
+    height: 160px;
 }
 
 .panel-host {
