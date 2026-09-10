@@ -39,3 +39,4 @@ character-editor-saturation = Насыщ
 character-editor-value = Свет
 character-editor-hex = Hex
 character-editor-waiting = Ждём игроков   готовы { $ready }/{ $total }
+character-editor-reroll-name = Случайно

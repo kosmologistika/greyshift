@@ -273,6 +273,9 @@
 
 .btn text {
     margin: 2px 6px;
+    /* The :active nudge needs a value to come back to, or flair warns
+       it cannot unset top */
+    top: 0px;
 }
 
 .btn.primary {
@@ -1135,11 +1138,17 @@
 }
 
 .btn.small {
-    min-height: 18px;
+    min-height: 20px;
 }
 
 .btn.small text {
-    margin: 1px 4px;
+    margin: 2px 6px;
+}
+
+/* Rows line up with the 20px swatch beside them */
+.toggle,
+.btn.form-value {
+    min-height: 20px;
 }
 
 .center-col {
@@ -1218,4 +1227,8 @@
     flex-wrap: wrap;
     column-gap: 2px;
     row-gap: 2px;
+}
+
+.grid-hover {
+    min-height: 12px;
 }

@@ -39,3 +39,4 @@ character-editor-saturation = Sat
 character-editor-value = Light
 character-editor-hex = Hex
 character-editor-waiting = Waiting for players   { $ready }/{ $total } ready
+character-editor-reroll-name = Random
