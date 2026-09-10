@@ -374,8 +374,10 @@
     height: 64px;
 }
 
+/* Three small lines tall whatever the name, so cycling slots moves nothing */
 .name-row {
     width: 100%;
+    height: 27px;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
@@ -387,9 +389,26 @@
     color: var(--text-bright);
 }
 
+/* Content-height so a short name centres on the arrows; a fourth line is cut */
+.name-box {
+    flex-grow: 1;
+    flex-basis: 0px;
+    min-width: 0px;
+    max-height: 27px;
+    overflow: clip;
+}
+
+.name-box .name {
+    width: 100%;
+    font-size: var(--font-small);
+    text-align: center;
+    -bevy-line-break: word-or-character;
+}
+
 .btn.arrow {
     width: 16px;
     min-height: 16px;
+    flex-shrink: 0;
 }
 
 .btn.arrow text {
