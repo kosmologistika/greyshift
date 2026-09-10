@@ -6,3 +6,4 @@ character-rejected-skin = Тон кожи персонажа вне шкалы.
 character-rejected-marking = Сервер не знает такую причёску или бороду.
 character-rejected-marking-allowed = Такая причёска или борода недоступна для этого тела.
 character-rejected-session = На сервере нет сессии для этого персонажа. Переподключитесь.
+character-rejected-color = Один из цветов персонажа не является цветом.

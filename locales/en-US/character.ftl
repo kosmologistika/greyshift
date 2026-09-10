@@ -6,3 +6,4 @@ character-rejected-skin = The character's skin tone is off the ramp.
 character-rejected-marking = The server does not know that hairstyle or beard.
 character-rejected-marking-allowed = That hairstyle or beard is not allowed on this body.
 character-rejected-session = The server has no session for this character to sit on. Reconnect.
+character-rejected-color = One of the character's colors is not a color.
