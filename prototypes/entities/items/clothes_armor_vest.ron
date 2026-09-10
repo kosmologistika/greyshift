@@ -5,7 +5,7 @@
         components: {
             "DisplayName": (name: "armor vest"),
             "Item": (size: Medium),
-            "Clothing": (slots: [Suit]),
+            "Clothing": (slots: [Suit], equip_secs: 2.0),
             // tg's security vest, keyed by damage type: Piercing is the
             // bullet axis and Heat the laser axis
             "Armor": (covers: [Torso], block: {Blunt: 35, Slash: 35, Piercing: 30, Heat: 30}),

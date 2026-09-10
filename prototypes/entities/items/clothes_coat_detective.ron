@@ -5,7 +5,7 @@
         components: {
             "DisplayName": (name: "detective's coat"),
             "Item": (size: Medium),
-            "Clothing": (slots: [Suit], suit_storage: ["holsterable"]),
+            "Clothing": (slots: [Suit], suit_storage: ["holsterable"], equip_secs: 2.0),
             "Glidable": (),
             "PlacementLayer": Free,
             "Appearance": (
