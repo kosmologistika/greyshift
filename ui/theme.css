@@ -1096,7 +1096,7 @@
 }
 
 .slot-col {
-    width: 130px;
+    width: 110px;
     flex-shrink: 0;
     flex-direction: column;
     row-gap: var(--space-1);
@@ -1143,7 +1143,7 @@
 }
 
 .center-col {
-    width: 160px;
+    width: 140px;
     flex-shrink: 0;
     flex-direction: column;
     align-items: center;
@@ -1163,7 +1163,7 @@
 
 .panel-host {
     flex-grow: 1;
-    min-width: 0px;
+    min-width: 200px;
     flex-direction: column;
     row-gap: var(--space-1);
 }
