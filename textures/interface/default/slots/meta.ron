@@ -2,7 +2,7 @@
     size: (x: 32, y: 32),
     license: "CC-BY-SA-3.0",
     copyright: [
-        "https://github.com/tgstation/tgstation/commits/038707f0b1dec77bce817a2ccb804419547b86b0/icons/hud/screen_midnight.dmi and modified by Morbo; the slot plates, toggle, template and act_drop/act_swap states cut from the same sheet by utils/extract_dmi.py",
+        "https://github.com/tgstation/tgstation/commits/038707f0b1dec77bce817a2ccb804419547b86b0/icons/hud/screen_midnight.dmi and modified by Morbo; the slot plates, toggle, template, storage_cell, storage_close and act_drop/act_swap states cut from the same sheet by utils/extract_dmi.py",
     ],
     states: [
         (name: "hand_l"),
@@ -27,5 +27,7 @@
         (name: "toggle_active"),
         (name: "template"),
         (name: "template_small"),
+        (name: "storage_cell"),
+        (name: "storage_close"),
     ],
 )
