@@ -354,6 +354,49 @@
     row-gap: var(--space-2);
 }
 
+/* A menu column and the character card side by side, tops aligned */
+.card-row {
+    flex-direction: row;
+    align-items: flex-start;
+    column-gap: var(--space-4);
+}
+
+.character-card {
+    width: 128px;
+}
+
+/* The preview target is one 32px cell; twice that keeps the pixels whole */
+.dummy {
+    width: 64px;
+    height: 64px;
+}
+
+.name-row {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: var(--space-1);
+}
+
+.name {
+    font-size: var(--font-body);
+    color: var(--text-bright);
+}
+
+.btn.arrow {
+    width: 16px;
+    min-height: 16px;
+}
+
+.btn.arrow text {
+    margin: 0px;
+}
+
+.status {
+    text-align: center;
+}
+
 /* Border colour and padding stay Rust-owned: focus swaps the colour per
    frame, and the padding is bound to the label anchor constant */
 .field {
