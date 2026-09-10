@@ -273,6 +273,9 @@
 
 .btn text {
     margin: 2px 6px;
+    /* The :active nudge needs a value to come back to, or flair warns
+       it cannot unset top */
+    top: 0px;
 }
 
 .btn.primary {
@@ -1072,4 +1075,160 @@
     color: var(--text-bright);
     font-size: var(--font-small);
     margin: 0px;
+}
+
+/* The character editor: full-bleed, three columns, footer */
+.editor {
+    width: 100%;
+    height: 100%;
+    row-gap: var(--space-2);
+}
+
+.strip {
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-dim);
+    padding-bottom: var(--space-1);
+}
+
+.editor-main {
+    flex-grow: 1;
+    min-height: 0px;
+    column-gap: var(--space-3);
+    align-items: stretch;
+}
+
+.slot-col {
+    width: 110px;
+    flex-shrink: 0;
+    flex-direction: column;
+    row-gap: var(--space-1);
+}
+
+.slot-list {
+    flex-grow: 1;
+    min-height: 0px;
+    flex-direction: column;
+    row-gap: 2px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.slot-btn {
+    width: 100%;
+    min-height: 20px;
+    justify-content: flex-start;
+}
+
+.slot-btn text {
+    margin: 2px var(--space-1);
+}
+
+.slot-btn.active,
+.toggle.active,
+.icon-btn.active {
+    -bevy-image-color: var(--btn-primary);
+}
+
+.slot-actions {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 2px;
+    row-gap: 2px;
+}
+
+.btn.small {
+    min-height: 20px;
+}
+
+.btn.small text {
+    margin: 2px 6px;
+}
+
+/* Rows line up with the 20px swatch beside them */
+.toggle,
+.btn.form-value {
+    min-height: 20px;
+}
+
+.center-col {
+    width: 210px;
+    flex-shrink: 0;
+    flex-direction: column;
+    align-items: center;
+    row-gap: var(--space-2);
+}
+
+.rotate-row {
+    align-items: center;
+    column-gap: var(--space-2);
+}
+
+/* Five times the 32px cell, whole pixels */
+.dummy-large {
+    width: 160px;
+    height: 160px;
+}
+
+.panel-host {
+    flex-grow: 1;
+    min-width: 200px;
+    flex-direction: column;
+    row-gap: var(--space-1);
+}
+
+.form-row {
+    width: 100%;
+    min-height: 24px;
+    align-items: center;
+    column-gap: var(--space-2);
+}
+
+.form-label {
+    width: 40px;
+    color: var(--text-dim);
+    font-size: var(--font-small);
+}
+
+.form-value {
+    flex-grow: 1;
+    min-width: 0px;
+}
+
+.swatch {
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--border-dim);
+}
+
+.grid {
+    flex-grow: 1;
+    min-height: 0px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    column-gap: 2px;
+    row-gap: 2px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.icon-btn {
+    width: 36px;
+    height: 36px;
+}
+
+.icon {
+    width: 32px;
+    height: 32px;
+}
+
+.presets {
+    flex-wrap: wrap;
+    column-gap: 2px;
+    row-gap: 2px;
+}
+
+.grid-hover {
+    min-height: 12px;
 }
