@@ -20,6 +20,7 @@ character-editor-delete-confirm = Точно?
 character-editor-import = Импорт
 character-editor-export = Экспорт
 character-editor-random = СЛУЧАЙНО
+character-editor-clothes = ОДЕЖДА
 character-editor-cancel = ОТМЕНА
 character-editor-save = СОХРАНИТЬ
 character-editor-name = Имя
