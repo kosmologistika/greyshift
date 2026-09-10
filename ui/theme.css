@@ -585,9 +585,23 @@
     background-color: var(--bg-overlay);
 }
 
+/* The name on the left, the cross on the right */
+.strip-header {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: var(--space-2);
+}
+
 .strip-title {
     font-size: var(--font-small);
     color: var(--text-dim);
+}
+
+.strip-close {
+    width: 20px;
+    height: 20px;
 }
 
 /* In-game HUD. Anchoring is NOT here: every surface hangs off a zone root

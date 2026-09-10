@@ -8,3 +8,7 @@ smart-equip-no-slot = У вас нет такого слота.
     .popup = нет такого слота!
 smart-equip-empty = Там пусто, и в руке ничего.
     .popup = там пусто!
+strip-warn-hand = { $actor } вкладывает { $item } вам в руку.
+    .popup = { $actor } даёт вам { $item }!
+strip-denied-busy = Руки заняты.
+    .popup = руки заняты!
