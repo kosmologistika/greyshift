@@ -374,8 +374,10 @@
     height: 64px;
 }
 
+/* Three small lines tall whatever the name, so cycling slots moves nothing */
 .name-row {
     width: 100%;
+    height: 27px;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
@@ -387,13 +389,13 @@
     color: var(--text-bright);
 }
 
-/* Three lines of the small font hold the longest name between the arrows;
-   anything past that is cut rather than pushing the row apart */
+/* Content-height so a short name centres on the arrows; a fourth line is cut */
 .name-box {
     flex-grow: 1;
-    max-height: 38px;
+    flex-basis: 0px;
+    min-width: 0px;
+    max-height: 27px;
     overflow: clip;
-    justify-content: center;
 }
 
 .name-box .name {
@@ -406,6 +408,7 @@
 .btn.arrow {
     width: 16px;
     min-height: 16px;
+    flex-shrink: 0;
 }
 
 .btn.arrow text {
