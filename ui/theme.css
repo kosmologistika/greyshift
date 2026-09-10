@@ -387,6 +387,22 @@
     color: var(--text-bright);
 }
 
+/* Three lines of the small font hold the longest name between the arrows;
+   anything past that is cut rather than pushing the row apart */
+.name-box {
+    flex-grow: 1;
+    max-height: 38px;
+    overflow: clip;
+    justify-content: center;
+}
+
+.name-box .name {
+    width: 100%;
+    font-size: var(--font-small);
+    text-align: center;
+    -bevy-line-break: word-or-character;
+}
+
 .btn.arrow {
     width: 16px;
     min-height: 16px;
