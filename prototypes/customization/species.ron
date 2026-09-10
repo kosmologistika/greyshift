@@ -10,5 +10,10 @@
         male_first_names: "names_first_male",
         female_first_names: "names_first_female",
         last_names: "names_last",
+        // SS14's one human map: a one-texel waist pinch on the jumpsuit for
+        // the female torso. The male cut is the sheet as drawn
+        displacement: {
+            Uniform: (female: Some((rsi: "textures/mobs/human_displacement", state: "jumpsuit-female"))),
+        },
     ),
 ]
