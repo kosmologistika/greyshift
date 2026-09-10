@@ -71,11 +71,14 @@
                 outfit: {Uniform: "clothes_jumpsuit_grey", Shoes: "clothes_boots_jack", Ears: "clothes_headset", Id: "clothes_id_card"},
             ),
             "Eyes": (),
-            // Composed from the syndicate part sheets so a severed part can
+            // The look a profile overwrites at spawn; a body nobody dressed is this
+            "Humanoid": (),
+            // Composed from the greyscale part sheets so a severed part can
             // vanish from the sprite (client body_visuals toggles the keyed
-            // layers). The base "full" state stays for anything that reads
-            // the base sprite as an icon; hide_base keeps it off the map.
-            // The sheets are pre-colored - no tint, a multiply turns them brown.
+            // layers) and humanoid_visuals can tint the skin and swap the
+            // sex's head and torso. The base "full" state stays for anything
+            // that reads the base sprite as an icon; hide_base keeps it off
+            // the map
             "Appearance": (
                 sprite: (rsi: "textures/mobs/human_parts", state: "full"),
                 depth: Mobs,
@@ -83,7 +86,7 @@
                 layers: [
                     (state: "l_leg", key: Some("part_leg_left"), order: -5),
                     (state: "r_leg", key: Some("part_leg_right"), order: -5),
-                    (state: "torso_m", order: -4),
+                    (state: "torso_m", key: Some("torso"), order: -4),
                     (state: "l_arm", key: Some("part_arm_left"), order: -3),
                     (state: "r_arm", key: Some("part_arm_right"), order: -3),
                     (state: "head_m", key: Some("part_head"), order: -2),

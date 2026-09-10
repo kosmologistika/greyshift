@@ -1,0 +1,10 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "Taken from space-wizards/space-station-14 Resources/Textures/Mobs/Customization/eyes.rsi at commit ae051d290568. Their line: human_eyes taken from https://github.com/tgstation/tgstation/blob/8024397cc81c5f47f74cf4279e35728487d0a1a7/icons/mob/human_parts_greyscale.dmi and modified by DrSmugleaf",
+    ],
+    states: [
+        (name: "eyes", directions: Four),
+    ],
+)

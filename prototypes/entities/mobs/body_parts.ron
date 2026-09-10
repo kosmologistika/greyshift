@@ -71,6 +71,10 @@
         parents: ["base_melee_weapon"],
         components: {
             "Item": (size: Medium),
+            // The part sheets are masters: this is the default skin, so a prop
+            // spawned from a menu or a map draws flesh, and a sever overwrites
+            // it with its body's own
+            "SpriteTint": ((red: 1.0, green: 0.8833, blue: 0.8, alpha: 1.0)),
             "MeleeWeapon": (shape: Thrust(len: 1), damage: {Blunt: 5}, cooldown: 0.7),
             "DamageOnHit": (damage: {Blunt: 3}),
             "Glidable": (),
