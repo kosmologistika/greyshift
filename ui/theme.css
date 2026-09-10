@@ -573,8 +573,9 @@
 }
 
 /* The strip panel: the target's name over tg's 5x6 grid of tray cells,
-   which place themselves on the tray pitch in Rust */
-.strip {
+   which place themselves on the tray pitch in Rust. Not `.strip`, which
+   the character editor's header row already wears */
+.strip-panel {
     position: absolute;
     bottom: 64px;
     left: 40%;
