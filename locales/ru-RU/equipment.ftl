@@ -12,3 +12,4 @@ strip-warn-hand = { $actor } пытается вложить { $item } вам в
     .popup = { $actor } суёт { $item } вам в руку!
 strip-denied-busy = Руки заняты.
     .popup = руки заняты!
+strip-window-title = Раздевание: { $name }

@@ -12,3 +12,4 @@ strip-warn-hand = { $actor } tries to put { $item } in your hand.
     .popup = { $actor } pushes { $item } at your hand!
 strip-denied-busy = Your hands are busy.
     .popup = hands busy!
+strip-window-title = Stripping { $name }
