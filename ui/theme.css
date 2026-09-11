@@ -573,14 +573,13 @@
 }
 
 /* An in-world window: a title bar that drags it, a cross that closes it,
-   a body the feature fills. Anchoring is set in Rust; this is the chrome */
+   a body the feature fills. Anchoring is set in Rust; this is the chrome.
+   The bar is solid and the body sees through, so the bar reads as the
+   handle and the world stays in view under the rest */
 .window {
     flex-direction: column;
-    row-gap: var(--space-1);
-    padding: 6px;
     border: 1px solid var(--border-dim);
-    /* Opaque like tg's windows: what is under one is not the point of it */
-    background-color: var(--bg-surface);
+    background-color: var(--bg-overlay);
 }
 
 .window-header {
@@ -589,17 +588,25 @@
     justify-content: space-between;
     align-items: center;
     column-gap: var(--space-2);
+    padding: 3px 4px 3px 6px;
+    border-bottom: 1px solid var(--border-dim);
+    background-color: var(--bg-surface);
 }
 
 .window-title {
     font-size: var(--font-small);
-    color: var(--text-dim);
+    color: var(--text-primary);
 }
 
 .window-close {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
 }
+
+.window-body {
+    padding: 6px;
+}
+
 
 
 /* In-game HUD. Anchoring is NOT here: every surface hangs off a zone root
