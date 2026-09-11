@@ -572,10 +572,7 @@
     height: 32px;
 }
 
-/* An in-world window: a title bar that drags it, a cross that closes it,
-   a body the feature fills. Anchoring is set in Rust; this is the chrome.
-   The bar is solid and the body sees through, so the bar reads as the
-   handle and the world stays in view under the rest */
+/* An in-world window's chrome: a solid bar to drag it by, a see-through body */
 .window {
     flex-direction: column;
     border: 1px solid var(--border-dim);
@@ -599,8 +596,8 @@
 }
 
 .window-close {
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
 }
 
 .window-body {
