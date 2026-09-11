@@ -12,6 +12,16 @@
     ),
     (
         type: "Entity",
+        id: "test_suit",
+        hide_spawn_menu: true,
+        components: {
+            "DisplayName": (name: "test suit"),
+            "Item": (size: Medium),
+            "Clothing": (slots: [Suit], equip_secs: 0.5),
+        },
+    ),
+    (
+        type: "Entity",
         id: "test_belt",
         hide_spawn_menu: true,
         components: {
