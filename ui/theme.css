@@ -559,16 +559,36 @@
     background-color: var(--bg-hover);
 }
 
+/* The storage box, tg's open bag: hangs off the bottom-left zone at screen
+   column 4, row 2 with the 16px offsets (`storage.dm`), beside the tray and
+   above the hands row. The plates are the art, so no panel chrome. No hover
+   of its own: the item's rim is the one hover signal on every surface an
+   item sits in */
 .storage {
     position: absolute;
-    bottom: 64px;
-    left: 40%;
-    min-width: 40px;
-    min-height: 40px;
-    column-gap: var(--space-1);
-    padding: 6px;
-    border: 1px solid var(--border-dim);
-    background-color: var(--bg-overlay);
+    left: 144px;
+    bottom: 80px;
+}
+
+/* Rows fill upward from the bottom one, tg's `orient_storage` */
+.storage-cells {
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    column-gap: 2px;
+    row-gap: 2px;
+}
+
+.storage-cell {
+    width: 32px;
+    height: 32px;
+}
+
+.storage-item {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 32px;
+    height: 32px;
 }
 
 /* The strip panel: the target's name over tg's 5x6 grid of tray cells,
@@ -587,14 +607,6 @@
 .strip-title {
     font-size: var(--font-small);
     color: var(--text-dim);
-}
-
-/* No hover of its own: the item's rim is the one hover signal on every
-   surface an item sits in */
-.slot-cell {
-    width: 32px;
-    height: 32px;
-    background-color: var(--bg-panel);
 }
 
 /* In-game HUD. Anchoring is NOT here: every surface hangs off a zone root
