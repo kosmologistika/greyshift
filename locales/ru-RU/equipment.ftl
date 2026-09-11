@@ -4,3 +4,7 @@ strip-warn-dress = { $actor } пытается надеть на вас { $item 
     .popup = { $actor } надевает на вас { $item }!
 strip-warn-pocket = Кто-то шарит у вас в кармане.
     .popup = кто-то у вашего кармана!
+smart-equip-no-slot = У вас нет такого слота.
+    .popup = нет такого слота!
+smart-equip-empty = Там пусто, и в руке ничего.
+    .popup = там пусто!
