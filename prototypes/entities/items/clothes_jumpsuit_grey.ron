@@ -4,7 +4,7 @@
         id: "clothes_jumpsuit_grey",
         components: {
             "DisplayName": (name: "grey jumpsuit"),
-            "Item": (size: Medium),
+            "Item": (size: Medium, strip_secs: 8.0, dress_secs: 6.0),
             "Clothing": (slots: [Uniform]),
             "Glidable": (),
             "PlacementLayer": Free,

@@ -4,7 +4,7 @@
         id: "clothes_gloves_latex",
         components: {
             "DisplayName": (name: "latex gloves"),
-            "Item": (size: Small),
+            "Item": (size: Small, strip_secs: 2.0, dress_secs: 4.0),
             "Clothing": (slots: [Gloves]),
             "Glidable": (),
             "PlacementLayer": Free,
