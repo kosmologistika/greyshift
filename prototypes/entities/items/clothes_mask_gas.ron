@@ -4,7 +4,7 @@
         id: "clothes_mask_gas",
         components: {
             "DisplayName": (name: "gas mask"),
-            "Item": (size: Small),
+            "Item": (size: Small, dress_secs: 4.0),
             "Clothing": (slots: [Mask]),
             "Glidable": (),
             "PlacementLayer": Free,

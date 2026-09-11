@@ -4,7 +4,7 @@
         id: "clothes_headset",
         components: {
             "DisplayName": (name: "headset"),
-            "Item": (size: Small),
+            "Item": (size: Small, strip_secs: 1.5, dress_secs: 2.5),
             "Clothing": (slots: [Ears]),
             "Glidable": (),
             "PlacementLayer": Free,

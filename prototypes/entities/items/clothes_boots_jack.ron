@@ -4,7 +4,7 @@
         id: "clothes_boots_jack",
         components: {
             "DisplayName": (name: "jackboots"),
-            "Item": (size: Medium),
+            "Item": (size: Medium, strip_secs: 1.0),
             "Clothing": (slots: [Shoes]),
             "Glidable": (),
             "PlacementLayer": Free,
