@@ -571,6 +571,24 @@
     background-color: var(--bg-overlay);
 }
 
+/* The strip panel: the target's name over tg's 5x6 grid of tray cells,
+   which place themselves on the tray pitch in Rust */
+.strip {
+    position: absolute;
+    bottom: 64px;
+    left: 40%;
+    flex-direction: column;
+    row-gap: var(--space-1);
+    padding: 6px;
+    border: 1px solid var(--border-dim);
+    background-color: var(--bg-overlay);
+}
+
+.strip-title {
+    font-size: var(--font-small);
+    color: var(--text-dim);
+}
+
 /* No hover of its own: the item's rim is the one hover signal on every
    surface an item sits in */
 .slot-cell {
