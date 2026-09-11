@@ -592,8 +592,9 @@
 }
 
 /* The strip panel: the target's name over tg's 5x6 grid of tray cells,
-   which place themselves on the tray pitch in Rust */
-.strip {
+   which place themselves on the tray pitch in Rust. Not `.strip`, which
+   the character editor's header row already wears */
+.strip-panel {
     position: absolute;
     bottom: 64px;
     left: 40%;
@@ -604,9 +605,23 @@
     background-color: var(--bg-overlay);
 }
 
+/* The name on the left, the cross on the right */
+.strip-header {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: var(--space-2);
+}
+
 .strip-title {
     font-size: var(--font-small);
     color: var(--text-dim);
+}
+
+.strip-close {
+    width: 20px;
+    height: 20px;
 }
 
 /* In-game HUD. Anchoring is NOT here: every surface hangs off a zone root
