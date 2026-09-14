@@ -1,2 +1,4 @@
 shop-locked = ROLLING
-shop-pick = PICK ONE
+shop-pick = PICK
+shop-done = DONE
+shop-sold = SOLD
