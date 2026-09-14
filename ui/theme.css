@@ -941,17 +941,41 @@
     background-color: var(--bg-hover);
 }
 
+/* The examine popup: anchored at the cursor in code, styled here */
 .examine {
-    position: absolute;
-    left: 38%;
-    top: 55%;
-    max-width: 360px;
+    min-width: 96px;
+    max-width: 300px;
     flex-direction: column;
-    row-gap: 2px;
-    padding: var(--space-2);
+    row-gap: 3px;
+    padding: var(--space-1) var(--space-2);
     border: 1px solid var(--border-dim);
     background-color: var(--bg-overlay);
 }
+
+.examine-header {
+    font-size: var(--font-body);
+    color: var(--text-bright);
+}
+
+.examine-tabs .tab {
+    padding: 1px var(--space-1);
+    font-size: var(--font-small);
+}
+
+.examine-body {
+    flex-direction: column;
+    row-gap: 1px;
+}
+
+.examine-line {
+    font-size: var(--font-small);
+    color: var(--text-primary);
+}
+
+.examine-line.note { color: var(--text-dim); }
+.examine-line.warning { color: #e5c07b; }
+.examine-line.danger { color: var(--danger); }
+.examine-line.dead { color: var(--text-disabled); }
 
 /* Scroll region: bevy's widgets drive thumb geometry and scroll position;
    colours and widths live here */

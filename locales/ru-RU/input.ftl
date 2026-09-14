@@ -35,3 +35,5 @@ input-action-smart-equip-belt = Быстро: пояс
 input-action-smart-equip-pocket-left = Быстро: левый карман
 input-action-smart-equip-pocket-right = Быстро: правый карман
 input-action-smart-equip-suit-storage = Быстро: карман скафандра
+input-action-examine = Осмотреть
+input-action-examine-close = Закрыть осмотр
