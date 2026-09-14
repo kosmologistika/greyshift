@@ -944,7 +944,7 @@
 /* The examine popup: anchored at the cursor in code, styled here */
 .examine {
     min-width: 96px;
-    max-width: 300px;
+    max-width: 240px;
     flex-direction: column;
     row-gap: 3px;
     padding: var(--space-1) var(--space-2);
@@ -976,6 +976,7 @@
 .examine-line.warning { color: #e5c07b; }
 .examine-line.danger { color: var(--danger); }
 .examine-line.dead { color: var(--text-disabled); }
+.examine-line.refused { color: var(--text-disabled); }
 
 /* Scroll region: bevy's widgets drive thumb geometry and scroll position;
    colours and widths live here */

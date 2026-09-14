@@ -22,4 +22,75 @@ examine-armor-blocks = Blocks { $percent }% of { $type ->
    *[heat] heat
     } damage.
 examine-wall-mounted = Something is bolted to it.
-examine-ssd = They are staring blankly ahead, unresponsive.
+examine-body-identity = { $sex ->
+    [female] She
+    [male] He
+   *[none] It
+    } is { $band ->
+    [young] a young
+    [middle] a middle-aged
+    [old] an old
+   *[unknown] a
+    } { $species ->
+   *[human] human
+    }.
+examine-body-dead = { $sex ->
+    [female] She
+    [male] He
+   *[none] It
+    } is dead.
+examine-body-ssd = { $sex ->
+    [female] She has a blank, absent-minded stare and appears completely unresponsive to anything. She
+    [male] He has a blank, absent-minded stare and appears completely unresponsive to anything. He
+   *[none] It has a blank, absent-minded stare and appears completely unresponsive to anything. It
+    } may snap out of it soon.
+examine-body-holding = { $sex ->
+    [female] She is holding { $item } in her
+    [male] He is holding { $item } in his
+   *[none] It is holding { $item } in its
+    } { $hand ->
+    [left] left
+   *[right] right
+    } hand.
+examine-body-missing = { $sex ->
+    [female] Her
+    [male] His
+   *[none] Its
+    } { $side ->
+    [left] left
+    [right] right
+   *[none] { "" }
+    } { $zone ->
+    [head] head
+    [arm] arm
+   *[leg] leg
+    } is missing!
+examine-health-too-far = You would need a closer look.
+examine-health-clean = No visible wounds.
+examine-health-wound = { $sex ->
+    [female] She
+    [male] He
+   *[none] It
+    } has { $band ->
+    [minor] minor
+    [moderate] moderate
+   *[severe] severe
+    } { $type ->
+    [blunt] bruising
+    [slash] cuts
+    [piercing] punctures
+   *[heat] burns
+    }.
+examine-health-mangled = { $sex ->
+    [female] Her
+    [male] His
+   *[none] Its
+    } { $side ->
+    [left] left
+    [right] right
+   *[none] { "" }
+    } { $zone ->
+    [head] head
+    [arm] arm
+   *[leg] leg
+    } is badly mangled.
