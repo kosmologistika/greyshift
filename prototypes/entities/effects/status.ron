@@ -27,6 +27,17 @@
     ),
     (
         type: "Entity",
+        id: "effect_slipped",
+        hide_spawn_menu: true,
+        components: {
+            "DisplayName": (name: "slipped"),
+            "StatusEffect": (),
+            "Grants": (flags: [Floored], reason: "intent-denied-slipped"),
+            "DropsHeld": (),
+        },
+    ),
+    (
+        type: "Entity",
         id: "effect_slowed",
         hide_spawn_menu: true,
         components: {

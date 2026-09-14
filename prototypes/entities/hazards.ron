@@ -1,0 +1,18 @@
+[
+    // Floor hazards a map paints down. The slide chains across contiguous
+    // patches, so a strip is a ride and a single tile is a stumble
+    (
+        type: "Entity",
+        id: "lube_patch",
+        components: {
+            "DisplayName": (name: "space lube"),
+            "Slippery": (slide_tiles: 2, knockdown_secs: 3.0),
+            "PlacementLayer": Free,
+            "Appearance": (
+                sprite: (rsi: "textures/effects/lube", state: "lube"),
+                depth: FloorOverlay,
+            ),
+            "SpriteTint": ((red: 0.55, green: 0.9, blue: 1.0, alpha: 0.85)),
+        },
+    ),
+]

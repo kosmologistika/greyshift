@@ -1,0 +1,17 @@
+[
+    (
+        type: "Entity",
+        id: "banana_peel",
+        components: {
+            "DisplayName": (name: "banana peel"),
+            "Item": (size: Tiny),
+            "Slippery": (slide_tiles: 0, knockdown_secs: 2.0),
+            "Glidable": (),
+            "PlacementLayer": Free,
+            "Appearance": (
+                sprite: (rsi: "textures/objects/misc/banana_peel", state: "peel"),
+                depth: FloorOverlay,
+            ),
+        },
+    ),
+]
