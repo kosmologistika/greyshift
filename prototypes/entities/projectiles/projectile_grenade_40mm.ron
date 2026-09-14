@@ -1,0 +1,31 @@
+[
+    // Lobbed, not shot: it sails over bodies and goes off where it lands.
+    // `Item` is what earns a flyer the throw arc on the client; it never
+    // rests long enough to be picked up
+    (
+        type: "Entity",
+        id: "projectile_grenade_40mm",
+        hide_spawn_menu: true,
+        components: {
+            "Item": (size: Tiny, held: Nothing),
+            "Explosive": (
+                radius: 1,
+                damage: {Blunt: 70},
+                falloff: Some((full_tiles: 0.0, end_tiles: 1.0, min: 0.5)),
+                fling: Some(1),
+                sound: Some((source: Collection("explosion_small"), volume_db: 0.0, pitch_var: 0.1, range_tiles: 30.0)),
+                fx: Some("effect_explosion"),
+            ),
+            "ExplodesOnImpact": (),
+            "FlightRules": (stops_at_solid: true, hits_nothing: true),
+            "MaxFlightRange": (tiles: 7),
+            "FlightSpeed": (tiles_per_sec: 8.0),
+            "DespawnOnFlightEnd": (),
+            "MuzzleFx": (sprite: (rsi: "textures/effects/muzzle_flash", state: "firing_effect")),
+            "Appearance": (
+                sprite: (rsi: "textures/objects/weapons/guns/projectiles/projectiles2", state: "grenade"),
+                depth: Effects,
+            ),
+        },
+    ),
+]

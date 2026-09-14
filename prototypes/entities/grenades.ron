@@ -1,0 +1,170 @@
+// A grenade is a latching toggle, a fuse and a payload; see docs/design/explosion.md
+[
+    (
+        type: "Entity",
+        id: "base_grenade",
+        abstract: true,
+        components: {
+            "Item": (size: Small),
+            "ItemToggle": (
+                on_state: Some("primed"),
+                latches: true,
+                on_sound: Some((source: Path("audio/items/grenade_prime.ogg"), volume_db: -6.0, pitch_var: 0.05, range_tiles: 8.0)),
+            ),
+            "Fuse": (secs: 3.0),
+            "SpentOnTrigger": (),
+            "Glidable": (),
+            "PlacementLayer": Free,
+        },
+    ),
+    (
+        type: "Entity",
+        id: "grenade_frag",
+        parents: ["base_grenade"],
+        components: {
+            "DisplayName": (name: "frag grenade"),
+            "Explosive": (
+                radius: 2,
+                damage: {Blunt: 80},
+                falloff: Some((full_tiles: 0.0, end_tiles: 2.0, min: 0.25)),
+                fling: Some(1),
+                sound: Some((source: Collection("explosion"), volume_db: 0.0, pitch_var: 0.1, range_tiles: 40.0)),
+                fx: Some("effect_explosion"),
+            ),
+            "Appearance": (
+                sprite: (rsi: "textures/objects/weapons/grenades/grenade", state: "icon"),
+                depth: BelowMobs,
+            ),
+        },
+    ),
+    // What a cluster grenade pops into, lit on the way out
+    (
+        type: "Entity",
+        id: "grenade_frag_mini",
+        hide_spawn_menu: true,
+        components: {
+            "DisplayName": (name: "mini frag grenade"),
+            "Item": (size: Tiny),
+            "ItemToggle": (on_state: Some("primed"), latches: true),
+            "Fuse": (secs: 1.2),
+            "SpentOnTrigger": (),
+            "Explosive": (
+                radius: 1,
+                damage: {Blunt: 40},
+                falloff: Some((full_tiles: 0.0, end_tiles: 1.0, min: 0.5)),
+                fling: Some(1),
+                sound: Some((source: Collection("explosion_small"), volume_db: -2.0, pitch_var: 0.15, range_tiles: 30.0)),
+                fx: Some("effect_explosion"),
+            ),
+            "Glidable": (),
+            "PlacementLayer": Free,
+            "Appearance": (
+                sprite: (rsi: "textures/objects/weapons/grenades/grenade", state: "icon"),
+                depth: BelowMobs,
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "grenade_cluster",
+        parents: ["base_grenade"],
+        components: {
+            "DisplayName": (name: "cluster grenade"),
+            "ScattersOnTrigger": (proto: "grenade_frag_mini", count: 5, tiles: 2, lit: true),
+            "Appearance": (
+                sprite: (rsi: "textures/objects/weapons/grenades/clusterbomb", state: "icon"),
+                depth: BelowMobs,
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "grenade_holy",
+        parents: ["base_grenade"],
+        components: {
+            "DisplayName": (name: "holy hand grenade"),
+            "Explosive": (
+                radius: 1,
+                damage: {Blunt: 250},
+                fling: Some(2),
+                sound: Some((source: Collection("explosion"), volume_db: 2.0, pitch_var: 0.05, range_tiles: 50.0)),
+                fx: Some("effect_explosion"),
+            ),
+            "Appearance": (
+                sprite: (rsi: "textures/objects/weapons/grenades/holyhandgrenade", state: "icon"),
+                depth: BelowMobs,
+            ),
+        },
+    ),
+    // The tinted pair share one grayscale master of the frag grenade
+    (
+        type: "Entity",
+        id: "party_popper",
+        parents: ["base_grenade"],
+        components: {
+            "DisplayName": (name: "party popper"),
+            "Fuse": (secs: 0.4),
+            "Explosive": (
+                radius: 1,
+                damage: {Blunt: 1},
+                fling: Some(1),
+                sound: Some((source: Collection("explosion_small"), volume_db: -10.0, pitch_var: 0.2, range_tiles: 12.0)),
+                fx: Some("effect_explosion"),
+            ),
+            "SpriteTint": ((red: 1.0, green: 0.45, blue: 0.85, alpha: 1.0)),
+            "Appearance": (
+                sprite: (rsi: "textures/objects/weapons/grenades/grenade_master", state: "icon"),
+                depth: BelowMobs,
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "coin_bomb",
+        parents: ["base_grenade"],
+        components: {
+            "DisplayName": (name: "coin bomb"),
+            "Explosive": (
+                radius: 2,
+                damage: {},
+                fling: Some(2),
+                sound: Some((source: Collection("explosion"), volume_db: -4.0, pitch_var: 0.1, range_tiles: 30.0)),
+                fx: Some("effect_explosion"),
+            ),
+            "CoinBurst": (value: 150),
+            "SpriteTint": ((red: 0.859, green: 0.867, blue: 0.298, alpha: 1.0)),
+            "Appearance": (
+                sprite: (rsi: "textures/objects/weapons/grenades/grenade_master", state: "icon"),
+                depth: BelowMobs,
+            ),
+        },
+    ),
+    // Armed in hand and dropped, drawn under items and bodies so whatever lies on the tile hides it
+    (
+        type: "Entity",
+        id: "landmine",
+        components: {
+            "DisplayName": (name: "landmine"),
+            "Item": (size: Small),
+            "ItemToggle": (
+                on_sound: Some((source: Path("audio/items/beep.ogg"), volume_db: -6.0, range_tiles: 8.0)),
+            ),
+            "TriggersOnStep": (),
+            "SpentOnTrigger": (),
+            "Explosive": (
+                radius: 1,
+                damage: {Blunt: 100},
+                falloff: Some((full_tiles: 0.0, end_tiles: 1.0, min: 0.3)),
+                fling: Some(1),
+                sound: Some((source: Collection("explosion"), volume_db: 0.0, pitch_var: 0.1, range_tiles: 40.0)),
+                fx: Some("effect_explosion"),
+            ),
+            "Glidable": (),
+            "PlacementLayer": Free,
+            "Appearance": (
+                sprite: (rsi: "textures/objects/misc/landmine", state: "landmine"),
+                depth: Furniture,
+            ),
+        },
+    ),
+]

@@ -1,0 +1,18 @@
+[
+    // Spawned by the server at an explosion's epicenter and reaped by it
+    // once the sheet has played. Unshaded: a fireball lights itself
+    (
+        type: "Entity",
+        id: "effect_explosion",
+        hide_spawn_menu: true,
+        components: {
+            "DisplayName": (name: "explosion"),
+            "PointLight": (color: (1.0, 0.6, 0.2), energy: 4.0, radius: 5.0, cast_shadows: false),
+            "Appearance": (
+                sprite: (rsi: "textures/effects/explosion", state: "explosionfast"),
+                depth: Effects,
+                shading: Unshaded,
+            ),
+        },
+    ),
+]

@@ -1,0 +1,10 @@
+(
+    size: (x: 96, y: 96),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "Taken from space-wizards/space-station-14 Resources/Textures/Effects/explosion.rsi at commit ae051d290568. Their line: Taken and modified from https://github.com/vgstation-coders/vgstation13/icons/effects/96x96.dmi at commit 96d69b71a3a0549b4b668c0a095306580bd157c0",
+    ],
+    states: [
+        (name: "explosionfast", delays: [[0.06, 0.06, 0.06, 0.06, 0.06, 0.06, 0.06, 0.06]], loops: false),
+    ],
+)

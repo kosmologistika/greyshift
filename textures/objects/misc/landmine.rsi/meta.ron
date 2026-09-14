@@ -1,0 +1,10 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "Taken from space-wizards/space-station-14 Resources/Textures/Objects/Misc/landmine.rsi at commit ae051d290568. Their line: Taken from tgstation at https://github.com/tgstation/tgstation/blob/b764f0e8c3004ad5e7726e7ff27a52a0c893beff/icons/obj/weapons/grenade.dmi, modified by spanky-spanky (GitHub)",
+    ],
+    states: [
+        (name: "landmine"),
+    ],
+)

@@ -1,0 +1,14 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "Taken from space-wizards/space-station-14 Resources/Textures/Objects/Weapons/Guns/Launchers/rocket.rsi at commit ae051d290568. Their line: Taken/modified from tgstation at https://github.com/tgstation/tgstation/pull/21818/commits/8959238828600d01ee7c8165a0dd29007570a454, backpack sprite by Peptide, backpack sling sprite edited by Boaz1111",
+    ],
+    states: [
+        (name: "base"),
+        (name: "mag-0"),
+        (name: "mag-1"),
+        (name: "inhand-left", directions: Four),
+        (name: "inhand-right", directions: Four),
+    ],
+)
