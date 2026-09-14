@@ -1,0 +1,11 @@
+[
+    (
+        type: "Map",
+        id: "reverb_rooms",
+        name: "Reverb Rooms",
+        map_path: "maps/testing/reverb_rooms.map.ron",
+        min_players: 1,
+        max_players: 8,
+        reverb: Some("outside"),
+    ),
+]
