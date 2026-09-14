@@ -11,7 +11,7 @@
                 drop: Some((source: Path("audio/items/crowbar_drop.ogg"), volume_db: -14.0, pitch_var: 0.05, range_tiles: 7.0)),
             ),
             "MeleeWeapon": (hit_sound: Some((source: Path("audio/weapons/genhit3.ogg"), volume_db: -3.0, pitch_var: 0.08)), shape: Thrust(len: 1), damage: {Blunt: 18}, cooldown: 0.6, icon_facing_deg: 80),
-            "DamageOnHit": (damage: {Blunt: 8}),
+            "DamageOnHit": (damage: {Blunt: 9}),
             "KnockbackOnHit": (tiles: 1),
             "Glidable": (),
             "PlacementLayer": Free,

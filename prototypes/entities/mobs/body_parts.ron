@@ -1,11 +1,10 @@
 // The human body plan (#215). Parts are invisible child entities - the mob's
 // own layers draw them - so a part carries only its ledger and its rules.
 // Sever bars drop once the mob is past half its death bar or dead - the
-// wounded come apart (SeverSpec::bar). Against the fire axe (Slash 25) that
-// means: a healthy mob never loses a limb (60 is three same-limb hits it
-// will not live to collect), while one sharp blow strips a limb off anyone
-// badly hurt (wounded bar 25) - most kills shed a limb from a victim still
-// breathing. The head's wounded bar (100) sits exactly at the death
+// wounded come apart (SeverSpec::bar). Against the fire axe (Slash 45) that
+// means: no single blow takes a limb off anyone, healthy (60) or badly hurt
+// (50), while two blows on the same limb take it from a victim at 90, still
+// breathing and one hit from death. The head's wounded bar (100) sits exactly at the death
 // threshold, so the living lose it only to one enormous sharp blow - a
 // part's meter never exceeds the mob's total. On a corpse the torso also
 // leaves the routing draw, so a carver strips the limbs and then works on
@@ -34,7 +33,7 @@
         parents: ["base_body_part"],
         hide_spawn_menu: true,
         components: {
-            "BodyPart": (kind: Arm, side: Some(Left), weight: 15, sever: Some((types: [Slash], threshold: 60, wounded: Some(25))), severed_prop: Some("severed_arm")),
+            "BodyPart": (kind: Arm, side: Some(Left), weight: 15, sever: Some((types: [Slash], threshold: 60, wounded: Some(50))), severed_prop: Some("severed_arm")),
         },
     ),
     (
@@ -43,7 +42,7 @@
         parents: ["base_body_part"],
         hide_spawn_menu: true,
         components: {
-            "BodyPart": (kind: Arm, side: Some(Right), weight: 15, sever: Some((types: [Slash], threshold: 60, wounded: Some(25))), severed_prop: Some("severed_arm")),
+            "BodyPart": (kind: Arm, side: Some(Right), weight: 15, sever: Some((types: [Slash], threshold: 60, wounded: Some(50))), severed_prop: Some("severed_arm")),
         },
     ),
     (
@@ -52,7 +51,7 @@
         parents: ["base_body_part"],
         hide_spawn_menu: true,
         components: {
-            "BodyPart": (kind: Leg, side: Some(Left), weight: 12, sever: Some((types: [Slash], threshold: 60, wounded: Some(25))), severed_prop: Some("severed_leg")),
+            "BodyPart": (kind: Leg, side: Some(Left), weight: 12, sever: Some((types: [Slash], threshold: 60, wounded: Some(50))), severed_prop: Some("severed_leg")),
         },
     ),
     (
@@ -61,7 +60,7 @@
         parents: ["base_body_part"],
         hide_spawn_menu: true,
         components: {
-            "BodyPart": (kind: Leg, side: Some(Right), weight: 12, sever: Some((types: [Slash], threshold: 60, wounded: Some(25))), severed_prop: Some("severed_leg")),
+            "BodyPart": (kind: Leg, side: Some(Right), weight: 12, sever: Some((types: [Slash], threshold: 60, wounded: Some(50))), severed_prop: Some("severed_leg")),
         },
     ),
     (
