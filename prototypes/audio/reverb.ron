@@ -33,7 +33,7 @@
         type: "Reverb",
         id: "outside",
         room_size: 0.1,
-        damping: 0.9,
+        damping: 0.2,
         width: 0.5,
         wet_db: -40.0,
     ),
