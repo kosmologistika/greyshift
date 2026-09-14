@@ -5,7 +5,7 @@
         parents: ["base_ballistic_projectile"],
         hide_spawn_menu: true,
         components: {
-            "DamageOnHit": (damage: {Piercing: 8}, falloff: Some((full_tiles: 13.0, end_tiles: 20.0, min: 0.5))),
+            "DamageOnHit": (damage: {Piercing: 20}, falloff: Some((full_tiles: 13.0, end_tiles: 20.0, min: 0.5))),
             "FlightRules": (stops_at_blocks_attack: true, stops_on_first_damageable: true),
             "AlignToFlight": (),
             "MaxFlightRange": (tiles: 20),

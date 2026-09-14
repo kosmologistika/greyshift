@@ -6,7 +6,7 @@
         components: {
             "DisplayName": (name: "glass shard"),
             "Item": (size: Tiny),
-            "MeleeWeapon": (hit_sound: Some((source: Path("audio/weapons/slash.ogg"), volume_db: -3.0, pitch_var: 0.08)), shape: Thrust(len: 1), damage: {Slash: 4}, cooldown: 0.5),
+            "MeleeWeapon": (hit_sound: Some((source: Path("audio/weapons/slash.ogg"), volume_db: -3.0, pitch_var: 0.08)), shape: Thrust(len: 1), damage: {Slash: 10}, cooldown: 0.5),
             "DamageOnHit": (damage: {Slash: 2}),
             "Glidable": (),
             "PlacementLayer": Free,

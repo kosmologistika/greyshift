@@ -5,7 +5,7 @@
         parents: ["base_ballistic_projectile"],
         hide_spawn_menu: true,
         components: {
-            "DamageOnHit": (damage: {Piercing: 5}, falloff: Some((full_tiles: 2.0, end_tiles: 6.0, min: 0.25))),
+            "DamageOnHit": (damage: {Piercing: 17}, falloff: Some((full_tiles: 2.0, end_tiles: 6.0, min: 0.25))),
             "FlightRules": (stops_at_blocks_attack: true, stops_on_first_damageable: true),
             "AlignToFlight": (),
             // Short by design: the hard cap keeps a scattergun out of rifle duels

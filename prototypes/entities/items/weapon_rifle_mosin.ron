@@ -6,7 +6,7 @@
         components: {
             "DisplayName": (name: "Mosin-Nagant"),
             "Item": (size: Large),
-            "Gun": (fire_sound: Some((source: Path("audio/weapons/guns/atreides.ogg"), volume_db: 0.0, pitch_var: 0.05, range_tiles: 34.0)), fire_rate: 1.0, selected_mode: SemiAuto, available_modes: [SemiAuto]),
+            "Gun": (fire_sound: Some((source: Path("audio/weapons/guns/atreides.ogg"), volume_db: 0.0, pitch_var: 0.05, range_tiles: 34.0)), fire_rate: 2.0, selected_mode: SemiAuto, available_modes: [SemiAuto]),
             "RecoilKick": (px: 6.0),
             "AmmoStore": (rounds: 0, capacity: 5),
             "ShotSpec": (projectile_proto: "projectile_bullet_762"),

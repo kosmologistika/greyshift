@@ -19,10 +19,10 @@
     ),
     (
         type: "ShopListing",
-        id: "listing_pump",
+        id: "listing_sawn_off",
         catalog: "blood_money",
-        product: "weapon_shotgun_pump_loaded",
-        price: 80,
+        product: "weapon_shotgun_sawn_loaded",
+        price: 60,
         staple: true,
     ),
     // Commons.
@@ -36,10 +36,10 @@
     ),
     (
         type: "ShopListing",
-        id: "listing_sawn_off",
+        id: "listing_pump",
         catalog: "blood_money",
-        product: "weapon_shotgun_sawn_loaded",
-        price: 60,
+        product: "weapon_shotgun_pump_loaded",
+        price: 100,
         weight: 12,
     ),
     (
@@ -112,7 +112,7 @@
         id: "listing_pulse_rifle",
         catalog: "blood_money",
         product: "weapon_rifle_burst_pulse_loaded",
-        price: 180,
+        price: 150,
         weight: 4,
     ),
     // The jackpot. One rare keeps the moment legible.

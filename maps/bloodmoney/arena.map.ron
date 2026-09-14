@@ -1306,6 +1306,10 @@
             prototype: "tile_floor_steel",
         ),
         (
+            pos: (0, 1),
+            prototype: "pickup_armor",
+        ),
+        (
             pos: (1, 1),
             prototype: "tile_floor_steel",
         ),
