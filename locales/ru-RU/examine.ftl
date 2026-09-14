@@ -23,22 +23,18 @@ examine-armor-blocks = Блокирует { $percent }% { $type ->
     } урона.
 examine-wall-mounted = К ней что-то прикручено.
 examine-body-identity = { $sex ->
-    [female] Это { $band ->
-        [young] молодая
-        [middle] женщина средних лет,
-        [old] пожилая
-       *[unknown] { "" }
-        } { $species ->
-       *[human] человек
-        }.
-    [male] Это { $band ->
-        [young] молодой
-        [middle] мужчина средних лет,
-        [old] пожилой
-       *[unknown] { "" }
-        } { $species ->
-       *[human] человек
-        }.
+    [female] { $band ->
+        [young] Это молодая женщина.
+        [middle] Это женщина средних лет.
+        [old] Это пожилая женщина.
+       *[unknown] Это женщина.
+        }
+    [male] { $band ->
+        [young] Это молодой мужчина.
+        [middle] Это мужчина средних лет.
+        [old] Это пожилой мужчина.
+       *[unknown] Это мужчина.
+        }
    *[none] Это { $species ->
        *[human] человек
         }.
@@ -61,15 +57,13 @@ examine-body-holding = { $sex ->
     [left] левой
    *[right] правой
     } руке.
-examine-body-missing = { $side ->
-    [left] Нет левой
-    [right] Нет правой
-   *[none] Нет
-    } { $zone ->
-    [head] головы
-    [arm] руки
-   *[leg] ноги
-    }!
+examine-body-missing = { $part ->
+    [head] Нет головы!
+    [left-arm] Нет левой руки!
+    [right-arm] Нет правой руки!
+    [left-leg] Нет левой ноги!
+   *[right-leg] Нет правой ноги!
+    }
 examine-health-too-far = Нужно подойти ближе.
 examine-health-clean = Видимых ран нет.
 examine-health-wound = { $band ->
@@ -82,12 +76,10 @@ examine-health-wound = { $band ->
     [piercing] проколы
    *[heat] ожоги
     }.
-examine-health-mangled = { $side ->
-    [left] Левая
-    [right] Правая
-   *[none] { "" }
-    } { $zone ->
-    [head] голова
-    [arm] рука
-   *[leg] нога
-    } сильно изувечена.
+examine-health-mangled = { $part ->
+    [head] Голова сильно изувечена.
+    [left-arm] Левая рука сильно изувечена.
+    [right-arm] Правая рука сильно изувечена.
+    [left-leg] Левая нога сильно изувечена.
+   *[right-leg] Правая нога сильно изувечена.
+    }

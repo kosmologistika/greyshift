@@ -85,12 +85,10 @@ examine-health-mangled = { $sex ->
     [female] Her
     [male] His
    *[none] Its
-    } { $side ->
-    [left] left
-    [right] right
-   *[none] { "" }
-    } { $zone ->
+    } { $part ->
     [head] head
-    [arm] arm
-   *[leg] leg
+    [left-arm] left arm
+    [right-arm] right arm
+    [left-leg] left leg
+   *[right-leg] right leg
     } is badly mangled.
