@@ -3,12 +3,14 @@ chat-tab-ic = IC
 chat-tab-ooc = OOC
 
 chat-chip-ic = IC
+chat-chip-whisper = ШЁПОТ
 chat-chip-ooc = OOC
 chat-chip-emote = EMOTE
 
 chat-button-menu = МЕНЮ
 
 chat-line-says = говорит: "{$text}"
+chat-line-whispers = шепчет: "{$text}"
 chat-line-emote = {$name} {$text}
 chat-line-ooc = OOC: {$name}: {$text}
 
