@@ -16,3 +16,5 @@ intent-denied-unconscious = You are unconscious.
     .popup = unconscious!
 intent-denied-pulled-crit = You are being dragged.
     .popup = dragged!
+intent-denied-blocking = Your guard is up.
+    .popup = guarding!

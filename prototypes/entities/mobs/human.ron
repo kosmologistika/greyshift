@@ -70,6 +70,8 @@
             "Deathgasp": (),
             "PainScream": (),
             "Hands": (),
+            // Bare hands take a quarter off a frontal blow while the guard is up
+            "Guard": (block: 25),
             "Equipment": (
                 slots: [Head, Mask, Eyes, Ears, Neck, Uniform, Suit, Gloves, Shoes, Belt, Back, Id, PocketLeft, PocketRight, SuitStorage],
                 outfit: {Uniform: "clothes_jumpsuit_grey", Shoes: "clothes_boots_jack", Ears: "clothes_headset", Id: "clothes_id_card"},

@@ -23,6 +23,8 @@ examine-armor-blocks = Blocks { $percent }% of { $type ->
    *[heat] heat
     } damage.
 examine-armor-reflects = Turns back { $percent }% of energy bolts.
+examine-guard-blocks = Raised, blocks { $percent }% of what comes at the front.
+examine-guard-reflects = Raised, turns back { $percent }% of energy bolts.
 examine-wall-mounted = Something is bolted to it.
 examine-body-identity = { $sex ->
     [female] She
