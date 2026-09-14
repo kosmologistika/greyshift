@@ -8,6 +8,7 @@
             "DamageOnHit": (damage: {Piercing: 22}),
             "FlightRules": (stops_at_blocks_attack: true, stops_on_first_damageable: true),
             "AlignToFlight": (),
+            "Falloff": (full_tiles: 20.0, end_tiles: 30.0, min: 0.5),
             "MaxFlightRange": (tiles: 30),
             "FlightSpeed": (tiles_per_sec: 12.5),
             "DespawnOnFlightEnd": (),

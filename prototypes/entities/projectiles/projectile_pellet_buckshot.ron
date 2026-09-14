@@ -8,8 +8,8 @@
             "DamageOnHit": (damage: {Piercing: 5}),
             "FlightRules": (stops_at_blocks_attack: true, stops_on_first_damageable: true),
             "AlignToFlight": (),
-            // Short by design: the fan does the mid-range falloff, the hard
-            // cap keeps a scattergun out of rifle duels.
+            // Short by design: the hard cap keeps a scattergun out of rifle duels
+            "Falloff": (full_tiles: 2.0, end_tiles: 6.0, min: 0.25),
             "MaxFlightRange": (tiles: 8),
             "FlightSpeed": (tiles_per_sec: 12.5),
             "DespawnOnFlightEnd": (),
