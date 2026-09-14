@@ -941,10 +941,12 @@
     background-color: var(--bg-hover);
 }
 
-/* The examine popup: anchored at the cursor in code, styled here */
+/* The examine popup: anchored at the cursor in code, styled here. The width
+   cap sits on the text nodes, not the padded root: a cap on the root has the
+   text measured at the full width and rendered inside the padding, and near a
+   line boundary the box comes out a line short of its own text */
 .examine {
     min-width: 96px;
-    max-width: 240px;
     flex-direction: column;
     row-gap: 3px;
     padding: var(--space-1) var(--space-2);
@@ -953,6 +955,7 @@
 }
 
 .examine-header {
+    max-width: 240px;
     font-size: var(--font-body);
     color: var(--text-bright);
 }
@@ -968,6 +971,7 @@
 }
 
 .examine-line {
+    max-width: 240px;
     font-size: var(--font-small);
     color: var(--text-primary);
 }
