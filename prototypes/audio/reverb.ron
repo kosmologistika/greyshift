@@ -1,0 +1,40 @@
+[
+    // The room an unnamed area gets by its cell count: the smallest rung
+    // that covers it, the top rung past them all. `outside` has no rung, so
+    // a map or an area has to name it
+    (
+        type: "Reverb",
+        id: "room_small",
+        room_size: 0.3,
+        damping: 0.6,
+        width: 0.8,
+        wet_db: -20.0,
+        auto_up_to: Some(30),
+    ),
+    (
+        type: "Reverb",
+        id: "room_medium",
+        room_size: 0.55,
+        damping: 0.5,
+        width: 0.9,
+        wet_db: -16.0,
+        auto_up_to: Some(150),
+    ),
+    (
+        type: "Reverb",
+        id: "room_large",
+        room_size: 0.8,
+        damping: 0.35,
+        width: 1.0,
+        wet_db: -12.0,
+        auto_up_to: Some(600),
+    ),
+    (
+        type: "Reverb",
+        id: "outside",
+        room_size: 0.1,
+        damping: 0.2,
+        width: 0.5,
+        wet_db: -40.0,
+    ),
+]
