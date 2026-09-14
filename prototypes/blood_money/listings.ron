@@ -60,6 +60,14 @@
     ),
     (
         type: "ShopListing",
+        id: "listing_ablative_vest",
+        catalog: "blood_money",
+        product: "clothes_armor_ablative",
+        price: 60,
+        weight: 12,
+    ),
+    (
+        type: "ShopListing",
         id: "listing_laser_pistol",
         catalog: "blood_money",
         product: "weapon_laser_pistol_loaded",
