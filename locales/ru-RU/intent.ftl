@@ -10,3 +10,6 @@ intent-denied-knocked-down = Вас сбили с ног.
     .popup = сбиты с ног!
 intent-denied-no-hands = У вас нет рук.
     .popup = нет рук!
+intent-denied-crit = Вы в критическом состоянии.
+intent-denied-unconscious = Вы без сознания.
+intent-denied-pulled-crit = Вас тащат.

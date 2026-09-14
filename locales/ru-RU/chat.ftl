@@ -20,6 +20,7 @@ chat-joined = {$name} прибывает.
 chat-left = {$name} отключается.
 
 chat-denied-dead = Вы мертвы. Мёртвые не разговаривают.
+chat-denied-crit = В критическом состоянии это невозможно.
 chat-denied-ghost = Живые не слышат призраков. Используйте OOC.
 chat-denied-no-body = У вас нет тела, чтобы говорить.
 chat-denied-rate-limited = Вы отправляете сообщения слишком часто.

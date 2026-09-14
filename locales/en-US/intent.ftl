@@ -10,3 +10,6 @@ intent-denied-knocked-down = You are knocked down.
     .popup = knocked down!
 intent-denied-no-hands = You have no hands.
     .popup = no hands!
+intent-denied-crit = You are in critical condition.
+intent-denied-unconscious = You are unconscious.
+intent-denied-pulled-crit = You are being dragged.
