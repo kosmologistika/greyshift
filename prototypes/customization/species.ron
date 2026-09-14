@@ -7,6 +7,9 @@
         body: "mob_human",
         min_age: 18,
         max_age: 90,
+        // SS14's bands: young under 30, old from 60
+        young_age: 30,
+        old_age: 60,
         male_first_names: "names_first_male",
         female_first_names: "names_first_female",
         last_names: "names_last",
