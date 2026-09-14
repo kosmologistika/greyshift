@@ -3,7 +3,7 @@
         type: "Entity",
         id: "tool_toolbox_red",
         components: {
-            "DisplayName": (name: "toolbox"),
+            "DisplayName": (name: "toolbox", desc: Some("item-desc-toolbox")),
             "Item": (size: Medium),
             "ItemSounds": (
                 pickup: Some((source: Path("audio/items/toolbox_pickup.ogg"), volume_db: -16.0, pitch_var: 0.05, range_tiles: 7.0)),

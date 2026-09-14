@@ -4,7 +4,7 @@
         id: "structure_airlock",
         parents: ["structure_door_base"],
         components: {
-            "DisplayName": (name: "airlock"),
+            "DisplayName": (name: "airlock", desc: Some("item-desc-airlock")),
             "Door": (
                 state: Closed,
                 open_secs: 0.6,

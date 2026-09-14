@@ -4,7 +4,7 @@
         id: "weapon_pistol_9mm",
         parents: ["base_gun"],
         components: {
-            "DisplayName": (name: "9mm pistol"),
+            "DisplayName": (name: "9mm pistol", desc: Some("item-desc-pistol-9mm")),
             "Item": (size: Small),
             "Tags": (["holsterable"]),
             "Gun": (fire_rate: 5.0, selected_mode: SemiAuto, available_modes: [SemiAuto]),

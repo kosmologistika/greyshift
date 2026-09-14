@@ -1,0 +1,10 @@
+item-desc-airlock = A powered door. It opens for anyone until someone bolts it.
+item-desc-armor-vest = A padded vest that takes the edge off a blow to the torso.
+item-desc-helmet-sec = A hard hat with a visor, the kind that keeps a skull in one piece.
+item-desc-pistol-9mm = A compact sidearm chambered in 9mm. Takes a magazine.
+item-desc-fire-axe = A heavy axe with a blade meant for doors and whatever stands behind them.
+item-desc-shotgun-pump = A pump-action shotgun fed with shells one at a time.
+item-desc-toolbox = A steel box that holds tools, or whatever else fits.
+item-desc-backpack = A canvas bag with room for most things.
+item-desc-crowbar = A length of steel bent for prying. Also for hitting.
+item-desc-id-card = A plastic card with a photo and a name.

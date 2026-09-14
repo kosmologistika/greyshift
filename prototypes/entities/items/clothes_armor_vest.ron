@@ -3,7 +3,7 @@
         type: "Entity",
         id: "clothes_armor_vest",
         components: {
-            "DisplayName": (name: "armor vest"),
+            "DisplayName": (name: "armor vest", desc: Some("item-desc-armor-vest")),
             "Item": (size: Medium, strip_secs: 6.0, dress_secs: 4.0),
             "Clothing": (slots: [Suit], equip_secs: 2.0),
             // tg's security vest, keyed by damage type: Piercing is the
