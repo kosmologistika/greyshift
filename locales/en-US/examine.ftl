@@ -21,5 +21,6 @@ examine-armor-blocks = Blocks { $percent }% of { $type ->
     [piercing] piercing
    *[heat] heat
     } damage.
+examine-armor-reflects = Turns back { $percent }% of energy bolts.
 examine-wall-mounted = Something is bolted to it.
 examine-ssd = They are staring blankly ahead, unresponsive.
