@@ -8,6 +8,7 @@ input-action-follow = Следовать
 input-action-face = Повернуться
 input-action-crawl = Ползти
 input-action-walk = Идти шагом
+input-action-use-in-hand = Использовать в руке
 input-action-swap-hand = Сменить руку
 input-action-context-menu = Контекстное меню
 input-action-replay-pause = Пауза / Продолжить

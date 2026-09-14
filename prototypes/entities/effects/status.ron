@@ -6,7 +6,7 @@
         components: {
             "DisplayName": (name: "stunned"),
             "StatusEffect": (),
-            "Grants": (flags: [Immobilized, HandsBlocked], reason: "intent-denied-stunned"),
+            "Grants": (flags: [Immobilized, HandsBlocked, Floored], reason: "intent-denied-stunned"),
             "DropsHeld": (),
             "EffectAlert": (
                 icon: "textures/interface/alerts/status/stun.png",

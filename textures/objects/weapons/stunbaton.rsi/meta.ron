@@ -1,0 +1,12 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "Taken from space-wizards/space-station-14 Resources/Textures/Objects/Weapons/Melee/stunbaton.rsi at commit ae051d290568. Their line: Taken from vgstation at https://github.com/vgstation-coders/vgstation13/commit/1cdfb0230cc96d0ba751fa002d04f8aa2f25ad7d",
+    ],
+    states: [
+        (name: "icon"),
+        (name: "inhand-left", directions: Four),
+        (name: "inhand-right", directions: Four),
+    ],
+)

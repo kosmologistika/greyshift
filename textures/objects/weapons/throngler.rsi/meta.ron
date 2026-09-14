@@ -1,0 +1,12 @@
+(
+    size: (x: 47, y: 47),
+    license: "CC0-1.0",
+    copyright: [
+        "Taken from space-wizards/space-station-14 Resources/Textures/Objects/Weapons/Melee/Throngler2.rsi at commit ae051d290568. Their line: Created by PoorMansDreams",
+    ],
+    states: [
+        (name: "icon"),
+        (name: "inhand-left", directions: Four),
+        (name: "inhand-right", directions: Four),
+    ],
+)
