@@ -6,7 +6,7 @@
             "DisplayName": (name: "security helmet"),
             "Item": (size: Small),
             "Clothing": (slots: [Head]),
-            "Armor": (covers: [Head], block: {Blunt: 35, Slash: 35, Piercing: 30, Heat: 30}),
+            "Armor": (covers: [Head], block: {Blunt: 35, Slash: 60, Piercing: 60, Heat: 20}),
             "StruckSound": (default: Some((source: Path("audio/effects/block_metal1.ogg"), volume_db: -4.0, pitch_var: 0.1))),
             "Glidable": (),
             "PlacementLayer": Free,
