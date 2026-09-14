@@ -83,3 +83,37 @@ examine-health-mangled = { $part ->
     [left-leg] Левая нога сильно изувечена.
    *[right-leg] Правая нога сильно изувечена.
     }
+examine-item-size = Это { $size ->
+    [tiny] крошечный
+    [small] небольшой
+    [medium] средний
+   *[large] крупный
+    } предмет.
+examine-weapon-hit = Удар наносит { $amount } { $type ->
+    [blunt] дробящего
+    [slash] режущего
+    [piercing] колющего
+   *[heat] теплового
+    } урона.
+examine-weapon-swings = { $rate } удара в секунду.
+examine-weapon-fire-rate = { $rate } выстрела в секунду.
+examine-weapon-mode = Режим: { $mode ->
+    [semi] полуавтоматический
+    [auto] автоматический
+   *[burst] очередь по { $count }
+    }{ $modes ->
+    [one] { "" }
+   *[other] , всего режимов: { $modes }
+    }.
+examine-weapon-shot = Каждый выстрел наносит { $amount } { $type ->
+    [blunt] дробящего
+    [slash] режущего
+    [piercing] колющего
+   *[heat] теплового
+    } урона{ $pellets ->
+    [one] { "" }
+   *[other] , { $pellets } дробинами
+    }.
+examine-weapon-shots = Заряжено { $shots } из { $capacity }.
+examine-weapon-empty = Не заряжено.
+examine-weapon-shots-too-far = Чтобы сосчитать заряды, нужно подойти ближе.

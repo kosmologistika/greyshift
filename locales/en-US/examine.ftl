@@ -92,3 +92,37 @@ examine-health-mangled = { $sex ->
     [left-leg] left leg
    *[right-leg] right leg
     } is badly mangled.
+examine-item-size = It is { $size ->
+    [tiny] a tiny
+    [small] a small
+    [medium] a medium-sized
+   *[large] a large
+    } item.
+examine-weapon-hit = Hits for { $amount } { $type ->
+    [blunt] blunt
+    [slash] slash
+    [piercing] piercing
+   *[heat] heat
+    } damage.
+examine-weapon-swings = { $rate } swings per second.
+examine-weapon-fire-rate = Fires { $rate } shots per second.
+examine-weapon-mode = Set to { $mode ->
+    [semi] semi-auto
+    [auto] full auto
+   *[burst] { $count }-round burst
+    }{ $modes ->
+    [one] { "" }
+   *[other] , one of { $modes } modes
+    }.
+examine-weapon-shot = Each shot deals { $amount } { $type ->
+    [blunt] blunt
+    [slash] slash
+    [piercing] piercing
+   *[heat] heat
+    } damage{ $pellets ->
+    [one] { "" }
+   *[other] , in { $pellets } pellets
+    }.
+examine-weapon-shots = It holds { $shots } of { $capacity } shots.
+examine-weapon-empty = It is not loaded.
+examine-weapon-shots-too-far = You would need a closer look to count its shots.

@@ -3,7 +3,7 @@
         type: "Entity",
         id: "clothes_id_card",
         components: {
-            "DisplayName": (name: "identification card"),
+            "DisplayName": (name: "identification card", desc: Some("item-desc-id-card")),
             "Item": (size: Small),
             "Clothing": (slots: [Id]),
             "Glidable": (),

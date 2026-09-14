@@ -4,7 +4,7 @@
         id: "weapon_fireaxe",
         parents: ["base_melee_weapon"],
         components: {
-            "DisplayName": (name: "fire axe"),
+            "DisplayName": (name: "fire axe", desc: Some("item-desc-fire-axe")),
             "Item": (size: Large),
             "MeleeWeapon": (hit_sound: Some((source: Path("audio/weapons/slash.ogg"), volume_db: -3.0, pitch_var: 0.08)), 
                 shape: Sweep(radius: 1, arc_deg: 90), damage: {Slash: 25}, cooldown: 0.7, icon_facing_deg: -45,

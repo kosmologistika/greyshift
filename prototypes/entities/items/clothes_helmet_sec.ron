@@ -3,7 +3,7 @@
         type: "Entity",
         id: "clothes_helmet_sec",
         components: {
-            "DisplayName": (name: "security helmet"),
+            "DisplayName": (name: "security helmet", desc: Some("item-desc-helmet-sec")),
             "Item": (size: Small),
             "Clothing": (slots: [Head]),
             "Armor": (covers: [Head], block: {Blunt: 35, Slash: 35, Piercing: 30, Heat: 30}),
