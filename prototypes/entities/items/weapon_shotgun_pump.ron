@@ -6,13 +6,13 @@
         components: {
             "DisplayName": (name: "pump shotgun", desc: Some("item-desc-shotgun-pump")),
             "Item": (size: Large),
-            "Gun": (fire_sound: Some((source: Path("audio/weapons/guns/shotgun.ogg"), volume_db: -1.0, pitch_var: 0.05, range_tiles: 30.0)), fire_rate: 3.0, selected_mode: SemiAuto, available_modes: [SemiAuto]),
+            "Gun": (fire_sound: Some((source: Path("audio/weapons/guns/shotgun.ogg"), volume_db: -1.0, pitch_var: 0.05, range_tiles: 30.0)), fire_rate: 2.0, selected_mode: SemiAuto, available_modes: [SemiAuto]),
             "RecoilKick": (px: 6.0),
             "Container": (max_count: Some(4), max_item_size: Some(Tiny)),
             "SlotWhitelist": (tags: ["shell_shotgun"]),
             "InternalContainer": (),
             "ManualCycle": (rack_sound: Some((source: Path("audio/weapons/guns/batrifle_cock.ogg"), volume_db: -4.0, pitch_var: 0.05, range_tiles: 10.0))),
-            "SpreadConfig": (base: 0.15, growth_per_shot: 0.05, decay_per_sec: 2.0, max: 0.25),
+            "SpreadConfig": (base: 0.2, growth_per_shot: 0.05, decay_per_sec: 2.0, max: 0.3),
             "Glidable": (),
             "PlacementLayer": Free,
             "Appearance": (

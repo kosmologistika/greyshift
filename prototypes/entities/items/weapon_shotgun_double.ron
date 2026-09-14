@@ -15,7 +15,7 @@
             "SlotWhitelist": (tags: ["shell_shotgun"]),
             "InternalContainer": (),
             "OpensByHand": (),
-            "SpreadConfig": (base: 0.15, growth_per_shot: 0.05, decay_per_sec: 2.0, max: 0.25),
+            "SpreadConfig": (base: 0.2, growth_per_shot: 0.05, decay_per_sec: 2.0, max: 0.3),
             "Glidable": (),
             "PlacementLayer": Free,
             "Appearance": (

@@ -41,7 +41,7 @@
                 ]),
             }),
             "MeleeWeapon": (
-                shape: Thrust(len: 1), damage: {Blunt: 5}, cooldown: 0.5,
+                shape: Thrust(len: 1), damage: {Blunt: 8}, cooldown: 0.5,
                 swing_sound: Some((source: Path("audio/weapons/swing.ogg"), volume_db: -18.0, pitch_var: 0.12, range_tiles: 9.0)),
                 hit_sound: Some((source: Collection("unarmed_hit"), volume_db: -6.0, pitch_var: 0.1)),
             ),
