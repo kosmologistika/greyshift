@@ -35,3 +35,5 @@ input-action-smart-equip-belt = Smart-Equip Belt
 input-action-smart-equip-pocket-left = Smart-Equip Left Pocket
 input-action-smart-equip-pocket-right = Smart-Equip Right Pocket
 input-action-smart-equip-suit-storage = Smart-Equip Suit Storage
+input-action-examine = Examine
+input-action-examine-close = Close Examine
