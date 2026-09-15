@@ -12,9 +12,9 @@
             "Damageable": (),
             // tg's ladder: 100 HP to the floor, hard crit 30 past it, dead 100 past that
             "MobThresholds": (thresholds: {0: Alive, 100: Critical, 130: HardCritical, 200: Dead}),
-            // SS14's ladder on the crit bar (at 80 the sever bars have halved too),
-            // plus tg's soft crit slowdown on top of the crawl at 100
-            "SlowOnDamage": (thresholds: {60: 0.7, 80: 0.5, 100: 0.35}),
+            // SS14's ladder on the crit bar: at 80 the sever bars have halved too.
+            // The floor's own slowdown is the Critical marker's, not a rung here
+            "SlowOnDamage": (thresholds: {60: 0.7, 80: 0.5}),
             "Body": (
                 parts: ["part_head", "part_arm_left", "part_arm_right", "part_leg_left", "part_leg_right"],
                 torso_weight: 40,
