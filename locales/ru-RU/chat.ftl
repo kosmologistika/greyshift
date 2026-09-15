@@ -26,6 +26,7 @@ chat-denied-unconscious = Вы не можете говорить.
 chat-denied-not-dying = Вы не умираете.
 chat-crit-downed = Вы в критическом состоянии. Вы можете только шептать.
 chat-crit-unconscious = Вы теряете сознание.
+chat-crit-wakes = Вы приходите в себя.
 chat-succumbed = Вы сдались.
 chat-denied-ghost = Живые не слышат призраков. Используйте OOC.
 chat-denied-no-body = У вас нет тела, чтобы говорить.

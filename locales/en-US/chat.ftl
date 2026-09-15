@@ -26,6 +26,7 @@ chat-denied-unconscious = You cannot speak.
 chat-denied-not-dying = You are not dying.
 chat-crit-downed = You are in critical condition. You can only whisper.
 chat-crit-unconscious = You lose consciousness.
+chat-crit-wakes = You come to.
 chat-succumbed = You have given up on life.
 chat-denied-ghost = The living cannot hear ghosts. Use OOC.
 chat-denied-no-body = You have no body to speak with.
