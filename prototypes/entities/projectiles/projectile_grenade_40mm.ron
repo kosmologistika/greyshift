@@ -10,9 +10,10 @@
             "Item": (size: Tiny, held: Nothing),
             "Explosive": (
                 radius: 1,
-                damage: {Blunt: 70},
+                damage: {Blunt: 200},
                 falloff: Some((full_tiles: 0.0, end_tiles: 1.0, min: 0.5)),
                 fling: Some(1),
+                effect: Some((effect: "effect_knockdown", secs: 2.0)),
                 sound: Some((source: Collection("explosion_small"), volume_db: 0.0, pitch_var: 0.1, range_tiles: 30.0)),
                 fx: Some("effect_explosion"),
             ),

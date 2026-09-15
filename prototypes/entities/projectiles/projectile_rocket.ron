@@ -7,9 +7,10 @@
         components: {
             "Explosive": (
                 radius: 2,
-                damage: {Blunt: 120},
-                falloff: Some((full_tiles: 0.0, end_tiles: 2.0, min: 0.3)),
+                damage: {Blunt: 220},
+                falloff: Some((full_tiles: 0.0, end_tiles: 2.0, min: 0.18)),
                 fling: Some(2),
+                effect: Some((effect: "effect_knockdown", secs: 2.0)),
                 sound: Some((source: Collection("explosion"), volume_db: 0.0, pitch_var: 0.1, range_tiles: 40.0)),
                 fx: Some("effect_explosion"),
             ),
