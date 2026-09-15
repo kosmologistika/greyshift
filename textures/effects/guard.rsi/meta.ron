@@ -2,9 +2,9 @@
     size: (x: 32, y: 32),
     license: "CC-BY-SA-3.0",
     copyright: [
-        "Taken from tgstation at commit 376684351da7, icons/effects/callouts.dmi: the guard callout, a shield over the head",
+        "Taken from tgstation at commit 376684351da7, icons/effects/callouts.dmi: the guard callout's first frame, a shield over the head, held still",
     ],
     states: [
-        (name: "guard", directions: One, delays: [[1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5]], loops: true),
+        (name: "guard", directions: One),
     ],
 )
