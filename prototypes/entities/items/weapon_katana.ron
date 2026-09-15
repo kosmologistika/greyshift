@@ -10,6 +10,8 @@
                 shape: Thrust(len: 1), damage: {Slash: 25}, cooldown: 0.35, icon_facing_deg: 45,
             ),
             "DamageOnHit": (damage: {Slash: 12}),
+            // Raised, the blade turns every bolt from the front; it softens nothing
+            "Guard": (reflect: 100),
             "Glidable": (),
             "PlacementLayer": Free,
             "Appearance": (
