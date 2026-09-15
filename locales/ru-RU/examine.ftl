@@ -41,6 +41,16 @@ examine-body-identity = { $sex ->
        *[human] человек
         }.
     }
+examine-body-crit = { $sex ->
+    [female] Она едва в сознании.
+    [male] Он едва в сознании.
+   *[none] Оно едва в сознании.
+    }
+examine-body-unconscious = { $sex ->
+    [female] Она не реагирует ни на что вокруг.
+    [male] Он не реагирует ни на что вокруг.
+   *[none] Оно не реагирует ни на что вокруг.
+    }
 examine-body-dead = { $sex ->
     [female] Она мертва.
     [male] Он мёртв.

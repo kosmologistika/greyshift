@@ -36,6 +36,20 @@ examine-body-identity = { $sex ->
     } { $species ->
    *[human] human
     }.
+examine-body-crit = { $sex ->
+    [female] She
+    [male] He
+   *[none] It
+    } is barely conscious.
+examine-body-unconscious = { $sex ->
+    [female] She
+    [male] He
+   *[none] It
+    } isn't responding to anything around { $sex ->
+    [female] her
+    [male] him
+   *[none] it
+    }.
 examine-body-dead = { $sex ->
     [female] She
     [male] He

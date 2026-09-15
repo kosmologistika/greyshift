@@ -64,4 +64,10 @@
         copyright: "space-wizards/space-station-14, Resources/Audio/Effects",
         source: "https://github.com/space-wizards/space-station-14",
     ),
+    (
+        files: ["slowbeat.ogg", "fastbeat.ogg"],
+        license: "CC-BY-SA-3.0",
+        copyright: "tgstation/tgstation, sound/effects/health at commit 436ba869ebcd0b60b63973fb7562f447ee655205",
+        source: "https://github.com/tgstation/tgstation",
+    ),
 ]
