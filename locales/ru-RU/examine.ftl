@@ -19,6 +19,7 @@ examine-armor-blocks = Блокирует { $percent }% { $type ->
     [blunt] дробящего
     [slash] режущего
     [piercing] колющего
+    [asphyxiation] удушающего
    *[heat] теплового
     } урона.
 examine-armor-reflects = Отражает { $percent }% энергетических зарядов.
@@ -75,6 +76,7 @@ examine-health-wound = { $band ->
     [blunt] ушибы
     [slash] порезы
     [piercing] проколы
+    [asphyxiation] удушье
    *[heat] ожоги
     }.
 examine-health-mangled = { $part ->
@@ -94,6 +96,7 @@ examine-weapon-hit = Удар наносит { $amount } { $type ->
     [blunt] дробящего
     [slash] режущего
     [piercing] колющего
+    [asphyxiation] удушающего
    *[heat] теплового
     } урона.
 examine-weapon-swings = { $rate } удара в секунду.
@@ -110,6 +113,7 @@ examine-weapon-shot = Каждый выстрел наносит { $amount } { $
     [blunt] дробящего
     [slash] режущего
     [piercing] колющего
+    [asphyxiation] удушающего
    *[heat] теплового
     } урона{ $pellets ->
     [one] { "" }

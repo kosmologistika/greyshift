@@ -10,16 +10,20 @@
             "Pullable": (),
             "Crawler": (),
             "Damageable": (),
-            "MobThresholds": (thresholds: {0: Alive, 100: Dead}),
-            // SS14's ladder on our death bar: at 80 the sever bars have halved too
+            // tg's ladder: 100 HP to the floor, hard crit 30 past it, dead 100 past that
+            "MobThresholds": (thresholds: {0: Alive, 100: Critical, 130: HardCritical, 200: Dead}),
+            // Two minutes from the floor to hard crit, two and a third from there to dead
+            "Dying": (rates: {Critical: 0.25, HardCritical: 0.5}, kind: Asphyxiation),
+            // SS14's ladder on the crit bar: at 80 the sever bars have halved too.
+            // The floor's own slowdown is the Critical marker's, not a rung here
             "SlowOnDamage": (thresholds: {60: 0.7, 80: 0.5}),
             "Body": (
                 parts: ["part_head", "part_arm_left", "part_arm_right", "part_leg_left", "part_leg_right"],
                 torso_weight: 40,
             ),
             // Art steps authored at 10..100; the last moves down to 85 so the
-            // worst state reads "one hit from death" on someone still standing
-            // instead of only dressing corpses.
+            // worst state reads "one hit from the floor" on someone still
+            // standing instead of only dressing the downed.
             "DamageVisuals": (overlays: {
                 // The brute masters are grayscale; SS14 paints them #FF0000
                 // at draw time, and unpainted they read as soot.
