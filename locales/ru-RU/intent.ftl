@@ -16,3 +16,5 @@ intent-denied-unconscious = Вы без сознания.
     .popup = без сознания!
 intent-denied-pulled-crit = Вас тащат.
     .popup = тащат!
+intent-denied-blocking = Вы держите блок.
+    .popup = в блоке!

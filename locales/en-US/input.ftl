@@ -3,6 +3,7 @@ input-action-move-east = Move East
 input-action-move-south = Move South
 input-action-move-west = Move West
 input-action-combat-mode = Combat Mode
+input-action-block = Block
 input-action-pull = Pull
 input-action-follow = Follow
 input-action-face = Face

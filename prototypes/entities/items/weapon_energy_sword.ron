@@ -15,6 +15,7 @@
                     swing_sound: Some((source: Path("audio/weapons/swing.ogg"), volume_db: -14.0, pitch_var: 0.12, range_tiles: 9.0)),
                     hit_sound: Some((source: Path("audio/weapons/slash.ogg"), volume_db: -3.0, pitch_var: 0.08)),
                 )),
+                on_guard: Some((reflect: 100)),
             ),
             "Glidable": (),
             "PlacementLayer": Free,

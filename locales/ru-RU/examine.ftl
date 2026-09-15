@@ -23,6 +23,8 @@ examine-armor-blocks = Блокирует { $percent }% { $type ->
    *[heat] теплового
     } урона.
 examine-armor-reflects = Отражает { $percent }% энергетических зарядов.
+examine-guard-blocks = Поднятый, блокирует { $percent }% ударов спереди.
+examine-guard-reflects = Поднятый, отражает { $percent }% энергетических зарядов.
 examine-wall-mounted = К ней что-то прикручено.
 examine-body-identity = { $sex ->
     [female] { $band ->

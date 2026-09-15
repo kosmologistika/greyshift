@@ -3,6 +3,7 @@ input-action-move-east = Движение вправо
 input-action-move-south = Движение вниз
 input-action-move-west = Движение влево
 input-action-combat-mode = Боевой режим
+input-action-block = Блок
 input-action-pull = Тянуть
 input-action-follow = Следовать
 input-action-face = Повернуться
