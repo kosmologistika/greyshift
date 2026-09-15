@@ -309,7 +309,7 @@
         price: 150,
         weight: 4,
     ),
-    // The jackpots. The minigun sprays and the holy hand grenade booms once.
+    // The jackpots: the minigun sprays, the holy hand grenade booms once
     (
         type: "ShopListing",
         id: "listing_minigun",

@@ -37,7 +37,7 @@
         source: "https://github.com/discordia-space/CEV-Eris/tree/01f7518e0f8177734a6579aba2bbf76024aa96c4/sound/weapons/guns",
     ),
     (
-        // Upstream attributes it as rocket-launcher.ogg; the file ships as rocket_launcher.ogg.
+        // Attributed upstream as rocket-launcher.ogg, shipped as rocket_launcher.ogg
         files: ["rocket_launcher.ogg"],
         license: "CC-BY-SA-3.0",
         copyright: "tgstation, via space-wizards/space-station-14 Resources/Audio/Weapons/Guns/Gunshots",
