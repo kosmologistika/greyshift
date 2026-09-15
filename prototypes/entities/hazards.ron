@@ -6,7 +6,7 @@
         id: "lube_patch",
         components: {
             "DisplayName": (name: "space lube"),
-            "Slippery": (slide_tiles: 2, knockdown_secs: 3.0),
+            "Slippery": (slide_tiles: 2, knockdown_secs: 3.0, super_slippery: true),
             "PlacementLayer": Free,
             "Appearance": (
                 sprite: (rsi: "textures/effects/lube", state: "lube"),
