@@ -19,6 +19,7 @@ examine-armor-blocks = Blocks { $percent }% of { $type ->
     [blunt] blunt
     [slash] slash
     [piercing] piercing
+    [asphyxiation] asphyxiation
    *[heat] heat
     } damage.
 examine-armor-reflects = Turns back { $percent }% of energy bolts.
@@ -104,6 +105,7 @@ examine-weapon-hit = Hits for { $amount } { $type ->
     [blunt] blunt
     [slash] slash
     [piercing] piercing
+    [asphyxiation] asphyxiation
    *[heat] heat
     } damage.
 examine-weapon-swings = { $rate } swings per second.
@@ -120,6 +122,7 @@ examine-weapon-shot = Each shot deals { $amount } { $type ->
     [blunt] blunt
     [slash] slash
     [piercing] piercing
+    [asphyxiation] asphyxiation
    *[heat] heat
     } damage{ $pellets ->
     [one] { "" }
