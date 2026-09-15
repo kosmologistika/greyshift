@@ -25,7 +25,7 @@
             "DisplayName": (name: "frag grenade"),
             "Explosive": (
                 radius: 2,
-                damage: {Blunt: 200},
+                damage: {Blunt: 220},
                 falloff: Some((full_tiles: 0.0, end_tiles: 2.0, min: 0.15)),
                 fling: Some(1),
                 effect: Some((effect: "effect_knockdown", secs: 2.0)),
@@ -51,7 +51,7 @@
             "SpentOnTrigger": (),
             "Explosive": (
                 radius: 1,
-                damage: {Blunt: 200},
+                damage: {Blunt: 220},
                 falloff: Some((full_tiles: 0.0, end_tiles: 1.0, min: 0.5)),
                 fling: Some(1),
                 effect: Some((effect: "effect_knockdown", secs: 2.0)),
@@ -157,7 +157,7 @@
             "SpentOnTrigger": (),
             "Explosive": (
                 radius: 1,
-                damage: {Blunt: 200},
+                damage: {Blunt: 220},
                 falloff: Some((full_tiles: 0.0, end_tiles: 1.0, min: 0.5)),
                 fling: Some(1),
                 effect: Some((effect: "effect_knockdown", secs: 2.0)),
