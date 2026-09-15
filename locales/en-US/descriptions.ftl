@@ -6,6 +6,7 @@ item-desc-fire-axe = A heavy axe with a blade meant for doors and whatever stand
 item-desc-shotgun-pump = A pump-action shotgun fed with shells one at a time.
 item-desc-toolbox = A steel box that holds tools, or whatever else fits.
 item-desc-backpack = A canvas bag with room for most things.
+item-desc-riot-shield = A tower of polycarbonate. Raised, it eats whatever comes at your front until it cracks.
 item-desc-crowbar = A length of steel bent for prying. Also for hitting.
 item-desc-id-card = A plastic card with a photo and a name.
 item-desc-stun-baton = A security baton with a shock cell. Each jolt puts someone on the floor and drains the cell.
