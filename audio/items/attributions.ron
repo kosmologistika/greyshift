@@ -11,4 +11,10 @@
         copyright: "tgstation, sound/items/handling/toolbox",
         source: "https://github.com/tgstation/tgstation/tree/376684351da7/sound/items/handling/toolbox",
     ),
+    (
+        files: ["beep.ogg"],
+        license: "CC0-1.0",
+        copyright: "Pól, converted to OGG and mono by EmoGarbage, via space-wizards/space-station-14",
+        source: "https://freesound.org/people/P%C3%B3l/sounds/385927/",
+    ),
 ]

@@ -1,0 +1,12 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "Taken from space-wizards/space-station-14 Resources/Textures/Objects/Weapons/Melee/kitchen_knife.rsi at commit ae051d290568. Their line: Taken/modified from desertrose at https://github.com/DesertRose2/desertrose/pull/378/commits/9e081bd2a0d7614be5a9dabbca34886ce204105d",
+    ],
+    states: [
+        (name: "icon"),
+        (name: "inhand-left", directions: Four),
+        (name: "inhand-right", directions: Four),
+    ],
+)

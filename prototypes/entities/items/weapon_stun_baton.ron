@@ -1,0 +1,23 @@
+[
+    (
+        type: "Entity",
+        id: "weapon_stun_baton",
+        parents: ["base_melee_weapon"],
+        components: {
+            "DisplayName": (name: "stun baton", desc: Some("item-desc-stun-baton")),
+            "Item": (size: Small),
+            "MeleeWeapon": (shape: Thrust(len: 1), damage: {Blunt: 10}, cooldown: 0.6, icon_facing_deg: 45),
+            // Every jolt is a unit off the cell; a dry cell is a plain stick until it recharges
+            "StatusOnHit": (effect: "effect_stun", secs: 2.0, cost: 1),
+            "AmmoStore": (rounds: 6, capacity: 6),
+            "RegenAmmo": (units_per_sec: 0.2),
+            "DamageOnHit": (damage: {Blunt: 5}),
+            "Glidable": (),
+            "PlacementLayer": Free,
+            "Appearance": (
+                sprite: (rsi: "textures/objects/weapons/stunbaton", state: "icon"),
+                depth: BelowMobs,
+            ),
+        },
+    ),
+]

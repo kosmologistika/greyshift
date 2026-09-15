@@ -2,9 +2,13 @@
     (
         type: "Entity",
         id: "tool_toolbox_red",
+        parents: ["base_melee_weapon"],
         components: {
             "DisplayName": (name: "toolbox", desc: Some("item-desc-toolbox")),
             "Item": (size: Medium),
+            "MeleeWeapon": (shape: Thrust(len: 1), damage: {Blunt: 20}, cooldown: 1.0, icon_facing_deg: 0),
+            "DamageOnHit": (damage: {Blunt: 12}),
+            "KnockbackOnHit": (tiles: 1),
             "ItemSounds": (
                 pickup: Some((source: Path("audio/items/toolbox_pickup.ogg"), volume_db: -16.0, pitch_var: 0.05, range_tiles: 7.0)),
                 drop: Some((source: Path("audio/items/toolbox_drop.ogg"), volume_db: -14.0, pitch_var: 0.05, range_tiles: 7.0)),

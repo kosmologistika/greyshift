@@ -1,0 +1,13 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "Taken from space-wizards/space-station-14 Resources/Textures/Objects/Weapons/Grenades/singularitygrenade.rsi at commit ae051d290568. Their line: Changed sprites taken from infinity baystation 12, https://github.com/infinitystation/Baystation12/blob/073f678cdce92edb8fcd55f9ffc9f0523bf31506/icons/obj/grenade.dmi. Inhands by TiniestShark (github)",
+    ],
+    states: [
+        (name: "icon"),
+        (name: "primed"),
+        (name: "inhand-left", directions: Four),
+        (name: "inhand-right", directions: Four),
+    ],
+)

@@ -1,0 +1,11 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "Taken from space-wizards/space-station-14 Resources/Textures/Objects/Devices/mousetrap.rsi at commit ae051d290568. Their line: Taken from https://github.com/tgstation/tgstation/commit/4323540b6bec3ae93bbf13d685c2dbe0cb40a36e",
+    ],
+    states: [
+        (name: "mousetrap", directions: Four),
+        (name: "mousetraparmed", directions: Four),
+    ],
+)

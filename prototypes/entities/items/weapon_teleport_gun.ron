@@ -1,0 +1,23 @@
+[
+    (
+        type: "Entity",
+        id: "weapon_teleport_gun",
+        parents: ["base_gun"],
+        components: {
+            "DisplayName": (name: "teleport gun", desc: Some("item-desc-teleport-gun")),
+            "Item": (size: Small),
+            "Gun": (fire_sound: Some((source: Path("audio/weapons/guns/taser2.ogg"), volume_db: -4.0, pitch_var: 0.05, range_tiles: 22.0)), fire_rate: 1.0, selected_mode: SemiAuto, available_modes: [SemiAuto]),
+            "AmmoStore": (rounds: 1, capacity: 1),
+            "RegenAmmo": (units_per_sec: 0.34),
+            "ShotSpec": (projectile_proto: "projectile_teleport"),
+            "SpreadConfig": (base: 0.0, growth_per_shot: 0.0, decay_per_sec: 1.0, max: 0.0),
+            "SpriteTint": ((red: 0.7, green: 0.4, blue: 1.0, alpha: 1.0)),
+            "Glidable": (),
+            "PlacementLayer": Free,
+            "Appearance": (
+                sprite: (rsi: "textures/objects/weapons/guns/battery/pulse_pistol", state: "icon"),
+                depth: BelowMobs,
+            ),
+        },
+    ),
+]

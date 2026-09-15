@@ -1,0 +1,11 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "Taken from space-wizards/space-station-14 Resources/Textures/Objects/Weapons/Melee/e_sword.rsi at commit ae051d290568. Their line: Taken from tgstation at https://github.com/tgstation/tgstation",
+    ],
+    states: [
+        (name: "icon"),
+        (name: "e_sword"),
+    ],
+)
