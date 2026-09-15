@@ -1,2 +1,4 @@
 shop-locked = КРУТИМ
-shop-pick = ВЫБЕРИТЕ
+shop-pick = ВЫБИРАЙТЕ
+shop-done = ГОТОВО
+shop-sold = ПРОДАНО
