@@ -68,6 +68,14 @@
     ),
     (
         type: "ShopListing",
+        id: "listing_riot_shield",
+        catalog: "blood_money",
+        product: "weapon_riot_shield",
+        price: 70,
+        weight: 12,
+    ),
+    (
+        type: "ShopListing",
         id: "listing_ablative_vest",
         catalog: "blood_money",
         product: "clothes_armor_ablative",

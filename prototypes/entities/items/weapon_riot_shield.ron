@@ -1,0 +1,31 @@
+[
+    (
+        type: "Entity",
+        id: "weapon_riot_shield",
+        components: {
+            "DisplayName": (name: "riot shield", desc: Some("item-desc-riot-shield")),
+            // Large: a bag takes Medium at most, so it costs a hand or a slot as long as it lives
+            "Item": (size: Large),
+            "Guard": (block: 100),
+            "StruckSound": (default: Some((source: Path("audio/effects/block_metal1.ogg"), volume_db: -4.0, pitch_var: 0.1))),
+            "Damageable": (),
+            // Integrity: the first shell of buckshot is eaten whole, the second breaks it
+            "Destructible": (thresholds: [
+                (
+                    trigger: TotalDamage(150),
+                    behaviors: [
+                        PlaySound((source: Collection("destroy_window"), volume_db: -2.0, pitch_var: 0.08)),
+                        SpawnEntities({"item_glass_shard": (min: 1, max: 2)}),
+                        Destroy,
+                    ],
+                ),
+            ]),
+            "Glidable": (),
+            "PlacementLayer": Free,
+            "Appearance": (
+                sprite: (rsi: "textures/objects/weapons/riot_shield", state: "icon"),
+                depth: BelowMobs,
+            ),
+        },
+    ),
+]
