@@ -75,6 +75,7 @@ examine-health-wound = { $band ->
     [blunt] ушибы
     [slash] порезы
     [piercing] проколы
+    [asphyxiation] удушье
    *[heat] ожоги
     }.
 examine-health-mangled = { $part ->

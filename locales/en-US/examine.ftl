@@ -80,6 +80,7 @@ examine-health-wound = { $sex ->
     [blunt] bruising
     [slash] cuts
     [piercing] punctures
+    [asphyxiation] suffocation
    *[heat] burns
     }.
 examine-health-mangled = { $sex ->
