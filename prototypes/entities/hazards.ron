@@ -1,6 +1,5 @@
 [
-    // Floor hazards a map paints down. The slide chains across contiguous
-    // patches, so a strip is a ride and a single tile is a stumble
+    // Floor hazards a map paints down; a run of them chains the slide
     (
         type: "Entity",
         id: "lube_patch",
