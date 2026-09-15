@@ -33,6 +33,15 @@
         price: 20,
         staple: true,
     ),
+    (
+        type: "ShopListing",
+        id: "listing_banana_peel",
+        catalog: "blood_money",
+        product: "banana_peel",
+        price: 10,
+        staple: true,
+        shelf: "utility",
+    ),
     // Commons.
     (
         type: "ShopListing",
@@ -72,6 +81,14 @@
         catalog: "blood_money",
         product: "weapon_riot_shield",
         price: 70,
+        weight: 12,
+    ),
+    (
+        type: "ShopListing",
+        id: "listing_soap",
+        catalog: "blood_money",
+        product: "soap",
+        price: 40,
         weight: 12,
     ),
     (
