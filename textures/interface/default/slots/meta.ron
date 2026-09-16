@@ -3,6 +3,7 @@
     license: "CC-BY-SA-3.0",
     copyright: [
         "https://github.com/tgstation/tgstation/commits/038707f0b1dec77bce817a2ccb804419547b86b0/icons/hud/screen_midnight.dmi and modified by Morbo; the slot plates, toggle, template, storage_cell, storage_close and act_drop/act_swap states cut from the same sheet by utils/extract_dmi.py",
+        "blocked cut from https://github.com/tgstation/tgstation/commits/d08cd9dbee72c1e78d814232b9d53d5fb54d8cf8/icons/hud/screen_gen.dmi by utils/extract_dmi.py",
     ],
     states: [
         (name: "hand_l"),
@@ -29,5 +30,6 @@
         (name: "template_small"),
         (name: "storage_cell"),
         (name: "storage_close"),
+        (name: "blocked"),
     ],
 )
