@@ -1,0 +1,47 @@
+[
+    (
+        type: "Entity",
+        id: "weapon_rpg",
+        parents: ["base_gun"],
+        components: {
+            "DisplayName": (name: "RPG-7"),
+            "Item": (size: Large),
+            "Gun": (fire_sound: Some((source: Path("audio/weapons/guns/rocket_launcher.ogg"), volume_db: 0.0, pitch_var: 0.05, range_tiles: 40.0)), fire_rate: 0.5, selected_mode: SemiAuto, available_modes: [SemiAuto]),
+            "RecoilKick": (px: 10.0),
+            "AmmoStore": (rounds: 0, capacity: 1),
+            "ShotSpec": (projectile_proto: "projectile_rocket"),
+            "Ejects": (live_round: Some("ammo_rocket")),
+            "LoadsCartridge": (windup_secs: 1.5),
+            "SpreadConfig": (base: 0.01, growth_per_shot: 0.0, decay_per_sec: 1.0, max: 0.01),
+            "Glidable": (),
+            "PlacementLayer": Free,
+            "Appearance": (
+                sprite: (rsi: "textures/objects/weapons/guns/launchers/rocket", state: "base"),
+                depth: BelowMobs,
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "weapon_rpg_loaded",
+        parents: ["weapon_rpg"],
+        components: {
+            "AmmoStore": (rounds: 1),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "ammo_rocket",
+        components: {
+            "DisplayName": (name: "rocket"),
+            "Item": (size: Small, held: Nothing),
+            "Cartridge": (projectile_proto: "projectile_rocket"),
+            "Glidable": (),
+            "PlacementLayer": Free,
+            "Appearance": (
+                sprite: (rsi: "textures/objects/weapons/guns/ammunition/explosives", state: "rpg"),
+                depth: BelowMobs,
+            ),
+        },
+    ),
+]

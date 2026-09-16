@@ -168,4 +168,22 @@
             "audio/emotes/clap4.ogg",
         ],
     ),
+    (
+        type: "SoundCollection",
+        id: "explosion",
+        files: [
+            "audio/effects/explosion1.ogg",
+            "audio/effects/explosion2.ogg",
+            "audio/effects/explosion3.ogg",
+        ],
+    ),
+    (
+        type: "SoundCollection",
+        id: "explosion_small",
+        files: [
+            "audio/effects/explosion_small1.ogg",
+            "audio/effects/explosion_small2.ogg",
+            "audio/effects/explosion_small3.ogg",
+        ],
+    ),
 ]

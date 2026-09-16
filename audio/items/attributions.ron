@@ -17,4 +17,11 @@
         copyright: "Pól, converted to OGG and mono by EmoGarbage, via space-wizards/space-station-14",
         source: "https://freesound.org/people/P%C3%B3l/sounds/385927/",
     ),
+    (
+        // SS14's smoke_grenade_prime.ogg
+        files: ["grenade_prime.ogg"],
+        license: "CC0-1.0",
+        copyright: "Bhijn and Myr (github username deathride58), via space-wizards/space-station-14 Resources/Audio/Items",
+        source: "https://github.com/space-wizards/space-station-14/pull/23476",
+    ),
 ]

@@ -70,4 +70,13 @@
         copyright: "tgstation/tgstation, sound/effects/health at commit 436ba869ebcd0b60b63973fb7562f447ee655205",
         source: "https://github.com/tgstation/tgstation",
     ),
+    (
+        files: [
+            "explosion_small1.ogg", "explosion_small2.ogg", "explosion_small3.ogg",
+            "explosion1.ogg", "explosion2.ogg", "explosion3.ogg",
+        ],
+        license: "CC-BY-SA-3.0",
+        copyright: "vgstation at c5edbfd7179288080f081e2b8ac2496b7e4455db, via space-wizards/space-station-14 Resources/Audio/Effects",
+        source: "https://github.com/vgstation-coders/vgstation13/tree/c5edbfd7179288080f081e2b8ac2496b7e4455db/sound/effects",
+    ),
 ]
