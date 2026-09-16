@@ -1341,3 +1341,97 @@
 .grid-hover {
     min-height: 12px;
 }
+
+/* The UI kit debug modal: every widget and the palette on one scrolling page */
+.kit {
+    width: 600px;
+    height: 340px;
+    flex-direction: column;
+    align-items: stretch;
+    -bevy-image: url("textures/interface/frame.png");
+    -bevy-image-mode: sliced(4px);
+}
+
+.kit-pad {
+    flex-grow: 1;
+    min-height: 0px;
+    flex-direction: column;
+    align-items: stretch;
+    row-gap: var(--space-1);
+    padding: 6px;
+}
+
+.kit-head {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.kit-title,
+.kit-heading {
+    color: var(--accent);
+    letter-spacing: 1px;
+}
+
+.kit-heading {
+    margin-top: var(--space-2);
+}
+
+.kit-row {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 6px;
+    row-gap: var(--space-1);
+    align-items: center;
+}
+
+.kit-top {
+    align-items: flex-start;
+}
+
+.kit-column {
+    flex-direction: column;
+    row-gap: 2px;
+}
+
+.kit-cell {
+    width: 140px;
+    column-gap: var(--space-1);
+    align-items: center;
+}
+
+.kit-cell-wide {
+    column-gap: var(--space-2);
+    align-items: center;
+}
+
+.kit-caption {
+    width: 64px;
+}
+
+.kit-swatch {
+    width: 16px;
+    height: 16px;
+    border: 1px solid var(--border-flat);
+}
+
+.kit-master {
+    width: 40px;
+    height: 16px;
+}
+
+.kit-sidebar {
+    width: 160px;
+    flex-direction: column;
+    align-items: stretch;
+    background-color: var(--bg-sidebar);
+}
+
+.kit-log {
+    flex-direction: column;
+    row-gap: var(--space-1);
+    padding: 4px;
+}
+
+.kit-field {
+    width: 160px;
+}
