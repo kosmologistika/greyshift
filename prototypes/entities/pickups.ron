@@ -13,8 +13,10 @@
                 sound: Some((source: Path("audio/effects/pickup_heal.ogg"), volume_db: -4.0, range_tiles: 12.0)),
             ),
             "Appearance": (
-                sprite: (rsi: "textures/objects/pickups", state: "medkit"),
+                sprite: (rsi: "textures/objects/pickups", state: "pad_medkit"),
                 depth: BelowMobs,
+                // The rim skips the lighting multiply so its color code survives a colored room
+                layers: [(state: "pad_medkit_glow", shading: Unshaded)],
             ),
             "PlacementLayer": Free,
         },
@@ -30,8 +32,9 @@
                 sound: Some((source: Path("audio/effects/pickup_heal.ogg"), volume_db: -4.0, range_tiles: 12.0)),
             ),
             "Appearance": (
-                sprite: (rsi: "textures/objects/weapons/guns/ammunition/magazine/lightrifle/light_rifle_box", state: "base"),
+                sprite: (rsi: "textures/objects/pickups", state: "pad_ammo"),
                 depth: BelowMobs,
+                layers: [(state: "pad_ammo_glow", shading: Unshaded)],
             ),
             "PlacementLayer": Free,
         },
@@ -47,8 +50,9 @@
                 sound: Some((source: Path("audio/effects/pickup_heal.ogg"), volume_db: -4.0, range_tiles: 12.0)),
             ),
             "Appearance": (
-                sprite: (rsi: "textures/clothing/suits/armor_vest", state: "icon"),
+                sprite: (rsi: "textures/objects/pickups", state: "pad_armor"),
                 depth: BelowMobs,
+                layers: [(state: "pad_armor_glow", shading: Unshaded)],
             ),
             "PlacementLayer": Free,
         },
