@@ -1,0 +1,21 @@
+[
+    (
+        type: "Entity",
+        id: "structure_plastic_flaps",
+        components: {
+            "DisplayName": (name: "plastic flaps"),
+            // Names the rooms either side like a door would, but stops no one, no bullet and no sight
+            "AreaBoundary": (),
+            "PlacementLayer": Solid,
+            // Translucent so a doorway reads as open next to the solid wall posts
+            "Appearance": (
+                sprite: (rsi: "textures/structures/decoration/plastic_flaps", state: "plasticflaps"),
+                depth: Doors,
+                hide_base: true,
+                layers: [
+                    (state: "plasticflaps", tint: Some((red: 0.85, green: 1.0, blue: 0.95, alpha: 0.45))),
+                ],
+            ),
+        },
+    ),
+]

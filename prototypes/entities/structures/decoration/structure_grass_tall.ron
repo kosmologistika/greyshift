@@ -1,0 +1,14 @@
+[
+    (
+        type: "Entity",
+        id: "structure_grass_tall",
+        components: {
+            "DisplayName": (name: "tall grass"),
+            "PlacementLayer": Free,
+            "Appearance": (
+                sprite: (rsi: "textures/structures/decoration/flowers", state: "grassd1"),
+                depth: FloorOverlay,
+            ),
+        },
+    ),
+]

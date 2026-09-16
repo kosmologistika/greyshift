@@ -1,0 +1,17 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "Taken from space-wizards/space-station-14 at commit ae051d290568dbdde2441fa9478637ac1444781c Resources/Textures/Decals/Flora/flora_flowers.rsi (same state names), taken from tgstation at commit https://github.com/tgstation/tgstation/commit/729d858807905263adab8b5a331c1d8a04982dd3",
+    ],
+    states: [
+        (name: "flowerspv1"),
+        (name: "flowerspv2"),
+        (name: "flowerspv3"),
+        (name: "flowersbr1"),
+        (name: "flowersbr2"),
+        (name: "flowersbr3"),
+        (name: "flowersy1"),
+        (name: "flowersy2"),
+    ],
+)

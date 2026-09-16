@@ -1,0 +1,28 @@
+[
+    (
+        type: "Entity",
+        id: "structure_window_greenhouse",
+        parents: ["structure_window"],
+        components: {
+            // Crack stages rescaled to the weaker pane, or it breaks after showing only the first
+            "DamageVisuals": (overlays: {
+                All: (rsi: "textures/structures/windows/cracks", steps: [
+                    (at: 5, state: "cracks_1"),
+                    (at: 12, state: "cracks_2"),
+                    (at: 20, state: "cracks_3"),
+                ]),
+            }),
+            // Half a station pane: four pistol rounds open a sightline mid-fight
+            "Destructible": (thresholds: [
+                (
+                    trigger: TotalDamage(25),
+                    behaviors: [
+                        PlaySound((source: Collection("destroy_window"), volume_db: -2.0, pitch_var: 0.08)),
+                        SpawnEntities({"item_glass_shard": (min: 1, max: 2)}),
+                        Destroy,
+                    ],
+                ),
+            ]),
+        },
+    ),
+]

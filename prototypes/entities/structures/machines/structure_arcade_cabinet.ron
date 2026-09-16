@@ -1,0 +1,21 @@
+[
+    (
+        type: "Entity",
+        id: "structure_arcade_cabinet",
+        components: {
+            "DisplayName": (name: "arcade cabinet"),
+            "Solid": (),
+            "BlocksAttack": (),
+            "StruckSound": (default: Some((source: Collection("hit_metal"), volume_db: -4.0, pitch_var: 0.1))),
+            "PlacementLayer": Solid,
+            "Facing": (South),
+            "Appearance": (
+                sprite: (rsi: "textures/structures/machines/arcade", state: "arcade"),
+                depth: Furniture,
+                layers: [
+                    (state: "screen_invaders", shading: Unshaded),
+                ],
+            ),
+        },
+    ),
+]

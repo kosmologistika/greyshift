@@ -1,0 +1,12 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "Taken from space-wizards/space-station-14 at commit ae051d290568dbdde2441fa9478637ac1444781c Resources/Textures/Fluids/puddle.rsi states splat0, splatb and splata, made by Alekshhh and modified by potato1234x on github; splatb and splata re-centred in the cell",
+    ],
+    states: [
+        (name: "stain_0"),
+        (name: "stain_1"),
+        (name: "drips"),
+    ],
+)

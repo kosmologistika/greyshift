@@ -1,0 +1,28 @@
+[
+    (
+        type: "Entity",
+        id: "structure_hydro_tray",
+        components: {
+            "DisplayName": (name: "tomato tray"),
+            "Solid": (),
+            // Waist-high like a table, but not a Surface and never smoothed into a run
+            "PassesProjectiles": (),
+            "PassesThrown": (),
+            "Climbable": (secs: 1.0),
+            "StruckSound": (default: Some((source: Collection("hit_metal"), volume_db: -4.0, pitch_var: 0.1))),
+            "Damageable": (),
+            "Destructible": (thresholds: [
+                (
+                    trigger: TotalDamage(40),
+                    behaviors: [PlaySound((source: Collection("destroy_metal"), volume_db: -2.0, pitch_var: 0.08)), Destroy],
+                ),
+            ]),
+            "PlacementLayer": Solid,
+            "Appearance": (
+                sprite: (rsi: "textures/structures/hydroponics/hydro_tray", state: "hydrotray3"),
+                depth: Furniture,
+                layers: [(state: "tomato")],
+            ),
+        },
+    ),
+]

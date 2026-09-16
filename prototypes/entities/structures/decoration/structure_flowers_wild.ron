@@ -1,0 +1,14 @@
+[
+    (
+        type: "Entity",
+        id: "structure_flowers_wild",
+        components: {
+            "DisplayName": (name: "wildflowers"),
+            "PlacementLayer": Free,
+            "Appearance": (
+                sprite: (rsi: "textures/structures/decoration/flowers", state: "brflowers_1"),
+                depth: FloorOverlay,
+            ),
+        },
+    ),
+]

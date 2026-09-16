@@ -1,0 +1,12 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "Taken from space-wizards/space-station-14 Resources/Textures/Structures/Machines/arcade.rsi, originally from tgstation at commit https://github.com/tgstation/tgstation/commit/bd6873fd4dd6a61d7e46f1d75cd4d90f64c40894 and modified by Swept",
+        "screen_invaders: the still north, east and west frames repeated six times so every direction has the south animation's frame count",
+    ],
+    states: [
+        (name: "arcade", directions: Four),
+        (name: "screen_invaders", directions: Four, delays: [[0.3, 0.3, 0.3, 0.3, 0.3, 0.3], [0.3, 0.3, 0.3, 0.3, 0.3, 0.3], [0.3, 0.3, 0.3, 0.3, 0.3, 0.3], [0.3, 0.3, 0.3, 0.3, 0.3, 0.3]]),
+    ],
+)

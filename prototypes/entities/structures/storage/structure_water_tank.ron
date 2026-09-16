@@ -1,0 +1,17 @@
+[
+    (
+        type: "Entity",
+        id: "structure_water_tank",
+        components: {
+            "DisplayName": (name: "water tank"),
+            "Solid": (),
+            "BlocksAttack": (),
+            "StruckSound": (default: Some((source: Collection("hit_metal"), volume_db: -4.0, pitch_var: 0.1))),
+            "PlacementLayer": Solid,
+            "Appearance": (
+                sprite: (rsi: "textures/structures/storage/water_tank", state: "watertank"),
+                depth: Furniture,
+            ),
+        },
+    ),
+]

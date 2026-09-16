@@ -1,0 +1,11 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "splat0, splatb: taken from space-wizards/space-station-14 at commit ae051d290568dbdde2441fa9478637ac1444781c Resources/Textures/Fluids/puddle.rsi, made by Alekshhh and modified by potato1234x (github); grayscale master, tinted per prototype",
+    ],
+    states: [
+        (name: "splat0"),
+        (name: "splatb"),
+    ],
+)

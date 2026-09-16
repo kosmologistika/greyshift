@@ -1,0 +1,18 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "Taken from space-wizards/space-station-14 at commit ae051d290568dbdde2441fa9478637ac1444781c Resources/Textures/Structures/Furniture/Tables/glass.rsi, originally from discordia-space/CEV-Eris at commit 0b3ab17dbad632ddf738b63900ef8df1926bba47 icons/obj/tables.dmi",
+    ],
+    states: [
+        (name: "full"),
+        (name: "state_0", directions: Four),
+        (name: "state_1", directions: Four),
+        (name: "state_2", directions: Four),
+        (name: "state_3", directions: Four),
+        (name: "state_4", directions: Four),
+        (name: "state_5", directions: Four),
+        (name: "state_6", directions: Four),
+        (name: "state_7", directions: Four),
+    ],
+)

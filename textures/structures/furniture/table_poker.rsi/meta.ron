@@ -1,0 +1,18 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "Taken from space-wizards/space-station-14 Resources/Textures/Structures/Furniture/Tables/Fancy/green.rsi, originally from tgstation icons/obj/structures.dmi",
+    ],
+    states: [
+        (name: "full"),
+        (name: "state_0", directions: Four),
+        (name: "state_1", directions: Four),
+        (name: "state_2", directions: Four),
+        (name: "state_3", directions: Four),
+        (name: "state_4", directions: Four),
+        (name: "state_5", directions: Four),
+        (name: "state_6", directions: Four),
+        (name: "state_7", directions: Four),
+    ],
+)

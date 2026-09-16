@@ -1,0 +1,76 @@
+[
+    (
+        type: "Entity",
+        id: "area_casino_floor",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "gaming floor"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_casino_slots",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "slots"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_casino_bar",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "bar"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_casino_vip",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "VIP lounge"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_casino_cage",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "cashier cage"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_casino_vault",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "vault"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_casino_kitchen",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "kitchen"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_casino_service",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "service corridor"),
+            "Area": (ambience: Some("maintenance")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_casino_dock",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "loading dock"),
+            "Area": (ambience: Some("maintenance")),
+        },
+    ),
+]

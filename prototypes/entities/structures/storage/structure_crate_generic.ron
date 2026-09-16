@@ -1,0 +1,20 @@
+[
+    (
+        type: "Entity",
+        id: "structure_crate_generic",
+        components: {
+            "DisplayName": (name: "crate"),
+            "Solid": (),
+            "BlocksAttack": (),
+            "StruckSound": (default: Some((source: Collection("hit_metal"), volume_db: -4.0, pitch_var: 0.1))),
+            "PlacementLayer": Solid,
+            "Appearance": (
+                sprite: (rsi: "textures/structures/storage/crate_generic", state: "base"),
+                depth: Furniture,
+                layers: [
+                    (state: "closed"),
+                ],
+            ),
+        },
+    ),
+]

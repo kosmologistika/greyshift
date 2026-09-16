@@ -1,0 +1,163 @@
+[
+    // Floor copies draw a band under BelowMobs so a dropped coin is never hidden beneath clutter
+    (
+        type: "Entity",
+        id: "prop_greenhouse_bee_smoker_floor",
+        parents: ["prop_greenhouse_bee_smoker"],
+        components: {
+            "Appearance": (depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_greenhouse_bucket_floor",
+        parents: ["prop_greenhouse_bucket"],
+        components: {
+            "Appearance": (depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_greenhouse_cultivator_floor",
+        parents: ["prop_greenhouse_cultivator"],
+        components: {
+            "Appearance": (depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_greenhouse_glass_shard_large_floor",
+        parents: ["prop_greenhouse_glass_shard_large"],
+        components: {
+            "Appearance": (depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_greenhouse_glass_shard_medium_floor",
+        parents: ["prop_greenhouse_glass_shard_medium"],
+        components: {
+            "Appearance": (depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_greenhouse_glass_shard_small_floor",
+        parents: ["prop_greenhouse_glass_shard_small"],
+        components: {
+            "Appearance": (depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_greenhouse_honey_frame_floor",
+        parents: ["prop_greenhouse_honey_frame"],
+        components: {
+            "Appearance": (depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_greenhouse_jerrycan_floor",
+        parents: ["prop_greenhouse_jerrycan"],
+        components: {
+            "Appearance": (depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_greenhouse_leaf_bundle_tea_floor",
+        parents: ["prop_greenhouse_leaf_bundle_tea"],
+        components: {
+            "Appearance": (depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_greenhouse_leaf_bundle_tobacco_floor",
+        parents: ["prop_greenhouse_leaf_bundle_tobacco"],
+        components: {
+            "Appearance": (depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_greenhouse_rake_floor",
+        parents: ["prop_greenhouse_rake"],
+        components: {
+            "Appearance": (depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_greenhouse_seedling_sack_floor",
+        parents: ["prop_greenhouse_seedling_sack"],
+        components: {
+            "Appearance": (depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_greenhouse_shears_floor",
+        parents: ["prop_greenhouse_shears"],
+        components: {
+            "Appearance": (depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_greenhouse_soil_pile_floor",
+        parents: ["prop_greenhouse_soil_pile"],
+        components: {
+            "Appearance": (depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_greenhouse_soil_sack_floor",
+        parents: ["prop_greenhouse_soil_sack"],
+        components: {
+            "Appearance": (depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_greenhouse_spade_floor",
+        parents: ["prop_greenhouse_spade"],
+        components: {
+            "Appearance": (depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_greenhouse_trash_bag_floor",
+        parents: ["prop_greenhouse_trash_bag"],
+        components: {
+            "Appearance": (depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_greenhouse_trash_bag_small_floor",
+        parents: ["prop_greenhouse_trash_bag_small"],
+        components: {
+            "Appearance": (depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_greenhouse_watering_can_floor",
+        parents: ["prop_greenhouse_watering_can"],
+        components: {
+            "Appearance": (depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_greenhouse_watering_can_wood_floor",
+        parents: ["prop_greenhouse_watering_can_wood"],
+        components: {
+            "Appearance": (depth: Furniture),
+        },
+    ),
+]

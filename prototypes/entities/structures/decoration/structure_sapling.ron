@@ -1,0 +1,14 @@
+[
+    (
+        type: "Entity",
+        id: "structure_sapling",
+        components: {
+            "DisplayName": (name: "sapling"),
+            "PlacementLayer": Free,
+            "Appearance": (
+                sprite: (rsi: "textures/structures/decoration/bushes", state: "bushd1"),
+                depth: BelowMobs,
+            ),
+        },
+    ),
+]

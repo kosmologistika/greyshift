@@ -1,0 +1,134 @@
+[
+    (
+        type: "Entity",
+        id: "prop_casino_card",
+        abstract: true,
+        components: {
+            "DisplayName": (name: "playing card"),
+            "Item": (size: Tiny, held: Nothing),
+            "Glidable": (),
+            "PlacementLayer": Free,
+            "Appearance": (depth: BelowMobs),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_casino_card_ace_hearts",
+        parents: ["prop_casino_card"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/objects/props/casino_cards", state: "card_ace_hearts"), depth: BelowMobs),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_casino_card_king_hearts",
+        parents: ["prop_casino_card"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/objects/props/casino_cards", state: "card_king_hearts"), depth: BelowMobs),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_casino_card_10_diamonds",
+        parents: ["prop_casino_card"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/objects/props/casino_cards", state: "card_10_diamonds"), depth: BelowMobs),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_casino_card_ace_spades",
+        parents: ["prop_casino_card"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/objects/props/casino_cards", state: "card_ace_spades"), depth: BelowMobs),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_casino_card_queen_clubs",
+        parents: ["prop_casino_card"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/objects/props/casino_cards", state: "card_queen_clubs"), depth: BelowMobs),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_casino_card_facedown",
+        parents: ["prop_casino_card"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/objects/props/casino_cards", state: "card_back_blue"), depth: BelowMobs),
+        },
+    ),
+    // The red back sinks into red and purple felt, so it is for the green tables only
+    (
+        type: "Entity",
+        id: "prop_casino_card_facedown_red",
+        parents: ["prop_casino_card"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/objects/props/casino_cards", state: "card_back_red"), depth: BelowMobs),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_casino_deck",
+        parents: ["prop_casino_card"],
+        components: {
+            "DisplayName": (name: "deck of cards"),
+            "Appearance": (sprite: (rsi: "textures/objects/props/casino_cards", state: "deck_blue_full"), depth: BelowMobs),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_casino_deck_half",
+        parents: ["prop_casino_card"],
+        components: {
+            "DisplayName": (name: "deck of cards"),
+            "Appearance": (sprite: (rsi: "textures/objects/props/casino_cards", state: "deck_blue_half"), depth: BelowMobs),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_casino_deck_black",
+        parents: ["prop_casino_card"],
+        components: {
+            "DisplayName": (name: "deck of cards"),
+            "Appearance": (sprite: (rsi: "textures/objects/props/casino_cards", state: "deck_black_full"), depth: BelowMobs),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_casino_dice_2",
+        parents: ["prop_casino_card"],
+        components: {
+            "DisplayName": (name: "die"),
+            "Appearance": (sprite: (rsi: "textures/objects/props/casino_dice", state: "d6_2"), depth: BelowMobs),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_casino_dice_3",
+        parents: ["prop_casino_card"],
+        components: {
+            "DisplayName": (name: "die"),
+            "Appearance": (sprite: (rsi: "textures/objects/props/casino_dice", state: "d6_3"), depth: BelowMobs),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_casino_dice_5",
+        parents: ["prop_casino_card"],
+        components: {
+            "DisplayName": (name: "die"),
+            "Appearance": (sprite: (rsi: "textures/objects/props/casino_dice", state: "d6_5"), depth: BelowMobs),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_casino_dice_6",
+        parents: ["prop_casino_card"],
+        components: {
+            "DisplayName": (name: "die"),
+            "Appearance": (sprite: (rsi: "textures/objects/props/casino_dice", state: "d6_6"), depth: BelowMobs),
+        },
+    ),
+]

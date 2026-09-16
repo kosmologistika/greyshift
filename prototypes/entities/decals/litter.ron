@@ -1,0 +1,123 @@
+[
+    // FloorOverlay rather than BelowMobs so a dropped coin always draws over the junk
+    (
+        type: "Entity",
+        id: "decal_litter",
+        abstract: true,
+        components: {
+            "DisplayName": (name: "litter"),
+            "Scenery": (),
+            "PlacementLayer": Free,
+            "Appearance": (depth: FloorOverlay),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_glass_glitter_0",
+        parents: ["decal_litter"],
+        components: {
+            "DisplayName": (name: "glass dust"),
+            "Appearance": (sprite: (rsi: "textures/decals/glass_glitter", state: "glitter_0")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_glass_glitter_1",
+        parents: ["decal_litter"],
+        components: {
+            "DisplayName": (name: "glass dust"),
+            "Appearance": (sprite: (rsi: "textures/decals/glass_glitter", state: "glitter_1")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_glass_glitter_small_0",
+        parents: ["decal_litter"],
+        components: {
+            "DisplayName": (name: "glass dust"),
+            "Appearance": (sprite: (rsi: "textures/decals/glass_glitter", state: "glitter_small_0")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_glass_glitter_small_1",
+        parents: ["decal_litter"],
+        components: {
+            "DisplayName": (name: "glass dust"),
+            "Appearance": (sprite: (rsi: "textures/decals/glass_glitter", state: "glitter_small_1")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_trash_paper",
+        parents: ["decal_litter"],
+        components: {
+            "DisplayName": (name: "paper scrap"),
+            "Appearance": (sprite: (rsi: "textures/decals/litter", state: "paper")),
+            "SpriteTint": ((red: 0.8, green: 0.78, blue: 0.74, alpha: 1.0)),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_trash_paper_mud",
+        parents: ["decal_litter"],
+        components: {
+            "DisplayName": (name: "paper scrap"),
+            "Appearance": (sprite: (rsi: "textures/decals/litter", state: "paper_mud")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_trash_wrapper_0",
+        parents: ["decal_litter"],
+        components: {
+            "DisplayName": (name: "wrapper"),
+            "Appearance": (sprite: (rsi: "textures/decals/litter", state: "wrapper_0")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_trash_wrapper_1",
+        parents: ["decal_litter"],
+        components: {
+            "DisplayName": (name: "wrapper"),
+            "Appearance": (sprite: (rsi: "textures/decals/litter", state: "wrapper_1")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_trash_wrapper_2",
+        parents: ["decal_litter"],
+        components: {
+            "DisplayName": (name: "wrapper"),
+            "Appearance": (sprite: (rsi: "textures/decals/litter", state: "wrapper_2")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_trash_wrapper_3",
+        parents: ["decal_litter"],
+        components: {
+            "DisplayName": (name: "wrapper"),
+            "Appearance": (sprite: (rsi: "textures/decals/litter", state: "wrapper_3")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_cigbutt_0",
+        parents: ["decal_litter"],
+        components: {
+            "DisplayName": (name: "cigarette butt"),
+            "Appearance": (sprite: (rsi: "textures/decals/cigbutts", state: "cigbutt")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_cigbutt_1",
+        parents: ["decal_litter"],
+        components: {
+            "DisplayName": (name: "cigar butt"),
+            "Appearance": (sprite: (rsi: "textures/decals/cigbutts", state: "cigarbutt")),
+        },
+    ),
+]

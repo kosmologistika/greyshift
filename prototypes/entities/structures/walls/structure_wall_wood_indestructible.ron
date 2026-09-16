@@ -1,0 +1,16 @@
+[
+    (
+        type: "Entity",
+        id: "structure_wall_wood_indestructible",
+        parents: ["structure_wall_base"],
+        components: {
+            "DisplayName": (name: "wood panel wall"),
+            "IconSmooth": (state_prefix: "wood"),
+            "StruckSound": (default: Some((source: Collection("hit_wood"), volume_db: -4.0, pitch_var: 0.1))),
+            "Appearance": (
+                sprite: (rsi: "textures/structures/walls/wood", state: "default"),
+                depth: Walls,
+            ),
+        },
+    ),
+]

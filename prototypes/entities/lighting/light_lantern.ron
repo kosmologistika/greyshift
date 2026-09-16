@@ -1,0 +1,16 @@
+[
+    (
+        type: "Entity",
+        id: "light_lantern",
+        components: {
+            "DisplayName": (name: "lantern"),
+            "PointLight": (color: (1.0, 0.55, 0.2), energy: 1.0, radius: 4.0),
+            // Free, so it can stand on a bench or tray tile
+            "PlacementLayer": Free,
+            "Appearance": (
+                sprite: (rsi: "textures/structures/lighting/lantern", state: "base"),
+                depth: BelowMobs,
+            ),
+        },
+    ),
+]

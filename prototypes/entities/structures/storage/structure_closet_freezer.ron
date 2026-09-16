@@ -1,0 +1,20 @@
+[
+    (
+        type: "Entity",
+        id: "structure_closet_freezer",
+        components: {
+            "DisplayName": (name: "freezer"),
+            "Solid": (),
+            "BlocksAttack": (),
+            "StruckSound": (default: Some((source: Collection("hit_metal"), volume_db: -4.0, pitch_var: 0.1))),
+            "PlacementLayer": Solid,
+            "Appearance": (
+                sprite: (rsi: "textures/structures/storage/closet_freezer", state: "freezer"),
+                depth: Furniture,
+                layers: [
+                    (state: "freezer_door"),
+                ],
+            ),
+        },
+    ),
+]

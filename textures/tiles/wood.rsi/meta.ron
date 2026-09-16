@@ -1,0 +1,10 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "Taken from space-wizards/space-station-14 Resources/Textures/Tiles/wood.png (first 32x32 variant), originally from tgstation at commit 8abb19545828230d92ba18827feeb42a67a55d49",
+    ],
+    states: [
+        (name: "default"),
+    ],
+)

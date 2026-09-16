@@ -1,0 +1,28 @@
+[
+    (
+        type: "Entity",
+        id: "structure_curtain_red_open",
+        components: {
+            "DisplayName": (name: "velvet curtain"),
+            // Tied back: still names the rooms either side, but hides no one
+            "AreaBoundary": (),
+            "PlacementLayer": Solid,
+            "Appearance": (
+                sprite: (rsi: "textures/structures/decoration/curtain_red", state: "open"),
+                depth: Doors,
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_curtain_red_span",
+        parents: ["structure_curtain_red_open"],
+        components: {
+            // Middle of a wide doorway: a row of full drapes reads as a closed fringe
+            "Appearance": (
+                sprite: (rsi: "textures/structures/decoration/curtain_red", state: "open_span"),
+                depth: Doors,
+            ),
+        },
+    ),
+]

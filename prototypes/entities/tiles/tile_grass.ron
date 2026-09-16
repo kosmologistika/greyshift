@@ -1,0 +1,14 @@
+[
+    (
+        type: "Entity",
+        id: "tile_grass",
+        parents: ["tile_plating"],
+        components: {
+            // No soft footstep collection exists yet, so earth is a muffled floor step
+            "TileCover": (
+                sprite: (rsi: "textures/tiles/grass", state: "default"),
+                footstep: Some((source: Collection("footstep_floor"), volume_db: -14.0, pitch_var: 0.05, range_tiles: 9.0)),
+            ),
+        },
+    ),
+]

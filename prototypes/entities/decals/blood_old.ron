@@ -1,0 +1,75 @@
+[
+    // Not a decal_blood child: that family fades in and is Cleanable, both wrong for painted stains
+    (
+        type: "Entity",
+        id: "decal_blood_old",
+        abstract: true,
+        components: {
+            "DisplayName": (name: "dried blood"),
+            "Scenery": (),
+            "PlacementLayer": Decal,
+            "Appearance": (depth: FloorOverlay),
+            "SpriteTint": ((red: 0.54, green: 0.25, blue: 0.19, alpha: 0.9)),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_blood_old_splat_0",
+        parents: ["decal_blood_old"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/blood_old", state: "splat_0")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_blood_old_splat_1",
+        parents: ["decal_blood_old"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/blood_old", state: "splat_1")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_blood_old_splat_2",
+        parents: ["decal_blood_old"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/blood_old", state: "splat_2")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_blood_old_trail",
+        parents: ["decal_blood_old"],
+        components: {
+            "PlacementLayer": Free,
+            "Appearance": (sprite: (rsi: "textures/decals/blood_old", state: "trail")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_blood_old_trail_start",
+        parents: ["decal_blood_old"],
+        components: {
+            "PlacementLayer": Free,
+            "Appearance": (sprite: (rsi: "textures/decals/blood_old", state: "trail_start")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_blood_old_drip",
+        parents: ["decal_blood_old"],
+        components: {
+            "PlacementLayer": Free,
+            "Appearance": (sprite: (rsi: "textures/decals/blood_old", state: "drip_0")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_blood_old_drip_1",
+        parents: ["decal_blood_old"],
+        components: {
+            "PlacementLayer": Free,
+            "Appearance": (sprite: (rsi: "textures/decals/blood_old", state: "drip_1")),
+        },
+    ),
+]

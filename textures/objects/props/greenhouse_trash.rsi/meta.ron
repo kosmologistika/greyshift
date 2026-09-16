@@ -1,0 +1,18 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "wrapper_energybar, wrapper_chocolate: taken from space-wizards/space-station-14 at commit ae051d290568dbdde2441fa9478637ac1444781c Resources/Textures/Objects/Consumable/Food/snacks.rsi states energybar-trash, chocolatebar-trash, taken from tgstation at commit https://github.com/tgstation/tgstation/commit/c6e3401f2e7e1e55c57060cdf956a98ef1fefc24",
+        "trash_bag, trash_bag_small: taken from space-wizards/space-station-14 at commit ae051d290568dbdde2441fa9478637ac1444781c Resources/Textures/Objects/Specific/Janitorial/trashbag.rsi states icon-2, icon-0, taken from tgstation at https://github.com/tgstation/tgstation/commit/f8f4aeda930fcd0805ca4cc76d9bc9412a5b3428",
+        "shard_large, shard_medium, shard_small: taken from tgstation/tgstation at commit 376684351da724cc125097ba3905d4b498365570 icons/obj/debris.dmi states large, medium, small",
+    ],
+    states: [
+        (name: "wrapper_energybar"),
+        (name: "wrapper_chocolate"),
+        (name: "trash_bag"),
+        (name: "trash_bag_small"),
+        (name: "shard_large"),
+        (name: "shard_medium"),
+        (name: "shard_small"),
+    ],
+)

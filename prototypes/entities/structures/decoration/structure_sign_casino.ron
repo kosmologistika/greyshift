@@ -1,0 +1,39 @@
+[
+    // Painted onto the wall's own tile like wall blood, so place it on the wall cell
+    (
+        type: "Entity",
+        id: "structure_sign_casino",
+        abstract: true,
+        components: {
+            "PlacementLayer": Free,
+            "Appearance": (depth: WallOverlay),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_sign_games",
+        parents: ["structure_sign_casino"],
+        components: {
+            "DisplayName": (name: "games sign"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/signs_casino", state: "arcade"), depth: WallOverlay),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_sign_bar",
+        parents: ["structure_sign_casino"],
+        components: {
+            "DisplayName": (name: "bar sign"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/signs_casino", state: "bar"), depth: WallOverlay),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_sign_vault",
+        parents: ["structure_sign_casino"],
+        components: {
+            "DisplayName": (name: "vault sign"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/signs_casino", state: "vault"), depth: WallOverlay),
+        },
+    ),
+]

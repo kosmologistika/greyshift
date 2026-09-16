@@ -1,0 +1,40 @@
+[
+    // Grayscale puddles: the same art is a drink spill under a wine, cola or absinthe tint, never a gold one
+    (
+        type: "Entity",
+        id: "decal_oil",
+        abstract: true,
+        components: {
+            "DisplayName": (name: "oil stain"),
+            "Scenery": (),
+            "PlacementLayer": Decal,
+            "Appearance": (depth: FloorOverlay),
+            "SpriteTint": ((red: 0.14, green: 0.12, blue: 0.09, alpha: 0.9)),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_oil_stain_0",
+        parents: ["decal_oil"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/fluid", state: "stain_0")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_oil_stain_1",
+        parents: ["decal_oil"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/fluid", state: "stain_1")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_oil_drips",
+        parents: ["decal_oil"],
+        components: {
+            "PlacementLayer": Free,
+            "Appearance": (sprite: (rsi: "textures/decals/fluid", state: "drips")),
+        },
+    ),
+]

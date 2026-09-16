@@ -1,0 +1,19 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "card_ace_hearts, card_king_hearts, card_10_diamonds, card_ace_spades, card_queen_clubs, card_back_blue, card_back_red, deck_blue_full, deck_blue_half, deck_black_full: taken from tgstation/tgstation at commit 376684351da724cc125097ba3905d4b498365570 icons/obj/toys/playing_cards.dmi (states sc_<card>_nanotrasen, singlecard_down_nanotrasen, singlecard_down_syndicate, deck_nanotrasen_full, deck_nanotrasen_half, deck_black_full); decks moved up to the cell centre",
+    ],
+    states: [
+        (name: "card_ace_hearts"),
+        (name: "card_king_hearts"),
+        (name: "card_10_diamonds"),
+        (name: "card_ace_spades"),
+        (name: "card_queen_clubs"),
+        (name: "card_back_blue"),
+        (name: "card_back_red"),
+        (name: "deck_blue_full"),
+        (name: "deck_blue_half"),
+        (name: "deck_black_full"),
+    ],
+)

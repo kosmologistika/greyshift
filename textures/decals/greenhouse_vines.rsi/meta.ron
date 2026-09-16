@@ -1,0 +1,13 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "light_1, light_2, light_3, medium_1: taken from tgstation/tgstation at commit 376684351da724cc125097ba3905d4b498365570 icons/mob/spacevines.dmi states Light1, Light2, Light3, Med1",
+    ],
+    states: [
+        (name: "light_1"),
+        (name: "light_2"),
+        (name: "light_3"),
+        (name: "medium_1"),
+    ],
+)

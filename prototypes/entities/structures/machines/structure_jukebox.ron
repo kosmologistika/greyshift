@@ -1,0 +1,18 @@
+[
+    (
+        type: "Entity",
+        id: "structure_jukebox",
+        components: {
+            "DisplayName": (name: "jukebox"),
+            "Solid": (),
+            "BlocksAttack": (),
+            "StruckSound": (default: Some((source: Collection("hit_wood"), volume_db: -4.0, pitch_var: 0.1))),
+            "PointLight": (color: (1.0, 0.25, 0.7), energy: 1.0, radius: 3.5),
+            "PlacementLayer": Solid,
+            "Appearance": (
+                sprite: (rsi: "textures/structures/machines/jukebox", state: "on"),
+                depth: Furniture,
+            ),
+        },
+    ),
+]

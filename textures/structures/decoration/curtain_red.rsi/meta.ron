@@ -1,0 +1,12 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "Taken from space-wizards/space-station-14 Resources/Textures/Structures/Decoration/Curtains/red.rsi, created by TheShuEd (github) for Space Station 14",
+        "open_span: the open state's rod and valance rows without the drapes, modified by Morbo",
+    ],
+    states: [
+        (name: "open"),
+        (name: "open_span"),
+    ],
+)

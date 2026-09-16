@@ -1,0 +1,11 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "Taken from space-wizards/space-station-14 at commit ae051d290568dbdde2441fa9478637ac1444781c Resources/Textures/Structures/Machines/seed_extractor.rsi, originally from tgstation at commit c6e3401f2e7e1e55c57060cdf956a98ef1fefc24 and modified by potato1234x (github) for Space Station 14",
+    ],
+    states: [
+        (name: "seedextractor-off"),
+        (name: "seedextractor-unlit", delays: [[0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1]]),
+    ],
+)

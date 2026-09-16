@@ -1,0 +1,22 @@
+[
+    (
+        type: "Entity",
+        id: "structure_table_poker",
+        parents: ["structure_table"],
+        components: {
+            "DisplayName": (name: "poker table"),
+            "IconSmooth": (key: "table_poker", state_prefix: "state_"),
+            "StruckSound": (default: Some((source: Collection("hit_wood"), volume_db: -4.0, pitch_var: 0.1))),
+            "Destructible": (thresholds: [
+                (
+                    trigger: TotalDamage(40),
+                    behaviors: [PlaySound((source: Collection("destroy_wood"), volume_db: -2.0, pitch_var: 0.08)), Destroy],
+                ),
+            ]),
+            "Appearance": (
+                sprite: (rsi: "textures/structures/furniture/table_poker", state: "full"),
+                depth: Furniture,
+            ),
+        },
+    ),
+]

@@ -1,0 +1,11 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "Taken from tgstation/tgstation at commit 376684351da724cc125097ba3905d4b498365570 icons/obj/lighting.dmi, state glowshroom1",
+        "Direction slots swapped from upstream: ours names the wall the fixture hangs on, tg names the way it faces",
+    ],
+    states: [
+        (name: "base", directions: Four),
+    ],
+)

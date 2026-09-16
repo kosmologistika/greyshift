@@ -1,0 +1,13 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "Taken from space-wizards/space-station-14 Resources/Textures/Structures/Furniture/potted_plants.rsi, taken from tgstation",
+    ],
+    states: [
+        (name: "plant-05"),
+        (name: "plant-10"),
+        (name: "plant-22"),
+        (name: "applebush"),
+    ],
+)

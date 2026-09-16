@@ -1,0 +1,20 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "watering_can, watering_can_wood, cultivator, secateurs, rake: taken from tgstation/tgstation at commit 376684351da724cc125097ba3905d4b498365570 icons/obj/service/hydroponics/equipment.dmi (same state names), re-centered in the cell",
+        "spray_bottle: taken from tgstation/tgstation at commit 376684351da724cc125097ba3905d4b498365570 icons/obj/service/hydroponics/equipment.dmi state plantbgone, re-centered",
+        "spade: taken from space-wizards/space-station-14 at commit ae051d290568dbdde2441fa9478637ac1444781c Resources/Textures/Objects/Tools/Hydroponics/spade.rsi state icon, originally from Aurorastation at commit https://github.com/Aurorastation/Aurora.3/commit/3160508c1a9f367be0ab054cceaf2e36c0b66250",
+        "shears: taken from space-wizards/space-station-14 at commit ae051d290568dbdde2441fa9478637ac1444781c Resources/Textures/Objects/Tools/Hydroponics/clippers.rsi state icon, originally from Aurorastation at commit https://github.com/Aurorastation/Aurora.3/commit/3160508c1a9f367be0ab054cceaf2e36c0b66250",
+    ],
+    states: [
+        (name: "watering_can"),
+        (name: "watering_can_wood"),
+        (name: "cultivator"),
+        (name: "secateurs"),
+        (name: "rake"),
+        (name: "spray_bottle"),
+        (name: "spade"),
+        (name: "shears"),
+    ],
+)

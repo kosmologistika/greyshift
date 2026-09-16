@@ -1,0 +1,65 @@
+[
+    (
+        type: "Entity",
+        id: "decal_crack",
+        abstract: true,
+        components: {
+            "DisplayName": (name: "cracks"),
+            "Scenery": (),
+            "PlacementLayer": Decal,
+            "Appearance": (depth: FloorOverlay),
+        },
+    ),
+    // White hairlines: this grey reads on plating and marble, light floors want a near-black tint
+    (
+        type: "Entity",
+        id: "decal_crack_hairline",
+        abstract: true,
+        parents: ["decal_crack"],
+        components: {
+            "SpriteTint": ((red: 0.6, green: 0.6, blue: 0.6, alpha: 1.0)),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_crack_0",
+        parents: ["decal_crack_hairline"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/cracks", state: "crack_0")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_crack_1",
+        parents: ["decal_crack_hairline"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/cracks", state: "crack_1")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_crack_2",
+        parents: ["decal_crack_hairline"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/cracks", state: "crack_2")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_crack_boards",
+        parents: ["decal_crack"],
+        components: {
+            "DisplayName": (name: "split boards"),
+            "Appearance": (sprite: (rsi: "textures/decals/cracks", state: "boards_0")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_crack_boards_1",
+        parents: ["decal_crack"],
+        components: {
+            "DisplayName": (name: "split boards"),
+            "Appearance": (sprite: (rsi: "textures/decals/cracks", state: "boards_1")),
+        },
+    ),
+]
