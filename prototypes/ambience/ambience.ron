@@ -18,10 +18,12 @@
         id: "arena",
         music: Some((source: Path("audio/music/endless_space.ogg"), volume_db: -6.0)),
     ),
-    // No track yet, so the casino's lights keep the show's own tempo
+    // Masters about 6 dB hotter than endless_space, so it sits that much lower
     (
         type: "Ambience",
         id: "casino",
+        music: Some((source: Path("audio/music/conveyor_belt_loop.ogg"), volume_db: -12.0)),
+        track: Some("conveyor_belt_loop"),
         show: Some("casino"),
     ),
     (

@@ -2,7 +2,7 @@
     (
         type: "LightShow",
         id: "casino",
-        bpm: 142.44,
+        bpm: 143.26,
         channels: {
             "swell": (low: 0.45),
             "chop_a": (shape: Chop, group: 0),
