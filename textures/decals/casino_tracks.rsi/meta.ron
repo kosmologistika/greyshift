@@ -1,0 +1,11 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "wheels, boots: taken from tgstation/tgstation at commit 376684351da724cc125097ba3905d4b498365570 icons/effects/footprints.dmi (south cells of bloodbot1 over bloodbot2, and footprint1 over footprint2, baked into one full-tile track each); grayscale master",
+    ],
+    states: [
+        (name: "wheels"),
+        (name: "boots"),
+    ],
+)

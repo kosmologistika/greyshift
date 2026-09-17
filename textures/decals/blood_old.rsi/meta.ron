@@ -1,0 +1,16 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "Taken from tgstation/tgstation at commit 376684351da724cc125097ba3905d4b498365570 icons/effects/blood.dmi state floor1, floor5, floor6, trails_1 (south), trails_1_start (south), drip2 and drip4, drips re-centred in the cell",
+    ],
+    states: [
+        (name: "splat_0"),
+        (name: "splat_1"),
+        (name: "splat_2"),
+        (name: "trail"),
+        (name: "trail_start"),
+        (name: "drip_0"),
+        (name: "drip_1"),
+    ],
+)

@@ -1,0 +1,13 @@
+[
+    (
+        type: "Entity",
+        id: "tile_floor_checker_bar",
+        parents: ["tile_plating"],
+        components: {
+            "TileCover": (
+                sprite: (rsi: "textures/tiles/checker_bar", state: "default"),
+                footstep: Some((source: Collection("footstep_floor"), volume_db: -9.0, pitch_var: 0.05, range_tiles: 9.0)),
+            ),
+        },
+    ),
+]

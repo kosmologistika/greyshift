@@ -1,0 +1,13 @@
+[
+    (
+        type: "Entity",
+        id: "structure_hydro_tray_wheat",
+        parents: ["structure_hydro_tray"],
+        components: {
+            "DisplayName": (name: "wheat tray"),
+            "Appearance": (
+                layers: [(rsi: Some("textures/structures/hydroponics/hydro_tray"), state: "wheat")],
+            ),
+        },
+    ),
+]

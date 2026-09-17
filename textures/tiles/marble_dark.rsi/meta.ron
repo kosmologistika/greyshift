@@ -1,0 +1,10 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC0-1.0",
+    copyright: [
+        "Taken from space-wizards/space-station-14 Resources/Textures/Tiles/dark_marble.png (first 32x32 variant), created by SeaWyrm in https://github.com/space-wizards/space-station-14/pull/38007",
+    ],
+    states: [
+        (name: "default"),
+    ],
+)

@@ -1,0 +1,39 @@
+[
+    // Holds the Solid layer so nothing stacks on the pot, but stays walkable
+    (
+        type: "Entity",
+        id: "structure_potted_plant",
+        components: {
+            "DisplayName": (name: "potted plant"),
+            "PlacementLayer": Solid,
+            "Appearance": (
+                sprite: (rsi: "textures/structures/decoration/potted_plants", state: "plant-22"),
+                depth: BelowMobs,
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_potted_plant_fern",
+        parents: ["structure_potted_plant"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/potted_plants", state: "plant-05")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_potted_plant_cherry",
+        parents: ["structure_potted_plant"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/potted_plants", state: "plant-10")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_potted_plant_bush",
+        parents: ["structure_potted_plant"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/potted_plants", state: "applebush")),
+        },
+    ),
+]

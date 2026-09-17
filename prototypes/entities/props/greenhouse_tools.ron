@@ -1,0 +1,95 @@
+[
+    (
+        type: "Entity",
+        id: "prop_greenhouse_tool",
+        abstract: true,
+        components: {
+            "Item": (size: Small, held: Bundle),
+            "Glidable": (),
+            "PlacementLayer": Free,
+            "Appearance": (depth: BelowMobs),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_greenhouse_watering_can",
+        parents: ["prop_greenhouse_tool"],
+        components: {
+            "DamageOnHit": (damage: {Blunt: 2}),
+            "DisplayName": (name: "watering can"),
+            "Appearance": (sprite: (rsi: "textures/objects/props/greenhouse_tools", state: "watering_can")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_greenhouse_watering_can_wood",
+        parents: ["prop_greenhouse_tool"],
+        components: {
+            "DamageOnHit": (damage: {Blunt: 2}),
+            "DisplayName": (name: "wooden watering can"),
+            "Appearance": (sprite: (rsi: "textures/objects/props/greenhouse_tools", state: "watering_can_wood")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_greenhouse_cultivator",
+        parents: ["prop_greenhouse_tool"],
+        components: {
+            "DamageOnHit": (damage: {Blunt: 3}),
+            "DisplayName": (name: "cultivator"),
+            "Appearance": (sprite: (rsi: "textures/objects/props/greenhouse_tools", state: "cultivator")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_greenhouse_secateurs",
+        parents: ["prop_greenhouse_tool"],
+        components: {
+            "Item": (size: Tiny, held: Nothing),
+            "DamageOnHit": (damage: {Slash: 2}),
+            "DisplayName": (name: "secateurs"),
+            "Appearance": (sprite: (rsi: "textures/objects/props/greenhouse_tools", state: "secateurs")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_greenhouse_spade",
+        parents: ["prop_greenhouse_tool"],
+        components: {
+            "DamageOnHit": (damage: {Blunt: 4}),
+            "DisplayName": (name: "spade"),
+            "Appearance": (sprite: (rsi: "textures/objects/props/greenhouse_tools", state: "spade")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_greenhouse_shears",
+        parents: ["prop_greenhouse_tool"],
+        components: {
+            "DamageOnHit": (damage: {Slash: 2}),
+            "DisplayName": (name: "hedge shears"),
+            "Appearance": (sprite: (rsi: "textures/objects/props/greenhouse_tools", state: "shears")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_greenhouse_rake",
+        parents: ["prop_greenhouse_tool"],
+        components: {
+            "Item": (size: Medium, held: Bundle),
+            "DamageOnHit": (damage: {Blunt: 3}),
+            "DisplayName": (name: "rake"),
+            "Appearance": (sprite: (rsi: "textures/objects/props/greenhouse_tools", state: "rake")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_greenhouse_spray_bottle",
+        parents: ["prop_greenhouse_tool"],
+        components: {
+            "Item": (size: Tiny, held: Nothing),
+            "DisplayName": (name: "weed spray"),
+            "Appearance": (sprite: (rsi: "textures/objects/props/greenhouse_tools", state: "spray_bottle")),
+        },
+    ),
+]

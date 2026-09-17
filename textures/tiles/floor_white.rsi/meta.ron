@@ -1,0 +1,10 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "Taken from space-wizards/space-station-14 at commit ae051d290568dbdde2441fa9478637ac1444781c Resources/Textures/Tiles/white.png (first cell of the variant strip), created by Flareguy (github) from tgstation base tiles at commit 6665eec76c98a4f3f89bebcd10b34b47dcc0b8ae and moonheart08 (github)",
+    ],
+    states: [
+        (name: "default"),
+    ],
+)

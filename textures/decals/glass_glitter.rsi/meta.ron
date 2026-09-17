@@ -1,0 +1,13 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "Taken from tgstation/tgstation at commit 376684351da724cc125097ba3905d4b498365570 icons/obj/debris.dmi state tiny, south and north directions; glitter_small_0 and glitter_small_1 gather those speckles into a smaller irregular patch",
+    ],
+    states: [
+        (name: "glitter_0"),
+        (name: "glitter_1"),
+        (name: "glitter_small_0"),
+        (name: "glitter_small_1"),
+    ],
+)

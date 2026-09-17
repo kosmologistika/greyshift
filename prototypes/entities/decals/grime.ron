@@ -1,0 +1,72 @@
+[
+    (
+        type: "Entity",
+        id: "decal_grime",
+        abstract: true,
+        components: {
+            "DisplayName": (name: "grime"),
+            "Scenery": (),
+            "PlacementLayer": Decal,
+            "Appearance": (depth: FloorOverlay),
+        },
+    ),
+    // The seam states follow a 4-panel tile, so they draw a grid on wood, carpet and grass
+    (
+        type: "Entity",
+        id: "decal_grime_seam_0",
+        parents: ["decal_grime"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/grime", state: "seam_0")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_grime_seam_1",
+        parents: ["decal_grime"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/grime", state: "seam_1")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_grime_heavy",
+        parents: ["decal_grime"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/grime", state: "heavy")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_grime_patch_0",
+        parents: ["decal_grime"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/grime", state: "patch_0")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_grime_patch_1",
+        parents: ["decal_grime"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/grime", state: "patch_1")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_dust",
+        parents: ["decal_grime"],
+        components: {
+            "DisplayName": (name: "dust"),
+            "Appearance": (sprite: (rsi: "textures/decals/grime", state: "dust")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_dust_soft",
+        parents: ["decal_grime"],
+        components: {
+            "DisplayName": (name: "dust"),
+            "Appearance": (sprite: (rsi: "textures/decals/grime", state: "dust_soft")),
+        },
+    ),
+]

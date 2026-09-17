@@ -1,0 +1,15 @@
+[
+    (
+        type: "Entity",
+        id: "structure_bar_stool",
+        components: {
+            "DisplayName": (name: "bar stool"),
+            "PlacementLayer": Free,
+            "Facing": (South),
+            "Appearance": (
+                sprite: (rsi: "textures/structures/furniture/bar_stool", state: "bar"),
+                depth: Furniture,
+            ),
+        },
+    ),
+]

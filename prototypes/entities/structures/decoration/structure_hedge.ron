@@ -1,0 +1,20 @@
+[
+    (
+        type: "Entity",
+        id: "structure_hedge",
+        components: {
+            "DisplayName": (name: "hedge"),
+            "Solid": (),
+            "BlocksAttack": (),
+            "Occluder": (),
+            "AreaBoundary": (),
+            "StruckSound": (default: Some((source: Collection("hit_wood"), volume_db: -6.0, pitch_var: 0.15))),
+            "PlacementLayer": Solid,
+            "IconSmooth": (key: "hedge", state_prefix: "hedge"),
+            "Appearance": (
+                sprite: (rsi: "textures/structures/decoration/hedge", state: "default"),
+                depth: Walls,
+            ),
+        },
+    ),
+]

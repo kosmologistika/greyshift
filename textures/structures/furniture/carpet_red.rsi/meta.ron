@@ -1,0 +1,18 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "Taken from space-wizards/space-station-14 Resources/Textures/Structures/Furniture/Carpets/red_carpet.rsi, made by Hqlle (github)",
+    ],
+    states: [
+        (name: "full"),
+        (name: "carpet_0", directions: Four),
+        (name: "carpet_1", directions: Four),
+        (name: "carpet_2", directions: Four),
+        (name: "carpet_3", directions: Four),
+        (name: "carpet_4", directions: Four),
+        (name: "carpet_5", directions: Four),
+        (name: "carpet_6", directions: Four),
+        (name: "carpet_7", directions: Four),
+    ],
+)

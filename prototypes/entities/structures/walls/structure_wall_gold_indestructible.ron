@@ -1,0 +1,16 @@
+[
+    (
+        type: "Entity",
+        id: "structure_wall_gold_indestructible",
+        parents: ["structure_wall_base"],
+        components: {
+            "DisplayName": (name: "gold wall"),
+            "IconSmooth": (state_prefix: "gold"),
+            "StruckSound": (default: Some((source: Collection("hit_metal"), volume_db: -4.0, pitch_var: 0.1))),
+            "Appearance": (
+                sprite: (rsi: "textures/structures/walls/gold", state: "default"),
+                depth: Walls,
+            ),
+        },
+    ),
+]

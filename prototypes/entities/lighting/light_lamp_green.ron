@@ -1,0 +1,20 @@
+[
+    (
+        type: "Entity",
+        id: "light_lamp_green",
+        components: {
+            "DisplayName": (name: "banker's lamp"),
+            "PointLight": (color: (0.7, 1.0, 0.4), energy: 1.0, radius: 4.0),
+            // Free, so it can stand on a table tile
+            "PlacementLayer": Free,
+            "Facing": (South),
+            "Appearance": (
+                sprite: (rsi: "textures/structures/lighting/lamp_green", state: "lampgreen"),
+                depth: BelowMobs,
+                layers: [
+                    (state: "lampgreen-on", shading: Unshaded),
+                ],
+            ),
+        },
+    ),
+]

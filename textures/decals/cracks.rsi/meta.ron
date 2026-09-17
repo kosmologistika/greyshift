@@ -1,0 +1,15 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "crack_0, crack_1, crack_2: Taken from tgstation/tgstation at commit 376684351da724cc125097ba3905d4b498365570 icons/turf/damaged.dmi state glass-damaged1, glass-damaged2 and glass-damaged3, re-centred in the cell",
+        "boards_0, boards_1: Taken from tgstation/tgstation at commit 376684351da724cc125097ba3905d4b498365570 icons/turf/damaged.dmi state wood-broken3 and wood-broken6",
+    ],
+    states: [
+        (name: "crack_0"),
+        (name: "crack_1"),
+        (name: "crack_2"),
+        (name: "boards_0"),
+        (name: "boards_1"),
+    ],
+)

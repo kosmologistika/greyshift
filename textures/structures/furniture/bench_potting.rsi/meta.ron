@@ -1,0 +1,18 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "Taken from space-wizards/space-station-14 at commit ae051d290568dbdde2441fa9478637ac1444781c Resources/Textures/Structures/Furniture/Tables/wood.rsi, originally from vgstation13 at commit a138859aec54b20dac65eb76e94e9db1b2202f55 and modified by Swept",
+    ],
+    states: [
+        (name: "full"),
+        (name: "state_0", directions: Four),
+        (name: "state_1", directions: Four),
+        (name: "state_2", directions: Four),
+        (name: "state_3", directions: Four),
+        (name: "state_4", directions: Four),
+        (name: "state_5", directions: Four),
+        (name: "state_6", directions: Four),
+        (name: "state_7", directions: Four),
+    ],
+)

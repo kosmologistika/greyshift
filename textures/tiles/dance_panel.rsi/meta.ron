@@ -1,0 +1,10 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "Taken from tgstation/tgstation at commit 376684351da724cc125097ba3905d4b498365570 icons/turf/floors.dmi state light_on-8, first frame",
+    ],
+    states: [
+        (name: "default"),
+    ],
+)

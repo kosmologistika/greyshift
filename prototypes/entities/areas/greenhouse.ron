@@ -1,0 +1,58 @@
+[
+    (
+        type: "Entity",
+        id: "area_greenhouse_garden",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "garden"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_greenhouse_north_glasshouse",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "north glasshouse"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_greenhouse_south_glasshouse",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "south glasshouse"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_greenhouse_seedling_hall",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "seedling hall"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_greenhouse_potting_shed",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "potting shed"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_greenhouse_pump_room",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "pump room"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_greenhouse_apiary",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "apiary"),
+        },
+    ),
+]

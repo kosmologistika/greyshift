@@ -1,0 +1,15 @@
+[
+    (
+        type: "Entity",
+        id: "light_wall_tube_grow",
+        parents: ["light_wall_tube"],
+        components: {
+            // Pinker than the casino magenta: the green channel is what lifts dark dirt floors
+            "PointLight": (color: (1.0, 0.58, 0.88), energy: 2.4),
+            "Appearance": (layers: [
+                (rsi: Some("textures/structures/lighting/light_tube"), state: "glow", shading: Unshaded, tint: Some((red: 1.0, green: 0.6, blue: 0.9, alpha: 1.0))),
+                (rsi: Some("textures/effects/light_glow"), state: "glow", shading: Unshaded, tint: Some((red: 1.0, green: 0.6, blue: 0.9, alpha: 1.0))),
+            ]),
+        },
+    ),
+]

@@ -1,0 +1,17 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "seam_0, seam_1, heavy: Taken from space-wizards/space-station-14 at commit ae051d290568dbdde2441fa9478637ac1444781c Resources/Textures/Decals/dirty.rsi states dirtlight, dirtmedium and dirtheavy-mono, tgstation at 606005645d3a14c4439e5ce14785650121b22678, dirtheavy-mono made by github user @Flareguy; alpha raised so the grime shows under scene lighting",
+        "patch_0, patch_1, dust: Taken from tgstation/tgstation at commit 376684351da724cc125097ba3905d4b498365570 icons/effects/dirt_misc.dmi states dirt-flat-0, dirt-flat-2 and dust; patch alpha raised; dust_soft is dust with a radial alpha fade",
+    ],
+    states: [
+        (name: "seam_0"),
+        (name: "seam_1"),
+        (name: "heavy"),
+        (name: "patch_0"),
+        (name: "patch_1"),
+        (name: "dust"),
+        (name: "dust_soft"),
+    ],
+)

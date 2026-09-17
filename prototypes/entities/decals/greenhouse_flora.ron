@@ -1,0 +1,236 @@
+[
+    // Tiled floors only, on tile_grass the clumps go grey like gravel
+    (
+        type: "Entity",
+        id: "decal_greenhouse_moss",
+        abstract: true,
+        components: {
+            "DisplayName": (name: "moss"),
+            "Scenery": (),
+            "PlacementLayer": Decal,
+            "Appearance": (depth: FloorOverlay),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_greenhouse_moss_0",
+        parents: ["decal_greenhouse_moss"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/greenhouse_moss", state: "grassa1")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_greenhouse_moss_1",
+        parents: ["decal_greenhouse_moss"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/greenhouse_moss", state: "grassa2")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_greenhouse_moss_2",
+        parents: ["decal_greenhouse_moss"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/greenhouse_moss", state: "grassa4")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_greenhouse_moss_3",
+        parents: ["decal_greenhouse_moss"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/greenhouse_moss", state: "grassb1")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_greenhouse_moss_4",
+        parents: ["decal_greenhouse_moss"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/greenhouse_moss", state: "grassb3")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_greenhouse_moss_5",
+        parents: ["decal_greenhouse_moss"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/greenhouse_moss", state: "grassb5")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_greenhouse_weeds",
+        abstract: true,
+        components: {
+            "DisplayName": (name: "weeds"),
+            "Scenery": (),
+            "PlacementLayer": Decal,
+            "Appearance": (depth: FloorOverlay),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_greenhouse_weeds_0",
+        parents: ["decal_greenhouse_weeds"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/greenhouse_moss", state: "grassd1")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_greenhouse_weeds_1",
+        parents: ["decal_greenhouse_weeds"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/greenhouse_moss", state: "grassd3")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_greenhouse_weeds_2",
+        parents: ["decal_greenhouse_weeds"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/greenhouse_moss", state: "grasse1")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_greenhouse_weeds_3",
+        parents: ["decal_greenhouse_weeds"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/greenhouse_moss", state: "grasse3")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_greenhouse_petals",
+        abstract: true,
+        components: {
+            "DisplayName": (name: "petals"),
+            "Scenery": (),
+            "PlacementLayer": Decal,
+            "Appearance": (depth: FloorOverlay),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_greenhouse_petals_0",
+        parents: ["decal_greenhouse_petals"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/greenhouse_petals", state: "flowerspv1")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_greenhouse_petals_1",
+        parents: ["decal_greenhouse_petals"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/greenhouse_petals", state: "flowerspv2")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_greenhouse_petals_2",
+        parents: ["decal_greenhouse_petals"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/greenhouse_petals", state: "flowerspv3")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_greenhouse_petals_3",
+        parents: ["decal_greenhouse_petals"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/greenhouse_petals", state: "flowersbr1")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_greenhouse_petals_4",
+        parents: ["decal_greenhouse_petals"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/greenhouse_petals", state: "flowersbr2")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_greenhouse_petals_5",
+        parents: ["decal_greenhouse_petals"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/greenhouse_petals", state: "flowersbr3")),
+        },
+    ),
+    // Yellow blossoms read as coin glints on open floor, so flower beds only
+    (
+        type: "Entity",
+        id: "decal_greenhouse_petals_yellow",
+        abstract: true,
+        components: {
+            "DisplayName": (name: "petals"),
+            "Scenery": (),
+            "PlacementLayer": Decal,
+            "Appearance": (depth: FloorOverlay),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_greenhouse_petals_yellow_0",
+        parents: ["decal_greenhouse_petals_yellow"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/greenhouse_petals", state: "flowersy1")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_greenhouse_petals_yellow_1",
+        parents: ["decal_greenhouse_petals_yellow"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/greenhouse_petals", state: "flowersy2")),
+        },
+    ),
+    // Busy enough to hide a dropped coin: corners and wall seams, never lanes
+    (
+        type: "Entity",
+        id: "decal_greenhouse_vines",
+        abstract: true,
+        components: {
+            "DisplayName": (name: "creeping vines"),
+            "Scenery": (),
+            "PlacementLayer": Decal,
+            "Appearance": (depth: FloorOverlay),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_greenhouse_vines_0",
+        parents: ["decal_greenhouse_vines"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/greenhouse_vines", state: "light_1")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_greenhouse_vines_1",
+        parents: ["decal_greenhouse_vines"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/greenhouse_vines", state: "light_2")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_greenhouse_vines_2",
+        parents: ["decal_greenhouse_vines"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/greenhouse_vines", state: "light_3")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_greenhouse_vines_dense",
+        parents: ["decal_greenhouse_vines"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/greenhouse_vines", state: "medium_1")),
+        },
+    ),
+]

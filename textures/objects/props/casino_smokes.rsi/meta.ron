@@ -1,0 +1,22 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "cigar, cigar_butt, matchbox, cigar_box_open, cigar_box_closed, pack_robust_crushed: taken from tgstation/tgstation at commit 376684351da724cc125097ba3905d4b498365570 icons/obj/cigarettes.dmi (states cigaroff, cigarbutt, matchbox, cohibacase_open, havanacase, robust_empty); the closed cigar box moved up to the cell centre",
+        "ashtray: taken from space-wizards/space-station-14 at commit ae051d290568dbdde2441fa9478637ac1444781c Resources/Textures/Objects/Decoration/ashtray.rsi, made by Hanzdegloker; state icon with tgstation obj/cigarettes.dmi state cigarbutt at commit 376684351da724cc125097ba3905d4b498365570 drawn over it",
+        "pack_red_closed, pack_red_open, pack_black_open, pack_red_crushed: taken from space-wizards/space-station-14 at commit ae051d290568dbdde2441fa9478637ac1444781c Resources/Textures/Objects/Consumable/Smokeables/Cigarettes/Packs/red.rsi and Packs/black.rsi, made by ps3moira (github)",
+    ],
+    states: [
+        (name: "cigar"),
+        (name: "cigar_butt"),
+        (name: "matchbox"),
+        (name: "cigar_box_open"),
+        (name: "cigar_box_closed"),
+        (name: "pack_robust_crushed"),
+        (name: "ashtray"),
+        (name: "pack_red_closed"),
+        (name: "pack_red_open"),
+        (name: "pack_black_open"),
+        (name: "pack_red_crushed"),
+    ],
+)

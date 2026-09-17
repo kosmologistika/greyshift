@@ -1,0 +1,20 @@
+[
+    (
+        type: "Entity",
+        id: "light_wall_glowshroom",
+        parents: ["light_wall"],
+        components: {
+            "DisplayName": (name: "glowshrooms"),
+            "PointLight": (color: (0.3, 1.0, 0.4), energy: 0.8, radius: 4.5),
+            // Mushrooms leave no glass behind
+            "Destructible": (thresholds: [(trigger: TotalDamage(10), behaviors: [Destroy])]),
+            "Appearance": (
+                sprite: (rsi: "textures/structures/lighting/glowshroom", state: "base"),
+                shading: Unshaded,
+                layers: [
+                    (rsi: Some("textures/effects/light_glow"), state: "glow", shading: Unshaded, tint: Some((red: 0.4, green: 1.0, blue: 0.5, alpha: 1.0))),
+                ],
+            ),
+        },
+    ),
+]

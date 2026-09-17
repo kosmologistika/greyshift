@@ -1,0 +1,10 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "Taken from space-wizards/space-station-14 at commit ae051d290568dbdde2441fa9478637ac1444781c Resources/Textures/Decals/markings.rsi state delivery, taken from tgstation at commit 606005645d3a14c4439e5ce14785650121b22678",
+    ],
+    states: [
+        (name: "delivery"),
+    ],
+)

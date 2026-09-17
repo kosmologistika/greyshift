@@ -1,0 +1,11 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "Taken from tgstation/tgstation at commit 376684351da724cc125097ba3905d4b498365570 icons/obj/cigarettes.dmi state cigbutt and cigarbutt, re-centred in the cell",
+    ],
+    states: [
+        (name: "cigbutt"),
+        (name: "cigarbutt"),
+    ],
+)

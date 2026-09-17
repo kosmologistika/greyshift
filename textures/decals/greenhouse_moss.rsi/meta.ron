@@ -1,0 +1,19 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "Taken from space-wizards/space-station-14 at commit ae051d290568dbdde2441fa9478637ac1444781c Resources/Textures/Decals/Flora/flora_grass.rsi (same state names), taken from tgstation at commits https://github.com/tgstation/tgstation/commit/729d858807905263adab8b5a331c1d8a04982dd3, https://github.com/tgstation/tgstation/commit/79296e902cbdf2352c9303e4769ea39bf3b34e58",
+    ],
+    states: [
+        (name: "grassa1"),
+        (name: "grassa2"),
+        (name: "grassa4"),
+        (name: "grassb1"),
+        (name: "grassb3"),
+        (name: "grassb5"),
+        (name: "grassd1"),
+        (name: "grassd3"),
+        (name: "grasse1"),
+        (name: "grasse3"),
+    ],
+)

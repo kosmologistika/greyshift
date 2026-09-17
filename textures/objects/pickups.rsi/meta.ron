@@ -3,8 +3,18 @@
     license: "CC-BY-SA-3.0",
     copyright: [
         "medkit: taken from tgstation/tgstation icons/obj/storage/medkit.dmi",
+        "pad_medkit: the medkit state above laid on a plate drawn for this repo",
+        "pad_ammo: light_rifle_box base (discordia-space/CEV-Eris icons/obj/ammo_mags.dmi at aed9cbddbf9039dae1e4f02bab592248b0539431) laid on a plate drawn for this repo",
+        "pad_armor: the security armor vest and helmet icons (space-wizards/space-station-14 Clothing/OuterClothing/Armor/security.rsi and Clothing/Head/Helmets/security.rsi at commit ae051d290568, made by DieselMohawk) laid on a plate drawn for this repo",
+        "pad_medkit_glow, pad_ammo_glow, pad_armor_glow: drawn for this repo",
     ],
     states: [
         (name: "medkit"),
+        (name: "pad_medkit"),
+        (name: "pad_medkit_glow"),
+        (name: "pad_ammo"),
+        (name: "pad_ammo_glow"),
+        (name: "pad_armor"),
+        (name: "pad_armor_glow"),
     ],
 )

@@ -1,0 +1,18 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "Taken from space-wizards/space-station-14 Resources/Textures/Structures/Walls/gold.rsi, originally from vgstation13 at https://github.com/vgstation-coders/vgstation13/raw/99cc2ab62d65a3a7b554dc7b21ff5f57c835f973/icons/turf/walls.dmi",
+    ],
+    states: [
+        (name: "default"),
+        (name: "gold0", directions: Four),
+        (name: "gold1", directions: Four),
+        (name: "gold2", directions: Four),
+        (name: "gold3", directions: Four),
+        (name: "gold4", directions: Four),
+        (name: "gold5", directions: Four),
+        (name: "gold6", directions: Four),
+        (name: "gold7", directions: Four),
+    ],
+)

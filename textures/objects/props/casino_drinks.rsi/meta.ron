@@ -1,0 +1,21 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "glass_whiskey, glass_whiskey_empty, glass_wine, glass_wine_empty, glass_martini: taken from space-wizards/space-station-14 at commit ae051d290568dbdde2441fa9478637ac1444781c Resources/Textures/Objects/Consumable/Drinks/whiskeyglass.rsi, wineglass.rsi and martiniglass.rsi, originally from discordia-space/CEV-Eris at commit f7aa28fd4b4d0386c3393d829681ebca526f1d2d icons/obj/drinks.dmi, fill levels by Tayrtahn (github)",
+        "bottle_whiskey, bottle_wine: taken from space-wizards/space-station-14 at commit ae051d290568dbdde2441fa9478637ac1444781c Resources/Textures/Objects/Consumable/Drinks/whiskeybottle.rsi and winebottle.rsi, originally from discordia-space/CEV-Eris at commit f7aa28fd4b4d0386c3393d829681ebca526f1d2d icons/obj/drinks.dmi",
+        "bottle_champagne_open: taken from space-wizards/space-station-14 at commit ae051d290568dbdde2441fa9478637ac1444781c Resources/Textures/Objects/Consumable/Drinks/champagnebottle.rsi state icon_open, drawn by givazaa",
+        "bottle_broken: taken from space-wizards/space-station-14 at commit ae051d290568dbdde2441fa9478637ac1444781c Resources/Textures/Objects/Misc/broken_bottle.rsi, originally from discordia-space/CEV-Eris at commit f7aa28fd4b4d0386c3393d829681ebca526f1d2d icons/obj/drinks.dmi",
+    ],
+    states: [
+        (name: "glass_whiskey"),
+        (name: "glass_whiskey_empty"),
+        (name: "glass_wine"),
+        (name: "glass_wine_empty"),
+        (name: "glass_martini"),
+        (name: "bottle_whiskey"),
+        (name: "bottle_wine"),
+        (name: "bottle_champagne_open"),
+        (name: "bottle_broken"),
+    ],
+)

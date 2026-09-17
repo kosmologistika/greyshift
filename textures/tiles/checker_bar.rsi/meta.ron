@@ -1,0 +1,10 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "Taken from space-wizards/space-station-14 Resources/Textures/Tiles/bar.png (first 32x32 variant), created by Flareguy (github), base tiles modified from tgstation at commit 6665eec76c98a4f3f89bebcd10b34b47dcc0b8ae and moonheart08 (github)",
+    ],
+    states: [
+        (name: "default"),
+    ],
+)

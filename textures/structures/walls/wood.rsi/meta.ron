@@ -1,0 +1,18 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "Taken from space-wizards/space-station-14 Resources/Textures/Structures/Walls/wood.rsi, originally from vgstation13 at https://github.com/vgstation-coders/vgstation13/raw/99cc2ab62d65a3a7b554dc7b21ff5f57c835f973/icons/turf/walls.dmi",
+    ],
+    states: [
+        (name: "default"),
+        (name: "wood0", directions: Four),
+        (name: "wood1", directions: Four),
+        (name: "wood2", directions: Four),
+        (name: "wood3", directions: Four),
+        (name: "wood4", directions: Four),
+        (name: "wood5", directions: Four),
+        (name: "wood6", directions: Four),
+        (name: "wood7", directions: Four),
+    ],
+)

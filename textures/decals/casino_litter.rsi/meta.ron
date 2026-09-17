@@ -1,0 +1,13 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "ash, ash_big, butts, wrap_shreds: taken from tgstation/tgstation at commit 376684351da724cc125097ba3905d4b498365570 icons/obj/debris.dmi (states ash, big_ash, shards, paper_shreds); ash and wrap_shreds moved up to the cell centre",
+    ],
+    states: [
+        (name: "ash"),
+        (name: "ash_big"),
+        (name: "butts"),
+        (name: "wrap_shreds"),
+    ],
+)

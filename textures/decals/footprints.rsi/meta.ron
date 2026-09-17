@@ -1,0 +1,12 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "boots: Taken from tgstation/tgstation at commit 376684351da724cc125097ba3905d4b498365570 icons/effects/footprints.dmi state footprint1 and footprint2 (south), drawn into one cell",
+        "boots_bloody: Taken from tgstation/tgstation at commit 376684351da724cc125097ba3905d4b498365570 icons/effects/footprints.dmi state blood1 and blood2 (south), drawn into one cell",
+    ],
+    states: [
+        (name: "boots"),
+        (name: "boots_bloody"),
+    ],
+)

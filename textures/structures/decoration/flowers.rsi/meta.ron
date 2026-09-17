@@ -1,0 +1,14 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "Taken from tgstation/tgstation at commit 376684351da724cc125097ba3905d4b498365570 icons/obj/fluff/flora/ausflora.dmi, states ywflowers_1, brflowers_1 and ppflowers_1",
+        "grassd1 taken from space-wizards/space-station-14 at commit ae051d290568dbdde2441fa9478637ac1444781c Resources/Textures/Decals/Flora/flora_grass.rsi, originally from tgstation at commits 729d858807905263adab8b5a331c1d8a04982dd3 and 79296e902cbdf2352c9303e4769ea39bf3b34e58",
+    ],
+    states: [
+        (name: "ywflowers_1"),
+        (name: "brflowers_1"),
+        (name: "ppflowers_1"),
+        (name: "grassd1"),
+    ],
+)

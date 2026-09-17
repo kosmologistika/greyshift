@@ -1,0 +1,10 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "Taken from space-wizards/space-station-14 Resources/Textures/Structures/Machines/jukebox.rsi, originally from tgstation at https://github.com/tgstation/tgstation/blob/f349b842c84f500399bd5673e5e34a6bc45b001a/icons/obj/stationobjs.dmi",
+    ],
+    states: [
+        (name: "on"),
+    ],
+)

@@ -1,0 +1,11 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "Taken from space-wizards/space-station-14 Resources/Textures/Structures/Machines/VendingMachines/boozeomat.rsi, originally from tgstation at commit https://github.com/tgstation/tgstation/commit/1516a728931b4985c1e86f0c5995a5aa1554a1ad and modified by Swept",
+    ],
+    states: [
+        (name: "off"),
+        (name: "normal-unshaded", delays: [[0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2]]),
+    ],
+)

@@ -1,0 +1,89 @@
+[
+    (
+        type: "Entity",
+        id: "decal_scorch_base",
+        abstract: true,
+        components: {
+            "DisplayName": (name: "scorch mark"),
+            "Scenery": (),
+            "PlacementLayer": Decal,
+            "Appearance": (depth: FloorOverlay),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_scorch_soot",
+        parents: ["decal_scorch_base"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/scorch", state: "soot_0")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_scorch_soot_1",
+        parents: ["decal_scorch_base"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/scorch", state: "soot_1")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_scorch_blast_0",
+        parents: ["decal_scorch_base"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/scorch", state: "blast_0")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_scorch_blast_1",
+        parents: ["decal_scorch_base"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/scorch", state: "blast_1")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_scorch_crater",
+        parents: ["decal_scorch_base"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/scorch", state: "crater")),
+        },
+    ),
+    // A tint only darkens, so dark floors need this white master to show soot at all
+    (
+        type: "Entity",
+        id: "decal_scorch_ash",
+        parents: ["decal_scorch_base"],
+        components: {
+            "DisplayName": (name: "ash"),
+            "Appearance": (sprite: (rsi: "textures/decals/scorch", state: "ash")),
+            "SpriteTint": ((red: 0.54, green: 0.53, blue: 0.5, alpha: 0.9)),
+        },
+    ),
+    // The full-cell states stamp hard squares when neighbours are painted
+    (
+        type: "Entity",
+        id: "decal_scorch_soot_soft",
+        parents: ["decal_scorch_base"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/scorch", state: "soot_0_soft")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_scorch_soot_soft_1",
+        parents: ["decal_scorch_base"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/scorch", state: "soot_1_soft")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_scorch_ash_soft",
+        parents: ["decal_scorch_ash"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/scorch", state: "ash_soft")),
+        },
+    ),
+]

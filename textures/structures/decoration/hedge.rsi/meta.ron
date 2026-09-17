@@ -1,0 +1,18 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "Cut from tgstation/tgstation at commit 376684351da724cc125097ba3905d4b498365570 icons/obj/smooth_structures/hedge.dmi: the bitmask states are split into 16px quadrants and repacked as corner states",
+    ],
+    states: [
+        (name: "default"),
+        (name: "hedge0", directions: Four),
+        (name: "hedge1", directions: Four),
+        (name: "hedge2", directions: Four),
+        (name: "hedge3", directions: Four),
+        (name: "hedge4", directions: Four),
+        (name: "hedge5", directions: Four),
+        (name: "hedge6", directions: Four),
+        (name: "hedge7", directions: Four),
+    ],
+)

@@ -1,0 +1,13 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "d6_2, d6_3, d6_5, d6_6: taken from space-wizards/space-station-14 at commit ae051d290568dbdde2441fa9478637ac1444781c Resources/Textures/Objects/Fun/dice.rsi, taken from vgstation at commit 1cdfb0230cc96d0ba751fa002d04f8aa2f25ad7d, edited by ElectroSR",
+    ],
+    states: [
+        (name: "d6_2"),
+        (name: "d6_3"),
+        (name: "d6_5"),
+        (name: "d6_6"),
+    ],
+)

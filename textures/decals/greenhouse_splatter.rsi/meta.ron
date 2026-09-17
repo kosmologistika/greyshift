@@ -1,0 +1,15 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "Taken from space-wizards/space-station-14 at commit ae051d290568dbdde2441fa9478637ac1444781c Resources/Textures/Fluids/splatter.rsi states splatter-0 .. splatter-5, from https://github.com/discordia-space/CEV-Eris/raw/aff0d780742ca3902d8b05f854c212c8cda32c4f/icons/effects/blood.dmi; grayscale masters tinted by SpriteTint",
+    ],
+    states: [
+        (name: "splatter_0"),
+        (name: "splatter_1"),
+        (name: "splatter_2"),
+        (name: "splatter_3"),
+        (name: "splatter_4"),
+        (name: "splatter_5"),
+    ],
+)

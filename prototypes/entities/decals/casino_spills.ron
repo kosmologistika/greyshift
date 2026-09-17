@@ -1,0 +1,148 @@
+[
+    // Never tint these amber or gold: a bright puddle reads as coin colour
+    (
+        type: "Entity",
+        id: "decal_casino_spill",
+        abstract: true,
+        components: {
+            "DisplayName": (name: "spill"),
+            "Scenery": (),
+            "PlacementLayer": Decal,
+            "Appearance": (depth: FloorOverlay),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_casino_spill_whiskey_0",
+        parents: ["decal_casino_spill"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/casino_spill", state: "splat0"), depth: FloorOverlay),
+            "SpriteTint": ((red: 0.35, green: 0.2, blue: 0.1, alpha: 0.6)),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_casino_spill_whiskey_1",
+        parents: ["decal_casino_spill"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/casino_spill", state: "splatb"), depth: FloorOverlay),
+            "SpriteTint": ((red: 0.35, green: 0.2, blue: 0.1, alpha: 0.6)),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_casino_spill_wine_0",
+        parents: ["decal_casino_spill"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/casino_spill", state: "splat0"), depth: FloorOverlay),
+            "SpriteTint": ((red: 0.35, green: 0.08, blue: 0.3, alpha: 0.6)),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_casino_spill_wine_1",
+        parents: ["decal_casino_spill"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/casino_spill", state: "splatb"), depth: FloorOverlay),
+            "SpriteTint": ((red: 0.35, green: 0.08, blue: 0.3, alpha: 0.6)),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_casino_spill_water_0",
+        parents: ["decal_casino_spill"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/casino_spill", state: "splat0"), depth: FloorOverlay),
+            "SpriteTint": ((red: 0.6, green: 0.65, blue: 0.7, alpha: 0.55)),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_casino_spill_water_1",
+        parents: ["decal_casino_spill"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/casino_spill", state: "splatb"), depth: FloorOverlay),
+            "SpriteTint": ((red: 0.6, green: 0.65, blue: 0.7, alpha: 0.55)),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_casino_oil_pool_0",
+        parents: ["decal_casino_spill"],
+        components: {
+            "DisplayName": (name: "oil"),
+            "Appearance": (sprite: (rsi: "textures/decals/casino_spill", state: "splat0"), depth: FloorOverlay),
+            "SpriteTint": ((red: 0.08, green: 0.07, blue: 0.06, alpha: 0.8)),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_casino_oil_pool_1",
+        parents: ["decal_casino_spill"],
+        components: {
+            "DisplayName": (name: "oil"),
+            "Appearance": (sprite: (rsi: "textures/decals/casino_spill", state: "splatb"), depth: FloorOverlay),
+            "SpriteTint": ((red: 0.08, green: 0.07, blue: 0.06, alpha: 0.8)),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_casino_grease_0",
+        parents: ["decal_casino_spill"],
+        components: {
+            "DisplayName": (name: "grease"),
+            "Appearance": (sprite: (rsi: "textures/decals/casino_spill", state: "splat0"), depth: FloorOverlay),
+            "SpriteTint": ((red: 0.55, green: 0.48, blue: 0.25, alpha: 0.45)),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_casino_grease_1",
+        parents: ["decal_casino_spill"],
+        components: {
+            "DisplayName": (name: "grease"),
+            "Appearance": (sprite: (rsi: "textures/decals/casino_spill", state: "splatb"), depth: FloorOverlay),
+            "SpriteTint": ((red: 0.55, green: 0.48, blue: 0.25, alpha: 0.45)),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_casino_smear_wine_0",
+        parents: ["decal_casino_spill"],
+        components: {
+            "DisplayName": (name: "smear"),
+            "Appearance": (sprite: (rsi: "textures/decals/casino_smear", state: "smear-2"), depth: FloorOverlay),
+            "SpriteTint": ((red: 0.3, green: 0.05, blue: 0.25, alpha: 0.6)),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_casino_smear_wine_1",
+        parents: ["decal_casino_spill"],
+        components: {
+            "DisplayName": (name: "smear"),
+            "Appearance": (sprite: (rsi: "textures/decals/casino_smear", state: "smear-5"), depth: FloorOverlay),
+            "SpriteTint": ((red: 0.3, green: 0.05, blue: 0.25, alpha: 0.6)),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_casino_smear_oil_0",
+        parents: ["decal_casino_spill"],
+        components: {
+            "DisplayName": (name: "smear"),
+            "Appearance": (sprite: (rsi: "textures/decals/casino_smear", state: "smear-2"), depth: FloorOverlay),
+            "SpriteTint": ((red: 0.08, green: 0.07, blue: 0.06, alpha: 0.7)),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_casino_smear_oil_1",
+        parents: ["decal_casino_spill"],
+        components: {
+            "DisplayName": (name: "smear"),
+            "Appearance": (sprite: (rsi: "textures/decals/casino_smear", state: "smear-5"), depth: FloorOverlay),
+            "SpriteTint": ((red: 0.08, green: 0.07, blue: 0.06, alpha: 0.7)),
+        },
+    ),
+]
