@@ -18,7 +18,7 @@
         id: "arena",
         music: Some((source: Path("audio/music/endless_space.ogg"), volume_db: -6.0)),
     ),
-    // Masters about 6 dB hotter than endless_space, so it sits that much lower
+    // Both master hotter than endless_space, so each sits that much lower
     (
         type: "Ambience",
         id: "casino",
@@ -29,5 +29,7 @@
     (
         type: "Ambience",
         id: "greenhouse",
+        music: Some((source: Path("audio/music/humid_greenhouse_stalk.ogg"), volume_db: -10.0)),
+        track: Some("humid_greenhouse_stalk"),
     ),
 ]

@@ -11,4 +11,10 @@
         copyright: "Conveyor Belt Loop, generated on a paid Suno plan, which leaves ownership of the output with the subscriber. Encoded from Suno's WAV with oggenc -q 3 at 44.1 kHz",
         source: "https://suno.com",
     ),
+    (
+        files: ["humid_greenhouse_stalk.ogg"],
+        license: "Proprietary",
+        copyright: "Humid Greenhouse Stalk, generated on a paid Suno plan, which leaves ownership of the output with the subscriber. Encoded from Suno's WAV with oggenc -q 3 at 44.1 kHz",
+        source: "https://suno.com",
+    ),
 ]
