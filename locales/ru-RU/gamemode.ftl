@@ -1,4 +1,6 @@
 gamemode-scoreboard = СЧЁТ
+gamemode-scoreboard-series = ВЫИГРАННЫЕ МАТЧИ
+gamemode-scoreboard-match = ЭТОТ МАТЧ
 gamemode-match-timer = ОСТАЛОСЬ
 gamemode-match-won = МАТЧ ВЫИГРАН
 gamemode-match-draw = НИЧЬЯ

@@ -508,8 +508,8 @@
 
 .list,
 .scroll-list.list {
-    padding: 3px 4px;
-    row-gap: 1px;
+    padding: 6px 8px;
+    row-gap: 2px;
     -bevy-image: url("textures/interface/well.png");
     -bevy-image-mode: sliced(4px);
 }
@@ -722,7 +722,7 @@
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    padding: 1px 0px;
+    padding: 2px 0px;
 }
 
 .volume-row {
@@ -752,6 +752,28 @@
     flex-direction: row;
     align-items: flex-start;
     column-gap: var(--space-4);
+}
+
+.lobby-title {
+    font-family: "m6x11";
+    font-size: 33px;
+    letter-spacing: 2px;
+    margin-left: 2px;
+    margin-bottom: 20px;
+    color: var(--text-bright);
+}
+
+.lobby-status {
+    height: 56px;
+    margin-bottom: var(--space-3);
+    flex-direction: column;
+    align-items: center;
+    row-gap: 6px;
+}
+
+/* An empty countdown still holds its row, so the tally under it stays put */
+.lobby-status .mono {
+    height: 14px;
 }
 
 .menu-layout {
@@ -980,7 +1002,7 @@
     flex-direction: column;
     row-gap: 3px;
     padding: 5px 7px 6px 7px;
-    -bevy-image: url("textures/interface/frame.png");
+    -bevy-image: url("textures/interface/frame_glass.png");
     -bevy-image-mode: sliced(4px);
 }
 
@@ -1497,18 +1519,16 @@
     color: var(--text-disabled);
 }
 
-/* Rides the bottom edge while the reels hold the center: the weapon shelf
-   on top, the utility row under it */
-.slot-shelves {
-    flex-direction: column;
-    align-items: center;
-    row-gap: var(--space-1);
-    margin-bottom: var(--space-4);
-}
-
+/* Rides the bottom edge while the reels hold the center, three to a row so it stays inside the world view */
 .slot-staples {
+    width: 468px;
+    max-width: 100%;
     flex-direction: row;
-    column-gap: var(--space-2);
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 6px;
+    row-gap: 6px;
+    margin-bottom: var(--space-4);
 }
 
 .slot-done {
@@ -1516,8 +1536,10 @@
 }
 
 .btn.slot-staple {
+    width: 152px;
     height: 32px;
-    padding: 4px 10px;
+    padding: 4px 8px;
+    justify-content: flex-start;
 }
 
 .slot-staple-icon {
@@ -1528,6 +1550,8 @@
 
 /* Beats the button label rule: an item name is body text, not a caps label */
 .slot-staple .slot-staple-name {
+    flex-grow: 1;
+    min-width: 0px;
     font-family: "PixCyrillic";
     font-size: var(--font-small);
     color: var(--text-bright);

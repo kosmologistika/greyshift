@@ -1,4 +1,6 @@
 gamemode-scoreboard = SCORE
+gamemode-scoreboard-series = MATCHES WON
+gamemode-scoreboard-match = THIS MATCH
 gamemode-match-timer = TIME LEFT
 gamemode-match-won = MATCH WON
 gamemode-match-draw = MATCH DRAWN
