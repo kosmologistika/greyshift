@@ -490,8 +490,8 @@
 .field {
     width: 100%;
     min-width: 0px;
-    height: 16px;
-    padding: 2px 5px 0px 5px;
+    height: 18px;
+    padding: 3px 6px 0px 6px;
     font-size: 12px;
     color: var(--text-primary);
     align-items: center;
@@ -533,6 +533,7 @@
 
 .scrollbar {
     width: 9px;
+    flex-shrink: 0;
     -bevy-image: url("textures/interface/well.png");
     -bevy-image-mode: sliced(4px);
 }
@@ -542,15 +543,15 @@
     position: absolute;
     left: 0px;
     right: 0px;
-    -bevy-image: url("textures/interface/frame.png");
+    -bevy-image: url("textures/interface/button_small.png");
     -bevy-image-mode: sliced(4px);
 }
 
 /* Slider: the fill's width is Rust-driven from the value, the knob rides its end */
 .slider {
     width: 110px;
-    height: 9px;
-    padding: 2px;
+    height: 11px;
+    padding: 3px;
     -bevy-image: url("textures/interface/well.png");
     -bevy-image-mode: sliced(4px);
 }
@@ -570,8 +571,8 @@
 }
 
 .progress {
-    height: 11px;
-    padding: 2px;
+    height: 13px;
+    padding: 3px;
     align-self: stretch;
     -bevy-image: url("textures/interface/well.png");
     -bevy-image-mode: sliced(4px);
@@ -584,7 +585,7 @@
 
 .progress-text {
     position: absolute;
-    top: 0px;
+    top: 1px;
     right: 3px;
     font-family: "m6x11";
     font-size: var(--font-label);
@@ -756,6 +757,7 @@
 }
 
 .card-column {
+    width: 100%;
     flex-direction: column;
     align-items: center;
     row-gap: 6px;
@@ -774,13 +776,13 @@
     height: 64px;
 }
 
-/* Three small lines tall whatever the name, so cycling slots moves nothing */
+/* Three small lines tall whatever the name, and centred, so cycling slots moves only the arrows */
 .name-row {
     width: 100%;
     height: 27px;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     column-gap: var(--space-1);
 }
 
@@ -789,17 +791,15 @@
     color: var(--text-bright);
 }
 
-/* Content-height so a short name centres on the arrows; a fourth line is cut */
+/* Sized to the name up to the room between the arrows; a fourth line is cut */
 .name-box {
-    flex-grow: 1;
-    flex-basis: 0px;
     min-width: 0px;
+    max-width: 88px;
     max-height: 27px;
     overflow: clip;
 }
 
 .name-box .name {
-    width: 100%;
     font-size: var(--font-small);
     text-align: center;
     -bevy-line-break: word-or-character;
@@ -1572,7 +1572,7 @@
 }
 
 .center-col {
-    width: 180px;
+    width: 190px;
     flex-shrink: 0;
     flex-direction: column;
     align-items: center;
@@ -1584,10 +1584,10 @@
     column-gap: 6px;
 }
 
-/* Five times the 32px cell, whole pixels */
+/* Four times the 32px cell, whole pixels */
 .dummy-large {
-    width: 160px;
-    height: 160px;
+    width: 128px;
+    height: 128px;
 }
 
 .panel-host {
@@ -1629,6 +1629,7 @@
 
 .grid {
     flex-grow: 1;
+    min-width: 0px;
     min-height: 0px;
     flex-direction: row;
     flex-wrap: wrap;
