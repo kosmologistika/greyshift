@@ -513,6 +513,15 @@
     -bevy-image: url("textures/interface/well_focus.png");
 }
 
+/* Where typed text starts, so the first keystroke replaces it in place */
+.field-hint {
+    position: absolute;
+    left: 6px;
+    top: 3px;
+    color: var(--text-dim);
+    -bevy-line-break: no-wrap;
+}
+
 .list,
 .scroll-list.list {
     padding: 6px 8px;
@@ -960,6 +969,12 @@
     padding: 0px;
     color: var(--text-bright);
     -bevy-image-color: #ffffff00;
+}
+
+.composer .field-hint,
+.lobby-composer .field-hint {
+    left: 0px;
+    top: 0px;
 }
 
 .chip {

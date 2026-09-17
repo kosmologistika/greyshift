@@ -9,6 +9,8 @@ chat-chip-emote = EMOTE
 
 chat-button-menu = МЕНЮ
 
+chat-composer-hint = Введите сообщение
+
 chat-line-says = говорит: "{$text}"
 chat-line-whispers = шепчет: "{$text}"
 chat-line-last-breath = шепчет на последнем издыхании: "{$text}"

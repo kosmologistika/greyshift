@@ -1,4 +1,5 @@
 succumb-prompt = Есть ли последние слова?
+succumb-last-words-hint = Последние слова
 succumb-confirm = Сдаться
 succumb-cancel = Жить дальше
 succumb-title-goodnight = Спокойной ночи, милый принц
