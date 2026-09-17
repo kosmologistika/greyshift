@@ -1,4 +1,4 @@
-app-title = GRAYSHIFT
+app-title = GREYSHIFT
 main-menu-join = ПРИСОЕДИНИТЬСЯ
 main-menu-discord = DISCORD
 main-menu-back = НАЗАД
@@ -8,6 +8,8 @@ main-menu-settings = НАСТРОЙКИ
 main-menu-quit = ВЫЙТИ
 main-menu-username = ИМЯ
 main-menu-address = АДРЕС СЕРВЕРА
+main-menu-username-hint = Ваше имя
+main-menu-address-hint = адрес:порт
 connect-connecting-to = Подключение к { $addr }...
 connect-logging-in = Авторизация...
 connect-syncing = Загрузка мира...

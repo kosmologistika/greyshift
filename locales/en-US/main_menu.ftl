@@ -1,4 +1,4 @@
-app-title = GRAYSHIFT
+app-title = GREYSHIFT
 main-menu-join = JOIN SERVER
 main-menu-discord = DISCORD
 main-menu-back = BACK
@@ -8,6 +8,8 @@ main-menu-settings = SETTINGS
 main-menu-quit = QUIT
 main-menu-username = NAME
 main-menu-address = SERVER ADDRESS
+main-menu-username-hint = Your name
+main-menu-address-hint = host:port
 connect-connecting-to = Connecting to { $addr }...
 connect-logging-in = Logging in...
 connect-syncing = Receiving the world...

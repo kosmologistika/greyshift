@@ -1,4 +1,5 @@
 succumb-prompt = Do you have any last words?
+succumb-last-words-hint = Last words
 succumb-confirm = Succumb
 succumb-cancel = Live on
 succumb-title-goodnight = Goodnight, Sweet Prince
