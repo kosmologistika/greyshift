@@ -13,8 +13,7 @@
     src: url("fonts/PressStart2P.ttf");
 }
 
-/* Slate: every frame is the HUD slot template's edge, one sprite master per rim state
-   (utils/gen_ui_sprites.py), so the rim colours live in the art and not here */
+/* Slate: rim colours live in the sprite masters from utils/gen_ui_sprites.py, not here */
 :root {
     --bg-screen: #111114;
     --bg-surface: #16161a;
@@ -552,11 +551,11 @@
     font-size: var(--font-label);
 }
 
-/* List rows: the selected frame is always there, only visible on the picked row */
+/* List rows carry the selected frame hidden, and grow so a wrapped name stays inside it */
 .row,
 .menu-row {
-    height: 16px;
-    padding: 0px 7px;
+    min-height: 16px;
+    padding: 3px 7px;
     flex-shrink: 0;
     flex-direction: row;
     justify-content: flex-start;
@@ -937,6 +936,7 @@
 }
 
 .examine-tabs .tab text {
+    top: 0px;
     font-family: "PixCyrillic";
     font-size: var(--font-small);
     letter-spacing: 0px;
