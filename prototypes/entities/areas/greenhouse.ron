@@ -45,7 +45,6 @@
         parents: ["area"],
         components: {
             "DisplayName": (name: "pump room"),
-            "Area": (ambience: Some("maintenance")),
         },
     ),
     (
