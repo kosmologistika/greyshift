@@ -180,6 +180,10 @@
     color: var(--text-bright);
 }
 
+.panel.window {
+    -bevy-image: url("textures/interface/frame_glass.png");
+}
+
 .window-body {
     padding: 6px;
 }
@@ -247,14 +251,14 @@
 
 /* Buttons: the rim says the state, the label rides m6x11 caps in steel */
 .btn {
-    height: 16px;
-    padding: 0px 6px;
+    height: 18px;
+    padding: 0px 8px;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     column-gap: var(--space-1);
     background-color: transparent;
-    -bevy-image: url("textures/interface/frame_bare.png");
+    -bevy-image: url("textures/interface/button.png");
     -bevy-image-mode: sliced(4px);
 }
 
@@ -266,7 +270,7 @@
 }
 
 .btn:hover {
-    -bevy-image: url("textures/interface/frame_hover.png");
+    -bevy-image: url("textures/interface/button_hover.png");
 }
 
 .btn:hover text {
@@ -274,7 +278,7 @@
 }
 
 .btn:active {
-    -bevy-image: url("textures/interface/frame_active.png");
+    -bevy-image: url("textures/interface/button_active.png");
 }
 
 .btn:active text {
@@ -283,7 +287,7 @@
 
 .btn.primary,
 .btn.success {
-    -bevy-image: url("textures/interface/frame_primary.png");
+    -bevy-image: url("textures/interface/button_primary.png");
 }
 
 .btn.primary text,
@@ -293,7 +297,7 @@
 
 .btn.primary:hover,
 .btn.success:hover {
-    -bevy-image: url("textures/interface/frame_active.png");
+    -bevy-image: url("textures/interface/button_primary_hover.png");
 }
 
 .btn.primary:hover text,
@@ -305,11 +309,11 @@
 
 .btn.primary:active,
 .btn.success:active {
-    -bevy-image: url("textures/interface/frame_primary_active.png");
+    -bevy-image: url("textures/interface/button_primary_active.png");
 }
 
 .btn.danger {
-    -bevy-image: url("textures/interface/frame_danger.png");
+    -bevy-image: url("textures/interface/button_danger.png");
 }
 
 .btn.danger text,
@@ -318,15 +322,55 @@
 }
 
 .btn.danger:hover {
-    -bevy-image: url("textures/interface/frame_danger_hover.png");
+    -bevy-image: url("textures/interface/button_danger_hover.png");
 }
 
 .btn.danger:active {
-    -bevy-image: url("textures/interface/frame_danger_active.png");
+    -bevy-image: url("textures/interface/button_danger_active.png");
 }
 
 .btn.danger:active text {
     color: var(--text-bright);
+}
+
+/* Small buttons keep the ring and the lift without the inner outline */
+.btn.small {
+    -bevy-image: url("textures/interface/button_small.png");
+}
+
+.btn.small:hover {
+    -bevy-image: url("textures/interface/button_small_hover.png");
+}
+
+.btn.small:active {
+    -bevy-image: url("textures/interface/button_small_active.png");
+}
+
+.btn.small.primary,
+.btn.small.success {
+    -bevy-image: url("textures/interface/button_small_primary.png");
+}
+
+.btn.small.primary:hover,
+.btn.small.success:hover {
+    -bevy-image: url("textures/interface/button_small_primary_hover.png");
+}
+
+.btn.small.primary:active,
+.btn.small.success:active {
+    -bevy-image: url("textures/interface/button_small_primary_active.png");
+}
+
+.btn.small.danger {
+    -bevy-image: url("textures/interface/button_small_danger.png");
+}
+
+.btn.small.danger:hover {
+    -bevy-image: url("textures/interface/button_small_danger_hover.png");
+}
+
+.btn.small.danger:active {
+    -bevy-image: url("textures/interface/button_small_danger_active.png");
 }
 
 /* A picked option among buttons, the marking grid's chosen style */
@@ -340,7 +384,10 @@
 
 .btn.disabled,
 .btn.disabled:hover,
-.btn.disabled:active {
+.btn.disabled:active,
+.btn.small.disabled,
+.btn.small.disabled:hover,
+.btn.small.disabled:active {
     -bevy-image: url("textures/interface/frame_disabled.png");
 }
 
@@ -351,8 +398,8 @@
 }
 
 .btn.small {
-    height: 12px;
-    padding: 0px 4px;
+    height: 16px;
+    padding: 0px 8px;
 }
 
 .btn.full {
@@ -362,11 +409,11 @@
 
 .btn.wide {
     width: 150px;
-    height: 18px;
+    height: 20px;
 }
 
 .btn.arrow {
-    width: 12px;
+    width: 16px;
     padding: 0px;
     flex-shrink: 0;
 }
@@ -647,8 +694,8 @@
 
 .tooltip {
     flex-direction: column;
-    row-gap: 2px;
-    padding: 3px 5px;
+    row-gap: 3px;
+    padding: 5px 7px;
     font-size: var(--font-small);
     -bevy-image: url("textures/interface/frame.png");
     -bevy-image-mode: sliced(4px);
@@ -656,7 +703,7 @@
 
 .badge {
     margin-left: 2px;
-    padding: 0px 2px;
+    padding: 0px 3px;
     font-family: "m6x11";
     font-size: var(--font-label);
     color: var(--bg-screen);
@@ -711,12 +758,12 @@
 .card-column {
     flex-direction: column;
     align-items: center;
-    row-gap: var(--space-1);
+    row-gap: 6px;
 }
 
 /* A preview box: the frame rings a picture whose pixels stay whole */
 .preview {
-    padding: 3px;
+    padding: 5px;
     -bevy-image: url("textures/interface/frame.png");
     -bevy-image-mode: sliced(4px);
 }
@@ -775,7 +822,7 @@
 }
 
 .chat-buttons {
-    height: 22px;
+    height: 24px;
     padding: 0px var(--space-1);
     flex-direction: row;
     justify-content: space-between;
@@ -822,7 +869,7 @@
 }
 
 .divider-label {
-    padding: 0px 2px;
+    padding: 0px 3px;
     font-family: "m6x11";
     font-size: var(--font-label);
     color: var(--bg-screen);
@@ -831,7 +878,7 @@
 
 .composer,
 .lobby-composer {
-    height: 20px;
+    height: 22px;
     padding: 0px 6px;
     flex-shrink: 0;
     flex-direction: row;
@@ -855,8 +902,8 @@
 }
 
 .chip {
-    height: 12px;
-    padding: 0px 3px;
+    height: 14px;
+    padding: 0px 5px;
     flex-shrink: 0;
     justify-content: center;
     align-items: center;
@@ -1447,7 +1494,7 @@
 
 .btn.slot-staple {
     height: 32px;
-    padding: 3px 8px;
+    padding: 4px 10px;
 }
 
 .slot-staple-icon {
@@ -1494,7 +1541,7 @@
 }
 
 .slot-col {
-    width: 110px;
+    width: 120px;
     flex-shrink: 0;
     flex-direction: column;
     row-gap: var(--space-1);
