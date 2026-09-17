@@ -482,6 +482,13 @@
     color: var(--accent);
 }
 
+/* The unread count keeps its dark ink on the accent block whatever state the tab is in */
+.tab .badge,
+.tab:hover .badge,
+.tab.active .badge {
+    color: var(--bg-screen);
+}
+
 .tab.active {
     height: 16px;
     margin-bottom: -1px;
@@ -633,6 +640,15 @@
 .row.active text,
 .menu-row:hover text {
     color: var(--text-bright);
+}
+
+/* A refused verb stays dim and a stack count stays accent under the hover */
+.menu-row:hover .c-dim {
+    color: var(--text-dim);
+}
+
+.menu-row:hover .c-accent {
+    color: var(--accent);
 }
 
 .row.disabled text,
@@ -1548,8 +1564,9 @@
     flex-shrink: 0;
 }
 
-/* Beats the button label rule: an item name is body text, not a caps label */
-.slot-staple .slot-staple-name {
+/* Beats the button label rules, Russian included: an item name is body text, not a caps label */
+.slot-staple .slot-staple-name,
+.lang-ru .slot-staple .slot-staple-name {
     flex-grow: 1;
     min-width: 0px;
     font-family: "PixCyrillic";
@@ -1558,7 +1575,9 @@
     margin: 0px;
 }
 
-.slot-staple .mono {
+/* Only PressStart2P has the credit mark */
+.slot-staple .mono,
+.lang-ru .slot-staple .mono {
     font-family: "PressStart2P";
     font-size: 9px;
 }
@@ -1837,6 +1856,13 @@
     font-family: "PixCyrillic";
     font-size: var(--font-body);
     letter-spacing: 0px;
+}
+
+.lang-ru .lobby-title {
+    font-family: "PixCyrillic";
+    font-size: 30px;
+    letter-spacing: 0px;
+    margin-left: 0px;
 }
 
 .lang-ru .examine-tabs .tab text {
