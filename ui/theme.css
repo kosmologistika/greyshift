@@ -524,6 +524,8 @@
 .scroll-list.list {
     padding: 6px 8px;
     row-gap: 2px;
+    /* Rows scroll under the well's padding instead of over its rim */
+    overflow-clip-margin: content-box 0px;
     -bevy-image: url("textures/interface/well.png");
     -bevy-image-mode: sliced(4px);
 }
