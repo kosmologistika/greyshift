@@ -1002,7 +1002,7 @@
     flex-direction: column;
     row-gap: 3px;
     padding: 5px 7px 6px 7px;
-    -bevy-image: url("textures/interface/frame_glass.png");
+    -bevy-image: url("textures/interface/frame.png");
     -bevy-image-mode: sliced(4px);
 }
 
