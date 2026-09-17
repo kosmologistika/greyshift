@@ -78,12 +78,14 @@
     color: var(--accent);
 }
 
+/* The left margin matches the spacing after the last letter, so the word centres on its glyphs */
 .logo {
     font-family: "m6x11";
-    font-size: 33px;
-    letter-spacing: 2px;
-    color: var(--accent);
-    margin-bottom: 43px;
+    font-size: 55px;
+    letter-spacing: 3px;
+    color: var(--text-bright);
+    margin-left: 3px;
+    margin-bottom: 28px;
 }
 
 .heading {
@@ -750,6 +752,27 @@
     flex-direction: row;
     align-items: flex-start;
     column-gap: var(--space-4);
+}
+
+.menu-layout {
+    flex-direction: row;
+    align-items: flex-start;
+    column-gap: 20px;
+}
+
+/* As wide as the character card, on both sides, so the buttons stay centred under the logo */
+.menu-side {
+    width: 128px;
+    flex-shrink: 0;
+}
+
+.main-menu .menu-col {
+    width: 200px;
+    row-gap: 8px;
+}
+
+.main-menu .btn.full {
+    height: 26px;
 }
 
 .character-card {
