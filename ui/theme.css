@@ -134,10 +134,8 @@
 .c-bright { color: var(--text-bright); }
 .c-primary { color: var(--text-primary); }
 .c-dim { color: var(--text-dim); }
-.c-disabled { color: var(--text-disabled); }
 .c-accent { color: var(--accent); }
 .c-steel { color: var(--steel); }
-.c-warning { color: var(--warning); }
 .c-danger { color: var(--danger); }
 
 /* A UI image spans its whole node (ui::frame_whole_node), so a frame pads its own contents */
