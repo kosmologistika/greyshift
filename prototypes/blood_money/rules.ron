@@ -13,7 +13,7 @@
         hide_spawn_menu: true,
         components: {
             "MatchSequenceRule": (
-                maps: ["bloodmoney_casino", "bloodmoney_greenhouse", "bloodmoney_arena"],
+                maps: ["bloodmoney_casino", "bloodmoney_greenhouse"],
                 rules: [
                     "rule_blood_money_shop",
                     "rule_blood_money_economy",
