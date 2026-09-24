@@ -6,3 +6,4 @@ lobby-status-in-progress = Раунд идёт
 lobby-not-ready = ГОТОВ?
 lobby-ready = ГОТОВ!
 lobby-observe = НАБЛЮДАТЬ
+lobby-settings = НАСТРОЙКИ

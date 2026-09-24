@@ -6,3 +6,4 @@ lobby-status-in-progress = Round in progress
 lobby-not-ready = READY?
 lobby-ready = READY!
 lobby-observe = OBSERVE
+lobby-settings = SETTINGS
