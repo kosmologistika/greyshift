@@ -22,3 +22,5 @@ intent-denied-pulled-crit = Вас тащат.
     .popup = тащат!
 intent-denied-blocking = Вы держите блок.
     .popup = в блоке!
+intent-denied-exhausted = Вы слишком измотаны.
+    .popup = нет сил!

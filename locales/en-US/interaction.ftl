@@ -16,3 +16,5 @@ gun-denied-closed = It is closed. Open it first.
     .popup = open it first!
 gun-denied-full = It is full.
     .popup = it's full!
+climb-denied-exhausted = You are too exhausted to climb.
+    .popup = too tired!

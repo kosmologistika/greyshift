@@ -16,3 +16,5 @@ gun-denied-closed = Закрыто. Сначала откройте.
     .popup = сначала откройте!
 gun-denied-full = Полно.
     .popup = полно!
+climb-denied-exhausted = Вы слишком измотаны, чтобы карабкаться.
+    .popup = нет сил!

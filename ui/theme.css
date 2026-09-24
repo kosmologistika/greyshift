@@ -1219,6 +1219,11 @@
     height: 32px;
 }
 
+.hud-stamina-bolt {
+    width: 32px;
+    height: 32px;
+}
+
 /* Button cluster, following tg's bottom-right grid: full tiles on the bottom
    row, half-height strips stacked above them on a 17px pitch. Columns fill
    right to left, so row-reverse and column-reverse put the first-registered

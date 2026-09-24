@@ -17,6 +17,8 @@
             // SS14's ladder on the crit bar: at 80 the sever bars have halved too.
             // The floor's own slowdown is the Critical marker's, not a rung here
             "SlowOnDamage": (thresholds: {60: 0.7, 80: 0.5}),
+            // One pool for swings, climbs and the run; ten seconds from empty to full
+            "Stamina": (max: 100, regen: 10.0, cooldown: 2.0, run_step: 1),
             "Body": (
                 parts: ["part_head", "part_arm_left", "part_arm_right", "part_leg_left", "part_leg_right"],
                 torso_weight: 40,

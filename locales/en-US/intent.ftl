@@ -22,3 +22,5 @@ intent-denied-pulled-crit = You are being dragged.
     .popup = dragged!
 intent-denied-blocking = Your guard is up.
     .popup = guarding!
+intent-denied-exhausted = You are too exhausted.
+    .popup = too tired!
