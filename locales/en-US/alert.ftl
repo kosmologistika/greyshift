@@ -9,3 +9,5 @@ alert-crit-name = Dying
 alert-crit-desc = You are in critical condition. Click to give up.
 alert-stunned-name = Stunned
 alert-stunned-desc = You cannot move or use your hands until it wears off.
+alert-exhausted-name = Exhausted
+alert-exhausted-desc = Too winded to stand; you get up when it passes.

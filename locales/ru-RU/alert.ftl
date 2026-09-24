@@ -9,3 +9,5 @@ alert-crit-name = Умираете
 alert-crit-desc = Вы в критическом состоянии. Нажмите, чтобы сдаться.
 alert-stunned-name = Оглушены
 alert-stunned-desc = Вы не можете двигаться и действовать руками, пока это не пройдёт.
+alert-exhausted-name = Изнеможение
+alert-exhausted-desc = Нет сил стоять; вы подниметесь, когда это пройдёт.
