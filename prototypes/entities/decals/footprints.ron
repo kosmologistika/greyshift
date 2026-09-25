@@ -2,11 +2,10 @@
     (
         type: "Entity",
         id: "decal_bootprints",
+        parents: ["base_decal_scatter"],
         components: {
             "DisplayName": (name: "boot prints"),
-            "Scenery": (),
-            "PlacementLayer": Free,
-            "Appearance": (sprite: (rsi: "textures/decals/footprints", state: "boots"), depth: FloorOverlay),
+            "Appearance": (sprite: (rsi: "textures/decals/footprints", state: "boots")),
             "SpriteTint": ((red: 0.23, green: 0.19, blue: 0.16, alpha: 0.85)),
         },
     ),

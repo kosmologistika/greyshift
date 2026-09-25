@@ -2,11 +2,10 @@
     (
         type: "Entity",
         id: "tile_floor_marble_dark",
-        parents: ["tile_plating"],
+        parents: ["base_tile_floor"],
         components: {
             "TileCover": (
                 sprite: (rsi: "textures/tiles/marble_dark", state: "default"),
-                footstep: Some((source: Collection("footstep_floor"), volume_db: -9.0, pitch_var: 0.05, range_tiles: 9.0)),
             ),
         },
     ),

@@ -2,16 +2,14 @@
     (
         type: "Entity",
         id: "weapon_bola",
+        parents: ["base_item"],
         components: {
             "DisplayName": (name: "bola", desc: Some("item-desc-bola")),
             "Item": (size: Small),
             "DamageOnHit": (damage: {Blunt: 3}),
             "StatusOnHit": (effect: "effect_knockdown", secs: 3.0),
-            "Glidable": (),
-            "PlacementLayer": Free,
             "Appearance": (
                 sprite: (rsi: "textures/objects/weapons/bola", state: "icon"),
-                depth: BelowMobs,
             ),
         },
     ),

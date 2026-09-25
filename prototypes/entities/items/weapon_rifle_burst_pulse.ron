@@ -2,7 +2,7 @@
     (
         type: "Entity",
         id: "weapon_rifle_burst_pulse",
-        parents: ["base_gun"],
+        parents: ["base_9mm_gun"],
         components: {
             "DisplayName": (name: "pulse burst rifle"),
             "Item": (size: Large),
@@ -12,15 +12,10 @@
                 selected_mode: Burst(count: 3, internal_rate: 12.0),
                 available_modes: [Burst(count: 3, internal_rate: 12.0), SemiAuto],
             ),
-            "Container": (max_count: Some(1), max_item_size: Some(Medium)),
-            "SlotWhitelist": (tags: ["magazine_pistol_9mm", "magazine_pistol_9mm_extended"]),
-            "InternalContainer": (),
+            "Container": (max_item_size: Some(Medium)),
             "SpreadConfig": (base: 0.02, growth_per_shot: 0.03, decay_per_sec: 1.5, max: 0.2),
-            "Glidable": (),
-            "PlacementLayer": Free,
             "Appearance": (
                 sprite: (rsi: "textures/objects/weapons/guns/battery/pulse_carbine", state: "icon"),
-                depth: BelowMobs,
             ),
         },
     ),

@@ -3,12 +3,10 @@
         type: "Entity",
         id: "prop_casino_smoke",
         abstract: true,
+        parents: ["base_item"],
         components: {
             "DisplayName": (name: "cigar"),
             "Item": (size: Tiny, held: Nothing),
-            "Glidable": (),
-            "PlacementLayer": Free,
-            "Appearance": (depth: BelowMobs),
         },
     ),
     // The stubbed cigar is baked in: a bare grey tray reads as a coin under red light
@@ -19,7 +17,7 @@
         components: {
             "DamageOnHit": (damage: {Blunt: 2}),
             "DisplayName": (name: "ashtray"),
-            "Appearance": (sprite: (rsi: "textures/objects/props/casino_smokes", state: "ashtray"), depth: BelowMobs),
+            "Appearance": (sprite: (rsi: "textures/objects/props/casino_smokes", state: "ashtray")),
         },
     ),
     (
@@ -27,16 +25,16 @@
         id: "prop_casino_cigar",
         parents: ["prop_casino_smoke"],
         components: {
-            "Appearance": (sprite: (rsi: "textures/objects/props/casino_smokes", state: "cigar"), depth: BelowMobs),
+            "Appearance": (sprite: (rsi: "textures/objects/props/casino_smokes", state: "cigar")),
         },
     ),
     (
         type: "Entity",
         id: "prop_casino_cigar_butt",
-        parents: ["prop_casino_litter"],
+        parents: ["base_prop_scenery"],
         components: {
             "DisplayName": (name: "cigar butt"),
-            "Appearance": (sprite: (rsi: "textures/objects/props/casino_smokes", state: "cigar_butt"), depth: BelowMobs),
+            "Appearance": (sprite: (rsi: "textures/objects/props/casino_smokes", state: "cigar_butt")),
         },
     ),
     (
@@ -47,7 +45,7 @@
             "Item": (size: Small, held: Bundle),
             "DamageOnHit": (damage: {Blunt: 1}),
             "DisplayName": (name: "cigar box"),
-            "Appearance": (sprite: (rsi: "textures/objects/props/casino_smokes", state: "cigar_box_open"), depth: BelowMobs),
+            "Appearance": (sprite: (rsi: "textures/objects/props/casino_smokes", state: "cigar_box_open")),
         },
     ),
     (
@@ -58,7 +56,7 @@
             "Item": (size: Small, held: Bundle),
             "DamageOnHit": (damage: {Blunt: 1}),
             "DisplayName": (name: "cigar box"),
-            "Appearance": (sprite: (rsi: "textures/objects/props/casino_smokes", state: "cigar_box_closed"), depth: BelowMobs),
+            "Appearance": (sprite: (rsi: "textures/objects/props/casino_smokes", state: "cigar_box_closed")),
         },
     ),
     (
@@ -67,7 +65,7 @@
         parents: ["prop_casino_smoke"],
         components: {
             "DisplayName": (name: "matchbox"),
-            "Appearance": (sprite: (rsi: "textures/objects/props/casino_smokes", state: "matchbox"), depth: BelowMobs),
+            "Appearance": (sprite: (rsi: "textures/objects/props/casino_smokes", state: "matchbox")),
         },
     ),
     (
@@ -76,7 +74,7 @@
         parents: ["prop_casino_smoke"],
         components: {
             "DisplayName": (name: "cigarette pack"),
-            "Appearance": (sprite: (rsi: "textures/objects/props/casino_smokes", state: "pack_red_closed"), depth: BelowMobs),
+            "Appearance": (sprite: (rsi: "textures/objects/props/casino_smokes", state: "pack_red_closed")),
         },
     ),
     (
@@ -85,7 +83,7 @@
         parents: ["prop_casino_smoke"],
         components: {
             "DisplayName": (name: "cigarette pack"),
-            "Appearance": (sprite: (rsi: "textures/objects/props/casino_smokes", state: "pack_red_open"), depth: BelowMobs),
+            "Appearance": (sprite: (rsi: "textures/objects/props/casino_smokes", state: "pack_red_open")),
         },
     ),
     (
@@ -94,7 +92,7 @@
         parents: ["prop_casino_smoke"],
         components: {
             "DisplayName": (name: "cigarette pack"),
-            "Appearance": (sprite: (rsi: "textures/objects/props/casino_smokes", state: "pack_black_open"), depth: BelowMobs),
+            "Appearance": (sprite: (rsi: "textures/objects/props/casino_smokes", state: "pack_black_open")),
         },
     ),
     (
@@ -103,7 +101,7 @@
         parents: ["prop_casino_smoke"],
         components: {
             "DisplayName": (name: "crushed cigarette pack"),
-            "Appearance": (sprite: (rsi: "textures/objects/props/casino_smokes", state: "pack_red_crushed"), depth: BelowMobs),
+            "Appearance": (sprite: (rsi: "textures/objects/props/casino_smokes", state: "pack_red_crushed")),
         },
     ),
     (
@@ -112,7 +110,7 @@
         parents: ["prop_casino_smoke"],
         components: {
             "DisplayName": (name: "crushed cigarette pack"),
-            "Appearance": (sprite: (rsi: "textures/objects/props/casino_smokes", state: "pack_robust_crushed"), depth: BelowMobs),
+            "Appearance": (sprite: (rsi: "textures/objects/props/casino_smokes", state: "pack_robust_crushed")),
         },
     ),
 ]

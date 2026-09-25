@@ -4,11 +4,9 @@
         type: "Entity",
         id: "decal_oil",
         abstract: true,
+        parents: ["base_decal_tile"],
         components: {
             "DisplayName": (name: "oil stain"),
-            "Scenery": (),
-            "PlacementLayer": Decal,
-            "Appearance": (depth: FloorOverlay),
             "SpriteTint": ((red: 0.14, green: 0.12, blue: 0.09, alpha: 0.9)),
         },
     ),

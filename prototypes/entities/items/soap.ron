@@ -2,12 +2,11 @@
     (
         type: "Entity",
         id: "soap",
+        parents: ["base_item"],
         components: {
             "DisplayName": (name: "soap"),
             "Item": (size: Tiny),
             "Slippery": (slide_tiles: 3, knockdown_secs: 2.0),
-            "Glidable": (),
-            "PlacementLayer": Free,
             "Appearance": (
                 sprite: (rsi: "textures/objects/misc/soap", state: "icon"),
                 depth: FloorOverlay,

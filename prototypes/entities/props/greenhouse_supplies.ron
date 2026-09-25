@@ -3,11 +3,9 @@
         type: "Entity",
         id: "prop_greenhouse_supply",
         abstract: true,
+        parents: ["base_item"],
         components: {
             "Item": (size: Tiny, held: Nothing),
-            "Glidable": (),
-            "PlacementLayer": Free,
-            "Appearance": (depth: BelowMobs),
         },
     ),
     (
@@ -23,7 +21,7 @@
     (
         type: "Entity",
         id: "prop_greenhouse_soil_pile",
-        parents: ["prop_greenhouse_trash"],
+        parents: ["base_prop_scenery"],
         components: {
             "DisplayName": (name: "soil"),
             "Appearance": (sprite: (rsi: "textures/objects/props/greenhouse_supplies", state: "soil_pile")),

@@ -2,10 +2,9 @@
     (
         type: "Entity",
         id: "structure_window",
+        parents: ["base_structure_solid"],
         components: {
             "DisplayName": (name: "window"),
-            "Solid": (),
-            "BlocksAttack": (),
             "AreaBoundary": (),
             // Lasers fly through glass untouched; bullets still stop and
             // break it.
@@ -30,7 +29,6 @@
                     ],
                 ),
             ]),
-            "PlacementLayer": Solid,
             "IconSmooth": (key: "window", state_prefix: "window"),
             "Appearance": (
                 sprite: (rsi: "textures/structures/windows/window", state: "full"),

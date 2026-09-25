@@ -6,21 +6,11 @@
         hide_spawn_menu: true,
         components: {
             "SwapsOnHit": (),
-            "EnergyProjectile": (),
-            "FlightRules": (stops_at_blocks_attack: true, stops_on_first_damageable: true),
-            "AlignToFlight": (),
             "MaxFlightRange": (tiles: 12),
             "FlightSpeed": (tiles_per_sec: 20.0),
-            "DespawnOnFlightEnd": (),
-            "MuzzleFx": (sprite: (rsi: "textures/effects/muzzle_flash", state: "firing_effect_red"), light_color: (0.7, 0.4, 1.0)),
-            "ImpactFx": (sprite: (rsi: "textures/effects/impact_fx", state: "impact_laser_wall"), secs: 2.0),
-            "PointLight": (color: (0.7, 0.4, 1.0), energy: 1.4, radius: 1.5, cast_shadows: false),
+            "MuzzleFx": (light_color: (0.7, 0.4, 1.0)),
+            "PointLight": (color: (0.7, 0.4, 1.0)),
             "SpriteTint": ((red: 0.7, green: 0.4, blue: 1.0, alpha: 1.0)),
-            "Appearance": (
-                sprite: (rsi: "textures/objects/weapons/guns/projectiles/projectiles", state: "u_laser"),
-                sprite_offset_radians: -1.5707964,
-                depth: Effects,
-            ),
         },
     ),
 ]

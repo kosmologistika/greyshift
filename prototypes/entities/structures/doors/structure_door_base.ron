@@ -11,7 +11,14 @@
             // what turns a door with CrushDamage into something that hurts
             "DoorSafety": (),
             "Damageable": (),
+            "Door": (state: Closed, open_secs: 0.6, close_secs: 0.6, deny_secs: 0.6),
+            "DoorSounds": (
+                open: Some((source: Path("audio/machines/airlock_open.ogg"), volume_db: -4.0)),
+                close: Some((source: Path("audio/machines/airlock_close.ogg"), volume_db: -4.0)),
+                deny: Some((source: Path("audio/machines/airlock_deny.ogg"), volume_db: -6.0)),
+            ),
             "PlacementLayer": Solid,
+            "Appearance": (depth: Doors),
         },
     ),
 ]

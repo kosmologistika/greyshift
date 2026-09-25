@@ -10,11 +10,8 @@
                 shape: Sweep(radius: 1, arc_deg: 360), damage: {Slash: 50}, cooldown: 1.5, icon_facing_deg: 45,
             ),
             "DamageOnHit": (damage: {Slash: 20}),
-            "Glidable": (),
-            "PlacementLayer": Free,
             "Appearance": (
                 sprite: (rsi: "textures/objects/weapons/throngler", state: "icon"),
-                depth: BelowMobs,
             ),
         },
     ),

@@ -52,7 +52,7 @@
         id: "light_wall_tube_cyan",
         parents: ["light_wall_tube"],
         components: {
-            "PointLight": (color: (0.2, 0.75, 1.0), energy: 1.5),
+            "PointLight": (color: (0.2, 0.75, 1.0)),
             "Appearance": (layers: [
                 (rsi: Some("textures/structures/lighting/light_tube"), state: "glow", shading: Unshaded, tint: Some((red: 0.5, green: 0.9, blue: 1.0, alpha: 1.0))),
                 (rsi: Some("textures/effects/light_glow"), state: "glow", shading: Unshaded, tint: Some((red: 0.5, green: 0.9, blue: 1.0, alpha: 1.0))),

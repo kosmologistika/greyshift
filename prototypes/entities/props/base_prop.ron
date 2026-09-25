@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "base_prop_scenery",
+        abstract: true,
+        components: {
+            "Scenery": (),
+            "PlacementLayer": Free,
+            "Appearance": (depth: BelowMobs),
+        },
+    ),
+]

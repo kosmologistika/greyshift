@@ -2,25 +2,20 @@
     (
         type: "Entity",
         id: "weapon_shotgun_double",
-        parents: ["base_gun"],
+        parents: ["base_shotgun"],
         components: {
             "DisplayName": (name: "double-barreled shotgun"),
             "Item": (size: Large),
             // Burst(2) is both barrels on one pull; the fire-mode verb picks
             // between it and one barrel at a time.
             "GrantsActions": (ids: ["action_fire_mode"], to: Holder),
-            "Gun": (fire_sound: Some((source: Path("audio/weapons/guns/shotgun.ogg"), volume_db: -1.0, pitch_var: 0.05, range_tiles: 30.0)), fire_rate: 3.0, selected_mode: SemiAuto, available_modes: [SemiAuto, Burst(count: 2, internal_rate: 14.0)]),
+            "Gun": (fire_rate: 3.0, available_modes: [SemiAuto, Burst(count: 2, internal_rate: 14.0)]),
             "RecoilKick": (px: 6.0),
-            "Container": (max_count: Some(2), max_item_size: Some(Tiny)),
-            "SlotWhitelist": (tags: ["shell_shotgun"]),
-            "InternalContainer": (),
+            "Container": (max_count: Some(2)),
             "OpensByHand": (),
-            "SpreadConfig": (base: 0.2, growth_per_shot: 0.05, decay_per_sec: 2.0, max: 0.3),
-            "Glidable": (),
-            "PlacementLayer": Free,
+            "SpreadConfig": (base: 0.2, max: 0.3),
             "Appearance": (
                 sprite: (rsi: "textures/objects/weapons/guns/shotguns/db_shotgun", state: "icon"),
-                depth: BelowMobs,
             ),
         },
     ),

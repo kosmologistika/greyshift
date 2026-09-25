@@ -8,11 +8,8 @@
             "Item": (size: Tiny),
             "MeleeWeapon": (hit_sound: Some((source: Path("audio/weapons/slash.ogg"), volume_db: -3.0, pitch_var: 0.08)), shape: Thrust(len: 1), damage: {Slash: 10}, cooldown: 0.5),
             "DamageOnHit": (damage: {Slash: 5}),
-            "Glidable": (),
-            "PlacementLayer": Free,
             "Appearance": (
                 sprite: (rsi: "textures/objects/materials/shard", state: "shard1"),
-                depth: BelowMobs,
             ),
         },
     ),

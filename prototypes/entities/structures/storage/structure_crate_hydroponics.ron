@@ -2,15 +2,11 @@
     (
         type: "Entity",
         id: "structure_crate_hydroponics",
+        parents: ["base_structure_metal_box"],
         components: {
             "DisplayName": (name: "seed crate"),
-            "Solid": (),
-            "BlocksAttack": (),
-            "StruckSound": (default: Some((source: Collection("hit_metal"), volume_db: -4.0, pitch_var: 0.1))),
-            "PlacementLayer": Solid,
             "Appearance": (
                 sprite: (rsi: "textures/structures/storage/crate_hydroponics", state: "closed"),
-                depth: Furniture,
             ),
         },
     ),

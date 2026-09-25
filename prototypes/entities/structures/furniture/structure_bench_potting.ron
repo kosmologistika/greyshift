@@ -2,16 +2,9 @@
     (
         type: "Entity",
         id: "structure_bench_potting",
-        parents: ["structure_table"],
+        parents: ["structure_table_wood"],
         components: {
             "DisplayName": (name: "potting bench"),
-            "StruckSound": (default: Some((source: Collection("hit_wood"), volume_db: -4.0, pitch_var: 0.1))),
-            "Destructible": (thresholds: [
-                (
-                    trigger: TotalDamage(40),
-                    behaviors: [PlaySound((source: Collection("destroy_wood"), volume_db: -2.0, pitch_var: 0.08)), Destroy],
-                ),
-            ]),
             "IconSmooth": (key: "bench_wood"),
             "Appearance": (
                 sprite: (rsi: "textures/structures/furniture/bench_potting", state: "full"),

@@ -1,0 +1,80 @@
+[
+    // Sound floors for weapons. A weapon inherits base_melee_weapon or base_gun so nothing is
+    // silent by default, and overrides the field where its own flavour differs -
+    // inheritance merges per field, so restating MeleeWeapon for shape and damage
+    // does not drop the sounds
+    (
+        type: "Entity",
+        id: "base_melee_weapon",
+        abstract: true,
+        parents: ["base_item"],
+        components: {
+            // One whoosh for every weapon, as SS14 does - it hardcodes a single
+            // soundSwing default and no weapon overrides it. Plays on a miss
+            // too: a swing goes whoosh whether or not it lands.
+            "MeleeWeapon": (
+                swing_sound: Some((source: Path("audio/weapons/swing.ogg"), volume_db: -14.0, pitch_var: 0.12, range_tiles: 9.0)),
+                hit_sound: Some((source: Collection("melee_hit"), volume_db: -3.0, pitch_var: 0.08)),
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "base_gun",
+        abstract: true,
+        parents: ["base_item"],
+        components: {
+            "Gun": (
+                fire_sound: Some((source: Path("audio/weapons/guns/mk58.ogg"), volume_db: -2.0, pitch_var: 0.05, range_tiles: 24.0)),
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "base_shotgun",
+        abstract: true,
+        parents: ["base_gun"],
+        components: {
+            "Gun": (fire_sound: Some((source: Path("audio/weapons/guns/shotgun.ogg"), volume_db: -1.0, pitch_var: 0.05, range_tiles: 30.0)), selected_mode: SemiAuto),
+            "Container": (max_item_size: Some(Tiny)),
+            "SlotWhitelist": (tags: ["shell_shotgun"]),
+            "InternalContainer": (),
+            "SpreadConfig": (growth_per_shot: 0.05, decay_per_sec: 2.0),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "base_recharge_gun",
+        abstract: true,
+        parents: ["base_gun"],
+        components: {
+            "Gun": (fire_rate: 1.0, selected_mode: SemiAuto, available_modes: [SemiAuto]),
+            "AmmoStore": (rounds: 1, capacity: 1),
+            "SpreadConfig": (base: 0.0, growth_per_shot: 0.0, decay_per_sec: 1.0, max: 0.0),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "base_cell_gun",
+        abstract: true,
+        parents: ["base_gun"],
+        components: {
+            "ShotSpec": (projectile_proto: "projectile_laser_red"),
+            "Container": (max_count: Some(1), max_item_size: Some(Small)),
+            "SlotWhitelist": (tags: ["power_cell"]),
+            "InternalContainer": (),
+            "SpreadConfig": (decay_per_sec: 2.0),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "base_9mm_gun",
+        abstract: true,
+        parents: ["base_gun"],
+        components: {
+            "Container": (max_count: Some(1)),
+            "SlotWhitelist": (tags: ["magazine_pistol_9mm", "magazine_pistol_9mm_extended"]),
+            "InternalContainer": (),
+        },
+    ),
+]

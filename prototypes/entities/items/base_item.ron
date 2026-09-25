@@ -1,0 +1,21 @@
+[
+    (
+        type: "Entity",
+        id: "base_item",
+        abstract: true,
+        components: {
+            "Glidable": (),
+            "PlacementLayer": Free,
+            "Appearance": (depth: BelowMobs),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "base_ammo_round",
+        abstract: true,
+        parents: ["base_item"],
+        components: {
+            "Item": (size: Tiny, held: Nothing),
+        },
+    ),
+]

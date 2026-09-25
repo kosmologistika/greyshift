@@ -11,11 +11,8 @@
             "DamageOnHit": (damage: {Blunt: 4}),
             // The baton's stick under a party tint: no bat of its own in the licensed sheets
             "SpriteTint": ((red: 1.0, green: 0.45, blue: 0.9, alpha: 1.0)),
-            "Glidable": (),
-            "PlacementLayer": Free,
             "Appearance": (
                 sprite: (rsi: "textures/objects/weapons/stunbaton", state: "icon"),
-                depth: BelowMobs,
             ),
         },
     ),

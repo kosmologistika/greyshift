@@ -22,7 +22,6 @@
             "IconSmooth": (state_prefix: "solid"),
             "Appearance": (
                 sprite: (rsi: "textures/structures/walls/solid", state: "default"),
-                depth: Walls,
             ),
         },
     ),

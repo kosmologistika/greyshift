@@ -2,12 +2,10 @@
     (
         type: "Entity",
         id: "structure_beebox",
+        parents: ["base_structure_solid"],
         components: {
             "DisplayName": (name: "apiary"),
-            "Solid": (),
-            "BlocksAttack": (),
             "StruckSound": (default: Some((source: Collection("hit_wood"), volume_db: -4.0, pitch_var: 0.1))),
-            "PlacementLayer": Solid,
             "Appearance": (
                 sprite: (rsi: "textures/structures/decoration/beebox", state: "beebox"),
                 depth: Furniture,

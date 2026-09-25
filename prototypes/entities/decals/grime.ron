@@ -3,11 +3,9 @@
         type: "Entity",
         id: "decal_grime",
         abstract: true,
+        parents: ["base_decal_tile"],
         components: {
             "DisplayName": (name: "grime"),
-            "Scenery": (),
-            "PlacementLayer": Decal,
-            "Appearance": (depth: FloorOverlay),
         },
     ),
     // The seam states follow a 4-panel tile, so they draw a grid on wood, carpet and grass

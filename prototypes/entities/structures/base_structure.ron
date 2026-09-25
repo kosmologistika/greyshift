@@ -1,0 +1,45 @@
+[
+    (
+        type: "Entity",
+        id: "base_structure_solid",
+        abstract: true,
+        components: {
+            "Solid": (),
+            "BlocksAttack": (),
+            "PlacementLayer": Solid,
+        },
+    ),
+    (
+        type: "Entity",
+        id: "base_structure_metal_box",
+        abstract: true,
+        parents: ["base_structure_solid"],
+        components: {
+            "StruckSound": (default: Some((source: Collection("hit_metal"), volume_db: -4.0, pitch_var: 0.1))),
+            "Appearance": (depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "base_structure_table",
+        abstract: true,
+        components: {
+            "Solid": (),
+            // Waist-high: walkers stop, everything airborne crosses. Same as
+            // SS14's TableLayer, which is MidImpassable and nothing else
+            "PassesProjectiles": (),
+            "PassesThrown": (),
+            "Climbable": (secs: 1.0),
+            "StruckSound": (default: Some((source: Collection("hit_metal"), volume_db: -4.0, pitch_var: 0.1))),
+            "Damageable": (),
+            "Destructible": (thresholds: [
+                (
+                    trigger: TotalDamage(40),
+                    behaviors: [PlaySound((source: Collection("destroy_metal"), volume_db: -2.0, pitch_var: 0.08)), Destroy],
+                ),
+            ]),
+            "PlacementLayer": Solid,
+            "Appearance": (depth: Furniture),
+        },
+    ),
+]

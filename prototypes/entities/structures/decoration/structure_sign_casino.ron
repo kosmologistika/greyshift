@@ -15,7 +15,7 @@
         parents: ["structure_sign_casino"],
         components: {
             "DisplayName": (name: "games sign"),
-            "Appearance": (sprite: (rsi: "textures/structures/decoration/signs_casino", state: "arcade"), depth: WallOverlay),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/signs_casino", state: "arcade")),
         },
     ),
     (
@@ -24,7 +24,7 @@
         parents: ["structure_sign_casino"],
         components: {
             "DisplayName": (name: "bar sign"),
-            "Appearance": (sprite: (rsi: "textures/structures/decoration/signs_casino", state: "bar"), depth: WallOverlay),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/signs_casino", state: "bar")),
         },
     ),
     (
@@ -33,7 +33,7 @@
         parents: ["structure_sign_casino"],
         components: {
             "DisplayName": (name: "vault sign"),
-            "Appearance": (sprite: (rsi: "textures/structures/decoration/signs_casino", state: "vault"), depth: WallOverlay),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/signs_casino", state: "vault")),
         },
     ),
 ]

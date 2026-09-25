@@ -10,11 +10,8 @@
                 shape: Sweep(radius: 1, arc_deg: 90), damage: {Slash: 45}, cooldown: 0.8, icon_facing_deg: -45,
             ),
             "DamageOnHit": (damage: {Slash: 22}),
-            "Glidable": (),
-            "PlacementLayer": Free,
             "Appearance": (
                 sprite: (rsi: "textures/objects/weapons/fireaxe", state: "icon"),
-                depth: BelowMobs,
             ),
         },
     ),

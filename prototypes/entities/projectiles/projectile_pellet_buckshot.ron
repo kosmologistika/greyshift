@@ -6,17 +6,10 @@
         hide_spawn_menu: true,
         components: {
             "DamageOnHit": (damage: {Piercing: 17}, falloff: Some((full_tiles: 2.0, end_tiles: 6.0, min: 0.25))),
-            "FlightRules": (stops_at_blocks_attack: true, stops_on_first_damageable: true),
-            "AlignToFlight": (),
             // Short by design: the hard cap keeps a scattergun out of rifle duels
             "MaxFlightRange": (tiles: 8),
-            "FlightSpeed": (tiles_per_sec: 12.5),
-            "DespawnOnFlightEnd": (),
-            "MuzzleFx": (sprite: (rsi: "textures/effects/muzzle_flash", state: "firing_effect")),
-            "ImpactFx": (sprite: (rsi: "textures/effects/impact_fx", state: "impact_bullet")),
             "Appearance": (
                 sprite: (rsi: "textures/objects/weapons/guns/projectiles/projectiles_tg", state: "pellet"),
-                depth: Effects,
                 // The tg sprite points the other way up than the projectiles2
                 // family, so the flight offset flips sign
                 sprite_offset_radians: -1.5707964,

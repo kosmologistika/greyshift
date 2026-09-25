@@ -3,12 +3,9 @@
         type: "Entity",
         id: "prop_casino_drink",
         abstract: true,
+        parents: ["base_item"],
         components: {
-            "DisplayName": (name: "glass"),
             "Item": (size: Tiny, held: Bundle),
-            "Glidable": (),
-            "PlacementLayer": Free,
-            "Appearance": (depth: BelowMobs),
         },
     ),
     (
@@ -18,7 +15,7 @@
         components: {
             "DamageOnHit": (damage: {Blunt: 2}),
             "DisplayName": (name: "whiskey glass"),
-            "Appearance": (sprite: (rsi: "textures/objects/props/casino_drinks", state: "glass_whiskey"), depth: BelowMobs),
+            "Appearance": (sprite: (rsi: "textures/objects/props/casino_drinks", state: "glass_whiskey")),
         },
     ),
     (
@@ -28,7 +25,7 @@
         components: {
             "DamageOnHit": (damage: {Blunt: 2}),
             "DisplayName": (name: "whiskey glass"),
-            "Appearance": (sprite: (rsi: "textures/objects/props/casino_drinks", state: "glass_whiskey_empty"), depth: BelowMobs),
+            "Appearance": (sprite: (rsi: "textures/objects/props/casino_drinks", state: "glass_whiskey_empty")),
         },
     ),
     (
@@ -38,7 +35,7 @@
         components: {
             "DamageOnHit": (damage: {Blunt: 2}),
             "DisplayName": (name: "wine glass"),
-            "Appearance": (sprite: (rsi: "textures/objects/props/casino_drinks", state: "glass_wine"), depth: BelowMobs),
+            "Appearance": (sprite: (rsi: "textures/objects/props/casino_drinks", state: "glass_wine")),
         },
     ),
     (
@@ -48,7 +45,7 @@
         components: {
             "DamageOnHit": (damage: {Blunt: 2}),
             "DisplayName": (name: "wine glass"),
-            "Appearance": (sprite: (rsi: "textures/objects/props/casino_drinks", state: "glass_wine_empty"), depth: BelowMobs),
+            "Appearance": (sprite: (rsi: "textures/objects/props/casino_drinks", state: "glass_wine_empty")),
         },
     ),
     (
@@ -58,7 +55,7 @@
         components: {
             "DamageOnHit": (damage: {Blunt: 2}),
             "DisplayName": (name: "martini glass"),
-            "Appearance": (sprite: (rsi: "textures/objects/props/casino_drinks", state: "glass_martini"), depth: BelowMobs),
+            "Appearance": (sprite: (rsi: "textures/objects/props/casino_drinks", state: "glass_martini")),
         },
     ),
     (
@@ -69,7 +66,7 @@
             "Item": (size: Small, held: Bundle),
             "DamageOnHit": (damage: {Blunt: 3}),
             "DisplayName": (name: "whiskey bottle"),
-            "Appearance": (sprite: (rsi: "textures/objects/props/casino_drinks", state: "bottle_whiskey"), depth: BelowMobs),
+            "Appearance": (sprite: (rsi: "textures/objects/props/casino_drinks", state: "bottle_whiskey")),
         },
     ),
     (
@@ -80,7 +77,7 @@
             "Item": (size: Small, held: Bundle),
             "DamageOnHit": (damage: {Blunt: 3}),
             "DisplayName": (name: "wine bottle"),
-            "Appearance": (sprite: (rsi: "textures/objects/props/casino_drinks", state: "bottle_wine"), depth: BelowMobs),
+            "Appearance": (sprite: (rsi: "textures/objects/props/casino_drinks", state: "bottle_wine")),
         },
     ),
     (
@@ -91,7 +88,7 @@
             "Item": (size: Small, held: Bundle),
             "DamageOnHit": (damage: {Blunt: 3}),
             "DisplayName": (name: "champagne bottle"),
-            "Appearance": (sprite: (rsi: "textures/objects/props/casino_drinks", state: "bottle_champagne_open"), depth: BelowMobs),
+            "Appearance": (sprite: (rsi: "textures/objects/props/casino_drinks", state: "bottle_champagne_open")),
         },
     ),
     (
@@ -101,7 +98,7 @@
         components: {
             "DamageOnHit": (damage: {Slash: 3}),
             "DisplayName": (name: "broken bottle"),
-            "Appearance": (sprite: (rsi: "textures/objects/props/casino_drinks", state: "bottle_broken"), depth: BelowMobs),
+            "Appearance": (sprite: (rsi: "textures/objects/props/casino_drinks", state: "bottle_broken")),
             "SpriteTint": ((red: 0.75, green: 0.7, blue: 0.65, alpha: 1.0)),
         },
     ),

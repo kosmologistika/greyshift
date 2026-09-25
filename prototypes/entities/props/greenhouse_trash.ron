@@ -1,18 +1,8 @@
 [
     (
         type: "Entity",
-        id: "prop_greenhouse_trash",
-        abstract: true,
-        components: {
-            "Scenery": (),
-            "PlacementLayer": Free,
-            "Appearance": (depth: BelowMobs),
-        },
-    ),
-    (
-        type: "Entity",
         id: "prop_greenhouse_wrapper_energybar",
-        parents: ["prop_greenhouse_trash"],
+        parents: ["base_prop_scenery"],
         components: {
             "DisplayName": (name: "energy bar wrapper"),
             "Appearance": (sprite: (rsi: "textures/objects/props/greenhouse_trash", state: "wrapper_energybar")),
@@ -21,7 +11,7 @@
     (
         type: "Entity",
         id: "prop_greenhouse_wrapper_chocolate",
-        parents: ["prop_greenhouse_trash"],
+        parents: ["base_prop_scenery"],
         components: {
             "DisplayName": (name: "chocolate wrapper"),
             "Appearance": (sprite: (rsi: "textures/objects/props/greenhouse_trash", state: "wrapper_chocolate")),
@@ -30,7 +20,7 @@
     (
         type: "Entity",
         id: "prop_greenhouse_trash_bag",
-        parents: ["prop_greenhouse_trash"],
+        parents: ["base_prop_scenery"],
         components: {
             "DisplayName": (name: "trash bag"),
             "Appearance": (sprite: (rsi: "textures/objects/props/greenhouse_trash", state: "trash_bag")),
@@ -39,7 +29,7 @@
     (
         type: "Entity",
         id: "prop_greenhouse_trash_bag_small",
-        parents: ["prop_greenhouse_trash"],
+        parents: ["base_prop_scenery"],
         components: {
             "DisplayName": (name: "trash bag"),
             "Appearance": (sprite: (rsi: "textures/objects/props/greenhouse_trash", state: "trash_bag_small")),
@@ -48,7 +38,7 @@
     (
         type: "Entity",
         id: "prop_greenhouse_glass_shard_large",
-        parents: ["prop_greenhouse_trash"],
+        parents: ["base_prop_scenery"],
         components: {
             "DisplayName": (name: "glass shard"),
             "Appearance": (sprite: (rsi: "textures/objects/props/greenhouse_trash", state: "shard_large")),
@@ -57,7 +47,7 @@
     (
         type: "Entity",
         id: "prop_greenhouse_glass_shard_medium",
-        parents: ["prop_greenhouse_trash"],
+        parents: ["base_prop_scenery"],
         components: {
             "DisplayName": (name: "glass shard"),
             "Appearance": (sprite: (rsi: "textures/objects/props/greenhouse_trash", state: "shard_medium")),
@@ -66,7 +56,7 @@
     (
         type: "Entity",
         id: "prop_greenhouse_glass_shard_small",
-        parents: ["prop_greenhouse_trash"],
+        parents: ["base_prop_scenery"],
         components: {
             "DisplayName": (name: "glass shard"),
             "Appearance": (sprite: (rsi: "textures/objects/props/greenhouse_trash", state: "shard_small")),

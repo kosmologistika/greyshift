@@ -2,15 +2,13 @@
     (
         type: "Entity",
         id: "clothes_coat_detective",
+        parents: ["base_item"],
         components: {
             "DisplayName": (name: "detective's coat"),
             "Item": (size: Medium),
             "Clothing": (slots: [Suit], suit_storage: ["holsterable"], equip_secs: 2.0),
-            "Glidable": (),
-            "PlacementLayer": Free,
             "Appearance": (
                 sprite: (rsi: "textures/clothing/suits/detective", state: "icon"),
-                depth: BelowMobs,
             ),
         },
     ),

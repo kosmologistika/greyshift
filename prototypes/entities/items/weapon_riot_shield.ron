@@ -2,6 +2,7 @@
     (
         type: "Entity",
         id: "weapon_riot_shield",
+        parents: ["base_item"],
         components: {
             "DisplayName": (name: "riot shield", desc: Some("item-desc-riot-shield")),
             // Large: a bag takes Medium at most, so it costs a hand or a slot as long as it lives
@@ -22,11 +23,8 @@
                     ],
                 ),
             ]),
-            "Glidable": (),
-            "PlacementLayer": Free,
             "Appearance": (
                 sprite: (rsi: "textures/objects/weapons/riot_shield", state: "icon"),
-                depth: BelowMobs,
             ),
         },
     ),

@@ -13,11 +13,8 @@
             "Ejects": (live_round: Some("ammo_grenade_40mm")),
             "LoadsCartridge": (windup_secs: 0.8),
             "SpreadConfig": (base: 0.05, growth_per_shot: 0.02, decay_per_sec: 1.0, max: 0.1),
-            "Glidable": (),
-            "PlacementLayer": Free,
             "Appearance": (
                 sprite: (rsi: "textures/objects/weapons/guns/launchers/china_lake", state: "icon"),
-                depth: BelowMobs,
             ),
         },
     ),
@@ -32,15 +29,12 @@
     (
         type: "Entity",
         id: "ammo_grenade_40mm",
+        parents: ["base_ammo_round"],
         components: {
             "DisplayName": (name: "40mm grenade"),
-            "Item": (size: Tiny, held: Nothing),
             "Cartridge": (projectile_proto: "projectile_grenade_40mm"),
-            "Glidable": (),
-            "PlacementLayer": Free,
             "Appearance": (
                 sprite: (rsi: "textures/objects/weapons/guns/ammunition/explosives", state: "frag"),
-                depth: BelowMobs,
             ),
         },
     ),

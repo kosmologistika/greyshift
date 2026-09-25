@@ -3,11 +3,9 @@
         type: "Entity",
         id: "decal_casino_litter",
         abstract: true,
+        parents: ["base_decal_scatter"],
         components: {
             "DisplayName": (name: "ash"),
-            "Scenery": (),
-            "PlacementLayer": Free,
-            "Appearance": (depth: FloorOverlay),
         },
     ),
     (
@@ -15,7 +13,7 @@
         id: "decal_casino_ash",
         parents: ["decal_casino_litter"],
         components: {
-            "Appearance": (sprite: (rsi: "textures/decals/casino_litter", state: "ash"), depth: FloorOverlay),
+            "Appearance": (sprite: (rsi: "textures/decals/casino_litter", state: "ash")),
         },
     ),
     (
@@ -23,7 +21,7 @@
         id: "decal_casino_ash_big",
         parents: ["decal_casino_litter"],
         components: {
-            "Appearance": (sprite: (rsi: "textures/decals/casino_litter", state: "ash_big"), depth: FloorOverlay),
+            "Appearance": (sprite: (rsi: "textures/decals/casino_litter", state: "ash_big")),
         },
     ),
     // Butts get lost on arcade carpet, so they belong on the tile ring around tables and slots
@@ -33,7 +31,7 @@
         parents: ["decal_casino_litter"],
         components: {
             "DisplayName": (name: "cigarette butts"),
-            "Appearance": (sprite: (rsi: "textures/decals/casino_litter", state: "butts"), depth: FloorOverlay),
+            "Appearance": (sprite: (rsi: "textures/decals/casino_litter", state: "butts")),
         },
     ),
     (
@@ -42,7 +40,7 @@
         parents: ["decal_casino_litter"],
         components: {
             "DisplayName": (name: "torn cardboard"),
-            "Appearance": (sprite: (rsi: "textures/decals/casino_litter", state: "wrap_shreds"), depth: FloorOverlay),
+            "Appearance": (sprite: (rsi: "textures/decals/casino_litter", state: "wrap_shreds")),
             "SpriteTint": ((red: 0.6, green: 0.52, blue: 0.45, alpha: 1.0)),
         },
     ),
@@ -54,7 +52,7 @@
         components: {
             "DisplayName": (name: "wheel tracks"),
             "PlacementLayer": Decal,
-            "Appearance": (sprite: (rsi: "textures/decals/casino_tracks", state: "wheels"), depth: FloorOverlay),
+            "Appearance": (sprite: (rsi: "textures/decals/casino_tracks", state: "wheels")),
             "SpriteTint": ((red: 0.1, green: 0.1, blue: 0.1, alpha: 0.9)),
         },
     ),
@@ -65,7 +63,7 @@
         components: {
             "DisplayName": (name: "boot prints"),
             "PlacementLayer": Decal,
-            "Appearance": (sprite: (rsi: "textures/decals/casino_tracks", state: "boots"), depth: FloorOverlay),
+            "Appearance": (sprite: (rsi: "textures/decals/casino_tracks", state: "boots")),
             "SpriteTint": ((red: 0.12, green: 0.1, blue: 0.08, alpha: 0.85)),
         },
     ),

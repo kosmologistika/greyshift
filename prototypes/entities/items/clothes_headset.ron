@@ -2,15 +2,13 @@
     (
         type: "Entity",
         id: "clothes_headset",
+        parents: ["base_item"],
         components: {
             "DisplayName": (name: "headset"),
             "Item": (size: Small, strip_secs: 1.5, dress_secs: 2.5),
             "Clothing": (slots: [Ears]),
-            "Glidable": (),
-            "PlacementLayer": Free,
             "Appearance": (
                 sprite: (rsi: "textures/clothing/ears/headset", state: "icon"),
-                depth: BelowMobs,
             ),
         },
     ),

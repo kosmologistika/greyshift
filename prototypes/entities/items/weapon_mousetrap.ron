@@ -2,17 +2,15 @@
     (
         type: "Entity",
         id: "weapon_mousetrap",
+        parents: ["base_item"],
         components: {
             "DisplayName": (name: "mousetrap", desc: Some("item-desc-mousetrap")),
             "Item": (size: Small, held: Bundle),
             "ItemToggle": (on_state: Some("mousetraparmed")),
             "TriggersOnStep": (),
             "EffectOnTrigger": (effect: "effect_knockdown", secs: 3.0),
-            "Glidable": (),
-            "PlacementLayer": Free,
             "Appearance": (
                 sprite: (rsi: "textures/objects/devices/mousetrap", state: "mousetrap"),
-                depth: BelowMobs,
             ),
         },
     ),

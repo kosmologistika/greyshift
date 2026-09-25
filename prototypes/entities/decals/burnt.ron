@@ -3,11 +3,8 @@
         type: "Entity",
         id: "decal_burnt",
         abstract: true,
+        parents: ["decal_scorch_base"],
         components: {
-            "DisplayName": (name: "scorch mark"),
-            "PlacementLayer": Decal,
-            "Scenery": (),
-            "Appearance": (depth: FloorOverlay),
             "SpriteTint": ((red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)),
         },
     ),

@@ -12,11 +12,8 @@
             "CoinHooks": (refund: 0.5),
             "DamageOnHit": (damage: {Slash: 8}),
             "SpriteTint": ((red: 0.8, green: 0.15, blue: 0.2, alpha: 1.0)),
-            "Glidable": (),
-            "PlacementLayer": Free,
             "Appearance": (
                 sprite: (rsi: "textures/objects/weapons/kitchen_knife", state: "icon"),
-                depth: BelowMobs,
             ),
         },
     ),

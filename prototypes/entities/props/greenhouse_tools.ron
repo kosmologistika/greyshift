@@ -3,11 +3,9 @@
         type: "Entity",
         id: "prop_greenhouse_tool",
         abstract: true,
+        parents: ["base_item"],
         components: {
             "Item": (size: Small, held: Bundle),
-            "Glidable": (),
-            "PlacementLayer": Free,
-            "Appearance": (depth: BelowMobs),
         },
     ),
     (
