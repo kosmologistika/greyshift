@@ -1,9 +1,9 @@
 [
     (
         type: "Map",
-        id: "bloodmoney_casino",
+        id: "casino",
         name: "Casino",
-        map_path: "maps/bloodmoney/casino.map.ron",
+        map_path: "maps/casino.map.ron",
         min_players: 9,
         max_players: 14,
         ambience: Some("casino"),

@@ -1,9 +1,9 @@
 [
     (
         type: "Map",
-        id: "bloodmoney_greenhouse",
+        id: "greenhouse",
         name: "Greenhouse",
-        map_path: "maps/bloodmoney/greenhouse.map.ron",
+        map_path: "maps/greenhouse.map.ron",
         min_players: 9,
         max_players: 14,
         ambience: Some("greenhouse"),
