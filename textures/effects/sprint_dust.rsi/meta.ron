@@ -1,0 +1,10 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "Drawn for rust-station-13: a kicked-up dust cloud at the feet, after the shape of goonstation's sprint_cloud (whose own art is CC-BY-NC-SA and not used)",
+    ],
+    states: [
+        (name: "cloud", delays: [[0.06, 0.07, 0.07, 0.07, 0.08, 0.08, 0.1]], loops: false),
+    ],
+)
