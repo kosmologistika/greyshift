@@ -1,4 +1,34 @@
 [
+    // Below about 0.85 alpha the tracks vanish on tile and plating
+    (
+        type: "Entity",
+        id: "decal_tracks",
+        abstract: true,
+        parents: ["base_decal_scatter"],
+        components: {
+            "PlacementLayer": Decal,
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_tracks_wheels",
+        parents: ["decal_tracks"],
+        components: {
+            "DisplayName": (name: "wheel tracks"),
+            "Appearance": (sprite: (rsi: "textures/decals/tracks", state: "wheels")),
+            "SpriteTint": ((red: 0.1, green: 0.1, blue: 0.1, alpha: 0.9)),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_tracks_boots",
+        parents: ["decal_tracks"],
+        components: {
+            "DisplayName": (name: "boot prints"),
+            "Appearance": (sprite: (rsi: "textures/decals/tracks", state: "boots")),
+            "SpriteTint": ((red: 0.12, green: 0.1, blue: 0.08, alpha: 0.85)),
+        },
+    ),
     (
         type: "Entity",
         id: "decal_bootprints",

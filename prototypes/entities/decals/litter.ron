@@ -2,6 +2,51 @@
     // FloorOverlay rather than BelowMobs so a dropped coin always draws over the junk
     (
         type: "Entity",
+        id: "decal_debris",
+        abstract: true,
+        parents: ["base_decal_scatter"],
+        components: {
+            "DisplayName": (name: "ash"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_ash",
+        parents: ["decal_debris"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/debris", state: "ash")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_ash_big",
+        parents: ["decal_debris"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/debris", state: "ash_big")),
+        },
+    ),
+    // Butts get lost on arcade carpet, so they belong on the tile ring around tables and slots
+    (
+        type: "Entity",
+        id: "decal_cigbutt_pile",
+        parents: ["decal_debris"],
+        components: {
+            "DisplayName": (name: "cigarette butts"),
+            "Appearance": (sprite: (rsi: "textures/decals/debris", state: "butts")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_wrap_shreds",
+        parents: ["decal_debris"],
+        components: {
+            "DisplayName": (name: "torn cardboard"),
+            "Appearance": (sprite: (rsi: "textures/decals/debris", state: "wrap_shreds")),
+            "SpriteTint": ((red: 0.6, green: 0.52, blue: 0.45, alpha: 1.0)),
+        },
+    ),
+    (
+        type: "Entity",
         id: "decal_glass_glitter_0",
         parents: ["base_decal_scatter"],
         components: {

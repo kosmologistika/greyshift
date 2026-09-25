@@ -1,0 +1,239 @@
+[
+    // Never tint these amber or gold: a bright puddle reads as coin colour
+    (
+        type: "Entity",
+        id: "decal_spill",
+        abstract: true,
+        parents: ["base_decal_tile"],
+        components: {
+            "DisplayName": (name: "spill"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_spill_whiskey_0",
+        parents: ["decal_spill"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/spill", state: "splat0")),
+            "SpriteTint": ((red: 0.35, green: 0.2, blue: 0.1, alpha: 0.6)),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_spill_whiskey_1",
+        parents: ["decal_spill"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/spill", state: "splatb")),
+            "SpriteTint": ((red: 0.35, green: 0.2, blue: 0.1, alpha: 0.6)),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_spill_wine_0",
+        parents: ["decal_spill"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/spill", state: "splat0")),
+            "SpriteTint": ((red: 0.35, green: 0.08, blue: 0.3, alpha: 0.6)),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_spill_wine_1",
+        parents: ["decal_spill"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/spill", state: "splatb")),
+            "SpriteTint": ((red: 0.35, green: 0.08, blue: 0.3, alpha: 0.6)),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_spill_water_0",
+        parents: ["decal_spill"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/spill", state: "splat0")),
+            "SpriteTint": ((red: 0.6, green: 0.65, blue: 0.7, alpha: 0.55)),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_spill_water_1",
+        parents: ["decal_spill"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/spill", state: "splatb")),
+            "SpriteTint": ((red: 0.6, green: 0.65, blue: 0.7, alpha: 0.55)),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_spill_oil_0",
+        parents: ["decal_spill"],
+        components: {
+            "DisplayName": (name: "oil"),
+            "Appearance": (sprite: (rsi: "textures/decals/spill", state: "splat0")),
+            "SpriteTint": ((red: 0.08, green: 0.07, blue: 0.06, alpha: 0.8)),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_spill_oil_1",
+        parents: ["decal_spill"],
+        components: {
+            "DisplayName": (name: "oil"),
+            "Appearance": (sprite: (rsi: "textures/decals/spill", state: "splatb")),
+            "SpriteTint": ((red: 0.08, green: 0.07, blue: 0.06, alpha: 0.8)),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_grease_0",
+        parents: ["decal_spill"],
+        components: {
+            "DisplayName": (name: "grease"),
+            "Appearance": (sprite: (rsi: "textures/decals/spill", state: "splat0")),
+            "SpriteTint": ((red: 0.55, green: 0.48, blue: 0.25, alpha: 0.45)),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_grease_1",
+        parents: ["decal_spill"],
+        components: {
+            "DisplayName": (name: "grease"),
+            "Appearance": (sprite: (rsi: "textures/decals/spill", state: "splatb")),
+            "SpriteTint": ((red: 0.55, green: 0.48, blue: 0.25, alpha: 0.45)),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_smear_wine_0",
+        parents: ["decal_spill"],
+        components: {
+            "DisplayName": (name: "smear"),
+            "Appearance": (sprite: (rsi: "textures/decals/smear", state: "smear-2")),
+            "SpriteTint": ((red: 0.3, green: 0.05, blue: 0.25, alpha: 0.6)),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_smear_wine_1",
+        parents: ["decal_spill"],
+        components: {
+            "DisplayName": (name: "smear"),
+            "Appearance": (sprite: (rsi: "textures/decals/smear", state: "smear-5")),
+            "SpriteTint": ((red: 0.3, green: 0.05, blue: 0.25, alpha: 0.6)),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_smear_oil_0",
+        parents: ["decal_spill"],
+        components: {
+            "DisplayName": (name: "smear"),
+            "Appearance": (sprite: (rsi: "textures/decals/smear", state: "smear-2")),
+            "SpriteTint": ((red: 0.08, green: 0.07, blue: 0.06, alpha: 0.7)),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_smear_oil_1",
+        parents: ["decal_spill"],
+        components: {
+            "DisplayName": (name: "smear"),
+            "Appearance": (sprite: (rsi: "textures/decals/smear", state: "smear-5")),
+            "SpriteTint": ((red: 0.08, green: 0.07, blue: 0.06, alpha: 0.7)),
+        },
+    ),
+    // The old blood spray art, so never tint it red or it reads as a fight
+    (
+        type: "Entity",
+        id: "decal_oil_spray",
+        abstract: true,
+        parents: ["base_decal_scatter"],
+        components: {
+            "DisplayName": (name: "oil"),
+            "SpriteTint": ((red: 0.16, green: 0.15, blue: 0.18, alpha: 0.8)),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_oil_spray_0",
+        parents: ["decal_oil_spray"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/splatter", state: "splatter_0")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_oil_spray_1",
+        parents: ["decal_oil_spray"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/splatter", state: "splatter_1")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_oil_spray_2",
+        parents: ["decal_oil_spray"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/splatter", state: "splatter_2")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_oil_spray_3",
+        parents: ["decal_oil_spray"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/splatter", state: "splatter_3")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_oil_spray_4",
+        parents: ["decal_oil_spray"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/splatter", state: "splatter_4")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_oil_spray_5",
+        parents: ["decal_oil_spray"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/splatter", state: "splatter_5")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_rust_spray",
+        abstract: true,
+        parents: ["base_decal_scatter"],
+        components: {
+            "DisplayName": (name: "rust"),
+            "SpriteTint": ((red: 0.35, green: 0.18, blue: 0.1, alpha: 0.7)),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_rust_spray_0",
+        parents: ["decal_rust_spray"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/splatter", state: "splatter_1")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_rust_spray_1",
+        parents: ["decal_rust_spray"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/splatter", state: "splatter_3")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_rust_spray_2",
+        parents: ["decal_rust_spray"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/decals/splatter", state: "splatter_5")),
+        },
+    ),
+]

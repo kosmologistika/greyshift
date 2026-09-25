@@ -1,0 +1,145 @@
+[
+    (
+        type: "Entity",
+        id: "prop_game_piece",
+        abstract: true,
+        parents: ["base_item"],
+        components: {
+            "Item": (size: Tiny, held: Nothing),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_card",
+        abstract: true,
+        parents: ["prop_game_piece"],
+        components: {
+            "DisplayName": (name: "playing card"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_card_ace_hearts",
+        parents: ["prop_card"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/objects/props/playing_cards", state: "card_ace_hearts")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_card_king_hearts",
+        parents: ["prop_card"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/objects/props/playing_cards", state: "card_king_hearts")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_card_10_diamonds",
+        parents: ["prop_card"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/objects/props/playing_cards", state: "card_10_diamonds")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_card_ace_spades",
+        parents: ["prop_card"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/objects/props/playing_cards", state: "card_ace_spades")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_card_queen_clubs",
+        parents: ["prop_card"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/objects/props/playing_cards", state: "card_queen_clubs")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_card_facedown",
+        parents: ["prop_card"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/objects/props/playing_cards", state: "card_back_blue")),
+        },
+    ),
+    // The red back sinks into red and purple felt, so it is for the green tables only
+    (
+        type: "Entity",
+        id: "prop_card_facedown_red",
+        parents: ["prop_card"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/objects/props/playing_cards", state: "card_back_red")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_card_deck",
+        parents: ["prop_card"],
+        components: {
+            "DisplayName": (name: "deck of cards"),
+            "Appearance": (sprite: (rsi: "textures/objects/props/playing_cards", state: "deck_blue_full")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_card_deck_half",
+        parents: ["prop_card"],
+        components: {
+            "DisplayName": (name: "deck of cards"),
+            "Appearance": (sprite: (rsi: "textures/objects/props/playing_cards", state: "deck_blue_half")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_card_deck_black",
+        parents: ["prop_card"],
+        components: {
+            "DisplayName": (name: "deck of cards"),
+            "Appearance": (sprite: (rsi: "textures/objects/props/playing_cards", state: "deck_black_full")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_dice",
+        abstract: true,
+        parents: ["prop_game_piece"],
+        components: {
+            "DisplayName": (name: "die"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_dice_2",
+        parents: ["prop_dice"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/objects/props/dice", state: "d6_2")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_dice_3",
+        parents: ["prop_dice"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/objects/props/dice", state: "d6_3")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_dice_5",
+        parents: ["prop_dice"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/objects/props/dice", state: "d6_5")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_dice_6",
+        parents: ["prop_dice"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/objects/props/dice", state: "d6_6")),
+        },
+    ),
+]

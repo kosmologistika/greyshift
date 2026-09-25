@@ -61,6 +61,14 @@
     ),
     (
         type: "Entity",
+        id: "light_wall_tube_green",
+        parents: ["light_wall_tube"],
+        components: {
+            "PointLight": (color: (0.45, 1.0, 0.55), energy: 1.4),
+        },
+    ),
+    (
+        type: "Entity",
         id: "light_wall_small_gold",
         parents: ["light_wall_small"],
         components: {
