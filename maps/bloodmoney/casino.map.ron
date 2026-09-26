@@ -1,5 +1,5 @@
 (
-    version: 2,
+    version: 3,
     entities: [
         (
             pos: (-22, 15),
@@ -650,7 +650,7 @@
         ),
         (
             pos: (12, 14),
-            prototype: "prop_casino_cig_pack_crushed",
+            prototype: "prop_cig_pack_crushed",
             components: {
                 "SpriteRotation": (-0.22),
                 "GroundOffset": ((-11.0, 3.0)),
@@ -780,7 +780,7 @@
         ),
         (
             pos: (-17, 13),
-            prototype: "prop_casino_glass_wine_empty",
+            prototype: "prop_glass_wine_empty",
             components: {
                 "SpriteRotation": (1.62),
                 "GroundOffset": ((3.0, 2.0)),
@@ -796,7 +796,7 @@
         ),
         (
             pos: (-16, 13),
-            prototype: "prop_casino_bottle_champagne",
+            prototype: "prop_bottle_champagne",
             components: {
                 "SpriteRotation": (-1.45),
                 "GroundOffset": ((-1.0, -6.0)),
@@ -886,7 +886,7 @@
         ),
         (
             pos: (-3, 13),
-            prototype: "decal_casino_spill_whiskey_0",
+            prototype: "decal_spill_whiskey_0",
             components: {
                 "SpriteRotation": (2.94),
                 "SpriteTint": ((red: 0.35, green: 0.2, blue: 0.1, alpha: 0.59)),
@@ -902,7 +902,7 @@
         ),
         (
             pos: (-3, 13),
-            prototype: "prop_casino_broken_bottle",
+            prototype: "prop_broken_bottle",
             components: {
                 "SpriteRotation": (-1.99),
                 "GroundOffset": ((-3.0, 4.0)),
@@ -915,7 +915,7 @@
         ),
         (
             pos: (-2, 13),
-            prototype: "prop_casino_glass_whiskey_empty",
+            prototype: "prop_glass_whiskey_empty",
             components: {
                 "SpriteRotation": (-1.6),
                 "GroundOffset": ((-6.0, -3.0)),
@@ -940,7 +940,7 @@
         ),
         (
             pos: (1, 13),
-            prototype: "prop_casino_cig_pack_crushed",
+            prototype: "prop_cig_pack_crushed",
             components: {
                 "SpriteRotation": (0.06),
                 "GroundOffset": ((4.0, 8.0)),
@@ -984,7 +984,7 @@
         ),
         (
             pos: (4, 13),
-            prototype: "prop_casino_bottle_whiskey",
+            prototype: "prop_bottle_whiskey",
             components: {
                 "SpriteRotation": (-1.45),
                 "GroundOffset": ((2.0, 8.0)),
@@ -1116,7 +1116,7 @@
         ),
         (
             pos: (-20, 12),
-            prototype: "area_casino_vip",
+            prototype: "area_vip_lounge",
         ),
         (
             pos: (-19, 12),
@@ -1184,7 +1184,7 @@
         ),
         (
             pos: (-11, 12),
-            prototype: "prop_casino_bottle_whiskey",
+            prototype: "prop_bottle_whiskey",
             components: {
                 "GroundOffset": ((3.0, -3.0)),
                 "SpriteTint": ((red: 0.89, green: 0.89, blue: 0.89, alpha: 1.0)),
@@ -1192,7 +1192,7 @@
         ),
         (
             pos: (-11, 12),
-            prototype: "prop_casino_glass_whiskey",
+            prototype: "prop_glass_whiskey",
             components: {
                 "SpriteRotation": (0.02),
                 "GroundOffset": ((2.0, 5.0)),
@@ -1208,7 +1208,7 @@
         ),
         (
             pos: (-10, 12),
-            prototype: "prop_casino_ashtray",
+            prototype: "prop_ashtray",
             components: {
                 "SpriteRotation": (0.12),
                 "GroundOffset": ((6.0, 3.0)),
@@ -1225,7 +1225,7 @@
         ),
         (
             pos: (-9, 12),
-            prototype: "prop_casino_glass_martini",
+            prototype: "prop_glass_martini",
             components: {
                 "SpriteRotation": (-0.05),
                 "GroundOffset": ((-5.0, -3.0)),
@@ -1234,7 +1234,7 @@
         ),
         (
             pos: (-9, 12),
-            prototype: "prop_casino_glass_wine",
+            prototype: "prop_glass_wine",
             components: {
                 "SpriteRotation": (0.03),
                 "GroundOffset": ((6.0, -2.0)),
@@ -1250,7 +1250,7 @@
         ),
         (
             pos: (-8, 12),
-            prototype: "prop_casino_bottle_whiskey",
+            prototype: "prop_bottle_whiskey",
             components: {
                 "GroundOffset": ((-5.0, 3.0)),
             },
@@ -1273,7 +1273,7 @@
         ),
         (
             pos: (-6, 12),
-            prototype: "prop_casino_matchbox",
+            prototype: "prop_matchbox",
             components: {
                 "SpriteRotation": (0.02),
                 "GroundOffset": ((7.0, -1.0)),
@@ -1301,7 +1301,7 @@
         ),
         (
             pos: (-3, 12),
-            prototype: "prop_casino_glass_whiskey",
+            prototype: "prop_glass_whiskey",
             components: {
                 "SpriteRotation": (-0.04),
                 "GroundOffset": ((-6.0, 5.0)),
@@ -1318,7 +1318,7 @@
         ),
         (
             pos: (-2, 12),
-            prototype: "prop_casino_glass_wine",
+            prototype: "prop_glass_wine",
             components: {
                 "GroundOffset": ((2.0, 3.0)),
                 "SpriteTint": ((red: 0.92, green: 0.92, blue: 0.92, alpha: 1.0)),
@@ -1326,7 +1326,7 @@
         ),
         (
             pos: (-2, 12),
-            prototype: "prop_casino_glass_wine_empty",
+            prototype: "prop_glass_wine_empty",
             components: {
                 "SpriteRotation": (-0.01),
                 "GroundOffset": ((-4.0, -5.0)),
@@ -1350,7 +1350,7 @@
         ),
         (
             pos: (0, 12),
-            prototype: "prop_casino_glass_whiskey_empty",
+            prototype: "prop_glass_whiskey_empty",
             components: {
                 "SpriteRotation": (1.57),
                 "GroundOffset": ((-4.0, -3.0)),
@@ -1358,7 +1358,7 @@
         ),
         (
             pos: (0, 12),
-            prototype: "prop_casino_bottle_whiskey",
+            prototype: "prop_bottle_whiskey",
             components: {
                 "SpriteRotation": (0.01),
                 "GroundOffset": ((7.0, -5.0)),
@@ -1375,7 +1375,7 @@
         ),
         (
             pos: (1, 12),
-            prototype: "prop_casino_glass_whiskey",
+            prototype: "prop_glass_whiskey",
             components: {
                 "SpriteRotation": (-0.05),
                 "GroundOffset": ((5.0, -5.0)),
@@ -1383,7 +1383,7 @@
         ),
         (
             pos: (1, 12),
-            prototype: "prop_casino_cig_pack_open",
+            prototype: "prop_cig_pack_open",
             components: {
                 "SpriteRotation": (0.23),
                 "GroundOffset": ((-7.0, 1.0)),
@@ -1400,7 +1400,7 @@
         ),
         (
             pos: (2, 12),
-            prototype: "prop_casino_ashtray",
+            prototype: "prop_ashtray",
             components: {
                 "SpriteRotation": (0.19),
                 "GroundOffset": ((-5.0, 3.0)),
@@ -1416,7 +1416,7 @@
         ),
         (
             pos: (3, 12),
-            prototype: "prop_casino_cig_pack_open",
+            prototype: "prop_cig_pack_open",
             components: {
                 "SpriteRotation": (-0.4),
                 "GroundOffset": ((-3.0, -3.0)),
@@ -1436,7 +1436,7 @@
         ),
         (
             pos: (5, 12),
-            prototype: "prop_casino_bottle_whiskey",
+            prototype: "prop_bottle_whiskey",
             components: {
                 "SpriteRotation": (-0.05),
                 "GroundOffset": ((6.0, 7.0)),
@@ -1445,7 +1445,7 @@
         ),
         (
             pos: (5, 12),
-            prototype: "prop_casino_glass_whiskey_empty",
+            prototype: "prop_glass_whiskey_empty",
             components: {
                 "SpriteRotation": (-0.04),
                 "GroundOffset": ((7.0, -3.0)),
@@ -1485,7 +1485,7 @@
         ),
         (
             pos: (9, 12),
-            prototype: "prop_casino_glass_martini",
+            prototype: "prop_glass_martini",
             components: {
                 "GroundOffset": ((2.0, 6.0)),
                 "SpriteTint": ((red: 0.91, green: 0.91, blue: 0.91, alpha: 1.0)),
@@ -1780,7 +1780,7 @@
         ),
         (
             pos: (-1, 11),
-            prototype: "decal_casino_spill_whiskey_1",
+            prototype: "decal_spill_whiskey_1",
             components: {
                 "SpriteRotation": (0.6),
                 "GroundOffset": ((0.0, 4.0)),
@@ -1789,7 +1789,7 @@
         ),
         (
             pos: (-1, 11),
-            prototype: "prop_casino_broken_bottle",
+            prototype: "prop_broken_bottle",
             components: {
                 "SpriteRotation": (0.06),
                 "GroundOffset": ((-2.0, 9.0)),
@@ -1961,7 +1961,7 @@
         ),
         (
             pos: (14, 11),
-            prototype: "prop_casino_cig_pack_crushed",
+            prototype: "prop_cig_pack_crushed",
             components: {
                 "SpriteRotation": (0.35),
                 "GroundOffset": ((-3.0, -4.0)),
@@ -1970,7 +1970,7 @@
         ),
         (
             pos: (14, 11),
-            prototype: "decal_casino_ash",
+            prototype: "decal_ash",
             components: {
                 "SpriteRotation": (1.1),
                 "GroundOffset": ((4.0, 3.0)),
@@ -2175,7 +2175,7 @@
         ),
         (
             pos: (-2, 10),
-            prototype: "area_casino_bar",
+            prototype: "area_bar",
         ),
         (
             pos: (-1, 10),
@@ -2407,7 +2407,7 @@
         ),
         (
             pos: (-12, 9),
-            prototype: "prop_casino_cig_pack_crushed",
+            prototype: "prop_cig_pack_crushed",
             components: {
                 "SpriteRotation": (-0.05),
                 "GroundOffset": ((-4.0, -6.0)),
@@ -2540,7 +2540,7 @@
         ),
         (
             pos: (9, 9),
-            prototype: "prop_casino_cig_pack_crushed_robust",
+            prototype: "prop_cig_pack_crushed_robust",
             components: {
                 "SpriteRotation": (0.29),
                 "GroundOffset": ((4.0, -8.0)),
@@ -2616,7 +2616,7 @@
         ),
         (
             pos: (19, 9),
-            prototype: "prop_casino_cig_pack_crushed_robust",
+            prototype: "prop_cig_pack_crushed_robust",
             components: {
                 "SpriteRotation": (0.11),
                 "GroundOffset": ((-8.0, 2.0)),
@@ -3234,7 +3234,7 @@
         ),
         (
             pos: (16, 7),
-            prototype: "area_casino_slots",
+            prototype: "area_slots",
         ),
         (
             pos: (17, 7),
@@ -3427,7 +3427,7 @@
         ),
         (
             pos: (1, 6),
-            prototype: "prop_casino_glass_whiskey_empty",
+            prototype: "prop_glass_whiskey_empty",
             components: {
                 "SpriteRotation": (1.57),
                 "GroundOffset": ((5.0, -6.0)),
@@ -3435,7 +3435,7 @@
         ),
         (
             pos: (1, 6),
-            prototype: "prop_casino_card_ace_hearts",
+            prototype: "prop_card_ace_hearts",
             components: {
                 "SpriteRotation": (0.37),
                 "GroundOffset": ((5.0, 6.0)),
@@ -3451,7 +3451,7 @@
         ),
         (
             pos: (2, 6),
-            prototype: "prop_casino_deck",
+            prototype: "prop_card_deck",
             components: {
                 "SpriteRotation": (-0.2),
                 "GroundOffset": ((-5.0, -6.0)),
@@ -3459,7 +3459,7 @@
         ),
         (
             pos: (2, 6),
-            prototype: "prop_casino_card_facedown_red",
+            prototype: "prop_card_facedown_red",
             components: {
                 "SpriteRotation": (0.68),
                 "GroundOffset": ((3.0, -1.0)),
@@ -3467,7 +3467,7 @@
         ),
         (
             pos: (2, 6),
-            prototype: "prop_casino_ashtray",
+            prototype: "prop_ashtray",
             components: {
                 "SpriteRotation": (0.11),
                 "GroundOffset": ((4.0, 5.0)),
@@ -3847,7 +3847,7 @@
         ),
         (
             pos: (11, 5),
-            prototype: "decal_casino_butts",
+            prototype: "decal_cigbutt_pile",
             components: {
                 "SpriteRotation": (0.6),
                 "SpriteTint": ((red: 0.6, green: 0.55, blue: 0.5, alpha: 0.8)),
@@ -4002,7 +4002,7 @@
         ),
         (
             pos: (-13, 4),
-            prototype: "prop_casino_cigar_butt",
+            prototype: "prop_cigar_butt",
             components: {
                 "SpriteRotation": (2.59),
                 "GroundOffset": ((11.0, 1.0)),
@@ -4022,7 +4022,7 @@
         ),
         (
             pos: (-12, 4),
-            prototype: "prop_casino_cigar_box_closed",
+            prototype: "prop_cigar_box_closed",
             components: {
                 "SpriteRotation": (0.09),
                 "GroundOffset": ((-3.0, 4.0)),
@@ -4030,7 +4030,7 @@
         ),
         (
             pos: (-12, 4),
-            prototype: "prop_casino_cigar",
+            prototype: "prop_cigar",
             components: {
                 "SpriteRotation": (1.8),
                 "GroundOffset": ((6.0, -1.0)),
@@ -4338,7 +4338,7 @@
         ),
         (
             pos: (-12, 3),
-            prototype: "prop_casino_glass_wine",
+            prototype: "prop_glass_wine",
             components: {
                 "SpriteRotation": (-0.03),
                 "GroundOffset": ((-6.0, 4.0)),
@@ -4346,7 +4346,7 @@
         ),
         (
             pos: (-12, 3),
-            prototype: "prop_casino_ashtray",
+            prototype: "prop_ashtray",
             components: {
                 "SpriteRotation": (-0.09),
                 "GroundOffset": ((5.0, -5.0)),
@@ -4641,7 +4641,7 @@
         ),
         (
             pos: (-17, 2),
-            prototype: "prop_casino_cig_pack_crushed",
+            prototype: "prop_cig_pack_crushed",
             components: {
                 "SpriteRotation": (0.28),
                 "GroundOffset": ((-3.0, -8.0)),
@@ -4662,7 +4662,7 @@
         ),
         (
             pos: (-16, 2),
-            prototype: "prop_casino_cigar_box",
+            prototype: "prop_cigar_box",
             components: {
                 "SpriteRotation": (0.06),
                 "GroundOffset": ((-5.0, 2.0)),
@@ -4671,7 +4671,7 @@
         ),
         (
             pos: (-16, 2),
-            prototype: "prop_casino_cigar",
+            prototype: "prop_cigar",
             components: {
                 "SpriteRotation": (-2.1),
                 "GroundOffset": ((-5.0, -4.0)),
@@ -4679,7 +4679,7 @@
         ),
         (
             pos: (-16, 2),
-            prototype: "prop_casino_bottle_champagne",
+            prototype: "prop_bottle_champagne",
             components: {
                 "GroundOffset": ((4.0, 5.0)),
             },
@@ -4698,7 +4698,7 @@
         ),
         (
             pos: (-15, 2),
-            prototype: "prop_casino_bottle_wine",
+            prototype: "prop_bottle_wine",
             components: {
                 "SpriteRotation": (-0.04),
                 "GroundOffset": ((-4.0, 1.0)),
@@ -4706,7 +4706,7 @@
         ),
         (
             pos: (-15, 2),
-            prototype: "prop_casino_deck_black",
+            prototype: "prop_card_deck_black",
             components: {
                 "SpriteRotation": (-0.09),
                 "GroundOffset": ((2.0, 7.0)),
@@ -4842,7 +4842,7 @@
         ),
         (
             pos: (4, 2),
-            prototype: "prop_casino_cig_pack_open",
+            prototype: "prop_cig_pack_open",
             components: {
                 "SpriteRotation": (0.48),
                 "GroundOffset": ((-5.0, 3.0)),
@@ -4851,7 +4851,7 @@
         ),
         (
             pos: (4, 2),
-            prototype: "prop_casino_cigar",
+            prototype: "prop_cigar",
             components: {
                 "SpriteRotation": (1.51),
                 "GroundOffset": ((4.0, -5.0)),
@@ -4859,7 +4859,7 @@
         ),
         (
             pos: (4, 2),
-            prototype: "prop_casino_card_king_hearts",
+            prototype: "prop_card_king_hearts",
             components: {
                 "SpriteRotation": (-0.34),
                 "GroundOffset": ((-6.0, -3.0)),
@@ -4875,7 +4875,7 @@
         ),
         (
             pos: (5, 2),
-            prototype: "prop_casino_deck",
+            prototype: "prop_card_deck",
             components: {
                 "SpriteRotation": (-0.3),
                 "GroundOffset": ((-3.0, 4.0)),
@@ -4883,7 +4883,7 @@
         ),
         (
             pos: (5, 2),
-            prototype: "prop_casino_card_facedown_red",
+            prototype: "prop_card_facedown_red",
             components: {
                 "SpriteRotation": (-0.03),
                 "GroundOffset": ((-2.0, -5.0)),
@@ -5151,7 +5151,7 @@
         ),
         (
             pos: (-7, 1),
-            prototype: "prop_casino_dice_6",
+            prototype: "prop_dice_6",
             components: {
                 "SpriteRotation": (-0.33),
                 "GroundOffset": ((-2.0, 4.0)),
@@ -5159,7 +5159,7 @@
         ),
         (
             pos: (-7, 1),
-            prototype: "prop_casino_dice_5",
+            prototype: "prop_dice_5",
             components: {
                 "SpriteRotation": (-0.38),
                 "GroundOffset": ((3.0, -2.0)),
@@ -5251,7 +5251,7 @@
         ),
         (
             pos: (2, 1),
-            prototype: "decal_casino_ash",
+            prototype: "decal_ash",
             components: {
                 "SpriteRotation": (1.94),
                 "GroundOffset": ((6.0, -3.0)),
@@ -5271,7 +5271,7 @@
         ),
         (
             pos: (4, 1),
-            prototype: "prop_casino_dice_6",
+            prototype: "prop_dice_6",
             components: {
                 "SpriteRotation": (0.37),
                 "GroundOffset": ((5.0, -3.0)),
@@ -5280,7 +5280,7 @@
         ),
         (
             pos: (4, 1),
-            prototype: "prop_casino_dice_5",
+            prototype: "prop_dice_5",
             components: {
                 "SpriteRotation": (0.22),
                 "GroundOffset": ((-5.0, 3.0)),
@@ -5289,7 +5289,7 @@
         ),
         (
             pos: (4, 1),
-            prototype: "prop_casino_card_facedown_red",
+            prototype: "prop_card_facedown_red",
             components: {
                 "SpriteRotation": (-0.26),
                 "GroundOffset": ((2.0, 6.0)),
@@ -5305,7 +5305,7 @@
         ),
         (
             pos: (5, 1),
-            prototype: "prop_casino_card_king_hearts",
+            prototype: "prop_card_king_hearts",
             components: {
                 "SpriteRotation": (0.46),
                 "GroundOffset": ((-5.0, -4.0)),
@@ -5313,7 +5313,7 @@
         ),
         (
             pos: (5, 1),
-            prototype: "prop_casino_card_ace_spades",
+            prototype: "prop_card_ace_spades",
             components: {
                 "SpriteRotation": (-0.13),
                 "GroundOffset": ((3.0, -3.0)),
@@ -5321,7 +5321,7 @@
         ),
         (
             pos: (5, 1),
-            prototype: "prop_casino_ashtray",
+            prototype: "prop_ashtray",
             components: {
                 "SpriteRotation": (0.09),
                 "GroundOffset": ((6.0, 5.0)),
@@ -5384,7 +5384,7 @@
         ),
         (
             pos: (13, 1),
-            prototype: "area_casino_cage",
+            prototype: "area_cashier_cage",
         ),
         (
             pos: (13, 1),
@@ -5604,7 +5604,7 @@
         ),
         (
             pos: (-7, 0),
-            prototype: "prop_casino_card_queen_clubs",
+            prototype: "prop_card_queen_clubs",
             components: {
                 "SpriteRotation": (0.44),
                 "GroundOffset": ((2.0, -4.0)),
@@ -5613,7 +5613,7 @@
         ),
         (
             pos: (-7, 0),
-            prototype: "prop_casino_glass_whiskey",
+            prototype: "prop_glass_whiskey",
             components: {
                 "SpriteRotation": (0.02),
                 "GroundOffset": ((-2.0, 5.0)),
@@ -5916,7 +5916,7 @@
         ),
         (
             pos: (-7, -1),
-            prototype: "prop_casino_cigar",
+            prototype: "prop_cigar",
             components: {
                 "SpriteRotation": (-1.28),
                 "GroundOffset": ((3.0, -2.0)),
@@ -5925,7 +5925,7 @@
         ),
         (
             pos: (-7, -1),
-            prototype: "prop_casino_card_10_diamonds",
+            prototype: "prop_card_10_diamonds",
             components: {
                 "SpriteRotation": (0.6),
                 "GroundOffset": ((-2.0, 4.0)),
@@ -5946,7 +5946,7 @@
         ),
         (
             pos: (-4, -1),
-            prototype: "area_casino_floor",
+            prototype: "area_gaming_floor",
         ),
         (
             pos: (-4, -1),
@@ -6018,7 +6018,7 @@
         ),
         (
             pos: (2, -1),
-            prototype: "decal_casino_ash",
+            prototype: "decal_ash",
             components: {
                 "SpriteRotation": (2.39),
                 "GroundOffset": ((-6.0, -8.0)),
@@ -6124,7 +6124,7 @@
         ),
         (
             pos: (18, -1),
-            prototype: "area_casino_vault",
+            prototype: "area_vault",
         ),
         (
             pos: (19, -1),
@@ -6206,7 +6206,7 @@
         ),
         (
             pos: (-19, -2),
-            prototype: "prop_casino_cigar_box",
+            prototype: "prop_cigar_box",
             components: {
                 "GroundOffset": ((6.0, -1.0)),
                 "SpriteTint": ((red: 0.93, green: 0.93, blue: 0.93, alpha: 1.0)),
@@ -6214,7 +6214,7 @@
         ),
         (
             pos: (-19, -2),
-            prototype: "prop_casino_cigar",
+            prototype: "prop_cigar",
             components: {
                 "SpriteRotation": (0.72),
                 "GroundOffset": ((-4.0, 4.0)),
@@ -6222,7 +6222,7 @@
         ),
         (
             pos: (-19, -2),
-            prototype: "prop_casino_matchbox",
+            prototype: "prop_matchbox",
             components: {
                 "SpriteRotation": (0.02),
                 "GroundOffset": ((-3.0, -2.0)),
@@ -6643,7 +6643,7 @@
         ),
         (
             pos: (-14, -3),
-            prototype: "prop_casino_cigar_box",
+            prototype: "prop_cigar_box",
             components: {
                 "SpriteRotation": (0.07),
                 "GroundOffset": ((-6.0, 1.0)),
@@ -6651,7 +6651,7 @@
         ),
         (
             pos: (-14, -3),
-            prototype: "prop_casino_cigar",
+            prototype: "prop_cigar",
             components: {
                 "SpriteRotation": (-2.97),
                 "GroundOffset": ((3.0, -3.0)),
@@ -6671,7 +6671,7 @@
         ),
         (
             pos: (-13, -3),
-            prototype: "prop_casino_bottle_wine",
+            prototype: "prop_bottle_wine",
             components: {
                 "SpriteRotation": (0.05),
                 "GroundOffset": ((-6.0, 1.0)),
@@ -6679,7 +6679,7 @@
         ),
         (
             pos: (-13, -3),
-            prototype: "prop_casino_deck_black",
+            prototype: "prop_card_deck_black",
             components: {
                 "SpriteRotation": (-0.13),
                 "GroundOffset": ((5.0, -4.0)),
@@ -7378,7 +7378,7 @@
         ),
         (
             pos: (-4, -5),
-            prototype: "prop_casino_dice_2",
+            prototype: "prop_dice_2",
             components: {
                 "SpriteRotation": (-0.19),
                 "GroundOffset": ((-6.0, -2.0)),
@@ -7387,7 +7387,7 @@
         ),
         (
             pos: (-4, -5),
-            prototype: "prop_casino_dice_5",
+            prototype: "prop_dice_5",
             components: {
                 "SpriteRotation": (0.46),
                 "GroundOffset": ((-6.0, 3.0)),
@@ -7403,7 +7403,7 @@
         ),
         (
             pos: (-3, -5),
-            prototype: "prop_casino_card_queen_clubs",
+            prototype: "prop_card_queen_clubs",
             components: {
                 "SpriteRotation": (-0.38),
                 "GroundOffset": ((5.0, 3.0)),
@@ -7411,7 +7411,7 @@
         ),
         (
             pos: (-3, -5),
-            prototype: "prop_casino_card_ace_hearts",
+            prototype: "prop_card_ace_hearts",
             components: {
                 "SpriteRotation": (0.27),
                 "GroundOffset": ((-3.0, 2.0)),
@@ -7419,7 +7419,7 @@
         ),
         (
             pos: (-3, -5),
-            prototype: "prop_casino_glass_martini",
+            prototype: "prop_glass_martini",
             components: {
                 "SpriteRotation": (-0.02),
                 "GroundOffset": ((-3.0, -2.0)),
@@ -7436,7 +7436,7 @@
         ),
         (
             pos: (-2, -5),
-            prototype: "prop_casino_cig_pack",
+            prototype: "prop_cig_pack",
             components: {
                 "SpriteRotation": (-0.45),
                 "GroundOffset": ((-4.0, -5.0)),
@@ -7444,7 +7444,7 @@
         ),
         (
             pos: (-2, -5),
-            prototype: "prop_casino_card_ace_spades",
+            prototype: "prop_card_ace_spades",
             components: {
                 "SpriteRotation": (0.08),
                 "GroundOffset": ((-7.0, 1.0)),
@@ -7534,7 +7534,7 @@
         ),
         (
             pos: (10, -5),
-            prototype: "prop_casino_paper_scrap",
+            prototype: "prop_paper_scrap",
             components: {
                 "SpriteRotation": (1.33),
                 "GroundOffset": ((-1.0, 6.0)),
@@ -7579,7 +7579,7 @@
         ),
         (
             pos: (13, -5),
-            prototype: "prop_casino_paper_scrap",
+            prototype: "prop_paper_scrap",
             components: {
                 "SpriteRotation": (-1.69),
                 "GroundOffset": ((-4.0, -6.0)),
@@ -7596,7 +7596,7 @@
         ),
         (
             pos: (14, -5),
-            prototype: "prop_casino_cig_pack_crushed",
+            prototype: "prop_cig_pack_crushed",
             components: {
                 "SpriteRotation": (-0.4),
                 "GroundOffset": ((-6.0, -3.0)),
@@ -7931,7 +7931,7 @@
         ),
         (
             pos: (12, -6),
-            prototype: "prop_casino_paper_scrap",
+            prototype: "prop_paper_scrap",
             components: {
                 "SpriteRotation": (-2.62),
                 "GroundOffset": ((5.0, -2.0)),
@@ -7955,7 +7955,7 @@
         ),
         (
             pos: (14, -6),
-            prototype: "prop_casino_paper_scrap",
+            prototype: "prop_paper_scrap",
             components: {
                 "SpriteRotation": (-2.55),
                 "GroundOffset": ((-3.0, 4.0)),
@@ -8975,7 +8975,7 @@
         ),
         (
             pos: (10, -9),
-            prototype: "decal_casino_tracks_wheels",
+            prototype: "decal_tracks_wheels",
             components: {
                 "SpriteTint": ((red: 0.25, green: 0.24, blue: 0.22, alpha: 0.6)),
             },
@@ -9123,7 +9123,7 @@
         ),
         (
             pos: (-19, -10),
-            prototype: "prop_casino_torn_wrap",
+            prototype: "prop_torn_wrap",
             components: {
                 "SpriteRotation": (-0.96),
                 "GroundOffset": ((6.0, -7.0)),
@@ -9145,7 +9145,7 @@
         ),
         (
             pos: (-18, -10),
-            prototype: "decal_casino_smear_oil_0",
+            prototype: "decal_smear_oil_0",
             components: {
                 "SpriteRotation": (-3.12),
                 "SpriteTint": ((red: 0.08, green: 0.07, blue: 0.06, alpha: 0.75)),
@@ -9157,7 +9157,7 @@
         ),
         (
             pos: (-17, -10),
-            prototype: "prop_casino_torn_wrap",
+            prototype: "prop_torn_wrap",
             components: {
                 "SpriteRotation": (2.38),
                 "GroundOffset": ((-4.0, -10.0)),
@@ -9170,11 +9170,11 @@
         ),
         (
             pos: (-16, -10),
-            prototype: "area_casino_service",
+            prototype: "area_service_corridor",
         ),
         (
             pos: (-16, -10),
-            prototype: "decal_casino_tracks_wheels",
+            prototype: "decal_tracks_wheels",
             components: {
                 "SpriteRotation": (-1.57),
                 "SpriteTint": ((red: 0.2, green: 0.19, blue: 0.18, alpha: 0.45)),
@@ -9186,7 +9186,7 @@
         ),
         (
             pos: (-15, -10),
-            prototype: "decal_casino_tracks_wheels",
+            prototype: "decal_tracks_wheels",
             components: {
                 "SpriteRotation": (-1.57),
                 "SpriteTint": ((red: 0.2, green: 0.19, blue: 0.18, alpha: 0.45)),
@@ -9198,7 +9198,7 @@
         ),
         (
             pos: (-14, -10),
-            prototype: "decal_casino_tracks_wheels",
+            prototype: "decal_tracks_wheels",
             components: {
                 "SpriteRotation": (-1.57),
                 "SpriteTint": ((red: 0.2, green: 0.19, blue: 0.18, alpha: 0.45)),
@@ -9210,7 +9210,7 @@
         ),
         (
             pos: (-13, -10),
-            prototype: "decal_casino_tracks_wheels",
+            prototype: "decal_tracks_wheels",
             components: {
                 "SpriteRotation": (-1.57),
                 "SpriteTint": ((red: 0.2, green: 0.19, blue: 0.18, alpha: 0.45)),
@@ -9222,7 +9222,7 @@
         ),
         (
             pos: (-12, -10),
-            prototype: "decal_casino_tracks_wheels",
+            prototype: "decal_tracks_wheels",
             components: {
                 "SpriteRotation": (-1.57),
                 "SpriteTint": ((red: 0.2, green: 0.19, blue: 0.18, alpha: 0.45)),
@@ -9234,7 +9234,7 @@
         ),
         (
             pos: (-11, -10),
-            prototype: "decal_casino_tracks_wheels",
+            prototype: "decal_tracks_wheels",
             components: {
                 "SpriteRotation": (-1.57),
                 "SpriteTint": ((red: 0.2, green: 0.19, blue: 0.18, alpha: 0.45)),
@@ -9246,7 +9246,7 @@
         ),
         (
             pos: (-10, -10),
-            prototype: "decal_casino_tracks_wheels",
+            prototype: "decal_tracks_wheels",
             components: {
                 "SpriteRotation": (-1.57),
                 "SpriteTint": ((red: 0.2, green: 0.19, blue: 0.18, alpha: 0.45)),
@@ -9368,7 +9368,7 @@
         ),
         (
             pos: (10, -10),
-            prototype: "decal_casino_tracks_wheels",
+            prototype: "decal_tracks_wheels",
             components: {
                 "SpriteTint": ((red: 0.25, green: 0.24, blue: 0.22, alpha: 0.6)),
             },
@@ -9454,7 +9454,7 @@
         ),
         (
             pos: (18, -10),
-            prototype: "area_casino_dock",
+            prototype: "area_loading_dock",
         ),
         (
             pos: (18, -10),
@@ -9606,7 +9606,7 @@
         ),
         (
             pos: (-10, -11),
-            prototype: "decal_casino_butts",
+            prototype: "decal_cigbutt_pile",
             components: {
                 "SpriteRotation": (0.08),
                 "SpriteTint": ((red: 0.6, green: 0.55, blue: 0.5, alpha: 0.8)),
@@ -9614,7 +9614,7 @@
         ),
         (
             pos: (-10, -11),
-            prototype: "decal_casino_ash",
+            prototype: "decal_ash",
             components: {
                 "GroundOffset": ((4.0, -3.0)),
             },
@@ -9645,7 +9645,7 @@
         ),
         (
             pos: (-5, -11),
-            prototype: "decal_casino_grease_0",
+            prototype: "decal_grease_0",
             components: {
                 "SpriteRotation": (-2.75),
                 "SpriteTint": ((red: 0.56, green: 0.48, blue: 0.25, alpha: 0.41)),
@@ -9673,7 +9673,7 @@
         ),
         (
             pos: (0, -11),
-            prototype: "area_casino_kitchen",
+            prototype: "area_kitchen",
         ),
         (
             pos: (1, -11),
@@ -9697,7 +9697,7 @@
         ),
         (
             pos: (5, -11),
-            prototype: "decal_casino_grease_0",
+            prototype: "decal_grease_0",
             components: {
                 "SpriteRotation": (-0.19),
                 "SpriteTint": ((red: 0.53, green: 0.48, blue: 0.24, alpha: 0.46)),
@@ -9729,7 +9729,7 @@
         ),
         (
             pos: (10, -11),
-            prototype: "decal_casino_tracks_wheels",
+            prototype: "decal_tracks_wheels",
             components: {
                 "SpriteTint": ((red: 0.25, green: 0.24, blue: 0.22, alpha: 0.6)),
             },
@@ -9911,7 +9911,7 @@
         ),
         (
             pos: (-11, -12),
-            prototype: "prop_casino_cig_pack_crushed",
+            prototype: "prop_cig_pack_crushed",
             components: {
                 "SpriteRotation": (0.46),
                 "GroundOffset": ((-9.0, 1.0)),
@@ -9942,7 +9942,7 @@
         ),
         (
             pos: (-8, -12),
-            prototype: "decal_casino_grease_1",
+            prototype: "decal_grease_1",
             components: {
                 "SpriteRotation": (2.3),
                 "SpriteTint": ((red: 0.53, green: 0.48, blue: 0.24, alpha: 0.41)),
@@ -9966,7 +9966,7 @@
         ),
         (
             pos: (-6, -12),
-            prototype: "prop_casino_broken_plate_small",
+            prototype: "prop_broken_plate_small",
             components: {
                 "SpriteRotation": (-0.85),
                 "GroundOffset": ((-2.0, -5.0)),
@@ -9983,7 +9983,7 @@
         ),
         (
             pos: (-5, -12),
-            prototype: "prop_casino_broken_plate",
+            prototype: "prop_broken_plate",
             components: {
                 "SpriteRotation": (0.4),
                 "GroundOffset": ((2.0, 1.0)),
@@ -9999,7 +9999,7 @@
         ),
         (
             pos: (-4, -12),
-            prototype: "prop_casino_burnt_food",
+            prototype: "prop_burnt_food",
             components: {
                 "SpriteRotation": (0.9),
                 "GroundOffset": ((-3.0, 2.0)),
@@ -10015,7 +10015,7 @@
         ),
         (
             pos: (-3, -12),
-            prototype: "prop_casino_cig_pack_open",
+            prototype: "prop_cig_pack_open",
             components: {
                 "SpriteRotation": (0.2),
                 "GroundOffset": ((7.0, -2.0)),
@@ -10027,7 +10027,7 @@
         ),
         (
             pos: (-2, -12),
-            prototype: "decal_casino_grease_0",
+            prototype: "decal_grease_0",
             components: {
                 "SpriteRotation": (2.69),
                 "SpriteTint": ((red: 0.52, green: 0.48, blue: 0.24, alpha: 0.43)),
@@ -10051,7 +10051,7 @@
         ),
         (
             pos: (1, -12),
-            prototype: "prop_casino_burnt_food",
+            prototype: "prop_burnt_food",
             components: {
                 "SpriteRotation": (1.24),
                 "GroundOffset": ((-6.0, 4.0)),
@@ -10068,7 +10068,7 @@
         ),
         (
             pos: (2, -12),
-            prototype: "prop_casino_burnt_food",
+            prototype: "prop_burnt_food",
             components: {
                 "SpriteRotation": (-1.15),
                 "GroundOffset": ((4.0, 7.0)),
@@ -10084,7 +10084,7 @@
         ),
         (
             pos: (3, -12),
-            prototype: "prop_casino_bottle_whiskey",
+            prototype: "prop_bottle_whiskey",
             components: {
                 "SpriteRotation": (0.02),
                 "GroundOffset": ((7.0, -3.0)),
@@ -10101,7 +10101,7 @@
         ),
         (
             pos: (4, -12),
-            prototype: "prop_casino_broken_plate_small",
+            prototype: "prop_broken_plate_small",
             components: {
                 "SpriteRotation": (-0.03),
                 "GroundOffset": ((5.0, -1.0)),
@@ -10117,7 +10117,7 @@
         ),
         (
             pos: (5, -12),
-            prototype: "prop_casino_glass_whiskey_empty",
+            prototype: "prop_glass_whiskey_empty",
             components: {
                 "SpriteRotation": (-0.06),
                 "GroundOffset": ((-5.0, -3.0)),
@@ -10133,7 +10133,7 @@
         ),
         (
             pos: (6, -12),
-            prototype: "prop_casino_broken_plate_small",
+            prototype: "prop_broken_plate_small",
             components: {
                 "GroundOffset": ((6.0, -1.0)),
             },
@@ -10178,7 +10178,7 @@
         ),
         (
             pos: (10, -12),
-            prototype: "decal_casino_tracks_wheels",
+            prototype: "decal_tracks_wheels",
             components: {
                 "SpriteTint": ((red: 0.25, green: 0.24, blue: 0.22, alpha: 0.6)),
             },
@@ -10403,7 +10403,7 @@
         ),
         (
             pos: (-4, -13),
-            prototype: "decal_casino_grease_1",
+            prototype: "decal_grease_1",
             components: {
                 "SpriteRotation": (1.88),
                 "SpriteTint": ((red: 0.54, green: 0.48, blue: 0.25, alpha: 0.44)),
@@ -10468,7 +10468,7 @@
         ),
         (
             pos: (4, -13),
-            prototype: "decal_casino_grease_0",
+            prototype: "decal_grease_0",
             components: {
                 "SpriteRotation": (3.11),
                 "SpriteTint": ((red: 0.54, green: 0.47, blue: 0.24, alpha: 0.4)),
@@ -10530,7 +10530,7 @@
         ),
         (
             pos: (10, -13),
-            prototype: "decal_casino_tracks_wheels",
+            prototype: "decal_tracks_wheels",
             components: {
                 "SpriteTint": ((red: 0.25, green: 0.24, blue: 0.22, alpha: 0.6)),
             },
@@ -10571,7 +10571,7 @@
         ),
         (
             pos: (12, -13),
-            prototype: "decal_casino_smear_oil_0",
+            prototype: "decal_smear_oil_0",
             components: {
                 "SpriteRotation": (-1.67),
                 "SpriteTint": ((red: 0.08, green: 0.07, blue: 0.06, alpha: 0.74)),
@@ -10592,7 +10592,7 @@
         ),
         (
             pos: (13, -13),
-            prototype: "prop_casino_torn_wrap",
+            prototype: "prop_torn_wrap",
             components: {
                 "SpriteRotation": (-1.79),
                 "GroundOffset": ((-2.0, 10.0)),
@@ -10621,7 +10621,7 @@
         ),
         (
             pos: (14, -13),
-            prototype: "decal_casino_wrap_shreds",
+            prototype: "decal_wrap_shreds",
             components: {
                 "SpriteRotation": (1.86),
                 "GroundOffset": ((2.0, -4.0)),
@@ -10671,7 +10671,7 @@
         ),
         (
             pos: (18, -13),
-            prototype: "decal_casino_smear_oil_0",
+            prototype: "decal_smear_oil_0",
             components: {
                 "SpriteRotation": (-0.89),
                 "SpriteTint": ((red: 0.08, green: 0.07, blue: 0.06, alpha: 0.7)),
@@ -10945,7 +10945,7 @@
         ),
         (
             pos: (-5, -14),
-            prototype: "decal_casino_spill_water_0",
+            prototype: "decal_spill_water_0",
             components: {
                 "SpriteRotation": (-1.2),
                 "SpriteTint": ((red: 0.6, green: 0.65, blue: 0.69, alpha: 0.58)),
@@ -10989,7 +10989,7 @@
         ),
         (
             pos: (0, -14),
-            prototype: "decal_casino_spill_water_1",
+            prototype: "decal_spill_water_1",
             components: {
                 "SpriteRotation": (-0.16),
                 "SpriteTint": ((red: 0.59, green: 0.63, blue: 0.69, alpha: 0.52)),
@@ -11071,7 +11071,7 @@
         ),
         (
             pos: (10, -14),
-            prototype: "decal_casino_tracks_wheels",
+            prototype: "decal_tracks_wheels",
             components: {
                 "SpriteRotation": (1.57),
                 "SpriteTint": ((red: 0.25, green: 0.24, blue: 0.22, alpha: 0.6)),
@@ -11083,7 +11083,7 @@
         ),
         (
             pos: (11, -14),
-            prototype: "decal_casino_tracks_wheels",
+            prototype: "decal_tracks_wheels",
             components: {
                 "SpriteRotation": (1.57),
                 "SpriteTint": ((red: 0.25, green: 0.24, blue: 0.22, alpha: 0.6)),
@@ -11104,7 +11104,7 @@
         ),
         (
             pos: (12, -14),
-            prototype: "decal_casino_tracks_wheels",
+            prototype: "decal_tracks_wheels",
             components: {
                 "SpriteRotation": (1.57),
                 "SpriteTint": ((red: 0.25, green: 0.24, blue: 0.22, alpha: 0.6)),
@@ -11116,7 +11116,7 @@
         ),
         (
             pos: (13, -14),
-            prototype: "decal_casino_tracks_wheels",
+            prototype: "decal_tracks_wheels",
             components: {
                 "SpriteRotation": (1.57),
                 "SpriteTint": ((red: 0.25, green: 0.24, blue: 0.22, alpha: 0.6)),
@@ -11128,7 +11128,7 @@
         ),
         (
             pos: (14, -14),
-            prototype: "decal_casino_tracks_wheels",
+            prototype: "decal_tracks_wheels",
             components: {
                 "SpriteRotation": (1.57),
                 "SpriteTint": ((red: 0.25, green: 0.24, blue: 0.22, alpha: 0.6)),
@@ -11140,7 +11140,7 @@
         ),
         (
             pos: (15, -14),
-            prototype: "decal_casino_tracks_wheels",
+            prototype: "decal_tracks_wheels",
             components: {
                 "SpriteRotation": (1.57),
                 "SpriteTint": ((red: 0.25, green: 0.24, blue: 0.22, alpha: 0.6)),
@@ -11148,7 +11148,7 @@
         ),
         (
             pos: (15, -14),
-            prototype: "prop_casino_torn_wrap",
+            prototype: "prop_torn_wrap",
             components: {
                 "SpriteRotation": (-2.38),
                 "GroundOffset": ((7.0, -6.0)),
@@ -11194,7 +11194,7 @@
         ),
         (
             pos: (19, -14),
-            prototype: "decal_casino_smear_oil_0",
+            prototype: "decal_smear_oil_0",
             components: {
                 "SpriteRotation": (-1.37),
                 "SpriteTint": ((red: 0.08, green: 0.07, blue: 0.06, alpha: 0.7)),
@@ -11238,7 +11238,7 @@
         ),
         (
             pos: (-18, -15),
-            prototype: "prop_casino_paper_scrap_bloodied",
+            prototype: "prop_paper_scrap_bloodied",
             components: {
                 "SpriteRotation": (2.94),
                 "GroundOffset": ((3.0, -2.0)),
@@ -11246,7 +11246,7 @@
         ),
         (
             pos: (-18, -15),
-            prototype: "prop_casino_broken_bottle",
+            prototype: "prop_broken_bottle",
             components: {
                 "SpriteRotation": (0.77),
                 "GroundOffset": ((-6.0, -7.0)),
@@ -11259,7 +11259,7 @@
         ),
         (
             pos: (-17, -15),
-            prototype: "prop_casino_trash_pile",
+            prototype: "prop_trash_pile",
             components: {
                 "SpriteRotation": (0.12),
                 "GroundOffset": ((-4.0, -7.0)),
@@ -11271,7 +11271,7 @@
         ),
         (
             pos: (-16, -15),
-            prototype: "prop_casino_trash_bag",
+            prototype: "prop_trash_bag_full",
             components: {
                 "GroundOffset": ((2.0, -9.0)),
                 "SpriteTint": ((red: 0.95, green: 0.95, blue: 0.95, alpha: 1.0)),
@@ -11305,7 +11305,7 @@
         ),
         (
             pos: (-14, -15),
-            prototype: "prop_casino_trash_bag",
+            prototype: "prop_trash_bag_full",
             components: {
                 "SpriteRotation": (-0.19),
                 "GroundOffset": ((-1.0, -9.0)),
@@ -11406,7 +11406,7 @@
         ),
         (
             pos: (0, -15),
-            prototype: "prop_casino_broken_plate",
+            prototype: "prop_broken_plate",
             components: {
                 "SpriteRotation": (3.07),
                 "GroundOffset": ((1.0, -7.0)),
@@ -11414,7 +11414,7 @@
         ),
         (
             pos: (0, -15),
-            prototype: "prop_casino_broken_plate_small",
+            prototype: "prop_broken_plate_small",
             components: {
                 "SpriteRotation": (-2.89),
                 "GroundOffset": ((-7.0, -3.0)),
@@ -11449,7 +11449,7 @@
         ),
         (
             pos: (4, -15),
-            prototype: "prop_casino_broken_plate_small",
+            prototype: "prop_broken_plate_small",
             components: {
                 "SpriteRotation": (0.19),
                 "GroundOffset": ((-3.0, -10.0)),
@@ -11493,7 +11493,7 @@
         ),
         (
             pos: (9, -15),
-            prototype: "prop_casino_trash_bag",
+            prototype: "prop_trash_bag_full",
             components: {
                 "SpriteRotation": (-0.06),
                 "GroundOffset": ((-4.0, -8.0)),
@@ -11505,7 +11505,7 @@
         ),
         (
             pos: (10, -15),
-            prototype: "prop_casino_trash_bag",
+            prototype: "prop_trash_bag_full",
             components: {
                 "SpriteRotation": (0.25),
                 "GroundOffset": ((-6.0, -9.0)),
@@ -11513,7 +11513,7 @@
         ),
         (
             pos: (10, -15),
-            prototype: "prop_casino_trash_pile",
+            prototype: "prop_trash_pile",
             components: {
                 "SpriteRotation": (-0.05),
                 "GroundOffset": ((6.0, -8.0)),
@@ -11581,7 +11581,7 @@
         ),
         (
             pos: (18, -15),
-            prototype: "prop_casino_trash_pile",
+            prototype: "prop_trash_pile",
             components: {
                 "SpriteRotation": (-0.03),
                 "GroundOffset": ((-2.0, -8.0)),

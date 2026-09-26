@@ -9,7 +9,6 @@
             "StruckSound": (default: Some((source: Collection("hit_wood"), volume_db: -4.0, pitch_var: 0.1))),
             "Appearance": (
                 sprite: (rsi: "textures/structures/walls/wood", state: "default"),
-                depth: Walls,
             ),
         },
     ),

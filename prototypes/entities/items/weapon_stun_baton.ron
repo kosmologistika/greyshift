@@ -12,11 +12,8 @@
             "AmmoStore": (rounds: 6, capacity: 6),
             "RegenAmmo": (units_per_sec: 0.2),
             "DamageOnHit": (damage: {Blunt: 5}),
-            "Glidable": (),
-            "PlacementLayer": Free,
             "Appearance": (
                 sprite: (rsi: "textures/objects/weapons/stunbaton", state: "icon"),
-                depth: BelowMobs,
             ),
         },
     ),

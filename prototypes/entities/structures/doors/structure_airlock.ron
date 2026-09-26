@@ -5,13 +5,7 @@
         parents: ["structure_door_base"],
         components: {
             "DisplayName": (name: "airlock", desc: Some("item-desc-airlock")),
-            "Door": (
-                state: Closed,
-                open_secs: 0.6,
-                close_secs: 0.6,
-                deny_secs: 0.6,
-                auto_close_secs: Some(5.0),
-            ),
+            "Door": (auto_close_secs: Some(5.0)),
             // Opens for whoever walks into it, and wears the status lights
             // that say why when it doesn't.
             "BumpOpen": (),
@@ -25,14 +19,8 @@
                     behaviors: [PlaySound((source: Collection("destroy_metal"), volume_db: -2.0, pitch_var: 0.08)), Destroy],
                 ),
             ]),
-            "DoorSounds": (
-                open: Some((source: Path("audio/machines/airlock_open.ogg"), volume_db: -4.0)),
-                close: Some((source: Path("audio/machines/airlock_close.ogg"), volume_db: -4.0)),
-                deny: Some((source: Path("audio/machines/airlock_deny.ogg"), volume_db: -6.0)),
-            ),
             "Appearance": (
                 sprite: (rsi: "textures/structures/doors/airlock", state: "closed"),
-                depth: Doors,
                 // The status light, over the body and out of the lighting
                 // multiply so it reads in a dark corridor. Which `*_unlit`
                 // state it shows, and whether it shows at all, is the client's

@@ -13,11 +13,8 @@
             "Ejects": (live_round: Some("ammo_rocket")),
             "LoadsCartridge": (windup_secs: 1.5),
             "SpreadConfig": (base: 0.01, growth_per_shot: 0.0, decay_per_sec: 1.0, max: 0.01),
-            "Glidable": (),
-            "PlacementLayer": Free,
             "Appearance": (
                 sprite: (rsi: "textures/objects/weapons/guns/launchers/rocket", state: "base"),
-                depth: BelowMobs,
             ),
         },
     ),
@@ -32,15 +29,13 @@
     (
         type: "Entity",
         id: "ammo_rocket",
+        parents: ["base_item"],
         components: {
             "DisplayName": (name: "rocket"),
             "Item": (size: Small, held: Nothing),
             "Cartridge": (projectile_proto: "projectile_rocket"),
-            "Glidable": (),
-            "PlacementLayer": Free,
             "Appearance": (
                 sprite: (rsi: "textures/objects/weapons/guns/ammunition/explosives", state: "rpg"),
-                depth: BelowMobs,
             ),
         },
     ),

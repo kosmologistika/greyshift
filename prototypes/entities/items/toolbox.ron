@@ -15,11 +15,8 @@
             ),
             "Container": (max_volume: Some(16), max_item_size: Some(Small)),
             "Pullable": (),
-            "Glidable": (),
-            "PlacementLayer": Free,
             "Appearance": (
                 sprite: (rsi: "textures/objects/tools/toolbox_red", state: "icon"),
-                depth: BelowMobs,
             ),
         },
     ),

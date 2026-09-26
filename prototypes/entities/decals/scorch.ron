@@ -3,11 +3,9 @@
         type: "Entity",
         id: "decal_scorch_base",
         abstract: true,
+        parents: ["base_decal_tile"],
         components: {
             "DisplayName": (name: "scorch mark"),
-            "Scenery": (),
-            "PlacementLayer": Decal,
-            "Appearance": (depth: FloorOverlay),
         },
     ),
     (

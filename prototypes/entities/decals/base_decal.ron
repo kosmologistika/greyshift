@@ -1,0 +1,22 @@
+[
+    (
+        type: "Entity",
+        id: "base_decal_tile",
+        abstract: true,
+        components: {
+            "Scenery": (),
+            "PlacementLayer": Decal,
+            "Appearance": (depth: FloorOverlay),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "base_decal_scatter",
+        abstract: true,
+        components: {
+            "Scenery": (),
+            "PlacementLayer": Free,
+            "Appearance": (depth: FloorOverlay),
+        },
+    ),
+]

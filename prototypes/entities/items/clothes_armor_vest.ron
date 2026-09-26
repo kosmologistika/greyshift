@@ -2,6 +2,7 @@
     (
         type: "Entity",
         id: "clothes_armor_vest",
+        parents: ["base_item"],
         components: {
             "DisplayName": (name: "armor vest", desc: Some("item-desc-armor-vest")),
             "Item": (size: Medium, strip_secs: 6.0, dress_secs: 4.0),
@@ -10,11 +11,8 @@
             // covered so a pellet fan meets the plate more often than not
             "Armor": (covers: [Torso, Arm], block: {Blunt: 35, Slash: 70, Piercing: 70, Heat: 20}),
             "StruckSound": (default: Some((source: Path("audio/effects/block_metal1.ogg"), volume_db: -4.0, pitch_var: 0.1))),
-            "Glidable": (),
-            "PlacementLayer": Free,
             "Appearance": (
                 sprite: (rsi: "textures/clothing/suits/armor_vest", state: "icon"),
-                depth: BelowMobs,
             ),
         },
     ),

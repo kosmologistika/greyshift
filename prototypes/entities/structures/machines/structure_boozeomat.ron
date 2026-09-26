@@ -2,15 +2,11 @@
     (
         type: "Entity",
         id: "structure_boozeomat",
+        parents: ["base_structure_metal_box"],
         components: {
             "DisplayName": (name: "Booze-O-Mat"),
-            "Solid": (),
-            "BlocksAttack": (),
-            "StruckSound": (default: Some((source: Collection("hit_metal"), volume_db: -4.0, pitch_var: 0.1))),
-            "PlacementLayer": Solid,
             "Appearance": (
                 sprite: (rsi: "textures/structures/machines/boozeomat", state: "off"),
-                depth: Furniture,
                 layers: [
                     (state: "normal-unshaded", shading: Unshaded),
                 ],

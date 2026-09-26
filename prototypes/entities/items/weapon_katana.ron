@@ -12,11 +12,8 @@
             "DamageOnHit": (damage: {Slash: 12}),
             // Raised, the blade turns every bolt from the front; it softens nothing
             "Guard": (reflect: 100),
-            "Glidable": (),
-            "PlacementLayer": Free,
             "Appearance": (
                 sprite: (rsi: "textures/objects/weapons/katana", state: "icon"),
-                depth: BelowMobs,
             ),
         },
     ),

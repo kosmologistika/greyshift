@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "base_tile_floor",
+        abstract: true,
+        parents: ["tile_plating"],
+        components: {
+            "TileCover": (footstep: Some((source: Collection("footstep_floor"), volume_db: -9.0, pitch_var: 0.05, range_tiles: 9.0))),
+        },
+    ),
+]

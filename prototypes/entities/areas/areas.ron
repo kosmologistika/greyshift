@@ -28,4 +28,132 @@
             "Area": (ambience: Some("maintenance")),
         },
     ),
+    (
+        type: "Entity",
+        id: "area_gaming_floor",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "gaming floor"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_slots",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "slots"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_bar",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "bar"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_vip_lounge",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "VIP lounge"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_cashier_cage",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "cashier cage"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_vault",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "vault"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_kitchen",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "kitchen"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_service_corridor",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "service corridor"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_loading_dock",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "loading dock"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_garden",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "garden"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_north_glasshouse",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "north glasshouse"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_south_glasshouse",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "south glasshouse"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_seedling_hall",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "seedling hall"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_potting_shed",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "potting shed"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_pump_room",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "pump room"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_apiary",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "apiary"),
+        },
+    ),
 ]

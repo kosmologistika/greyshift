@@ -2,29 +2,29 @@
     (
         type: "Entity",
         id: "structure_table",
+        parents: ["base_structure_table"],
         components: {
             "DisplayName": (name: "table"),
-            "Solid": (),
-            // Waist-high: walkers stop, everything airborne crosses. Same as
-            // SS14's TableLayer, which is MidImpassable and nothing else
-            "PassesProjectiles": (),
-            "PassesThrown": (),
-            "Climbable": (secs: 1.0),
             "Surface": (),
-            "StruckSound": (default: Some((source: Collection("hit_metal"), volume_db: -4.0, pitch_var: 0.1))),
-            "Damageable": (),
-            "Destructible": (thresholds: [
-                (
-                    trigger: TotalDamage(40),
-                    behaviors: [PlaySound((source: Collection("destroy_metal"), volume_db: -2.0, pitch_var: 0.08)), Destroy],
-                ),
-            ]),
-            "PlacementLayer": Solid,
             "IconSmooth": (key: "table", state_prefix: "state_"),
             "Appearance": (
                 sprite: (rsi: "textures/structures/furniture/table", state: "full"),
-                depth: Furniture,
             ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_table_wood",
+        abstract: true,
+        parents: ["structure_table"],
+        components: {
+            "StruckSound": (default: Some((source: Collection("hit_wood"), volume_db: -4.0, pitch_var: 0.1))),
+            "Destructible": (thresholds: [
+                (
+                    trigger: TotalDamage(40),
+                    behaviors: [PlaySound((source: Collection("destroy_wood"), volume_db: -2.0, pitch_var: 0.08)), Destroy],
+                ),
+            ]),
         },
     ),
 ]

@@ -2,17 +2,15 @@
     (
         type: "Entity",
         id: "clothes_helmet_sec",
+        parents: ["base_item"],
         components: {
             "DisplayName": (name: "security helmet", desc: Some("item-desc-helmet-sec")),
             "Item": (size: Small),
             "Clothing": (slots: [Head]),
             "Armor": (covers: [Head], block: {Blunt: 35, Slash: 60, Piercing: 60, Heat: 20}),
             "StruckSound": (default: Some((source: Path("audio/effects/block_metal1.ogg"), volume_db: -4.0, pitch_var: 0.1))),
-            "Glidable": (),
-            "PlacementLayer": Free,
             "Appearance": (
                 sprite: (rsi: "textures/clothing/head/helmet_sec", state: "icon"),
-                depth: BelowMobs,
             ),
         },
     ),

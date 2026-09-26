@@ -76,8 +76,6 @@
             "SpriteTint": ((red: 1.0, green: 0.8833, blue: 0.8, alpha: 1.0)),
             "MeleeWeapon": (shape: Thrust(len: 1), damage: {Blunt: 5}, cooldown: 0.7),
             "DamageOnHit": (damage: {Blunt: 3}),
-            "Glidable": (),
-            "PlacementLayer": Free,
         },
     ),
     (
@@ -88,7 +86,6 @@
             "DisplayName": (name: "severed head"),
             "Appearance": (
                 sprite: (rsi: "textures/mobs/human_parts", state: "head_m"),
-                depth: BelowMobs,
             ),
         },
     ),
@@ -100,7 +97,6 @@
             "DisplayName": (name: "severed arm"),
             "Appearance": (
                 sprite: (rsi: "textures/mobs/human_parts", state: "l_arm"),
-                depth: BelowMobs,
             ),
         },
     ),
@@ -112,7 +108,6 @@
             "DisplayName": (name: "severed leg"),
             "Appearance": (
                 sprite: (rsi: "textures/mobs/human_parts", state: "l_leg"),
-                depth: BelowMobs,
             ),
         },
     ),

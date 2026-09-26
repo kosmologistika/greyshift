@@ -2,15 +2,11 @@
     (
         type: "Entity",
         id: "structure_seed_extractor",
+        parents: ["base_structure_metal_box"],
         components: {
             "DisplayName": (name: "seed extractor"),
-            "Solid": (),
-            "BlocksAttack": (),
-            "StruckSound": (default: Some((source: Collection("hit_metal"), volume_db: -4.0, pitch_var: 0.1))),
-            "PlacementLayer": Solid,
             "Appearance": (
                 sprite: (rsi: "textures/structures/hydroponics/seed_extractor", state: "seedextractor-off"),
-                depth: Furniture,
                 layers: [(state: "seedextractor-unlit", shading: Unshaded)],
             ),
         },

@@ -3,15 +3,14 @@
         type: "Entity",
         id: "structure_wall_base",
         abstract: true,
+        parents: ["base_structure_solid"],
         components: {
-            "Solid": (),
-            "BlocksAttack": (),
             "Occluder": (),
             "AreaBoundary": (),
             "MountSupport": (),
-            "PlacementLayer": Solid,
             // Every wall smooths against every other, whatever it is made of
             "IconSmooth": (key: "wall"),
+            "Appearance": (depth: Walls),
         },
     ),
 ]

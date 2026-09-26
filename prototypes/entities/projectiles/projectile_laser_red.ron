@@ -6,25 +6,13 @@
         hide_spawn_menu: true,
         components: {
             "DamageOnHit": (damage: {Heat: 25}),
-            "EnergyProjectile": (),
-            "FlightRules": (stops_at_blocks_attack: true, stops_on_first_damageable: true),
-            "AlignToFlight": (),
             "MaxFlightRange": (tiles: 20),
             // tg parity: bullets and standard lasers fly 1.25 tiles per
             // decisecond there (12.5 t/s); revisit once the beam-line
             // cosmetic (#72) carries the shot path.
             "FlightSpeed": (tiles_per_sec: 12.5),
-            "DespawnOnFlightEnd": (),
-            "MuzzleFx": (sprite: (rsi: "textures/effects/muzzle_flash", state: "firing_effect_red"), light_color: (1.0, 0.25, 0.25)),
-            "ImpactFx": (sprite: (rsi: "textures/effects/impact_fx", state: "impact_laser_wall"), secs: 2.0),
-            // tg parity: beams carry a soft red overlay light (range 1,
-            // power 1.4). No shadows: a per-bullet shadow caster is all cost
-            "PointLight": (color: (1.0, 0.25, 0.25), energy: 1.4, radius: 1.5, cast_shadows: false),
-            "Appearance": (
-                sprite: (rsi: "textures/objects/weapons/guns/projectiles/projectiles", state: "u_laser"),
-                sprite_offset_radians: -1.5707964,
-                depth: Effects,
-            ),
+            "MuzzleFx": (light_color: (1.0, 0.25, 0.25)),
+            "PointLight": (color: (1.0, 0.25, 0.25)),
         },
     ),
 ]

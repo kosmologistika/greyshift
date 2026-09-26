@@ -10,7 +10,6 @@
             "IconSmooth": (state_prefix: "plastitanium"),
             "Appearance": (
                 sprite: (rsi: "textures/structures/walls/plastitanium", state: "default"),
-                depth: Walls,
             ),
         },
     ),

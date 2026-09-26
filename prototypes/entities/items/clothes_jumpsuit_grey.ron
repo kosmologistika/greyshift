@@ -2,15 +2,13 @@
     (
         type: "Entity",
         id: "clothes_jumpsuit_grey",
+        parents: ["base_item"],
         components: {
             "DisplayName": (name: "grey jumpsuit"),
             "Item": (size: Medium, strip_secs: 8.0, dress_secs: 6.0),
             "Clothing": (slots: [Uniform]),
-            "Glidable": (),
-            "PlacementLayer": Free,
             "Appearance": (
                 sprite: (rsi: "textures/clothing/uniforms/ancient", state: "icon"),
-                depth: BelowMobs,
             ),
         },
     ),

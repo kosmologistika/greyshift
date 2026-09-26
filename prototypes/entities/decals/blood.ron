@@ -3,12 +3,10 @@
         type: "Entity",
         id: "decal_blood",
         abstract: true,
+        parents: ["base_decal_scatter"],
         components: {
             "DisplayName": (name: "blood"),
             "Cleanable": (),
-            "Scenery": (),
-            "PlacementLayer": Free,
-            "Appearance": (depth: FloorOverlay),
             "SpriteTint": ((red: 0.4863, green: 0.0, blue: 0.0, alpha: 1.0)),
         },
     ),
@@ -112,7 +110,6 @@
         parents: ["decal_blood"],
         components: {
             "DisplayName": (name: "blood spatter"),
-            "PlacementLayer": Free,
             "Appearance": (depth: WallOverlay),
         },
     ),
@@ -121,7 +118,7 @@
         id: "decal_blood_wall_0",
         parents: ["decal_blood_wall"],
         components: {
-            "Appearance": (sprite: (rsi: "textures/decals/blood", state: "splat_0"), depth: WallOverlay),
+            "Appearance": (sprite: (rsi: "textures/decals/blood", state: "splat_0")),
         },
     ),
     (
@@ -129,7 +126,7 @@
         id: "decal_blood_wall_1",
         parents: ["decal_blood_wall"],
         components: {
-            "Appearance": (sprite: (rsi: "textures/decals/blood", state: "splat_2"), depth: WallOverlay),
+            "Appearance": (sprite: (rsi: "textures/decals/blood", state: "splat_2")),
         },
     ),
     (
@@ -137,7 +134,7 @@
         id: "decal_blood_wall_2",
         parents: ["decal_blood_wall"],
         components: {
-            "Appearance": (sprite: (rsi: "textures/decals/blood", state: "splat_3"), depth: WallOverlay),
+            "Appearance": (sprite: (rsi: "textures/decals/blood", state: "splat_3")),
         },
     ),
 ]

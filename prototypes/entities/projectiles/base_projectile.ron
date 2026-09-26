@@ -1,0 +1,64 @@
+[
+    (
+        type: "Entity",
+        id: "base_projectile",
+        abstract: true,
+        components: {
+            "FlightRules": (stops_at_blocks_attack: true, stops_on_first_damageable: true),
+            "AlignToFlight": (),
+            "DespawnOnFlightEnd": (),
+            "Appearance": (depth: Effects),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "base_ballistic_projectile",
+        abstract: true,
+        parents: ["base_projectile"],
+        components: {
+            "FlightSpeed": (tiles_per_sec: 12.5),
+            "MuzzleFx": (sprite: (rsi: "textures/effects/muzzle_flash", state: "firing_effect")),
+            "ImpactFx": (
+                sprite: (rsi: "textures/effects/impact_fx", state: "impact_bullet"),
+                sound: Some((source: Collection("bullet_ricochet"), volume_db: -8.0, pitch_var: 0.1, range_tiles: 10.0)),
+            ),
+            "Appearance": (
+                sprite: (rsi: "textures/objects/weapons/guns/projectiles/projectiles2", state: "bullet"),
+                sprite_offset_radians: 1.5707964,
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "base_energy_projectile",
+        abstract: true,
+        parents: ["base_projectile"],
+        components: {
+            "EnergyProjectile": (),
+            "MuzzleFx": (sprite: (rsi: "textures/effects/muzzle_flash", state: "firing_effect_red")),
+            "ImpactFx": (
+                sprite: (rsi: "textures/effects/impact_fx", state: "impact_laser_wall"),
+                secs: 2.0,
+                sound: Some((source: Collection("energy_impact"), volume_db: -8.0, pitch_var: 0.1, range_tiles: 10.0)),
+            ),
+            // tg parity: beams carry a soft overlay light (range 1,
+            // power 1.4). No shadows: a per-bullet shadow caster is all cost
+            "PointLight": (energy: 1.4, radius: 1.5, cast_shadows: false),
+            "Appearance": (
+                sprite: (rsi: "textures/objects/weapons/guns/projectiles/projectiles", state: "u_laser"),
+                sprite_offset_radians: -1.5707964,
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "base_hook_projectile",
+        abstract: true,
+        parents: ["base_projectile"],
+        components: {
+            "MaxFlightRange": (tiles: 8),
+            "FlightSpeed": (tiles_per_sec: 30.0),
+            "Appearance": (sprite_offset_radians: -1.5707964),
+        },
+    ),
+]

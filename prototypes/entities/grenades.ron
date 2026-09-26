@@ -4,6 +4,7 @@
         type: "Entity",
         id: "base_grenade",
         abstract: true,
+        parents: ["base_item"],
         components: {
             "Item": (size: Small),
             "ItemToggle": (
@@ -13,8 +14,6 @@
             ),
             "Fuse": (secs: 3.0),
             "SpentOnTrigger": (),
-            "Glidable": (),
-            "PlacementLayer": Free,
         },
     ),
     (
@@ -34,7 +33,6 @@
             ),
             "Appearance": (
                 sprite: (rsi: "textures/objects/weapons/grenades/grenade", state: "icon"),
-                depth: BelowMobs,
             ),
         },
     ),
@@ -42,6 +40,7 @@
     (
         type: "Entity",
         id: "grenade_frag_mini",
+        parents: ["base_item"],
         hide_spawn_menu: true,
         components: {
             "DisplayName": (name: "mini frag grenade"),
@@ -58,11 +57,8 @@
                 sound: Some((source: Collection("explosion_small"), volume_db: -2.0, pitch_var: 0.15, range_tiles: 30.0)),
                 fx: Some("effect_explosion"),
             ),
-            "Glidable": (),
-            "PlacementLayer": Free,
             "Appearance": (
                 sprite: (rsi: "textures/objects/weapons/grenades/grenade", state: "icon"),
-                depth: BelowMobs,
             ),
         },
     ),
@@ -75,7 +71,6 @@
             "ScattersOnTrigger": (proto: "grenade_frag_mini", count: 5, tiles: 2, lit: true),
             "Appearance": (
                 sprite: (rsi: "textures/objects/weapons/grenades/clusterbomb", state: "icon"),
-                depth: BelowMobs,
             ),
         },
     ),
@@ -95,7 +90,6 @@
             ),
             "Appearance": (
                 sprite: (rsi: "textures/objects/weapons/grenades/holyhandgrenade", state: "icon"),
-                depth: BelowMobs,
             ),
         },
     ),
@@ -117,7 +111,6 @@
             "SpriteTint": ((red: 1.0, green: 0.45, blue: 0.85, alpha: 1.0)),
             "Appearance": (
                 sprite: (rsi: "textures/objects/weapons/grenades/grenade_master", state: "icon"),
-                depth: BelowMobs,
             ),
         },
     ),
@@ -139,7 +132,6 @@
             "SpriteTint": ((red: 0.859, green: 0.867, blue: 0.298, alpha: 1.0)),
             "Appearance": (
                 sprite: (rsi: "textures/objects/weapons/grenades/grenade_master", state: "icon"),
-                depth: BelowMobs,
             ),
         },
     ),
@@ -147,6 +139,7 @@
     (
         type: "Entity",
         id: "landmine",
+        parents: ["base_item"],
         components: {
             "DisplayName": (name: "landmine"),
             "Item": (size: Small, held: Bundle),
@@ -164,8 +157,6 @@
                 sound: Some((source: Collection("explosion"), volume_db: 0.0, pitch_var: 0.1, range_tiles: 40.0)),
                 fx: Some("effect_explosion"),
             ),
-            "Glidable": (),
-            "PlacementLayer": Free,
             "Appearance": (
                 sprite: (rsi: "textures/objects/misc/landmine", state: "landmine"),
                 depth: Furniture,

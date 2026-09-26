@@ -2,15 +2,11 @@
     (
         type: "Entity",
         id: "structure_slot_machine",
+        parents: ["base_structure_metal_box"],
         components: {
             "DisplayName": (name: "slot machine"),
-            "Solid": (),
-            "BlocksAttack": (),
-            "StruckSound": (default: Some((source: Collection("hit_metal"), volume_db: -4.0, pitch_var: 0.1))),
-            "PlacementLayer": Solid,
             "Appearance": (
                 sprite: (rsi: "textures/structures/machines/slot_machine", state: "base"),
-                depth: Furniture,
                 layers: [
                     (state: "screen", shading: Unshaded),
                 ],

@@ -2,6 +2,7 @@
     (
         type: "Entity",
         id: "clothes_armor_ablative",
+        parents: ["base_item"],
         components: {
             "DisplayName": (name: "ablative vest"),
             "Item": (size: Medium, strip_secs: 6.0, dress_secs: 4.0),
@@ -11,11 +12,8 @@
             // on the wearer it would have landed
             "Armor": (covers: [Torso, Arm], block: {Blunt: 10, Slash: 10, Piercing: 10, Heat: 70}, reflect: 50),
             "StruckSound": (default: Some((source: Path("audio/effects/block_metal1.ogg"), volume_db: -4.0, pitch_var: 0.1))),
-            "Glidable": (),
-            "PlacementLayer": Free,
             "Appearance": (
                 sprite: (rsi: "textures/clothing/suits/armor_reflec", state: "icon"),
-                depth: BelowMobs,
             ),
         },
     ),

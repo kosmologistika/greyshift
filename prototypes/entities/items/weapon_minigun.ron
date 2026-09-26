@@ -15,11 +15,8 @@
             "SlotWhitelist": (tags: ["magazine_minigun"]),
             "InternalContainer": (),
             "SpreadConfig": (base: 0.1, growth_per_shot: 0.005, decay_per_sec: 2.0, max: 0.3),
-            "Glidable": (),
-            "PlacementLayer": Free,
             "Appearance": (
                 sprite: (rsi: "textures/objects/weapons/guns/lmgs/l6", state: "icon"),
-                depth: BelowMobs,
             ),
         },
     ),

@@ -2,19 +2,13 @@
     (
         type: "Entity",
         id: "projectile_meat_hook",
+        parents: ["base_hook_projectile"],
         hide_spawn_menu: true,
         components: {
             "PullTargetOnHit": (),
             "StatusOnHit": (effect: "effect_knockdown", secs: 2.0),
-            "FlightRules": (stops_at_blocks_attack: true, stops_on_first_damageable: true),
-            "AlignToFlight": (),
-            "MaxFlightRange": (tiles: 8),
-            "FlightSpeed": (tiles_per_sec: 30.0),
-            "DespawnOnFlightEnd": (),
             "Appearance": (
                 sprite: (rsi: "textures/objects/weapons/guns/launchers/sticky_hand", state: "hook"),
-                depth: Effects,
-                sprite_offset_radians: -1.5707964,
             ),
         },
     ),

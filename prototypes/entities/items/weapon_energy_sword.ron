@@ -17,11 +17,8 @@
                 )),
                 on_guard: Some((reflect: 100)),
             ),
-            "Glidable": (),
-            "PlacementLayer": Free,
             "Appearance": (
                 sprite: (rsi: "textures/objects/weapons/e_sword", state: "e_sword"),
-                depth: BelowMobs,
             ),
         },
     ),

@@ -2,15 +2,13 @@
     (
         type: "Entity",
         id: "clothes_id_card",
+        parents: ["base_item"],
         components: {
             "DisplayName": (name: "identification card", desc: Some("item-desc-id-card")),
             "Item": (size: Small),
             "Clothing": (slots: [Id]),
-            "Glidable": (),
-            "PlacementLayer": Free,
             "Appearance": (
                 sprite: (rsi: "textures/objects/misc/id_card", state: "icon"),
-                depth: BelowMobs,
             ),
         },
     ),

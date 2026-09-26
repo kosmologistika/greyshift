@@ -1,0 +1,116 @@
+[
+    (
+        type: "Entity",
+        id: "prop_smoke",
+        abstract: true,
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "cigar"),
+            "Item": (size: Tiny, held: Nothing),
+        },
+    ),
+    // The stubbed cigar is baked in: a bare grey tray reads as a coin under red light
+    (
+        type: "Entity",
+        id: "prop_ashtray",
+        parents: ["prop_smoke"],
+        components: {
+            "DamageOnHit": (damage: {Blunt: 2}),
+            "DisplayName": (name: "ashtray"),
+            "Appearance": (sprite: (rsi: "textures/objects/props/smokes", state: "ashtray")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_cigar",
+        parents: ["prop_smoke"],
+        components: {
+            "Appearance": (sprite: (rsi: "textures/objects/props/smokes", state: "cigar")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_cigar_butt",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "cigar butt"),
+            "Appearance": (sprite: (rsi: "textures/objects/props/smokes", state: "cigar_butt")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_cigar_box",
+        parents: ["prop_smoke"],
+        components: {
+            "Item": (size: Small, held: Bundle),
+            "DamageOnHit": (damage: {Blunt: 1}),
+            "DisplayName": (name: "cigar box"),
+            "Appearance": (sprite: (rsi: "textures/objects/props/smokes", state: "cigar_box_open")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_cigar_box_closed",
+        parents: ["prop_smoke"],
+        components: {
+            "Item": (size: Small, held: Bundle),
+            "DamageOnHit": (damage: {Blunt: 1}),
+            "DisplayName": (name: "cigar box"),
+            "Appearance": (sprite: (rsi: "textures/objects/props/smokes", state: "cigar_box_closed")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_matchbox",
+        parents: ["prop_smoke"],
+        components: {
+            "DisplayName": (name: "matchbox"),
+            "Appearance": (sprite: (rsi: "textures/objects/props/smokes", state: "matchbox")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_cig_pack",
+        parents: ["prop_smoke"],
+        components: {
+            "DisplayName": (name: "cigarette pack"),
+            "Appearance": (sprite: (rsi: "textures/objects/props/smokes", state: "pack_red_closed")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_cig_pack_open",
+        parents: ["prop_smoke"],
+        components: {
+            "DisplayName": (name: "cigarette pack"),
+            "Appearance": (sprite: (rsi: "textures/objects/props/smokes", state: "pack_red_open")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_cig_pack_black",
+        parents: ["prop_smoke"],
+        components: {
+            "DisplayName": (name: "cigarette pack"),
+            "Appearance": (sprite: (rsi: "textures/objects/props/smokes", state: "pack_black_open")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_cig_pack_crushed",
+        parents: ["prop_smoke"],
+        components: {
+            "DisplayName": (name: "crushed cigarette pack"),
+            "Appearance": (sprite: (rsi: "textures/objects/props/smokes", state: "pack_red_crushed")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_cig_pack_crushed_robust",
+        parents: ["prop_smoke"],
+        components: {
+            "DisplayName": (name: "crushed cigarette pack"),
+            "Appearance": (sprite: (rsi: "textures/objects/props/smokes", state: "pack_robust_crushed")),
+        },
+    ),
+]

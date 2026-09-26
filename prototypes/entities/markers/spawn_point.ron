@@ -31,8 +31,6 @@
             "SpawnPoint": (role: "role_observer"),
             "Appearance": (
                 sprite: (rsi: "textures/markers/spawn_point", state: "observer"),
-                depth: Overlays,
-                shading: Unlit,
             ),
         },
     ),

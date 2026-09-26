@@ -2,22 +2,14 @@
     (
         type: "Entity",
         id: "weapon_singularity_grenade",
+        parents: ["base_grenade"],
         components: {
             "DisplayName": (name: "singularity grenade", desc: Some("item-desc-singularity-grenade")),
             "Item": (size: Small),
-            "ItemToggle": (
-                on_state: Some("primed"),
-                latches: true,
-                on_sound: Some((source: Path("audio/items/beep.ogg"), volume_db: -6.0, range_tiles: 8.0)),
-            ),
-            "Fuse": (secs: 3.0),
+            "ItemToggle": (on_sound: Some((source: Path("audio/items/beep.ogg"), volume_db: -6.0, range_tiles: 8.0))),
             "Implodes": (radius: 4, force: Some(4)),
-            "SpentOnTrigger": (),
-            "Glidable": (),
-            "PlacementLayer": Free,
             "Appearance": (
                 sprite: (rsi: "textures/objects/weapons/grenades/singularitygrenade", state: "icon"),
-                depth: BelowMobs,
             ),
         },
     ),

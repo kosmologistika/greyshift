@@ -21,7 +21,6 @@
             // Middle of a wide doorway: a row of full drapes reads as a closed fringe
             "Appearance": (
                 sprite: (rsi: "textures/structures/decoration/curtain_red", state: "open_span"),
-                depth: Doors,
             ),
         },
     ),

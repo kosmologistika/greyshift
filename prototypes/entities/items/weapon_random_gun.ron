@@ -25,11 +25,8 @@
             "RecoilKick": (px: 3.0),
             "SpreadConfig": (base: 0.05, growth_per_shot: 0.05, decay_per_sec: 2.0, max: 0.3),
             "SpriteTint": ((red: 0.55, green: 1.0, blue: 0.55, alpha: 1.0)),
-            "Glidable": (),
-            "PlacementLayer": Free,
             "Appearance": (
                 sprite: (rsi: "textures/objects/weapons/guns/revolvers/deckard", state: "base"),
-                depth: BelowMobs,
             ),
         },
     ),

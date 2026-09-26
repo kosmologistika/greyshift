@@ -1,7 +1,7 @@
 [
     (
         type: "Entity",
-        id: "structure_window_greenhouse",
+        id: "structure_window_thin",
         parents: ["structure_window"],
         components: {
             // Crack stages rescaled to the weaker pane, or it breaks after showing only the first

@@ -4,11 +4,9 @@
         type: "Entity",
         id: "decal_blood_old",
         abstract: true,
+        parents: ["base_decal_tile"],
         components: {
             "DisplayName": (name: "dried blood"),
-            "Scenery": (),
-            "PlacementLayer": Decal,
-            "Appearance": (depth: FloorOverlay),
             "SpriteTint": ((red: 0.54, green: 0.25, blue: 0.19, alpha: 0.9)),
         },
     ),

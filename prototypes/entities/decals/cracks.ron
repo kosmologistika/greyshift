@@ -3,11 +3,9 @@
         type: "Entity",
         id: "decal_crack",
         abstract: true,
+        parents: ["base_decal_tile"],
         components: {
             "DisplayName": (name: "cracks"),
-            "Scenery": (),
-            "PlacementLayer": Decal,
-            "Appearance": (depth: FloorOverlay),
         },
     ),
     // White hairlines: this grey reads on plating and marble, light floors want a near-black tint
