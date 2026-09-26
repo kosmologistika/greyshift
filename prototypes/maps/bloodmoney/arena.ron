@@ -1,9 +1,9 @@
 [
     (
         type: "Map",
-        id: "arena",
-        name: "Arena",
-        map_path: "maps/arena.map.ron",
+        id: "bloodmoney_arena",
+        name: "Blood Money Arena",
+        map_path: "maps/bloodmoney/arena.map.ron",
         min_players: 1,
         max_players: 8,
         ambience: Some("arena"),
