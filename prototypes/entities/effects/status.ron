@@ -17,6 +17,22 @@
     ),
     (
         type: "Entity",
+        id: "effect_stamina_crit",
+        hide_spawn_menu: true,
+        components: {
+            "DisplayName": (name: "exhausted"),
+            "StatusEffect": (),
+            "Grants": (flags: [Immobilized, HandsBlocked, Floored], reason: "intent-denied-exhausted"),
+            "DropsHeld": (),
+            "EffectAlert": (
+                icon: "textures/interface/alerts/stamina/stamina0.png",
+                name: "alert-exhausted-name",
+                desc: "alert-exhausted-desc",
+            ),
+        },
+    ),
+    (
+        type: "Entity",
         id: "effect_knockdown",
         hide_spawn_menu: true,
         components: {
