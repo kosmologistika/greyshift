@@ -1082,20 +1082,14 @@
 .examine-line.dead { color: var(--text-disabled); }
 .examine-line.refused { color: var(--text-disabled); }
 
-/* The storage box, tg's open bag. tg puts it at screen tile 4, row 2 plus
-   16px each way, and BYOND counts tiles from 1, so 112px in and 48px up: 6px
-   past the tray's third column and 43px above the bottom row's foot. The
-   offsets here are those two, measured from the bottom-left zone the tray
-   sits in. The plates are the art, so no panel chrome. No hover of its own:
-   the item's rim is the one hover signal on every surface an item sits in */
+/* tg's spot, 112px in and 48px up its screen, kept relative to the tray */
 .storage {
     position: absolute;
     left: 106px;
     bottom: 43px;
 }
 
-/* Rows fill upward from the bottom one, tg's `orient_storage`. Cells butt
-   against each other so the box reads as one strip */
+/* Rows fill upward from the bottom one, tg's `orient_storage` */
 .storage-cells {
     flex-direction: row;
     flex-wrap: wrap-reverse;
@@ -1111,6 +1105,29 @@
     position: absolute;
     top: 0px;
     left: 0px;
+    width: 32px;
+    height: 32px;
+}
+
+/* Placed from Rust, so no offsets here */
+.storage-join {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+}
+
+/* Only the 13px of the closer past the last cell takes clicks */
+.storage-close {
+    position: absolute;
+    bottom: 0px;
+    width: 13px;
+    height: 32px;
+}
+
+.storage-close-art {
+    position: absolute;
+    top: 0px;
+    left: -5px;
     width: 32px;
     height: 32px;
 }
