@@ -2,6 +2,7 @@
     size: (x: 32, y: 32),
     license: "CC-BY-SA-3.0",
     copyright: [
+        "Taken from CorvaxStation icons/bandastation/walls/wall.dmi at commit 5004d984b267, CC BY-SA 3.0",
         "Taken from space-wizards/space-station-14 Resources/Textures/Structures/Walls/solid.rsi, originally from tgstation at commit d90c7e5de6f6d94596c164da78dbc8d3cd35bb99 and modified",
     ],
     states: [

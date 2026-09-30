@@ -29,10 +29,12 @@
                     ],
                 ),
             ]),
-            "IconSmooth": (key: "window", state_prefix: "window"),
+            // joins the wall run it sits in, the way tg's smoothing groups do
+            "IconSmooth": (key: "wall", state_prefix: "window"),
             "Appearance": (
                 sprite: (rsi: "textures/structures/windows/window", state: "full"),
-                depth: Walls,
+                // over a shutter or blast door on its tile, as tg stacks them
+                depth: Doors,
             ),
         },
     ),

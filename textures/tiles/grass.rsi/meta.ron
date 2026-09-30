@@ -2,6 +2,7 @@
     size: (x: 32, y: 32),
     license: "CC-BY-SA-3.0",
     copyright: [
+        "Taken from CorvaxStation icons/turf/floors.dmi at commit 5004d984b267, CC BY-SA 3.0",
         "Taken from space-wizards/space-station-14 at commit ae051d290568dbdde2441fa9478637ac1444781c Resources/Textures/Tiles/grasslight.png (first cell of the variant strip), originally from FortunaSS13/Fortuna at commit 2a9408a47e2f83d945335e4feeeeafb552173e6f, grasslight by Peptide based on grassdark",
     ],
     states: [

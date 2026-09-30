@@ -2,6 +2,7 @@
     size: (x: 32, y: 32),
     license: "CC-BY-SA-3.0",
     copyright: [
+        "Taken from CorvaxStation modular_bandastation/aesthetics/lights/icons/lighting.dmi at commit 5004d984b267, CC BY-SA 3.0",
         "Taken from space-wizards/space-station-14 Resources/Textures/Structures/Wallmounts/Lighting/light_tube.rsi, from CEV-Eris icons/obj/lighting.dmi, edited by Ubaser",
         "Direction slots swapped from upstream: ours names the wall the fixture hangs on, SS14 names the way its light shines",
     ],
