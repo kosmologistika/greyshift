@@ -1082,23 +1082,17 @@
 .examine-line.dead { color: var(--text-disabled); }
 .examine-line.refused { color: var(--text-disabled); }
 
-/* The storage box, tg's open bag: hangs off the bottom-left zone at screen
-   column 4, row 2 with the 16px offsets (`storage.dm`), beside the tray and
-   above the hands row. The plates are the art, so no panel chrome. No hover
-   of its own: the item's rim is the one hover signal on every surface an
-   item sits in */
+/* tg's spot, 112px in and 48px up its screen, kept relative to the tray */
 .storage {
     position: absolute;
-    left: 144px;
-    bottom: 80px;
+    left: 106px;
+    bottom: 43px;
 }
 
 /* Rows fill upward from the bottom one, tg's `orient_storage` */
 .storage-cells {
     flex-direction: row;
     flex-wrap: wrap-reverse;
-    column-gap: 2px;
-    row-gap: 2px;
 }
 
 .storage-cell {
@@ -1106,10 +1100,34 @@
     height: 32px;
 }
 
-.storage-item {
+.storage-item,
+.storage-trim {
     position: absolute;
     top: 0px;
     left: 0px;
+    width: 32px;
+    height: 32px;
+}
+
+/* Placed from Rust, so no offsets here */
+.storage-join {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+}
+
+/* Only the 13px of the closer past the last cell takes clicks */
+.storage-close {
+    position: absolute;
+    bottom: 0px;
+    width: 13px;
+    height: 32px;
+}
+
+.storage-close-art {
+    position: absolute;
+    top: 0px;
+    left: -5px;
     width: 32px;
     height: 32px;
 }
