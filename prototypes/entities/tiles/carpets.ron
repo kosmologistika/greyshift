@@ -1,0 +1,25 @@
+[
+    (
+        type: "Entity",
+        id: "tile_carpet_arcade",
+        parents: ["tile_plating"],
+        components: {
+            "TileCover": (
+                sprite: (rsi: "textures/tiles/carpet_arcade", state: "default"),
+                // No carpet collection exists, so the floor one stepped down
+                footstep: Some((source: Collection("footstep_floor"), volume_db: -15.0, pitch_var: 0.05, range_tiles: 7.0)),
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_carpet_red",
+        parents: ["tile_plating"],
+        components: {
+            "TileCover": (
+                sprite: (rsi: "textures/tiles/carpet_red", state: "default"),
+                footstep: Some((source: Collection("footstep_floor"), volume_db: -15.0, pitch_var: 0.05, range_tiles: 7.0)),
+            ),
+        },
+    ),
+]

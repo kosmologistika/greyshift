@@ -1,0 +1,28 @@
+[
+    (
+        type: "Entity",
+        id: "structure_carpet_black",
+        components: {
+            "DisplayName": (name: "black carpet"),
+            "PlacementLayer": Free,
+            "IconSmooth": (key: "carpet_black", state_prefix: "carpet_"),
+            "Appearance": (
+                sprite: (rsi: "textures/structures/furniture/carpet_black", state: "full"),
+                depth: FloorOverlay,
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_carpet_red",
+        components: {
+            "DisplayName": (name: "red carpet"),
+            "PlacementLayer": Free,
+            "IconSmooth": (key: "carpet_red", state_prefix: "carpet_"),
+            "Appearance": (
+                sprite: (rsi: "textures/structures/furniture/carpet_red", state: "full"),
+                depth: FloorOverlay,
+            ),
+        },
+    ),
+]

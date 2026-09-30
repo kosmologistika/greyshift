@@ -1,0 +1,66 @@
+[
+    (
+        type: "Entity",
+        id: "structure_table",
+        parents: ["base_structure_table"],
+        components: {
+            "DisplayName": (name: "table"),
+            "Surface": (),
+            "IconSmooth": (key: "table", state_prefix: "state_"),
+            "Appearance": (
+                sprite: (rsi: "textures/structures/furniture/table", state: "full"),
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_table_wood",
+        abstract: true,
+        parents: ["structure_table"],
+        components: {
+            "StruckSound": (default: Some((source: Collection("hit_wood"), volume_db: -4.0, pitch_var: 0.1))),
+            "Destructible": (thresholds: [
+                (
+                    trigger: TotalDamage(40),
+                    behaviors: [PlaySound((source: Collection("destroy_wood"), volume_db: -2.0, pitch_var: 0.08)), Destroy],
+                ),
+            ]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_table_poker",
+        parents: ["structure_table_wood"],
+        components: {
+            "DisplayName": (name: "poker table"),
+            "IconSmooth": (key: "table_poker", state_prefix: "state_"),
+            "Appearance": (
+                sprite: (rsi: "textures/structures/furniture/table_poker", state: "full"),
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_table_roulette",
+        parents: ["structure_table_wood"],
+        components: {
+            "DisplayName": (name: "roulette table"),
+            "IconSmooth": (key: "table_roulette", state_prefix: "state_"),
+            "Appearance": (
+                sprite: (rsi: "textures/structures/furniture/table_roulette", state: "full"),
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_counter_wood",
+        parents: ["structure_table_wood"],
+        components: {
+            "DisplayName": (name: "wooden counter"),
+            "IconSmooth": (key: "counter_wood", state_prefix: "state_"),
+            "Appearance": (
+                sprite: (rsi: "textures/structures/furniture/counter_wood", state: "full"),
+            ),
+        },
+    ),
+]

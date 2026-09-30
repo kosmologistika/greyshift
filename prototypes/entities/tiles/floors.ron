@@ -1,0 +1,86 @@
+[
+    (
+        type: "Entity",
+        id: "tile_floor_steel",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (
+                sprite: (rsi: "textures/tiles/floor_steel", state: "default"),
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_floor_white",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (
+                sprite: (rsi: "textures/tiles/floor_white", state: "default"),
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_floor_marble_dark",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (
+                sprite: (rsi: "textures/tiles/marble_dark", state: "default"),
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_floor_checker_bar",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (
+                sprite: (rsi: "textures/tiles/checker_bar", state: "default"),
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_floor_dance",
+        parents: ["tile_plating"],
+        components: {
+            "TileCover": (
+                sprite: (rsi: "textures/tiles/dance_panel", state: "default"),
+                footstep: Some((source: Collection("footstep_floor"), volume_db: -15.0, pitch_var: 0.05, range_tiles: 7.0)),
+            ),
+            // No shadows so a floor of these leaves the 64 caster slots alone, bright enough to beat the room's tubes
+            "PointLight": (color: (0.1, 0.9, 1.0), energy: 3.5, radius: 1.6, cast_shadows: false),
+            "PulseChannel": ("floor"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_floor_hydro",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (
+                sprite: (rsi: "textures/tiles/floor_hydro", state: "default"),
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_floor_wood",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (
+                sprite: (rsi: "textures/tiles/wood", state: "default"),
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_floor_wood_large",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (
+                sprite: (rsi: "textures/tiles/wood_large", state: "default"),
+            ),
+        },
+    ),
+]

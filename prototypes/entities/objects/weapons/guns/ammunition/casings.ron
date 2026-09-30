@@ -1,0 +1,26 @@
+[
+    (
+        type: "Entity",
+        id: "ammo_casing_38",
+        parents: ["base_ammo_round"],
+        hide_spawn_menu: true,
+        components: {
+            "DisplayName": (name: ".38 spent casing"),
+            "Appearance": (
+                sprite: (rsi: "textures/objects/weapons/guns/ammunition/casings/ammo_casing", state: "base-spent"),
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "ammo_casing_762",
+        parents: ["base_ammo_round"],
+        hide_spawn_menu: true,
+        components: {
+            "DisplayName": (name: "7.62 spent casing"),
+            "Appearance": (
+                sprite: (rsi: "textures/objects/weapons/guns/ammunition/casings/ammo_casing", state: "base-spent"),
+            ),
+        },
+    ),
+]

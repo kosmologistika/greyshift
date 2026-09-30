@@ -1,0 +1,225 @@
+[
+    // Wall-mounted fixtures. The entity sits on the *floor* tile beside the wall,
+    // not on the wall itself: the tile stays walkable, and the wall is a neighbouring
+    // occluder cell so shadows fall right with `PointLight.offset` left at zero.
+    // `Facing` names the wall it hangs on, and the RSI's frame for that direction is
+    // already drawn against that edge of the cell - which is why no sprite offset
+    // exists anywhere. Colours are linear RGB; (1.0, 0.776, 0.617) is SS14's 5000K
+    // #FFE4CE converted.
+    (
+        type: "Entity",
+        id: "light_wall",
+        abstract: true,
+        components: {
+            "WallMount": (),
+            "PlacementLayer": WallMount,
+            "Facing": (South),
+            // No `Damageable`, so nothing can reach this trigger yet: the
+            // fixture stands on walkable floor and would eat every swing and
+            // stray round aimed at that tile. #203 moves where it is struck,
+            // and the 10 goes live then - glass on a bracket, against a
+            // table's 40 and a wall's 150. `Demolish` ignores the trigger and
+            // runs the behaviors, which is what breaks it with its wall.
+            "Destructible": (thresholds: [
+                (
+                    trigger: TotalDamage(10),
+                    behaviors: [
+                        PlaySound((source: Collection("destroy_window"), volume_db: -2.0, pitch_var: 0.08)),
+                        SpawnEntities({"item_glass_shard": (min: 1, max: 1)}),
+                        Destroy,
+                    ],
+                ),
+            ]),
+            "Appearance": (depth: WallMounted),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "light_wall_tube",
+        parents: ["light_wall"],
+        components: {
+            "DisplayName": (name: "light tube"),
+            "PointLight": (color: (1.0, 0.776, 0.617), energy: 1.5, radius: 8.0),
+            "Appearance": (
+                sprite: (rsi: "textures/structures/lighting/light_tube", state: "base"),
+                // The lit part of the fixture, drawn over the housing and out
+                // of the lighting multiply. Without it a lamp is a grey bar in
+                // the dark room it is supposed to be lighting. The soft glow
+                // over it is a sprite rather than a screen-space quad, so it
+                // hangs on the fixture and line of sight hides it with the
+                // fixture - it cannot spill past the wall the light stops at
+                layers: [
+                    (state: "glow", shading: Unshaded),
+                    (rsi: Some("textures/effects/light_glow"), state: "glow", shading: Unshaded),
+                ],
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "light_wall_small",
+        parents: ["light_wall"],
+        components: {
+            "DisplayName": (name: "small light"),
+            "PointLight": (color: (1.0, 0.776, 0.617), energy: 0.9, radius: 4.5),
+            "Appearance": (
+                sprite: (rsi: "textures/structures/lighting/light_small", state: "base"),
+                layers: [
+                    (state: "glow", shading: Unshaded),
+                    (rsi: Some("textures/effects/light_glow"), state: "glow", shading: Unshaded),
+                ],
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "light_wall_tube_gold",
+        parents: ["light_wall_tube"],
+        components: {
+            "PointLight": (color: (1.0, 0.62, 0.22), energy: 1.6),
+            "Appearance": (layers: [
+                (rsi: Some("textures/structures/lighting/light_tube"), state: "glow", shading: Unshaded, tint: Some((red: 1.0, green: 0.82, blue: 0.45, alpha: 1.0))),
+                (rsi: Some("textures/effects/light_glow"), state: "glow", shading: Unshaded, tint: Some((red: 1.0, green: 0.82, blue: 0.45, alpha: 1.0))),
+            ]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "light_wall_tube_red",
+        parents: ["light_wall_tube"],
+        components: {
+            "PointLight": (color: (1.0, 0.12, 0.16), energy: 2.2),
+            "Appearance": (layers: [
+                (rsi: Some("textures/structures/lighting/light_tube"), state: "glow", shading: Unshaded, tint: Some((red: 1.0, green: 0.35, blue: 0.35, alpha: 1.0))),
+                (rsi: Some("textures/effects/light_glow"), state: "glow", shading: Unshaded, tint: Some((red: 1.0, green: 0.35, blue: 0.35, alpha: 1.0))),
+            ]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "light_wall_tube_emerald",
+        parents: ["light_wall_tube"],
+        components: {
+            "PointLight": (color: (0.18, 1.0, 0.35), energy: 2.2),
+            "Appearance": (layers: [
+                (rsi: Some("textures/structures/lighting/light_tube"), state: "glow", shading: Unshaded, tint: Some((red: 0.45, green: 1.0, blue: 0.55, alpha: 1.0))),
+                (rsi: Some("textures/effects/light_glow"), state: "glow", shading: Unshaded, tint: Some((red: 0.45, green: 1.0, blue: 0.55, alpha: 1.0))),
+            ]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "light_wall_tube_magenta",
+        parents: ["light_wall_tube"],
+        components: {
+            "PointLight": (color: (1.0, 0.18, 0.75), energy: 2.2),
+            "Appearance": (layers: [
+                (rsi: Some("textures/structures/lighting/light_tube"), state: "glow", shading: Unshaded, tint: Some((red: 1.0, green: 0.45, blue: 0.9, alpha: 1.0))),
+                (rsi: Some("textures/effects/light_glow"), state: "glow", shading: Unshaded, tint: Some((red: 1.0, green: 0.45, blue: 0.9, alpha: 1.0))),
+            ]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "light_wall_tube_cyan",
+        parents: ["light_wall_tube"],
+        components: {
+            "PointLight": (color: (0.2, 0.75, 1.0)),
+            "Appearance": (layers: [
+                (rsi: Some("textures/structures/lighting/light_tube"), state: "glow", shading: Unshaded, tint: Some((red: 0.5, green: 0.9, blue: 1.0, alpha: 1.0))),
+                (rsi: Some("textures/effects/light_glow"), state: "glow", shading: Unshaded, tint: Some((red: 0.5, green: 0.9, blue: 1.0, alpha: 1.0))),
+            ]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "light_wall_tube_green",
+        parents: ["light_wall_tube"],
+        components: {
+            "PointLight": (color: (0.45, 1.0, 0.55), energy: 1.4),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "light_wall_small_gold",
+        parents: ["light_wall_small"],
+        components: {
+            "PointLight": (color: (1.0, 0.62, 0.22), energy: 1.0),
+            "Appearance": (layers: [
+                (rsi: Some("textures/structures/lighting/light_small"), state: "glow", shading: Unshaded, tint: Some((red: 1.0, green: 0.82, blue: 0.45, alpha: 1.0))),
+                (rsi: Some("textures/effects/light_glow"), state: "glow", shading: Unshaded, tint: Some((red: 1.0, green: 0.82, blue: 0.45, alpha: 1.0))),
+            ]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "light_wall_small_cyan",
+        parents: ["light_wall_small"],
+        components: {
+            "PointLight": (color: (0.2, 0.75, 1.0), energy: 1.0),
+            "Appearance": (layers: [
+                (rsi: Some("textures/structures/lighting/light_small"), state: "glow", shading: Unshaded, tint: Some((red: 0.5, green: 0.9, blue: 1.0, alpha: 1.0))),
+                (rsi: Some("textures/effects/light_glow"), state: "glow", shading: Unshaded, tint: Some((red: 0.5, green: 0.9, blue: 1.0, alpha: 1.0))),
+            ]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "light_wall_small_emerald",
+        parents: ["light_wall_small"],
+        components: {
+            "PointLight": (color: (0.18, 1.0, 0.35), energy: 1.0),
+            "Appearance": (layers: [
+                (rsi: Some("textures/structures/lighting/light_small"), state: "glow", shading: Unshaded, tint: Some((red: 0.45, green: 1.0, blue: 0.55, alpha: 1.0))),
+                (rsi: Some("textures/effects/light_glow"), state: "glow", shading: Unshaded, tint: Some((red: 0.45, green: 1.0, blue: 0.55, alpha: 1.0))),
+            ]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "light_wall_glowshroom",
+        parents: ["light_wall"],
+        components: {
+            "DisplayName": (name: "glowshrooms"),
+            "PointLight": (color: (0.3, 1.0, 0.4), energy: 0.8, radius: 4.5),
+            // Mushrooms leave no glass behind
+            "Destructible": (thresholds: [(trigger: TotalDamage(10), behaviors: [Destroy])]),
+            "Appearance": (
+                sprite: (rsi: "textures/structures/lighting/glowshroom", state: "base"),
+                shading: Unshaded,
+                layers: [
+                    (rsi: Some("textures/effects/light_glow"), state: "glow", shading: Unshaded, tint: Some((red: 0.4, green: 1.0, blue: 0.5, alpha: 1.0))),
+                ],
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "light_wall_tube_grow",
+        parents: ["light_wall_tube"],
+        components: {
+            // Pinker than the magenta tube: the green channel is what lifts dark dirt floors
+            "PointLight": (color: (1.0, 0.58, 0.88), energy: 2.4),
+            "Appearance": (layers: [
+                (rsi: Some("textures/structures/lighting/light_tube"), state: "glow", shading: Unshaded, tint: Some((red: 1.0, green: 0.6, blue: 0.9, alpha: 1.0))),
+                (rsi: Some("textures/effects/light_glow"), state: "glow", shading: Unshaded, tint: Some((red: 1.0, green: 0.6, blue: 0.9, alpha: 1.0))),
+            ]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "light_wall_small_grow",
+        parents: ["light_wall_small"],
+        components: {
+            "PointLight": (color: (0.9, 0.55, 1.0), energy: 1.5),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "light_wall_tube_sunlamp",
+        parents: ["light_wall_tube"],
+        components: {
+            "PointLight": (color: (1.0, 0.8, 0.45), energy: 1.8),
+        },
+    ),
+]

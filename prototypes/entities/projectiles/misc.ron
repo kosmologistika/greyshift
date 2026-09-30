@@ -1,0 +1,41 @@
+[
+    (
+        type: "Entity",
+        id: "projectile_grappling_hook",
+        parents: ["base_hook_projectile"],
+        hide_spawn_menu: true,
+        components: {
+            "PullShooterOnHit": (),
+            "Appearance": (
+                sprite: (rsi: "textures/objects/weapons/guns/launchers/grappling_gun", state: "hook"),
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "projectile_meat_hook",
+        parents: ["base_hook_projectile"],
+        hide_spawn_menu: true,
+        components: {
+            "PullTargetOnHit": (),
+            "StatusOnHit": (effect: "effect_knockdown", secs: 2.0),
+            "Appearance": (
+                sprite: (rsi: "textures/objects/weapons/guns/launchers/sticky_hand", state: "hook"),
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "projectile_teleport",
+        parents: ["base_energy_projectile"],
+        hide_spawn_menu: true,
+        components: {
+            "SwapsOnHit": (),
+            "MaxFlightRange": (tiles: 12),
+            "FlightSpeed": (tiles_per_sec: 20.0),
+            "MuzzleFx": (light_color: (0.7, 0.4, 1.0)),
+            "PointLight": (color: (0.7, 0.4, 1.0)),
+            "SpriteTint": ((red: 0.7, green: 0.4, blue: 1.0, alpha: 1.0)),
+        },
+    ),
+]

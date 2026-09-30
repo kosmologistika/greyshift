@@ -1,0 +1,82 @@
+[
+    (
+        type: "Entity",
+        id: "structure_wall_base",
+        abstract: true,
+        parents: ["base_structure_solid"],
+        components: {
+            "Occluder": (),
+            "AreaBoundary": (),
+            "MountSupport": (),
+            // Every wall smooths against every other, whatever it is made of
+            "IconSmooth": (key: "wall"),
+            "Appearance": (depth: Walls),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_wall_solid",
+        parents: ["structure_wall_base"],
+        components: {
+            "DisplayName": (name: "solid wall"),
+            "Damageable": (),
+            // Tougher than an airlock (100) or a window (50) - a wall is the
+            // slowest thing on the station to chew through. Drops nothing yet:
+            // there is no material sheet to spawn.
+            "Destructible": (thresholds: [
+                (
+                    trigger: TotalDamage(150),
+                    behaviors: [
+                        PlaySound((source: Collection("destroy_metal"), volume_db: -2.0, pitch_var: 0.08)),
+                        Destroy,
+                    ],
+                ),
+            ]),
+            "StruckSound": (default: Some((source: Collection("hit_metal"), volume_db: -4.0, pitch_var: 0.1))),
+            "IconSmooth": (state_prefix: "solid"),
+            "Appearance": (
+                sprite: (rsi: "textures/structures/walls/solid", state: "default"),
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_wall_indestructible",
+        parents: ["structure_wall_base"],
+        // Map shells are built from this. It stays out of the damage model
+        // entirely, so making `structure_wall_solid` breakable never perforates one
+        components: {
+            "DisplayName": (name: "indestructible wall"),
+            "IconSmooth": (state_prefix: "plastitanium"),
+            "Appearance": (
+                sprite: (rsi: "textures/structures/walls/plastitanium", state: "default"),
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_wall_gold_indestructible",
+        parents: ["structure_wall_base"],
+        components: {
+            "DisplayName": (name: "gold wall"),
+            "IconSmooth": (state_prefix: "gold"),
+            "StruckSound": (default: Some((source: Collection("hit_metal"), volume_db: -4.0, pitch_var: 0.1))),
+            "Appearance": (
+                sprite: (rsi: "textures/structures/walls/gold", state: "default"),
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_wall_wood_indestructible",
+        parents: ["structure_wall_base"],
+        components: {
+            "DisplayName": (name: "wood panel wall"),
+            "IconSmooth": (state_prefix: "wood"),
+            "StruckSound": (default: Some((source: Collection("hit_wood"), volume_db: -4.0, pitch_var: 0.1))),
+            "Appearance": (
+                sprite: (rsi: "textures/structures/walls/wood", state: "default"),
+            ),
+        },
+    ),
+]

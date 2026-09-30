@@ -1,0 +1,27 @@
+[
+    (
+        type: "Entity",
+        id: "structure_crate_generic",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "crate"),
+            "Appearance": (
+                sprite: (rsi: "textures/structures/storage/crate_generic", state: "base"),
+                layers: [
+                    (state: "closed"),
+                ],
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_crate_hydroponics",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "seed crate"),
+            "Appearance": (
+                sprite: (rsi: "textures/structures/storage/crate_hydroponics", state: "closed"),
+            ),
+        },
+    ),
+]

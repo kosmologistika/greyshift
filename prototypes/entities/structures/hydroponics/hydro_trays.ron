@@ -1,0 +1,37 @@
+[
+    (
+        type: "Entity",
+        id: "structure_hydro_tray",
+        // Waist-high like a table, but not a Surface and never smoothed into a run
+        parents: ["base_structure_table"],
+        components: {
+            "DisplayName": (name: "tomato tray"),
+            "Appearance": (
+                sprite: (rsi: "textures/structures/hydroponics/hydro_tray", state: "hydrotray3"),
+                layers: [(state: "tomato")],
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_hydro_tray_corn",
+        parents: ["structure_hydro_tray"],
+        components: {
+            "DisplayName": (name: "corn tray"),
+            "Appearance": (
+                layers: [(rsi: Some("textures/structures/hydroponics/hydro_tray"), state: "corn")],
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_hydro_tray_wheat",
+        parents: ["structure_hydro_tray"],
+        components: {
+            "DisplayName": (name: "wheat tray"),
+            "Appearance": (
+                layers: [(rsi: Some("textures/structures/hydroponics/hydro_tray"), state: "wheat")],
+            ),
+        },
+    ),
+]

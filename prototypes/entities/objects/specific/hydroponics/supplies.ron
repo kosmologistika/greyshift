@@ -1,0 +1,177 @@
+[
+    (
+        type: "Entity",
+        id: "prop_garden_supply",
+        abstract: true,
+        parents: ["base_item"],
+        components: {
+            "Item": (size: Tiny, held: Nothing),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_soil_sack",
+        parents: ["prop_garden_supply"],
+        components: {
+            "Item": (size: Medium, held: Bundle),
+            "DisplayName": (name: "sack of soil"),
+            "Appearance": (sprite: (rsi: "textures/objects/specific/hydroponics/supplies", state: "soil_sack")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_soil_pile",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "soil"),
+            "Appearance": (sprite: (rsi: "textures/objects/specific/hydroponics/supplies", state: "soil_pile")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_seedling_sack",
+        parents: ["prop_garden_supply"],
+        components: {
+            "Item": (size: Small, held: Bundle),
+            "DisplayName": (name: "seedling"),
+            "Appearance": (sprite: (rsi: "textures/objects/specific/hydroponics/supplies", state: "seedling_sack")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_seed_packet_tomato",
+        parents: ["prop_garden_supply"],
+        components: {
+            "DisplayName": (name: "tomato seeds"),
+            "Appearance": (sprite: (rsi: "textures/objects/specific/hydroponics/supplies", state: "seed_tomato")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_seed_packet_carrot",
+        parents: ["prop_garden_supply"],
+        components: {
+            "DisplayName": (name: "carrot seeds"),
+            "Appearance": (sprite: (rsi: "textures/objects/specific/hydroponics/supplies", state: "seed_carrot")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_seed_packet_sunflower",
+        parents: ["prop_garden_supply"],
+        components: {
+            "DisplayName": (name: "sunflower seeds"),
+            "Appearance": (sprite: (rsi: "textures/objects/specific/hydroponics/supplies", state: "seed_sunflower")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_seed_packet_poppy",
+        parents: ["prop_garden_supply"],
+        components: {
+            "DisplayName": (name: "poppy seeds"),
+            "Appearance": (sprite: (rsi: "textures/objects/specific/hydroponics/supplies", state: "seed_poppy")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_leaf_bundle_tobacco",
+        parents: ["prop_garden_supply"],
+        components: {
+            "DisplayName": (name: "tobacco leaves"),
+            "Appearance": (sprite: (rsi: "textures/objects/specific/hydroponics/supplies", state: "leaves_tobacco")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_leaf_bundle_tea",
+        parents: ["prop_garden_supply"],
+        components: {
+            "DisplayName": (name: "tea leaves"),
+            "Appearance": (sprite: (rsi: "textures/objects/specific/hydroponics/supplies", state: "leaves_tea")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_fertilizer_bottle_green",
+        parents: ["prop_garden_supply"],
+        components: {
+            "DamageOnHit": (damage: {Blunt: 1}),
+            "DisplayName": (name: "bottle of E-Z-Nutrient"),
+            "Appearance": (sprite: (rsi: "textures/objects/specific/hydroponics/supplies", state: "fertilizer_green")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_fertilizer_bottle_purple",
+        parents: ["prop_garden_supply"],
+        components: {
+            "DamageOnHit": (damage: {Blunt: 1}),
+            "DisplayName": (name: "bottle of Left 4 Zed"),
+            "Appearance": (sprite: (rsi: "textures/objects/specific/hydroponics/supplies", state: "fertilizer_purple")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_jerrycan",
+        parents: ["prop_garden_supply"],
+        components: {
+            "Item": (size: Medium, held: Bundle),
+            "DamageOnHit": (damage: {Blunt: 3}),
+            "DisplayName": (name: "jerrycan"),
+            "Appearance": (sprite: (rsi: "textures/objects/specific/hydroponics/supplies", state: "jerrycan")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_jerrycan_nutrient",
+        parents: ["prop_garden_supply"],
+        components: {
+            "Item": (size: Medium, held: Bundle),
+            "DamageOnHit": (damage: {Blunt: 3}),
+            "DisplayName": (name: "nutrient jerrycan"),
+            "Appearance": (sprite: (rsi: "textures/objects/specific/hydroponics/supplies", state: "jerrycan_ez")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_bucket",
+        parents: ["prop_garden_supply"],
+        components: {
+            "Item": (size: Small, held: Bundle),
+            "DamageOnHit": (damage: {Blunt: 2}),
+            "DisplayName": (name: "bucket"),
+            "Appearance": (sprite: (rsi: "textures/objects/specific/hydroponics/supplies", state: "bucket")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_gloves_botanic",
+        parents: ["prop_garden_supply"],
+        components: {
+            "DisplayName": (name: "botanist's gloves"),
+            "Appearance": (sprite: (rsi: "textures/objects/specific/hydroponics/supplies", state: "glove")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_bee_smoker",
+        parents: ["prop_garden_supply"],
+        components: {
+            "Item": (size: Small, held: Bundle),
+            "DamageOnHit": (damage: {Blunt: 2}),
+            "DisplayName": (name: "bee smoker"),
+            "Appearance": (sprite: (rsi: "textures/objects/specific/hydroponics/supplies", state: "bee_smoker")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_honey_frame",
+        parents: ["prop_garden_supply"],
+        components: {
+            "Item": (size: Small, held: Bundle),
+            "DisplayName": (name: "honey frame"),
+            "Appearance": (sprite: (rsi: "textures/objects/specific/hydroponics/supplies", state: "honey_frame")),
+        },
+    ),
+]
