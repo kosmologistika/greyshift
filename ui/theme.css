@@ -1109,11 +1109,6 @@
     height: 32px;
 }
 
-/* Explicit so lifting the ghost's wash restores it */
-.storage-plate {
-    -bevy-image-color: #ffffff;
-}
-
 /* Placed from Rust, so no offsets here */
 .storage-join {
     position: absolute;
