@@ -1,0 +1,26 @@
+[
+    (
+        type: "Entity",
+        id: "structure_keycard_auth_wall_mounted",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "keycard authentication device"),
+            "WallMount": (),
+            "PlacementLayer": WallMount,
+            "Facing": (South),
+            "Appearance": (sprite: (rsi: "textures/structures/wallmounts/machines/keycard_auth_wall_mounted", state: "auth_off"), depth: WallMounted),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_keycard_auth",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "keycard authentication device"),
+            "WallMount": (),
+            "PlacementLayer": WallMount,
+            "Facing": (South),
+            "Appearance": (sprite: (rsi: "textures/structures/wallmounts/machines/keycard_auth", state: "auth_off"), depth: WallMounted),
+        },
+    ),
+]

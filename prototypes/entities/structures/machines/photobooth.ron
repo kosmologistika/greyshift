@@ -1,0 +1,20 @@
+[
+    (
+        type: "Entity",
+        id: "structure_photobooth",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "photobooth"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/photobooth", state: "booth_open"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_photobooth_security",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "security photobooth"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/photobooth_security", state: "booth_open"), depth: Furniture),
+        },
+    ),
+]

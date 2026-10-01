@@ -1,0 +1,82 @@
+[
+    (
+        type: "Entity",
+        id: "tile_engine_hull_reinforced",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/engine_hull_reinforced", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_engine",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/engine", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_engine_n2",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/engine_n2", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_engine_o2",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/engine_o2", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_engine_air",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/engine_air", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_engine_co2",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/engine_co2", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_engine_plasma",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/engine_plasma", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_engine_n2o",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/engine_n2o", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_engine_vacuum",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/engine_vacuum", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_engine_cult",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/engine_cult", state: "default")),
+        },
+    ),
+]

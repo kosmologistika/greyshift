@@ -1,0 +1,38 @@
+[
+    (
+        type: "Entity",
+        id: "decal_box_corners",
+        parents: ["base_decal_tile"],
+        components: {
+            "DisplayName": (name: "box corners"),
+            "Appearance": (sprite: (rsi: "textures/decals/box_corners", state: "box_corners")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_box",
+        parents: ["base_decal_tile"],
+        components: {
+            "DisplayName": (name: "box"),
+            "Appearance": (sprite: (rsi: "textures/decals/box", state: "box")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_box_red",
+        parents: ["base_decal_tile"],
+        components: {
+            "DisplayName": (name: "box red"),
+            "Appearance": (sprite: (rsi: "textures/decals/box_red", state: "box_red")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_box_white",
+        parents: ["base_decal_tile"],
+        components: {
+            "DisplayName": (name: "box white"),
+            "Appearance": (sprite: (rsi: "textures/decals/box_white", state: "box_white")),
+        },
+    ),
+]

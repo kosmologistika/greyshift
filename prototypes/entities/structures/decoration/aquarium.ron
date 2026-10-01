@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_aquarium",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "aquarium"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/aquarium", state: "aquarium_map"), depth: Furniture),
+        },
+    ),
+]

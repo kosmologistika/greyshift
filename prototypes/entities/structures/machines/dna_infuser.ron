@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_dna_infuser",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "DNA infuser"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/dna_infuser", state: "infuser"), depth: Furniture),
+        },
+    ),
+]

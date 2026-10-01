@@ -1,0 +1,32 @@
+[
+    (
+        type: "Entity",
+        id: "prop_camera",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "camera"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/camera", state: "camera")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_camera_detective",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "detective's camera"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/camera_detective", state: "camera")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_camera_spooky",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "camera obscura"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/camera_spooky", state: "camera")),
+        },
+    ),
+]

@@ -1,0 +1,31 @@
+[
+    (
+        type: "Entity",
+        id: "structure_plasticflaps",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "airtight plastic flaps"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/plasticflaps", state: "plasticflaps"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_plasticflaps_opaque",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "airtight plastic flaps"),
+            "Occluder": (),
+            "AreaBoundary": (),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/plasticflaps_opaque", state: "plasticflaps"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_plasticflaps_kitchen",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "cold room plastic flaps"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/plasticflaps_kitchen", state: "plasticflaps"), depth: Furniture),
+        },
+    ),
+]

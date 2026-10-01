@@ -1,0 +1,263 @@
+[
+    (
+        type: "Entity",
+        id: "structure_chair_sofa_bench_right",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "bench"),
+            "Appearance": (sprite: (rsi: "textures/structures/furniture/chair_sofa_bench_right", state: "obj_structure_chair_sofa_bench_right"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_chair_sofa_bench_left",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "bench"),
+            "Appearance": (sprite: (rsi: "textures/structures/furniture/chair_sofa_bench_left", state: "obj_structure_chair_sofa_bench_left"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_chair",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "chair"),
+            "Appearance": (sprite: (rsi: "textures/structures/furniture/chair", state: "chair"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_chair_comfy_beige",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "comfy chair"),
+            "Appearance": (sprite: (rsi: "textures/structures/furniture/chair_comfy_beige", state: "comfychair"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_chair_office",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "office chair"),
+            "Appearance": (sprite: (rsi: "textures/structures/furniture/chair_office", state: "officechair_dark"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_chair_comfy_black",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "comfy chair"),
+            "Appearance": (sprite: (rsi: "textures/structures/furniture/chair_comfy_black", state: "comfychair"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_chair_stool",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "stool"),
+            "Appearance": (sprite: (rsi: "textures/structures/furniture/chair_stool", state: "stool"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_chair_sofa_right",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "old ratty sofa"),
+            "Appearance": (sprite: (rsi: "textures/structures/furniture/chair_sofa_right", state: "sofaend_right"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_chair_sofa_middle_maroon",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "old ratty sofa"),
+            "Appearance": (sprite: (rsi: "textures/structures/furniture/chair_sofa_middle_maroon", state: "sofamiddle"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_chair_sofa_corner",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "old ratty sofa"),
+            "Appearance": (sprite: (rsi: "textures/structures/furniture/chair_sofa_corner", state: "sofacorner"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_chair_sofa_left",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "old ratty sofa"),
+            "Appearance": (sprite: (rsi: "textures/structures/furniture/chair_sofa_left", state: "sofaend_left"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_chair_office_light",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "office chair"),
+            "Appearance": (sprite: (rsi: "textures/structures/furniture/chair_office_light", state: "officechair_white"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_chair_sofa_bench",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "bench"),
+            "Appearance": (sprite: (rsi: "textures/structures/furniture/chair_sofa_bench", state: "obj_structure_chair_sofa_bench"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_chair_sofa_right_brown",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "old ratty sofa"),
+            "Appearance": (sprite: (rsi: "textures/structures/furniture/chair_sofa_right_brown", state: "sofaend_right"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_chair_sofa_left_brown",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "old ratty sofa"),
+            "Appearance": (sprite: (rsi: "textures/structures/furniture/chair_sofa_left_brown", state: "sofaend_left"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_chair_e_chair",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "electric chair"),
+            "Appearance": (sprite: (rsi: "textures/structures/furniture/chair_e_chair", state: "echair0"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_chair_wood",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "wooden chair"),
+            "Appearance": (sprite: (rsi: "textures/structures/furniture/chair_wood", state: "wooden_chair"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_chair_comfy_brown",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "comfy chair"),
+            "Appearance": (sprite: (rsi: "textures/structures/furniture/chair_comfy_brown", state: "comfychair"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_chair_comfy_corp",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "comfy chair"),
+            "Appearance": (sprite: (rsi: "textures/structures/furniture/chair_comfy_corp", state: "comfychair_corp"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_chair_pew_right",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "right wooden pew end"),
+            "Appearance": (sprite: (rsi: "textures/structures/furniture/chair_pew_right", state: "pewend_right"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_chair_pew_left",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "left wooden pew end"),
+            "Appearance": (sprite: (rsi: "textures/structures/furniture/chair_pew_left", state: "pewend_left"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_chair_sofa_corp_right",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "sofa"),
+            "Appearance": (sprite: (rsi: "textures/structures/furniture/chair_sofa_corp_right", state: "corp_sofaend_right"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_chair_sofa_corp_left",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "sofa"),
+            "Appearance": (sprite: (rsi: "textures/structures/furniture/chair_sofa_corp_left", state: "corp_sofaend_left"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_chair_sofa_middle_brown",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "old ratty sofa"),
+            "Appearance": (sprite: (rsi: "textures/structures/furniture/chair_sofa_middle_brown", state: "sofamiddle"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_chair_comfy_teal",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "comfy chair"),
+            "Appearance": (sprite: (rsi: "textures/structures/furniture/chair_comfy_teal", state: "comfychair"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_chair_wood_wings",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "wooden chair"),
+            "Appearance": (sprite: (rsi: "textures/structures/furniture/chair_wood_wings", state: "wooden_chair_wings"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_chair_pew",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "wooden pew"),
+            "Appearance": (sprite: (rsi: "textures/structures/furniture/chair_pew", state: "pewmiddle"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_chair_sofa_corp",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "sofa"),
+            "Appearance": (sprite: (rsi: "textures/structures/furniture/chair_sofa_corp", state: "corp_sofamiddle"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_chair_greyscale",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "chair"),
+            "Appearance": (sprite: (rsi: "textures/structures/furniture/chair_greyscale", state: "chair"), depth: Furniture),
+        },
+    ),
+]

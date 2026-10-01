@@ -1,0 +1,128 @@
+[
+    (
+        type: "Entity",
+        id: "decal_l2",
+        parents: ["base_decal_tile"],
+        components: {
+            "DisplayName": (name: "L2"),
+            "Appearance": (sprite: (rsi: "textures/decals/l2", state: "L2")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_l1",
+        parents: ["base_decal_tile"],
+        components: {
+            "DisplayName": (name: "L1"),
+            "Appearance": (sprite: (rsi: "textures/decals/l1", state: "L1")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_l4",
+        parents: ["base_decal_tile"],
+        components: {
+            "DisplayName": (name: "L4"),
+            "Appearance": (sprite: (rsi: "textures/decals/l4", state: "L4")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_l3",
+        parents: ["base_decal_tile"],
+        components: {
+            "DisplayName": (name: "L3"),
+            "Appearance": (sprite: (rsi: "textures/decals/l3", state: "L3")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_l6",
+        parents: ["base_decal_tile"],
+        components: {
+            "DisplayName": (name: "L6"),
+            "Appearance": (sprite: (rsi: "textures/decals/l6", state: "L6")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_l5",
+        parents: ["base_decal_tile"],
+        components: {
+            "DisplayName": (name: "L5"),
+            "Appearance": (sprite: (rsi: "textures/decals/l5", state: "L5")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_l8",
+        parents: ["base_decal_tile"],
+        components: {
+            "DisplayName": (name: "L8"),
+            "Appearance": (sprite: (rsi: "textures/decals/l8", state: "L8")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_l7",
+        parents: ["base_decal_tile"],
+        components: {
+            "DisplayName": (name: "L7"),
+            "Appearance": (sprite: (rsi: "textures/decals/l7", state: "L7")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_l10",
+        parents: ["base_decal_tile"],
+        components: {
+            "DisplayName": (name: "L10"),
+            "Appearance": (sprite: (rsi: "textures/decals/l10", state: "L10")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_l9",
+        parents: ["base_decal_tile"],
+        components: {
+            "DisplayName": (name: "L9"),
+            "Appearance": (sprite: (rsi: "textures/decals/l9", state: "L9")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_l12",
+        parents: ["base_decal_tile"],
+        components: {
+            "DisplayName": (name: "L12"),
+            "Appearance": (sprite: (rsi: "textures/decals/l12", state: "L12")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_l11",
+        parents: ["base_decal_tile"],
+        components: {
+            "DisplayName": (name: "L11"),
+            "Appearance": (sprite: (rsi: "textures/decals/l11", state: "L11")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_l14",
+        parents: ["base_decal_tile"],
+        components: {
+            "DisplayName": (name: "L14"),
+            "Appearance": (sprite: (rsi: "textures/decals/l14", state: "L14")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_l13",
+        parents: ["base_decal_tile"],
+        components: {
+            "DisplayName": (name: "L13"),
+            "Appearance": (sprite: (rsi: "textures/decals/l13", state: "L13")),
+        },
+    ),
+]

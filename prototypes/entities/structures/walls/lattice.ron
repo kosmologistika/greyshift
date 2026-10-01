@@ -1,0 +1,24 @@
+[
+    (
+        type: "Entity",
+        id: "structure_lattice",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "lattice"),
+            "IconSmooth": (key: "lattice", state_prefix: "state_"),
+            "PlacementLayer": Decal,
+            "Appearance": (sprite: (rsi: "textures/structures/walls/lattice", state: "default"), depth: FloorOverlay),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_catwalk",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "catwalk"),
+            "IconSmooth": (key: "catwalk", state_prefix: "state_"),
+            "PlacementLayer": Decal,
+            "Appearance": (sprite: (rsi: "textures/structures/walls/catwalk", state: "default"), depth: FloorOverlay),
+        },
+    ),
+]

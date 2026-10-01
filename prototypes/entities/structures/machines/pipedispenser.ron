@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_pipedispenser_disposal",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "disposal pipe dispenser"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/pipedispenser_disposal", state: "pipe_d"), depth: Furniture),
+        },
+    ),
+]

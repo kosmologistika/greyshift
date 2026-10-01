@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_latexballoon",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "latex glove"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/latexballoon", state: "latexballoon")),
+        },
+    ),
+]

@@ -1,0 +1,42 @@
+[
+    (
+        type: "Entity",
+        id: "prop_melee_baseball_bat",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "baseball bat"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/weapons/melee_baseball_bat", state: "baseball_bat")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_melee_baton_security_cattleprod",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "stunprod"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/weapons/melee_baton_security_cattleprod", state: "stunprod")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_melee_chainofcommand",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "chain of command"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/weapons/melee_chainofcommand", state: "chain")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_melee_flyswatter",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "flyswatter"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/weapons/melee_flyswatter", state: "flyswatter")),
+        },
+    ),
+]

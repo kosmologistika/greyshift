@@ -1,0 +1,101 @@
+[
+    (
+        type: "Entity",
+        id: "structure_table_wooden",
+        parents: ["base_structure_table"],
+        components: {
+            "DisplayName": (name: "wooden table"),
+            "IconSmooth": (key: "table_wooden", state_prefix: "state_"),
+            "Appearance": (sprite: (rsi: "textures/structures/furniture/table_wooden", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_table_glass",
+        parents: ["base_structure_table"],
+        components: {
+            "DisplayName": (name: "glass table"),
+            "IconSmooth": (key: "table_glass", state_prefix: "state_"),
+            "Appearance": (sprite: (rsi: "textures/structures/furniture/table_glass", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_table_reinforced",
+        parents: ["base_structure_table"],
+        components: {
+            "DisplayName": (name: "reinforced table"),
+            "IconSmooth": (key: "table_reinforced", state_prefix: "state_"),
+            "Appearance": (sprite: (rsi: "textures/structures/furniture/table_reinforced", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_table_optable",
+        parents: ["base_structure_table"],
+        components: {
+            "DisplayName": (name: "operating table"),
+            "Appearance": (sprite: (rsi: "textures/structures/furniture/table_optable", state: "surgery_table"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_table_wood_poker",
+        parents: ["base_structure_table"],
+        components: {
+            "DisplayName": (name: "gambling table"),
+            "IconSmooth": (key: "table_wood_poker", state_prefix: "state_"),
+            "Appearance": (sprite: (rsi: "textures/structures/furniture/table_wood_poker", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_table_wood_fancy_royalblack",
+        parents: ["base_structure_table"],
+        components: {
+            "DisplayName": (name: "fancy table"),
+            "IconSmooth": (key: "table_wood_fancy_royalblack", state_prefix: "state_"),
+            "Appearance": (sprite: (rsi: "textures/structures/furniture/table_wood_fancy_royalblack", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_table_wood_fancy_blue",
+        parents: ["base_structure_table"],
+        components: {
+            "DisplayName": (name: "fancy table"),
+            "IconSmooth": (key: "table_wood_fancy_blue", state_prefix: "state_"),
+            "Appearance": (sprite: (rsi: "textures/structures/furniture/table_wood_fancy_blue", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_table_wood_fancy_red",
+        parents: ["base_structure_table"],
+        components: {
+            "DisplayName": (name: "fancy table"),
+            "IconSmooth": (key: "table_wood_fancy_red", state_prefix: "state_"),
+            "Appearance": (sprite: (rsi: "textures/structures/furniture/table_wood_fancy_red", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_table_wood_fancy_black",
+        parents: ["base_structure_table"],
+        components: {
+            "DisplayName": (name: "fancy table"),
+            "IconSmooth": (key: "table_wood_fancy_black", state_prefix: "state_"),
+            "Appearance": (sprite: (rsi: "textures/structures/furniture/table_wood_fancy_black", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_table_reinforced_rglass",
+        parents: ["base_structure_table"],
+        components: {
+            "DisplayName": (name: "reinforced glass table"),
+            "IconSmooth": (key: "table_reinforced_rglass", state_prefix: "state_"),
+            "Appearance": (sprite: (rsi: "textures/structures/furniture/table_reinforced_rglass", state: "default")),
+        },
+    ),
+]

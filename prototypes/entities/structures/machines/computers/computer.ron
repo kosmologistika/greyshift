@@ -1,0 +1,560 @@
+[
+    (
+        type: "Entity",
+        id: "structure_computer_security",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "security camera console"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/computer_security", state: "computer"), depth: Furniture, layers: [(state: "security_key"), (state: "cameras", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_computer_records_security",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "security records console"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/computer_records_security", state: "computer"), depth: Furniture, layers: [(state: "security_key"), (state: "security", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_computer_pod_old_mass_driver_controller_trash",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "Mass Driver Controller"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/computer_pod_old_mass_driver_controller_trash", state: "airlock_control_standby"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_computer_cargo",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "supply console"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/computer_cargo", state: "computer"), depth: Furniture, layers: [(state: "generic_key"), (state: "supply", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_computer_arcade_orion_trail",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "The Orion Trail"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/computer_arcade_orion_trail", state: "arcade"), depth: Furniture, layers: [(state: "invaders", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_computer_arcade_battle",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "battle arcade"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/computer_arcade_battle", state: "arcade"), depth: Furniture, layers: [(state: "fighters", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_computer_bank_machine",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "bank machine"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/computer_bank_machine", state: "computer"), depth: Furniture, layers: [(state: "security_key"), (state: "vault", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_computer_libraryconsole_bookmanagement",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "book inventory management console"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/computer_libraryconsole_bookmanagement", state: "oldcomp"), depth: Furniture, layers: [(state: "library", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_computer_exodrone_control_console",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "exploration drone control console"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/computer_exodrone_control_console", state: "computer"), depth: Furniture, layers: [(state: "generic_key"), (state: "generic", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_computer_security_qm",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "Quartermaster's camera console"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/computer_security_qm", state: "computer"), depth: Furniture, layers: [(state: "security_key"), (state: "cameras", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_computer_exoscanner_control",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "scanner array control console"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/computer_exoscanner_control", state: "computer"), depth: Furniture, layers: [(state: "generic_key"), (state: "generic", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_computer_cryopod",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "cryogenic oversight console"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/computer_cryopod", state: "cellconsole_1"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_computer_slot_machine",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "slot machine"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/computer_slot_machine", state: "slots"), depth: Furniture, layers: [(state: "slots_screen", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_computer_security_labor",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "labor camp monitoring"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/computer_security_labor", state: "computer"), depth: Furniture, layers: [(state: "security_key"), (state: "cameras", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_computer_shuttle_labor",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "labor shuttle console"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/computer_shuttle_labor", state: "computer"), depth: Furniture, layers: [(state: "tech_key"), (state: "shuttle", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_computer_cargo_request",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "supply request console"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/computer_cargo_request", state: "computer"), depth: Furniture, layers: [(state: "generic_key"), (state: "request", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_computer_turbine_computer",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "gas turbine control computer"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/computer_turbine_computer", state: "computer"), depth: Furniture, layers: [(state: "tech_key"), (state: "turbinecomp", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_computer_atmos_control_nocontrol_incinerator",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "incinerator chamber monitor"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/computer_atmos_control_nocontrol_incinerator", state: "computer"), depth: Furniture, layers: [(state: "atmos_key"), (state: "tank", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_computer_piratepad_control_civilian",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "civilian bounty control terminal"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/computer_piratepad_control_civilian", state: "computer"), depth: Furniture, layers: [(state: "id_key"), (state: "civ_bounty", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_computer_operating",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "operating computer"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/computer_operating", state: "computer"), depth: Furniture, layers: [(state: "med_key"), (state: "crew", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_computer_gateway_control",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "Gateway Control"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/computer_gateway_control", state: "computer"), depth: Furniture, layers: [(state: "generic_key"), (state: "generic", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_computer_prisoner_management",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "prisoner management console"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/computer_prisoner_management", state: "computer"), depth: Furniture, layers: [(state: "security_key"), (state: "explosive", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_computer_accounting",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "account lookup console"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/computer_accounting", state: "computer"), depth: Furniture, layers: [(state: "id_key"), (state: "accounts", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_computer_prisoner_gulag_teleporter_computer",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "labor camp teleporter console"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/computer_prisoner_gulag_teleporter_computer", state: "computer"), depth: Furniture, layers: [(state: "security_key"), (state: "explosive", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_computer_station_alert",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "station alert console"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/computer_station_alert", state: "computer"), depth: Furniture, layers: [(state: "atmos_key"), (state: "alert_0", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_computer_monitor",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "power monitoring console"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/computer_monitor", state: "computer"), depth: Furniture, layers: [(state: "power_key"), (state: "power", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_computer_atmos_control_nitrogen_tank",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "Nitrogen supply control"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/computer_atmos_control_nitrogen_tank", state: "computer"), depth: Furniture, layers: [(state: "atmos_key"), (state: "tank", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_computer_records_security_laptop",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "security laptop"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/computer_records_security_laptop", state: "laptop"), depth: Furniture, layers: [(state: "laptop_key"), (state: "seclaptop", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_computer_atmos_control_oxygen_tank",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "Oxygen supply control"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/computer_atmos_control_oxygen_tank", state: "computer"), depth: Furniture, layers: [(state: "atmos_key"), (state: "tank", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_computer_atmos_alert_station_only",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "atmospheric alert console"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/computer_atmos_alert_station_only", state: "computer"), depth: Furniture, layers: [(state: "atmos_key"), (state: "alert_0", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_computer_warrant",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "security warrant console"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/computer_warrant", state: "computer"), depth: Furniture, layers: [(state: "security_key"), (state: "security", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_computer_atmos_control_nocontrol_master",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "station atmospherics monitoring"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/computer_atmos_control_nocontrol_master", state: "computer"), depth: Furniture, layers: [(state: "atmos_key"), (state: "tank", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_computer_crew",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "crew monitoring console"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/computer_crew", state: "computer"), depth: Furniture, layers: [(state: "med_key"), (state: "crew", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_computer_atmos_control_air_tank",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "mixed air supply control"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/computer_atmos_control_air_tank", state: "computer"), depth: Furniture, layers: [(state: "atmos_key"), (state: "tank", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_computer_communications",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "communications console"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/computer_communications", state: "computer"), depth: Furniture, layers: [(state: "tech_key"), (state: "comm", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_computer_rdconsole",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "R&D Console"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/computer_rdconsole", state: "computer"), depth: Furniture, layers: [(state: "rd_key"), (state: "rdcomp", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_computer_telecomms_server",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "telecommunications server monitoring console"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/computer_telecomms_server", state: "computer"), depth: Furniture, layers: [(state: "generic_key"), (state: "comm_logs", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_computer_message_monitor",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "message monitor console"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/computer_message_monitor", state: "computer"), depth: Furniture, layers: [(state: "generic_key"), (state: "comm_logs", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_computer_telecomms_monitor",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "telecommunications monitoring console"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/computer_telecomms_monitor", state: "computer"), depth: Furniture, layers: [(state: "generic_key"), (state: "comm_monitor", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_computer_atmos_control_carbon_tank",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "Carbon Dioxide supply control"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/computer_atmos_control_carbon_tank", state: "computer"), depth: Furniture, layers: [(state: "atmos_key"), (state: "tank", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_computer_records_medical",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "medical records console"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/computer_records_medical", state: "computer"), depth: Furniture, layers: [(state: "med_key"), (state: "medcomp", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_computer_security_wooden_tv",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "security camera monitor"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/computer_security_wooden_tv", state: "television"), depth: Furniture, layers: [(state: "detective_tv", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_computer_atmos_control_plasma_tank",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "Plasma supply control"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/computer_atmos_control_plasma_tank", state: "computer"), depth: Furniture, layers: [(state: "atmos_key"), (state: "tank", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_computer_security_mining",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "outpost camera console"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/computer_security_mining", state: "computer"), depth: Furniture, layers: [(state: "mining_key"), (state: "mining", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_computer_teleporter",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "teleporter control console"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/computer_teleporter", state: "computer"), depth: Furniture, layers: [(state: "teleport_key"), (state: "teleport", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_computer_atmos_control_nitrous_tank",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "Nitrous Oxide supply control"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/computer_atmos_control_nitrous_tank", state: "computer"), depth: Furniture, layers: [(state: "atmos_key"), (state: "tank", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_computer_atmos_alert",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "atmospheric alert console"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/computer_atmos_alert", state: "computer"), depth: Furniture, layers: [(state: "atmos_key"), (state: "alert_0", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_computer_records_medical_laptop",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "medical laptop"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/computer_records_medical_laptop", state: "laptop"), depth: Furniture, layers: [(state: "laptop_key"), (state: "medlaptop", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_computer_atmos_control_mix_tank",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "mix chamber control"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/computer_atmos_control_mix_tank", state: "computer"), depth: Furniture, layers: [(state: "atmos_key"), (state: "tank", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_computer_holodeck",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "holodeck control console"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/computer_holodeck", state: "computer"), depth: Furniture, layers: [(state: "generic_key"), (state: "holocontrol", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_computer_security_hos",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "Head of Security's camera console"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/computer_security_hos", state: "computer"), depth: Furniture, layers: [(state: "security_key"), (state: "cameras", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_computer_mech_bay_power_console",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "mech bay power control console"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/computer_mech_bay_power_console", state: "computer"), depth: Furniture, layers: [(state: "rd_key"), (state: "recharge_comp", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_computer_order_console_cook",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "Produce Orders Console"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/computer_order_console_cook", state: "computer"), depth: Furniture, layers: [(state: "generic_key"), (state: "request", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_computer_pandemic",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "PanD.E.M.I.C 2200"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/computer_pandemic", state: "pandemic0"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_computer_libraryconsole",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "library visitor console"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/computer_libraryconsole", state: "oldcomp"), depth: Furniture, layers: [(state: "library", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_computer_mecha",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "exosuit control console"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/computer_mecha", state: "computer"), depth: Furniture, layers: [(state: "tech_key"), (state: "mecha", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_computer_mechpad",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "orbital mech pad console"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/computer_mechpad", state: "computer"), depth: Furniture, layers: [(state: "teleport_key"), (state: "mechpad", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_computer_robotics",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "robotics control console"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/computer_robotics", state: "computer"), depth: Furniture, layers: [(state: "rd_key"), (state: "robot", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_computer_rdservercontrol",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "R&D server control console"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/computer_rdservercontrol", state: "computer"), depth: Furniture, layers: [(state: "rd_key"), (state: "rdcomp", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_computer_pod_old_mass_driver_controller_chapelgun",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "Mass Driver Controller"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/computer_pod_old_mass_driver_controller_chapelgun", state: "airlock_control_standby"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_computer_dna_console",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "DNA Console"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/computer_dna_console", state: "computer"), depth: Furniture, layers: [(state: "med_key"), (state: "dna", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_computer_pod_old_mass_driver_controller_ordnancedriver",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "Mass Driver Controller"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/computer_pod_old_mass_driver_controller_ordnancedriver", state: "airlock_control_standby"), depth: Furniture),
+        },
+    ),
+]

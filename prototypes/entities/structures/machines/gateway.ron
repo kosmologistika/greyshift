@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_gateway_centerstation",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "gateway"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/gateway_centerstation", state: "portal_frame"), depth: Furniture),
+        },
+    ),
+]

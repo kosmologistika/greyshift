@@ -1,0 +1,22 @@
+[
+    (
+        type: "Entity",
+        id: "prop_plate_oven_tray",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "oven tray"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/plate_oven_tray", state: "oven_tray")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_plate",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "plate"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/plate", state: "plate")),
+        },
+    ),
+]

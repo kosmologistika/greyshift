@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_spider_stickyweb",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "web"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/spider_stickyweb", state: "stickyweb-0"), depth: FloorFixture),
+        },
+    ),
+]

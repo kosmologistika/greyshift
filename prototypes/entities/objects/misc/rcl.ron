@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_rcl_pre_loaded",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "rapid pipe cleaner layer"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/rcl_pre_loaded", state: "rcl-0")),
+        },
+    ),
+]

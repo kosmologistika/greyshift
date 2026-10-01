@@ -1,0 +1,22 @@
+[
+    (
+        type: "Entity",
+        id: "prop_clothing_neck_tie_detective",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "loose tie"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/clothing/neck/clothing_neck_tie_detective", state: "detective")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_clothing_neck_stethoscope",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "stethoscope"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/clothing/neck/clothing_neck_stethoscope", state: "stethoscope")),
+        },
+    ),
+]

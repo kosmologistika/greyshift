@@ -1,0 +1,22 @@
+[
+    (
+        type: "Entity",
+        id: "prop_lighter_greyscale",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "cheap lighter"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/lighter_greyscale", state: "lighter")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_lighter",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Zippo lighter"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/lighter", state: "zippo")),
+        },
+    ),
+]

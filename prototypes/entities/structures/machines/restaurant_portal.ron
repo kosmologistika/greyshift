@@ -1,0 +1,20 @@
+[
+    (
+        type: "Entity",
+        id: "structure_restaurant_portal_bar",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "bar portal"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/restaurant_portal_bar", state: "portal"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_restaurant_portal_restaurant",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "restaurant portal"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/restaurant_portal_restaurant", state: "portal"), depth: Furniture),
+        },
+    ),
+]

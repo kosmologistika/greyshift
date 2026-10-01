@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_sparker",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "mounted igniter"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/sparker", state: "migniter"), depth: Furniture),
+        },
+    ),
+]

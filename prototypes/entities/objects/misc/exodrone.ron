@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_exodrone",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "exploration drone"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/exodrone", state: "drone")),
+        },
+    ),
+]

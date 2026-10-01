@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_flesh_shears",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "flesh reshaper"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/flesh_shears", state: "flesh_shaper")),
+        },
+    ),
+]

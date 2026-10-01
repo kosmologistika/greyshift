@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_atmos_shield_gen_active",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "atmospheric shield generator"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/atmos_shield_gen_active", state: "atmosshield"), depth: WallMounted),
+        },
+    ),
+]

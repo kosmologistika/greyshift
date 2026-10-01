@@ -1,0 +1,22 @@
+[
+    (
+        type: "Entity",
+        id: "prop_key_janitor",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "key"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/key_janitor", state: "keyjanitor")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_key_security",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "key"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/key_security", state: "keysec")),
+        },
+    ),
+]

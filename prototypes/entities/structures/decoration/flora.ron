@@ -87,4 +87,274 @@
             ),
         },
     ),
+    (
+        type: "Entity",
+        id: "structure_flora_bush_large_style_random",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "bush"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/flora_bush_large_style_random", state: "bush1"), depth: WallMounted),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_flora_bush_flowers_pp_style_random",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "bush"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/flora_bush_flowers_pp_style_random", state: "ppflowers_1"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_flora_bush_flowers_br_style_random",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "bush"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/flora_bush_flowers_br_style_random", state: "brflowers_1"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_flora_bush_flowers_yw_style_random",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "bush"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/flora_bush_flowers_yw_style_random", state: "ywflowers_1"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_flora_bush_grassy",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "bush"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/flora_bush_grassy", state: "grassybush_1"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_flora_bush_flowers_br",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "bush"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/flora_bush_flowers_br", state: "brflowers_1"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_flora_bush_flowers_pp",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "bush"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/flora_bush_flowers_pp", state: "ppflowers_1"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_flora_grass_jungle",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "jungle grass"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/flora_grass_jungle", state: "grassa1"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_flora_bush_sunny",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "bush"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/flora_bush_sunny", state: "sunnybush_1"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_flora_bush_flowers_yw",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "bush"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/flora_bush_flowers_yw", state: "ywflowers_1"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_flora_bush_jungle_a_style_3",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "bush"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/flora_bush_jungle_a_style_3", state: "busha3"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_flora_bush_leavy",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "bush"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/flora_bush_leavy", state: "firstbush_1"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_flora_bush_ferny",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "bush"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/flora_bush_ferny", state: "fernybush_1"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_flora_bush_reed_style_2",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "bush"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/flora_bush_reed_style_2", state: "reedbush_2"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_flora_bush_stalky",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "bush"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/flora_bush_stalky", state: "stalkybush_1"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_flora_rock_pile",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "rock pile"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/flora_rock_pile", state: "lavarocks1"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_flora_bush_jungle",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "bush"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/flora_bush_jungle", state: "busha1"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_flora_bush_jungle_b_style_random",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "bush"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/flora_bush_jungle_b_style_random", state: "bushb1"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_flora_rock",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "large rock"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/flora_rock", state: "basalt1"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_flora_bush",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "bush"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/flora_bush", state: "firstbush_1"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_flora_grass_both",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "grass"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/flora_grass_both", state: "snowgrassall1"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_flora_bush_pointy_style_random",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "bush"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/flora_bush_pointy_style_random", state: "pointybush_1"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_flora_bush_leavy_style_random",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "bush"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/flora_bush_leavy_style_random", state: "firstbush_1"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_flora_bush_fullgrass_style_random",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "bush"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/flora_bush_fullgrass_style_random", state: "fullgrass_1"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_flora_bush_grassy_style_random",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "bush"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/flora_bush_grassy_style_random", state: "grassybush_1"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_flora_bush_lavendergrass",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "bush"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/flora_bush_lavendergrass", state: "lavendergrass_1"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_flora_bush_pointy",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "bush"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/flora_bush_pointy", state: "pointybush_1"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_flora_bush_leafy",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "bush"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/flora_bush_leafy", state: "leafybush_1"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_flora_tree_jungle",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "tree"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/flora_tree_jungle", state: "tree1"), depth: WallMounted),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_flora_tree_palm",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "palm tree"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/flora_tree_palm", state: "palm1"), depth: WallMounted),
+        },
+    ),
 ]

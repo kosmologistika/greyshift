@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_bedsheetbin",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "linen bin"),
+            "Appearance": (sprite: (rsi: "textures/structures/furniture/bedsheetbin", state: "linenbin-full"), depth: BelowMobs),
+        },
+    ),
+]

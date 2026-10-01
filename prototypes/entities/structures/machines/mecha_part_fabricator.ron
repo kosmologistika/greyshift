@@ -1,0 +1,20 @@
+[
+    (
+        type: "Entity",
+        id: "structure_mecha_part_fabricator",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "exosuit fabricator"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/mecha_part_fabricator", state: "fab-idle"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_mecha_part_fabricator_maint",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "exosuit fabricator"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/mecha_part_fabricator_maint", state: "fab-idle"), depth: Furniture),
+        },
+    ),
+]

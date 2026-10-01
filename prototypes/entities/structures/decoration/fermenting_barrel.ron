@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_fermenting_barrel",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "wooden barrel"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/fermenting_barrel", state: "barrel"), depth: Furniture),
+        },
+    ),
+]

@@ -1,0 +1,62 @@
+[
+    (
+        type: "Entity",
+        id: "prop_folder",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "folder"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/folder", state: "folder")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_folder_yellow",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "folder"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/folder_yellow", state: "folder_yellow")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_folder_documents",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "folder- 'TOP SECRET'"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/folder_documents", state: "folder")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_folder_red",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "folder"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/folder_red", state: "folder_red")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_folder_blue",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "folder"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/folder_blue", state: "folder_blue")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_folder_white",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "folder"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/folder_white", state: "folder_white")),
+        },
+    ),
+]

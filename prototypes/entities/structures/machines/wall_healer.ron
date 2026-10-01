@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_wall_healer",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "DeForest first aid station"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/wall_healer", state: "wall_healer"), depth: Furniture),
+        },
+    ),
+]

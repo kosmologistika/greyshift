@@ -1,0 +1,263 @@
+[
+    (
+        type: "Entity",
+        id: "structure_atmospherics_components_unary_vent_scrubber_on",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "air scrubber"),
+            "Appearance": (sprite: (rsi: "textures/structures/piping/atmospherics_components_unary_vent_scrubber_on", state: "scrub_on"), depth: FloorFixture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_atmospherics_components_unary_vent_pump_on",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "air vent"),
+            "Appearance": (sprite: (rsi: "textures/structures/piping/atmospherics_components_unary_vent_pump_on", state: "vent_out"), depth: FloorFixture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_atmospherics_components_unary_portables_connector",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "connector port"),
+            "Appearance": (sprite: (rsi: "textures/structures/piping/atmospherics_components_unary_portables_connector", state: "connector_map-3"), depth: FloorFixture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_atmospherics_components_unary_outlet_injector_on",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "air injector"),
+            "Appearance": (sprite: (rsi: "textures/structures/piping/atmospherics_components_unary_outlet_injector_on", state: "inje_map-3"), depth: FloorFixture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_atmospherics_components_unary_passive_vent",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "passive vent"),
+            "Appearance": (sprite: (rsi: "textures/structures/piping/atmospherics_components_unary_passive_vent", state: "passive_vent_map-3"), depth: FloorFixture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_atmospherics_components_tank_air",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "pressure tank (Air)"),
+            "Appearance": (sprite: (rsi: "textures/structures/piping/atmospherics_components_tank_air", state: "obj_machinery_atmospherics_components_tank"), depth: FloorFixture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_atmospherics_components_tank_plasma",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "pressure tank"),
+            "Appearance": (sprite: (rsi: "textures/structures/piping/atmospherics_components_tank_plasma", state: "obj_machinery_atmospherics_components_tank"), depth: FloorFixture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_atmospherics_components_tank_oxygen",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "pressure tank"),
+            "Appearance": (sprite: (rsi: "textures/structures/piping/atmospherics_components_tank_oxygen", state: "obj_machinery_atmospherics_components_tank"), depth: FloorFixture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_atmospherics_components_unary_thermomachine_freezer",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "Temperature control unit"),
+            "Appearance": (sprite: (rsi: "textures/structures/piping/atmospherics_components_unary_thermomachine_freezer", state: "obj_machinery_atmospherics_components_unary_thermomachine"), depth: FloorFixture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_atmospherics_components_unary_outlet_injector_monitored_incinerator_input",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "incinerator chamber input injector"),
+            "Appearance": (sprite: (rsi: "textures/structures/piping/atmospherics_components_unary_outlet_injector_monitored_incinerator_input", state: "inje_map-3"), depth: FloorFixture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_atmospherics_components_unary_vent_scrubber",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "air scrubber"),
+            "Appearance": (sprite: (rsi: "textures/structures/piping/atmospherics_components_unary_vent_scrubber", state: "scrub_off"), depth: FloorFixture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_atmospherics_components_unary_outlet_injector_monitored_nitrogen_input",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "nitrogen tank input injector"),
+            "Appearance": (sprite: (rsi: "textures/structures/piping/atmospherics_components_unary_outlet_injector_monitored_nitrogen_input", state: "inje_map-3"), depth: FloorFixture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_atmospherics_components_unary_vent_pump_siphon_monitored_nitrogen_output",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "nitrogen tank output inlet"),
+            "Appearance": (sprite: (rsi: "textures/structures/piping/atmospherics_components_unary_vent_pump_siphon_monitored_nitrogen_output", state: "vent_in"), depth: FloorFixture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_atmospherics_components_unary_outlet_injector_monitored_oxygen_input",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "oxygen tank input injector"),
+            "Appearance": (sprite: (rsi: "textures/structures/piping/atmospherics_components_unary_outlet_injector_monitored_oxygen_input", state: "inje_map-3"), depth: FloorFixture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_atmospherics_components_unary_vent_pump_siphon_monitored_oxygen_output",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "oxygen tank output inlet"),
+            "Appearance": (sprite: (rsi: "textures/structures/piping/atmospherics_components_unary_vent_pump_siphon_monitored_oxygen_output", state: "vent_in"), depth: FloorFixture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_atmospherics_components_unary_outlet_injector_monitored_air_input",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "air mix tank input injector"),
+            "Appearance": (sprite: (rsi: "textures/structures/piping/atmospherics_components_unary_outlet_injector_monitored_air_input", state: "inje_map-3"), depth: FloorFixture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_atmospherics_components_unary_thermomachine_heater_on",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "Temperature control unit"),
+            "Appearance": (sprite: (rsi: "textures/structures/piping/atmospherics_components_unary_thermomachine_heater_on", state: "obj_machinery_atmospherics_components_unary_thermomachine_freezer_on"), depth: FloorFixture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_atmospherics_components_unary_vent_pump_high_volume_siphon_monitored_air_output",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "air mix tank output inlet"),
+            "Appearance": (sprite: (rsi: "textures/structures/piping/atmospherics_components_unary_vent_pump_high_volume_siphon_monitored_air_output", state: "vent_in"), depth: FloorFixture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_atmospherics_components_unary_outlet_injector_monitored_carbon_input",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "carbon dioxide tank input injector"),
+            "Appearance": (sprite: (rsi: "textures/structures/piping/atmospherics_components_unary_outlet_injector_monitored_carbon_input", state: "inje_map-3"), depth: FloorFixture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_atmospherics_components_unary_vent_pump_siphon_monitored_carbon_output",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "carbon dioxide tank output inlet"),
+            "Appearance": (sprite: (rsi: "textures/structures/piping/atmospherics_components_unary_vent_pump_siphon_monitored_carbon_output", state: "vent_in"), depth: FloorFixture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_atmospherics_components_unary_outlet_injector_monitored_plasma_input",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "plasma tank input injector"),
+            "Appearance": (sprite: (rsi: "textures/structures/piping/atmospherics_components_unary_outlet_injector_monitored_plasma_input", state: "inje_map-3"), depth: FloorFixture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_atmospherics_components_unary_vent_pump_siphon_monitored_plasma_output",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "plasma tank output inlet"),
+            "Appearance": (sprite: (rsi: "textures/structures/piping/atmospherics_components_unary_vent_pump_siphon_monitored_plasma_output", state: "vent_in"), depth: FloorFixture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_atmospherics_components_unary_outlet_injector_monitored_nitrous_input",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "nitrous oxide tank input injector"),
+            "Appearance": (sprite: (rsi: "textures/structures/piping/atmospherics_components_unary_outlet_injector_monitored_nitrous_input", state: "inje_map-3"), depth: FloorFixture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_atmospherics_components_unary_vent_pump_siphon_monitored_nitrous_output",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "nitrous oxide tank output inlet"),
+            "Appearance": (sprite: (rsi: "textures/structures/piping/atmospherics_components_unary_vent_pump_siphon_monitored_nitrous_output", state: "vent_in"), depth: FloorFixture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_atmospherics_components_unary_outlet_injector_monitored_mix_input",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "mix tank input injector"),
+            "Appearance": (sprite: (rsi: "textures/structures/piping/atmospherics_components_unary_outlet_injector_monitored_mix_input", state: "inje_map-3"), depth: FloorFixture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_atmospherics_components_unary_vent_pump_siphon_monitored_mix_output",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "mix tank output inlet"),
+            "Appearance": (sprite: (rsi: "textures/structures/piping/atmospherics_components_unary_vent_pump_siphon_monitored_mix_output", state: "vent_off"), depth: FloorFixture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_atmospherics_components_unary_passive_vent_passive_vent_map_2",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "passive vent"),
+            "Appearance": (sprite: (rsi: "textures/structures/piping/atmospherics_components_unary_passive_vent_passive_vent_map_2", state: "passive_vent_map-2"), depth: FloorFixture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_atmospherics_components_unary_thermomachine_freezer_on",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "Temperature control unit"),
+            "Appearance": (sprite: (rsi: "textures/structures/piping/atmospherics_components_unary_thermomachine_freezer_on", state: "obj_machinery_atmospherics_components_unary_thermomachine_freezer_on"), depth: FloorFixture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_atmospherics_components_unary_outlet_injector",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "air injector"),
+            "Appearance": (sprite: (rsi: "textures/structures/piping/atmospherics_components_unary_outlet_injector", state: "inje_map-3"), depth: FloorFixture),
+        },
+    ),
+]

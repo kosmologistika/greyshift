@@ -1,0 +1,29 @@
+[
+    (
+        type: "Entity",
+        id: "structure_safe_floor",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "floor safe"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/safe_floor", state: "floorsafe"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_safe_vault",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "safe"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/safe_vault", state: "safe"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_safe",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "safe"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/safe", state: "safe"), depth: Furniture),
+        },
+    ),
+]

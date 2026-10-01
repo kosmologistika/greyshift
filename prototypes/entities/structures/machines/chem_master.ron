@@ -1,0 +1,20 @@
+[
+    (
+        type: "Entity",
+        id: "structure_chem_master",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "ChemMaster 3000"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/chem_master", state: "chemmaster"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_chem_master_condimaster",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "CondiMaster 3000"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/chem_master_condimaster", state: "condimaster"), depth: Furniture),
+        },
+    ),
+]

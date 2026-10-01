@@ -1,0 +1,82 @@
+[
+    (
+        type: "Entity",
+        id: "prop_tank_internals_emergency_oxygen",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "emergency oxygen tank"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/tanks/tank_internals_emergency_oxygen", state: "emergency")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_tank_internals_oxygen_red",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "oxygen tank"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/tanks/tank_internals_oxygen_red", state: "oxygen_fr")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_tank_jetpack_carbondioxide",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "jetpack (carbon dioxide)"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/tanks/tank_jetpack_carbondioxide", state: "jetpack-black")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_tank_internals_oxygen",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "oxygen tank"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/tanks/tank_internals_oxygen", state: "oxygen")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_tank_internals_emergency_oxygen_engi",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "extended-capacity emergency oxygen tank"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/tanks/tank_internals_emergency_oxygen_engi", state: "emergency_engi")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_tank_internals_plasma_full",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "plasma tank"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/tanks/tank_internals_plasma_full", state: "plasma")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_tank_internals_anesthetic",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "anesthetic tank"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/tanks/tank_internals_anesthetic", state: "anesthetic")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_tank_internals_oxygen_yellow",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "oxygen tank"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/tanks/tank_internals_oxygen_yellow", state: "oxygen_f")),
+        },
+    ),
+]

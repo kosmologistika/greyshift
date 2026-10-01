@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_surgicaldrill",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "surgical drill"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/surgicaldrill", state: "drill")),
+        },
+    ),
+]

@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_inspector",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "N-spect scanner"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/inspector", state: "inspector")),
+        },
+    ),
+]

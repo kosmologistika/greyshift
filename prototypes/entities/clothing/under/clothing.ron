@@ -1,0 +1,112 @@
+[
+    (
+        type: "Entity",
+        id: "prop_clothing_under_suit_tan",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "tan suit"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/clothing/under/clothing_under_suit_tan", state: "tan_suit")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_clothing_under_rank_civilian_lawyer_black_skirt",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "lawyer black suitskirt"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/clothing/under/clothing_under_rank_civilian_lawyer_black_skirt", state: "lawyer_black_skirt")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_clothing_under_suit_black",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "black two piece suit"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/clothing/under/clothing_under_suit_black", state: "black_suit")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_clothing_under_suit_black_really",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "executive suit"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/clothing/under/clothing_under_suit_black_really", state: "really_black_suit")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_clothing_under_suit_charcoal",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "charcoal suit"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/clothing/under/clothing_under_suit_charcoal", state: "charcoal_suit")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_clothing_under_rank_prisoner",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "prison jumpsuit"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/clothing/under/clothing_under_rank_prisoner", state: "obj_item_clothing_under_rank_prisoner")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_clothing_under_rank_prisoner_skirt",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "prison jumpskirt"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/clothing/under/clothing_under_rank_prisoner_skirt", state: "obj_item_clothing_under_rank_prisoner_skirt")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_clothing_under_misc_burial",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "burial garments"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/clothing/under/clothing_under_misc_burial", state: "burial")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_clothing_under_color_grey",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "grey jumpsuit"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/clothing/under/clothing_under_color_grey", state: "obj_item_clothing_under_color_grey")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_clothing_under_misc_assistantformal",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "assistant's formal uniform"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/clothing/under/clothing_under_misc_assistantformal", state: "assistant_formal")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_clothing_under_syndicate_tacticool",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "tacticool turtleneck"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/clothing/under/clothing_under_syndicate_tacticool", state: "tactifool")),
+        },
+    ),
+]

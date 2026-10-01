@@ -1,0 +1,20 @@
+[
+    (
+        type: "Entity",
+        id: "structure_barricade_wooden_crude",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "crude plank barricade"),
+            "Appearance": (sprite: (rsi: "textures/structures/walls/barricade_wooden_crude", state: "plankbarricade"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_barricade_wooden",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "wooden barricade"),
+            "Appearance": (sprite: (rsi: "textures/structures/walls/barricade_wooden", state: "woodenbarricade"), depth: Furniture),
+        },
+    ),
+]

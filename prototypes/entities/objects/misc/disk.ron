@@ -1,0 +1,82 @@
+[
+    (
+        type: "Entity",
+        id: "prop_disk_nuclear_fake",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "nuclear authentication disk"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/disk_nuclear_fake", state: "nucleardisk")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_disk_computer_quartermaster",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "cargo data disk"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/disk_computer_quartermaster", state: "datadisk12")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_disk_nuclear",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "nuclear authentication disk"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/disk_nuclear", state: "nucleardisk")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_disk_computer_engineering",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "engineering data disk"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/disk_computer_engineering", state: "datadisk6")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_disk_computer_medical",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "medical doctor data disk"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/disk_computer_medical", state: "datadisk7")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_disk_computer",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "floppy disk"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/disk_computer", state: "datadisk3")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_disk_computer_ordnance",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "ordnance data disk"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/disk_computer_ordnance", state: "datadisk5")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_disk_tech_disk",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "technology disk"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/disk_tech_disk", state: "datadisk0")),
+        },
+    ),
+]

@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_watertank",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "backpack water tank"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/watertank", state: "waterbackpack")),
+        },
+    ),
+]

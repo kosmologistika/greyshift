@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_water_source_puddle",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "puddle"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/water_source_puddle", state: "puddle"), depth: Furniture),
+        },
+    ),
+]

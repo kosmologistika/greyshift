@@ -1,0 +1,191 @@
+[
+    (
+        type: "Entity",
+        id: "decal_cobweb1",
+        parents: ["base_decal_scatter"],
+        components: {
+            "DisplayName": (name: "cobweb"),
+            "Appearance": (sprite: (rsi: "textures/decals/cobweb1", state: "cobweb1")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_dirt_flat_0",
+        parents: ["base_decal_scatter"],
+        components: {
+            "DisplayName": (name: "dirt"),
+            "Appearance": (sprite: (rsi: "textures/decals/dirt_flat_0", state: "dirt-flat-0")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_shards",
+        parents: ["base_decal_scatter"],
+        components: {
+            "DisplayName": (name: "clutter"),
+            "Appearance": (sprite: (rsi: "textures/decals/shards", state: "shards")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_floor1",
+        parents: ["base_decal_scatter"],
+        components: {
+            "DisplayName": (name: "pool of blood"),
+            "Appearance": (sprite: (rsi: "textures/decals/floor1", state: "floor1")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_tiny",
+        parents: ["base_decal_scatter"],
+        components: {
+            "DisplayName": (name: "tiny shards"),
+            "Appearance": (sprite: (rsi: "textures/decals/tiny", state: "tiny")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_cobweb2",
+        parents: ["base_decal_scatter"],
+        components: {
+            "DisplayName": (name: "cobweb"),
+            "Appearance": (sprite: (rsi: "textures/decals/cobweb2", state: "cobweb2")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_remains",
+        parents: ["base_decal_scatter"],
+        components: {
+            "DisplayName": (name: "remains"),
+            "Appearance": (sprite: (rsi: "textures/decals/remains", state: "remains")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_mouse_skeleton",
+        parents: ["base_decal_scatter"],
+        components: {
+            "DisplayName": (name: "останки"),
+            "Appearance": (sprite: (rsi: "textures/decals/mouse_skeleton", state: "mouse_skeleton")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_vomit_1",
+        parents: ["base_decal_scatter"],
+        components: {
+            "DisplayName": (name: "vomit"),
+            "Appearance": (sprite: (rsi: "textures/decals/vomit_1", state: "vomit_1")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_tomato_floor1",
+        parents: ["base_decal_scatter"],
+        components: {
+            "DisplayName": (name: "tomato smudge"),
+            "Appearance": (sprite: (rsi: "textures/decals/tomato_floor1", state: "tomato_floor1")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_big_ash",
+        parents: ["base_decal_scatter"],
+        components: {
+            "DisplayName": (name: "large pile of ashes"),
+            "Appearance": (sprite: (rsi: "textures/decals/big_ash", state: "big_ash")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_shreds",
+        parents: ["base_decal_scatter"],
+        components: {
+            "DisplayName": (name: "shreds"),
+            "Appearance": (sprite: (rsi: "textures/decals/shreds", state: "shreds")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_gibbl1",
+        parents: ["base_decal_scatter"],
+        components: {
+            "DisplayName": (name: "pool of blood"),
+            "Appearance": (sprite: (rsi: "textures/decals/gibbl1", state: "gibbl1")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_drip5",
+        parents: ["base_decal_scatter"],
+        components: {
+            "DisplayName": (name: "drop of blood"),
+            "Appearance": (sprite: (rsi: "textures/decals/drip5", state: "drip5")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_big_molten",
+        parents: ["base_decal_scatter"],
+        components: {
+            "DisplayName": (name: "big gooey grey mass"),
+            "Appearance": (sprite: (rsi: "textures/decals/big_molten", state: "big_molten")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_ants",
+        parents: ["base_decal_scatter"],
+        components: {
+            "DisplayName": (name: "space ants"),
+            "Appearance": (sprite: (rsi: "textures/decals/ants", state: "ants")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_rune2",
+        parents: ["base_decal_scatter"],
+        components: {
+            "DisplayName": (name: "rune"),
+            "Appearance": (sprite: (rsi: "textures/decals/rune2", state: "rune2")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_rune4",
+        parents: ["base_decal_scatter"],
+        components: {
+            "DisplayName": (name: "rune"),
+            "Appearance": (sprite: (rsi: "textures/decals/rune4", state: "rune4")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_tracks_2",
+        parents: ["base_decal_scatter"],
+        components: {
+            "DisplayName": (name: "pool of blood"),
+            "Appearance": (sprite: (rsi: "textures/decals/tracks_2", state: "tracks")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_remainslarva",
+        parents: ["base_decal_scatter"],
+        components: {
+            "DisplayName": (name: "remains"),
+            "Appearance": (sprite: (rsi: "textures/decals/remainslarva", state: "remainslarva")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_trails_1",
+        parents: ["base_decal_scatter"],
+        components: {
+            "DisplayName": (name: "trail of blood"),
+            "Appearance": (sprite: (rsi: "textures/decals/trails_1", state: "trails_1")),
+        },
+    ),
+]

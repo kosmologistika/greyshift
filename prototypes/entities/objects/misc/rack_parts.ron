@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_rack_parts",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "rack parts"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/rack_parts", state: "rack_parts")),
+        },
+    ),
+]

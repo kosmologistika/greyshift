@@ -1,0 +1,74 @@
+[
+    (
+        type: "Entity",
+        id: "structure_smartfridge_chemistry_preloaded",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "smart chemical storage"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/smartfridge_chemistry_preloaded", state: "smartfridge-icon"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_smartfridge_chemistry",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "smart chemical storage"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/smartfridge_chemistry", state: "smartfridge-icon"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_smartfridge_organ",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "smart organ storage"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/smartfridge_organ", state: "smartfridge-icon"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_smartfridge_drying",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "dehydrator"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/smartfridge_drying", state: "dehydrator-icon"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_smartfridge_chemistry_virology_preloaded",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "smart virus storage"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/smartfridge_chemistry_virology_preloaded", state: "smartfridge-icon"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_smartfridge_food",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "smartfridge"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/smartfridge_food", state: "smartfridge-icon"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_smartfridge_petri_preloaded",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "smart petri dish storage"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/smartfridge_petri_preloaded", state: "smartfridge-icon"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_smartfridge_extract_preloaded",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "smart slime extract storage"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/smartfridge_extract_preloaded", state: "smartfridge-icon"), depth: Furniture),
+        },
+    ),
+]

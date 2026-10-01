@@ -1,0 +1,72 @@
+[
+    (
+        type: "Entity",
+        id: "light_small_dim",
+        parents: ["light_wall"],
+        components: {
+            "DisplayName": (name: "light fixture"),
+            "PointLight": (color: (1.000, 0.672, 0.402), energy: 1.50, radius: 2.4),
+            "Appearance": (sprite: (rsi: "textures/structures/lighting/small_dim", state: "bulb"), depth: WallMounted, layers: [(state: "glow", shading: Glow)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "light_dim",
+        parents: ["light_wall"],
+        components: {
+            "DisplayName": (name: "light fixture"),
+            "PointLight": (color: (1.000, 0.723, 0.604), energy: 1.13, radius: 8.0),
+            "Appearance": (sprite: (rsi: "textures/structures/lighting/dim", state: "tube"), depth: WallMounted, layers: [(state: "glow", shading: Glow)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "light_warm_no_nightlight",
+        parents: ["light_wall"],
+        components: {
+            "DisplayName": (name: "light fixture"),
+            "PointLight": (color: (0.956, 0.784, 0.533), energy: 1.50, radius: 8.0),
+            "Appearance": (sprite: (rsi: "textures/structures/lighting/warm_no_nightlight", state: "tube"), depth: WallMounted, layers: [(state: "glow", shading: Glow)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "light_warm",
+        parents: ["light_wall"],
+        components: {
+            "DisplayName": (name: "light fixture"),
+            "PointLight": (color: (0.956, 0.784, 0.533), energy: 1.50, radius: 8.0),
+            "Appearance": (sprite: (rsi: "textures/structures/lighting/warm", state: "tube"), depth: WallMounted, layers: [(state: "glow", shading: Glow)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "light_floor_broken",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "floor light"),
+            "PointLight": (color: (1.000, 0.930, 0.888), energy: 1.50, radius: 4.0),
+            "Appearance": (sprite: (rsi: "textures/structures/lighting/floor_broken", state: "floor-broken"), depth: FloorFixture, layers: [(state: "floor-broken", shading: Glow)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "light_small_broken",
+        parents: ["light_wall"],
+        components: {
+            "DisplayName": (name: "light fixture"),
+            "PointLight": (color: (1.000, 0.672, 0.402), energy: 1.50, radius: 4.0),
+            "Appearance": (sprite: (rsi: "textures/structures/lighting/small_broken", state: "bulb-broken"), depth: WallMounted),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "light_cold_dim",
+        parents: ["light_wall"],
+        components: {
+            "DisplayName": (name: "light fixture"),
+            "PointLight": (color: (0.730, 0.863, 1.000), energy: 1.13, radius: 8.0),
+            "Appearance": (sprite: (rsi: "textures/structures/lighting/cold_dim", state: "tube"), depth: WallMounted, layers: [(state: "glow", shading: Glow)]),
+        },
+    ),
+]

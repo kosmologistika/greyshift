@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_extinguisher",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "fire extinguisher"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/extinguisher", state: "fire_extinguisher0")),
+        },
+    ),
+]

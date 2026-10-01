@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_holosign_barrier",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "security holobarrier"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/holosign_barrier", state: "holosign_sec"), depth: Furniture),
+        },
+    ),
+]

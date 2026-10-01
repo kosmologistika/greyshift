@@ -1,0 +1,42 @@
+[
+    (
+        type: "Entity",
+        id: "prop_pen",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "pen"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/pen", state: "pen")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_pen_red",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "pen"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/pen_red", state: "pen_red")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_pen_fountain",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "fountain pen"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/pen_fountain", state: "pen-fountain")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_pen_blue",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "pen"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/pen_blue", state: "pen_blue")),
+        },
+    ),
+]

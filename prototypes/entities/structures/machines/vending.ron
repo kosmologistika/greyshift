@@ -1,0 +1,398 @@
+[
+    (
+        type: "Entity",
+        id: "structure_vending_snack",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "Getmore Chocolate Corp"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/vending_snack", state: "snack"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_vending_coffee",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "Solar's Best Hot Drinks"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/vending_coffee", state: "coffee"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_vending_cigarette",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "ShadyCigs Deluxe"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/vending_cigarette", state: "cigs"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_vending_wardrobe_sec_wardrobe",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "SecDrobe"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/vending_wardrobe_sec_wardrobe", state: "secdrobe"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_vending_cola",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "Robust Softdrinks"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/vending_cola", state: "Cola_Machine"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_vending_assist",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "Part-Mart"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/vending_assist", state: "parts"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_vending_sustenance",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "Sustenance Vendor"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/vending_sustenance", state: "sustenance"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_vending_clothing",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "ClothesMate"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/vending_clothing", state: "clothes"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_vending_autodrobe",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "AutoDrobe"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/vending_autodrobe", state: "theater"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_vending_sovietsoda",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "BODA"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/vending_sovietsoda", state: "sovietsoda"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_vending_cola_red",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "Space Cola Vendor"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/vending_cola_red", state: "red_cola"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_vending_modularpc",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "Deluxe Silicate Selections"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/vending_modularpc", state: "modularpc"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_vending_tool",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "YouTool"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/vending_tool", state: "tool"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_vending_wardrobe_cargo_wardrobe",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "CargoDrobe"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/vending_wardrobe_cargo_wardrobe", state: "cargodrobe"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_vending_wardrobe_law_wardrobe",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "LawDrobe"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/vending_wardrobe_law_wardrobe", state: "lawdrobe"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_vending_cart",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "PTech"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/vending_cart", state: "cart"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_vending_cola_blue",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "Robust Softdrinks"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/vending_cola_blue", state: "Cola_Machine"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_vending_wardrobe_engi_wardrobe",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "EngiDrobe"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/vending_wardrobe_engi_wardrobe", state: "engidrobe"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_vending_wardrobe_jani_wardrobe",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "JaniDrobe"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/vending_wardrobe_jani_wardrobe", state: "janidrobe"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_vending_security",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "SecTech"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/vending_security", state: "sec"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_vending_engivend",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "Engi-Vend"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/vending_engivend", state: "engivend"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_vending_snack_orange",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "Getmore Chocolate Corp"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/vending_snack_orange", state: "snackorange"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_vending_boozeomat_syndicate",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "Booze-O-Mat"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/vending_boozeomat_syndicate", state: "boozeomat"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_vending_wardrobe_atmos_wardrobe",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "AtmosDrobe"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/vending_wardrobe_atmos_wardrobe", state: "atmosdrobe"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_vending_wardrobe_det_wardrobe",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "DetDrobe"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/vending_wardrobe_det_wardrobe", state: "detdrobe"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_vending_cola_pwr_game",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "Pwr Game Vendor"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/vending_cola_pwr_game", state: "pwr_game"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_vending_wardrobe_chem_wardrobe",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "ChemDrobe"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/vending_wardrobe_chem_wardrobe", state: "chemdrobe"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_vending_drugs",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "NanoDrug Plus"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/vending_drugs", state: "drug"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_vending_boozeomat",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "Booze-O-Mat"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/vending_boozeomat", state: "boozeomat"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_vending_medical",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "NanoMed Plus"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/vending_medical", state: "med"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_vending_dinnerware",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "Plasteel Chef's Dinnerware Vendor"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/vending_dinnerware", state: "dinnerware"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_vending_wardrobe_medi_wardrobe",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "MediDrobe"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/vending_wardrobe_medi_wardrobe", state: "medidrobe"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_vending_wardrobe_chef_wardrobe",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "ChefDrobe"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/vending_wardrobe_chef_wardrobe", state: "chefdrobe"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_vending_games",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "Good Clean Fun"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/vending_games", state: "games"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_vending_wardrobe_coroner_wardrobe",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "MortiDrobe"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/vending_wardrobe_coroner_wardrobe", state: "coroner_drobe"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_vending_hydroseeds",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "MegaSeed Servitor"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/vending_hydroseeds", state: "seeds"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_vending_hydronutrients",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "NutriMax"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/vending_hydronutrients", state: "nutri"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_vending_wardrobe_hydro_wardrobe",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "Hydrobe"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/vending_wardrobe_hydro_wardrobe", state: "hydrobe"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_vending_wardrobe_viro_wardrobe",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "ViroDrobe"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/vending_wardrobe_viro_wardrobe", state: "virodrobe"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_vending_wardrobe_robo_wardrobe",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "RoboDrobe"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/vending_wardrobe_robo_wardrobe", state: "robodrobe"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_vending_wardrobe_curator_wardrobe",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "CuraDrobe"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/vending_wardrobe_curator_wardrobe", state: "curadrobe"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_vending_cytopro",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "CytoPro"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/vending_cytopro", state: "cytopro"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_vending_wardrobe_science_wardrobe",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "SciDrobe"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/vending_wardrobe_science_wardrobe", state: "scidrobe"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_vending_wardrobe_gene_wardrobe",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "GeneDrobe"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/vending_wardrobe_gene_wardrobe", state: "genedrobe"), depth: Furniture),
+        },
+    ),
+]

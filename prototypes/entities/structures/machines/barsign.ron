@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_barsign",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "bar sign"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/barsign", state: "empty"), depth: Furniture),
+        },
+    ),
+]

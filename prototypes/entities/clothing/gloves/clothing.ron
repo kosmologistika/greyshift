@@ -1,0 +1,122 @@
+[
+    (
+        type: "Entity",
+        id: "prop_clothing_gloves_color_fyellow",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "budget insulated gloves"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/clothing/gloves/clothing_gloves_color_fyellow", state: "yellow")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_clothing_gloves_cargo_gauntlet",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "H.A.U.L. gauntlets"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/clothing/gloves/clothing_gloves_cargo_gauntlet", state: "haul_gauntlet")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_clothing_gloves_color_yellow",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "insulated gloves"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/clothing/gloves/clothing_gloves_color_yellow", state: "yellow")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_clothing_gloves_latex_nitrile",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "nitrile gloves"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/clothing/gloves/clothing_gloves_latex_nitrile", state: "nitrile")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_clothing_gloves_color_black",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "black gloves"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/clothing/gloves/clothing_gloves_color_black", state: "black")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_clothing_gloves_latex",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "latex gloves"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/clothing/gloves/clothing_gloves_latex", state: "latex")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_clothing_gloves_color_grey",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "grey gloves"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/clothing/gloves/clothing_gloves_color_grey", state: "gray")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_clothing_gloves_boxing_blue",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "boxing gloves"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/clothing/gloves/clothing_gloves_boxing_blue", state: "boxingblue")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_clothing_gloves_boxing",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "boxing gloves"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/clothing/gloves/clothing_gloves_boxing", state: "boxing")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_clothing_gloves_boxing_green",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "boxing gloves"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/clothing/gloves/clothing_gloves_boxing_green", state: "boxinggreen")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_clothing_gloves_boxing_yellow",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "boxing gloves"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/clothing/gloves/clothing_gloves_boxing_yellow", state: "boxingyellow")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_clothing_gloves_color_blue",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "blue gloves"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/clothing/gloves/clothing_gloves_color_blue", state: "blue")),
+        },
+    ),
+]

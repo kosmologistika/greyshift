@@ -1,0 +1,18 @@
+[
+    (
+        type: "Entity",
+        id: "tile_water_alternative_no_fishing",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/water_alternative_no_fishing", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_water_alternative_muddy_no_fishing",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/water_alternative_muddy_no_fishing", state: "default")),
+        },
+    ),
+]

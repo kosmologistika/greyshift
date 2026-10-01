@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_electropack",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "electropack"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/electropack", state: "electropack0")),
+        },
+    ),
+]

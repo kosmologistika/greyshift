@@ -1,0 +1,252 @@
+[
+    (
+        type: "Entity",
+        id: "prop_kirbyplants_random_plant_18",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "potted plant"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/decoration/kirbyplants_random_plant_18", state: "plant-18")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_kirbyplants_random_plant_20",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "potted plant"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/decoration/kirbyplants_random_plant_20", state: "plant-20")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_kirbyplants_random_plant_24",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "potted plant"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/decoration/kirbyplants_random_plant_24", state: "plant-24")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_kirbyplants_random_plant_19",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "potted plant"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/decoration/kirbyplants_random_plant_19", state: "plant-19")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_kirbyplants_random_plant_10",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "potted plant"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/decoration/kirbyplants_random_plant_10", state: "plant-10")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_kirbyplants_random_plant_06",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "potted plant"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/decoration/kirbyplants_random_plant_06", state: "plant-06")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_kirbyplants_random_plant_01",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "potted plant"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/decoration/kirbyplants_random_plant_01", state: "plant-01")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_kirbyplants_random_plant_23",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "potted plant"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/decoration/kirbyplants_random_plant_23", state: "plant-23")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_kirbyplants_random_plant_15",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "potted plant"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/decoration/kirbyplants_random_plant_15", state: "plant-15")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_kirbyplants_random_dead",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "potted plant"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/decoration/kirbyplants_random_dead", state: "plant-25")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_kirbyplants_fern",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "neglected fern"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/decoration/kirbyplants_fern", state: "fern")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_kirbyplants_random_plant_02",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "potted plant"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/decoration/kirbyplants_random_plant_02", state: "plant-02")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_kirbyplants_random_plant_07",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "potted plant"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/decoration/kirbyplants_random_plant_07", state: "plant-07")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_kirbyplants_random_plant_11",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "potted plant"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/decoration/kirbyplants_random_plant_11", state: "plant-11")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_kirbyplants_random_plant_21",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "potted plant"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/decoration/kirbyplants_random_plant_21", state: "plant-21")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_kirbyplants_random_plant_05",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "potted plant"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/decoration/kirbyplants_random_plant_05", state: "plant-05")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_kirbyplants_random_applebush",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "potted plant"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/decoration/kirbyplants_random_applebush", state: "applebush")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_kirbyplants_random_plant_08",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "potted plant"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/decoration/kirbyplants_random_plant_08", state: "plant-08")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_kirbyplants_random_plant_13",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "potted plant"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/decoration/kirbyplants_random_plant_13", state: "plant-13")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_kirbyplants_random_plant_16",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "potted plant"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/decoration/kirbyplants_random_plant_16", state: "plant-16")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_kirbyplants_random_plant_03",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "potted plant"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/decoration/kirbyplants_random_plant_03", state: "plant-03")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_kirbyplants_random_plant_04",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "potted plant"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/decoration/kirbyplants_random_plant_04", state: "plant-04")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_kirbyplants_random_plant_09",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "potted plant"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/decoration/kirbyplants_random_plant_09", state: "plant-09")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_kirbyplants_random_plant_17",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "potted plant"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/decoration/kirbyplants_random_plant_17", state: "plant-17")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_kirbyplants_random_plant_12",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "potted plant"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/decoration/kirbyplants_random_plant_12", state: "plant-12")),
+        },
+    ),
+]

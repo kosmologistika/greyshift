@@ -1,0 +1,132 @@
+[
+    (
+        type: "Entity",
+        id: "prop_clothing_head_fedora_det_hat",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "detective's fedora"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/clothing/head/clothing_head_fedora_det_hat", state: "detective")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_clothing_head_soft",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "cargo cap"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/clothing/head/clothing_head_soft", state: "cargosoft")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_clothing_head_utility_welding",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "welding helmet"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/clothing/head/clothing_head_utility_welding", state: "welding")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_clothing_head_fedora",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "fedora"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/clothing/head/clothing_head_fedora", state: "fedora")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_clothing_head_helmet_skull",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "skull helmet"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/clothing/head/clothing_head_helmet_skull", state: "skull")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_clothing_head_soft_green",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "green cap"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/clothing/head/clothing_head_soft_green", state: "greensoft")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_clothing_head_utility_hardhat_cakehat",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "cakehat"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/clothing/head/clothing_head_utility_hardhat_cakehat", state: "hardhat0_cakehat")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_clothing_head_utility_chefhat",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "chef's hat"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/clothing/head/clothing_head_utility_chefhat", state: "chef")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_clothing_head_costume_tv_head",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "television helmet"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/clothing/head/clothing_head_costume_tv_head", state: "IPC_helmet")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_clothing_head_costume_nursehat",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "nurse's hat"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/clothing/head/clothing_head_costume_nursehat", state: "nursehat")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_clothing_head_beret_engi",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "engineering beret"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/clothing/head/clothing_head_beret_engi", state: "obj_item_clothing_head_beret_engi")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_clothing_head_soft_blue",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "blue cap"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/clothing/head/clothing_head_soft_blue", state: "bluesoft")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_clothing_head_soft_rainbow",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "rainbow cap"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/clothing/head/clothing_head_soft_rainbow", state: "rainbowsoft")),
+        },
+    ),
+]

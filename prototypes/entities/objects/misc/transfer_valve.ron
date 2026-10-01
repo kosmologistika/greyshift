@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_transfer_valve",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "tank transfer valve"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/transfer_valve", state: "valve_1")),
+        },
+    ),
+]

@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_dna_scannernew",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "DNA scanner"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/dna_scannernew", state: "scanner"), depth: Furniture),
+        },
+    ),
+]

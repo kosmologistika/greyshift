@@ -1,0 +1,62 @@
+[
+    (
+        type: "Entity",
+        id: "prop_paper",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "paper"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/paper", state: "paper")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_paper_crumpled",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "paper scrap"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/paper_crumpled", state: "scrap")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_paper_pamphlet_gateway",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "pamphlet"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/paper_pamphlet_gateway", state: "pamphlet")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_paper_monitorkey",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "monitor decryption key"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/paper_monitorkey", state: "paper")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_paper_fluff_holodeck_disclaimer",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Holodeck Disclaimer"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/paper_fluff_holodeck_disclaimer", state: "paper")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_paper_guides_jobs_engi_gravity_gen",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "paper- 'Generate your own gravity!'"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/paper_guides_jobs_engi_gravity_gen", state: "paper")),
+        },
+    ),
+]

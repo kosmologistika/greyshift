@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_weldingtool",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "welding tool"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/tools/weldingtool", state: "welder")),
+        },
+    ),
+]

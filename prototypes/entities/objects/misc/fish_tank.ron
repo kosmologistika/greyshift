@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_fish_tank_lawyer",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "fish tank"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/fish_tank_lawyer", state: "fish_tank_map")),
+        },
+    ),
+]

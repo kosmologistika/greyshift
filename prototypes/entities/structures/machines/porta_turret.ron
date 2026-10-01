@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_porta_turret_ai",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "turret"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/porta_turret_ai", state: "turretCover"), depth: Furniture),
+        },
+    ),
+]

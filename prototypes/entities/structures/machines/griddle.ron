@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_griddle",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "griddle"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/griddle", state: "griddle1_off"), depth: Furniture),
+        },
+    ),
+]

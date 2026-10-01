@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_autolathe",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "autolathe"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/autolathe", state: "autolathe"), depth: Furniture),
+        },
+    ),
+]

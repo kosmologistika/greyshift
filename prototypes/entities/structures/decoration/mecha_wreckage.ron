@@ -1,0 +1,20 @@
+[
+    (
+        type: "Entity",
+        id: "structure_mecha_wreckage_ripley",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "Ripley wreckage"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/mecha_wreckage_ripley", state: "ripley-broken"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_mecha_wreckage_durand",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "Durand wreckage"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/mecha_wreckage_durand", state: "durand-broken"), depth: Furniture),
+        },
+    ),
+]

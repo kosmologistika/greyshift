@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_emptysandbag",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "empty sandbag"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/emptysandbag", state: "sandbag")),
+        },
+    ),
+]

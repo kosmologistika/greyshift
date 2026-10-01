@@ -13,4 +13,54 @@
             ),
         },
     ),
+    (
+        type: "Entity",
+        id: "prop_soap_homemade",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "soap"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/soap_homemade", state: "gibs")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_soap_nanotrasen",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "soap"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/soap_nanotrasen", state: "nanotrasen")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_soap_deluxe",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "soap"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/soap_deluxe", state: "deluxe")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_soap",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "soap"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/prop_soap", state: "soap")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_soap_syndie",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "soap"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/soap_syndie", state: "syndie")),
+        },
+    ),
 ]

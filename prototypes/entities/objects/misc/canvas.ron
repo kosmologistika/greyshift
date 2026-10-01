@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_canvas_nineteen_nineteen",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "canvas (19x19)"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/canvas_nineteen_nineteen", state: "19x19")),
+        },
+    ),
+]

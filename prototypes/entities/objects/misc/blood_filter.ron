@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_blood_filter",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "blood filter"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/blood_filter", state: "bloodfilter")),
+        },
+    ),
+]

@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_ai_slipper",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "foam dispenser"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/ai_slipper", state: "ai-slipper0"), depth: FloorFixture),
+        },
+    ),
+]

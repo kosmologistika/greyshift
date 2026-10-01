@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_photocopier_prebuilt",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "photocopier"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/photocopier_prebuilt", state: "photocopier"), depth: Furniture),
+        },
+    ),
+]

@@ -1,0 +1,848 @@
+[
+    (
+        type: "Entity",
+        id: "structure_closet_emcloset",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "emergency closet"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_emcloset", state: "emergency"), depth: Furniture, layers: [(state: "emergency_door")]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "closet"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet", state: "generic"), depth: Furniture, layers: [(state: "generic_door")]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_firecloset",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "fire-safety closet"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_firecloset", state: "fire"), depth: Furniture, layers: [(state: "fire_door")]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_secure_closet_security",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "security officer's locker"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_secure_closet_security", state: "sec"), depth: Furniture, layers: [(state: "sec_door"), (state: "locked", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_firecloset_full",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "fire-safety closet"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_firecloset_full", state: "fire"), depth: Furniture, layers: [(state: "fire_door")]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_wardrobe_white",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "white wardrobe"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_wardrobe_white", state: "generic"), depth: Furniture, layers: [(state: "white_door")]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_toolcloset",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "tool closet"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_toolcloset", state: "eng"), depth: Furniture, layers: [(state: "eng_tool_door")]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_crate_secure_loot",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "abandoned crate"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_crate_secure_loot", state: "securecrate"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_crate",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "crate"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_crate", state: "crate"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_secure_closet_personal",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "personal closet"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_secure_closet_personal", state: "secure"), depth: Furniture, layers: [(state: "secure_door"), (state: "locked", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_crate_freezer",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "freezer"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_crate_freezer", state: "freezer"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_cabinet",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "cabinet"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_cabinet", state: "cabinet"), depth: Furniture, layers: [(state: "cabinet_door")]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_wardrobe_black",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "black wardrobe"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_wardrobe_black", state: "generic"), depth: Furniture, layers: [(state: "black_door")]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_wardrobe_grey",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "grey wardrobe"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_wardrobe_grey", state: "generic"), depth: Furniture, layers: [(state: "grey_door")]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_crate_bin",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "trash bin"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_crate_bin", state: "trashbin"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_wardrobe_mixed",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "mixed wardrobe"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_wardrobe_mixed", state: "generic"), depth: Furniture, layers: [(state: "mixed_door")]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_crate_trashcart_filled",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "trash cart"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_crate_trashcart_filled", state: "trashcart"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_secure_closet_freezer_kitchen_all_access",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "kitchen cabinet"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_secure_closet_freezer_kitchen_all_access", state: "freezer"), depth: Furniture, layers: [(state: "freezer_door"), (state: "locked", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_crate_engineering",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "engineering crate"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_crate_engineering", state: "engi_crate"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_crate_goldcrate_stocked",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "gold crate"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_crate_goldcrate_stocked", state: "gold"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_crate_radiation",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "radiation crate"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_crate_radiation", state: "radiation"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_crate_medical",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "medical crate"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_crate_medical", state: "medicalcrate"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_crate_decorations",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "crate"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_crate_decorations", state: "engi_crate"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_crate_silvercrate",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "silver crate"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_crate_silvercrate", state: "silver"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_secure_closet_freezer_meat",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "meat fridge"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_secure_closet_freezer_meat", state: "freezer"), depth: Furniture, layers: [(state: "freezer_door"), (state: "locked", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_crate_trashcart",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "trash cart"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_crate_trashcart", state: "trashcart"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_crate_cardboard",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "cardboard box"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_crate_cardboard", state: "cardboard"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_secure_closet_quartermaster",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "quartermaster's locker"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_secure_closet_quartermaster", state: "qm"), depth: Furniture, layers: [(state: "qm_door"), (state: "locked", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_cardboard",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "large cardboard box"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_cardboard", state: "cardboard"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_radiation",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "radiation suit closet"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_radiation", state: "eng"), depth: Furniture, layers: [(state: "eng_rad_door")]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_secure_closet_brig",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "brig locker"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_secure_closet_brig", state: "secure"), depth: Furniture, layers: [(state: "secure_door"), (state: "locked", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_crate_crateopen",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "crate"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_crate_crateopen", state: "crateopen"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_secure_closet_injection",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "lethal injections locker"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_secure_closet_injection", state: "secure"), depth: Furniture, layers: [(state: "secure_door"), (state: "locked", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_secure_closet_atmospherics",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "atmospheric technician's locker"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_secure_closet_atmospherics", state: "atmos"), depth: Furniture, layers: [(state: "atmos_door"), (state: "locked", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_secure_closet_security_cargo",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "security officer's locker"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_secure_closet_security_cargo", state: "sec"), depth: Furniture, layers: [(state: "sec_door"), (state: "locked", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_secure_closet_exile",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "exile implants locker"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_secure_closet_exile", state: "secure"), depth: Furniture, layers: [(state: "secure_door"), (state: "locked", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_l3closet_scientist",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "level 3 biohazard gear closet"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_l3closet_scientist", state: "bio"), depth: Furniture, layers: [(state: "bio_sci_door")]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_crate_coffin",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "coffin"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_crate_coffin", state: "coffin"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_secure_closet_lawyer",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "lawyer's locker"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_secure_closet_lawyer", state: "lawyer"), depth: Furniture, layers: [(state: "lawyer_door"), (state: "locked", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_crate_science",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "science crate"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_crate_science", state: "scicrate"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_secure_closet_security_engine",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "security officer's locker"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_secure_closet_security_engine", state: "sec"), depth: Furniture, layers: [(state: "sec_door"), (state: "locked", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_secure_closet_engineering_personal",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "engineer's locker"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_secure_closet_engineering_personal", state: "eng_secure"), depth: Furniture, layers: [(state: "eng_secure_door"), (state: "locked", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_secure_closet_engineering_electrical",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "electrical supplies locker"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_secure_closet_engineering_electrical", state: "eng"), depth: Furniture, layers: [(state: "eng_elec_door"), (state: "locked", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_secure_closet_nanotrasen_representative",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "nanotrasen representative's locker"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_secure_closet_nanotrasen_representative", state: "nanotrasen_representative"), depth: Furniture, layers: [(state: "nanotrasen_representative_door"), (state: "locked", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_secure_closet_hop",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "head of personnel's locker"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_secure_closet_hop", state: "hop"), depth: Furniture, layers: [(state: "hop_door"), (state: "locked", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_secure_closet_magistrate",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "magistrate's locker"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_secure_closet_magistrate", state: "magistrate"), depth: Furniture, layers: [(state: "magistrate_door"), (state: "locked", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_secure_closet_warden",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "warden's locker"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_secure_closet_warden", state: "warden"), depth: Furniture, layers: [(state: "warden_door"), (state: "locked", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_l3closet_security",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "level 3 biohazard gear closet"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_l3closet_security", state: "bio"), depth: Furniture, layers: [(state: "bio_sec_door")]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_bombcloset_security",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "EOD closet"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_bombcloset_security", state: "bomb"), depth: Furniture, layers: [(state: "bomb_door")]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_secure_closet_contraband_armory",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "contraband locker"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_secure_closet_contraband_armory", state: "secure"), depth: Furniture, layers: [(state: "secure_door"), (state: "locked", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_l3closet_janitor",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "level 3 biohazard gear closet"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_l3closet_janitor", state: "bio"), depth: Furniture, layers: [(state: "bio_jan_door")]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_secure_closet_blueshield",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "blueshield's locker"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_secure_closet_blueshield", state: "blueshield"), depth: Furniture, layers: [(state: "blueshield_door"), (state: "locked", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_secure_closet",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "secure locker"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_secure_closet", state: "secure"), depth: Furniture, layers: [(state: "secure_door"), (state: "locked", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_jcloset",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "custodial closet"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_jcloset", state: "generic"), depth: Furniture, layers: [(state: "jani_wardrobe_door")]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_secure_closet_captains",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "captain's locker"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_secure_closet_captains", state: "cap"), depth: Furniture, layers: [(state: "cap_door"), (state: "locked", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_secure_closet_freezer_empty_open",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "freezer"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_secure_closet_freezer_empty_open", state: "freezer"), depth: Furniture, layers: [(state: "freezer_door"), (state: "locked", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_wardrobe_atmospherics_yellow",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "atmospherics wardrobe"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_wardrobe_atmospherics_yellow", state: "generic"), depth: Furniture, layers: [(state: "atmos_wardrobe_door")]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_secure_closet_security_sec",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "security officer's locker"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_secure_closet_security_sec", state: "sec"), depth: Furniture, layers: [(state: "sec_door"), (state: "locked", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_secure_closet_personal_cabinet",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "personal closet"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_secure_closet_personal_cabinet", state: "cabinet"), depth: Furniture, layers: [(state: "cabinet_door"), (state: "locked", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_secure_closet_detective",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "detective's cabinet"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_secure_closet_detective", state: "cabinet"), depth: Furniture, layers: [(state: "cabinet_door"), (state: "locked", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_mini_fridge_grimy",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "grimy mini-fridge"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_mini_fridge_grimy", state: "mini_fridge"), depth: Furniture, layers: [(state: "mini_fridge_door")]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_secure_closet_psychology",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "psychology locker"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_secure_closet_psychology", state: "cabinet"), depth: Furniture, layers: [(state: "cabinet_door"), (state: "locked", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_secure_closet_engineering_chief",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "chief engineer's locker"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_secure_closet_engineering_chief", state: "ce"), depth: Furniture, layers: [(state: "ce_door"), (state: "locked", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_crate_secure",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "secure crate"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_crate_secure", state: "securecrate"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_secure_closet_personal_patient",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "patient's closet"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_secure_closet_personal_patient", state: "secure"), depth: Furniture, layers: [(state: "secure_door"), (state: "locked", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_body_bag",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "body bag"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_body_bag", state: "bodybag"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_crate_wooden_toy",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "toy box"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_crate_wooden_toy", state: "wooden"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_secure_closet_chemical",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "chemical closet"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_secure_closet_chemical", state: "chem_secure"), depth: Furniture, layers: [(state: "chem_secure_door"), (state: "locked", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_secure_closet_medical3",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "medical doctor's locker"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_secure_closet_medical3", state: "med_secure"), depth: Furniture, layers: [(state: "med_secure_door"), (state: "locked", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_secure_closet_medical2",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "anesthetic closet"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_secure_closet_medical2", state: "med_secure"), depth: Furniture, layers: [(state: "med_secure_door"), (state: "locked", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_secure_closet_paramedic",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "emergency medical team locker"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_secure_closet_paramedic", state: "paramed_secure"), depth: Furniture, layers: [(state: "paramed_secure_door"), (state: "locked", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_crate_freezer_surplus_limbs",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "surplus prosthetic limbs"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_crate_freezer_surplus_limbs", state: "freezer"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_secure_closet_hos",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "head of security's locker"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_secure_closet_hos", state: "hos"), depth: Furniture, layers: [(state: "hos_door"), (state: "locked", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_secure_closet_freezer_kitchen",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "kitchen cabinet"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_secure_closet_freezer_kitchen", state: "freezer"), depth: Furniture, layers: [(state: "freezer_door"), (state: "locked", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_secure_closet_freezer_fridge",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "refrigerator"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_secure_closet_freezer_fridge", state: "freezer"), depth: Furniture, layers: [(state: "freezer_door"), (state: "locked", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_chefcloset",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "chef's closet"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_chefcloset", state: "generic"), depth: Furniture, layers: [(state: "chef_wardrobe_door")]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_crate_freezer_blood",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "blood freezer"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_crate_freezer_blood", state: "freezer"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_secure_closet_security_med",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "security officer's locker"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_secure_closet_security_med", state: "sec"), depth: Furniture, layers: [(state: "sec_door"), (state: "locked", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_boxinggloves",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "boxing gloves closet"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_boxinggloves", state: "generic"), depth: Furniture, layers: [(state: "mixed_door")]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_crate_freezer_food",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "food icebox"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_crate_freezer_food", state: "food"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_secure_closet_chief_medical",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "chief medical officer's locker"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_secure_closet_chief_medical", state: "cmo"), depth: Furniture, layers: [(state: "cmo_door"), (state: "locked", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_crate_hydroponics",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "hydroponics crate"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_crate_hydroponics", state: "hydrocrate"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_bombcloset",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "EOD closet"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_bombcloset", state: "bomb"), depth: Furniture, layers: [(state: "bomb_door")]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_l3closet_virology",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "level 3 biohazard gear closet"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_l3closet_virology", state: "bio"), depth: Furniture, layers: [(state: "bio_viro_door")]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_secure_closet_hydroponics",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "botanist's locker"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_secure_closet_hydroponics", state: "hydro"), depth: Furniture, layers: [(state: "hydro_door"), (state: "locked", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_wardrobe_engineering_yellow",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "engineering wardrobe"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_wardrobe_engineering_yellow", state: "generic"), depth: Furniture, layers: [(state: "engi_wardrobe_door")]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_crate_engineering_electrical",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "engineering crate"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_crate_engineering_electrical", state: "engi_e_crate"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_crate_internals",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "internals crate"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_crate_internals", state: "o2crate"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_secure_closet_research_director",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "research director's locker"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_secure_closet_research_director", state: "rd"), depth: Furniture, layers: [(state: "rd_door"), (state: "locked", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_crate_mod",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "MOD crate"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_crate_mod", state: "robo"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_secure_closet_freezer_fridge_open",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "refrigerator"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_secure_closet_freezer_fridge_open", state: "freezer"), depth: Furniture, layers: [(state: "freezer_door"), (state: "locked", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_secure_closet_cytology",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "cytology equipment locker"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_secure_closet_cytology", state: "science"), depth: Furniture, layers: [(state: "science_door"), (state: "locked", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_wardrobe_pjs",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "pajama wardrobe"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_wardrobe_pjs", state: "generic"), depth: Furniture, layers: [(state: "white_door")]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_closet_secure_closet_security_science",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "security officer's locker"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/closet_secure_closet_security_science", state: "sec"), depth: Furniture, layers: [(state: "sec_door"), (state: "locked", shading: Unshaded)]),
+        },
+    ),
+]

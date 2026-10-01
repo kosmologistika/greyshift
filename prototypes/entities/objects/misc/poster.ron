@@ -1,0 +1,32 @@
+[
+    (
+        type: "Entity",
+        id: "prop_poster_random_contraband",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "random contraband poster"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/poster_random_contraband", state: "rolled_poster")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_poster_traitor",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "random traitor poster"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/poster_traitor", state: "rolled_traitor")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_poster_random_official",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "random official poster"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/poster_random_official", state: "rolled_legit")),
+        },
+    ),
+]

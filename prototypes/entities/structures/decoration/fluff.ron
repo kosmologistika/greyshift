@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_fluff_shower_drain",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "shower drain"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/fluff_shower_drain", state: "fan_tiny"), depth: FloorFixture),
+        },
+    ),
+]

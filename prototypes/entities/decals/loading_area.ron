@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "decal_loadingarea",
+        parents: ["base_decal_tile"],
+        components: {
+            "DisplayName": (name: "loadingarea"),
+            "Appearance": (sprite: (rsi: "textures/decals/loadingarea", state: "loadingarea")),
+        },
+    ),
+]

@@ -1,0 +1,29 @@
+[
+    (
+        type: "Entity",
+        id: "structure_frame",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "frame"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/frame", state: "box_0"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_frame_computer",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "computer frame"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/frame_computer", state: "0"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_frame_machine",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "machine frame"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/frame_machine", state: "box_0"), depth: Furniture),
+        },
+    ),
+]

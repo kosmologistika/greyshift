@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_gizmo_toggle_tucker_tubes",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "gizmo"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/gizmo_toggle_tucker_tubes", state: "gizmo_active_0"), depth: Furniture),
+        },
+    ),
+]

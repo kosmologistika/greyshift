@@ -1,0 +1,20 @@
+[
+    (
+        type: "Entity",
+        id: "structure_nuclearbomb_beer",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "Nanotrasen-brand nuclear fission explosive"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/nuclearbomb_beer", state: "nuclearbomb_base"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_nuclearbomb_selfdestruct",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "station self-destruct terminal"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/nuclearbomb_selfdestruct", state: "nuclearbomb_base"), depth: Furniture),
+        },
+    ),
+]

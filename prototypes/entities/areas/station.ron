@@ -1,0 +1,1279 @@
+[
+    (
+        type: "Entity",
+        id: "area_hallway_secondary_entry",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Arrival Shuttle Hallway"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_maintenance_port_greater",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Greater Port Maintenance"),
+            "Area": (ambience: Some("maintenance")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_commons_storage_emergency_port",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Port Emergency Storage"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_commons_vacant_room_office",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Vacant Office"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_security_checkpoint_arrivals",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Arrivals Security Checkpoint"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_maintenance_port",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Port Maintenance"),
+            "Area": (ambience: Some("maintenance")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_maintenance_port_aft",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Aft Port Maintenance"),
+            "Area": (ambience: Some("maintenance")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_maintenance_port_fore",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Fore Port Maintenance"),
+            "Area": (ambience: Some("maintenance")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_maintenance_solars_port_fore",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Port Bow Solar Maintenance"),
+            "Area": (ambience: Some("maintenance")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_maintenance_disposal",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Waste Disposal"),
+            "Area": (ambience: Some("maintenance")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_service_hydroponics_garden",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Garden"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_commons_locker",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Locker Room"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_hallway_primary_port",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Port Primary Hallway"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_maintenance_disposal_trash",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Waste Burner"),
+            "Area": (ambience: Some("maintenance")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_commons_toilet_locker",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Locker Toilets"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_security_prison",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Prison Wing"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_commons_storage_primary",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Primary Tool Storage"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_cargo_storage",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Cargo Bay"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_engineering_supermatter_room",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Supermatter Engine Room"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_maintenance_solars_port_aft",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Port Quarter Solar Maintenance"),
+            "Area": (ambience: Some("maintenance")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_engineering_supermatter_engine",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Supermatter Engine"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_command_vault",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Vault"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_cargo_warehouse",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Warehouse"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_command_heads_quarters_qm",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Quartermaster's Office"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_commons_storage_emergency",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Commons Storage"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_maintenance_department_prison",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Prison Maintenance"),
+            "Area": (ambience: Some("maintenance")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_cargo_office",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Cargo Office"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_security_execution",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Security"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_maintenance_department_engine_atmos",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Atmospherics Maintenance"),
+            "Area": (ambience: Some("maintenance")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_cargo_sorting",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Delivery Office"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_security_prison_visit",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Prison Visitation Area"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_commons_vacant_room_commissary",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Vacant Commissary"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_commons_storage_art",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Art Supply Storage"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_security_processing",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Labor Shuttle Dock"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_security_checkpoint_supply",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Security Post - Cargo Bay"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_cargo_lobby",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Cargo Lobby"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_maintenance_disposal_incinerator",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Incinerator"),
+            "Area": (ambience: Some("maintenance")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_engineering_hallway_west",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Engineering Hallway West"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_maintenance_department_electrical",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Electrical Maintenance"),
+            "Area": (ambience: Some("maintenance")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_command_gateway",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Gateway"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_security_brig",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Brig"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_hallway_primary_central_fore",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Fore Central Primary Hallway"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_hallway_primary_central_aft",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Aft Central Primary Hallway"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_security_courtroom",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Courtroom"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_engineering_storage_shared",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Shared Engineering Storage"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_service_lawoffice",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Law Office"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_engineering_storage",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Engineering Storage"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_command_meeting_room",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Heads of Staff Meeting Room"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_engineering_hallway",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Engineering Hallway"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_engineering_atmos",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Atmospherics"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_engineering_dronefabricator",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Drone Fabricator"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_construction",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Construction Area"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_command_heads_quarters_hop",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Head of Personnel's Office"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_command_eva",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "EVA Storage"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_engineering_main",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Engineering"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_command_heads_quarters_nanotrasen_representative",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Nanotrasen Representative's Office"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_security_brig_entrance",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Brig Entrance"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_command_heads_quarters_magistrate",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Magistrate's Office"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_command_bridge",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Bridge"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_security_checkpoint_engineering",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Security Post - Engineering"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_engineering_atmos_storage_gas",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Atmospherics Gas Storage"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_engineering_engine_smes",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Engineering SMES"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_hallway_primary_aft",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Aft Primary Hallway"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_security_warden",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Brig Control"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_ai_upload_chamber",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "AI Upload Chamber"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_engineering_lobby",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Engineering Lobby"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_hallway_primary_fore",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Fore Primary Hallway"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_security_armory",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Armory"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_service_janitor",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Custodial Closet"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_command_heads_quarters_blueshield",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Blueshield's Office"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_tcommsat_computer",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Telecomms Control Room"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_service_cafeteria",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Cafeteria"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_commons_dorms",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Dormitories"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_maintenance_fore",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Fore Maintenance"),
+            "Area": (ambience: Some("maintenance")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_security_holding_cell",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Holding Cell"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_security_lockers",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Security Locker Room"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_maintenance_aft",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Aft Maintenance"),
+            "Area": (ambience: Some("maintenance")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_security_detectives_office",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Detective's Office"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_command_heads_quarters_ce",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Chief Engineer's Office"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_command_teleporter",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Teleporter Room"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_command_heads_quarters_captain_private",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Captain's Quarters"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_engineering_storage_tech",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Technical Storage"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_command_heads_quarters_captain",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Captain's Office"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_service_theater",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Theater"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_security_checkpoint_customs",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Customs"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_hallway_primary_central",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Central Primary Hallway"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_engineering_break_room",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Engineering Foyer"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_security_interrogation",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Interrogation Room"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_security_courtroom_holding",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Courtroom Prisoner Holding Room"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_medical_psychology",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Psychology Office"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_security_office",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Security Office"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_security_range",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Firing Range"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_medical_medbay_aft",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Medbay Aft"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_medical_pharmacy",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Pharmacy"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_hallway_primary_starboard",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Starboard Primary Hallway"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_commons_lounge",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Bar Lounge"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_engineering_atmos_pumproom",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Atmospherics Pumping Room"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_maintenance_department_engine",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Engineering Maintenance"),
+            "Area": (ambience: Some("maintenance")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_security_evidence",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Evidence Storage"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_engineering_atmos_project",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Atmospherics Project Room"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_command_heads_quarters_hos",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Head of Security's Office"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_medical_surgery_fore",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Fore Operating Room"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_medical_surgery_theatre",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Grand Surgery Theatre"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_medical_treatment_center",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Medbay Treatment Center"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_medical_paramedic",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Paramedic Dispatch"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_engineering_atmos_hfr_room",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Atmospherics HFR Room"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_medical_medbay_lobby",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Medbay Lobby"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_engineering_gravity_generator",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Gravity Generator Room"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_medical_storage",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Medbay Storage"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_security_mechbay",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Security Mechbay"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_service_hydroponics",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Hydroponics"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_service_kitchen_kitchen_backroom",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Kitchen Backroom"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_medical_surgery_aft",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Aft Operating Room"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_engineering_transit_tube",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Transit Tube"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_hallway_secondary_service",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Service Hallway"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_commons_dorms_apartment1",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Dorms Apartment 1"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_security_checkpoint_medical",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Security Post - Medbay"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_medical_medbay",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Medical"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_commons_toilet_restrooms",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Restrooms"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_medical_morgue",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Morgue"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_ai_satellite_atmos",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "AI Satellite Atmospherics"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_ai_satellite_maintenance",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "AI Satellite Maintenance"),
+            "Area": (ambience: Some("maintenance")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_medical_virology",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Virology"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_command_heads_quarters_cmo",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Chief Medical Officer's Office"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_maintenance_starboard_upper",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Upper Starboard Maintenance"),
+            "Area": (ambience: Some("maintenance")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_medical_cryo",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Cryogenics"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_maintenance_starboard_fore",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Fore Starboard Maintenance"),
+            "Area": (ambience: Some("maintenance")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_ai_satellite_chamber",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "AI Chamber"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_ai_satellite_interior",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "AI Satellite Antechamber"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_ai_satellite_hallway",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "AI Satellite Hallway"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_medical_break_room",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Medical Break Room"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_ai_satellite_service",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "AI Satellite Service"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_maintenance_solars_starboard_fore",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Starboard Bow Solar Maintenance"),
+            "Area": (ambience: Some("maintenance")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_hallway_primary_starboard_west",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Starboard Primary Hallway West"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_science_xenobiology",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Xenobiology Lab"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_science_robotics_mechbay",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Mech Bay"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_service_library",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Library"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_science_auxlab_firing_range",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Research Firing Range"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_science_robotics_lab",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Robotics Lab"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_science_server",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Research Division Server Room"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_command_heads_quarters_rd",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Research Director's Office"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_maintenance_starboard_aft",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Aft Starboard Maintenance"),
+            "Area": (ambience: Some("maintenance")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_science_circuits",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Circuit Lab"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_science_research",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Research Division"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_service_chapel_monastery",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Monastery"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_science_lobby",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Science Lobby"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_science_lower",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Lower Science Division"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_security_checkpoint_science",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Security Post - Science"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_science_breakroom",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Science Break Room"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_science_lab",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Research and Development"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_service_kitchen_abandoned",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Abandoned Kitchen"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_maintenance_solars_starboard_aft",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Starboard Quarter Solar Maintenance"),
+            "Area": (ambience: Some("maintenance")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_science_genetics",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Genetics Lab"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_science_ordnance_office",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Ordnance Office"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_hallway_secondary_exit_departure_lounge",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Departure Lounge"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_science_ordnance_testlab",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Ordnance Testing Lab"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "area_science_ordnance_bomb",
+        parents: ["area"],
+        components: {
+            "DisplayName": (name: "Ordnance Bomb Site"),
+        },
+    ),
+]

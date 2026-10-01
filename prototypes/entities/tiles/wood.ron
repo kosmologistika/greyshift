@@ -1,0 +1,18 @@
+[
+    (
+        type: "Entity",
+        id: "tile_wood_tile",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/wood_tile", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_wood_parquet",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/wood_parquet", state: "default")),
+        },
+    ),
+]

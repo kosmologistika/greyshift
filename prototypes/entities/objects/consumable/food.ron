@@ -1,0 +1,252 @@
+[
+    (
+        type: "Entity",
+        id: "prop_food_grown_wheat",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "wheat"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/food_grown_wheat", state: "wheat")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_food_grown_melonlike_watermelon",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "watermelon"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/food_grown_melonlike_watermelon", state: "watermelon")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_food_grown_citrus_orange",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "orange"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/food_grown_citrus_orange", state: "orange")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_food_grown_grapes",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "bunch of grapes"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/food_grown_grapes", state: "grapes")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_food_grown_cocoapod",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "cocoa pod"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/food_grown_cocoapod", state: "cocoapod")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_food_breadslice_plain",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "bread slice"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/food_breadslice_plain", state: "breadslice")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_food_grown_potato",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "potato"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/food_grown_potato", state: "potato")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_food_grown_onion",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "onion"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/food_grown_onion", state: "onion")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_food_baguette",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "baguette"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/food_baguette", state: "baguette")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_food_grown_banana",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "banana"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/food_grown_banana", state: "banana")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_food_spaghetti_copypasta",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "copypasta"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/food_spaghetti_copypasta", state: "copypasta")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_food_cherrycupcake",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "cherry cupcake"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/food_cherrycupcake", state: "cherrycupcake")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_food_muffin_berry",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "berry muffin"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/food_muffin_berry", state: "berrymuffin")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_food_poppypretzel",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "poppy pretzel"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/food_poppypretzel", state: "poppypretzel")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_food_hotcrossbun",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "hot cross bun"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/food_hotcrossbun", state: "hotcrossbun")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_food_cakeslice_pound_cake_slice",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "pound cake slice"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/food_cakeslice_pound_cake_slice", state: "pound_cake_slice")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_food_pie_cream",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "banana cream pie"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/food_pie_cream", state: "pie")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_food_grown_flower_poppy",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "poppy"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/food_grown_flower_poppy", state: "poppy")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_food_piedough",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "pie dough"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/food_piedough", state: "piedough")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_food_donkpocket",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Donk-pocket"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/food_donkpocket", state: "donkpocket")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_food_sandwich_grilled_cheese",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "grilled cheese sandwich"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/food_sandwich_grilled_cheese", state: "toastedsandwich")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_food_grown_ambrosia_vulgaris",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "ambrosia vulgaris branch"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/food_grown_ambrosia_vulgaris", state: "ambrosiavulgaris")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_food_pistachios",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Sweetie's Pistachios"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/food_pistachios", state: "pistachio")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_food_grown_cannabis",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "cannabis leaf"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/food_grown_cannabis", state: "cannabis")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_food_meat_slab_human",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "meat"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/food_meat_slab_human", state: "meat")),
+        },
+    ),
+]

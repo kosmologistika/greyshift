@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_laser_pointer",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "laser pointer"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/laser_pointer", state: "pointer")),
+        },
+    ),
+]

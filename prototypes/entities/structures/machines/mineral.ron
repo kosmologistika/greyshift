@@ -1,0 +1,20 @@
+[
+    (
+        type: "Entity",
+        id: "structure_mineral_stacking_machine",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "stacking machine"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/mineral_stacking_machine", state: "stacker"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_mineral_ore_redemption",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "ore redemption machine"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/mineral_ore_redemption", state: "ore_redemption"), depth: Furniture),
+        },
+    ),
+]

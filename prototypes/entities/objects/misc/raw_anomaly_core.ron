@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_raw_anomaly_core_random",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "random raw core"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/raw_anomaly_core_random", state: "rawcore_bluespace")),
+        },
+    ),
+]

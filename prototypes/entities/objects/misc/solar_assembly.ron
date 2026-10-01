@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_solar_assembly",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "solar panel assembly"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/solar_assembly", state: "sp_base")),
+        },
+    ),
+]

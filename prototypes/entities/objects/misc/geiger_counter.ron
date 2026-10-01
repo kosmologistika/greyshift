@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_geiger_counter",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Geiger counter"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/geiger_counter", state: "geiger_off")),
+        },
+    ),
+]

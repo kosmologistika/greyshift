@@ -1,0 +1,20 @@
+[
+    (
+        type: "Entity",
+        id: "structure_grille",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "grille"),
+            "Appearance": (sprite: (rsi: "textures/structures/walls/grille", state: "grille"), depth: Walls),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_grille_broken",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "grille"),
+            "Appearance": (sprite: (rsi: "textures/structures/walls/grille_broken", state: "brokengrille"), depth: Walls),
+        },
+    ),
+]

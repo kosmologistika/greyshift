@@ -1,0 +1,38 @@
+[
+    (
+        type: "Entity",
+        id: "structure_camera",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "security camera"),
+            "WallMount": (),
+            "PlacementLayer": WallMount,
+            "Facing": (South),
+            "Appearance": (sprite: (rsi: "textures/structures/wallmounts/machines/camera", state: "camera"), depth: WallMounted),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_camera_autoname",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "security camera"),
+            "WallMount": (),
+            "PlacementLayer": WallMount,
+            "Facing": (South),
+            "Appearance": (sprite: (rsi: "textures/structures/wallmounts/machines/camera_autoname", state: "camera"), depth: WallMounted),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_camera_motion",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "motion-sensitive security camera"),
+            "WallMount": (),
+            "PlacementLayer": WallMount,
+            "Facing": (South),
+            "Appearance": (sprite: (rsi: "textures/structures/wallmounts/machines/camera_motion", state: "camera"), depth: WallMounted),
+        },
+    ),
+]

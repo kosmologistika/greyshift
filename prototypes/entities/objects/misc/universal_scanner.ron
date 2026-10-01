@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_universal_scanner",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "universal scanner"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/universal_scanner", state: "export_scanner")),
+        },
+    ),
+]

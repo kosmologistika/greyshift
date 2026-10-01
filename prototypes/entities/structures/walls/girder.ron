@@ -1,0 +1,21 @@
+[
+    (
+        type: "Entity",
+        id: "structure_girder",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "girder"),
+            "IconSmooth": (key: "girder", state_prefix: "state_"),
+            "Appearance": (sprite: (rsi: "textures/structures/walls/girder", state: "default"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_girder_displaced",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "displaced girder"),
+            "Appearance": (sprite: (rsi: "textures/structures/walls/girder_displaced", state: "displaced"), depth: Furniture),
+        },
+    ),
+]

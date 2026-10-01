@@ -1,0 +1,26 @@
+[
+    (
+        type: "Entity",
+        id: "structure_mirror",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "mirror"),
+            "WallMount": (),
+            "PlacementLayer": WallMount,
+            "Facing": (South),
+            "Appearance": (sprite: (rsi: "textures/structures/wallmounts/mirror", state: "mirror"), depth: WallMounted),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_mirror_broken",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "mirror"),
+            "WallMount": (),
+            "PlacementLayer": WallMount,
+            "Facing": (South),
+            "Appearance": (sprite: (rsi: "textures/structures/wallmounts/mirror_broken", state: "mirror_broke"), depth: WallMounted),
+        },
+    ),
+]

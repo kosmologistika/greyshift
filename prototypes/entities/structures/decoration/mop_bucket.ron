@@ -1,0 +1,20 @@
+[
+    (
+        type: "Entity",
+        id: "structure_mop_bucket_janitorialcart",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "janitorial cart"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/mop_bucket_janitorialcart", state: "cart"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_mop_bucket",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "mop bucket"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/mop_bucket", state: "mopbucket"), depth: Furniture),
+        },
+    ),
+]

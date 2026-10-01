@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_clipboard",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "clipboard"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/clipboard", state: "clipboard")),
+        },
+    ),
+]

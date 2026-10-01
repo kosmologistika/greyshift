@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_scalpel",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "scalpel"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/scalpel", state: "scalpel")),
+        },
+    ),
+]

@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_ladder",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "ladder"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/ladder", state: "ladder11"), depth: Furniture),
+        },
+    ),
+]

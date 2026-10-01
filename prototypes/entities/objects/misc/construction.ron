@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_construction_plumbing",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Plumbing Constructor"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/construction_plumbing", state: "plumberer2")),
+        },
+    ),
+]

@@ -1,0 +1,14 @@
+[
+    (
+        type: "Entity",
+        id: "structure_urinal",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "urinal"),
+            "WallMount": (),
+            "PlacementLayer": WallMount,
+            "Facing": (South),
+            "Appearance": (sprite: (rsi: "textures/structures/furniture/urinal", state: "urinal"), depth: WallMounted),
+        },
+    ),
+]

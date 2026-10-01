@@ -1,0 +1,42 @@
+[
+    (
+        type: "Entity",
+        id: "prop_chair_stool",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "stool"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/chair_stool", state: "stool_toppled")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_chair_wood",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "wooden chair"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/chair_wood", state: "wooden_chair_toppled")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_chair",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "chair"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/chair", state: "chair_toppled")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_chair_stool_bar",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "bar stool"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/chair_stool_bar", state: "bar_toppled")),
+        },
+    ),
+]

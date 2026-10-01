@@ -1,0 +1,137 @@
+[
+    (
+        type: "Entity",
+        id: "structure_tracker",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "solar tracker"),
+            "Appearance": (sprite: (rsi: "textures/structures/power/tracker", state: "tracker_base"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_solar",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "solar panel"),
+            "Appearance": (sprite: (rsi: "textures/structures/power/solar", state: "sp_base"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_port_gen_pacman_pre_loaded",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "P.A.C.M.A.N.-type portable generator"),
+            "Appearance": (sprite: (rsi: "textures/structures/power/port_gen_pacman_pre_loaded", state: "portgen0_0"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_smes",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "power storage unit"),
+            "Appearance": (sprite: (rsi: "textures/structures/power/smes", state: "smes"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_energy_accumulator_tesla_coil_anchored",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "tesla coil"),
+            "Appearance": (sprite: (rsi: "textures/structures/power/energy_accumulator_tesla_coil_anchored", state: "coil0"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_energy_accumulator_grounding_rod_anchored",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "grounding rod"),
+            "Appearance": (sprite: (rsi: "textures/structures/power/energy_accumulator_grounding_rod_anchored", state: "grounding_rod0"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_emitter",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "emitter"),
+            "Appearance": (sprite: (rsi: "textures/structures/power/emitter", state: "emitter"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_supermatter_crystal_engine",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "supermatter crystal"),
+            "Appearance": (sprite: (rsi: "textures/structures/power/supermatter_crystal_engine", state: "sm"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_turbine_turbine_outlet",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "turbine outlet"),
+            "Appearance": (sprite: (rsi: "textures/structures/power/turbine_turbine_outlet", state: "turbine_outlet"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_turbine_core_rotor",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "core rotor"),
+            "Appearance": (sprite: (rsi: "textures/structures/power/turbine_core_rotor", state: "core_rotor"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_turbine_inlet_compressor",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "inlet compressor"),
+            "Appearance": (sprite: (rsi: "textures/structures/power/turbine_inlet_compressor", state: "inlet_compressor"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_floodlight",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "floodlight"),
+            "Appearance": (sprite: (rsi: "textures/structures/power/floodlight", state: "floodlight"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_energy_accumulator_tesla_coil",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "tesla coil"),
+            "Appearance": (sprite: (rsi: "textures/structures/power/energy_accumulator_tesla_coil", state: "coil0"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_smes_engineering",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "power storage unit"),
+            "Appearance": (sprite: (rsi: "textures/structures/power/smes_engineering", state: "smes"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_shieldwallgen",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "shield wall generator"),
+            "Appearance": (sprite: (rsi: "textures/structures/power/shieldwallgen", state: "shield_wall_gen"), depth: Furniture),
+        },
+    ),
+]

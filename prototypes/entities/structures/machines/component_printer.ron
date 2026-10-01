@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_component_printer",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "component printer"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/component_printer", state: "fab-idle"), depth: Furniture),
+        },
+    ),
+]

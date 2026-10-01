@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_c_tube",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "cardboard tube"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/c_tube", state: "c_tube")),
+        },
+    ),
+]

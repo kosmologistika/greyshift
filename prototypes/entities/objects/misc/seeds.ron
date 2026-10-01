@@ -1,0 +1,162 @@
+[
+    (
+        type: "Entity",
+        id: "prop_seeds_apple",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "apple seed pack"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/seeds_apple", state: "seed-apple")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_seeds_banana",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "banana seed pack"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/seeds_banana", state: "seed-banana")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_seeds_cocoapod",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "cocoa pod seed pack"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/seeds_cocoapod", state: "seed-cocoapod")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_seeds_grape",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "grape seed pack"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/seeds_grape", state: "seed-grapes")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_seeds_orange",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "orange seed pack"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/seeds_orange", state: "seed-orange")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_seeds_sugarcane",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "sugarcane seed pack"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/seeds_sugarcane", state: "seed-sugarcane")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_seeds_wheat",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "wheat seed pack"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/seeds_wheat", state: "seed-wheat")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_seeds_watermelon",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "watermelon seed pack"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/seeds_watermelon", state: "seed-watermelon")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_seeds_tower",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "tower-cap mycelium pack"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/seeds_tower", state: "mycelium-tower")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_seeds_ambrosia",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "ambrosia vulgaris seed pack"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/seeds_ambrosia", state: "seed-ambrosiavulgaris")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_seeds_tobacco",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "tobacco seed pack"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/seeds_tobacco", state: "seed-tobacco")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_seeds_potato",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "potato seed pack"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/seeds_potato", state: "seed-potato")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_seeds_berry",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "berry seed pack"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/seeds_berry", state: "seed-berry")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_seeds_tomato",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "tomato seed pack"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/seeds_tomato", state: "seed-tomato")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_seeds_cannabis",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "cannabis seed pack"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/seeds_cannabis", state: "seed-cannabis")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_seeds_ambrosia_deus",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "ambrosia deus seed pack"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/seeds_ambrosia_deus", state: "seed-ambrosiadeus")),
+        },
+    ),
+]

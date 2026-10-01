@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_slime_scanner",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "slime scanner"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/slime_scanner", state: "slime_scanner")),
+        },
+    ),
+]

@@ -1,0 +1,32 @@
+[
+    (
+        type: "Entity",
+        id: "prop_shard_medium",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "shard"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/shard_medium", state: "medium")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_shard",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "shard"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/shard", state: "large")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_shard_small",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "shard"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/shard_small", state: "small")),
+        },
+    ),
+]

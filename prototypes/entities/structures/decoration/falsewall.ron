@@ -1,0 +1,13 @@
+[
+    (
+        type: "Entity",
+        id: "structure_falsewall",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "wall"),
+            "Occluder": (),
+            "AreaBoundary": (),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/falsewall", state: "wall-open"), depth: Furniture),
+        },
+    ),
+]

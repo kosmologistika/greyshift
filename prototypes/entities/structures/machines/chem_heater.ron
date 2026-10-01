@@ -1,0 +1,20 @@
+[
+    (
+        type: "Entity",
+        id: "structure_chem_heater_withbuffer",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "reaction chamber"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/chem_heater_withbuffer", state: "mixer0b"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_chem_heater",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "reaction chamber"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/chem_heater", state: "mixer0b"), depth: Furniture),
+        },
+    ),
+]

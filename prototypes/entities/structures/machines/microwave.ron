@@ -1,0 +1,20 @@
+[
+    (
+        type: "Entity",
+        id: "structure_microwave",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "microwave oven"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/microwave", state: "mw_complete"), depth: BelowMobs),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_microwave_engineering_cell_included",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "wireless microwave oven"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/microwave_engineering_cell_included", state: "engi_mw_complete"), depth: BelowMobs),
+        },
+    ),
+]

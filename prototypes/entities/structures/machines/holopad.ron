@@ -1,0 +1,20 @@
+[
+    (
+        type: "Entity",
+        id: "structure_holopad",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "holopad"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/holopad", state: "holopad0"), depth: FloorFixture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_holopad_secure",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "secure holopad"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/holopad_secure", state: "holopad0"), depth: FloorFixture),
+        },
+    ),
+]

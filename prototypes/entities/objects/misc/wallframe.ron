@@ -1,0 +1,22 @@
+[
+    (
+        type: "Entity",
+        id: "prop_wallframe_apc",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "APC frame"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/wallframe_apc", state: "apc")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_wallframe_camera",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "camera assembly"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/wallframe_camera", state: "cameracase")),
+        },
+    ),
+]

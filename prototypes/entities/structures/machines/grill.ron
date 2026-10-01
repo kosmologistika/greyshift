@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_grill",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "Barbeque grill"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/grill", state: "grill_open"), depth: Furniture),
+        },
+    ),
+]

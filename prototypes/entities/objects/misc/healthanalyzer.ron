@@ -1,0 +1,22 @@
+[
+    (
+        type: "Entity",
+        id: "prop_healthanalyzer",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "health analyzer"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/healthanalyzer", state: "health")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_healthanalyzer_advanced",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "advanced health analyzer"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/healthanalyzer_advanced", state: "health_adv")),
+        },
+    ),
+]

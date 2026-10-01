@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_papershredder",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "paper shredder"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/papershredder", state: "papershredder0"), depth: Furniture),
+        },
+    ),
+]

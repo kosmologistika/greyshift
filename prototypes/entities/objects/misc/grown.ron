@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_grown_bananapeel",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "banana peel"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/grown_bananapeel", state: "banana_peel")),
+        },
+    ),
+]

@@ -1,0 +1,62 @@
+[
+    (
+        type: "Entity",
+        id: "prop_stock_parts_power_store_cell_high",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "high-capacity power cell"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/power/stock_parts_power_store_cell_high", state: "hcell")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_stock_parts_power_store_cell_high_empty",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "high-capacity power cell"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/power/stock_parts_power_store_cell_high_empty", state: "hcell")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_stock_parts_scanning_module",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "scanning module"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/power/stock_parts_scanning_module", state: "scan_module")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_stock_parts_matter_bin",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "matter bin"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/power/stock_parts_matter_bin", state: "matter_bin")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_stock_parts_power_store_cell_lead",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "lead-acid battery"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/power/stock_parts_power_store_cell_lead", state: "lead_battery")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_stock_parts_capacitor",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "capacitor"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/power/stock_parts_capacitor", state: "capacitor")),
+        },
+    ),
+]

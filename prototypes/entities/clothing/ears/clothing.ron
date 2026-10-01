@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_clothing_ears_earmuffs",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "earmuffs"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/clothing/ears/clothing_ears_earmuffs", state: "earmuffs")),
+        },
+    ),
+]

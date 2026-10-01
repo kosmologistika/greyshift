@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_ai_law_rack_base_core",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "core module rack"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/ai_law_rack_base_core", state: "core_rack"), depth: Furniture),
+        },
+    ),
+]

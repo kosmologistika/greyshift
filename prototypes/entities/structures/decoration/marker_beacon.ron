@@ -1,0 +1,29 @@
+[
+    (
+        type: "Entity",
+        id: "structure_marker_beacon_cerulean",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "marker beacon"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/marker_beacon_cerulean", state: "markercerulean-on"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_marker_beacon_burgundy",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "marker beacon"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/marker_beacon_burgundy", state: "markerburgundy-on"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_marker_beacon_jade",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "marker beacon"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/marker_beacon_jade", state: "markerjade-on"), depth: Furniture),
+        },
+    ),
+]

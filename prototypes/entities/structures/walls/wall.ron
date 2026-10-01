@@ -1,0 +1,13 @@
+[
+    (
+        type: "Entity",
+        id: "structure_wall_reinforced",
+        parents: ["structure_wall_solid"],
+        components: {
+            "DisplayName": (name: "reinforced wall"),
+            "IconSmooth": (state_prefix: "reinforced"),
+            "Appearance": (sprite: (rsi: "textures/structures/walls/wall_reinforced", state: "default")),
+            "Destructible": (thresholds: [(trigger: TotalDamage(300), behaviors: [PlaySound((source: Collection("destroy_metal"), volume_db: -2.0, pitch_var: 0.08)), Destroy])]),
+        },
+    ),
+]

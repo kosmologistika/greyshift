@@ -1,0 +1,52 @@
+[
+    (
+        type: "Entity",
+        id: "prop_kitchen_fork_plastic",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "plastic fork"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/kitchen_fork_plastic", state: "plastic_fork")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_kitchen_spoon_plastic",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "plastic spoon"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/kitchen_spoon_plastic", state: "plastic_spoon")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_kitchen_rollingpin",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "rolling pin"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/kitchen_rollingpin", state: "rolling_pin")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_kitchen_fork",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "fork"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/kitchen_fork", state: "fork")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_kitchen_spoon",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "spoon"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/kitchen_spoon", state: "spoon")),
+        },
+    ),
+]

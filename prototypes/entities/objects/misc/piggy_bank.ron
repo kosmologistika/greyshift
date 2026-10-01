@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_piggy_bank",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "piggy bank"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/piggy_bank", state: "piggy_bank")),
+        },
+    ),
+]

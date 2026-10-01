@@ -1,0 +1,22 @@
+[
+    (
+        type: "Entity",
+        id: "prop_pizzabox_vegetable",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "pizza box"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/pizzabox_vegetable", state: "pizzabox")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_pizzabox_margherita",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "pizza box"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/pizzabox_margherita", state: "pizzabox")),
+        },
+    ),
+]

@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_autopsy_scanner",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "autopsy scanner"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/autopsy_scanner", state: "autopsy_scanner")),
+        },
+    ),
+]

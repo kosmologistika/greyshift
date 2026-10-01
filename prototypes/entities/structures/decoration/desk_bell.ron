@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_desk_bell",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "desk bell"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/desk_bell", state: "desk_bell"), depth: BelowMobs),
+        },
+    ),
+]

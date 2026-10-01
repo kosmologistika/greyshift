@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_seed_extractor_2",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "seed extractor"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/seed_extractor_2", state: "sextractor"), depth: Furniture),
+        },
+    ),
+]

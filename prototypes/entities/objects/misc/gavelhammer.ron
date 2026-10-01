@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_gavelhammer",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "gavel"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/gavelhammer", state: "gavelhammer")),
+        },
+    ),
+]

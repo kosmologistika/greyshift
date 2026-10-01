@@ -1,0 +1,642 @@
+[
+    (
+        type: "Entity",
+        id: "prop_reagent_containers_blood_random",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "blood pack"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/reagent_containers_blood_random", state: "random_bloodpack")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_reagent_containers_cup_watering_can",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "watering can"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/reagent_containers_cup_watering_can", state: "watering_can")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_reagent_containers_spray_plantbgone",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Plant-B-Gone"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/reagent_containers_spray_plantbgone", state: "plantbgone")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_reagent_containers_spray_pestspray",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "pest spray"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/reagent_containers_spray_pestspray", state: "pestspray")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_reagent_containers_cup_bottle_nutrient_ez",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "bottle of E-Z-Nutrient"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/reagent_containers_cup_bottle_nutrient_ez", state: "bottle")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_reagent_containers_cup_bottle_nutrient_rh",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "bottle of Robust Harvest"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/reagent_containers_cup_bottle_nutrient_rh", state: "bottle")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_reagent_containers_cup_glass_drinkingglass",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "drinking glass"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/reagent_containers_cup_glass_drinkingglass", state: "glass_empty")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_reagent_containers_cup_bowl",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "bowl"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/reagent_containers_cup_bowl", state: "bowl")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_reagent_containers_condiment_enzyme",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "universal enzyme"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/reagent_containers_condiment_enzyme", state: "enzyme")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_reagent_containers_cup_bottle_ammonia",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "ammonia bottle"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/reagent_containers_cup_bottle_ammonia", state: "bottle")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_reagent_containers_cup_glass_mug_coco",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Dutch hot coco"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/reagent_containers_cup_glass_mug_coco", state: "tea")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_reagent_containers_cup_glass_drinkingglass_shotglass",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "shot glass"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/reagent_containers_cup_glass_drinkingglass_shotglass", state: "shotglass")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_reagent_containers_cup_glass_bottle_whiskey",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Uncle Git's special reserve"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/reagent_containers_cup_glass_bottle_whiskey", state: "whiskeybottle")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_reagent_containers_cup_bottle_morphine",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "morphine bottle"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/reagent_containers_cup_bottle_morphine", state: "bottle")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_reagent_containers_cup_bottle_chloralhydrate",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "chloral hydrate bottle"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/reagent_containers_cup_bottle_chloralhydrate", state: "bottle20")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_reagent_containers_cup_bottle_facid",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Fluorosulfuric Acid Bottle"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/reagent_containers_cup_bottle_facid", state: "bottle")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_reagent_containers_cup_glass_waterbottle",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "bottle of water"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/reagent_containers_cup_glass_waterbottle", state: "smallbottle")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_reagent_containers_cup_glass_mug_nanotrasen",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Nanotrasen mug"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/reagent_containers_cup_glass_mug_nanotrasen", state: "mug_nt_empty")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_reagent_containers_cup_glass_bottle_juice_cream",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "milk cream"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/reagent_containers_cup_glass_bottle_juice_cream", state: "cream")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_reagent_containers_spray_pepper",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "pepperspray"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/reagent_containers_spray_pepper", state: "pepperspray")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_reagent_containers_cup_glass_coffee",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "robust coffee"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/reagent_containers_cup_glass_coffee", state: "coffee")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_reagent_containers_spray_cleaner",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "space cleaner"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/reagent_containers_spray_cleaner", state: "cleaner")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_reagent_containers_cup_glass_mug",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "mug"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/reagent_containers_cup_glass_mug", state: "tea_empty")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_reagent_containers_cup_glass_shaker",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "shaker"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/reagent_containers_cup_glass_shaker", state: "shaker")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_reagent_containers_cup_glass_ice",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "ice cup"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/reagent_containers_cup_glass_ice", state: "icecup")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_reagent_containers_cup_bottle_syrup_bottle_liqueur",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "bottle of coffee liqueur syrup"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/reagent_containers_cup_bottle_syrup_bottle_liqueur", state: "syrup")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_reagent_containers_cup_bottle_syrup_bottle_korta_nectar",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "bottle of korta syrup"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/reagent_containers_cup_bottle_syrup_bottle_korta_nectar", state: "syrup")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_reagent_containers_cup_bottle_syrup_bottle_caramel",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "bottle of caramel syrup"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/reagent_containers_cup_bottle_syrup_bottle_caramel", state: "syrup")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_reagent_containers_condiment_sugar",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "sugar sack"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/reagent_containers_condiment_sugar", state: "sugar")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_reagent_containers_condiment_soymilk",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "soy milk"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/reagent_containers_condiment_soymilk", state: "soymilk")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_reagent_containers_condiment_milk",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "space milk"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/reagent_containers_condiment_milk", state: "milk")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_reagent_containers_cup_glass_flask_det",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "detective's flask"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/reagent_containers_cup_glass_flask_det", state: "detflask")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_reagent_containers_cup_glass_flask_gold",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "captain's flask"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/reagent_containers_cup_glass_flask_gold", state: "flask_gold")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_reagent_containers_spray_waterflower",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "water flower"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/reagent_containers_spray_waterflower", state: "sunflower")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_reagent_containers_cup_bucket",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "bucket"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/reagent_containers_cup_bucket", state: "bucket")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_reagent_containers_applicator_patch_aiuri",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "aiuri patch (burn)"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/reagent_containers_applicator_patch_aiuri", state: "bandaid_burn")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_reagent_containers_dropper",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "dropper"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/reagent_containers_dropper", state: "dropper0")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_reagent_containers_cup_bottle_epinephrine",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "epinephrine bottle"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/reagent_containers_cup_bottle_epinephrine", state: "bottle")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_reagent_containers_cup_bottle_multiver",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "multiver bottle"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/reagent_containers_cup_bottle_multiver", state: "bottle")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_reagent_containers_cup_beaker_large",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "large beaker"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/reagent_containers_cup_beaker_large", state: "beakerlarge")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_reagent_containers_cup_glass_flask",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "flask"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/reagent_containers_cup_glass_flask", state: "flask")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_reagent_containers_syringe_antiviral",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "syringe (spaceacillin)"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/reagent_containers_syringe_antiviral", state: "syringe_0")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_reagent_containers_syringe_epinephrine",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "syringe (epinephrine)"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/reagent_containers_syringe_epinephrine", state: "syringe_0")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_reagent_containers_applicator_patch_libital",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "libital patch (brute)"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/reagent_containers_applicator_patch_libital", state: "bandaid_brute")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_reagent_containers_chem_pack",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "intravenous medicine bag"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/reagent_containers_chem_pack", state: "chempack")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_reagent_containers_cup_bottle_formaldehyde",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "formaldehyde bottle"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/reagent_containers_cup_bottle_formaldehyde", state: "bottle")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_reagent_containers_condiment_flour",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "flour sack"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/reagent_containers_condiment_flour", state: "flour")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_reagent_containers_condiment_rice",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "rice sack"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/reagent_containers_condiment_rice", state: "rice")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_reagent_containers_cup_beaker",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "beaker"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/reagent_containers_cup_beaker", state: "beaker")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_reagent_containers_cup_glass_bottle_beer",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "space beer"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/reagent_containers_cup_glass_bottle_beer", state: "beer")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_reagent_containers_cup_beaker_cryoxadone",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "beaker"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/reagent_containers_cup_beaker_cryoxadone", state: "beaker")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_reagent_containers_syringe",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "syringe"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/reagent_containers_syringe", state: "syringe_0")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_reagent_containers_blood_o_plus",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "blood pack"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/reagent_containers_blood_o_plus", state: "bloodpack")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_reagent_containers_blood_o_minus",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "blood pack"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/reagent_containers_blood_o_minus", state: "bloodpack")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_reagent_containers_blood_b_plus",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "blood pack"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/reagent_containers_blood_b_plus", state: "bloodpack")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_reagent_containers_blood_b_minus",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "blood pack"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/reagent_containers_blood_b_minus", state: "bloodpack")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_reagent_containers_blood_a_plus",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "blood pack"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/reagent_containers_blood_a_plus", state: "bloodpack")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_reagent_containers_blood_a_minus",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "blood pack"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/reagent_containers_blood_a_minus", state: "bloodpack")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_reagent_containers_blood_lizard",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "blood pack"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/reagent_containers_blood_lizard", state: "bloodpack")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_reagent_containers_blood_ethereal",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "blood pack"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/reagent_containers_blood_ethereal", state: "bloodpack")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_reagent_containers_blood",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "blood pack"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/reagent_containers_blood", state: "bloodpack")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_reagent_containers_cup_glass_bottle_vodka_badminka",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Badminka vodka"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/reagent_containers_cup_glass_bottle_vodka_badminka", state: "badminka")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_reagent_containers_condiment_peppermill",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "pepper mill"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/reagent_containers_condiment_peppermill", state: "peppermillsmall")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_reagent_containers_condiment_saltshaker",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "salt shaker"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/consumable/reagent_containers_condiment_saltshaker", state: "saltshakersmall")),
+        },
+    ),
+]

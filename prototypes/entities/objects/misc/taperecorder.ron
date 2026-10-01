@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_taperecorder",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "universal recorder"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/taperecorder", state: "taperecorder_empty")),
+        },
+    ),
+]

@@ -1,0 +1,119 @@
+[
+    (
+        type: "Entity",
+        id: "decal_siding_plain",
+        parents: ["base_decal_tile"],
+        components: {
+            "DisplayName": (name: "siding plain"),
+            "Appearance": (sprite: (rsi: "textures/decals/siding_plain", state: "siding_plain")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_siding_wideplating_new",
+        parents: ["base_decal_tile"],
+        components: {
+            "DisplayName": (name: "siding wideplating new"),
+            "Appearance": (sprite: (rsi: "textures/decals/siding_wideplating_new", state: "siding_wideplating_new")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_siding_wideplating_new_corner",
+        parents: ["base_decal_tile"],
+        components: {
+            "DisplayName": (name: "siding wideplating new corner"),
+            "Appearance": (sprite: (rsi: "textures/decals/siding_wideplating_new_corner", state: "siding_wideplating_new_corner")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_siding_wood",
+        parents: ["base_decal_tile"],
+        components: {
+            "DisplayName": (name: "siding wood"),
+            "Appearance": (sprite: (rsi: "textures/decals/siding_wood", state: "siding_wood")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_siding_wood_corner",
+        parents: ["base_decal_tile"],
+        components: {
+            "DisplayName": (name: "siding wood corner"),
+            "Appearance": (sprite: (rsi: "textures/decals/siding_wood_corner", state: "siding_wood_corner")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_siding_plain_corner",
+        parents: ["base_decal_tile"],
+        components: {
+            "DisplayName": (name: "siding plain corner"),
+            "Appearance": (sprite: (rsi: "textures/decals/siding_plain_corner", state: "siding_plain_corner")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_royal_end",
+        parents: ["base_decal_tile"],
+        components: {
+            "DisplayName": (name: "royal end"),
+            "Appearance": (sprite: (rsi: "textures/decals/royal_end", state: "royal_end")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_royal",
+        parents: ["base_decal_tile"],
+        components: {
+            "DisplayName": (name: "royal"),
+            "Appearance": (sprite: (rsi: "textures/decals/royal", state: "royal")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_siding_thinplating_new_corner",
+        parents: ["base_decal_tile"],
+        components: {
+            "DisplayName": (name: "siding thinplating new corner"),
+            "Appearance": (sprite: (rsi: "textures/decals/siding_thinplating_new_corner", state: "siding_thinplating_new_corner")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_siding_thinplating_new",
+        parents: ["base_decal_tile"],
+        components: {
+            "DisplayName": (name: "siding thinplating new"),
+            "Appearance": (sprite: (rsi: "textures/decals/siding_thinplating_new", state: "siding_thinplating_new")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_siding_plain_end",
+        parents: ["base_decal_tile"],
+        components: {
+            "DisplayName": (name: "siding plain end"),
+            "Appearance": (sprite: (rsi: "textures/decals/siding_plain_end", state: "siding_plain_end")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_siding_wood_end",
+        parents: ["base_decal_tile"],
+        components: {
+            "DisplayName": (name: "siding wood end"),
+            "Appearance": (sprite: (rsi: "textures/decals/siding_wood_end", state: "siding_wood_end")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_siding_wideplating_new_end",
+        parents: ["base_decal_tile"],
+        components: {
+            "DisplayName": (name: "siding wideplating new end"),
+            "Appearance": (sprite: (rsi: "textures/decals/siding_wideplating_new_end", state: "siding_wideplating_new_end")),
+        },
+    ),
+]

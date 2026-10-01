@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_punching_bag",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "punching bag"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/punching_bag", state: "punchingbag"), depth: WallMounted),
+        },
+    ),
+]

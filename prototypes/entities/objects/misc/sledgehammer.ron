@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_sledgehammer_tactical",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "D-4 tactical breaching hammer"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/sledgehammer_tactical", state: "sledgehammer_tactical0")),
+        },
+    ),
+]

@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_conveyor_switch_oneway",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "conveyor switch"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/conveyor_switch_oneway", state: "conveyor_switch_oneway"), depth: Furniture),
+        },
+    ),
+]

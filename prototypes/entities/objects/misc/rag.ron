@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_rag",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "damp rag"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/rag", state: "rag")),
+        },
+    ),
+]

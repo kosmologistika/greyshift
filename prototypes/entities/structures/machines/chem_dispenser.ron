@@ -1,0 +1,29 @@
+[
+    (
+        type: "Entity",
+        id: "structure_chem_dispenser",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "chem dispenser"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/chem_dispenser", state: "dispenser"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_chem_dispenser_drinks_beer",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "booze dispenser"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/chem_dispenser_drinks_beer", state: "booze_dispenser"), depth: BelowMobs),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_chem_dispenser_drinks",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "soda dispenser"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/chem_dispenser_drinks", state: "soda_dispenser"), depth: BelowMobs),
+        },
+    ),
+]

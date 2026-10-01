@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_screwdriver",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "screwdriver"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/tools/screwdriver", state: "obj_item_screwdriver")),
+        },
+    ),
+]

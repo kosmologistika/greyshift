@@ -1,0 +1,62 @@
+[
+    (
+        type: "Entity",
+        id: "prop_hfr_box_corner",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "HFR box corner"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/hfr_box_corner", state: "box_corner")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_hfr_box_core",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "HFR box core"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/hfr_box_core", state: "box_core")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_hfr_box_body_waste_output",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "HFR box waste output"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/hfr_box_body_waste_output", state: "box_waste")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_hfr_box_body_moderator_input",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "HFR box moderator input"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/hfr_box_body_moderator_input", state: "box_moderator")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_hfr_box_body_interface",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "HFR box interface"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/hfr_box_body_interface", state: "box_body")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_hfr_box_body_fuel_input",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "HFR box fuel input"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/hfr_box_body_fuel_input", state: "box_fuel")),
+        },
+    ),
+]

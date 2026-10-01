@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_prisongate",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "prison gate scanner"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/prisongate", state: "prisongate_on"), depth: Furniture),
+        },
+    ),
+]

@@ -1,0 +1,13 @@
+[
+    (
+        type: "Entity",
+        id: "structure_mineral_door_wood",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "wood door"),
+            "Occluder": (),
+            "AreaBoundary": (),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/mineral_door_wood", state: "wood"), depth: Furniture),
+        },
+    ),
+]

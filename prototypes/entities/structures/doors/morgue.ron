@@ -1,0 +1,14 @@
+[
+    (
+        type: "Entity",
+        id: "structure_morgue",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "door"),
+            "AreaBoundary": (),
+            "Occluder": (),
+            "Solid": (),
+            "Appearance": (sprite: (rsi: "textures/structures/doors/morgue", state: "door_closed"), depth: WallOverlay),
+        },
+    ),
+]

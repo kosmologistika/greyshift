@@ -1,0 +1,20 @@
+[
+    (
+        type: "Entity",
+        id: "structure_oven",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "oven"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/oven", state: "oven_off"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_oven_range",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "range"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/oven_range", state: "range_off"), depth: Furniture),
+        },
+    ),
+]

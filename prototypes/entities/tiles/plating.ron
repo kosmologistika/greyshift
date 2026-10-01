@@ -10,4 +10,12 @@
             "PlacementLayer": Floor,
         },
     ),
+    (
+        type: "Entity",
+        id: "tile_plating_reinforced",
+        parents: ["tile_plating"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/plating_reinforced", state: "default")),
+        },
+    ),
 ]

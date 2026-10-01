@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_training_machine",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "AURUMILL-Brand MkII. Personnel Training Machine"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/training_machine", state: "training_machine"), depth: Furniture),
+        },
+    ),
+]

@@ -1,0 +1,10 @@
+[
+    (
+        type: "Entity",
+        id: "tile_noslip",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/noslip", state: "default")),
+        },
+    ),
+]

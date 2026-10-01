@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_biopsy_tool",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "biopsy tool"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/biopsy_tool", state: "biopsy")),
+        },
+    ),
+]

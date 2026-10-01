@@ -1,0 +1,110 @@
+[
+    (
+        type: "Entity",
+        id: "structure_statue_themis",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "Фемида"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/statue_themis", state: "themis"), depth: WallMounted),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_statue_gold_galactic_map",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "galactic map"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/statue_gold_galactic_map", state: "galactic_map_statue"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_statue_station_map_cyberiad_sw",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "статуя Кибериады"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/statue_station_map_cyberiad_sw", state: "sw"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_statue_station_map_cyberiad_w",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "статуя Кибериады"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/statue_station_map_cyberiad_w", state: "west"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_statue_station_map_cyberiad_nw",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "статуя Кибериады"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/statue_station_map_cyberiad_nw", state: "nw"), depth: WallMounted),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_statue_station_map_cyberiad_s",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "статуя Кибериады"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/statue_station_map_cyberiad_s", state: "south"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_statue_station_map_cyberiad_c",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "статуя Кибериады"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/statue_station_map_cyberiad_c", state: "center"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_statue_station_map_cyberiad_north",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "статуя Кибериады"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/statue_station_map_cyberiad_north", state: "north"), depth: WallMounted),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_statue_station_map_cyberiad_se",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "статуя Кибериады"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/statue_station_map_cyberiad_se", state: "se"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_statue_station_map_cyberiad_e",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "статуя Кибериады"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/statue_station_map_cyberiad_e", state: "east"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_statue_station_map_cyberiad_ne",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "статуя Кибериады"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/statue_station_map_cyberiad_ne", state: "ne"), depth: WallMounted),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_statue_bananium_clown",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "statue of a clown"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/statue_bananium_clown", state: "clown"), depth: Furniture),
+        },
+    ),
+]

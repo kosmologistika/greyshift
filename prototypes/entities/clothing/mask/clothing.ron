@@ -1,0 +1,62 @@
+[
+    (
+        type: "Entity",
+        id: "prop_clothing_mask_breath",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "breath mask"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/clothing/mask/clothing_mask_breath", state: "breath")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_clothing_mask_muzzle",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "muzzle"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/clothing/mask/clothing_mask_muzzle", state: "muzzle")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_clothing_mask_gas_clown_hat",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "clown wig and mask"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/clothing/mask/clothing_mask_gas_clown_hat", state: "clown")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_clothing_mask_gas",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "gas mask"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/clothing/mask/clothing_mask_gas", state: "gas_alt")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_clothing_mask_balaclava",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "balaclava"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/clothing/mask/clothing_mask_balaclava", state: "balaclava")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_clothing_mask_breath_medical",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "medical mask"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/clothing/mask/clothing_mask_breath_medical", state: "medical")),
+        },
+    ),
+]

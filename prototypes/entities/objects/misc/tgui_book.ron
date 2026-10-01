@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_tgui_book_manual_infuser",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "DNA infusion book"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/tgui_book_manual_infuser", state: "book")),
+        },
+    ),
+]

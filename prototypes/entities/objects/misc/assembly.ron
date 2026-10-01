@@ -1,0 +1,72 @@
+[
+    (
+        type: "Entity",
+        id: "prop_assembly_flash_handheld",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "flash"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/assembly_flash_handheld", state: "flash")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_assembly_igniter",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "igniter"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/assembly_igniter", state: "igniter")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_assembly_signaler",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "remote signaling device"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/assembly_signaler", state: "signaller")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_assembly_prox_sensor",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "proximity sensor"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/assembly_prox_sensor", state: "prox")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_assembly_timer",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "timer"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/assembly_timer", state: "timer")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_assembly_control_crematorium",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "crematorium controller"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/assembly_control_crematorium", state: "control")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_assembly_mousetrap_armed",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "mousetrap"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/assembly_mousetrap_armed", state: "mousetraparmed")),
+        },
+    ),
+]

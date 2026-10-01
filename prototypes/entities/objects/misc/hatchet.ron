@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_hatchet",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "hatchet"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/hatchet", state: "hatchet")),
+        },
+    ),
+]

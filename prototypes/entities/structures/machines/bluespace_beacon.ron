@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_bluespace_beacon",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "bluespace gigabeacon"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/bluespace_beacon", state: "floor_beaconf"), depth: Furniture),
+        },
+    ),
+]

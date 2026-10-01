@@ -1,0 +1,74 @@
+[
+    (
+        type: "Entity",
+        id: "structure_fax_heads_qm",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "Quartermaster's Fax Machine"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/fax_heads_qm", state: "fax"), depth: BelowMobs),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_fax",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "Fax Machine"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/fax", state: "fax"), depth: BelowMobs),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_fax_heads_hop",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "Head of Personnel's Fax Machine"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/fax_heads_hop", state: "fax"), depth: BelowMobs),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_fax_heads_captain",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "Captain's Fax Machine"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/fax_heads_captain", state: "fax"), depth: BelowMobs),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_fax_heads_ce",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "Chief Engineer's Fax Machine"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/fax_heads_ce", state: "fax"), depth: BelowMobs),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_fax_heads_hos",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "Head of Security's Fax Machine"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/fax_heads_hos", state: "fax"), depth: BelowMobs),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_fax_heads_cmo",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "Chief Medical Officer's Fax Machine"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/fax_heads_cmo", state: "fax"), depth: BelowMobs),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_fax_heads_rd",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "Research Director's Fax Machine"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/fax_heads_rd", state: "fax"), depth: BelowMobs),
+        },
+    ),
+]

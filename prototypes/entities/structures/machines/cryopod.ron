@@ -1,0 +1,20 @@
+[
+    (
+        type: "Entity",
+        id: "structure_cryopod_prison",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "cryogenic freezer"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/cryopod_prison", state: "prisonpod"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_cryopod",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "cryogenic freezer"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/cryopod", state: "cryopod-open"), depth: Furniture),
+        },
+    ),
+]

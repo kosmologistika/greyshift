@@ -1,0 +1,102 @@
+[
+    (
+        type: "Entity",
+        id: "prop_flashlight_lamp_green",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "desk lamp"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/tools/flashlight_lamp_green", state: "lampgreen")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_flashlight_lamp",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "desk lamp"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/tools/flashlight_lamp", state: "lamp")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_flashlight",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "flashlight"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/tools/flashlight", state: "flashlight")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_flashlight_flare_candle",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "red candle"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/tools/flashlight_flare_candle", state: "candle1")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_flashlight_lantern",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "lantern"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/tools/flashlight_lantern", state: "lantern")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_flashlight_lamp_bananalamp",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "banana lamp"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/tools/flashlight_lamp_bananalamp", state: "bananalamp")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_flashlight_pen_paramedic",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "paramedic penlight"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/tools/flashlight_pen_paramedic", state: "penlight_surgical")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_flashlight_pen",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "penlight"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/tools/flashlight_pen", state: "penlight")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_flashlight_lantern_on",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "lantern"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/tools/flashlight_lantern_on", state: "lantern")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_flashlight_seclite",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "seclite"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/tools/flashlight_seclite", state: "seclite")),
+        },
+    ),
+]

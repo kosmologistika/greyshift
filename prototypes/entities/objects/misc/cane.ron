@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_cane",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "cane"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/cane", state: "cane")),
+        },
+    ),
+]
