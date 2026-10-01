@@ -1,0 +1,14 @@
+The map files in this directory are converted from Space Station 13 maps and
+keep the terms of their sources.
+
+cyberiad.map.ron is derived from _maps/map_files/Cyberiad/Cyberiad.dmm in
+CorvaxStation (https://github.com/corvax-team/CorvaxStation) at commit
+e032ad993ab81c6094a5ec0999b37494630cc08d, main floor only, by utils/ss13_import. CorvaxStation's
+code, which its map files are part of, is licensed under the GNU Affero General
+Public License v3 (see GPLv3.txt and LICENSE in that repository). The Cyberiad
+layout itself descends from Paradise Station's Cyberiad (Box-derived), under the
+same license family.
+
+The sprites these maps place live under assets/textures and carry their own
+attribution per sheet (CC BY-SA 3.0 for everything taken from CorvaxStation,
+tgstation and Paradise)
