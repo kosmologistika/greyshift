@@ -1,0 +1,111 @@
+[
+    (
+        type: "Entity",
+        id: "weapon_china_lake",
+        parents: ["base_gun"],
+        components: {
+            "DisplayName": (name: "China Lake"),
+            "Item": (size: Large),
+            "Gun": (fire_sound: Some((source: Path("audio/weapons/guns/harpoon.ogg"), volume_db: -2.0, pitch_var: 0.08, range_tiles: 30.0)), fire_rate: 1.0, selected_mode: SemiAuto, available_modes: [SemiAuto]),
+            "RecoilKick": (px: 6.0),
+            "AmmoStore": (rounds: 0, capacity: 4),
+            "ShotSpec": (projectile_proto: "projectile_grenade_40mm"),
+            "Ejects": (live_round: Some("ammo_grenade_40mm")),
+            "LoadsCartridge": (windup_secs: 0.8),
+            "SpreadConfig": (base: 0.05, growth_per_shot: 0.02, decay_per_sec: 1.0, max: 0.1),
+            "Appearance": (
+                sprite: (rsi: "textures/objects/weapons/guns/launchers/china_lake", state: "icon"),
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "weapon_china_lake_loaded",
+        parents: ["weapon_china_lake"],
+        components: {
+            "AmmoStore": (rounds: 4),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "ammo_grenade_40mm",
+        parents: ["base_ammo_round"],
+        components: {
+            "DisplayName": (name: "40mm grenade"),
+            "Cartridge": (projectile_proto: "projectile_grenade_40mm"),
+            "Appearance": (
+                sprite: (rsi: "textures/objects/weapons/guns/ammunition/explosives", state: "frag"),
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "weapon_rpg",
+        parents: ["base_gun"],
+        components: {
+            "DisplayName": (name: "RPG-7"),
+            "Item": (size: Large),
+            "Gun": (fire_sound: Some((source: Path("audio/weapons/guns/rocket_launcher.ogg"), volume_db: 0.0, pitch_var: 0.05, range_tiles: 40.0)), fire_rate: 0.5, selected_mode: SemiAuto, available_modes: [SemiAuto]),
+            "RecoilKick": (px: 10.0),
+            "AmmoStore": (rounds: 0, capacity: 1),
+            "ShotSpec": (projectile_proto: "projectile_rocket"),
+            "Ejects": (live_round: Some("ammo_rocket")),
+            "LoadsCartridge": (windup_secs: 1.5),
+            "SpreadConfig": (base: 0.01, growth_per_shot: 0.0, decay_per_sec: 1.0, max: 0.01),
+            "Appearance": (
+                sprite: (rsi: "textures/objects/weapons/guns/launchers/rocket", state: "base"),
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "weapon_rpg_loaded",
+        parents: ["weapon_rpg"],
+        components: {
+            "AmmoStore": (rounds: 1),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "ammo_rocket",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "rocket"),
+            "Item": (size: Small, held: Nothing),
+            "Cartridge": (projectile_proto: "projectile_rocket"),
+            "Appearance": (
+                sprite: (rsi: "textures/objects/weapons/guns/ammunition/explosives", state: "rpg"),
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "weapon_grappling_gun",
+        parents: ["base_recharge_gun"],
+        components: {
+            "DisplayName": (name: "grappling gun"),
+            "Item": (size: Medium),
+            "Gun": (fire_sound: Some((source: Path("audio/weapons/guns/harpoon.ogg"), volume_db: -4.0, pitch_var: 0.05, range_tiles: 16.0))),
+            "ShotSpec": (projectile_proto: "projectile_grappling_hook"),
+            "RegenAmmo": (units_per_sec: 0.2),
+            "Appearance": (
+                sprite: (rsi: "textures/objects/weapons/guns/launchers/grappling_gun", state: "base"),
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "weapon_meat_hook",
+        parents: ["base_recharge_gun"],
+        components: {
+            "DisplayName": (name: "meat hook"),
+            "Item": (size: Medium),
+            "Gun": (fire_sound: Some((source: Path("audio/weapons/guns/harpoon.ogg"), volume_db: -4.0, pitch_var: 0.05, range_tiles: 16.0))),
+            "ShotSpec": (projectile_proto: "projectile_meat_hook"),
+            "RegenAmmo": (units_per_sec: 0.25),
+            "Appearance": (
+                sprite: (rsi: "textures/objects/weapons/guns/launchers/sticky_hand", state: "base"),
+            ),
+        },
+    ),
+]

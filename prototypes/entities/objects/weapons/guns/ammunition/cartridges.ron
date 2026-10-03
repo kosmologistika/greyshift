@@ -1,0 +1,68 @@
+[
+    (
+        type: "Entity",
+        id: "ammo_cartridge_38",
+        parents: ["base_ammo_round"],
+        components: {
+            "DisplayName": (name: ".38 cartridge"),
+            "Cartridge": (projectile_proto: "projectile_bullet_38"),
+            "Appearance": (
+                sprite: (rsi: "textures/objects/weapons/guns/ammunition/casings/ammo_casing", state: "base"),
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "ammo_cartridge_762",
+        parents: ["base_ammo_round"],
+        components: {
+            "DisplayName": (name: "7.62 cartridge"),
+            "Cartridge": (projectile_proto: "projectile_bullet_762"),
+            "Appearance": (
+                sprite: (rsi: "textures/objects/weapons/guns/ammunition/casings/ammo_casing", state: "base"),
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "ammo_cartridge_9mm",
+        parents: ["base_ammo_round"],
+        components: {
+            "DisplayName": (name: "9mm cartridge"),
+            "Cartridge": (projectile_proto: "projectile_bullet_9mm"),
+            "Appearance": (
+                sprite: (rsi: "textures/objects/weapons/guns/ammunition/casings/ammo_casing", state: "base"),
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "ammo_shell_buckshot",
+        parents: ["base_ammo_round"],
+        components: {
+            "DisplayName": (name: "buckshot shell"),
+            "Tags": (["shell_shotgun"]),
+            // A shell is its own one-round store: the tube holds shells, not
+            // counters, which is what lets mixed loads fire in chamber order.
+            "AmmoStore": (rounds: 1, capacity: 1),
+            "ShotSpec": (projectile_proto: "projectile_pellet_buckshot", pellets: 6),
+            "RetainsBrass": (),
+            "Ejects": (spent_casing: Some("ammo_casing_shotgun")),
+            "Appearance": (
+                sprite: (rsi: "textures/objects/weapons/guns/ammunition/casings/shotgun_shell", state: "base"),
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "ammo_casing_shotgun",
+        parents: ["base_ammo_round"],
+        hide_spawn_menu: true,
+        components: {
+            "DisplayName": (name: "spent shotgun shell"),
+            "Appearance": (
+                sprite: (rsi: "textures/objects/weapons/guns/ammunition/casings/shotgun_shell", state: "base-spent"),
+            ),
+        },
+    ),
+]

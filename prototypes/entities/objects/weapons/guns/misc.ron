@@ -1,0 +1,49 @@
+[
+    (
+        type: "Entity",
+        id: "weapon_random_gun",
+        parents: ["base_gun"],
+        components: {
+            "DisplayName": (name: "random gun", desc: Some("item-desc-random-gun")),
+            "Item": (size: Medium),
+            "Gun": (fire_rate: 2.0, selected_mode: SemiAuto, available_modes: [SemiAuto]),
+            "AmmoStore": (rounds: 12, capacity: 12),
+            "RegenAmmo": (units_per_sec: 0.5),
+            "ShotSpec": (
+                projectile_proto: "projectile_bullet_9mm",
+                pool: [
+                    "projectile_bullet_9mm",
+                    "projectile_bullet_38",
+                    "projectile_bullet_762",
+                    "projectile_pellet_buckshot",
+                    "projectile_laser_red",
+                    "projectile_meat_hook",
+                    "projectile_grappling_hook",
+                    "projectile_teleport",
+                ],
+            ),
+            "RecoilKick": (px: 3.0),
+            "SpreadConfig": (base: 0.05, growth_per_shot: 0.05, decay_per_sec: 2.0, max: 0.3),
+            "SpriteTint": ((red: 0.55, green: 1.0, blue: 0.55, alpha: 1.0)),
+            "Appearance": (
+                sprite: (rsi: "textures/objects/weapons/guns/revolvers/deckard", state: "base"),
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "weapon_teleport_gun",
+        parents: ["base_recharge_gun"],
+        components: {
+            "DisplayName": (name: "teleport gun", desc: Some("item-desc-teleport-gun")),
+            "Item": (size: Small),
+            "Gun": (fire_sound: Some((source: Path("audio/weapons/guns/taser2.ogg"), volume_db: -4.0, pitch_var: 0.05, range_tiles: 22.0))),
+            "RegenAmmo": (units_per_sec: 0.34),
+            "ShotSpec": (projectile_proto: "projectile_teleport"),
+            "SpriteTint": ((red: 0.7, green: 0.4, blue: 1.0, alpha: 1.0)),
+            "Appearance": (
+                sprite: (rsi: "textures/objects/weapons/guns/battery/pulse_pistol", state: "icon"),
+            ),
+        },
+    ),
+]

@@ -1,0 +1,38 @@
+[
+    (
+        type: "Entity",
+        id: "weapon_stun_baton",
+        parents: ["base_melee_weapon"],
+        components: {
+            "DisplayName": (name: "stun baton", desc: Some("item-desc-stun-baton")),
+            "Item": (size: Small),
+            "MeleeWeapon": (shape: Thrust(len: 1), damage: {Blunt: 10}, cooldown: 0.6, icon_facing_deg: 45),
+            // Every jolt is a unit off the cell; a dry cell is a plain stick until it recharges.
+            // Three jolts floor a fresh body, SS14's pace
+            "StaminaOnHit": (amount: 35, cost: 1),
+            "AmmoStore": (rounds: 6, capacity: 6),
+            "RegenAmmo": (units_per_sec: 0.2),
+            "DamageOnHit": (damage: {Blunt: 5}),
+            "Appearance": (
+                sprite: (rsi: "textures/objects/weapons/stunbaton", state: "icon"),
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "weapon_pinata_bat",
+        parents: ["base_melee_weapon"],
+        components: {
+            "DisplayName": (name: "pinata bat", desc: Some("item-desc-pinata-bat")),
+            "Item": (size: Medium),
+            "MeleeWeapon": (shape: Thrust(len: 1), damage: {Blunt: 8}, cooldown: 0.5, icon_facing_deg: 45),
+            "CoinHooks": (knockout: 2.0),
+            "DamageOnHit": (damage: {Blunt: 4}),
+            // The baton's stick under a party tint: no bat of its own in the licensed sheets
+            "SpriteTint": ((red: 1.0, green: 0.45, blue: 0.9, alpha: 1.0)),
+            "Appearance": (
+                sprite: (rsi: "textures/objects/weapons/stunbaton", state: "icon"),
+            ),
+        },
+    ),
+]

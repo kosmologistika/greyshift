@@ -1,0 +1,79 @@
+[
+    (
+        type: "Entity",
+        id: "weapon_laser_pistol",
+        parents: ["base_cell_gun"],
+        components: {
+            "DisplayName": (name: "laser pistol"),
+            "Item": (size: Small),
+            "Gun": (fire_sound: Some((source: Path("audio/weapons/guns/taser2.ogg"), volume_db: -4.0, pitch_var: 0.05, range_tiles: 22.0)), fire_rate: 3.0, selected_mode: SemiAuto, available_modes: [SemiAuto]),
+            "RecoilKick": (px: 2.0),
+            "ShotSpec": (cost: 25),
+            "SpreadConfig": (base: 0.01, growth_per_shot: 0.04, max: 0.2),
+            "Appearance": (
+                sprite: (rsi: "textures/objects/weapons/guns/battery/pulse_pistol", state: "icon"),
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "weapon_laser_pistol_loaded",
+        parents: ["weapon_laser_pistol"],
+        components: {
+            "StartingContents": (contents: ["ammo_cell_small"]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "weapon_laser_rifle",
+        parents: ["base_cell_gun"],
+        components: {
+            "DisplayName": (name: "laser rifle"),
+            "Item": (size: Large),
+            "GrantsActions": (ids: ["action_fire_mode"], to: Holder),
+            "Gun": (fire_sound: Some((source: Path("audio/weapons/guns/taser2.ogg"), volume_db: -2.0, pitch_var: 0.05, range_tiles: 26.0)), fire_rate: 5.0, selected_mode: FullAuto, available_modes: [FullAuto, SemiAuto]),
+            "RecoilKick": (px: 2.5),
+            "ShotSpec": (cost: 20),
+            "SpreadConfig": (base: 0.03, growth_per_shot: 0.03, max: 0.3),
+            "Appearance": (
+                sprite: (rsi: "textures/objects/weapons/guns/battery/laser_gun", state: "icon"),
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "weapon_laser_rifle_loaded",
+        parents: ["weapon_laser_rifle"],
+        components: {
+            "StartingContents": (contents: ["ammo_cell_small"]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "weapon_rifle_burst_pulse",
+        parents: ["base_9mm_gun"],
+        components: {
+            "DisplayName": (name: "pulse burst rifle"),
+            "Item": (size: Large),
+            "GrantsActions": (ids: ["action_fire_mode"], to: Holder),
+            "Gun": (fire_sound: Some((source: Path("audio/weapons/guns/c-20r.ogg"), volume_db: -2.0, pitch_var: 0.05, range_tiles: 26.0)), 
+                fire_rate: 2.0,
+                selected_mode: Burst(count: 3, internal_rate: 12.0),
+                available_modes: [Burst(count: 3, internal_rate: 12.0), SemiAuto],
+            ),
+            "Container": (max_item_size: Some(Medium)),
+            "SpreadConfig": (base: 0.02, growth_per_shot: 0.03, decay_per_sec: 1.5, max: 0.2),
+            "Appearance": (
+                sprite: (rsi: "textures/objects/weapons/guns/battery/pulse_carbine", state: "icon"),
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "weapon_rifle_burst_pulse_loaded",
+        parents: ["weapon_rifle_burst_pulse"],
+        components: {
+            "StartingContents": (contents: ["ammo_mag_pistol_9mm_extended"]),
+        },
+    ),
+]

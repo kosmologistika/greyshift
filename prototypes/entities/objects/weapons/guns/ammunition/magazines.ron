@@ -1,0 +1,50 @@
+[
+    (
+        type: "Entity",
+        id: "ammo_mag_pistol_9mm",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "9mm pistol magazine"),
+            "Tags": (["magazine_pistol_9mm"]),
+            "Item": (size: Small),
+            "AmmoStore": (rounds: 15, capacity: 15),
+            "ShotSpec": (projectile_proto: "projectile_bullet_9mm"),
+            "LoadsCartridge": (),
+            "Appearance": (
+                sprite: (rsi: "textures/objects/weapons/guns/ammunition/magazine/pistol/pistol_mag", state: "base"),
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "ammo_mag_pistol_9mm_extended",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "9mm extended magazine"),
+            "Tags": (["magazine_pistol_9mm_extended"]),
+            "Item": (size: Small),
+            "AmmoStore": (rounds: 30, capacity: 30),
+            "ShotSpec": (projectile_proto: "projectile_bullet_9mm"),
+            "LoadsCartridge": (),
+            "Appearance": (
+                sprite: (rsi: "textures/objects/weapons/guns/ammunition/magazine/pistol/pistol_high_capacity_mag", state: "base"),
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "ammo_mag_minigun_drum",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "minigun drum"),
+            "Tags": (["magazine_minigun"]),
+            "Item": (size: Large),
+            "AmmoStore": (rounds: 500, capacity: 500),
+            "ShotSpec": (projectile_proto: "projectile_bullet_9mm"),
+            "LoadsCartridge": (),
+            "Appearance": (
+                sprite: (rsi: "textures/objects/weapons/guns/ammunition/magazine/lightrifle/light_rifle_box", state: "base"),
+            ),
+        },
+    ),
+]

@@ -1,0 +1,32 @@
+[
+    (
+        type: "Entity",
+        id: "structure_crystal",
+        components: {
+            "DisplayName": (name: "crystal"),
+            "Movable": (),
+            "PushOnly": (),
+            "Glidable": (),
+            "Pullable": (),
+            "PlacementLayer": Free,
+            "Appearance": (
+                sprite: (rsi: "textures/structures/decoration/crystal", state: "crystal_grey"),
+                depth: BelowMobs,
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_threshold_hazard",
+        components: {
+            "DisplayName": (name: "loading threshold"),
+            // Bounds the rooms like a door would, but painted on the floor so the doorway reads as open
+            "AreaBoundary": (),
+            "PlacementLayer": Solid,
+            "Appearance": (
+                sprite: (rsi: "textures/decals/markings", state: "delivery"),
+                depth: FloorOverlay,
+            ),
+        },
+    ),
+]

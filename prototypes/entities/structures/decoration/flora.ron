@@ -1,0 +1,90 @@
+[
+    (
+        type: "Entity",
+        id: "structure_bush",
+        components: {
+            "DisplayName": (name: "bush"),
+            "PlacementLayer": Free,
+            "Appearance": (
+                sprite: (rsi: "textures/structures/decoration/bushes", state: "bushf1"),
+                depth: BelowMobs,
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_flowers_purple",
+        components: {
+            "DisplayName": (name: "purple flowers"),
+            "PlacementLayer": Free,
+            "Appearance": (
+                sprite: (rsi: "textures/structures/decoration/flowers", state: "ppflowers_1"),
+                depth: FloorOverlay,
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_flowers_wild",
+        components: {
+            "DisplayName": (name: "wildflowers"),
+            "PlacementLayer": Free,
+            "Appearance": (
+                sprite: (rsi: "textures/structures/decoration/flowers", state: "brflowers_1"),
+                depth: FloorOverlay,
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_flowers_yellow",
+        components: {
+            "DisplayName": (name: "yellow flowers"),
+            "PlacementLayer": Free,
+            "Appearance": (
+                sprite: (rsi: "textures/structures/decoration/flowers", state: "ywflowers_1"),
+                depth: FloorOverlay,
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_grass_tall",
+        components: {
+            "DisplayName": (name: "tall grass"),
+            "PlacementLayer": Free,
+            "Appearance": (
+                sprite: (rsi: "textures/structures/decoration/flowers", state: "grassd1"),
+                depth: FloorOverlay,
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_hedge",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "hedge"),
+            "Occluder": (),
+            "AreaBoundary": (),
+            "StruckSound": (default: Some((source: Collection("hit_wood"), volume_db: -6.0, pitch_var: 0.15))),
+            "IconSmooth": (key: "hedge", state_prefix: "hedge"),
+            "Appearance": (
+                sprite: (rsi: "textures/structures/decoration/hedge", state: "default"),
+                depth: Walls,
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_sapling",
+        components: {
+            "DisplayName": (name: "sapling"),
+            "PlacementLayer": Free,
+            "Appearance": (
+                sprite: (rsi: "textures/structures/decoration/bushes", state: "bushd1"),
+                depth: BelowMobs,
+            ),
+        },
+    ),
+]
