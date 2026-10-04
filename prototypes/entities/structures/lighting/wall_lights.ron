@@ -44,13 +44,9 @@
                 sprite: (rsi: "textures/structures/lighting/light_tube", state: "base"),
                 // The lit part of the fixture, drawn over the housing and out
                 // of the lighting multiply. Without it a lamp is a grey bar in
-                // the dark room it is supposed to be lighting. The soft glow
-                // over it is a sprite rather than a screen-space quad, so it
-                // hangs on the fixture and line of sight hides it with the
-                // fixture - it cannot spill past the wall the light stops at
+                // the dark room it is supposed to be lighting
                 layers: [
                     (state: "glow", shading: Unshaded),
-                    (rsi: Some("textures/effects/light_glow"), state: "glow", shading: Unshaded),
                 ],
             ),
         },
@@ -66,7 +62,6 @@
                 sprite: (rsi: "textures/structures/lighting/light_small", state: "base"),
                 layers: [
                     (state: "glow", shading: Unshaded),
-                    (rsi: Some("textures/effects/light_glow"), state: "glow", shading: Unshaded),
                 ],
             ),
         },
@@ -79,7 +74,6 @@
             "PointLight": (color: (1.0, 0.62, 0.22), energy: 1.6),
             "Appearance": (layers: [
                 (rsi: Some("textures/structures/lighting/light_tube"), state: "glow", shading: Unshaded, tint: Some((red: 1.0, green: 0.82, blue: 0.45, alpha: 1.0))),
-                (rsi: Some("textures/effects/light_glow"), state: "glow", shading: Unshaded, tint: Some((red: 1.0, green: 0.82, blue: 0.45, alpha: 1.0))),
             ]),
         },
     ),
@@ -91,7 +85,6 @@
             "PointLight": (color: (1.0, 0.12, 0.16), energy: 2.2),
             "Appearance": (layers: [
                 (rsi: Some("textures/structures/lighting/light_tube"), state: "glow", shading: Unshaded, tint: Some((red: 1.0, green: 0.35, blue: 0.35, alpha: 1.0))),
-                (rsi: Some("textures/effects/light_glow"), state: "glow", shading: Unshaded, tint: Some((red: 1.0, green: 0.35, blue: 0.35, alpha: 1.0))),
             ]),
         },
     ),
@@ -103,7 +96,6 @@
             "PointLight": (color: (0.18, 1.0, 0.35), energy: 2.2),
             "Appearance": (layers: [
                 (rsi: Some("textures/structures/lighting/light_tube"), state: "glow", shading: Unshaded, tint: Some((red: 0.45, green: 1.0, blue: 0.55, alpha: 1.0))),
-                (rsi: Some("textures/effects/light_glow"), state: "glow", shading: Unshaded, tint: Some((red: 0.45, green: 1.0, blue: 0.55, alpha: 1.0))),
             ]),
         },
     ),
@@ -115,7 +107,6 @@
             "PointLight": (color: (1.0, 0.18, 0.75), energy: 2.2),
             "Appearance": (layers: [
                 (rsi: Some("textures/structures/lighting/light_tube"), state: "glow", shading: Unshaded, tint: Some((red: 1.0, green: 0.45, blue: 0.9, alpha: 1.0))),
-                (rsi: Some("textures/effects/light_glow"), state: "glow", shading: Unshaded, tint: Some((red: 1.0, green: 0.45, blue: 0.9, alpha: 1.0))),
             ]),
         },
     ),
@@ -127,7 +118,6 @@
             "PointLight": (color: (0.2, 0.75, 1.0)),
             "Appearance": (layers: [
                 (rsi: Some("textures/structures/lighting/light_tube"), state: "glow", shading: Unshaded, tint: Some((red: 0.5, green: 0.9, blue: 1.0, alpha: 1.0))),
-                (rsi: Some("textures/effects/light_glow"), state: "glow", shading: Unshaded, tint: Some((red: 0.5, green: 0.9, blue: 1.0, alpha: 1.0))),
             ]),
         },
     ),
@@ -147,7 +137,6 @@
             "PointLight": (color: (1.0, 0.62, 0.22), energy: 1.0),
             "Appearance": (layers: [
                 (rsi: Some("textures/structures/lighting/light_small"), state: "glow", shading: Unshaded, tint: Some((red: 1.0, green: 0.82, blue: 0.45, alpha: 1.0))),
-                (rsi: Some("textures/effects/light_glow"), state: "glow", shading: Unshaded, tint: Some((red: 1.0, green: 0.82, blue: 0.45, alpha: 1.0))),
             ]),
         },
     ),
@@ -159,7 +148,6 @@
             "PointLight": (color: (0.2, 0.75, 1.0), energy: 1.0),
             "Appearance": (layers: [
                 (rsi: Some("textures/structures/lighting/light_small"), state: "glow", shading: Unshaded, tint: Some((red: 0.5, green: 0.9, blue: 1.0, alpha: 1.0))),
-                (rsi: Some("textures/effects/light_glow"), state: "glow", shading: Unshaded, tint: Some((red: 0.5, green: 0.9, blue: 1.0, alpha: 1.0))),
             ]),
         },
     ),
@@ -171,7 +159,6 @@
             "PointLight": (color: (0.18, 1.0, 0.35), energy: 1.0),
             "Appearance": (layers: [
                 (rsi: Some("textures/structures/lighting/light_small"), state: "glow", shading: Unshaded, tint: Some((red: 0.45, green: 1.0, blue: 0.55, alpha: 1.0))),
-                (rsi: Some("textures/effects/light_glow"), state: "glow", shading: Unshaded, tint: Some((red: 0.45, green: 1.0, blue: 0.55, alpha: 1.0))),
             ]),
         },
     ),
@@ -187,9 +174,6 @@
             "Appearance": (
                 sprite: (rsi: "textures/structures/lighting/glowshroom", state: "base"),
                 shading: Unshaded,
-                layers: [
-                    (rsi: Some("textures/effects/light_glow"), state: "glow", shading: Unshaded, tint: Some((red: 0.4, green: 1.0, blue: 0.5, alpha: 1.0))),
-                ],
             ),
         },
     ),
@@ -202,7 +186,6 @@
             "PointLight": (color: (1.0, 0.58, 0.88), energy: 2.4),
             "Appearance": (layers: [
                 (rsi: Some("textures/structures/lighting/light_tube"), state: "glow", shading: Unshaded, tint: Some((red: 1.0, green: 0.6, blue: 0.9, alpha: 1.0))),
-                (rsi: Some("textures/effects/light_glow"), state: "glow", shading: Unshaded, tint: Some((red: 1.0, green: 0.6, blue: 0.9, alpha: 1.0))),
             ]),
         },
     ),
