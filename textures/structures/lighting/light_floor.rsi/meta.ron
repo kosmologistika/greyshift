@@ -2,6 +2,7 @@
     size: (x: 32, y: 32),
     license: "CC-BY-SA-3.0",
     copyright: [
+        "Taken from CorvaxStation icons/obj/lighting.dmi at commit 5004d984b267, CC BY-SA 3.0",
         "Taken from tgstation at https://github.com/tgstation/tgstation/blob/376684351da724cc125097ba3905d4b498365570/icons/obj/lighting.dmi state floor",
         "glow: the fixture's lens pixels lifted to grayscale white so a layer tint colours them",
     ],

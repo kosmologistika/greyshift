@@ -2,6 +2,7 @@
     size: (x: 32, y: 32),
     license: "CC-BY-SA-3.0",
     copyright: [
+        "Taken from CorvaxStation icons/obj/smooth_structures/table.dmi at commit 5004d984b267, CC BY-SA 3.0",
         "Taken from space-wizards/space-station-14 Resources/Textures/Structures/Furniture/Tables/generic.rsi, originally https://github.com/discordia-space/CEV-Eris/blob/0b3ab17dbad632ddf738b63900ef8df1926bba47/icons/obj/tables.dmi",
     ],
     states: [
