@@ -46,7 +46,7 @@
                 // of the lighting multiply. Without it a lamp is a grey bar in
                 // the dark room it is supposed to be lighting
                 layers: [
-                    (state: "glow", shading: Unshaded),
+                    (state: "glow", shading: Glow),
                 ],
             ),
         },
@@ -61,7 +61,7 @@
             "Appearance": (
                 sprite: (rsi: "textures/structures/lighting/light_small", state: "base"),
                 layers: [
-                    (state: "glow", shading: Unshaded),
+                    (state: "glow", shading: Glow),
                 ],
             ),
         },
@@ -73,7 +73,7 @@
         components: {
             "PointLight": (color: (1.0, 0.62, 0.22), energy: 1.6),
             "Appearance": (layers: [
-                (rsi: Some("textures/structures/lighting/light_tube"), state: "glow", shading: Unshaded, tint: Some((red: 1.0, green: 0.82, blue: 0.45, alpha: 1.0))),
+                (rsi: Some("textures/structures/lighting/light_tube"), state: "glow", shading: Glow, tint: Some((red: 1.0, green: 0.82, blue: 0.45, alpha: 1.0))),
             ]),
         },
     ),
@@ -84,7 +84,7 @@
         components: {
             "PointLight": (color: (1.0, 0.12, 0.16), energy: 2.2),
             "Appearance": (layers: [
-                (rsi: Some("textures/structures/lighting/light_tube"), state: "glow", shading: Unshaded, tint: Some((red: 1.0, green: 0.35, blue: 0.35, alpha: 1.0))),
+                (rsi: Some("textures/structures/lighting/light_tube"), state: "glow", shading: Glow, tint: Some((red: 1.0, green: 0.35, blue: 0.35, alpha: 1.0))),
             ]),
         },
     ),
@@ -95,7 +95,7 @@
         components: {
             "PointLight": (color: (0.18, 1.0, 0.35), energy: 2.2),
             "Appearance": (layers: [
-                (rsi: Some("textures/structures/lighting/light_tube"), state: "glow", shading: Unshaded, tint: Some((red: 0.45, green: 1.0, blue: 0.55, alpha: 1.0))),
+                (rsi: Some("textures/structures/lighting/light_tube"), state: "glow", shading: Glow, tint: Some((red: 0.45, green: 1.0, blue: 0.55, alpha: 1.0))),
             ]),
         },
     ),
@@ -106,7 +106,7 @@
         components: {
             "PointLight": (color: (1.0, 0.18, 0.75), energy: 2.2),
             "Appearance": (layers: [
-                (rsi: Some("textures/structures/lighting/light_tube"), state: "glow", shading: Unshaded, tint: Some((red: 1.0, green: 0.45, blue: 0.9, alpha: 1.0))),
+                (rsi: Some("textures/structures/lighting/light_tube"), state: "glow", shading: Glow, tint: Some((red: 1.0, green: 0.45, blue: 0.9, alpha: 1.0))),
             ]),
         },
     ),
@@ -117,7 +117,7 @@
         components: {
             "PointLight": (color: (0.2, 0.75, 1.0)),
             "Appearance": (layers: [
-                (rsi: Some("textures/structures/lighting/light_tube"), state: "glow", shading: Unshaded, tint: Some((red: 0.5, green: 0.9, blue: 1.0, alpha: 1.0))),
+                (rsi: Some("textures/structures/lighting/light_tube"), state: "glow", shading: Glow, tint: Some((red: 0.5, green: 0.9, blue: 1.0, alpha: 1.0))),
             ]),
         },
     ),
@@ -136,7 +136,7 @@
         components: {
             "PointLight": (color: (1.0, 0.62, 0.22), energy: 1.0),
             "Appearance": (layers: [
-                (rsi: Some("textures/structures/lighting/light_small"), state: "glow", shading: Unshaded, tint: Some((red: 1.0, green: 0.82, blue: 0.45, alpha: 1.0))),
+                (rsi: Some("textures/structures/lighting/light_small"), state: "glow", shading: Glow, tint: Some((red: 1.0, green: 0.82, blue: 0.45, alpha: 1.0))),
             ]),
         },
     ),
@@ -147,7 +147,7 @@
         components: {
             "PointLight": (color: (0.2, 0.75, 1.0), energy: 1.0),
             "Appearance": (layers: [
-                (rsi: Some("textures/structures/lighting/light_small"), state: "glow", shading: Unshaded, tint: Some((red: 0.5, green: 0.9, blue: 1.0, alpha: 1.0))),
+                (rsi: Some("textures/structures/lighting/light_small"), state: "glow", shading: Glow, tint: Some((red: 0.5, green: 0.9, blue: 1.0, alpha: 1.0))),
             ]),
         },
     ),
@@ -158,7 +158,7 @@
         components: {
             "PointLight": (color: (0.18, 1.0, 0.35), energy: 1.0),
             "Appearance": (layers: [
-                (rsi: Some("textures/structures/lighting/light_small"), state: "glow", shading: Unshaded, tint: Some((red: 0.45, green: 1.0, blue: 0.55, alpha: 1.0))),
+                (rsi: Some("textures/structures/lighting/light_small"), state: "glow", shading: Glow, tint: Some((red: 0.45, green: 1.0, blue: 0.55, alpha: 1.0))),
             ]),
         },
     ),
@@ -173,7 +173,7 @@
             "Destructible": (thresholds: [(trigger: TotalDamage(10), behaviors: [Destroy])]),
             "Appearance": (
                 sprite: (rsi: "textures/structures/lighting/glowshroom", state: "base"),
-                shading: Unshaded,
+                shading: Glow,
             ),
         },
     ),
@@ -185,7 +185,7 @@
             // Pinker than the magenta tube: the green channel is what lifts dark dirt floors
             "PointLight": (color: (1.0, 0.58, 0.88), energy: 2.4),
             "Appearance": (layers: [
-                (rsi: Some("textures/structures/lighting/light_tube"), state: "glow", shading: Unshaded, tint: Some((red: 1.0, green: 0.6, blue: 0.9, alpha: 1.0))),
+                (rsi: Some("textures/structures/lighting/light_tube"), state: "glow", shading: Glow, tint: Some((red: 1.0, green: 0.6, blue: 0.9, alpha: 1.0))),
             ]),
         },
     ),
