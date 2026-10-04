@@ -11,7 +11,7 @@
                 sprite: (rsi: "textures/structures/lighting/light_floor", state: "base"),
                 depth: Furniture,
                 layers: [
-                    (state: "glow", shading: Unshaded, tint: Some((red: 1.0, green: 0.92, blue: 0.8, alpha: 1.0))),
+                    (state: "glow", shading: Glow, tint: Some((red: 1.0, green: 0.92, blue: 0.8, alpha: 1.0))),
                 ],
             ),
         },
@@ -23,7 +23,7 @@
         components: {
             "PointLight": (color: (1.0, 0.1, 0.12), energy: 1.8),
             "Appearance": (layers: [
-                (rsi: Some("textures/structures/lighting/light_floor"), state: "glow", shading: Unshaded, tint: Some((red: 1.0, green: 0.3, blue: 0.3, alpha: 1.0))),
+                (rsi: Some("textures/structures/lighting/light_floor"), state: "glow", shading: Glow, tint: Some((red: 1.0, green: 0.3, blue: 0.3, alpha: 1.0))),
             ]),
         },
     ),
@@ -34,7 +34,7 @@
         components: {
             "PointLight": (color: (1.0, 0.15, 0.7), energy: 1.7),
             "Appearance": (layers: [
-                (rsi: Some("textures/structures/lighting/light_floor"), state: "glow", shading: Unshaded, tint: Some((red: 1.0, green: 0.4, blue: 0.85, alpha: 1.0))),
+                (rsi: Some("textures/structures/lighting/light_floor"), state: "glow", shading: Glow, tint: Some((red: 1.0, green: 0.4, blue: 0.85, alpha: 1.0))),
             ]),
         },
     ),
@@ -51,7 +51,7 @@
                 sprite: (rsi: "textures/structures/lighting/lamp_green", state: "lampgreen"),
                 depth: BelowMobs,
                 layers: [
-                    (state: "lampgreen-on", shading: Unshaded),
+                    (state: "lampgreen-on", shading: Glow),
                 ],
             ),
         },
