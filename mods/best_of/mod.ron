@@ -1,0 +1,5 @@
+(
+    id: "best_of",
+    version: "0.1.0",
+    components: ["best_of::Series"],
+)
