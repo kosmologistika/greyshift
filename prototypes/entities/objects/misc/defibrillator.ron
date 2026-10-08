@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_defibrillator_loaded",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "defibrillator"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/defibrillator_loaded", state: "defibunit")),
+        },
+    ),
+]

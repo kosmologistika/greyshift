@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_hand_tele",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "hand tele"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/hand_tele", state: "hand_tele")),
+        },
+    ),
+]

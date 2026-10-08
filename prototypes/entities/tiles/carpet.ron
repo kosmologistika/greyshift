@@ -1,0 +1,50 @@
+[
+    (
+        type: "Entity",
+        id: "tile_carpet",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/carpet", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_carpet_royalblack",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/carpet_royalblack", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_carpet_orange",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/carpet_orange", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_carpet_black",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/carpet_black", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_carpet_green",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/carpet_green", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_carpet_blue",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/carpet_blue", state: "default")),
+        },
+    ),
+]

@@ -1,0 +1,162 @@
+[
+    (
+        type: "Entity",
+        id: "prop_book_manual_wiki_detective",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "The Film Noir: Proper Procedures for Investigations"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/books/book_manual_wiki_detective", state: "bookDetective")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_book_bookknock",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "book"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/books/book_bookknock", state: "bookknock")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_book_manual_wiki_security_space_law",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Space Law"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/books/book_manual_wiki_security_space_law", state: "bookSpaceLaw")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_book_manual_wiki_engineering_guide",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Engineering Textbook"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/books/book_manual_wiki_engineering_guide", state: "bookEngineering2")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_book_manual_wiki_engineering_construction",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Station Repairs and Construction"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/books/book_manual_wiki_engineering_construction", state: "bookEngineering")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_book_manual_wiki_engineering_hacking",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Hacking"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/books/book_manual_wiki_engineering_hacking", state: "bookHacking")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_book_manual_wiki_chemistry",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Chemistry Textbook"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/books/book_manual_wiki_chemistry", state: "chemistrybook")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_book_manual_wiki_grenades",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "DIY Chemical Grenades"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/books/book_manual_wiki_grenades", state: "book2")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_book_manual_wiki_plumbing",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Chemical Factories Without Narcotics"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/books/book_manual_wiki_plumbing", state: "plumbingbook")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_book_manual_wiki_barman_recipes",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Barman Recipes: Mixing Drinks and Changing Lives"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/books/book_manual_wiki_barman_recipes", state: "barbook")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_book_manual_wiki_atmospherics",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Lexica Atmosia"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/books/book_manual_wiki_atmospherics", state: "book5")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_book_random",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "book"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/books/book_random", state: "random_book")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_book_manual_chef_recipes",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Chef Recipes"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/books/book_manual_chef_recipes", state: "cooked_book")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_book_bible",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "bible"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/books/book_bible", state: "bible")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_book_codex_gigas",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Codex Gigas"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/books/book_codex_gigas", state: "demonomicon")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_book_manual_wiki_cytology",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Unethically Grown Organics"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/books/book_manual_wiki_cytology", state: "cytologybook")),
+        },
+    ),
+]

@@ -1,0 +1,22 @@
+[
+    (
+        type: "Entity",
+        id: "prop_wrench",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "wrench"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/tools/wrench", state: "wrench")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_wrench_medical",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "medical wrench"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/tools/wrench_medical", state: "wrench_medical")),
+        },
+    ),
+]

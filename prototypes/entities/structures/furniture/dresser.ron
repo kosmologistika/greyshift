@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_dresser",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "dresser"),
+            "Appearance": (sprite: (rsi: "textures/structures/furniture/dresser", state: "dresser"), depth: Furniture),
+        },
+    ),
+]

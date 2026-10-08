@@ -1,0 +1,542 @@
+[
+    (
+        type: "Entity",
+        id: "prop_toy_cards_deck",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "deck of cards"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/fun/toy_cards_deck", state: "deck_nanotrasen_full")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_toy_gun",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "cap gun"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/fun/toy_gun", state: "revolver")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_toy_figure_assistant",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Assistant action figure"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/fun/toy_figure_assistant", state: "assistant")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_toy_dodgeball",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "dodgeball"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/fun/toy_dodgeball", state: "dodgeball")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_toy_cards_deck_tarot",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "tarot game deck"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/fun/toy_cards_deck_tarot", state: "deck_tarot_full")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_toy_figure_prisoner",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Prisoner action figure"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/fun/toy_figure_prisoner", state: "prisoner")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_toy_figure_dsquad",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Deathsquad Officer action figure"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/fun/toy_figure_dsquad", state: "dsquad")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_toy_figure_qm",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Quartermaster action figure"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/fun/toy_figure_qm", state: "qm")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_toy_figure_cargotech",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Cargo Technician action figure"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/fun/toy_figure_cargotech", state: "cargotech")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_toy_basketball",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "basketball"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/fun/toy_basketball", state: "basketball")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_toy_figure_lawyer",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Lawyer action figure"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/fun/toy_figure_lawyer", state: "lawyer")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_toy_figure_ian",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Ian action figure"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/fun/toy_figure_ian", state: "ian")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_toy_figure_hop",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Head of Personnel action figure"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/fun/toy_figure_hop", state: "hop")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_toy_figure_secofficer",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Security Officer action figure"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/fun/toy_figure_secofficer", state: "secofficer")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_toy_figure_warden",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Warden action figure"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/fun/toy_figure_warden", state: "warden")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_toy_figure_atmos",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Atmospheric Technician action figure"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/fun/toy_figure_atmos", state: "atmos")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_toy_figure_engineer",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Station Engineer action figure"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/fun/toy_figure_engineer", state: "engineer")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_toy_figure_borg",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Cyborg action figure"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/fun/toy_figure_borg", state: "borg")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_toy_figure_detective",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Detective action figure"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/fun/toy_figure_detective", state: "detective")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_toy_figure_janitor",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Janitor action figure"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/fun/toy_figure_janitor", state: "janitor")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_toy_figure_mime",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Mime action figure"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/fun/toy_figure_mime", state: "mime")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_toy_dummy",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "ventriloquist dummy"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/fun/toy_dummy", state: "puppet")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_toy_figure_captain",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Captain action figure"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/fun/toy_figure_captain", state: "captain")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_toy_figure_psychologist",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Psychologist action figure"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/fun/toy_figure_psychologist", state: "psychologist")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_toy_figure_ninja",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Space Ninja action figure"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/fun/toy_figure_ninja", state: "ninja")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_toy_plush_moth",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "moth plushie"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/fun/toy_plush_moth", state: "moffplush")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_toy_figure_ce",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Chief Engineer action figure"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/fun/toy_figure_ce", state: "ce")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_toy_crayon_spraycan_lubecan",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "slippery spraycan"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/fun/toy_crayon_spraycan_lubecan", state: "clowncan2_cap")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_toy_figure_clown",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Clown action figure"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/fun/toy_figure_clown", state: "clown")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_toy_mecha_honk",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "toy H.O.N.K."),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/fun/toy_mecha_honk", state: "honktoy")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_toy_figure_hos",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Head of Security action figure"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/fun/toy_figure_hos", state: "hos")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_toy_figure_chemist",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Chemist action figure"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/fun/toy_figure_chemist", state: "chemist")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_toy_figure_paramedic",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Paramedic action figure"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/fun/toy_figure_paramedic", state: "paramedic")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_toy_plush_hampter_security",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "хамптер офицер"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/fun/toy_plush_hampter_security", state: "hampter_sec")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_toy_figure_md",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Medical Doctor action figure"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/fun/toy_figure_md", state: "md")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_toy_talking_griffin",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "griffin action figure"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/fun/toy_talking_griffin", state: "griffinprize")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_toy_talking_owl",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "owl action figure"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/fun/toy_talking_owl", state: "owlprize")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_toy_plush_slimeplushie",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "slime plushie"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/fun/toy_plush_slimeplushie", state: "obj_item_toy_plush_slimeplushie")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_toy_figure_chef",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Cook action figure"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/fun/toy_figure_chef", state: "chef")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_toy_cattoy",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "toy mouse"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/fun/toy_cattoy", state: "toy_mouse")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_toy_figure_coroner",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Coroner action figure"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/fun/toy_figure_coroner", state: "coroner")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_toy_figure_cmo",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Chief Medical Officer action figure"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/fun/toy_figure_cmo", state: "cmo")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_toy_minimeteor",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Mini-Meteor"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/fun/toy_minimeteor", state: "minimeteor")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_toy_figure_botanist",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Botanist action figure"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/fun/toy_figure_botanist", state: "botanist")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_toy_figure_roboticist",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Roboticist action figure"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/fun/toy_figure_roboticist", state: "roboticist")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_toy_balloon",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "balloon"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/fun/toy_balloon", state: "balloon")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_toy_crayon_white",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "stick of chalk"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/fun/toy_crayon_white", state: "crayonwhite")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_toy_crayon_spraycan",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "spray can"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/fun/toy_crayon_spraycan", state: "spraycan")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_toy_crayon_spraycan_roboticist",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "roboticist spraycan"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/fun/toy_crayon_spraycan_roboticist", state: "robocan")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_toy_figure_curator",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Curator action figure"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/fun/toy_figure_curator", state: "curator")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_toy_figure_rd",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Research Director action figure"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/fun/toy_figure_rd", state: "rd")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_toy_figure_scientist",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Scientist action figure"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/fun/toy_figure_scientist", state: "scientist")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_toy_figure_geneticist",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Geneticist action figure"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/fun/toy_figure_geneticist", state: "geneticist")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_toy_figure_syndie",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Nuclear Operative action figure"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/fun/toy_figure_syndie", state: "syndie")),
+        },
+    ),
+]

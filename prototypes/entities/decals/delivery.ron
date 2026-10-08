@@ -1,0 +1,29 @@
+[
+    (
+        type: "Entity",
+        id: "decal_delivery",
+        parents: ["base_decal_tile"],
+        components: {
+            "DisplayName": (name: "delivery"),
+            "Appearance": (sprite: (rsi: "textures/decals/delivery", state: "delivery")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_delivery_white",
+        parents: ["base_decal_tile"],
+        components: {
+            "DisplayName": (name: "delivery white"),
+            "Appearance": (sprite: (rsi: "textures/decals/delivery_white", state: "delivery_white")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_delivery_red",
+        parents: ["base_decal_tile"],
+        components: {
+            "DisplayName": (name: "delivery red"),
+            "Appearance": (sprite: (rsi: "textures/decals/delivery_red", state: "delivery_red")),
+        },
+    ),
+]

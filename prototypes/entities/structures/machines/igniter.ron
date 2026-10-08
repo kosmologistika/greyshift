@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_igniter_incinerator_atmos",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "igniter"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/igniter_incinerator_atmos", state: "igniter0"), depth: FloorFixture),
+        },
+    ),
+]

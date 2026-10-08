@@ -1,0 +1,20 @@
+[
+    (
+        type: "Entity",
+        id: "structure_rack",
+        parents: ["base_structure_table"],
+        components: {
+            "DisplayName": (name: "rack"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/rack", state: "rack"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_rack_gunrack",
+        parents: ["base_structure_table"],
+        components: {
+            "DisplayName": (name: "gun rack"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/rack_gunrack", state: "gunrack"), depth: Furniture),
+        },
+    ),
+]

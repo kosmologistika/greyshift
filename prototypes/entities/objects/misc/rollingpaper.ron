@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_rollingpaper",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "rolling paper"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/rollingpaper", state: "cig_paper")),
+        },
+    ),
+]

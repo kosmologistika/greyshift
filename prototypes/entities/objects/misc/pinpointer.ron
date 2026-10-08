@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_pinpointer_nuke",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "pinpointer"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/pinpointer_nuke", state: "pinpointer")),
+        },
+    ),
+]

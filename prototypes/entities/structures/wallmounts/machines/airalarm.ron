@@ -1,0 +1,14 @@
+[
+    (
+        type: "Entity",
+        id: "structure_airalarm",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "air alarm"),
+            "WallMount": (),
+            "PlacementLayer": WallMount,
+            "Facing": (South),
+            "Appearance": (sprite: (rsi: "textures/structures/wallmounts/machines/airalarm", state: "alarmp"), depth: WallMounted, layers: [(state: "alarm0", shading: Unshaded)]),
+        },
+    ),
+]

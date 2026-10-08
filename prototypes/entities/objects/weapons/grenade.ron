@@ -1,0 +1,32 @@
+[
+    (
+        type: "Entity",
+        id: "prop_grenade_chem_grenade_smart_metal_foam",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "smart metal foam grenade"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/weapons/grenade_chem_grenade_smart_metal_foam", state: "chemg")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_grenade_chem_grenade_cleaner",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "cleaner grenade"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/weapons/grenade_chem_grenade_cleaner", state: "chemg")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_grenade_chem_grenade",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "chemical grenade"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/weapons/grenade_chem_grenade", state: "chemg")),
+        },
+    ),
+]

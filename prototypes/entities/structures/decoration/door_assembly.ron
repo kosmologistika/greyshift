@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_door_assembly_door_assembly_silver",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "silver airlock assembly"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/door_assembly_door_assembly_silver", state: "construction"), depth: Furniture),
+        },
+    ),
+]

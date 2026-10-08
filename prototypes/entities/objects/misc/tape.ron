@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_tape_random",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "tape"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/tape_random", state: "random_tape")),
+        },
+    ),
+]

@@ -1,0 +1,14 @@
+[
+    (
+        type: "Entity",
+        id: "structure_requests_console",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "requests console"),
+            "WallMount": (),
+            "PlacementLayer": WallMount,
+            "Facing": (South),
+            "Appearance": (sprite: (rsi: "textures/structures/wallmounts/machines/requests_console", state: "req_comp_off"), depth: WallMounted, layers: [(state: "req_comp0", shading: Unshaded)]),
+        },
+    ),
+]

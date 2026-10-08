@@ -1,0 +1,38 @@
+[
+    (
+        type: "Entity",
+        id: "structure_noticeboard_qm",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "Quartermaster's Notice Board"),
+            "WallMount": (),
+            "PlacementLayer": WallMount,
+            "Facing": (South),
+            "Appearance": (sprite: (rsi: "textures/structures/wallmounts/noticeboard_qm", state: "noticeboard"), depth: WallMounted),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_noticeboard",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "notice board"),
+            "WallMount": (),
+            "PlacementLayer": WallMount,
+            "Facing": (South),
+            "Appearance": (sprite: (rsi: "textures/structures/wallmounts/noticeboard", state: "noticeboard"), depth: WallMounted),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_noticeboard_ce",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "Chief Engineer's Notice Board"),
+            "WallMount": (),
+            "PlacementLayer": WallMount,
+            "Facing": (South),
+            "Appearance": (sprite: (rsi: "textures/structures/wallmounts/noticeboard_ce", state: "noticeboard"), depth: WallMounted),
+        },
+    ),
+]

@@ -1,0 +1,14 @@
+[
+    (
+        type: "Entity",
+        id: "structure_firealarm",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "fire alarm"),
+            "WallMount": (),
+            "PlacementLayer": WallMount,
+            "Facing": (South),
+            "Appearance": (sprite: (rsi: "textures/structures/wallmounts/machines/firealarm", state: "fire0"), depth: WallMounted, layers: [(state: "fire_0", shading: Unshaded)]),
+        },
+    ),
+]

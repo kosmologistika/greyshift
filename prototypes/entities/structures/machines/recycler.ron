@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_recycler",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "recycler"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/recycler", state: "grinder-o0"), depth: WallMounted),
+        },
+    ),
+]

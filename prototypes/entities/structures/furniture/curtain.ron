@@ -1,0 +1,38 @@
+[
+    (
+        type: "Entity",
+        id: "structure_curtain",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "curtain"),
+            "Appearance": (sprite: (rsi: "textures/structures/furniture/curtain", state: "bathroom-open"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_curtain_cloth_fancy",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "curtain"),
+            "Appearance": (sprite: (rsi: "textures/structures/furniture/curtain_cloth_fancy", state: "cur_fancy-open"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_curtain_cloth_fancy_mechanical_start_closed",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "curtain"),
+            "Appearance": (sprite: (rsi: "textures/structures/furniture/curtain_cloth_fancy_mechanical_start_closed", state: "cur_fancy-closed"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_curtain_bounty",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "curtain"),
+            "Appearance": (sprite: (rsi: "textures/structures/furniture/curtain_bounty", state: "bounty-open"), depth: Furniture),
+        },
+    ),
+]

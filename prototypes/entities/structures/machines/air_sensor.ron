@@ -1,0 +1,83 @@
+[
+    (
+        type: "Entity",
+        id: "structure_air_sensor_engine_chamber",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "supermatter engine chamber gas sensor"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/air_sensor_engine_chamber", state: "gsensor1"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_air_sensor_incinerator_tank",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "incinerator chamber gas sensor"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/air_sensor_incinerator_tank", state: "gsensor1"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_air_sensor_nitrogen_tank",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "nitrogen tank gas sensor"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/air_sensor_nitrogen_tank", state: "gsensor1"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_air_sensor_oxygen_tank",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "oxygen tank gas sensor"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/air_sensor_oxygen_tank", state: "gsensor1"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_air_sensor_air_tank",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "air mix tank gas sensor"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/air_sensor_air_tank", state: "gsensor1"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_air_sensor_carbon_tank",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "carbon dioxide tank gas sensor"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/air_sensor_carbon_tank", state: "gsensor1"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_air_sensor_plasma_tank",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "plasma tank gas sensor"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/air_sensor_plasma_tank", state: "gsensor1"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_air_sensor_nitrous_tank",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "nitrous oxide tank gas sensor"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/air_sensor_nitrous_tank", state: "gsensor1"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_air_sensor_mix_tank",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "mix tank gas sensor"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/air_sensor_mix_tank", state: "gsensor1"), depth: Furniture),
+        },
+    ),
+]

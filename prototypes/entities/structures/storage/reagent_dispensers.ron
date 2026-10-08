@@ -1,0 +1,83 @@
+[
+    (
+        type: "Entity",
+        id: "structure_reagent_dispensers_fueltank",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "fuel tank"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/reagent_dispensers_fueltank", state: "fuel"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_reagent_dispensers_watertank",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "water tank"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/reagent_dispensers_watertank", state: "water"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_reagent_dispensers_wall_peppertank",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "pepper spray refiller"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/reagent_dispensers_wall_peppertank", state: "pepper"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_reagent_dispensers_servingdish",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "serving dish"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/reagent_dispensers_servingdish", state: "serving"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_reagent_dispensers_plumbed",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "stationary water tank"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/reagent_dispensers_plumbed", state: "water_stationary"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_reagent_dispensers_water_cooler",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "water cooler"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/reagent_dispensers_water_cooler", state: "water_cooler"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_reagent_dispensers_watertank_high",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "high-capacity water tank"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/reagent_dispensers_watertank_high", state: "water_high"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_reagent_dispensers_fueltank_large",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "high capacity fuel tank"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/reagent_dispensers_fueltank_large", state: "fuel_high"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_reagent_dispensers_wall_virusfood",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "virus food dispenser"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/reagent_dispensers_wall_virusfood", state: "virus_food"), depth: Furniture),
+        },
+    ),
+]

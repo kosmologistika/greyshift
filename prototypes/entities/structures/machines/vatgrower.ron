@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_vatgrower",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "growing vat"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/vatgrower", state: "growing_vat"), depth: Furniture),
+        },
+    ),
+]

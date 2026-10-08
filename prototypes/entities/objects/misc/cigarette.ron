@@ -1,0 +1,62 @@
+[
+    (
+        type: "Entity",
+        id: "prop_cigarette_cigar_cohiba",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Cohiba Robusto cigar"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/cigarette_cigar_cohiba", state: "cigar2off")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_cigarette_cigar_premium",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "premium cigar"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/cigarette_cigar_premium", state: "cigaroff")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_cigarette_cigar",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "cigar"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/cigarette_cigar", state: "cigaroff")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_cigarette_cigar_havana",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "premium Havanian cigar"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/cigarette_cigar_havana", state: "cigar3off")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_cigarette_dart",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "fat dart"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/cigarette_dart", state: "bigon")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_cigarette_rollie_cannabis",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "rollie"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/cigarette_rollie_cannabis", state: "spliffoff")),
+        },
+    ),
+]

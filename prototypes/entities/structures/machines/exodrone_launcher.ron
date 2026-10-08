@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_exodrone_launcher",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "exploration drone launcher"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/exodrone_launcher", state: "launcher"), depth: Furniture),
+        },
+    ),
+]

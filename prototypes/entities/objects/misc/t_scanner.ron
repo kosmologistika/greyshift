@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_t_scanner",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "T-ray scanner"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/t_scanner", state: "t-ray0")),
+        },
+    ),
+]

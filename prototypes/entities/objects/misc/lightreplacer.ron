@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_lightreplacer",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "light replacer"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/lightreplacer", state: "lightreplacer")),
+        },
+    ),
+]

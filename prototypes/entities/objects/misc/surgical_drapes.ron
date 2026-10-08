@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_surgical_drapes",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "surgical drapes"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/surgical_drapes", state: "surgical_drapes")),
+        },
+    ),
+]

@@ -1,0 +1,22 @@
+[
+    (
+        type: "Entity",
+        id: "prop_paper_bin",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "paper bin"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/paper_bin", state: "paper_bin0")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_paper_bin_carbon",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "carbon paper bin"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/paper_bin_carbon", state: "paper_bin_carbon0")),
+        },
+    ),
+]

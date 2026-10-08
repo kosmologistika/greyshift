@@ -1,0 +1,110 @@
+[
+    (
+        type: "Entity",
+        id: "structure_portable_atmospherics_pump",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "portable air pump"),
+            "Appearance": (sprite: (rsi: "textures/structures/piping/portable_atmospherics_pump", state: "siphon"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_portable_atmospherics_scrubber",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "portable air scrubber"),
+            "Appearance": (sprite: (rsi: "textures/structures/piping/portable_atmospherics_scrubber", state: "scrubber"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_portable_atmospherics_canister",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "canister"),
+            "Appearance": (sprite: (rsi: "textures/structures/piping/portable_atmospherics_canister", state: "obj_machinery_portable_atmospherics_canister"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_portable_atmospherics_canister_nitrogen",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "Nitrogen canister"),
+            "Appearance": (sprite: (rsi: "textures/structures/piping/portable_atmospherics_canister_nitrogen", state: "obj_machinery_portable_atmospherics_canister_nitrogen"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_portable_atmospherics_canister_air",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "Air canister"),
+            "Appearance": (sprite: (rsi: "textures/structures/piping/portable_atmospherics_canister_air", state: "obj_machinery_portable_atmospherics_canister_air"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_portable_atmospherics_canister_nitrous_oxide",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "Nitrous Oxide canister"),
+            "Appearance": (sprite: (rsi: "textures/structures/piping/portable_atmospherics_canister_nitrous_oxide", state: "obj_machinery_portable_atmospherics_canister_nitrous_oxide"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_portable_atmospherics_canister_carbon_dioxide",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "Carbon dioxide canister"),
+            "Appearance": (sprite: (rsi: "textures/structures/piping/portable_atmospherics_canister_carbon_dioxide", state: "obj_machinery_portable_atmospherics_canister_carbon_dioxide"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_portable_atmospherics_canister_oxygen",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "Oxygen canister"),
+            "Appearance": (sprite: (rsi: "textures/structures/piping/portable_atmospherics_canister_oxygen", state: "obj_machinery_portable_atmospherics_canister_oxygen"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_portable_atmospherics_canister_plasma",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "Plasma canister"),
+            "Appearance": (sprite: (rsi: "textures/structures/piping/portable_atmospherics_canister_plasma", state: "obj_machinery_portable_atmospherics_canister_plasma"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_portable_atmospherics_canister_water_vapor",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "Water Vapor canister"),
+            "Appearance": (sprite: (rsi: "textures/structures/piping/portable_atmospherics_canister_water_vapor", state: "obj_machinery_portable_atmospherics_canister_water_vapor"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_portable_atmospherics_pipe_scrubber",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "pipe scrubber"),
+            "Appearance": (sprite: (rsi: "textures/structures/piping/portable_atmospherics_pipe_scrubber", state: "pipe_scrubber"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_portable_atmospherics_canister_anesthetic_mix",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "Anesthetic mix"),
+            "Appearance": (sprite: (rsi: "textures/structures/piping/portable_atmospherics_canister_anesthetic_mix", state: "obj_machinery_portable_atmospherics_canister_anesthetic_mix"), depth: Furniture),
+        },
+    ),
+]

@@ -1,0 +1,20 @@
+[
+    (
+        type: "Entity",
+        id: "structure_flasher",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "mounted flash"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/flasher", state: "mflash1"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_flasher_portable",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "portable flasher"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/flasher_portable", state: "pflash1-p"), depth: Furniture),
+        },
+    ),
+]

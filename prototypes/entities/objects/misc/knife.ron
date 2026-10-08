@@ -1,0 +1,32 @@
+[
+    (
+        type: "Entity",
+        id: "prop_knife_plastic",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "plastic knife"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/knife_plastic", state: "plastic_knife")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_knife_kitchen",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "kitchen knife"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/knife_kitchen", state: "knife")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_knife",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "knife"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/knife", state: "knife")),
+        },
+    ),
+]

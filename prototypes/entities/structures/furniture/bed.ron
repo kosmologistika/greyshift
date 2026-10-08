@@ -1,0 +1,56 @@
+[
+    (
+        type: "Entity",
+        id: "structure_bed_maint",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "dirty mattress"),
+            "Appearance": (sprite: (rsi: "textures/structures/furniture/bed_maint", state: "dirty_mattress"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_bed",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "bed"),
+            "Appearance": (sprite: (rsi: "textures/structures/furniture/bed", state: "bed"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_bed_medical_anchored",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "medical bed"),
+            "Appearance": (sprite: (rsi: "textures/structures/furniture/bed_medical_anchored", state: "med_down"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_bed_dogbed",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "dog bed"),
+            "Appearance": (sprite: (rsi: "textures/structures/furniture/bed_dogbed", state: "dogbed"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_bed_dogbed_ian",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "Ian's bed"),
+            "Appearance": (sprite: (rsi: "textures/structures/furniture/bed_dogbed_ian", state: "dogbed"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_bed_dogbed_runtime",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "Runtime's bed"),
+            "Appearance": (sprite: (rsi: "textures/structures/furniture/bed_dogbed_runtime", state: "dogbed"), depth: Furniture),
+        },
+    ),
+]

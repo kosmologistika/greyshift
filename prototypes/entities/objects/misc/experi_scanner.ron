@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_experi_scanner",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Experi-Scanner"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/experi_scanner", state: "experiscanner")),
+        },
+    ),
+]

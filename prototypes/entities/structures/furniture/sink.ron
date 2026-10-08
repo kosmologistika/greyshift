@@ -1,0 +1,20 @@
+[
+    (
+        type: "Entity",
+        id: "structure_sink",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "sink"),
+            "Appearance": (sprite: (rsi: "textures/structures/furniture/sink", state: "sink"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_sink_kitchen",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "kitchen sink"),
+            "Appearance": (sprite: (rsi: "textures/structures/furniture/sink_kitchen", state: "sink_alt"), depth: Furniture),
+        },
+    ),
+]

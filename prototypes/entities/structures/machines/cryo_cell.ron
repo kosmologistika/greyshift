@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_cryo_cell",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "cryo cell"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/cryo_cell", state: "pod-off"), depth: Furniture),
+        },
+    ),
+]

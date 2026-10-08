@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_mop",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "mop"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/mop", state: "mop")),
+        },
+    ),
+]

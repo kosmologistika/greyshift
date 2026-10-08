@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_research_anomaly_refinery",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "anomaly refinery"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/research_anomaly_refinery", state: "explosive_compressor"), depth: Furniture),
+        },
+    ),
+]

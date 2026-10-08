@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_phone",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "red phone"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/phone", state: "red_phone")),
+        },
+    ),
+]

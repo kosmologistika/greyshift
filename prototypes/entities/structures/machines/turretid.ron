@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_turretid",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "turret control panel"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/turretid", state: "control"), depth: Furniture),
+        },
+    ),
+]

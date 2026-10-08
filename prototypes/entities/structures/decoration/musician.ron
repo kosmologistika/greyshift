@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_musician_piano",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "space piano"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/musician_piano", state: "piano"), depth: Furniture),
+        },
+    ),
+]

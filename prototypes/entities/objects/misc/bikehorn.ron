@@ -1,0 +1,22 @@
+[
+    (
+        type: "Entity",
+        id: "prop_bikehorn_rubberducky",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "rubber ducky"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/bikehorn_rubberducky", state: "rubberducky")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_bikehorn",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "bike horn"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/bikehorn", state: "bike_horn")),
+        },
+    ),
+]

@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_detectiveboard",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "detective notice board"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/detectiveboard", state: "noticeboard"), depth: Furniture),
+        },
+    ),
+]

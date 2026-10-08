@@ -1,0 +1,690 @@
+[
+    (
+        type: "Entity",
+        id: "tile_iron_dark_textured_large",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_dark_textured_large", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_cafeteria_north",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_cafeteria_north", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_white_corner",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_white_corner", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_white_corner_north",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_white_corner_north", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_white_corner_west",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_white_corner_west", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_cafeteria_west",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_cafeteria_west", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_white_corner_east",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_white_corner_east", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_cafeteria",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_cafeteria", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_solarpanel",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_solarpanel", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_grimy",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_grimy", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_large",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_large", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_dark",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_dark", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_freezer",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_freezer", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_textured",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_textured", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_showroomfloor",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_showroomfloor", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_kitchen",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_kitchen", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_dark_side",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_dark_side", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_dark_side_north",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_dark_side_north", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_dark_textured",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_dark_textured", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_stairs_right_east",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_stairs_right_east", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_stairs_left_east",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_stairs_left_east", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_dark_small",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_dark_small", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_checker",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_checker", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_stairs_north",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_stairs_north", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_dark_corner_east",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_dark_corner_east", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_dark_side_east",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_dark_side_east", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_dark_corner",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_dark_corner", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_dark_smooth_edge_east",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_dark_smooth_edge_east", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_stairs_left",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_stairs_left", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_dark_textured_half",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_dark_textured_half", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_dark_smooth_edge_north",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_dark_smooth_edge_north", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_stairs_medium",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_stairs_medium", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_dark_smooth_large",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_dark_smooth_large", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_edge_east",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_edge_east", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_stairs_right",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_stairs_right", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_edge_north",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_edge_north", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_stairs_right_north",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_stairs_right_north", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_dark_smooth_edge_west",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_dark_smooth_edge_west", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_edge_west",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_edge_west", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_stairs_left_north",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_stairs_left_north", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_stairs_west",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_stairs_west", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_stairs_left_west",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_stairs_left_west", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_stairs_medium_east",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_stairs_medium_east", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_stairs_right_west",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_stairs_right_west", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_dark_smooth_half_north",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_dark_smooth_half_north", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_dark_smooth_corner",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_dark_smooth_corner", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_dark_smooth_corner_east",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_dark_smooth_corner_east", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_dark_smooth_corner_west",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_dark_smooth_corner_west", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_dark_smooth_half",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_dark_smooth_half", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_corner_east",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_corner_east", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_half_west",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_half_west", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_dark_smooth_edge",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_dark_smooth_edge", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_textured_large",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_textured_large", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_half",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_half", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_stairs",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_stairs", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_diagonal",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_diagonal", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_dark_smooth_corner_north",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_dark_smooth_corner_north", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_dark_side_southwest",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_dark_side_southwest", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_dark_side_west",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_dark_side_west", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_dark_corner_west",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_dark_corner_west", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_corner_north",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_corner_north", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_edge",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_edge", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_dark_corner_north",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_dark_corner_north", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_recharge_floor",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_recharge_floor", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_dark_textured_half_north",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_dark_textured_half_north", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_dark_textured_corner_west",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_dark_textured_corner_west", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_dark_textured_edge_east",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_dark_textured_edge_east", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_dark_textured_corner",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_dark_textured_corner", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_dark_textured_edge_north",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_dark_textured_edge_north", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_dark_textured_edge",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_dark_textured_edge", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_dark_textured_edge_west",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_dark_textured_edge_west", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_smooth",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_smooth", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_corner",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_corner", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_corner_west",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_corner_west", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_chapel_west",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_chapel_west", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_chapel_north",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_chapel_north", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_chapel",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_chapel", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_chapel_east",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_chapel_east", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_herringbone",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_herringbone", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_dark_telecomms",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_dark_telecomms", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_dark_textured_corner_east",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_dark_textured_corner_east", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_kitchen_small",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_kitchen_small", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_dark_textured_corner_north",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_dark_textured_corner_north", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_stairs_east",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_stairs_east", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_smooth_large",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_smooth_large", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_iron_goonplaque",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/iron_goonplaque", state: "default")),
+        },
+    ),
+]

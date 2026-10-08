@@ -1,0 +1,47 @@
+[
+    (
+        type: "Entity",
+        id: "structure_filingcabinet_chestdrawer",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "chest drawer"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/filingcabinet_chestdrawer", state: "chestdrawer"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_filingcabinet",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "filing cabinet"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/filingcabinet", state: "filingcabinet"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_filingcabinet_white",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "filing cabinet"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/filingcabinet_white", state: "tallcabinet"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_filingcabinet_employment",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "filing cabinet"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/filingcabinet_employment", state: "employmentcabinet"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_filingcabinet_security",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "filing cabinet"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/filingcabinet_security", state: "filingcabinet"), depth: Furniture),
+        },
+    ),
+]

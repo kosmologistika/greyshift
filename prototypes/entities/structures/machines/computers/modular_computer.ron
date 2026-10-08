@@ -1,0 +1,110 @@
+[
+    (
+        type: "Entity",
+        id: "structure_modular_computer_preset_id",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "identification console"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/modular_computer_preset_id", state: "console"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_modular_computer_preset_cargochat_cargo",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "departmental interfacing console"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/modular_computer_preset_cargochat_cargo", state: "console"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_modular_computer_preset_command",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "command console"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/modular_computer_preset_command", state: "console"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_modular_computer_preset_engineering",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "engineering console"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/modular_computer_preset_engineering", state: "console"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_modular_computer_preset_cargochat_engineering",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "cargo interfacing console"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/modular_computer_preset_cargochat_engineering", state: "console"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_modular_computer_preset_civilian",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "civilian console"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/modular_computer_preset_civilian", state: "console"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_modular_computer_preset_cargochat_security",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "cargo interfacing console"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/modular_computer_preset_cargochat_security", state: "console"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_modular_computer_preset_cargochat_medical",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "cargo interfacing console"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/modular_computer_preset_cargochat_medical", state: "console"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_modular_computer_preset_cargochat_service",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "cargo interfacing console"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/modular_computer_preset_cargochat_service", state: "console"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_modular_computer_preset_research",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "research director's console"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/modular_computer_preset_research", state: "console"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_modular_computer_preset_curator",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "curator console"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/modular_computer_preset_curator", state: "console"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_modular_computer_preset_cargochat_science",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "cargo interfacing console"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/modular_computer_preset_cargochat_science", state: "console"), depth: Furniture),
+        },
+    ),
+]

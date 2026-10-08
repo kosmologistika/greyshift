@@ -1,0 +1,29 @@
+[
+    (
+        type: "Entity",
+        id: "decal_bot_right_white",
+        parents: ["base_decal_tile"],
+        components: {
+            "DisplayName": (name: "bot right white"),
+            "Appearance": (sprite: (rsi: "textures/decals/bot_right_white", state: "bot_right_white")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_bot_white",
+        parents: ["base_decal_tile"],
+        components: {
+            "DisplayName": (name: "bot white"),
+            "Appearance": (sprite: (rsi: "textures/decals/bot_white", state: "bot_white")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_bot_left_white",
+        parents: ["base_decal_tile"],
+        components: {
+            "DisplayName": (name: "bot left white"),
+            "Appearance": (sprite: (rsi: "textures/decals/bot_left_white", state: "bot_left_white")),
+        },
+    ),
+]

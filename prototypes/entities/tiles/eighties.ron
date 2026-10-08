@@ -1,0 +1,18 @@
+[
+    (
+        type: "Entity",
+        id: "tile_eighties_red",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/eighties_red", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_eighties",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/eighties", state: "default")),
+        },
+    ),
+]

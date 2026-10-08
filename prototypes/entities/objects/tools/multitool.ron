@@ -1,0 +1,22 @@
+[
+    (
+        type: "Entity",
+        id: "prop_multitool",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "multitool"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/tools/multitool", state: "multitool")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_multitool_circuit",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "circuit multitool"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/tools/multitool_circuit", state: "multitool_circuit")),
+        },
+    ),
+]

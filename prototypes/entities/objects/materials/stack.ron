@@ -1,0 +1,322 @@
+[
+    (
+        type: "Entity",
+        id: "prop_stack_rods",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "iron rod"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/materials/stack_rods", state: "rods")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_stack_cable_coil",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "cable coil"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/materials/stack_cable_coil", state: "coil")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_stack_sheet_glass",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "glass"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/materials/stack_sheet_glass", state: "sheet-glass")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_stack_sheet_iron_fifty",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "iron"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/materials/stack_sheet_iron_fifty", state: "sheet-metal")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_stack_spacecash_c200",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "space cash"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/materials/stack_spacecash_c200", state: "spacecash200")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_stack_package_wrap",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "package wrapper"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/materials/stack_package_wrap", state: "deliveryPaper")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_stack_spacecash_c50",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "space cash"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/materials/stack_spacecash_c50", state: "spacecash50")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_stack_sheet_mineral_diamond",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "diamond"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/materials/stack_sheet_mineral_diamond", state: "sheet-diamond")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_stack_spacecash_c1000",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "space cash"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/materials/stack_spacecash_c1000", state: "spacecash1000")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_stack_spacecash_c500",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "space cash"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/materials/stack_spacecash_c500", state: "spacecash500")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_stack_sheet_iron_twenty",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "iron"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/materials/stack_sheet_iron_twenty", state: "sheet-metal")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_stack_cable_coil_five",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "cable coil"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/materials/stack_cable_coil_five", state: "coil")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_stack_sheet_glass_fifty",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "glass"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/materials/stack_sheet_glass_fifty", state: "sheet-glass")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_stack_sheet_mineral_plasma_five",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "solid plasma"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/materials/stack_sheet_mineral_plasma_five", state: "sheet-plasma")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_stack_sheet_rglass",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "reinforced glass"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/materials/stack_sheet_rglass", state: "sheet-rglass")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_stack_sheet_plasteel_twenty",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "plasteel"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/materials/stack_sheet_plasteel_twenty", state: "sheet-plasteel")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_stack_sheet_mineral_plasma",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "solid plasma"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/materials/stack_sheet_mineral_plasma", state: "sheet-plasma")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_stack_cable_coil_thirty",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "cable coil"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/materials/stack_cable_coil_thirty", state: "coil")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_stack_sheet_plasteel_fifty",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "plasteel"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/materials/stack_sheet_plasteel_fifty", state: "sheet-plasteel")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_stack_medical_wrap_sticky_tape_surgical",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "surgical tape"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/materials/stack_medical_wrap_sticky_tape_surgical", state: "obj_item_stack_medical_wrap_sticky_tape")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_stack_medical_bone_gel",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "bone gel"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/materials/stack_medical_bone_gel", state: "bone-gel")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_stack_sheet_plasteel",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "plasteel"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/materials/stack_sheet_plasteel", state: "sheet-plasteel")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_stack_medical_wrap_gauze",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "medical gauze"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/materials/stack_medical_wrap_gauze", state: "gauze")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_stack_medical_mesh",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "regenerative mesh"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/materials/stack_medical_mesh", state: "regen_mesh")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_stack_medical_suture",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "suture"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/materials/stack_medical_suture", state: "suture")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_stack_rods_two",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "iron rod"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/materials/stack_rods_two", state: "rods")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_stack_sheet_iron_ten",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "iron"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/materials/stack_sheet_iron_ten", state: "sheet-metal")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_stack_spacecash_c10",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "space cash"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/materials/stack_spacecash_c10", state: "spacecash10")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_stack_sheet_bone",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "bones"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/materials/stack_sheet_bone", state: "bone")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_stack_sheet_cloth",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "cloth"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/materials/stack_sheet_cloth", state: "sheet-cloth")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_stack_tile_wood",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "wood floor tile"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/materials/stack_tile_wood", state: "tile-wood")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_stack_sheet_cardboard",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "cardboard"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/materials/stack_sheet_cardboard", state: "sheet-card")),
+        },
+    ),
+]

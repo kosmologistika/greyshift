@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_detective_scanner",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "forensic scanner"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/detective_scanner", state: "forensicnew")),
+        },
+    ),
+]

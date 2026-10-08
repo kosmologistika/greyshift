@@ -1,0 +1,14 @@
+[
+    (
+        type: "Entity",
+        id: "structure_light_switch",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "light switch"),
+            "WallMount": (),
+            "PlacementLayer": WallMount,
+            "Facing": (South),
+            "Appearance": (sprite: (rsi: "textures/structures/wallmounts/switches/light_switch", state: "light-on"), depth: WallMounted, layers: [(state: "light-emissive-on", shading: Unshaded)]),
+        },
+    ),
+]

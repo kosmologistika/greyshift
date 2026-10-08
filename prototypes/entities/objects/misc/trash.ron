@@ -145,4 +145,74 @@
             "Appearance": (sprite: (rsi: "textures/objects/misc/junk", state: "shard_small")),
         },
     ),
+    (
+        type: "Entity",
+        id: "prop_trash_semki",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "semki pack"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/trash_semki", state: "semki_pack")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_trash_candle",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "melted candle"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/trash_candle", state: "candle4")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_trash_raisins",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "4no raisins"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/trash_raisins", state: "4no_raisins")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_trash_tray",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "tray"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/trash_tray", state: "tray")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_trash_pistachios",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "pistachios pack"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/trash_pistachios", state: "pistachios_pack")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_trash_sosjerky",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Scaredy's Private Reserve Beef Jerky"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/trash_sosjerky", state: "sosjerky")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_trash_can",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "crushed can"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/trash_can", state: "cola")),
+        },
+    ),
 ]

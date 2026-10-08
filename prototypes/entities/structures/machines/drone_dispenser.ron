@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_drone_dispenser",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "drone shell dispenser"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/drone_dispenser", state: "on"), depth: Furniture),
+        },
+    ),
+]

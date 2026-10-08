@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_cell_charger",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "cell charger"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/cell_charger", state: "ccharger"), depth: BelowMobs),
+        },
+    ),
+]

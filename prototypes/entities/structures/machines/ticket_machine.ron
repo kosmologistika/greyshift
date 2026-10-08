@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_ticket_machine",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "ticket machine"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/ticket_machine", state: "ticketmachine"), depth: Furniture),
+        },
+    ),
+]

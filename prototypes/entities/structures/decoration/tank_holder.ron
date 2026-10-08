@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_tank_holder_extinguisher",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "tank holder"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/tank_holder_extinguisher", state: "holder_extinguisher"), depth: Furniture),
+        },
+    ),
+]

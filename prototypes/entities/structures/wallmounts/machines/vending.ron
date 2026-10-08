@@ -1,0 +1,14 @@
+[
+    (
+        type: "Entity",
+        id: "structure_vending_wallmed",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "Emergency NanoMed"),
+            "WallMount": (),
+            "PlacementLayer": WallMount,
+            "Facing": (South),
+            "Appearance": (sprite: (rsi: "textures/structures/wallmounts/machines/vending_wallmed", state: "wallmed"), depth: WallMounted),
+        },
+    ),
+]

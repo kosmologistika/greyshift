@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_recharge_station",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "recharging station"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/recharge_station", state: "borgcharger0"), depth: Furniture),
+        },
+    ),
+]

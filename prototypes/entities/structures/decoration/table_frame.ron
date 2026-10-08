@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_table_frame",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "table frame"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/table_frame", state: "table_frame"), depth: Furniture),
+        },
+    ),
+]

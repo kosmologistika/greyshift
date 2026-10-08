@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_ecto_sniffer",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "ectoscopic sniffer"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/ecto_sniffer", state: "ecto_sniffer"), depth: BelowMobs),
+        },
+    ),
+]

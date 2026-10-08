@@ -1,0 +1,62 @@
+[
+    (
+        type: "Entity",
+        id: "prop_radio_off",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "station bounced radio"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/devices/radio_off", state: "walkietalkie")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_radio",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "station bounced radio"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/devices/radio", state: "walkietalkie")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_radio_headset_headset_eng",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "engineering radio headset"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/devices/radio_headset_headset_eng", state: "eng_headset")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_radio_headset_headset_med",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "medical radio headset"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/devices/radio_headset_headset_med", state: "med_headset")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_radio_headset_headset_srv",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "service radio headset"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/devices/radio_headset_headset_srv", state: "srv_headset")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_radio_headset_headset_sci",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "science radio headset"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/devices/radio_headset_headset_sci", state: "sci_headset")),
+        },
+    ),
+]

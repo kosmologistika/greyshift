@@ -1,0 +1,29 @@
+[
+    (
+        type: "Entity",
+        id: "decal_arrows",
+        parents: ["base_decal_tile"],
+        components: {
+            "DisplayName": (name: "arrows"),
+            "Appearance": (sprite: (rsi: "textures/decals/arrows", state: "arrows")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_arrows_white",
+        parents: ["base_decal_tile"],
+        components: {
+            "DisplayName": (name: "arrows white"),
+            "Appearance": (sprite: (rsi: "textures/decals/arrows_white", state: "arrows_white")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_arrows_red",
+        parents: ["base_decal_tile"],
+        components: {
+            "DisplayName": (name: "arrows red"),
+            "Appearance": (sprite: (rsi: "textures/decals/arrows_red", state: "arrows_red")),
+        },
+    ),
+]

@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_disposaloutlet",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "disposal outlet"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/disposaloutlet", state: "outlet"), depth: Furniture),
+        },
+    ),
+]

@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_bodycontainer_morgue",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "morgue"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/bodycontainer_morgue", state: "morgue1"), depth: Furniture),
+        },
+    ),
+]

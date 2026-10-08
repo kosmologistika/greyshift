@@ -1,0 +1,32 @@
+[
+    (
+        type: "Entity",
+        id: "prop_mod_module_plasma_stabilizer",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "MOD plasma stabilizer module"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/mod_module_plasma_stabilizer", state: "plasma_stabilizer")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_mod_module_thermal_regulator",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "MOD thermal regulator module"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/mod_module_thermal_regulator", state: "regulator")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_mod_module_signlang_radio",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "MOD glove translator module"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/mod_module_signlang_radio", state: "signlang_radio")),
+        },
+    ),
+]

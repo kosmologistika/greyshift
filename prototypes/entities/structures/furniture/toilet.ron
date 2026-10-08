@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_toilet",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "toilet"),
+            "Appearance": (sprite: (rsi: "textures/structures/furniture/toilet", state: "toilet00"), depth: Furniture),
+        },
+    ),
+]

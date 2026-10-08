@@ -1,0 +1,62 @@
+[
+    (
+        type: "Entity",
+        id: "prop_vending_refill_boozeomat",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "resupply canister"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/vending_refill_boozeomat", state: "refill_booze")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_vending_refill_coffee",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "resupply canister"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/vending_refill_coffee", state: "refill_joe")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_vending_refill_cigarette",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "resupply canister"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/vending_refill_cigarette", state: "refill_smoke")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_vending_refill_snack",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "resupply canister"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/vending_refill_snack", state: "refill_snack")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_vending_refill_cola",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "resupply canister"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/vending_refill_cola", state: "refill_cola")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_vending_refill_security",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "resupply canister"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/vending_refill_security", state: "refill_sec")),
+        },
+    ),
+]

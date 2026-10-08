@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_hand_labeler",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "hand labeler"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/hand_labeler", state: "labeler0")),
+        },
+    ),
+]

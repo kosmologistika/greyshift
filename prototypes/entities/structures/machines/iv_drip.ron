@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_iv_drip",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "IV drip"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/iv_drip", state: "iv_drip"), depth: Furniture),
+        },
+    ),
+]

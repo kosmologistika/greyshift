@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_bombcore_training",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "dummy payload"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/bombcore_training", state: "bombcore")),
+        },
+    ),
+]

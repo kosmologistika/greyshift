@@ -1,0 +1,29 @@
+[
+    (
+        type: "Entity",
+        id: "structure_mass_driver_trash",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "mass driver"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/mass_driver_trash", state: "mass_driver"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_mass_driver_chapelgun",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "holy driver"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/mass_driver_chapelgun", state: "mass_driver"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_mass_driver_ordnance",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "mass driver"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/mass_driver_ordnance", state: "mass_driver"), depth: Furniture),
+        },
+    ),
+]

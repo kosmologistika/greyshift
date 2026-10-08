@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_dest_tagger",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "destination tagger"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/dest_tagger", state: "cargo_tagger")),
+        },
+    ),
+]

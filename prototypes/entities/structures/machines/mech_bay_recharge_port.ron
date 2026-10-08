@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_mech_bay_recharge_port",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "mech bay power port"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/mech_bay_recharge_port", state: "recharge_port"), depth: Furniture),
+        },
+    ),
+]

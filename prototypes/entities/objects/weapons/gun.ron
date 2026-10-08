@@ -1,0 +1,72 @@
+[
+    (
+        type: "Entity",
+        id: "prop_gun_ballistic_automatic_pistol_deagle",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Desert Eagle"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/weapons/gun_ballistic_automatic_pistol_deagle", state: "deagle")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_gun_ballistic_revolver_russian",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Russian revolver"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/weapons/gun_ballistic_revolver_russian", state: "russianrevolver")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_gun_ballistic_shotgun_toy_crossbow",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "foam force crossbow"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/weapons/gun_ballistic_shotgun_toy_crossbow", state: "foamcrossbow")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_gun_grenadelauncher",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "pneumatic grenade launcher"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/weapons/gun_grenadelauncher", state: "riotgun")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_gun_energy_laser_carbine_practice",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "practice laser carbine"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/weapons/gun_energy_laser_carbine_practice", state: "laser_carbine")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_gun_energy_laser_practice",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "practice laser gun"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/weapons/gun_energy_laser_practice", state: "laser")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_gun_syringe",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "medical syringe gun"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/weapons/gun_syringe", state: "medicalsyringegun")),
+        },
+    ),
+]

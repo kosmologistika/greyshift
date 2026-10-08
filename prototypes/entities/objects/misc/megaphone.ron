@@ -1,0 +1,42 @@
+[
+    (
+        type: "Entity",
+        id: "prop_megaphone_cargo",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "supply megaphone"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/megaphone_cargo", state: "megaphone-cargo")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_megaphone",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "megaphone"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/megaphone", state: "megaphone")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_megaphone_sec",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "security megaphone"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/megaphone_sec", state: "megaphone-sec")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_megaphone_command",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "command megaphone"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/megaphone_command", state: "megaphone-command")),
+        },
+    ),
+]

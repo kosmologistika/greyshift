@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_ore_silo",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "ore silo"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/ore_silo", state: "silo"), depth: Furniture),
+        },
+    ),
+]

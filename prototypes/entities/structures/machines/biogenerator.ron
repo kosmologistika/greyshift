@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_biogenerator",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "biogenerator"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/biogenerator", state: "biogenerator"), depth: Furniture),
+        },
+    ),
+]

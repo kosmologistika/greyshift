@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_cultivator_rake",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "rake"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/cultivator_rake", state: "rake")),
+        },
+    ),
+]

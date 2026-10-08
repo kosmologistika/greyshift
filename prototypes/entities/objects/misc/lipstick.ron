@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_lipstick_random",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "lipstick"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/lipstick_random", state: "random_lipstick")),
+        },
+    ),
+]

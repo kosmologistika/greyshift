@@ -1,0 +1,92 @@
+[
+    (
+        type: "Entity",
+        id: "prop_restraints_handcuffs_cable_zipties",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "zipties"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/restraints_handcuffs_cable_zipties", state: "cuff")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_restraints_handcuffs_cable_white",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "cable restraints"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/restraints_handcuffs_cable_white", state: "cuff")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_restraints_handcuffs",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "handcuffs"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/restraints_handcuffs", state: "handcuff")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_restraints_legcuffs_beartrap",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "bear trap"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/restraints_legcuffs_beartrap", state: "beartrap")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_restraints_handcuffs_cable_pink",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "cable restraints"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/restraints_handcuffs_cable_pink", state: "cuff")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_restraints_handcuffs_cable_blue",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "cable restraints"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/restraints_handcuffs_cable_blue", state: "cuff")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_restraints_handcuffs_cable_cyan",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "cable restraints"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/restraints_handcuffs_cable_cyan", state: "cuff")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_restraints_legcuffs_beartrap_prearmed",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "bear trap"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/restraints_legcuffs_beartrap_prearmed", state: "beartrap")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_restraints_handcuffs_cable_green",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "cable restraints"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/restraints_handcuffs_cable_green", state: "cuff")),
+        },
+    ),
+]

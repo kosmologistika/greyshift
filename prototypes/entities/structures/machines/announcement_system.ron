@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_announcement_system",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "Автоматическая система оповещений"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/announcement_system", state: "AAS_On"), depth: Furniture),
+        },
+    ),
+]

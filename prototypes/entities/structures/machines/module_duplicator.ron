@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_module_duplicator",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "module duplicator"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/module_duplicator", state: "module-fab-idle"), depth: Furniture),
+        },
+    ),
+]

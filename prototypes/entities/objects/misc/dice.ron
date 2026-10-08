@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_dice_d20",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "d20"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/dice_d20", state: "d20")),
+        },
+    ),
+]

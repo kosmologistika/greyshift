@@ -1,0 +1,10 @@
+[
+    (
+        type: "Entity",
+        id: "tile_lattice",
+        parents: ["tile_plating"],
+        components: {
+            "Tile": (sprite: (rsi: "textures/tiles/lattice", state: "default")),
+        },
+    ),
+]

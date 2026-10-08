@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_deepfryer",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "deep fryer"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/deepfryer", state: "fryer_off"), depth: Furniture),
+        },
+    ),
+]

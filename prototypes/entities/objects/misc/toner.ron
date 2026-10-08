@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_toner",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "toner cartridge"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/toner", state: "tonercartridge")),
+        },
+    ),
+]

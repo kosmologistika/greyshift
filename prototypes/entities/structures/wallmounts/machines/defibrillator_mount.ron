@@ -1,0 +1,14 @@
+[
+    (
+        type: "Entity",
+        id: "structure_defibrillator_mount",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "defibrillator mount"),
+            "WallMount": (),
+            "PlacementLayer": WallMount,
+            "Facing": (South),
+            "Appearance": (sprite: (rsi: "textures/structures/wallmounts/machines/defibrillator_mount", state: "defibrillator_mount"), depth: WallMounted),
+        },
+    ),
+]

@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_reagentgrinder",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "all-in-one grinder"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/reagentgrinder", state: "juicer"), depth: BelowMobs),
+        },
+    ),
+]

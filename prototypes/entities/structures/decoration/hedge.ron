@@ -1,0 +1,14 @@
+[
+    (
+        type: "Entity",
+        id: "structure_hedge_opaque",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "hedge"),
+            "Occluder": (),
+            "AreaBoundary": (),
+            "IconSmooth": (key: "hedge_opaque", state_prefix: "state_"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/hedge_opaque", state: "default"), depth: Furniture),
+        },
+    ),
+]

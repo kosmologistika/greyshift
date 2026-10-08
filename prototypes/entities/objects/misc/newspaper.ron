@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_newspaper",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "newspaper"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/newspaper", state: "newspaper")),
+        },
+    ),
+]

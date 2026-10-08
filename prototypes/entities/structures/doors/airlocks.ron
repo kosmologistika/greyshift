@@ -32,4 +32,432 @@
             ),
         },
     ),
+    (
+        type: "Entity",
+        id: "structure_airlock_external_glass",
+        parents: ["structure_airlock"],
+        components: {
+            "DisplayName": (name: "external glass airlock"),
+            "Door": (glass: true),
+            "Appearance": (sprite: (rsi: "textures/structures/doors/airlock_external_glass", state: "closed")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_airlock_external",
+        parents: ["structure_airlock"],
+        components: {
+            "DisplayName": (name: "external airlock"),
+            "Appearance": (sprite: (rsi: "textures/structures/doors/airlock_external", state: "closed")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_airlock_maintenance",
+        parents: ["structure_airlock"],
+        components: {
+            "DisplayName": (name: "maintenance access"),
+            "Appearance": (sprite: (rsi: "textures/structures/doors/airlock_maintenance", state: "closed")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_airlock_public_glass",
+        parents: ["structure_airlock"],
+        components: {
+            "DisplayName": (name: "public glass airlock"),
+            "Door": (glass: true),
+            "Appearance": (sprite: (rsi: "textures/structures/doors/airlock_public_glass", state: "closed")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_airlock_security_glass",
+        parents: ["structure_airlock"],
+        components: {
+            "DisplayName": (name: "security glass airlock"),
+            "Door": (glass: true),
+            "Appearance": (sprite: (rsi: "textures/structures/doors/airlock_security_glass", state: "closed")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_airlock_engineering",
+        parents: ["structure_airlock"],
+        components: {
+            "DisplayName": (name: "engineering airlock"),
+            "Appearance": (sprite: (rsi: "textures/structures/doors/airlock_engineering", state: "closed")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_airlock_public",
+        parents: ["structure_airlock"],
+        components: {
+            "DisplayName": (name: "public airlock"),
+            "Appearance": (sprite: (rsi: "textures/structures/doors/airlock_public", state: "closed")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_airlock_wood",
+        parents: ["structure_airlock"],
+        components: {
+            "DisplayName": (name: "wooden airlock"),
+            "Appearance": (sprite: (rsi: "textures/structures/doors/airlock_wood", state: "closed")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_airlock_atmos",
+        parents: ["structure_airlock"],
+        components: {
+            "DisplayName": (name: "atmospherics airlock"),
+            "Appearance": (sprite: (rsi: "textures/structures/doors/airlock_atmos", state: "closed")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_airlock_bathroom",
+        parents: ["structure_airlock"],
+        components: {
+            "DisplayName": (name: "Airlock"),
+            "Appearance": (sprite: (rsi: "textures/structures/doors/airlock_bathroom", state: "closed")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_airlock_engineering_glass",
+        parents: ["structure_airlock"],
+        components: {
+            "DisplayName": (name: "engineering glass airlock"),
+            "Door": (glass: true),
+            "Appearance": (sprite: (rsi: "textures/structures/doors/airlock_engineering_glass", state: "closed")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_airlock_freezer",
+        parents: ["structure_airlock"],
+        components: {
+            "DisplayName": (name: "freezer airlock"),
+            "Appearance": (sprite: (rsi: "textures/structures/doors/airlock_freezer", state: "closed")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_airlock_vault",
+        parents: ["structure_airlock"],
+        components: {
+            "DisplayName": (name: "vault door"),
+            "Appearance": (sprite: (rsi: "textures/structures/doors/airlock_vault", state: "closed")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_airlock_command_qm",
+        parents: ["structure_airlock"],
+        components: {
+            "DisplayName": (name: "command airlock"),
+            "Appearance": (sprite: (rsi: "textures/structures/doors/airlock_command_qm", state: "closed")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_airlock_engineering_glass_critical",
+        parents: ["structure_airlock"],
+        components: {
+            "DisplayName": (name: "engineering glass airlock"),
+            "Door": (glass: true),
+            "Appearance": (sprite: (rsi: "textures/structures/doors/airlock_engineering_glass_critical", state: "closed")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_airlock_mining_glass",
+        parents: ["structure_airlock"],
+        components: {
+            "DisplayName": (name: "mining glass airlock"),
+            "Door": (glass: true),
+            "Appearance": (sprite: (rsi: "textures/structures/doors/airlock_mining_glass", state: "closed")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_airlock_mining",
+        parents: ["structure_airlock"],
+        components: {
+            "DisplayName": (name: "mining airlock"),
+            "Appearance": (sprite: (rsi: "textures/structures/doors/airlock_mining", state: "closed")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_airlock_security",
+        parents: ["structure_airlock"],
+        components: {
+            "DisplayName": (name: "security airlock"),
+            "Appearance": (sprite: (rsi: "textures/structures/doors/airlock_security", state: "closed")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_airlock_public_glass_incinerator_atmos_exterior",
+        parents: ["structure_airlock"],
+        components: {
+            "DisplayName": (name: "Turbine Exterior Airlock"),
+            "Door": (glass: true),
+            "Appearance": (sprite: (rsi: "textures/structures/doors/airlock_public_glass_incinerator_atmos_exterior", state: "closed")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_airlock_public_glass_incinerator_atmos_interior",
+        parents: ["structure_airlock"],
+        components: {
+            "DisplayName": (name: "Turbine Interior Airlock"),
+            "Door": (glass: true),
+            "Appearance": (sprite: (rsi: "textures/structures/doors/airlock_public_glass_incinerator_atmos_interior", state: "closed")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_airlock_command",
+        parents: ["structure_airlock"],
+        components: {
+            "DisplayName": (name: "command airlock"),
+            "Appearance": (sprite: (rsi: "textures/structures/doors/airlock_command", state: "closed")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_airlock_lawyer",
+        parents: ["structure_airlock"],
+        components: {
+            "DisplayName": (name: "Airlock"),
+            "Appearance": (sprite: (rsi: "textures/structures/doors/airlock_lawyer", state: "closed")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_airlock_command_glass",
+        parents: ["structure_airlock"],
+        components: {
+            "DisplayName": (name: "command glass airlock"),
+            "Door": (glass: true),
+            "Appearance": (sprite: (rsi: "textures/structures/doors/airlock_command_glass", state: "closed")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_airlock_corporate",
+        parents: ["structure_airlock"],
+        components: {
+            "DisplayName": (name: "Airlock"),
+            "Appearance": (sprite: (rsi: "textures/structures/doors/airlock_corporate", state: "closed")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_airlock_command_hop",
+        parents: ["structure_airlock"],
+        components: {
+            "DisplayName": (name: "command airlock"),
+            "Appearance": (sprite: (rsi: "textures/structures/doors/airlock_command_hop", state: "closed")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_airlock_highsecurity",
+        parents: ["structure_airlock"],
+        components: {
+            "DisplayName": (name: "high tech security airlock"),
+            "Appearance": (sprite: (rsi: "textures/structures/doors/airlock_highsecurity", state: "closed")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_airlock_multi_tile_public_glass",
+        parents: ["structure_airlock"],
+        components: {
+            "DisplayName": (name: "Airlock"),
+            "Door": (glass: true),
+            "Appearance": (sprite: (rsi: "textures/structures/doors/airlock_multi_tile_public_glass", state: "closed")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_airlock_command_ce",
+        parents: ["structure_airlock"],
+        components: {
+            "DisplayName": (name: "command airlock"),
+            "Appearance": (sprite: (rsi: "textures/structures/doors/airlock_command_ce", state: "closed")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_airlock_tranquillite",
+        parents: ["structure_airlock"],
+        components: {
+            "DisplayName": (name: "Airlock"),
+            "Appearance": (sprite: (rsi: "textures/structures/doors/airlock_tranquillite", state: "closed")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_airlock_psych",
+        parents: ["structure_airlock"],
+        components: {
+            "DisplayName": (name: "Airlock"),
+            "Appearance": (sprite: (rsi: "textures/structures/doors/airlock_psych", state: "closed")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_airlock_medical_glass",
+        parents: ["structure_airlock"],
+        components: {
+            "DisplayName": (name: "medical glass airlock"),
+            "Door": (glass: true),
+            "Appearance": (sprite: (rsi: "textures/structures/doors/airlock_medical_glass", state: "closed")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_airlock_atmos_glass",
+        parents: ["structure_airlock"],
+        components: {
+            "DisplayName": (name: "atmospheric glass airlock"),
+            "Door": (glass: true),
+            "Appearance": (sprite: (rsi: "textures/structures/doors/airlock_atmos_glass", state: "closed")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_airlock_bananium",
+        parents: ["structure_airlock"],
+        components: {
+            "DisplayName": (name: "bananium airlock"),
+            "Appearance": (sprite: (rsi: "textures/structures/doors/airlock_bananium", state: "closed")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_airlock_service",
+        parents: ["structure_airlock"],
+        components: {
+            "DisplayName": (name: "Airlock"),
+            "Appearance": (sprite: (rsi: "textures/structures/doors/airlock_service", state: "closed")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_airlock_command_hos",
+        parents: ["structure_airlock"],
+        components: {
+            "DisplayName": (name: "command airlock"),
+            "Appearance": (sprite: (rsi: "textures/structures/doors/airlock_command_hos", state: "closed")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_airlock_medical",
+        parents: ["structure_airlock"],
+        components: {
+            "DisplayName": (name: "medical airlock"),
+            "Appearance": (sprite: (rsi: "textures/structures/doors/airlock_medical", state: "closed")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_airlock_hatch",
+        parents: ["structure_airlock"],
+        components: {
+            "DisplayName": (name: "airtight hatch"),
+            "Appearance": (sprite: (rsi: "textures/structures/doors/airlock_hatch", state: "closed")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_airlock_grunge",
+        parents: ["structure_airlock"],
+        components: {
+            "DisplayName": (name: "Airlock"),
+            "Appearance": (sprite: (rsi: "textures/structures/doors/airlock_grunge", state: "closed")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_airlock_command_cmo",
+        parents: ["structure_airlock"],
+        components: {
+            "DisplayName": (name: "command airlock"),
+            "Appearance": (sprite: (rsi: "textures/structures/doors/airlock_command_cmo", state: "closed")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_airlock_hydroponics",
+        parents: ["structure_airlock"],
+        components: {
+            "DisplayName": (name: "hydroponics airlock"),
+            "Appearance": (sprite: (rsi: "textures/structures/doors/airlock_hydroponics", state: "closed")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_airlock_maintenance_hatch",
+        parents: ["structure_airlock"],
+        components: {
+            "DisplayName": (name: "maintenance hatch"),
+            "Appearance": (sprite: (rsi: "textures/structures/doors/airlock_maintenance_hatch", state: "closed")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_airlock_virology",
+        parents: ["structure_airlock"],
+        components: {
+            "DisplayName": (name: "virology airlock"),
+            "Appearance": (sprite: (rsi: "textures/structures/doors/airlock_virology", state: "closed")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_airlock_virology_glass",
+        parents: ["structure_airlock"],
+        components: {
+            "DisplayName": (name: "virology glass airlock"),
+            "Door": (glass: true),
+            "Appearance": (sprite: (rsi: "textures/structures/doors/airlock_virology_glass", state: "closed")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_airlock_research_glass",
+        parents: ["structure_airlock"],
+        components: {
+            "DisplayName": (name: "research glass airlock"),
+            "Door": (glass: true),
+            "Appearance": (sprite: (rsi: "textures/structures/doors/airlock_research_glass", state: "closed")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_airlock_research",
+        parents: ["structure_airlock"],
+        components: {
+            "DisplayName": (name: "research airlock"),
+            "Appearance": (sprite: (rsi: "textures/structures/doors/airlock_research", state: "closed")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_airlock_command_rd",
+        parents: ["structure_airlock"],
+        components: {
+            "DisplayName": (name: "command airlock"),
+            "Appearance": (sprite: (rsi: "textures/structures/doors/airlock_command_rd", state: "closed")),
+        },
+    ),
 ]

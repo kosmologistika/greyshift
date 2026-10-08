@@ -1,0 +1,29 @@
+[
+    (
+        type: "Entity",
+        id: "decal_stand_clear",
+        parents: ["base_decal_tile"],
+        components: {
+            "DisplayName": (name: "stand clear"),
+            "Appearance": (sprite: (rsi: "textures/decals/stand_clear", state: "stand_clear")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_caution",
+        parents: ["base_decal_tile"],
+        components: {
+            "DisplayName": (name: "caution"),
+            "Appearance": (sprite: (rsi: "textures/decals/caution", state: "caution")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_caution_red",
+        parents: ["base_decal_tile"],
+        components: {
+            "DisplayName": (name: "caution red"),
+            "Appearance": (sprite: (rsi: "textures/decals/caution_red", state: "caution_red")),
+        },
+    ),
+]

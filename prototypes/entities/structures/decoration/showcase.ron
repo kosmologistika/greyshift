@@ -1,0 +1,20 @@
+[
+    (
+        type: "Entity",
+        id: "structure_showcase_machinery_tv",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "Nanotrasen corporate newsfeed"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/showcase_machinery_tv", state: "television"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_showcase_cyborg_old",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "Cyborg Statue"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/showcase_cyborg_old", state: "robot_old"), depth: Furniture),
+        },
+    ),
+]

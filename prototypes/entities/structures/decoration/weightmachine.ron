@@ -1,0 +1,20 @@
+[
+    (
+        type: "Entity",
+        id: "structure_weightmachine",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "chest press machine"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/weightmachine", state: "stacklifter"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_weightmachine_weightlifter",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "incline bench press"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/weightmachine_weightlifter", state: "benchpress"), depth: Furniture),
+        },
+    ),
+]

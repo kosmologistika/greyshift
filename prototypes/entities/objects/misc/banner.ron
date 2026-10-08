@@ -1,0 +1,32 @@
+[
+    (
+        type: "Entity",
+        id: "prop_banner_cargo_mundane",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "cargonia banner"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/banner_cargo_mundane", state: "banner_cargo")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_banner_command_mundane",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "command banner"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/banner_command_mundane", state: "banner")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_banner_security_mundane",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "securistan banner"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/banner_security_mundane", state: "banner_security")),
+        },
+    ),
+]

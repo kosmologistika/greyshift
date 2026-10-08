@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_syndicatebomb_training",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "training bomb"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/syndicatebomb_training", state: "training-bomb"), depth: Furniture),
+        },
+    ),
+]

@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_recharger",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "recharger"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/recharger", state: "recharger"), depth: BelowMobs),
+        },
+    ),
+]

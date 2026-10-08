@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_space_heater",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "space heater"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/space_heater", state: "sheater-off"), depth: Furniture),
+        },
+    ),
+]

@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_mechpad",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "orbital mech pad"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/mechpad", state: "mechpad"), depth: Furniture),
+        },
+    ),
+]

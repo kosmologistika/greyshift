@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_ai_module_law_supplied_freeform",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "'Freeform' AI Module"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/ai_module_law_supplied_freeform", state: "std_mod")),
+        },
+    ),
+]

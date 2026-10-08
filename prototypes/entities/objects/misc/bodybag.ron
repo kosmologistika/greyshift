@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_bodybag",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "body bag"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/bodybag", state: "bodybag_folded")),
+        },
+    ),
+]

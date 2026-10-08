@@ -1,0 +1,20 @@
+[
+    (
+        type: "Entity",
+        id: "structure_secure_safe",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "secure safe"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/secure_safe", state: "wall_safe"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_secure_safe_caps_spare",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "captain's spare ID safe"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/secure_safe_caps_spare", state: "spare_safe"), depth: Furniture),
+        },
+    ),
+]

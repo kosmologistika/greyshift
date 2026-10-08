@@ -1,0 +1,18 @@
+[
+    (
+        type: "Entity",
+        id: "tile_light_light_on_7",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/light_light_on_7", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_light",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/light", state: "default")),
+        },
+    ),
+]

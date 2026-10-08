@@ -1,0 +1,32 @@
+[
+    (
+        type: "Entity",
+        id: "prop_holosign_creator_atmos",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "ATMOS holofan projector"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/holosign_creator_atmos", state: "signmaker_atmos")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_holosign_creator_robot_seat_bar",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "bar seating indicator placer"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/holosign_creator_robot_seat_bar", state: "signmaker_service")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_holosign_creator_robot_seat_restaurant",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "restaurant seating indicator placer"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/holosign_creator_robot_seat_restaurant", state: "signmaker_service")),
+        },
+    ),
+]

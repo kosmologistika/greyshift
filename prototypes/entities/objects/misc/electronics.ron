@@ -1,0 +1,42 @@
+[
+    (
+        type: "Entity",
+        id: "prop_electronics_apc",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "power control module"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/electronics_apc", state: "power_mod")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_electronics_airlock",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "airlock electronics"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/electronics_airlock", state: "door_electronics")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_electronics_airalarm",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "air alarm electronics"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/electronics_airalarm", state: "airalarm_electronics")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_electronics_firealarm",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "fire alarm electronics"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/electronics_firealarm", state: "door_electronics")),
+        },
+    ),
+]

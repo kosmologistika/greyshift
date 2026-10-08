@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_spirit_board",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "spirit board"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/spirit_board", state: "spirit_board"), depth: Furniture),
+        },
+    ),
+]

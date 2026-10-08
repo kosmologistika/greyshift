@@ -1,0 +1,32 @@
+[
+    (
+        type: "Entity",
+        id: "prop_crowbar",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "pocket crowbar"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/tools/prop_crowbar", state: "crowbar")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_crowbar_red",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "pocket crowbar"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/tools/crowbar_red", state: "crowbar_red")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_crowbar_large",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "large crowbar"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/tools/crowbar_large", state: "crowbar_large")),
+        },
+    ),
+]

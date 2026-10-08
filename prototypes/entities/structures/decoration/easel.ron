@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_easel",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "easel"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/easel", state: "easel"), depth: Furniture),
+        },
+    ),
+]

@@ -1,0 +1,74 @@
+[
+    (
+        type: "Entity",
+        id: "structure_status_display_evac",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "status display"),
+            "WallMount": (),
+            "PlacementLayer": WallMount,
+            "Facing": (South),
+            "Appearance": (sprite: (rsi: "textures/structures/wallmounts/machines/status_display_evac", state: "frame"), depth: WallMounted, layers: [(state: "default", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_status_display_ai",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "AI display"),
+            "WallMount": (),
+            "PlacementLayer": WallMount,
+            "Facing": (South),
+            "Appearance": (sprite: (rsi: "textures/structures/wallmounts/machines/status_display_ai", state: "frame"), depth: WallMounted, layers: [(state: "default", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_status_display_supply",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "supply display"),
+            "WallMount": (),
+            "PlacementLayer": WallMount,
+            "Facing": (South),
+            "Appearance": (sprite: (rsi: "textures/structures/wallmounts/machines/status_display_supply", state: "frame"), depth: WallMounted, layers: [(state: "default", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_status_display_door_timer",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "door timer"),
+            "WallMount": (),
+            "PlacementLayer": WallMount,
+            "Facing": (South),
+            "Appearance": (sprite: (rsi: "textures/structures/wallmounts/machines/status_display_door_timer", state: "frame"), depth: WallMounted, layers: [(state: "default", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_status_display",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "status display"),
+            "WallMount": (),
+            "PlacementLayer": WallMount,
+            "Facing": (South),
+            "Appearance": (sprite: (rsi: "textures/structures/wallmounts/machines/status_display", state: "frame"), depth: WallMounted, layers: [(state: "default", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_status_display_evac_directional",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "status display"),
+            "WallMount": (),
+            "PlacementLayer": WallMount,
+            "Facing": (South),
+            "Appearance": (sprite: (rsi: "textures/structures/wallmounts/machines/status_display_evac_directional", state: "frame"), depth: WallMounted, layers: [(state: "default", shading: Unshaded)]),
+        },
+    ),
+]

@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_destructive_scanner",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "experimental destructive scanner"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/destructive_scanner", state: "tube_open"), depth: Furniture),
+        },
+    ),
+]

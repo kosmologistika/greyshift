@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_scanner_gate_preset_guns",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "scanner gate"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/scanner_gate_preset_guns", state: "scangate"), depth: WallMounted),
+        },
+    ),
+]

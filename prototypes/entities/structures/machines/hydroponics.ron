@@ -1,0 +1,20 @@
+[
+    (
+        type: "Entity",
+        id: "structure_hydroponics_soil",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "soil"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/hydroponics_soil", state: "soil"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_hydroponics_constructable",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "hydroponics tray"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/hydroponics_constructable", state: "hydrotray3"), depth: Furniture),
+        },
+    ),
+]

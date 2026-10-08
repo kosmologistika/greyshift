@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_kitchenspike",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "meat spike"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/kitchenspike", state: "spike"), depth: Furniture),
+        },
+    ),
+]

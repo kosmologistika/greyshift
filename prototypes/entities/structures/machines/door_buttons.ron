@@ -1,0 +1,20 @@
+[
+    (
+        type: "Entity",
+        id: "structure_door_buttons_access_button",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "access button"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/door_buttons_access_button", state: "access_button_standby"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_door_buttons_airlock_controller",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "access console"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/door_buttons_airlock_controller", state: "access_control_standby"), depth: Furniture),
+        },
+    ),
+]

@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_gulag_item_reclaimer",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "equipment reclaimer station"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/gulag_item_reclaimer", state: "gulag_off"), depth: Furniture),
+        },
+    ),
+]

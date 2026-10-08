@@ -1,0 +1,22 @@
+[
+    (
+        type: "Entity",
+        id: "prop_gps",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "global positioning system"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/gps", state: "gps-c")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_gps_engineering",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "global positioning system"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/gps_engineering", state: "gps-e")),
+        },
+    ),
+]

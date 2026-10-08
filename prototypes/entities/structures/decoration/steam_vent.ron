@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_steam_vent",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "steam vent"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/steam_vent", state: "steam_vent"), depth: Furniture),
+        },
+    ),
+]

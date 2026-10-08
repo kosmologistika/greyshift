@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_fuel_pellet",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "standard fuel pellet"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/fuel_pellet", state: "fuel_basic")),
+        },
+    ),
+]

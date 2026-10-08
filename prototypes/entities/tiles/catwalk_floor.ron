@@ -1,0 +1,34 @@
+[
+    (
+        type: "Entity",
+        id: "tile_catwalk_floor_iron_dark",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/catwalk_floor_iron_dark", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_catwalk_floor_iron",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/catwalk_floor_iron", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_catwalk_floor",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/catwalk_floor", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_catwalk_floor_iron_smooth",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/catwalk_floor_iron_smooth", state: "default")),
+        },
+    ),
+]

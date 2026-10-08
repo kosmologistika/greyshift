@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_chem_mass_spec",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "high-performance liquid chromatography machine"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/chem_mass_spec", state: "HPLC"), depth: Furniture),
+        },
+    ),
+]

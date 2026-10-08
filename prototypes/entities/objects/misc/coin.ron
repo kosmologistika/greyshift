@@ -1,0 +1,42 @@
+[
+    (
+        type: "Entity",
+        id: "prop_coin_mythril",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "coin"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/coin_mythril", state: "coin")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_coin_silver",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "coin"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/coin_silver", state: "coin")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_coin_iron",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "coin"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/coin_iron", state: "coin")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_coin_gold",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "coin"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/coin_gold", state: "coin")),
+        },
+    ),
+]

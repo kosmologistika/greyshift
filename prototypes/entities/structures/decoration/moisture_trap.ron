@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_moisture_trap",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "moisture trap"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/moisture_trap", state: "moisture_trap"), depth: Furniture),
+        },
+    ),
+]

@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_compact_remote",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "compact remote"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/compact_remote", state: "setup_small_simple")),
+        },
+    ),
+]

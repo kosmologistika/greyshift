@@ -1,0 +1,59 @@
+[
+    (
+        type: "Entity",
+        id: "structure_window_reinforced_fulltile",
+        parents: ["structure_window"],
+        components: {
+            "DisplayName": (name: "full tile reinforced window"),
+            "IconSmooth": (key: "wall", state_prefix: "window"),
+            "Appearance": (sprite: (rsi: "textures/structures/windows/window_reinforced_fulltile", state: "default"), depth: Doors),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_window_reinforced",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "reinforced window"),
+            "Appearance": (sprite: (rsi: "textures/structures/windows/window_reinforced", state: "r_window"), depth: Doors),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_window_reinforced_tinted_fulltile",
+        parents: ["structure_window"],
+        components: {
+            "DisplayName": (name: "tinted window"),
+            "IconSmooth": (key: "wall", state_prefix: "window"),
+            "Appearance": (sprite: (rsi: "textures/structures/windows/window_reinforced_tinted_fulltile", state: "default"), depth: Doors),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_window_reinforced_plasma_fulltile",
+        parents: ["structure_window"],
+        components: {
+            "DisplayName": (name: "reinforced plasma window"),
+            "IconSmooth": (key: "wall", state_prefix: "window"),
+            "Appearance": (sprite: (rsi: "textures/structures/windows/window_reinforced_plasma_fulltile", state: "default"), depth: Doors),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_window_reinforced_plasma",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "reinforced plasma window"),
+            "Appearance": (sprite: (rsi: "textures/structures/windows/window_reinforced_plasma", state: "r_window"), depth: Doors),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_window_directional",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "window"),
+            "Appearance": (sprite: (rsi: "textures/structures/windows/window_directional", state: "window"), depth: Doors),
+        },
+    ),
+]

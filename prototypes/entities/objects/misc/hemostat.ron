@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_hemostat",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "hemostat"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/hemostat", state: "hemostat")),
+        },
+    ),
+]

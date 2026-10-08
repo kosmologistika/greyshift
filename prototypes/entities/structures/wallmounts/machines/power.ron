@@ -1,0 +1,26 @@
+[
+    (
+        type: "Entity",
+        id: "structure_apc",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "area power controller"),
+            "WallMount": (),
+            "PlacementLayer": WallMount,
+            "Facing": (South),
+            "Appearance": (sprite: (rsi: "textures/structures/wallmounts/machines/apc", state: "apc0"), depth: WallMounted, layers: [(state: "apcox-1", shading: Unshaded), (state: "apco3-2", shading: Unshaded), (state: "apco0-3", shading: Unshaded), (state: "apco1-3", shading: Unshaded), (state: "apco2-3", shading: Unshaded)]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_apc_worn_out",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "Worn out APC"),
+            "WallMount": (),
+            "PlacementLayer": WallMount,
+            "Facing": (South),
+            "Appearance": (sprite: (rsi: "textures/structures/wallmounts/machines/apc_worn_out", state: "apc0"), depth: WallMounted, layers: [(state: "apcox-1", shading: Unshaded), (state: "apco3-2", shading: Unshaded), (state: "apco0-3", shading: Unshaded), (state: "apco1-3", shading: Unshaded), (state: "apco2-3", shading: Unshaded)]),
+        },
+    ),
+]

@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_exoscanner",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "scanner array"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/exoscanner", state: "scanner_off"), depth: Furniture),
+        },
+    ),
+]

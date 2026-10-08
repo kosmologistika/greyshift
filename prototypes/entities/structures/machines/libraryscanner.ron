@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_libraryscanner",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "scanner control interface"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/libraryscanner", state: "bigscanner"), depth: Furniture),
+        },
+    ),
+]

@@ -1,0 +1,38 @@
+[
+    (
+        type: "Entity",
+        id: "structure_radio_intercom",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "station intercom"),
+            "WallMount": (),
+            "PlacementLayer": WallMount,
+            "Facing": (South),
+            "Appearance": (sprite: (rsi: "textures/structures/wallmounts/machines/radio_intercom", state: "intercom"), depth: WallMounted),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_radio_intercom_prison",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "receive-only intercom"),
+            "WallMount": (),
+            "PlacementLayer": WallMount,
+            "Facing": (South),
+            "Appearance": (sprite: (rsi: "textures/structures/wallmounts/machines/radio_intercom_prison", state: "intercom_prison"), depth: WallMounted),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_radio_intercom_command",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "command intercom"),
+            "WallMount": (),
+            "PlacementLayer": WallMount,
+            "Facing": (South),
+            "Appearance": (sprite: (rsi: "textures/structures/wallmounts/machines/radio_intercom_command", state: "intercom_command"), depth: WallMounted),
+        },
+    ),
+]

@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_greenscreen_camera",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "captain-caster"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/greenscreen_camera", state: "camera"), depth: Furniture),
+        },
+    ),
+]

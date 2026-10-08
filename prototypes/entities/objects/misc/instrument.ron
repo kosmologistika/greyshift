@@ -1,0 +1,22 @@
+[
+    (
+        type: "Entity",
+        id: "prop_instrument_violin_golden",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "golden violin"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/instrument_violin_golden", state: "golden_violin")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_instrument_harmonica",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "harmonica"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/instrument_harmonica", state: "harmonica")),
+        },
+    ),
+]

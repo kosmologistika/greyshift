@@ -1,0 +1,22 @@
+[
+    (
+        type: "Entity",
+        id: "prop_integrated_circuit_loaded_speech_relay",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "integrated circuit"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/integrated_circuit_loaded_speech_relay", state: "integrated_circuit")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_integrated_circuit_loaded_hello_world",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "integrated circuit"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/integrated_circuit_loaded_hello_world", state: "integrated_circuit")),
+        },
+    ),
+]

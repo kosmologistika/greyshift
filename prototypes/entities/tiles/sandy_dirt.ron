@@ -1,0 +1,10 @@
+[
+    (
+        type: "Entity",
+        id: "tile_misc_sandy_dirt",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/misc_sandy_dirt", state: "default")),
+        },
+    ),
+]

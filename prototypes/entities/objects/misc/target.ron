@@ -1,0 +1,42 @@
+[
+    (
+        type: "Entity",
+        id: "prop_target",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "shooting target"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/target", state: "target_h")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_target_alien",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "shooting target"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/target_alien", state: "target_q")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_target_clown",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "shooting target"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/target_clown", state: "target_c")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_target_syndicate",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "shooting target"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/target_syndicate", state: "target_s")),
+        },
+    ),
+]

@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_microscope",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "Microscope"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/microscope", state: "microscope"), depth: Furniture),
+        },
+    ),
+]

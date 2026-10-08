@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_lift_indicator",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "elevator indicator"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/lift_indicator", state: "lift_indo-base"), depth: Furniture),
+        },
+    ),
+]

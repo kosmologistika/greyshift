@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_doppler_array",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "tachyon-doppler array"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/doppler_array", state: "tdoppler"), depth: Furniture),
+        },
+    ),
+]

@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_razor",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "electric razor"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/razor", state: "razor")),
+        },
+    ),
+]

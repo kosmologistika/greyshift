@@ -1,0 +1,812 @@
+[
+    (
+        type: "Entity",
+        id: "prop_storage_fancy_cigarettes",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Space Cigarettes packet"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_fancy_cigarettes", state: "cig")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_toolbox_emergency",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "emergency toolbox"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_toolbox_emergency", state: "red")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_briefcase",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "briefcase"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_briefcase", state: "briefcase")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_bag_trash",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "trash bag"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_bag_trash", state: "trashbag")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_box_evidence",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "evidence bag box"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_box_evidence", state: "security"), layers: [(state: "evidence")]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_toolbox",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "toolbox"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_toolbox", state: "toolbox_default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_bag_plants_portaseeder",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "portable seed extractor"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_bag_plants_portaseeder", state: "portaseeder")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_toolbox_fishing",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "fishing toolbox"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_toolbox_fishing", state: "teal")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_medkit_regular",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "medkit"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_medkit_regular", state: "medkit")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_box_drinkingglasses",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "box of drinking glasses"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_box_drinkingglasses", state: "default"), layers: [(state: "drinkglass")]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_bag_tray_cafeteria",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "cafeteria tray"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_bag_tray_cafeteria", state: "foodtray")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_bag_tray",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "serving tray"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_bag_tray", state: "tray")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_toolbox_mechanical",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "mechanical toolbox"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_toolbox_mechanical", state: "blue")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_belt_utility",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "toolbelt"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_belt_utility", state: "utility")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_toolbox_electrical",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "electrical toolbox"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_toolbox_electrical", state: "yellow")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_fancy_rollingpapers",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "rolling paper pack"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_fancy_rollingpapers", state: "cig_paper_pack")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_dice",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "bag of dice"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_dice", state: "dicebag")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_crayons",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "box of crayons"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_crayons", state: "crayonbox")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_box_lights_mixed",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "box of replacement lights"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_box_lights_mixed", state: "default"), layers: [(state: "light_mixed")]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_box_lights",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "box of replacement bulbs"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_box_lights", state: "default"), layers: [(state: "light")]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_backpack_duffelbag_sec_surgery",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "surgical duffel bag"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_backpack_duffelbag_sec_surgery", state: "duffel-security")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_box_bodybags",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "body bags"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_box_bodybags", state: "medical"), layers: [(state: "bodybags")]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_box",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "box"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_box", state: "default"), layers: [(state: "writing")]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_backpack_duffelbag_clown",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "clown's duffel bag"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_backpack_duffelbag_clown", state: "duffel-clown")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_box_donkpockets",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "box of donk-pockets"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_box_donkpockets", state: "donkpocketbox")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_belt",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "not actually a toolbelt"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_belt", state: "utility")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_box_cups",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "box of paper cups"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_box_cups", state: "default"), layers: [(state: "cup")]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_box_prisoner",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "box of prisoner IDs"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_box_prisoner", state: "security"), layers: [(state: "id")]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_backpack_henchmen",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "wings"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_backpack_henchmen", state: "henchmen")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_fancy_donut_box",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "donut box"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_fancy_donut_box", state: "donutbox_open")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_box_silver_ids",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "box of spare silver IDs"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_box_silver_ids", state: "default"), layers: [(state: "id")]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_box_pdas",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "spare PDAs"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_box_pdas", state: "default"), layers: [(state: "pda")]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_box_ids",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "box of spare IDs"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_box_ids", state: "default"), layers: [(state: "id")]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_box_trackimp",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "boxed tracking implant kit"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_box_trackimp", state: "security"), layers: [(state: "implant")]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_box_chemimp",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "boxed chemical implant kit"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_box_chemimp", state: "default"), layers: [(state: "implant")]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_lockbox_loyalty",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "lockbox of mindshield implants"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_lockbox_loyalty", state: "lockbox_l")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_box_flashbangs",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "box of flashbangs (WARNING)"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_box_flashbangs", state: "security"), layers: [(state: "flashbang")]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_box_handcuffs",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "box of spare handcuffs"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_box_handcuffs", state: "security"), layers: [(state: "handcuff")]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_box_teargas",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "box of tear gas grenades (WARNING)"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_box_teargas", state: "security"), layers: [(state: "grenade")]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_box_coffeepack",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "arabica beans"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_box_coffeepack", state: "arabica_beans")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_fancy_coffee_condi_display",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "coffee condiments display"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_fancy_coffee_condi_display", state: "coffee_condi_display")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_box_flashes",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "box of flashbulbs"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_box_flashes", state: "security"), layers: [(state: "flash")]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_box_seccarts",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "box of PDA security cartridges"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_box_seccarts", state: "security"), layers: [(state: "pda")]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_box_firingpins",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "box of standard firing pins"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_box_firingpins", state: "security"), layers: [(state: "firingpin")]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_pill_bottle_happinesspsych",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "happiness pills"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_pill_bottle_happinesspsych", state: "pill_canister")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_box_coffeepack_robusta",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "robusta beans"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_box_coffeepack_robusta", state: "robusta_beans")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_fancy_cigarettes_cigpack_robustgold",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Robust Gold packet"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_fancy_cigarettes_cigpack_robustgold", state: "robustg")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_box_matches",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "matchbox"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_box_matches", state: "matchbox")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_photo_album",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "photo album"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_photo_album", state: "album")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_lockbox_medal",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "medal box"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_lockbox_medal", state: "medalbox_l")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_fancy_cigarettes_cigpack_robust",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Robust packet"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_fancy_cigarettes_cigpack_robust", state: "robust")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_box_beakers",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "box of beakers"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_box_beakers", state: "medical"), layers: [(state: "beaker")]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_box_syringes",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "box of syringes"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_box_syringes", state: "medical"), layers: [(state: "syringe")]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_bag_chemistry",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "chemistry bag"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_bag_chemistry", state: "bag")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_belt_medical",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "medical belt"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_belt_medical", state: "medical")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_bag_construction",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "construction bag"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_bag_construction", state: "construction_bag")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_photo_album_bar",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "photo album (Bar)"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_photo_album_bar", state: "album_blue")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_box_masks",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "box of sterile masks"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_box_masks", state: "medical"), layers: [(state: "sterile")]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_box_gloves",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "box of latex gloves"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_box_gloves", state: "default"), layers: [(state: "latex")]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_pill_bottle_penacid",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "bottle of pentetic acid pills"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_pill_bottle_penacid", state: "pill_canister")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_medkit_fire",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "burn treatment kit"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_medkit_fire", state: "medkit_burn")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_medkit_o2",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "oxygen deprivation treatment kit"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_medkit_o2", state: "medkit_o2")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_medkit_toxin",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "toxin treatment kit"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_medkit_toxin", state: "medkit_toxin")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_box_medipens",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "box of medipens"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_box_medipens", state: "medical"), layers: [(state: "epipen")]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_box_pillbottles",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "box of pill bottles"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_box_pillbottles", state: "medical"), layers: [(state: "pillbox")]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_medkit_brute",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "brute trauma treatment kit"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_medkit_brute", state: "medkit_brute")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_box_rxglasses",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "box of prescription glasses"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_box_rxglasses", state: "medical"), layers: [(state: "glasses")]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_bag_plants",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "plant bag"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_bag_plants", state: "plantbag")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_bag_money",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "money bag"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_bag_money", state: "moneybag")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_backpack_duffelbag_clown_cream_pie",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "clown's duffel bag"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_backpack_duffelbag_clown_cream_pie", state: "duffel-clown")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_pill_bottle_mannitol",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "bottle of mannitol pills"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_pill_bottle_mannitol", state: "pill_canister")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_box_monkeycubes",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "monkey cube box"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_box_monkeycubes", state: "cubes"), layers: [(state: "monkey")]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_fancy_candle_box",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "candle pack"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_fancy_candle_box", state: "candlebox5")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_belt_sheath_katana_toy",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "katana sheath"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_belt_sheath_katana_toy", state: "katana_sheath")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_cans_sixbeer",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "beer can ring"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_cans_sixbeer", state: "canholder")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_photo_album_library",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "photo album (Library)"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_photo_album_library", state: "album_blue")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_fancy_cigarettes_cigpack_shadyjims",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Shady Jim's Super Slims packet"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_fancy_cigarettes_cigpack_shadyjims", state: "shadyjim")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_toolbox_emergency_old",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "rusty red toolbox"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_toolbox_emergency_old", state: "toolbox_red_old")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_wallet",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "wallet"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_wallet", state: "wallet")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_pill_bottle_mutadone",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "bottle of mutadone pills"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_pill_bottle_mutadone", state: "pill_canister")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_storage_box_disks",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "floppy disk box"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/storage/storage_box_disks", state: "default"), layers: [(state: "disk")]),
+        },
+    ),
+]

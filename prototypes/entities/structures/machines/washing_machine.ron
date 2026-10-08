@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_washing_machine",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "washing machine"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/washing_machine", state: "wm_1_0"), depth: Furniture),
+        },
+    ),
+]

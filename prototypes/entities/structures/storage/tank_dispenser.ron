@@ -1,0 +1,20 @@
+[
+    (
+        type: "Entity",
+        id: "structure_tank_dispenser",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "tank dispenser"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/tank_dispenser", state: "dispenser"), depth: Furniture, layers: [(state: "oxygen-5"), (state: "plasma-5")]),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_tank_dispenser_oxygen",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "tank dispenser"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/tank_dispenser_oxygen", state: "dispenser"), depth: Furniture, layers: [(state: "oxygen-5")]),
+        },
+    ),
+]

@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_vitals_reader",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "vitals display"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/vitals_reader", state: "frame"), depth: Furniture),
+        },
+    ),
+]

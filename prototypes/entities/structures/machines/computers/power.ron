@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_solar_control",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "solar panel control"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/computers/solar_control", state: "computer"), depth: Furniture, layers: [(state: "power_key"), (state: "solar", shading: Unshaded)]),
+        },
+    ),
+]

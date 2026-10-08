@@ -1,0 +1,56 @@
+[
+    (
+        type: "Entity",
+        id: "structure_pdapainter_supply",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "Supply PDA & ID Painter"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/pdapainter_supply", state: "pdapainter"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_pdapainter",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "Tablet & ID Painter"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/pdapainter", state: "pdapainter"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_pdapainter_engineering",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "Engineering PDA & ID Painter"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/pdapainter_engineering", state: "pdapainter"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_pdapainter_security",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "Security PDA & ID Painter"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/pdapainter_security", state: "pdapainter"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_pdapainter_medbay",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "Medbay PDA & ID Painter"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/pdapainter_medbay", state: "pdapainter"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_pdapainter_research",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "Research PDA & ID Painter"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/pdapainter_research", state: "pdapainter"), depth: Furniture),
+        },
+    ),
+]

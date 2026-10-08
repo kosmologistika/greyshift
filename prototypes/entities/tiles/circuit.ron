@@ -1,0 +1,18 @@
+[
+    (
+        type: "Entity",
+        id: "tile_circuit",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/circuit", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_circuit_telecomms_server",
+        parents: ["base_tile_floor"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/circuit_telecomms_server", state: "default")),
+        },
+    ),
+]

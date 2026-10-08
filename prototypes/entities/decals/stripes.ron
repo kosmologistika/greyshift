@@ -1,0 +1,74 @@
+[
+    (
+        type: "Entity",
+        id: "decal_warningline",
+        parents: ["base_decal_tile"],
+        components: {
+            "DisplayName": (name: "warningline"),
+            "Appearance": (sprite: (rsi: "textures/decals/warningline", state: "warningline")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_warninglinecorner",
+        parents: ["base_decal_tile"],
+        components: {
+            "DisplayName": (name: "warninglinecorner"),
+            "Appearance": (sprite: (rsi: "textures/decals/warninglinecorner", state: "warninglinecorner")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_warn_box",
+        parents: ["base_decal_tile"],
+        components: {
+            "DisplayName": (name: "warn box"),
+            "Appearance": (sprite: (rsi: "textures/decals/warn_box", state: "warn_box")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_warningline_red",
+        parents: ["base_decal_tile"],
+        components: {
+            "DisplayName": (name: "warningline red"),
+            "Appearance": (sprite: (rsi: "textures/decals/warningline_red", state: "warningline_red")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_warn_end",
+        parents: ["base_decal_tile"],
+        components: {
+            "DisplayName": (name: "warn end"),
+            "Appearance": (sprite: (rsi: "textures/decals/warn_end", state: "warn_end")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_warninglinecorner_red",
+        parents: ["base_decal_tile"],
+        components: {
+            "DisplayName": (name: "warninglinecorner red"),
+            "Appearance": (sprite: (rsi: "textures/decals/warninglinecorner_red", state: "warninglinecorner_red")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_warn_end_red",
+        parents: ["base_decal_tile"],
+        components: {
+            "DisplayName": (name: "warn end red"),
+            "Appearance": (sprite: (rsi: "textures/decals/warn_end_red", state: "warn_end_red")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_warn_full",
+        parents: ["base_decal_tile"],
+        components: {
+            "DisplayName": (name: "warn full"),
+            "Appearance": (sprite: (rsi: "textures/decals/warn_full", state: "warn_full")),
+        },
+    ),
+]

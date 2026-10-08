@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_piratepad_civilian",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "civilian bounty pad"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/piratepad_civilian", state: "lpad-off"), depth: Furniture),
+        },
+    ),
+]

@@ -1,0 +1,110 @@
+[
+    (
+        type: "Entity",
+        id: "structure_rnd_production_techfab_department_cargo",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "department techfab (Cargo)"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/rnd_production_techfab_department_cargo", state: "protolathe"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_rnd_production_protolathe_department_engineering",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "department protolathe (Engineering)"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/rnd_production_protolathe_department_engineering", state: "protolathe"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_rnd_production_circuit_imprinter",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "circuit imprinter"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/rnd_production_circuit_imprinter", state: "circuit_imprinter"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_rnd_production_techfab_department_security",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "department techfab (Security)"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/rnd_production_techfab_department_security", state: "protolathe"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_rnd_production_techfab_department_medical",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "department techfab (Medical)"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/rnd_production_techfab_department_medical", state: "protolathe"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_rnd_production_techfab_department_service",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "department techfab (Service)"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/rnd_production_techfab_department_service", state: "protolathe"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_rnd_server",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "R&D Server"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/rnd_server", state: "RD-server-on"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_rnd_server_master",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "R&D Server"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/rnd_server_master", state: "RD-server-on"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_rnd_production_circuit_imprinter_department_science",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "department circuit imprinter (Science)"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/rnd_production_circuit_imprinter_department_science", state: "circuit_imprinter"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_rnd_production_protolathe_department_science",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "department protolathe (Science)"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/rnd_production_protolathe_department_science", state: "protolathe"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_rnd_experimentor",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "E.X.P.E.R.I-MENTOR"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/rnd_experimentor", state: "h_lathe"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_rnd_destructive_analyzer",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "destructive analyzer"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/rnd_destructive_analyzer", state: "d_analyzer"), depth: Furniture),
+        },
+    ),
+]

@@ -1,0 +1,102 @@
+[
+    (
+        type: "Entity",
+        id: "prop_clothing_glasses_sunglasses",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "sunglasses"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/clothing/glasses/clothing_glasses_sunglasses", state: "sun")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_clothing_glasses_meson_engine",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "engineering scanner goggles"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/clothing/glasses/clothing_glasses_meson_engine", state: "trayson-meson")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_clothing_glasses_welding",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "welding goggles"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/clothing/glasses/clothing_glasses_welding", state: "welding-g")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_clothing_glasses_meson",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "optical meson scanner"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/clothing/glasses/clothing_glasses_meson", state: "meson")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_clothing_glasses_hud_security_sunglasses_gars",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "HUD gar glasses"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/clothing/glasses/clothing_glasses_hud_security_sunglasses_gars", state: "gar_sec")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_clothing_glasses_hud_security_sunglasses",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "security HUDSunglasses"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/clothing/glasses/clothing_glasses_hud_security_sunglasses", state: "sunhudsec")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_clothing_glasses_meson_engine_tray",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "optical t-ray scanner"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/clothing/glasses/clothing_glasses_meson_engine_tray", state: "trayson-t-ray")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_clothing_glasses_science",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "science goggles"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/clothing/glasses/clothing_glasses_science", state: "purple")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_clothing_glasses_hud_health",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "health scanner HUD"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/clothing/glasses/clothing_glasses_hud_health", state: "healthhud")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_clothing_glasses_hud_health_sunglasses",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "medical HUDSunglasses"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/clothing/glasses/clothing_glasses_hud_health_sunglasses", state: "sunhudmed")),
+        },
+    ),
+]

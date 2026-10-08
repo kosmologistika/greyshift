@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_wirecutters",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "wirecutters"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/tools/wirecutters", state: "cutters_map")),
+        },
+    ),
+]

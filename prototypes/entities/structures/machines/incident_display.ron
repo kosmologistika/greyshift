@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_incident_display_delam",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "delamination incident display"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/incident_display_delam", state: "display_normal"), depth: Furniture),
+        },
+    ),
+]

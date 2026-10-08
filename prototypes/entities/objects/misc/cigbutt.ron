@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_cigbutt",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "cigarette butt"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/cigbutt", state: "cigbutt")),
+        },
+    ),
+]

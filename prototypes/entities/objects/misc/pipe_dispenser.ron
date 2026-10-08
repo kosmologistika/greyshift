@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_pipe_dispenser",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "rapid pipe dispenser"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/pipe_dispenser", state: "rpd")),
+        },
+    ),
+]

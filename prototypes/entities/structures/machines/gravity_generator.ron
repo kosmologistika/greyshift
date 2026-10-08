@@ -1,0 +1,83 @@
+[
+    (
+        type: "Entity",
+        id: "structure_gravity_generator_part_on_9",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "gravitational generator"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/gravity_generator_part_on_9", state: "on_9"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_gravity_generator_part_on_6",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "gravitational generator"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/gravity_generator_part_on_6", state: "on_6"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_gravity_generator_part_on_3",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "gravitational generator"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/gravity_generator_part_on_3", state: "on_3"), depth: WallMounted),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_gravity_generator_main",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "gravitational generator"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/gravity_generator_main", state: "on_8"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_gravity_generator_part_on_5",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "gravitational generator"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/gravity_generator_part_on_5", state: "on_5"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_gravity_generator_part_on_2",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "gravitational generator"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/gravity_generator_part_on_2", state: "on_2"), depth: WallMounted),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_gravity_generator_part_on_7",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "gravitational generator"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/gravity_generator_part_on_7", state: "on_7"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_gravity_generator_part_on_4",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "gravitational generator"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/gravity_generator_part_on_4", state: "on_4"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_gravity_generator_part_on_1",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "gravitational generator"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/gravity_generator_part_on_1", state: "on_1"), depth: WallMounted),
+        },
+    ),
+]

@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_binoculars",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "binoculars"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/binoculars", state: "binoculars")),
+        },
+    ),
+]

@@ -1,0 +1,18 @@
+[
+    (
+        type: "Entity",
+        id: "tile_glass",
+        parents: ["tile_lattice"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/glass", state: "default")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "tile_glass_reinforced",
+        parents: ["tile_lattice"],
+        components: {
+            "TileCover": (sprite: (rsi: "textures/tiles/glass_reinforced", state: "default")),
+        },
+    ),
+]

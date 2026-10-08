@@ -1,0 +1,82 @@
+[
+    (
+        type: "Entity",
+        id: "prop_clothing_suit_jacket_det_suit",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "brown blazer jacket"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/clothing/suit/clothing_suit_jacket_det_suit", state: "det_blazer")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_clothing_suit_apron_chef",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "cook's apron"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/clothing/suit/clothing_suit_apron_chef", state: "apronchef")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_clothing_suit_costume_monkeysuit",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "monkey suit"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/clothing/suit/clothing_suit_costume_monkeysuit", state: "monkeysuit")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_clothing_suit_caution",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "wet floor sign"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/clothing/suit/clothing_suit_caution", state: "caution")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_clothing_suit_jacket_straight_jacket",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "straight jacket"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/clothing/suit/clothing_suit_jacket_straight_jacket", state: "straight_jacket")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_clothing_suit_hooded_ablative",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "ablative trenchcoat"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/clothing/suit/clothing_suit_hooded_ablative", state: "ablativecoat")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_clothing_suit_hazardvest",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "hazard vest"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/clothing/suit/clothing_suit_hazardvest", state: "hazard")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_clothing_suit_hazardvest_press",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "press hazard vest"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/clothing/suit/clothing_suit_hazardvest_press", state: "hazard_press")),
+        },
+    ),
+]

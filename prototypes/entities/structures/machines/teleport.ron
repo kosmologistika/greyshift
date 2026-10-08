@@ -1,0 +1,20 @@
+[
+    (
+        type: "Entity",
+        id: "structure_teleport_hub",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "teleporter hub"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/teleport_hub", state: "tele0"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_teleport_station",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "teleporter station"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/teleport_station", state: "controller"), depth: Furniture),
+        },
+    ),
+]

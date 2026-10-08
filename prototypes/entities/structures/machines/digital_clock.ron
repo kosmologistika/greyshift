@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_digital_clock",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "digital clock"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/digital_clock", state: "digital_clock_base"), depth: Furniture),
+        },
+    ),
+]

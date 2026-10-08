@@ -1,0 +1,83 @@
+[
+    (
+        type: "Entity",
+        id: "decal_trimline_corner_fill",
+        parents: ["base_decal_tile"],
+        components: {
+            "DisplayName": (name: "trimline corner fill"),
+            "Appearance": (sprite: (rsi: "textures/decals/trimline_corner_fill", state: "trimline_corner_fill")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_trimline_warn_fill",
+        parents: ["base_decal_tile"],
+        components: {
+            "DisplayName": (name: "trimline warn fill"),
+            "Appearance": (sprite: (rsi: "textures/decals/trimline_warn_fill", state: "trimline_warn_fill")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_trimline_warn",
+        parents: ["base_decal_tile"],
+        components: {
+            "DisplayName": (name: "trimline warn"),
+            "Appearance": (sprite: (rsi: "textures/decals/trimline_warn", state: "trimline_warn")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_trimline_mid",
+        parents: ["base_decal_tile"],
+        components: {
+            "DisplayName": (name: "trimline mid"),
+            "Appearance": (sprite: (rsi: "textures/decals/trimline_mid", state: "trimline_mid")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_trimline_fill",
+        parents: ["base_decal_tile"],
+        components: {
+            "DisplayName": (name: "trimline fill"),
+            "Appearance": (sprite: (rsi: "textures/decals/trimline_fill", state: "trimline_fill")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_trimline_end",
+        parents: ["base_decal_tile"],
+        components: {
+            "DisplayName": (name: "trimline end"),
+            "Appearance": (sprite: (rsi: "textures/decals/trimline_end", state: "trimline_end")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_trimline",
+        parents: ["base_decal_tile"],
+        components: {
+            "DisplayName": (name: "trimline"),
+            "Appearance": (sprite: (rsi: "textures/decals/trimline", state: "trimline")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_trimline_corner",
+        parents: ["base_decal_tile"],
+        components: {
+            "DisplayName": (name: "trimline corner"),
+            "Appearance": (sprite: (rsi: "textures/decals/trimline_corner", state: "trimline_corner")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_trimline_end_fill",
+        parents: ["base_decal_tile"],
+        components: {
+            "DisplayName": (name: "trimline end fill"),
+            "Appearance": (sprite: (rsi: "textures/decals/trimline_end_fill", state: "trimline_end_fill")),
+        },
+    ),
+]

@@ -1,0 +1,14 @@
+[
+    (
+        type: "Entity",
+        id: "structure_newscaster",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "newscaster"),
+            "WallMount": (),
+            "PlacementLayer": WallMount,
+            "Facing": (South),
+            "Appearance": (sprite: (rsi: "textures/structures/wallmounts/machines/newscaster", state: "newscaster_off"), depth: WallMounted, layers: [(state: "newscaster_normal", shading: Unshaded)]),
+        },
+    ),
+]

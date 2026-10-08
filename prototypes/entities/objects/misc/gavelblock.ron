@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_gavelblock",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "sound block"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/gavelblock", state: "gavelblock")),
+        },
+    ),
+]

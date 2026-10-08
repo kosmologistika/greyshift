@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_circular_saw",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "circular saw"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/circular_saw", state: "saw")),
+        },
+    ),
+]

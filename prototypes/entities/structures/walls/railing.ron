@@ -1,0 +1,56 @@
+[
+    (
+        type: "Entity",
+        id: "structure_railing",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "railing"),
+            "Appearance": (sprite: (rsi: "textures/structures/walls/railing", state: "railing"), depth: WallMounted),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_railing_corner_end",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "railing"),
+            "Appearance": (sprite: (rsi: "textures/structures/walls/railing_corner_end", state: "railing_end"), depth: WallMounted),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_railing_corner_end_flip",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "railing"),
+            "Appearance": (sprite: (rsi: "textures/structures/walls/railing_corner_end_flip", state: "railing_end_flip"), depth: WallMounted),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_railing_corner",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "railing"),
+            "Appearance": (sprite: (rsi: "textures/structures/walls/railing_corner", state: "railing_corner"), depth: WallMounted),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_railing_platform_corner",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "platform"),
+            "Appearance": (sprite: (rsi: "textures/structures/walls/railing_platform_corner", state: "metalcorner"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_railing_platform",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "platform"),
+            "Appearance": (sprite: (rsi: "textures/structures/walls/railing_platform", state: "metal"), depth: Furniture),
+        },
+    ),
+]

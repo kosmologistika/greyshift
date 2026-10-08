@@ -1,0 +1,152 @@
+[
+    (
+        type: "Entity",
+        id: "prop_stamp_granted",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "GRANTED rubber stamp"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/stamp_granted", state: "stamp-ok")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_stamp_denied",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "DENIED rubber stamp"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/stamp_denied", state: "stamp-deny")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_stamp_head_qm",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "quartermaster's rubber stamp"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/stamp_head_qm", state: "stamp-qm")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_stamp_law",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "law office's rubber stamp"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/stamp_law", state: "stamp-law")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_stamp",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "rubber stamp"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/stamp", state: "folder_red")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_stamp_head_hop",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "head of personnel's rubber stamp"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/stamp_head_hop", state: "stamp-hop")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_stamp_nanotrasen_representative",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Nanotrasen Representative's rubber stamp"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/stamp_nanotrasen_representative", state: "stamp-nanotrasen_representative")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_stamp_magistrate",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Magistrate's rubber stamp"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/stamp_magistrate", state: "stamp-magistrate")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_stamp_head_captain",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "captain's rubber stamp"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/stamp_head_captain", state: "stamp-cap")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_stamp_mime",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "mime's rubber stamp"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/stamp_mime", state: "stamp-mime")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_stamp_head_ce",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "chief engineer's rubber stamp"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/stamp_head_ce", state: "stamp-ce")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_stamp_clown",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "clown's rubber stamp"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/stamp_clown", state: "stamp-clown")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_stamp_head_hos",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "head of security's rubber stamp"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/stamp_head_hos", state: "stamp-hos")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_stamp_head_cmo",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "chief medical officer's rubber stamp"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/stamp_head_cmo", state: "stamp-cmo")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_stamp_head_rd",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "research director's rubber stamp"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/stamp_head_rd", state: "stamp-rd")),
+        },
+    ),
+]

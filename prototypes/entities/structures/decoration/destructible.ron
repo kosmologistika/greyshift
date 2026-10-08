@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_destructible_cult_item_dispenser_archives_library",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "archives"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/destructible_cult_item_dispenser_archives_library", state: "tomealtar_off"), depth: Furniture),
+        },
+    ),
+]

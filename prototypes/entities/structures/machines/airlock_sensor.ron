@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_airlock_sensor_incinerator_atmos",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "airlock sensor"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/airlock_sensor_incinerator_atmos", state: "airlock_sensor_off"), depth: Furniture),
+        },
+    ),
+]

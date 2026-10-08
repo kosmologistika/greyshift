@@ -1,0 +1,29 @@
+[
+    (
+        type: "Entity",
+        id: "structure_reflector_single",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "reflector"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/reflector_single", state: "reflector_map"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_reflector_double",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "double sided reflector"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/reflector_double", state: "reflector_map"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_reflector_box",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "reflector box"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/reflector_box", state: "reflector_map"), depth: Furniture),
+        },
+    ),
+]

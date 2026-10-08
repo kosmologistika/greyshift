@@ -1,0 +1,22 @@
+[
+    (
+        type: "Entity",
+        id: "prop_modular_computer_laptop",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "laptop"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/modular_computer_laptop", state: "laptop-closed")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_modular_computer_laptop_preset_civilian",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "laptop"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/modular_computer_laptop_preset_civilian", state: "laptop-closed")),
+        },
+    ),
+]

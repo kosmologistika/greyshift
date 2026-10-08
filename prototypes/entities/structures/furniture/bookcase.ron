@@ -1,0 +1,56 @@
+[
+    (
+        type: "Entity",
+        id: "structure_bookcase",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "bookcase"),
+            "Appearance": (sprite: (rsi: "textures/structures/furniture/bookcase", state: "book-0"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_bookcase_random",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "bookcase"),
+            "Appearance": (sprite: (rsi: "textures/structures/furniture/bookcase_random", state: "book-2"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_bookcase_random_reference",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "bookcase (Reference)"),
+            "Appearance": (sprite: (rsi: "textures/structures/furniture/bookcase_random_reference", state: "book-2"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_bookcase_random_adult",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "bookcase (Adult)"),
+            "Appearance": (sprite: (rsi: "textures/structures/furniture/bookcase_random_adult", state: "book-2"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_bookcase_random_fiction",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "bookcase (Fiction)"),
+            "Appearance": (sprite: (rsi: "textures/structures/furniture/bookcase_random_fiction", state: "book-2"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_bookcase_random_religion",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "bookcase (Religion)"),
+            "Appearance": (sprite: (rsi: "textures/structures/furniture/bookcase_random_religion", state: "book-2"), depth: Furniture),
+        },
+    ),
+]

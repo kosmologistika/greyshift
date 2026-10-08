@@ -1,0 +1,14 @@
+[
+    (
+        type: "Entity",
+        id: "structure_shower",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "shower"),
+            "WallMount": (),
+            "PlacementLayer": WallMount,
+            "Facing": (South),
+            "Appearance": (sprite: (rsi: "textures/structures/wallmounts/machines/shower", state: "shower"), depth: WallMounted),
+        },
+    ),
+]

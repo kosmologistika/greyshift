@@ -1,0 +1,56 @@
+[
+    (
+        type: "Entity",
+        id: "structure_displaycase_forsale",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "vend-a-tray"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/displaycase_forsale", state: "laserbox"), depth: BelowMobs),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_displaycase_captain",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "display case"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/displaycase_captain", state: "glassbox"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_displaycase_forsale_kitchen",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "vend-a-tray"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/displaycase_forsale_kitchen", state: "laserbox"), depth: BelowMobs),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_displaycase",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "display case"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/displaycase", state: "glassbox"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_displaycase_trophy",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "trophy display case"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/displaycase_trophy", state: "glassbox"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_displaycase_labcage",
+        parents: ["base_structure_solid"],
+        components: {
+            "DisplayName": (name: "lab cage"),
+            "Appearance": (sprite: (rsi: "textures/structures/storage/displaycase_labcage", state: "glassbox"), depth: Furniture),
+        },
+    ),
+]

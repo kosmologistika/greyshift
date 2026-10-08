@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_pai_card",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "personal AI device"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/pai_card", state: "pai")),
+        },
+    ),
+]

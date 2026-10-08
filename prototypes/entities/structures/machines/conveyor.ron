@@ -1,0 +1,20 @@
+[
+    (
+        type: "Entity",
+        id: "structure_conveyor",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "conveyor belt"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/conveyor", state: "conveyor_map"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_conveyor_inverted",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "conveyor belt"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/conveyor_inverted", state: "conveyor_map_inverted"), depth: Furniture),
+        },
+    ),
+]

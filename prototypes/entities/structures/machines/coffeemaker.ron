@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_coffeemaker_impressa",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "impressa coffeemaker"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/coffeemaker_impressa", state: "coffeemaker_impressa"), depth: BelowMobs),
+        },
+    ),
+]

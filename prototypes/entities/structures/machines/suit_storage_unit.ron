@@ -1,0 +1,101 @@
+[
+    (
+        type: "Entity",
+        id: "structure_suit_storage_unit_standard_unit",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "suit storage unit"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/suit_storage_unit_standard_unit", state: "classic"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_suit_storage_unit_engine",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "suit storage unit"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/suit_storage_unit_engine", state: "classic"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_suit_storage_unit_security",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "suit storage unit"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/suit_storage_unit_security", state: "classic"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_suit_storage_unit_blueshield",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "suit storage unit"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/suit_storage_unit_blueshield", state: "classic"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_suit_storage_unit_captain",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "suit storage unit"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/suit_storage_unit_captain", state: "classic"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_suit_storage_unit_atmos",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "suit storage unit"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/suit_storage_unit_atmos", state: "classic"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_suit_storage_unit_ce",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "suit storage unit"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/suit_storage_unit_ce", state: "classic"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_suit_storage_unit_medical",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "suit storage unit"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/suit_storage_unit_medical", state: "classic"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_suit_storage_unit_hos",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "suit storage unit"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/suit_storage_unit_hos", state: "classic"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_suit_storage_unit_cmo",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "suit storage unit"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/suit_storage_unit_cmo", state: "classic"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_suit_storage_unit_rd",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "suit storage unit"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/suit_storage_unit_rd", state: "classic"), depth: Furniture),
+        },
+    ),
+]

@@ -1,0 +1,92 @@
+[
+    (
+        type: "Entity",
+        id: "prop_circuitboard_computer_apc_control",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Power Flow Control Console"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/circuitboard_computer_apc_control", state: "circuit_map")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_circuitboard_computer_operating",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Operating Computer"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/circuitboard_computer_operating", state: "circuit_map")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_circuitboard_machine_exoscanner",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Exoscanner"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/circuitboard_machine_exoscanner", state: "circuit_map")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_circuitboard_machine_crystallizer",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Crystallizer"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/circuitboard_machine_crystallizer", state: "circuit_map")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_circuitboard_computer_mech_bay_power_console",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Mech Bay Power Control Console"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/circuitboard_computer_mech_bay_power_console", state: "circuit_map")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_circuitboard_machine_chem_dispenser",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Chem Dispenser"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/circuitboard_machine_chem_dispenser", state: "circuit_map")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_circuitboard_machine_chem_heater",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Chemical Heater"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/circuitboard_machine_chem_heater", state: "circuit_map")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_circuitboard_machine_thermomachine",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Thermomachine"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/circuitboard_machine_thermomachine", state: "circuit_map")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_circuitboard_aicore",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "AI Core"),
+            "Item": (size: Small, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/circuitboard_aicore", state: "circuit_map")),
+        },
+    ),
+]

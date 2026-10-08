@@ -1,0 +1,14 @@
+[
+    (
+        type: "Entity",
+        id: "structure_extinguisher_cabinet",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "extinguisher cabinet"),
+            "WallMount": (),
+            "PlacementLayer": WallMount,
+            "Facing": (South),
+            "Appearance": (sprite: (rsi: "textures/structures/wallmounts/storage/extinguisher_cabinet", state: "extinguisher_default"), depth: WallMounted, layers: [(state: "door")]),
+        },
+    ),
+]

@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_brain_processor_organic",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "Man-Machine Interface"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/brain_processor_organic", state: "mmi_off")),
+        },
+    ),
+]

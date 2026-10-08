@@ -1,0 +1,20 @@
+[
+    (
+        type: "Entity",
+        id: "structure_disposal_bin",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "disposal unit"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/disposal_bin", state: "disposal"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_disposal_delivery_chute",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "delivery chute"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/disposal_delivery_chute", state: "intake"), depth: Furniture),
+        },
+    ),
+]

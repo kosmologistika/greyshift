@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_clothing_accessory_holster",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "shoulder holster"),
+            "Item": (size: Large, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/clothing/accessory/clothing_accessory_holster", state: "holster")),
+        },
+    ),
+]

@@ -1,0 +1,62 @@
+[
+    (
+        type: "Entity",
+        id: "prop_clothing_shoes_jackboots",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "jackboots"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/clothing/shoes/clothing_shoes_jackboots", state: "jackboots")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_clothing_shoes_workboots",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "work boots"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/clothing/shoes/clothing_shoes_workboots", state: "workboots")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_clothing_shoes_sneakers_orange",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "orange shoes"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/clothing/shoes/clothing_shoes_sneakers_orange", state: "obj_item_clothing_shoes_sneakers_orange")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_clothing_shoes_clown_shoes",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "clown shoes"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/clothing/shoes/clothing_shoes_clown_shoes", state: "clown")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_clothing_shoes_magboots",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "magboots"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/clothing/shoes/clothing_shoes_magboots", state: "magboots0")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_clothing_shoes_galoshes",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "galoshes"),
+            "Item": (size: Medium, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/clothing/shoes/clothing_shoes_galoshes", state: "galoshes")),
+        },
+    ),
+]

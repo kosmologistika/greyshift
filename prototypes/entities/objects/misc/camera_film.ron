@@ -1,0 +1,12 @@
+[
+    (
+        type: "Entity",
+        id: "prop_camera_film",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "film cartridge"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/camera_film", state: "film")),
+        },
+    ),
+]

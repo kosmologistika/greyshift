@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_plumbing_receiver",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "chemical recipient"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/plumbing_receiver", state: "recipient"), depth: Furniture),
+        },
+    ),
+]

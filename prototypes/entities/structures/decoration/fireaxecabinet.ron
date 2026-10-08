@@ -1,0 +1,29 @@
+[
+    (
+        type: "Entity",
+        id: "structure_fireaxecabinet",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "fire axe cabinet"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/fireaxecabinet", state: "fireaxe"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_fireaxecabinet_jawsofrecovery",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "jaws of recovery tool cabinet"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/fireaxecabinet_jawsofrecovery", state: "jaws_of_recovery"), depth: Furniture),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "structure_fireaxecabinet_mechremoval",
+        parents: ["base_prop_scenery"],
+        components: {
+            "DisplayName": (name: "mech removal tool cabinet"),
+            "Appearance": (sprite: (rsi: "textures/structures/decoration/fireaxecabinet_mechremoval", state: "mechremoval"), depth: Furniture),
+        },
+    ),
+]

@@ -1,0 +1,101 @@
+[
+    (
+        type: "Entity",
+        id: "decal_tile_corner",
+        parents: ["base_decal_tile"],
+        components: {
+            "DisplayName": (name: "tile corner"),
+            "Appearance": (sprite: (rsi: "textures/decals/tile_corner", state: "tile_corner")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_tile_opposing_corners",
+        parents: ["base_decal_tile"],
+        components: {
+            "DisplayName": (name: "tile opposing corners"),
+            "Appearance": (sprite: (rsi: "textures/decals/tile_opposing_corners", state: "tile_opposing_corners")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_tile_half_contrasted",
+        parents: ["base_decal_tile"],
+        components: {
+            "DisplayName": (name: "tile half contrasted"),
+            "Appearance": (sprite: (rsi: "textures/decals/tile_half_contrasted", state: "tile_half_contrasted")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_tile_anticorner_contrasted",
+        parents: ["base_decal_tile"],
+        components: {
+            "DisplayName": (name: "tile anticorner contrasted"),
+            "Appearance": (sprite: (rsi: "textures/decals/tile_anticorner_contrasted", state: "tile_anticorner_contrasted")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_tile_fourcorners",
+        parents: ["base_decal_tile"],
+        components: {
+            "DisplayName": (name: "tile fourcorners"),
+            "Appearance": (sprite: (rsi: "textures/decals/tile_fourcorners", state: "tile_fourcorners")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_tile_full",
+        parents: ["base_decal_tile"],
+        components: {
+            "DisplayName": (name: "tile full"),
+            "Appearance": (sprite: (rsi: "textures/decals/tile_full", state: "tile_full")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_tile_half",
+        parents: ["base_decal_tile"],
+        components: {
+            "DisplayName": (name: "tile half"),
+            "Appearance": (sprite: (rsi: "textures/decals/tile_half", state: "tile_half")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_diagonal_edge",
+        parents: ["base_decal_tile"],
+        components: {
+            "DisplayName": (name: "diagonal edge"),
+            "Appearance": (sprite: (rsi: "textures/decals/diagonal_edge", state: "diagonal_edge")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_tile_tram",
+        parents: ["base_decal_tile"],
+        components: {
+            "DisplayName": (name: "tile tram"),
+            "Appearance": (sprite: (rsi: "textures/decals/tile_tram", state: "tile_tram")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_tile_anticorner",
+        parents: ["base_decal_tile"],
+        components: {
+            "DisplayName": (name: "tile anticorner"),
+            "Appearance": (sprite: (rsi: "textures/decals/tile_anticorner", state: "tile_anticorner")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "decal_diagonal_centre",
+        parents: ["base_decal_tile"],
+        components: {
+            "DisplayName": (name: "diagonal centre"),
+            "Appearance": (sprite: (rsi: "textures/decals/diagonal_centre", state: "diagonal_centre")),
+        },
+    ),
+]

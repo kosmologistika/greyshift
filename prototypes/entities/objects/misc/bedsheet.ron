@@ -1,0 +1,132 @@
+[
+    (
+        type: "Entity",
+        id: "prop_bedsheet_black",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "bedsheet"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/bedsheet_black", state: "sheetblack")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_bedsheet_hop",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "head of personnel's bedsheet"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/bedsheet_hop", state: "sheethop")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_bedsheet_captain",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "captain's bedsheet"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/bedsheet_captain", state: "sheetcaptain")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_bedsheet_mime",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "mime's blanket"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/bedsheet_mime", state: "sheetmime")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_bedsheet_purple",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "bedsheet"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/bedsheet_purple", state: "sheetpurple")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_bedsheet",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "bedsheet"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/bedsheet", state: "sheetwhite")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_bedsheet_ce",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "chief engineer's bedsheet"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/bedsheet_ce", state: "sheetce")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_bedsheet_clown",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "clown's blanket"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/bedsheet_clown", state: "sheetclown")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_bedsheet_hos",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "head of security's bedsheet"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/bedsheet_hos", state: "sheethos")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_bedsheet_cmo",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "chief medical officer's bedsheet"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/bedsheet_cmo", state: "sheetcmo")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_bedsheet_blue",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "bedsheet"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/bedsheet_blue", state: "sheetblue")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_bedsheet_brown",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "bedsheet"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/bedsheet_brown", state: "sheetbrown")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "prop_bedsheet_orange",
+        parents: ["base_item"],
+        components: {
+            "DisplayName": (name: "bedsheet"),
+            "Item": (size: Tiny, held: Bundle),
+            "Appearance": (sprite: (rsi: "textures/objects/misc/bedsheet_orange", state: "sheetorange")),
+        },
+    ),
+]

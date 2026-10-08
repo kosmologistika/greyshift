@@ -1,0 +1,11 @@
+[
+    (
+        type: "Entity",
+        id: "structure_bci_implanter",
+        parents: ["base_structure_metal_box"],
+        components: {
+            "DisplayName": (name: "brain-computer interface manipulation chamber"),
+            "Appearance": (sprite: (rsi: "textures/structures/machines/bci_implanter", state: "bci_implanter"), depth: Furniture),
+        },
+    ),
+]
