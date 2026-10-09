@@ -6,7 +6,7 @@ using static TypedModuleWorld.wit.Imports.rs13.mods.v0_1_0.ITypedEcsImports;
 // the floor, anyone walks over them, and buying your way out of the death
 // shop is the only way back. Design: docs/design/blood_money.md
 
-[assembly: Mod(typeof(BloodMoney))]
+[assembly: Mod(typeof(BloodMoney), typeof(ModJson))]
 
 [JsonSourceGenerationOptions(PropertyNamingPolicy = JsonKnownNamingPolicy.SnakeCaseLower, UseStringEnumConverter = true)]
 [JsonSerializable(typeof(Series))]

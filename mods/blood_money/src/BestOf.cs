@@ -16,7 +16,7 @@ static class BestOf
 {
     public static void Setup(ModApp app)
     {
-        app.RegisterComponent(ModJson.Default.Series);
+        app.RegisterComponent<Series>();
         app.Observe<RuleStarted>(OnRuleStarted);
         app.Observe<ScopeEnding>(OnMatchEnding);
     }

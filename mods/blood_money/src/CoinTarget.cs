@@ -14,7 +14,7 @@ static class CoinTarget
 {
     public static void Setup(ModApp app)
     {
-        app.RegisterComponent(ModJson.Default.Race);
+        app.RegisterComponent<Race>();
         app.Observe<RuleStarted>(OnRuleStarted);
         app.Every(TimeSpan.FromMilliseconds(100), WatchTheRace);
     }

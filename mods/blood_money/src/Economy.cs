@@ -71,12 +71,12 @@ static class Economy
 
     public static void Setup(ModApp app)
     {
-        app.RegisterResource(ModJson.Default.PendingSpills);
-        app.RegisterResource(ModJson.Default.CoinSoundGate);
-        app.RegisterResource(ModJson.Default.Salt);
-        app.RegisterResource(ModJson.Default.DripAnchor);
-        app.RegisterComponent(ModJson.Default.PileDecay);
-        app.RegisterComponent(ModJson.Default.SpilledBy);
+        app.RegisterResource<PendingSpills>();
+        app.RegisterResource<CoinSoundGate>();
+        app.RegisterResource<Salt>();
+        app.RegisterResource<DripAnchor>();
+        app.RegisterComponent<PileDecay>();
+        app.RegisterComponent<SpilledBy>();
         app.Observe<DamageDealt>(LeakOnHit);
         app.Observe<Killed>(BountyOnKill);
         app.Observe<Triggered>(BurstOnTrigger);
