@@ -42,9 +42,10 @@ fn on_rule_started(on: RuleStarted, world: &mut World) {
     world.insert(on.entity, Race { expiry, board });
 }
 
-/// Balance is the score. First wallet at the target ends the match on the
-/// spot; the timer running out hands it to the richest, and an exact tie at
-/// the top of a timeout is a draw that credits nobody
+/// Balance is the score. The first wallet at the target ends the match on
+/// the next sample, a tenth of a second at most; the timer running out hands
+/// it to the richest, and an exact tie at the top of a timeout is a draw that
+/// credits nobody
 fn watch_the_race(world: &mut World) {
     let now = world.now();
     for (_, (rule, ChildOf(scope), race)) in world.query::<(CoinTargetRule, ChildOf, Race)>() {
