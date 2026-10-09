@@ -25,8 +25,8 @@ class Spill
 // first pile each tick plays, the rest are the same moment
 class CoinSoundGate
 {
-    public ulong ClinkMs { get; set; }
-    public ulong DingMs { get; set; }
+    public ulong ClinkTick { get; set; }
+    public ulong DingTick { get; set; }
 }
 
 // When a pile stops waiting to be grabbed
@@ -67,8 +67,6 @@ static class Economy
     // A big spill never becomes a hundred entities: past this many piles the
     // handfuls just get fatter
     const uint MaxPiles = 20;
-    // One tick: sounds inside this window are the same moment
-    const ulong SameMomentMs = 20;
     const float BurnSecs = 0.7f;
 
     public static void Setup(ModApp app)
@@ -158,10 +156,11 @@ static class Economy
         }
         // Only what actually drained pools here; the broke-victim crumb is
         // decided at flush, once per victim per frame
-        var knocked = (uint)Math.Round(damage * Math.Max(hook.knockout, 0f));
+        // Half away from zero, as f32::round did natively
+        var knocked = (uint)Math.Round(damage * Math.Max(hook.knockout, 0f), MidpointRounding.AwayFromZero);
         var drained = Math.Min(wallet.balance, knocked);
         world.Mutate(walletEntity, new Wallet(wallet.balance - drained, wallet.earned));
-        var refund = (uint)Math.Round(drained * Math.Clamp(hook.refund, 0f, 1f));
+        var refund = (uint)Math.Round(drained * Math.Clamp(hook.refund, 0f, 1f), MidpointRounding.AwayFromZero);
         var spilled = drained - refund;
         ulong? attacker = on.origin is { } origin && origin != on.entity ? world.Get<ControlledBy>(origin)?.Value : null;
         // A share nobody can pocket showers with the rest: coins never vanish
@@ -306,10 +305,10 @@ static class Economy
         appearance.sprite = new RsiRef(appearance.sprite.rsi, "coinshot_still");
         world.Insert(entity, appearance);
         var gate = world.GetResource<CoinSoundGate>() ?? new CoinSoundGate();
-        var nowMs = (ulong)world.Now.TotalMilliseconds;
-        if (nowMs - gate.ClinkMs >= SameMomentMs)
+        var tick = world.Tick;
+        if (gate.ClinkTick != tick)
         {
-            gate.ClinkMs = nowMs;
+            gate.ClinkTick = tick;
             world.InsertResource(gate);
             world.PlaySound("audio/effects/coin_drop.ogg", at);
         }
@@ -363,6 +362,7 @@ static class Economy
             return;
         }
         var gate = world.GetResource<CoinSoundGate>() ?? new CoinSoundGate();
+        var tick = world.Tick;
         foreach (var (pile, coins, at) in world.Query<CoinPile, TilePos>())
         {
             if (world.Get<InFlight>(pile) is not null)
@@ -391,9 +391,9 @@ static class Economy
             {
                 Credit(world, entity, wallet, coins.value);
             }
-            if (nowMs - gate.DingMs >= SameMomentMs)
+            if (gate.DingTick != tick)
             {
-                gate.DingMs = nowMs;
+                gate.DingTick = tick;
                 world.InsertResource(gate);
                 world.PlaySound("audio/effects/coin_ding.ogg", at);
             }
