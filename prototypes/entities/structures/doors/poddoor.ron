@@ -2,10 +2,9 @@
     (
         type: "Entity",
         id: "structure_poddoor_massdriver_trash",
-        parents: ["base_structure_solid"],
+        parents: ["base_structure_solid", "structure_door_frame_base"],
         components: {
             "DisplayName": (name: "Disposals Launcher Bay Door"),
-            "AreaBoundary": (),
             "Occluder": (),
             "Solid": (),
             "Appearance": (sprite: (rsi: "textures/structures/doors/poddoor_massdriver_trash", state: "closed"), depth: WallOverlay),
@@ -14,20 +13,18 @@
     (
         type: "Entity",
         id: "structure_poddoor_open",
-        parents: ["base_prop_scenery"],
+        parents: ["base_prop_scenery", "structure_door_frame_base"],
         components: {
             "DisplayName": (name: "blast door"),
-            "AreaBoundary": (),
             "Appearance": (sprite: (rsi: "textures/structures/doors/poddoor_open", state: "open"), depth: FloorFixture),
         },
     ),
     (
         type: "Entity",
         id: "structure_poddoor",
-        parents: ["base_structure_solid"],
+        parents: ["base_structure_solid", "structure_door_frame_base"],
         components: {
             "DisplayName": (name: "blast door"),
-            "AreaBoundary": (),
             "Occluder": (),
             "Solid": (),
             "Appearance": (sprite: (rsi: "textures/structures/doors/poddoor", state: "closed"), depth: WallOverlay),
@@ -36,20 +33,18 @@
     (
         type: "Entity",
         id: "structure_poddoor_shutters_radiation_open",
-        parents: ["base_prop_scenery"],
+        parents: ["base_prop_scenery", "structure_door_frame_base"],
         components: {
             "DisplayName": (name: "radiation shutters"),
-            "AreaBoundary": (),
             "Appearance": (sprite: (rsi: "textures/structures/doors/poddoor_shutters_radiation_open", state: "open"), depth: WallOverlay),
         },
     ),
     (
         type: "Entity",
         id: "structure_poddoor_shutters",
-        parents: ["base_structure_solid"],
+        parents: ["base_structure_solid", "structure_door_frame_base"],
         components: {
             "DisplayName": (name: "shutters"),
-            "AreaBoundary": (),
             "Occluder": (),
             "Solid": (),
             "Appearance": (sprite: (rsi: "textures/structures/doors/poddoor_shutters", state: "closed"), depth: WallOverlay),
@@ -58,20 +53,18 @@
     (
         type: "Entity",
         id: "structure_poddoor_shutters_open",
-        parents: ["base_prop_scenery"],
+        parents: ["base_prop_scenery", "structure_door_frame_base"],
         components: {
             "DisplayName": (name: "shutters"),
-            "AreaBoundary": (),
             "Appearance": (sprite: (rsi: "textures/structures/doors/poddoor_shutters_open", state: "open"), depth: WallOverlay),
         },
     ),
     (
         type: "Entity",
         id: "structure_poddoor_incinerator_atmos_aux",
-        parents: ["base_structure_solid"],
+        parents: ["base_structure_solid", "structure_door_frame_base"],
         components: {
             "DisplayName": (name: "combustion chamber vent"),
-            "AreaBoundary": (),
             "Occluder": (),
             "Solid": (),
             "Appearance": (sprite: (rsi: "textures/structures/doors/poddoor_incinerator_atmos_aux", state: "closed"), depth: WallOverlay),
@@ -80,10 +73,9 @@
     (
         type: "Entity",
         id: "structure_poddoor_incinerator_atmos_main",
-        parents: ["base_structure_solid"],
+        parents: ["base_structure_solid", "structure_door_frame_base"],
         components: {
             "DisplayName": (name: "turbine vent"),
-            "AreaBoundary": (),
             "Occluder": (),
             "Solid": (),
             "Appearance": (sprite: (rsi: "textures/structures/doors/poddoor_incinerator_atmos_main", state: "closed"), depth: WallOverlay),
@@ -92,10 +84,9 @@
     (
         type: "Entity",
         id: "structure_poddoor_shutters_window",
-        parents: ["base_structure_solid"],
+        parents: ["base_structure_solid", "structure_door_frame_base"],
         components: {
             "DisplayName": (name: "windowed shutters"),
-            "AreaBoundary": (),
             "Occluder": (),
             "Solid": (),
             "Appearance": (sprite: (rsi: "textures/structures/doors/poddoor_shutters_window", state: "closed"), depth: WallOverlay),
@@ -104,10 +95,9 @@
     (
         type: "Entity",
         id: "structure_poddoor_shuttledock",
-        parents: ["base_structure_solid"],
+        parents: ["base_structure_solid", "structure_door_frame_base"],
         components: {
             "DisplayName": (name: "blast door"),
-            "AreaBoundary": (),
             "Occluder": (),
             "Solid": (),
             "Appearance": (sprite: (rsi: "textures/structures/doors/poddoor_shuttledock", state: "closed"), depth: WallOverlay),
@@ -116,20 +106,18 @@
     (
         type: "Entity",
         id: "structure_poddoor_shutters_window_open",
-        parents: ["base_prop_scenery"],
+        parents: ["base_prop_scenery", "structure_door_frame_base"],
         components: {
             "DisplayName": (name: "windowed shutters"),
-            "AreaBoundary": (),
             "Appearance": (sprite: (rsi: "textures/structures/doors/poddoor_shutters_window_open", state: "open"), depth: WallOverlay),
         },
     ),
     (
         type: "Entity",
         id: "structure_poddoor_massdriver_chapel",
-        parents: ["base_structure_solid"],
+        parents: ["base_structure_solid", "structure_door_frame_base"],
         components: {
             "DisplayName": (name: "Chapel Launcher Bay Door"),
-            "AreaBoundary": (),
             "Occluder": (),
             "Solid": (),
             "Appearance": (sprite: (rsi: "textures/structures/doors/poddoor_massdriver_chapel", state: "closed"), depth: WallOverlay),
@@ -138,10 +126,9 @@
     (
         type: "Entity",
         id: "structure_poddoor_massdriver_ordnance",
-        parents: ["base_structure_solid"],
+        parents: ["base_structure_solid", "structure_door_frame_base"],
         components: {
             "DisplayName": (name: "Ordnance Launcher Bay Door"),
-            "AreaBoundary": (),
             "Occluder": (),
             "Solid": (),
             "Appearance": (sprite: (rsi: "textures/structures/doors/poddoor_massdriver_ordnance", state: "closed"), depth: WallOverlay),

@@ -1,12 +1,24 @@
 [
+    // What every door has in common with every blast door, shutter, firelock
+    // and windoor: it bounds the rooms either side of it, and the walls and
+    // windows around it close their frames onto it while it draws itself
+    (
+        type: "Entity",
+        id: "structure_door_frame_base",
+        abstract: true,
+        components: {
+            "AreaBoundary": (),
+            "IconSmooth": (key: "wall", mode: NoSprite),
+        },
+    ),
     // What every door is before it has a motor or a material: it fills its
-    // cell, bounds the rooms either side of it, and can be broken down
+    // cell and can be broken down
     (
         type: "Entity",
         id: "structure_door_base",
         abstract: true,
+        parents: ["structure_door_frame_base"],
         components: {
-            "AreaBoundary": (),
             // The obstruction sensor. Cutting it (wires, an AI override) is
             // what turns a door with CrushDamage into something that hurts
             "DoorSafety": (),

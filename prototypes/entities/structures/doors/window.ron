@@ -2,60 +2,54 @@
     (
         type: "Entity",
         id: "structure_window_right",
-        parents: ["base_prop_scenery"],
+        parents: ["base_prop_scenery", "structure_door_frame_base"],
         components: {
             "DisplayName": (name: "interior door"),
-            "AreaBoundary": (),
             "Appearance": (sprite: (rsi: "textures/structures/doors/window_right", state: "right"), depth: Doors),
         },
     ),
     (
         type: "Entity",
         id: "structure_window_left",
-        parents: ["base_prop_scenery"],
+        parents: ["base_prop_scenery", "structure_door_frame_base"],
         components: {
             "DisplayName": (name: "interior door"),
-            "AreaBoundary": (),
             "Appearance": (sprite: (rsi: "textures/structures/doors/window_left", state: "left"), depth: Doors),
         },
     ),
     (
         type: "Entity",
         id: "structure_window_brigdoor_right",
-        parents: ["base_prop_scenery"],
+        parents: ["base_prop_scenery", "structure_door_frame_base"],
         components: {
             "DisplayName": (name: "secure door"),
-            "AreaBoundary": (),
             "Appearance": (sprite: (rsi: "textures/structures/doors/window_brigdoor_right", state: "rightsecure"), depth: Doors),
         },
     ),
     (
         type: "Entity",
         id: "structure_window_brigdoor_left",
-        parents: ["base_prop_scenery"],
+        parents: ["base_prop_scenery", "structure_door_frame_base"],
         components: {
             "DisplayName": (name: "secure door"),
-            "AreaBoundary": (),
             "Appearance": (sprite: (rsi: "textures/structures/doors/window_brigdoor_left", state: "leftsecure"), depth: Doors),
         },
     ),
     (
         type: "Entity",
         id: "structure_window_brigdoor_security_cell_right",
-        parents: ["base_prop_scenery"],
+        parents: ["base_prop_scenery", "structure_door_frame_base"],
         components: {
             "DisplayName": (name: "cell door"),
-            "AreaBoundary": (),
             "Appearance": (sprite: (rsi: "textures/structures/doors/window_brigdoor_security_cell_right", state: "rightsecure"), depth: Doors),
         },
     ),
     (
         type: "Entity",
         id: "structure_window_brigdoor_security_cell_left",
-        parents: ["base_prop_scenery"],
+        parents: ["base_prop_scenery", "structure_door_frame_base"],
         components: {
             "DisplayName": (name: "cell door"),
-            "AreaBoundary": (),
             "Appearance": (sprite: (rsi: "textures/structures/doors/window_brigdoor_security_cell_left", state: "leftsecure"), depth: Doors),
         },
     ),

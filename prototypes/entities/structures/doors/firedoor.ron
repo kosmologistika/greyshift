@@ -2,30 +2,27 @@
     (
         type: "Entity",
         id: "structure_firedoor",
-        parents: ["base_prop_scenery"],
+        parents: ["base_prop_scenery", "structure_door_frame_base"],
         components: {
             "DisplayName": (name: "firelock"),
-            "AreaBoundary": (),
             "Appearance": (sprite: (rsi: "textures/structures/doors/firedoor", state: "door_open"), depth: FloorFixture),
         },
     ),
     (
         type: "Entity",
         id: "structure_firedoor_border_only",
-        parents: ["base_prop_scenery"],
+        parents: ["base_prop_scenery", "structure_door_frame_base"],
         components: {
             "DisplayName": (name: "firelock"),
-            "AreaBoundary": (),
             "Appearance": (sprite: (rsi: "textures/structures/doors/firedoor_border_only", state: "door_open"), depth: FloorFixture),
         },
     ),
     (
         type: "Entity",
         id: "structure_firedoor_heavy",
-        parents: ["base_prop_scenery"],
+        parents: ["base_prop_scenery", "structure_door_frame_base"],
         components: {
             "DisplayName": (name: "heavy firelock"),
-            "AreaBoundary": (),
             "Appearance": (sprite: (rsi: "textures/structures/doors/firedoor_heavy", state: "door_open"), depth: FloorFixture),
         },
     ),
