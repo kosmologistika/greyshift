@@ -4,7 +4,7 @@
         id: "coin_handful",
         components: {
             "DisplayName": (name: "handful of coins"),
-            "CoinPile": (value: 1),
+            "blood_money::CoinPile": (value: 1),
             "PlacementLayer": Free,
             // Thrown out of the victim like blood; the launch authors the
             // stop-and-bounce rules, the marker makes the landing settle.

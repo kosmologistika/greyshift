@@ -25,7 +25,7 @@ static class BestOf
     // tiebreak must not remember last round's scrounging
     static void OnRuleStarted(RuleStarted on, World world)
     {
-        if (world.Get<BestOfRule>(on.entity) is null)
+        if (world.GetOwn<BestOfRule>(on.entity) is null)
         {
             return;
         }
@@ -45,8 +45,12 @@ static class BestOf
         }
         ulong? winner = on.outcome.places.Count > 0 ? on.outcome.places[0].player : null;
 
-        foreach (var (entity, rule, childOf) in world.Query<BestOfRule, ChildOf>())
+        foreach (var (entity, rule) in world.QueryOwn<BestOfRule>().ToList())
         {
+            if (world.Get<ChildOf>(entity) is not { } childOf)
+            {
+                continue;
+            }
             var scope = childOf.Value;
             if (ending.Value != scope || world.Get<ScopeEnded>(scope) is not null || world.GetOwn<Series>(entity) is not { } series)
             {
@@ -66,7 +70,7 @@ static class BestOf
             var rows = ranking.Select(place => new ScoreRow(place.name, place.score, winner == place.player, place.player)).ToList();
             world.Insert(series.Board, Board(rows));
 
-            if (series.Played >= rule.matches)
+            if (series.Played >= rule.Matches)
             {
                 world.Trigger(new EndScope(scope, new ScopeOutcome("gamemode-round-won", ranking)));
             }

@@ -21,11 +21,11 @@ static class CoinTarget
 
     static void OnRuleStarted(RuleStarted on, World world)
     {
-        if (world.Get<CoinTargetRule>(on.entity) is not { } rule)
+        if (world.GetOwn<CoinTargetRule>(on.entity) is not { } rule)
         {
             return;
         }
-        var endsAt = world.Now + TimeSpan.FromSeconds(rule.secs);
+        var endsAt = world.Now + TimeSpan.FromSeconds(rule.Secs);
         var board = world.Spawn(world.Bundle(Board([])), world.Bundle(new ChildOf(on.entity)), world.Bundle(new Replicated()));
         world.Spawn(
             world.Bundle(new HudBanner(HudZone.TOP_CENTER, "gamemode-match-timer", "", new Deadline(Durations.From(endsAt)))),
@@ -45,8 +45,12 @@ static class CoinTarget
             return;
         }
         var now = (ulong)world.Now.TotalMilliseconds;
-        foreach (var (entity, rule, childOf) in world.Query<CoinTargetRule, ChildOf>())
+        foreach (var (entity, rule) in world.QueryOwn<CoinTargetRule>().ToList())
         {
+            if (world.Get<ChildOf>(entity) is not { } childOf)
+            {
+                continue;
+            }
             var scope = childOf.Value;
             // A rule outlives the end of its scope by a frame, and must not act in it
             if (world.Get<ScopeEnded>(scope) is not null || world.GetOwn<Race>(entity) is not { } race)
@@ -72,7 +76,7 @@ static class CoinTarget
                 world.Mutate(race.Board, Board(rows));
             }
 
-            var reached = leader is { } lead && lead.balance >= rule.target;
+            var reached = leader is { } lead && lead.balance >= rule.Target;
             var timedOut = now >= race.EndsAtMs;
             if (!reached && !timedOut)
             {

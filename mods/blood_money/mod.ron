@@ -1,5 +1,14 @@
 (
     id: "blood_money",
     version: "0.1.0",
-    components: ["blood_money::Series"],
+    components: [
+        "blood_money::Series",
+        "blood_money::BestOfRule",
+        "blood_money::CoinTargetRule",
+        "blood_money::CoinEconomyRule",
+        "blood_money::ShopRule",
+        "blood_money::CoinPile",
+        "blood_money::CoinHooks",
+        "blood_money::CoinBurst",
+    ],
 )

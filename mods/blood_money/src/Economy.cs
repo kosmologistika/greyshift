@@ -90,9 +90,9 @@ static class Economy
     // The live economy rule, none once its scope has ended
     static CoinEconomyRule? Rule(World world)
     {
-        foreach (var (_, rule, childOf) in world.Query<CoinEconomyRule, ChildOf>())
+        foreach (var (entity, rule) in world.QueryOwn<CoinEconomyRule>())
         {
-            if (world.Get<ScopeEnded>(childOf.Value) is null)
+            if (world.Get<ChildOf>(entity) is { } childOf && world.Get<ScopeEnded>(childOf.Value) is null)
             {
                 return rule;
             }
@@ -149,7 +149,7 @@ static class Economy
         {
             return;
         }
-        var hook = (on.weapon is { } weapon ? world.Get<CoinHooks>(weapon) : null) ?? new CoinHooks(1f, 0f);
+        var hook = (on.weapon is { } weapon ? world.GetOwn<CoinHooks>(weapon) : null) ?? new CoinHooks();
         if (WalletOf(world, player) is not var (walletEntity, wallet))
         {
             return;
@@ -157,10 +157,10 @@ static class Economy
         // Only what actually drained pools here; the broke-victim crumb is
         // decided at flush, once per victim per frame
         // Half away from zero, as f32::round did natively
-        var knocked = (uint)Math.Round(damage * Math.Max(hook.knockout, 0f), MidpointRounding.AwayFromZero);
+        var knocked = (uint)Math.Round(damage * Math.Max(hook.Knockout, 0f), MidpointRounding.AwayFromZero);
         var drained = Math.Min(wallet.balance, knocked);
         world.Mutate(walletEntity, new Wallet(wallet.balance - drained, wallet.earned));
-        var refund = (uint)Math.Round(drained * Math.Clamp(hook.refund, 0f, 1f), MidpointRounding.AwayFromZero);
+        var refund = (uint)Math.Round(drained * Math.Clamp(hook.Refund, 0f, 1f), MidpointRounding.AwayFromZero);
         var spilled = drained - refund;
         ulong? attacker = on.origin is { } origin && origin != on.entity ? world.Get<ControlledBy>(origin)?.Value : null;
         // A share nobody can pocket showers with the rest: coins never vanish
@@ -215,7 +215,7 @@ static class Economy
             // A spill entry with nothing drained means every hit this frame found
             // an empty wallet: mint one crumb for the lot, so a hit always
             // showers something and a pellet cloud never showers more
-            var value = spill.Value == 0 ? rule.crumb : spill.Value;
+            var value = spill.Value == 0 ? rule.Crumb : spill.Value;
             var at = new TilePos(spill.Map, new IVec2(spill.X, spill.Y));
             Vec2? heading = spill.HeadingX is { } x && spill.HeadingY is { } y ? new Vec2(x, y) : null;
             SpawnCoins(world, at, spill.Victim, heading, spill.Player, value, rule, Mix(NextSalt(world), spill.Player));
@@ -230,18 +230,18 @@ static class Economy
         {
             return;
         }
-        SpawnCoins(world, at, on.entity, null, null, rule.bounty, rule, Mix(NextSalt(world), on.victim));
+        SpawnCoins(world, at, on.entity, null, null, rule.Bounty, rule, Mix(NextSalt(world), on.victim));
     }
 
     // A coin bomb going off: its worth showers out of wherever it is, held or
     // on the floor. Outside a running economy it just pops
     static void BurstOnTrigger(Triggered on, World world)
     {
-        if (world.Get<CoinBurst>(on.entity) is not { } burst || !world.RoundLive || Rule(world) is not { } rule || world.GridPosition(on.entity) is not { } at)
+        if (world.GetOwn<CoinBurst>(on.entity) is not { } burst || !world.RoundLive || Rule(world) is not { } rule || world.GridPosition(on.entity) is not { } at)
         {
             return;
         }
-        SpawnCoins(world, at, on.entity, null, null, burst.value, rule, Mix(on.entity, 0xc01));
+        SpawnCoins(world, at, on.entity, null, null, burst.Value, rule, Mix(on.entity, 0xc01));
     }
 
     static ulong NextSalt(World world)
@@ -262,7 +262,7 @@ static class Economy
             return;
         }
         var nowMs = (ulong)world.Now.TotalMilliseconds;
-        var piles = Math.Clamp(value / Math.Max(rule.pileValue, 1), 1, MaxPiles);
+        var piles = Math.Clamp(value / Math.Max(rule.PileValue, 1), 1, MaxPiles);
         var share = value / piles;
         var remainder = value % piles;
         for (uint n = 0; n < piles; n++)
@@ -278,8 +278,8 @@ static class Economy
                 world.Log($"`{CoinProto}` prototype missing; {value} cr evaporated");
                 return;
             }
-            world.Insert(pile, new CoinPile(worth));
-            world.InsertOwn(pile, new PileDecay { EndsAtMs = nowMs + rule.coinLifeSecs * 1000 });
+            world.InsertOwn(pile, new CoinPile { Value = worth });
+            world.InsertOwn(pile, new PileDecay { EndsAtMs = nowMs + rule.CoinLifeSecs * 1000 });
             if (spiller is { } player)
             {
                 world.InsertOwn(pile, new SpilledBy { Player = player, LockedUntilMs = nowMs + SpillerLockMs });
@@ -302,7 +302,7 @@ static class Economy
     // belongs to the flight, so the landing swaps to the face-up still
     static void ClinkOnLanding(ulong entity, World world)
     {
-        if (world.Get<CoinPile>(entity) is null || world.Get<TilePos>(entity) is not { } at || world.Get<Appearance>(entity) is not { } appearance)
+        if (world.GetOwn<CoinPile>(entity) is null || world.Get<TilePos>(entity) is not { } at || world.Get<Appearance>(entity) is not { } appearance)
         {
             return;
         }
@@ -351,9 +351,9 @@ static class Economy
             {
                 continue;
             }
-            if (wallet.balance < rule.dripBelow)
+            if (wallet.balance < rule.DripBelow)
             {
-                Credit(world, entity, wallet, rule.dripPerSec * seconds);
+                Credit(world, entity, wallet, rule.DripPerSec * seconds);
             }
         }
     }
@@ -375,9 +375,9 @@ static class Economy
         }
         var gate = world.GetResource<CoinSoundGate>() ?? new CoinSoundGate();
         var tick = world.Tick;
-        foreach (var (pile, coins, at) in world.Query<CoinPile, TilePos>())
+        foreach (var (pile, coins) in world.QueryOwn<CoinPile>().ToList())
         {
-            if (world.Get<InFlight>(pile) is not null)
+            if (world.Get<TilePos>(pile) is not { } at || world.Get<InFlight>(pile) is not null)
             {
                 continue;
             }
@@ -397,11 +397,11 @@ static class Economy
             // not farm it
             if (spill is not null && spill.Player == player)
             {
-                world.Mutate(entity, new Wallet(Saturate(wallet.balance, coins.value), wallet.earned));
+                world.Mutate(entity, new Wallet(Saturate(wallet.balance, coins.Value), wallet.earned));
             }
             else
             {
-                Credit(world, entity, wallet, coins.value);
+                Credit(world, entity, wallet, coins.Value);
             }
             if (gate.DingTick != tick)
             {

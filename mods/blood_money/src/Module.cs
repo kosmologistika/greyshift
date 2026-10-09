@@ -25,7 +25,71 @@ using static TypedModuleWorld.wit.Imports.rs13.mods.v0_1_0.ITypedEcsImports;
 [JsonSerializable(typeof(ClaimedSeats))]
 [JsonSerializable(typeof(ShopSalt))]
 [JsonSerializable(typeof(CatalogStyle))]
+[JsonSerializable(typeof(BestOfRule))]
+[JsonSerializable(typeof(CoinTargetRule))]
+[JsonSerializable(typeof(CoinEconomyRule))]
+[JsonSerializable(typeof(ShopRule))]
+[JsonSerializable(typeof(CoinPile))]
+[JsonSerializable(typeof(CoinHooks))]
+[JsonSerializable(typeof(CoinBurst))]
 partial class ModJson : JsonSerializerContext;
+
+// The mode's prototype-named components, authored as `blood_money::X` in a
+// prototype and read back as these
+
+// Ends the round after `matches` matches with the most match wins taking it,
+// total coins earned across the round breaking ties
+class BestOfRule
+{
+    public uint Matches { get; set; }
+}
+
+// Ends its match when a wallet reaches `target`, or when `secs` run out with
+// the richest wallet winning
+class CoinTargetRule
+{
+    public uint Target { get; set; }
+    public ulong Secs { get; set; }
+}
+
+class CoinEconomyRule
+{
+    public uint DripPerSec { get; set; }
+    public uint DripBelow { get; set; }
+    public uint Crumb { get; set; }
+    public uint Bounty { get; set; }
+    public uint PileValue { get; set; }
+    public ulong CoinLifeSecs { get; set; }
+}
+
+class ShopRule
+{
+    public uint Start { get; set; }
+    public uint Floor { get; set; }
+    public uint Rolled { get; set; }
+    public ulong LockSecs { get; set; }
+    public ulong BackstopSecs { get; set; }
+}
+
+// A handful of coins on the floor; replicated, so a client sees what a pile is worth
+class CoinPile
+{
+    public uint Value { get; set; }
+}
+
+// On a weapon: what its hits do to the money. Knockout scales the coins a
+// hit shakes out of the victim, Refund is the share the attacker pockets
+class CoinHooks
+{
+    public float Knockout { get; set; } = 1f;
+    public float Refund { get; set; }
+}
+
+// A payload: when the item is triggered it showers `value` in coin piles
+class CoinBurst
+{
+    public uint Value { get; set; }
+}
 
 static class Durations
 {
@@ -40,6 +104,13 @@ static class BloodMoney
 {
     public static void Setup(ModApp app)
     {
+        app.RegisterComponent<BestOfRule>();
+        app.RegisterComponent<CoinTargetRule>();
+        app.RegisterComponent<CoinEconomyRule>();
+        app.RegisterComponent<ShopRule>();
+        app.RegisterComponent<CoinPile>(replicated: true);
+        app.RegisterComponent<CoinHooks>();
+        app.RegisterComponent<CoinBurst>();
         BestOf.Setup(app);
         CoinTarget.Setup(app);
         Economy.Setup(app);

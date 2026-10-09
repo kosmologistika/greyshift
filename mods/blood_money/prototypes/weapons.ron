@@ -1,0 +1,59 @@
+// The mode's own weapons: their hooks are the package's components
+[
+    (
+        type: "Entity",
+        id: "weapon_vampire_knife",
+        parents: ["base_melee_weapon"],
+        components: {
+            "DisplayName": (name: "vampire knife", desc: Some("item-desc-vampire-knife")),
+            "Item": (size: Small),
+            "MeleeWeapon": (hit_sound: Some((source: Path("audio/weapons/slash.ogg"), volume_db: -3.0, pitch_var: 0.08)),
+                shape: Thrust(len: 1), damage: {Slash: 18}, cooldown: 0.4, icon_facing_deg: 45,
+            ),
+            "blood_money::CoinHooks": (refund: 0.5),
+            "DamageOnHit": (damage: {Slash: 8}),
+            "SpriteTint": ((red: 0.8, green: 0.15, blue: 0.2, alpha: 1.0)),
+            "Appearance": (
+                sprite: (rsi: "textures/objects/weapons/kitchen_knife", state: "icon"),
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "weapon_pinata_bat",
+        parents: ["base_melee_weapon"],
+        components: {
+            "DisplayName": (name: "pinata bat", desc: Some("item-desc-pinata-bat")),
+            "Item": (size: Medium),
+            "MeleeWeapon": (shape: Thrust(len: 1), damage: {Blunt: 8}, cooldown: 0.5, icon_facing_deg: 45),
+            "blood_money::CoinHooks": (knockout: 2.0),
+            "DamageOnHit": (damage: {Blunt: 4}),
+            // The baton's stick under a party tint: no bat of its own in the licensed sheets
+            "SpriteTint": ((red: 1.0, green: 0.45, blue: 0.9, alpha: 1.0)),
+            "Appearance": (
+                sprite: (rsi: "textures/objects/weapons/stunbaton", state: "icon"),
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "coin_bomb",
+        parents: ["base_grenade"],
+        components: {
+            "DisplayName": (name: "coin bomb"),
+            "Explosive": (
+                radius: 2,
+                damage: {},
+                fling: Some(2),
+                effect: Some((effect: "effect_knockdown", secs: 2.0)),
+                sound: Some((source: Collection("explosion"), volume_db: -4.0, pitch_var: 0.1, range_tiles: 30.0)),
+                fx: Some("effect_explosion"),
+            ),
+            "blood_money::CoinBurst": (value: 150),
+            "SpriteTint": ((red: 0.859, green: 0.867, blue: 0.298, alpha: 1.0)),
+            "Appearance": (
+                sprite: (rsi: "textures/objects/weapons/grenades/grenade_master", state: "icon"),
+            ),
+        },
+    ),
+]

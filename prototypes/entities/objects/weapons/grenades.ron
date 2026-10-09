@@ -114,27 +114,6 @@
             ),
         },
     ),
-    (
-        type: "Entity",
-        id: "coin_bomb",
-        parents: ["base_grenade"],
-        components: {
-            "DisplayName": (name: "coin bomb"),
-            "Explosive": (
-                radius: 2,
-                damage: {},
-                fling: Some(2),
-                effect: Some((effect: "effect_knockdown", secs: 2.0)),
-                sound: Some((source: Collection("explosion"), volume_db: -4.0, pitch_var: 0.1, range_tiles: 30.0)),
-                fx: Some("effect_explosion"),
-            ),
-            "CoinBurst": (value: 150),
-            "SpriteTint": ((red: 0.859, green: 0.867, blue: 0.298, alpha: 1.0)),
-            "Appearance": (
-                sprite: (rsi: "textures/objects/weapons/grenades/grenade_master", state: "icon"),
-            ),
-        },
-    ),
     // Armed in hand and dropped, drawn under items and bodies so whatever lies on the tile hides it
     (
         type: "Entity",

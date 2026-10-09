@@ -29,7 +29,7 @@
         id: "rule_blood_money_best_of",
         hide_spawn_menu: true,
         components: {
-            "BestOfRule": (matches: 3),
+            "blood_money::BestOfRule": (matches: 3),
         },
     ),
     (
@@ -37,7 +37,7 @@
         id: "rule_blood_money_shop",
         hide_spawn_menu: true,
         components: {
-            "ShopRule": (
+            "blood_money::ShopRule": (
                 start: 100,
                 floor: 50,
                 rolled: 3,
@@ -51,7 +51,7 @@
         id: "rule_blood_money_economy",
         hide_spawn_menu: true,
         components: {
-            "CoinEconomyRule": (
+            "blood_money::CoinEconomyRule": (
                 drip_per_sec: 1,
                 drip_below: 150,
                 crumb: 5,
@@ -66,7 +66,7 @@
         id: "rule_blood_money_target",
         hide_spawn_menu: true,
         components: {
-            "CoinTargetRule": (target: 1000, secs: 480),
+            "blood_money::CoinTargetRule": (target: 1000, secs: 480),
         },
     ),
     (

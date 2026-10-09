@@ -130,9 +130,9 @@ static class Shop
     // The live shop rule and its scope, none once the scope has ended
     static (ShopRule rule, ulong scope)? Rule(World world)
     {
-        foreach (var (_, rule, childOf) in world.Query<ShopRule, ChildOf>())
+        foreach (var (entity, rule) in world.QueryOwn<ShopRule>())
         {
-            if (world.Get<ScopeEnded>(childOf.Value) is null)
+            if (world.Get<ChildOf>(entity) is { } childOf && world.Get<ScopeEnded>(childOf.Value) is null)
             {
                 return (rule, childOf.Value);
             }
@@ -203,7 +203,7 @@ static class Shop
     // tiebreak and outlives the match on purpose
     static void ResetWalletsOnStart(RuleStarted on, World world)
     {
-        if (world.Get<ShopRule>(on.entity) is not { } rule)
+        if (world.GetOwn<ShopRule>(on.entity) is not { } rule)
         {
             return;
         }
@@ -219,7 +219,7 @@ static class Shop
         }
         foreach (var (record, _, wallet) in world.Query<PlayerRecord, Wallet>())
         {
-            world.Mutate(record, new Wallet(rule.start, wallet.earned));
+            world.Mutate(record, new Wallet(rule.Start, wallet.earned));
             // A fresh match also forgets who killed whom, or a stale stamp points
             // next match's first death cam at last match's killer
             world.InsertOwn(record, new Staked());
@@ -237,7 +237,7 @@ static class Shop
     // so each shopper's ghost gets its wings back; the shelf drop refunds the cart
     static void CloseShopsWithTheMatch(ScopeEnding on, World world)
     {
-        if (!world.Query<ShopRule, ChildOf>().Any(row => row.b.Value == on.entity))
+        if (!world.QueryOwn<ShopRule>().Any(row => world.Get<ChildOf>(row.entity)?.Value == on.entity))
         {
             return;
         }
@@ -284,10 +284,10 @@ static class Shop
             // starting wallet, not just the death floor
             if (world.GetOwn<Staked>(record) is null)
             {
-                balance = Math.Max(balance, rule.start);
+                balance = Math.Max(balance, rule.Start);
                 world.InsertOwn(record, new Staked());
             }
-            balance = Math.Max(balance, rule.floor);
+            balance = Math.Max(balance, rule.Floor);
             world.Mutate(record, new Wallet(balance, wallet.earned));
             var offer = RollOffer(world, rule, Mix(NextSalt(world), player));
             if (offer.rows.Count == 0)
@@ -315,7 +315,7 @@ static class Shop
         var rows = listings.Where(l => l.staple).Select(l => RowFor(world, l)).ToList();
         rows.Sort((a, b) => a.price != b.price ? a.price.CompareTo(b.price) : string.CompareOrdinal(a.listing, b.listing));
         var pool = listings.Where(l => !l.staple && l.weight > 0).OrderBy(l => l.id, StringComparer.Ordinal).ToList();
-        for (uint n = 0; n < rule.rolled; n++)
+        for (uint n = 0; n < rule.Rolled; n++)
         {
             var total = pool.Aggregate(0UL, (sum, l) => sum + l.weight);
             if (total == 0)
@@ -343,8 +343,8 @@ static class Shop
         var now = world.Now;
         return new ShopOffer(
             rows,
-            new Deadline(Durations.From(now + TimeSpan.FromSeconds(rule.lockSecs))),
-            new Deadline(Durations.From(now + TimeSpan.FromSeconds(rule.backstopSecs))));
+            new Deadline(Durations.From(now + TimeSpan.FromSeconds(rule.LockSecs))),
+            new Deadline(Durations.From(now + TimeSpan.FromSeconds(rule.BackstopSecs))));
     }
 
     static OfferRow RowFor(World world, ShopListing listing) =>
