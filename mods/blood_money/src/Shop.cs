@@ -388,7 +388,7 @@ static class Shop
     // just stands
     static void RunBackstops(World world)
     {
-        if (!world.RoundRunning)
+        if (!world.RoundRunning || Rule(world) is null)
         {
             return;
         }
@@ -449,11 +449,6 @@ static class Shop
         }
         cart.Closed = true;
         world.InsertOwn(on.connection, cart);
-        if (!cart.Products.Any(product => Arms(world, product)))
-        {
-            ForceCheapestStaple(world, cart, on);
-        }
-        var products = cart.Products;
         var spent = cart.Spent;
         world.RemoveOwn<Cart>(on.connection);
         if (world.Query<ControlledBy>().Any(row => row.a.Value == on.player && world.Get<Ghost>(row.entity) is null))
@@ -496,6 +491,13 @@ static class Shop
             Refund(world, on.player, spent);
             return;
         }
+        // Past every refund: the forced buy's debit is queued, and a refund
+        // read before it landed would credit it back
+        if (!cart.Products.Any(product => Arms(world, product)))
+        {
+            ForceCheapestStaple(world, cart, on);
+        }
+        var products = cart.Products;
         world.Insert(body, new TilePos(map, pos));
         world.Insert(body, new Role(DefaultRole));
         if (products.Count > 0)
@@ -622,7 +624,7 @@ static class Shop
     // and the active hand first; what no hand takes lands at its feet
     static void DeliverLoadouts(World world)
     {
-        if (!world.RoundRunning)
+        if (!world.RoundRunning || Rule(world) is null)
         {
             return;
         }
@@ -665,7 +667,7 @@ static class Shop
 
     static void RememberKiller(Killed on, World world)
     {
-        if (on.killer is not { } killer || RecordOf(world, on.victim) is not { } record)
+        if (Rule(world) is null || on.killer is not { } killer || RecordOf(world, on.victim) is not { } record)
         {
             return;
         }
@@ -674,9 +676,10 @@ static class Shop
 
     // A fresh ghost is pointed at its killer, or the nearest living body on its
     // map, and parked there; once settled it is never re-attached
+    // The package loads under every mode, so only where this rule runs
     static void AttachDeathCam(World world)
     {
-        if (!world.RoundRunning)
+        if (!world.RoundRunning || Rule(world) is null)
         {
             return;
         }
