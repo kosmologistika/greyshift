@@ -28,7 +28,7 @@ static class CoinTarget
         var endsAt = world.Now + TimeSpan.FromSeconds(rule.secs);
         var board = world.Spawn(world.Bundle(Board([])), world.Bundle(new ChildOf(on.entity)), world.Bundle(new Replicated()));
         world.Spawn(
-            world.Bundle(new HudBanner(HudZone.TOP_CENTER, "gamemode-match-timer", "", new Deadline(AsDuration(endsAt)))),
+            world.Bundle(new HudBanner(HudZone.TOP_CENTER, "gamemode-match-timer", "", new Deadline(Durations.From(endsAt)))),
             world.Bundle(new ChildOf(on.entity)),
             world.Bundle(new Replicated()));
         world.InsertOwn(on.entity, new Race { EndsAtMs = (ulong)endsAt.TotalMilliseconds, Board = board });
@@ -94,8 +94,6 @@ static class CoinTarget
             pair.First.name == pair.Second.name && pair.First.score == pair.Second.score
             && pair.First.highlight == pair.Second.highlight && pair.First.player == pair.Second.player);
 
-    static Duration AsDuration(TimeSpan span) =>
-        new((ulong)Math.Floor(span.TotalSeconds), (uint)((span.Ticks % TimeSpan.TicksPerSecond) * 100));
 
     static HudScoreboard Board(List<ScoreRow> rows) => new(HudZone.TOP_RIGHT, "gamemode-scoreboard-match", rows);
 }
