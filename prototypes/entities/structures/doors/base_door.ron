@@ -1,7 +1,5 @@
 [
-    // What every door has in common with every blast door, shutter, firelock
-    // and windoor: it bounds the rooms either side of it, and the walls and
-    // windows around it close their frames onto it while it draws itself
+    // Walls and windows close their frames onto anything with this parent
     (
         type: "Entity",
         id: "structure_door_frame_base",
