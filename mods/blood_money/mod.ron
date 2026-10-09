@@ -1,0 +1,5 @@
+(
+    id: "blood_money",
+    version: "0.1.0",
+    components: ["blood_money::Series"],
+)

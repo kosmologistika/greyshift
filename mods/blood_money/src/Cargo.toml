@@ -1,0 +1,16 @@
+[package]
+name = "blood_money"
+version.workspace = true
+edition.workspace = true
+publish = false
+
+[lints]
+workspace = true
+
+[lib]
+crate-type = ["cdylib"]
+test = false
+
+[dependencies]
+rs13_mod_sdk = { path = "../sdk" }
+serde = { workspace = true }
