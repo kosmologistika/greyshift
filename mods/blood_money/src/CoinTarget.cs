@@ -40,6 +40,10 @@ static class CoinTarget
     // draw that credits nobody
     static void WatchTheRace(World world)
     {
+        if (!world.RoundRunning)
+        {
+            return;
+        }
         var now = (ulong)world.Now.TotalMilliseconds;
         foreach (var (entity, rule, childOf) in world.Query<CoinTargetRule, ChildOf>())
         {

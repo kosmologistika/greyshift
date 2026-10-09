@@ -17,6 +17,14 @@ using static TypedModuleWorld.wit.Imports.rs13.mods.v0_1_0.ITypedEcsImports;
 [JsonSerializable(typeof(SpilledBy))]
 [JsonSerializable(typeof(Salt))]
 [JsonSerializable(typeof(DripAnchor))]
+[JsonSerializable(typeof(Staked))]
+[JsonSerializable(typeof(Cart))]
+[JsonSerializable(typeof(PendingLoadout))]
+[JsonSerializable(typeof(KilledBy))]
+[JsonSerializable(typeof(CamSettled))]
+[JsonSerializable(typeof(ClaimedSeats))]
+[JsonSerializable(typeof(ShopSalt))]
+[JsonSerializable(typeof(CatalogStyle))]
 partial class ModJson : JsonSerializerContext;
 
 static class Durations
@@ -24,6 +32,8 @@ static class Durations
     // A WIT duration from a span since the epoch, what a Deadline holds
     public static Duration From(TimeSpan span) =>
         new((ulong)Math.Floor(span.TotalSeconds), (uint)((span.Ticks % TimeSpan.TicksPerSecond) * 100));
+
+    public static ulong Ms(Duration duration) => duration.secs * 1000 + duration.nanos / 1_000_000;
 }
 
 static class BloodMoney
@@ -33,5 +43,6 @@ static class BloodMoney
         BestOf.Setup(app);
         CoinTarget.Setup(app);
         Economy.Setup(app);
+        Shop.Setup(app);
     }
 }

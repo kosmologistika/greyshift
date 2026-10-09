@@ -197,6 +197,10 @@ static class Economy
     // Turn the tick's pooled spills into flying handfuls
     static void FlushSpills(World world)
     {
+        if (!world.RoundRunning)
+        {
+            return;
+        }
         if (world.GetResource<PendingSpills>() is not { } pending || pending.Spills.Count == 0)
         {
             return;
@@ -319,6 +323,10 @@ static class Economy
     // for hiding while rich
     static void Drip(World world)
     {
+        if (!world.RoundRunning)
+        {
+            return;
+        }
         var nowMs = (ulong)world.Now.TotalMilliseconds;
         var anchor = world.GetResource<DripAnchor>();
         if (anchor is null)
@@ -355,6 +363,10 @@ static class Economy
     // wins. A handful still in the air is not on the ground yet
     static void PickUpPiles(World world)
     {
+        if (!world.RoundRunning)
+        {
+            return;
+        }
         var nowMs = (ulong)world.Now.TotalMilliseconds;
         var standing = world.Query<ControlledBy, TilePos>().Where(row => Standing(world, row.entity)).Select(row => (player: row.a.Value, at: row.b)).ToList();
         if (standing.Count == 0)
@@ -405,6 +417,10 @@ static class Economy
     // flames right up to the reaper
     static void ReapStalePiles(World world)
     {
+        if (!world.RoundRunning)
+        {
+            return;
+        }
         var now = world.Now;
         var nowMs = (ulong)now.TotalMilliseconds;
         foreach (var (pile, decay) in world.QueryOwn<PileDecay>())
