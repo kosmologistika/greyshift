@@ -1,5 +1,5 @@
 using System.Text.Json.Serialization;
-using Rs13.Mods;
+using Rs13.Legacy;
 using static TypedModuleWorld.wit.Imports.rs13.mods.v0_1_0.ITypedEcsImports;
 
 // Blood Money: balance is the score. Hits knock coins out of the victim onto

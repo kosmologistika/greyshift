@@ -1,4 +1,4 @@
-using Rs13.Mods;
+using Rs13.Legacy;
 using static TypedModuleWorld.wit.Imports.rs13.mods.v0_1_0.ITypedEcsImports;
 
 // When the match times out, and the live board this rule keeps current

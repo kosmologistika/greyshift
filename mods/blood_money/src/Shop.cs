@@ -1,4 +1,4 @@
-using Rs13.Mods;
+using Rs13.Legacy;
 using static TypedModuleWorld.wit.Imports.rs13.mods.v0_1_0.ITypedEcsImports;
 
 // This record's wallet was staked for the current match. Stamped on every
