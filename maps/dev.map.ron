@@ -1,5 +1,5 @@
 (
-    version: 2,
+    version: 3,
     entities: [
         (
             pos: (-12, -12),
@@ -452,6 +452,10 @@
         (
             pos: (-9, -9),
             prototype: "light_test_blue",
+        ),
+        (
+            pos: (-9, -9),
+            prototype: "area_maintenance",
         ),
         (
             pos: (-8, -9),
@@ -1653,6 +1657,10 @@
             prototype: "tile_floor_steel",
         ),
         (
+            pos: (-6, 0),
+            prototype: "pickup_medkit",
+        ),
+        (
             pos: (-5, 0),
             prototype: "tile_floor_steel",
         ),
@@ -1701,6 +1709,10 @@
             prototype: "tile_plating",
         ),
         (
+            pos: (0, 0),
+            prototype: "area_station",
+        ),
+        (
             pos: (1, 0),
             prototype: "tile_floor_steel",
         ),
@@ -1731,6 +1743,10 @@
         (
             pos: (5, 0),
             prototype: "tile_floor_steel",
+        ),
+        (
+            pos: (5, 0),
+            prototype: "pickup_ammo",
         ),
         (
             pos: (6, 0),
@@ -1795,6 +1811,10 @@
         (
             pos: (-6, 1),
             prototype: "tile_floor_steel",
+        ),
+        (
+            pos: (-6, 1),
+            prototype: "pickup_armor",
         ),
         (
             pos: (-5, 1),
@@ -3287,26 +3307,6 @@
         (
             pos: (11, 11),
             prototype: "structure_wall_indestructible",
-        ),
-        (
-            pos: (-6, 0),
-            prototype: "pickup_medkit",
-        ),
-        (
-            pos: (5, 0),
-            prototype: "pickup_ammo",
-        ),
-        (
-            pos: (-6, 1),
-            prototype: "pickup_armor",
-        ),
-        (
-            pos: (0, 0),
-            prototype: "area_station",
-        ),
-        (
-            pos: (-9, -9),
-            prototype: "area_maintenance",
         ),
     ],
 )
