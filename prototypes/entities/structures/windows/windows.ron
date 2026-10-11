@@ -6,6 +6,8 @@
         components: {
             "DisplayName": (name: "window"),
             "AreaBoundary": (),
+            // Lights and cameras hang on full-tile glass along station corridors
+            "MountSupport": (),
             // Lasers fly through glass untouched; bullets still stop and
             // break it.
             "PassesEnergyProjectiles": (),

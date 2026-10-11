@@ -5,8 +5,8 @@
         parents: ["base_prop_scenery"],
         components: {
             "DisplayName": (name: "shower"),
-            "WallMount": (),
-            "PlacementLayer": WallMount,
+            // tg's showers are floor machinery that face into the stall, not fixtures on a wall
+            "PlacementLayer": Free,
             "Facing": (South),
             "Appearance": (sprite: (rsi: "textures/structures/wallmounts/machines/shower", state: "shower"), depth: WallMounted),
         },
