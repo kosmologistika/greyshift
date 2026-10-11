@@ -707,6 +707,6 @@ public sealed partial class StrandedGhostSystem : EntitySystem
 
 static class Rules
 {
-    // Wider than IsRoundLive: the round is being set up or played
+    // Not IsRoundLive, which skips RoundStarting and covers PostRound
     public static bool RoundRunning(GameTicker ticker) => ticker.RunLevel is RoundState.RoundStarting or RoundState.InRound;
 }
