@@ -1,98 +1,108 @@
-using Rs13.Legacy;
-using static TypedModuleWorld.wit.Imports.rs13.mods.v0_1_0.ITypedEcsImports;
+using System.Numerics;
+using Rs13.Mods;
+
+namespace BloodMoney;
 
 // Money knocked loose this frame, pooled per victim before it becomes
 // entities: a shotgun blast is six damage events in one tick, and without
 // pooling it sprays six times as many piles as one rifle hit worth more
-class PendingSpills
+[RegisterResource]
+public sealed partial class PendingSpills
 {
-    public List<Spill> Spills { get; set; } = [];
+    [DataField] public List<Spill> Spills = [];
 }
 
-class Spill
+public sealed class Spill
 {
-    public ulong Victim { get; set; }
-    public ulong Player { get; set; }
-    public ulong Map { get; set; }
-    public int X { get; set; }
-    public int Y { get; set; }
-    public float? HeadingX { get; set; }
-    public float? HeadingY { get; set; }
-    public uint Value { get; set; }
+    public EntityUid Victim;
+    public PlayerId Player;
+    public TilePos At = new(EntityUid.Invalid, new Vector2i(0, 0));
+    public Vector2? Heading;
+    public uint Value;
 }
 
 // A twenty-pile spill lands as one clink and is hoovered as one ding: the
 // first pile each tick plays, the rest are the same moment
-class CoinSoundGate
+[RegisterResource]
+public sealed partial class CoinSoundGate
 {
-    public ulong ClinkTick { get; set; }
-    public ulong DingTick { get; set; }
+    [DataField] public ulong ClinkTick;
+    [DataField] public ulong DingTick;
 }
 
 // When a pile stops waiting to be grabbed
-class PileDecay
+[RegisterComponent]
+public sealed partial class PileDecayComponent : Component
 {
-    public ulong EndsAtMs { get; set; }
+    [DataField] public TimeSpan EndsAt;
 }
 
 // Whose wallet this pile flew out of. That player cannot pocket it until
 // the lock passes; everyone else can immediately
-class SpilledBy
+[RegisterComponent]
+public sealed partial class SpilledByComponent : Component
 {
-    public ulong Player { get; set; }
-    public ulong LockedUntilMs { get; set; }
+    [DataField] public PlayerId Player;
+    [DataField] public TimeSpan LockedUntil;
 }
 
 // A counter that salts every spill's seed
-class Salt
+[RegisterResource]
+public sealed partial class Salt
 {
-    public ulong Value { get; set; }
+    [DataField] public ulong Value;
 }
 
 // Monotonic anchor of the drip: a rate counts elapsed seconds
-class DripAnchor
+[RegisterResource]
+public sealed partial class DripAnchor
 {
-    public ulong LastMs { get; set; }
+    [DataField] public TimeSpan Last;
 }
 
 // The coin economy: hits knock coins out of the victim onto the floor,
 // anyone walks over them, kills mint a bounty, a coin bomb showers its worth
-static class Economy
+public sealed partial class EconomyRuleSystem : GameRuleSystem<CoinEconomyRuleComponent>
 {
     const string CoinProto = "coin_handful";
     // How long a spill refuses its own victim. Walls can ricochet a handful
     // right back to the feet it flew from, and without this the leak refunds
     // itself while the victim stands still
-    const ulong SpillerLockMs = 2000;
+    static readonly TimeSpan SpillerLock = TimeSpan.FromSeconds(2);
     // A big spill never becomes a hundred entities: past this many piles the
     // handfuls just get fatter
     const uint MaxPiles = 20;
     const float BurnSecs = 0.7f;
 
-    public static void Setup(ModApp app)
+    [Dependency] WalletSystem _wallets = default!;
+    [Dependency] IGameTiming _timing = default!;
+    [Dependency] TransformSystem _transform = default!;
+    [Dependency] FlightSystem _flight = default!;
+    [Dependency] AudioSystem _audio = default!;
+    [Dependency] EntityQuery<Mob> _mobs = default!;
+    [Dependency] EntityQuery<Dead> _dead = default!;
+    [Dependency] EntityQuery<Ghost> _ghosts = default!;
+
+    public override void Initialize()
     {
-        app.RegisterResource<PendingSpills>();
-        app.RegisterResource<CoinSoundGate>();
-        app.RegisterResource<Salt>();
-        app.RegisterResource<DripAnchor>();
-        app.RegisterComponent<PileDecay>();
-        app.RegisterComponent<SpilledBy>();
-        app.Observe<DamageDealt>(LeakOnHit);
-        app.Observe<Killed>(BountyOnKill);
-        app.Observe<Triggered>(BurstOnTrigger);
-        app.ObserveRemoved<InFlight>(ClinkOnLanding);
-        app.Every(TimeSpan.Zero, FlushSpills);
-        app.Every(TimeSpan.Zero, PickUpPiles);
-        app.Every(TimeSpan.Zero, ReapStalePiles);
-        app.Every(TimeSpan.FromSeconds(1), Drip);
+        base.Initialize();
+        SubscribeLocalEvent<DamageDealt>(LeakOnHit);
+        SubscribeLocalEvent<Killed>(BountyOnKill);
+        SubscribeLocalEvent<CoinBurstComponent, Triggered>(BurstOnTrigger);
+        SubscribeLocalEvent<InFlight, ComponentRemove>(ClinkOnLanding);
+        EveryActive(TimeSpan.Zero, FlushSpills);
+        EveryActive(TimeSpan.Zero, PickUpPiles);
+        EveryActive(TimeSpan.Zero, ReapStalePiles);
+        EveryActive(TimeSpan.FromSeconds(1), Drip);
     }
 
     // The live economy rule, none once its scope has ended
-    static CoinEconomyRule? Rule(World world)
+    CoinEconomyRuleComponent? Rule()
     {
-        foreach (var (entity, rule) in world.QueryOwn<CoinEconomyRule>())
+        var rules = EntityQueryEnumerator<CoinEconomyRuleComponent>();
+        while (rules.MoveNext(out var uid, out var rule))
         {
-            if (world.Get<ChildOf>(entity) is { } childOf && world.Get<ScopeEnded>(childOf.Value) is null)
+            if (TryComp<ChildOf>(uid, out var childOf) && !HasComp<ScopeEnded>(childOf.Value))
             {
                 return rule;
             }
@@ -100,47 +110,28 @@ static class Economy
         return null;
     }
 
-    static bool Standing(World world, ulong body) =>
-        world.Get<Mob>(body) is not null && world.Get<Dead>(body) is null && world.Get<Ghost>(body) is null;
-
-    // The record entity and wallet of a player
-    static (ulong entity, Wallet wallet)? WalletOf(World world, ulong player)
-    {
-        foreach (var (entity, record, wallet) in world.Query<PlayerRecord, Wallet>())
-        {
-            if (record.id == player)
-            {
-                return (entity, wallet);
-            }
-        }
-        return null;
-    }
-
-    static void Credit(World world, ulong entity, Wallet wallet, uint amount) =>
-        world.Mutate(entity, new Wallet(Saturate(wallet.balance, amount), Saturate(wallet.earned, amount)));
-
-    static uint Saturate(uint a, uint b) => (uint)Math.Min((ulong)a + b, uint.MaxValue);
+    bool Standing(EntityUid body) => _mobs.HasComp(body) && !_dead.HasComp(body) && !_ghosts.HasComp(body);
 
     // A hit knocks coins worth the damage out of the victim's wallet. A broke
     // victim still showers a minted crumb at the flush, so a hit always pays
     // something to whoever holds the ground afterwards. The weapon's CoinHooks
     // scale the knock-out and pocket a share of it for the attacker
-    static void LeakOnHit(DamageDealt on, World world)
+    void LeakOnHit(ref DamageDealt args)
     {
-        if (!world.RoundLive || Rule(world) is null)
+        if (!GameTicker.IsRoundLive || Rule() is null)
         {
             return;
         }
-        if (world.Get<ControlledBy>(on.entity) is not { } controlled || world.Get<TilePos>(on.entity) is not { } at || !Standing(world, on.entity))
+        if (!TryComp<ControlledBy>(args.Entity, out var controlled) || !TryComp<TilePos>(args.Entity, out var at) || !Standing(args.Entity))
         {
             return;
         }
         var player = controlled.Value;
         // A blow leaks coins; suffocating on the floor does not
         uint damage = 0;
-        foreach (var (kind, amount) in on.spec)
+        foreach (var (kind, amount) in args.Spec)
         {
-            if (kind != DamageType.ASPHYXIATION)
+            if (kind != DamageType.Asphyxiation)
             {
                 damage += amount;
             }
@@ -149,119 +140,101 @@ static class Economy
         {
             return;
         }
-        var hook = (on.weapon is { } weapon ? world.GetOwn<CoinHooks>(weapon) : null) ?? new CoinHooks();
-        if (WalletOf(world, player) is not var (walletEntity, wallet))
+        var hook = (args.Weapon is { } weapon ? CompOrNull<CoinHooksComponent>(weapon) : null) ?? new CoinHooksComponent();
+        if (!_wallets.TryFind(player, out var record))
         {
             return;
         }
+        var wallet = record.Comp2;
         // Only what actually drained pools here; the broke-victim crumb is
         // decided at flush, once per victim per frame
         // Half away from zero, as f32::round did natively
         var knocked = (uint)Math.Round(damage * Math.Max(hook.Knockout, 0f), MidpointRounding.AwayFromZero);
-        var drained = Math.Min(wallet.balance, knocked);
-        world.Mutate(walletEntity, new Wallet(wallet.balance - drained, wallet.earned));
+        var drained = Math.Min(wallet.Balance, knocked);
+        wallet.Balance -= drained;
         var refund = (uint)Math.Round(drained * Math.Clamp(hook.Refund, 0f, 1f), MidpointRounding.AwayFromZero);
         var spilled = drained - refund;
-        ulong? attacker = on.origin is { } origin && origin != on.entity ? world.Get<ControlledBy>(origin)?.Value : null;
+        PlayerId? attacker = args.Origin is { } origin && origin != args.Entity ? CompOrNull<ControlledBy>(origin)?.Value : null;
         // A share nobody can pocket showers with the rest: coins never vanish
         if (refund > 0)
         {
-            if (attacker is { } by && WalletOf(world, by) is var (attackerEntity, attackerWallet))
+            if (attacker is { } by && _wallets.TryFind(by, out var attackerRecord))
             {
-                Credit(world, attackerEntity, attackerWallet, refund);
+                WalletSystem.Credit(attackerRecord.Comp2, refund);
             }
             else
             {
                 spilled = drained;
             }
         }
-        var pending = world.GetResource<PendingSpills>() ?? new PendingSpills();
-        var spill = pending.Spills.FirstOrDefault(s => s.Victim == on.entity);
+        var pending = Resource<PendingSpills>();
+        var victim = args.Entity;
+        var spill = pending.Spills.FirstOrDefault(s => s.Victim == victim);
         if (spill is null)
         {
-            spill = new Spill { Victim = on.entity, Player = player };
+            spill = new Spill { Victim = victim, Player = player };
             pending.Spills.Add(spill);
         }
         spill.Value += spilled;
-        spill.Map = at.map;
-        spill.X = at.pos.x;
-        spill.Y = at.pos.y;
-        if (spill.HeadingX is null && on.heading is { } heading)
-        {
-            spill.HeadingX = heading.x;
-            spill.HeadingY = heading.y;
-        }
-        world.InsertResource(pending);
+        spill.At = at;
+        spill.Heading ??= args.Heading;
     }
 
     // Turn the tick's pooled spills into flying handfuls
-    static void FlushSpills(World world)
+    void FlushSpills(Entity<CoinEconomyRuleComponent> rule, EntityUid scope)
     {
-        if (!world.RoundRunning)
+        var pending = Resource<PendingSpills>();
+        if (pending.Spills.Count == 0)
         {
             return;
         }
-        if (world.GetResource<PendingSpills>() is not { } pending || pending.Spills.Count == 0)
-        {
-            return;
-        }
-        world.InsertResource(new PendingSpills());
-        if (Rule(world) is not { } rule)
-        {
-            return;
-        }
-        foreach (var spill in pending.Spills)
+        var spills = pending.Spills;
+        pending.Spills = [];
+        foreach (var spill in spills)
         {
             // A spill entry with nothing drained means every hit this frame found
             // an empty wallet: mint one crumb for the lot, so a hit always
             // showers something and a pellet cloud never showers more
-            var value = spill.Value == 0 ? rule.Crumb : spill.Value;
-            var at = new TilePos(spill.Map, new IVec2(spill.X, spill.Y));
-            Vec2? heading = spill.HeadingX is { } x && spill.HeadingY is { } y ? new Vec2(x, y) : null;
-            SpawnCoins(world, at, spill.Victim, heading, spill.Player, value, rule, Mix(NextSalt(world), spill.Player));
+            var value = spill.Value == 0 ? rule.Comp.Crumb : spill.Value;
+            SpawnCoins(spill.At, spill.Victim, spill.Heading, spill.Player, value, rule.Comp, Seed.Mix(NextSalt(), spill.Player.Value));
         }
     }
 
     // An attributed kill mints a bounty and sprays it wide at the corpse.
     // Unattributed deaths mint nothing
-    static void BountyOnKill(Killed on, World world)
+    void BountyOnKill(ref Killed args)
     {
-        if (on.killer is null || !world.RoundLive || Rule(world) is not { } rule || world.Get<TilePos>(on.entity) is not { } at)
+        if (args.Killer is null || !GameTicker.IsRoundLive || Rule() is not { } rule || !TryComp<TilePos>(args.Entity, out var at))
         {
             return;
         }
-        SpawnCoins(world, at, on.entity, null, null, rule.Bounty, rule, Mix(NextSalt(world), on.victim));
+        SpawnCoins(at, args.Entity, null, null, rule.Bounty, rule, Seed.Mix(NextSalt(), args.Victim.Value));
     }
 
     // A coin bomb going off: its worth showers out of wherever it is, held or
     // on the floor. Outside a running economy it just pops
-    static void BurstOnTrigger(Triggered on, World world)
+    void BurstOnTrigger(Entity<CoinBurstComponent> bomb, ref Triggered args)
     {
-        if (world.GetOwn<CoinBurst>(on.entity) is not { } burst || !world.RoundLive || Rule(world) is not { } rule || world.GridPosition(on.entity) is not { } at)
+        if (!GameTicker.IsRoundLive || Rule() is not { } rule || _transform.GridPosition(bomb) is not { } at)
         {
             return;
         }
-        SpawnCoins(world, at, on.entity, null, null, burst.Value, rule, Mix(on.entity, 0xc01));
+        SpawnCoins(at, bomb, null, null, bomb.Comp.Value, rule, Seed.Mix(bomb.Owner.Bits, 0xc01));
     }
 
-    static ulong NextSalt(World world)
-    {
-        var salt = (world.GetResource<Salt>()?.Value ?? 0) + 1;
-        world.InsertResource(new Salt { Value = salt });
-        return salt;
-    }
+    ulong NextSalt() => ++Resource<Salt>().Value;
 
     // Money thrown from the victim as handfuls of the rule's pile value each,
     // so the number of piles on the floor reads as the money on it. Each pile
     // flies a seeded ray out of the victim, fanned around the blow's heading
     // when it has one, all directions otherwise, and expires once down
-    static void SpawnCoins(World world, TilePos at, ulong from, Vec2? heading, ulong? spiller, uint value, CoinEconomyRule rule, ulong seed)
+    void SpawnCoins(TilePos at, EntityUid from, Vector2? heading, PlayerId? spiller, uint value, CoinEconomyRuleComponent rule, ulong seed)
     {
         if (value == 0)
         {
             return;
         }
-        var nowMs = (ulong)world.Now.TotalMilliseconds;
+        var now = Now;
         var piles = Math.Clamp(value / Math.Max(rule.PileValue, 1), 1, MaxPiles);
         var share = value / piles;
         var remainder = value % piles;
@@ -273,87 +246,87 @@ static class Economy
             {
                 continue;
             }
-            if (world.SpawnPrototype(CoinProto) is not { } pile)
+            if (!TrySpawn(CoinProto, out var pile))
             {
-                world.Log($"`{CoinProto}` prototype missing; {value} cr evaporated");
+                Log($"`{CoinProto}` prototype missing; {value} cr evaporated");
                 return;
             }
-            world.InsertOwn(pile, new CoinPile { Value = worth });
-            world.InsertOwn(pile, new PileDecay { EndsAtMs = nowMs + rule.CoinLifeSecs * 1000 });
+            AddComp(pile, new CoinPileComponent { Value = worth });
+            AddComp(pile, new PileDecayComponent { EndsAt = now + TimeSpan.FromSeconds(rule.CoinLifeSecs) });
             if (spiller is { } player)
             {
-                world.InsertOwn(pile, new SpilledBy { Player = player, LockedUntilMs = nowMs + SpillerLockMs });
+                AddComp(pile, new SpilledByComponent { Player = player, LockedUntil = now + SpillerLock });
             }
-            var roll = Mix(seed, n);
+            var roll = Seed.Mix(seed, n);
             // Fan onward past the victim, the way blood sprays: the blow's
             // heading plus up to a quarter turn of seeded jitter either way
             var angle = heading is { } dir
-                ? MathF.Atan2(dir.y, dir.x) + UnitSigned(roll) * (MathF.PI / 2)
-                : UnitSigned(roll) * MathF.PI;
-            var range = 1.2f + Unit(Mix(roll, 7)) * 1.8f;
+                ? MathF.Atan2(dir.Y, dir.X) + Seed.UnitSigned(roll) * (MathF.PI / 2)
+                : Seed.UnitSigned(roll) * MathF.PI;
+            var range = 1.2f + Seed.Unit(Seed.Mix(roll, 7)) * 1.8f;
             // Coins stop at walls or ricochet off them, pass through bodies, and
             // strike nothing: a spill must not fire twenty impact sounds
             var rules = new FlightRules(true, false, false, true, 0, true);
-            world.LaunchRay(pile, at, angle, range, 7.0f, from, rules);
+            _flight.LaunchRay(pile, at, angle, range, 7.0f, from, rules);
         }
     }
 
     // A handful hitting the floor clinks and stops spinning: the looping flip
     // belongs to the flight, so the landing swaps to the face-up still
-    static void ClinkOnLanding(ulong entity, World world)
+    void ClinkOnLanding(Entity<InFlight> flier, ref ComponentRemove args)
     {
-        if (world.GetOwn<CoinPile>(entity) is null || world.Get<TilePos>(entity) is not { } at || world.Get<Appearance>(entity) is not { } appearance)
+        if (!HasComp<CoinPileComponent>(flier) || !TryComp<TilePos>(flier, out var at) || !TryComp<Appearance>(flier, out var appearance))
         {
             return;
         }
-        appearance.sprite = new RsiRef(appearance.sprite.rsi, "coinshot_still");
-        world.Insert(entity, appearance);
-        var gate = world.GetResource<CoinSoundGate>() ?? new CoinSoundGate();
-        var tick = world.Tick;
+        AddComp(flier, appearance with { Sprite = new RsiRef(appearance.Sprite.Rsi, "coinshot_still") });
+        var gate = Resource<CoinSoundGate>();
+        var tick = _timing.CurTick;
         if (gate.ClinkTick != tick)
         {
             gate.ClinkTick = tick;
-            world.InsertResource(gate);
-            world.PlaySound("audio/effects/coin_drop.ogg", at);
+            _audio.Play("audio/effects/coin_drop.ogg", at);
         }
     }
 
     // A trickle that only fills wallets below the threshold: comeback fuel and a
     // guarantee that every hit has something to knock loose, never a reward
     // for hiding while rich
-    static void Drip(World world)
+    void Drip(Entity<CoinEconomyRuleComponent> rule, EntityUid scope)
     {
-        if (!world.RoundRunning)
+        var now = Now;
+        var anchor = Resource<DripAnchor>();
+        if (anchor.Last == TimeSpan.Zero)
         {
+            anchor.Last = now;
             return;
         }
-        var nowMs = (ulong)world.Now.TotalMilliseconds;
-        var anchor = world.GetResource<DripAnchor>();
-        if (anchor is null)
-        {
-            world.InsertResource(new DripAnchor { LastMs = nowMs });
-            return;
-        }
-        var seconds = (uint)((nowMs - anchor.LastMs) / 1000);
+        var seconds = (uint)(now - anchor.Last).TotalSeconds;
         if (seconds == 0)
         {
             return;
         }
-        world.InsertResource(new DripAnchor { LastMs = anchor.LastMs + seconds * 1000UL });
-        if (Rule(world) is not { } rule)
+        anchor.Last += TimeSpan.FromSeconds(seconds);
+        var standing = new HashSet<PlayerId>();
+        var mobs = EntityQueryEnumerator<ControlledBy, Mob>();
+        while (mobs.MoveNext(out var body, out var controlled, out _))
         {
-            return;
+            if (Standing(body))
+            {
+                standing.Add(controlled.Value);
+            }
         }
-        var standing = world.Query<ControlledBy, Mob>().Where(row => Standing(world, row.entity)).Select(row => row.a.Value).ToHashSet();
-        foreach (var (_, session, _) in world.Query<SessionPlayer, Participant>())
+        var wallets = _wallets.ByPlayer();
+        var sessions = EntityQueryEnumerator<SessionPlayer, Participant>();
+        while (sessions.MoveNext(out _, out var session, out _))
         {
-            if (!standing.Contains(session.Value) || WalletOf(world, session.Value) is not var (entity, wallet))
+            if (!standing.Contains(session.Value) || !wallets.TryGetValue(session.Value, out var record))
             {
                 continue;
             }
-            if (wallet.balance < rule.DripBelow)
+            if (record.Comp2.Balance < rule.Comp.DripBelow)
             {
-                Credit(world, entity, wallet, rule.DripPerSec * seconds);
+                WalletSystem.Credit(record.Comp2, rule.Comp.DripPerSec * seconds);
             }
         }
     }
@@ -361,91 +334,87 @@ static class Economy
     // Walk-over pickup, open to everyone: the attacker harvesting, the victim
     // clawing their own money back, or a third party. First body on the tile
     // wins. A handful still in the air is not on the ground yet
-    static void PickUpPiles(World world)
+    void PickUpPiles(Entity<CoinEconomyRuleComponent> rule, EntityUid scope)
     {
-        if (!world.RoundRunning)
+        var now = Now;
+        var standing = new List<(PlayerId player, TilePos at)>();
+        var bodies = EntityQueryEnumerator<ControlledBy, TilePos>();
+        while (bodies.MoveNext(out var body, out var controlled, out var at))
         {
-            return;
+            if (Standing(body))
+            {
+                standing.Add((controlled.Value, at));
+            }
         }
-        var nowMs = (ulong)world.Now.TotalMilliseconds;
-        var standing = world.Query<ControlledBy, TilePos>().Where(row => Standing(world, row.entity)).Select(row => (player: row.a.Value, at: row.b)).ToList();
         if (standing.Count == 0)
         {
             return;
         }
-        var gate = world.GetResource<CoinSoundGate>() ?? new CoinSoundGate();
-        var tick = world.Tick;
-        foreach (var (pile, coins) in world.QueryOwn<CoinPile>().ToList())
+        var wallets = _wallets.ByPlayer();
+        var gate = Resource<CoinSoundGate>();
+        var tick = _timing.CurTick;
+        var piles = EntityQueryEnumerator<CoinPileComponent>();
+        while (piles.MoveNext(out var pile, out var coins))
         {
-            if (world.Get<TilePos>(pile) is not { } at || world.Get<InFlight>(pile) is not null)
+            if (!TryComp<TilePos>(pile, out var at) || HasComp<InFlight>(pile))
             {
                 continue;
             }
-            var spill = world.GetOwn<SpilledBy>(pile);
+            var spill = CompOrNull<SpilledByComponent>(pile);
             // First body on the tile the pile does not refuse: a locked spiller
             // standing on their own coins must not shield them from everyone else
-            var taker = standing
-                .Where(s => s.at.map == at.map && s.at.pos.x == at.pos.x && s.at.pos.y == at.pos.y)
-                .Select(s => (ulong?)s.player)
-                .FirstOrDefault(who => !(spill is not null && spill.Player == who && nowMs < spill.LockedUntilMs));
-            if (taker is not { } player || WalletOf(world, player) is not var (entity, wallet))
+            PlayerId? taker = null;
+            foreach (var (player, here) in standing)
+            {
+                if (here.Map != at.Map || here.Pos != at.Pos)
+                {
+                    continue;
+                }
+                if (spill is not null && spill.Player == player && now < spill.LockedUntil)
+                {
+                    continue;
+                }
+                taker = player;
+                break;
+            }
+            if (taker is not { } who || !wallets.TryGetValue(who, out var record))
             {
                 continue;
             }
             // Clawing your own spill back refills the balance but earns nothing:
             // earned is the round tiebreak, and laps around your own coins must
             // not farm it
-            if (spill is not null && spill.Player == player)
+            if (spill is not null && spill.Player == who)
             {
-                world.Mutate(entity, new Wallet(Saturate(wallet.balance, coins.Value), wallet.earned));
+                record.Comp2.Balance = WalletSystem.Saturate(record.Comp2.Balance, coins.Value);
             }
             else
             {
-                Credit(world, entity, wallet, coins.Value);
+                WalletSystem.Credit(record.Comp2, coins.Value);
             }
             if (gate.DingTick != tick)
             {
                 gate.DingTick = tick;
-                world.InsertResource(gate);
-                world.PlaySound("audio/effects/coin_ding.ogg", at);
+                _audio.Play("audio/effects/coin_ding.ogg", at);
             }
-            world.Despawn(pile);
+            QueueDel(pile);
         }
     }
 
     // A stale pile burns away; a burning one can still be snatched from the
     // flames right up to the reaper
-    static void ReapStalePiles(World world)
+    void ReapStalePiles(Entity<CoinEconomyRuleComponent> rule, EntityUid scope)
     {
-        if (!world.RoundRunning)
+        var now = Now;
+        var decaying = EntityQueryEnumerator<PileDecayComponent>();
+        while (decaying.MoveNext(out var pile, out var decay))
         {
-            return;
-        }
-        var now = world.Now;
-        var nowMs = (ulong)now.TotalMilliseconds;
-        foreach (var (pile, decay) in world.QueryOwn<PileDecay>())
-        {
-            if (nowMs < decay.EndsAtMs || world.Get<BurnOut>(pile) is not null)
+            if (now < decay.EndsAt || HasComp<BurnOut>(pile))
             {
                 continue;
             }
-            world.Insert(pile, new BurnOut(new Deadline(Durations.From(now + TimeSpan.FromSeconds(BurnSecs))), BurnSecs));
-            world.RemoveOwn<PileDecay>(pile);
+            AddComp(pile, new BurnOut(new Deadline(now + TimeSpan.FromSeconds(BurnSecs)), BurnSecs));
+            RemComp<PileDecayComponent>(pile);
         }
     }
-
-    // Seeded rolls with no rand: the same inputs give the same shower
-    static ulong Mix(ulong a, ulong b)
-    {
-        var x = a * 0x9E3779B97F4A7C15UL ^ (b + 0x632BE59BD9B4E019UL);
-        x ^= x >> 30;
-        x *= 0xBF58476D1CE4E5B9UL;
-        x ^= x >> 27;
-        x *= 0x94D049BB133111EBUL;
-        return x ^ (x >> 31);
-    }
-
-    static float Unit(ulong seed) => (seed % 1024) / 1023f;
-
-    static float UnitSigned(ulong seed) => Unit(seed) * 2f - 1f;
 }

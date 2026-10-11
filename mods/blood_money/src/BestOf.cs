@@ -1,90 +1,70 @@
-using Rs13.Legacy;
-using static TypedModuleWorld.wit.Imports.rs13.mods.v0_1_0.ITypedEcsImports;
+using Rs13.Mods;
+
+namespace BloodMoney;
 
 // Match wins so far, and how many matches have finished: draws count as
-// played, or a drawn series would never end. Lives host-side on the rule
-// entity as the module's own component
-class Series
+// played, or a drawn series would never end
+[RegisterComponent]
+public sealed partial class SeriesComponent : Component
 {
-    public Dictionary<ulong, uint> Wins { get; set; } = [];
-    public uint Played { get; set; }
-    public ulong Board { get; set; }
+    [DataField] public Dictionary<PlayerId, uint> Wins = [];
+    [DataField] public uint Played;
+    [DataField] public EntityUid Board;
 }
 
 // Best-of series: most match wins take the round, coins earned break ties
-static class BestOf
+public sealed partial class BestOfRuleSystem : GameRuleSystem<BestOfRuleComponent>
 {
-    public static void Setup(ModApp app)
-    {
-        app.RegisterComponent<Series>();
-        app.Observe<RuleStarted>(OnRuleStarted);
-        app.Observe<ScopeEnding>(OnMatchEnding);
-    }
+    [Dependency] WalletSystem _wallets = default!;
 
     // A fresh round starts a fresh series and a fresh earned tally: the
     // tiebreak must not remember last round's scrounging
-    static void OnRuleStarted(RuleStarted on, World world)
+    protected override void Started(Entity<BestOfRuleComponent> rule, ref RuleStarted args)
     {
-        if (world.GetOwn<BestOfRule>(on.entity) is null)
-        {
-            return;
-        }
-        world.Trigger(new ClearEarned());
-        var board = world.Spawn(world.Bundle(Board([])), world.Bundle(new ChildOf(on.entity)), world.Bundle(new Replicated()));
-        world.InsertOwn(on.entity, new Series { Board = board });
+        RaiseLocalEvent(new ClearEarned());
+        var board = Spawn(Board([]), new ChildOf(rule), new Replicated());
+        AddComp(rule, new SeriesComponent { Board = board });
     }
 
     // Credits each match's winner, and after the fixed number of matches ends
     // the round: most match wins takes it, total coins earned across the round
     // breaks ties. A match you did not win still was not wasted
-    static void OnMatchEnding(ScopeEnding on, World world)
+    protected override void NestedScopeEnding(Entity<BestOfRuleComponent> rule, EntityUid scope, ref ScopeEnding args)
     {
-        if (world.Get<ChildOf>(on.entity) is not { } ending)
+        if (!TryComp<SeriesComponent>(rule, out var series))
         {
             return;
         }
-        ulong? winner = on.outcome.places.Count > 0 ? on.outcome.places[0].player : null;
+        PlayerId? winner = args.Outcome.Places.Count > 0 ? args.Outcome.Places[0].Player : null;
 
-        foreach (var (entity, rule) in world.QueryOwn<BestOfRule>().ToList())
+        var sessions = EntityQueryEnumerator<SessionPlayer, Participant>();
+        while (sessions.MoveNext(out _, out var session, out _))
         {
-            if (world.Get<ChildOf>(entity) is not { } childOf)
-            {
-                continue;
-            }
-            var scope = childOf.Value;
-            if (ending.Value != scope || world.Get<ScopeEnded>(scope) is not null || world.GetOwn<Series>(entity) is not { } series)
-            {
-                continue;
-            }
-            foreach (var (_, session, _) in world.Query<SessionPlayer, Participant>())
-            {
-                series.Wins.TryAdd(session.Value, 0);
-            }
-            if (winner is { } w)
-            {
-                series.Wins[w] = series.Wins.GetValueOrDefault(w) + 1;
-            }
-            series.Played += 1;
+            series.Wins.TryAdd(session.Value, 0);
+        }
+        if (winner is { } w)
+        {
+            series.Wins[w] = series.Wins.GetValueOrDefault(w) + 1;
+        }
+        series.Played += 1;
 
-            var ranking = Ranking(series.Wins, world);
-            var rows = ranking.Select(place => new ScoreRow(place.name, place.score, winner == place.player, place.player)).ToList();
-            world.Insert(series.Board, Board(rows));
+        var ranking = Ranking(series.Wins);
+        var rows = ranking.Select(place => new ScoreRow(place.Name, place.Score, place.Player == winner, place.Player)).ToList();
+        AddComp(series.Board, Board(rows));
 
-            if (series.Played >= rule.Matches)
-            {
-                world.Trigger(new EndScope(scope, new ScopeOutcome("gamemode-round-won", ranking)));
-            }
-            world.InsertOwn(entity, series);
+        if (series.Played >= rule.Comp.Matches)
+        {
+            RaiseLocalEvent(new EndScope(scope, new ScopeOutcome("gamemode-round-won", ranking)));
         }
     }
 
-    static List<OutcomePlace> Ranking(Dictionary<ulong, uint> wins, World world)
+    List<OutcomePlace> Ranking(Dictionary<PlayerId, uint> wins)
     {
-        var records = world.Query<PlayerRecord, Wallet>().ToList();
+        var wallets = _wallets.ByPlayer();
         var places = wins.Select(entry =>
         {
-            var (_, record, wallet) = records.FirstOrDefault(row => row.a.id == entry.Key);
-            return (player: entry.Key, wins: entry.Value, earned: wallet.earned, name: record.username ?? "");
+            var found = wallets.TryGetValue(entry.Key, out var record);
+            return (player: entry.Key, wins: entry.Value, earned: found ? record.Comp2.Earned : 0u, name: found ? record.Comp1.Username : "");
         }).ToList();
         places.Sort((a, b) =>
         {
@@ -96,5 +76,5 @@ static class BestOf
         return places.Select(p => new OutcomePlace(p.player, p.name, (int)p.wins)).ToList();
     }
 
-    static HudScoreboard Board(List<ScoreRow> rows) => new(HudZone.TOP_LEFT, "gamemode-scoreboard-series", rows);
+    static HudScoreboard Board(List<ScoreRow> rows) => new(HudZone.TopLeft, "gamemode-scoreboard-series", rows);
 }

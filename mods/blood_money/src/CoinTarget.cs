@@ -1,92 +1,77 @@
-using Rs13.Legacy;
-using static TypedModuleWorld.wit.Imports.rs13.mods.v0_1_0.ITypedEcsImports;
+using Rs13.Mods;
+
+namespace BloodMoney;
 
 // When the match times out, and the live board this rule keeps current
-class Race
+[RegisterComponent]
+public sealed partial class RaceComponent : Component
 {
-    public ulong EndsAtMs { get; set; }
-    public ulong Board { get; set; }
+    [DataField] public Deadline EndsAt;
+    [DataField] public EntityUid Board;
 }
 
 // Coin target: the first wallet at the target takes the match, the timer
 // running out hands it to the richest
-static class CoinTarget
+public sealed partial class CoinTargetRuleSystem : GameRuleSystem<CoinTargetRuleComponent>
 {
-    public static void Setup(ModApp app)
+    [Dependency] WalletSystem _wallets = default!;
+
+    public override void Initialize()
     {
-        app.RegisterComponent<Race>();
-        app.Observe<RuleStarted>(OnRuleStarted);
-        app.Every(TimeSpan.FromMilliseconds(100), WatchTheRace);
+        base.Initialize();
+        EveryActive(TimeSpan.FromMilliseconds(100), WatchTheRace);
     }
 
-    static void OnRuleStarted(RuleStarted on, World world)
+    protected override void Started(Entity<CoinTargetRuleComponent> rule, ref RuleStarted args)
     {
-        if (world.GetOwn<CoinTargetRule>(on.entity) is not { } rule)
-        {
-            return;
-        }
-        var endsAt = world.Now + TimeSpan.FromSeconds(rule.Secs);
-        var board = world.Spawn(world.Bundle(Board([])), world.Bundle(new ChildOf(on.entity)), world.Bundle(new Replicated()));
-        world.Spawn(
-            world.Bundle(new HudBanner(HudZone.TOP_CENTER, "gamemode-match-timer", "", new Deadline(Durations.From(endsAt)))),
-            world.Bundle(new ChildOf(on.entity)),
-            world.Bundle(new Replicated()));
-        world.InsertOwn(on.entity, new Race { EndsAtMs = (ulong)endsAt.TotalMilliseconds, Board = board });
+        var endsAt = new Deadline(Now + TimeSpan.FromSeconds(rule.Comp.Secs));
+        var board = Spawn(Board([]), new ChildOf(rule), new Replicated());
+        Spawn(new HudBanner(HudZone.TopCenter, "gamemode-match-timer", "", endsAt), new ChildOf(rule), new Replicated());
+        AddComp(rule, new RaceComponent { EndsAt = endsAt, Board = board });
     }
 
     // Balance is the score. The first wallet at the target ends the match on
     // the next sample, a tenth of a second at most; the timer running out
     // hands it to the richest, and an exact tie at the top of a timeout is a
     // draw that credits nobody
-    static void WatchTheRace(World world)
+    void WatchTheRace(Entity<CoinTargetRuleComponent> rule, EntityUid scope)
     {
-        if (!world.RoundRunning)
+        if (!TryComp<RaceComponent>(rule, out var race))
         {
             return;
         }
-        var now = (ulong)world.Now.TotalMilliseconds;
-        foreach (var (entity, rule) in world.QueryOwn<CoinTargetRule>().ToList())
+        var wallets = _wallets.ByPlayer();
+        string Name(PlayerId player) => wallets.TryGetValue(player, out var found) ? found.Comp1.Username : "";
+
+        var standing = new List<(PlayerId player, uint balance)>();
+        var sessions = EntityQueryEnumerator<SessionPlayer, Participant>();
+        while (sessions.MoveNext(out _, out var session, out _))
         {
-            if (world.Get<ChildOf>(entity) is not { } childOf)
-            {
-                continue;
-            }
-            var scope = childOf.Value;
-            // A rule outlives the end of its scope by a frame, and must not act in it
-            if (world.Get<ScopeEnded>(scope) is not null || world.GetOwn<Race>(entity) is not { } race)
-            {
-                continue;
-            }
-            var records = world.Query<PlayerRecord, Wallet>().ToList();
-            string Name(ulong player) => records.FirstOrDefault(row => row.a.id == player).a.username ?? "";
-
-            var standing = world.Query<SessionPlayer, Participant>()
-                .Select(row => (player: row.a.Value, balance: records.FirstOrDefault(r => r.a.id == row.a.Value).b.balance))
-                .ToList();
-            standing.Sort((a, b) =>
-            {
-                var byBalance = b.balance.CompareTo(a.balance);
-                return byBalance != 0 ? byBalance : string.CompareOrdinal(Name(a.player), Name(b.player));
-            });
-
-            var leader = standing.Count > 0 ? standing[0] : ((ulong player, uint balance)?)null;
-            var rows = standing.Select(s => new ScoreRow(Name(s.player), (int)s.balance, leader?.player == s.player, s.player)).ToList();
-            if (world.Get<HudScoreboard>(race.Board) is { } hud && !SameRows(hud.rows, rows))
-            {
-                world.Mutate(race.Board, Board(rows));
-            }
-
-            var reached = leader is { } lead && lead.balance >= rule.Target;
-            var timedOut = now >= race.EndsAtMs;
-            if (!reached && !timedOut)
-            {
-                continue;
-            }
-            world.Trigger(new EndScope(scope, RaceOutcome(standing, reached, Name)));
+            standing.Add((session.Value, wallets.TryGetValue(session.Value, out var found) ? found.Comp2.Balance : 0u));
         }
+        standing.Sort((a, b) =>
+        {
+            var byBalance = b.balance.CompareTo(a.balance);
+            return byBalance != 0 ? byBalance : string.CompareOrdinal(Name(a.player), Name(b.player));
+        });
+
+        var leader = standing.Count > 0 ? standing[0] : ((PlayerId player, uint balance)?)null;
+        var rows = standing.Select(s => new ScoreRow(Name(s.player), (int)s.balance, leader?.player == s.player, s.player)).ToList();
+        if (TryComp<HudScoreboard>(race.Board, out var hud) && !SameRows(hud.Rows, rows))
+        {
+            hud.Rows = rows;
+        }
+
+        var reached = leader is { } lead && lead.balance >= rule.Comp.Target;
+        var timedOut = Now >= race.EndsAt.EndsAt;
+        if (!reached && !timedOut)
+        {
+            return;
+        }
+        RaiseLocalEvent(new EndScope(scope, RaceOutcome(standing, reached, Name)));
     }
 
-    static ScopeOutcome RaceOutcome(List<(ulong player, uint balance)> standing, bool reached, Func<ulong, string> name)
+    static ScopeOutcome RaceOutcome(List<(PlayerId player, uint balance)> standing, bool reached, Func<PlayerId, string> name)
     {
         var topTied = !reached && standing.Count >= 2 && standing[0].balance == standing[1].balance;
         if (standing.Count == 0 || topTied)
@@ -97,11 +82,8 @@ static class CoinTarget
         return new ScopeOutcome("gamemode-match-won", places);
     }
 
-    static bool SameRows(List<ScoreRow> a, List<ScoreRow> b) =>
-        a.Count == b.Count && a.Zip(b).All(pair =>
-            pair.First.name == pair.Second.name && pair.First.score == pair.Second.score
-            && pair.First.highlight == pair.Second.highlight && pair.First.player == pair.Second.player);
+    static bool SameRows(IReadOnlyList<ScoreRow> a, IReadOnlyList<ScoreRow> b) =>
+        a.Count == b.Count && a.Zip(b).All(pair => pair.First == pair.Second);
 
-
-    static HudScoreboard Board(List<ScoreRow> rows) => new(HudZone.TOP_RIGHT, "gamemode-scoreboard-match", rows);
+    static HudScoreboard Board(List<ScoreRow> rows) => new(HudZone.TopRight, "gamemode-scoreboard-match", rows);
 }
