@@ -90,10 +90,12 @@ public sealed partial class EconomyRuleSystem : GameRuleSystem<CoinEconomyRuleCo
         SubscribeLocalEvent<Killed>(BountyOnKill);
         SubscribeLocalEvent<CoinBurstComponent, Triggered>(BurstOnTrigger);
         SubscribeLocalEvent<InFlight, ComponentRemove>(ClinkOnLanding);
-        EveryActive(TimeSpan.Zero, FlushSpills);
+        // The pool and the drip's anchor move whenever a round runs, rule or not:
+        // a spill pooled as its match ended is dropped, and an intermission is not owed
+        Every(TimeSpan.Zero, FlushSpills);
         EveryActive(TimeSpan.Zero, PickUpPiles);
         EveryActive(TimeSpan.Zero, ReapStalePiles);
-        EveryActive(TimeSpan.FromSeconds(1), Drip);
+        Every(TimeSpan.FromSeconds(1), Drip);
     }
 
     // The live economy rule, none once its scope has ended
@@ -181,8 +183,12 @@ public sealed partial class EconomyRuleSystem : GameRuleSystem<CoinEconomyRuleCo
     }
 
     // Turn the tick's pooled spills into flying handfuls
-    void FlushSpills(Entity<CoinEconomyRuleComponent> rule, EntityUid scope)
+    void FlushSpills()
     {
+        if (!Rules.RoundRunning(GameTicker))
+        {
+            return;
+        }
         var pending = Resource<PendingSpills>();
         if (pending.Spills.Count == 0)
         {
@@ -190,13 +196,17 @@ public sealed partial class EconomyRuleSystem : GameRuleSystem<CoinEconomyRuleCo
         }
         var spills = pending.Spills;
         pending.Spills = [];
+        if (Rule() is not { } rule)
+        {
+            return;
+        }
         foreach (var spill in spills)
         {
             // A spill entry with nothing drained means every hit this frame found
             // an empty wallet: mint one crumb for the lot, so a hit always
             // showers something and a pellet cloud never showers more
-            var value = spill.Value == 0 ? rule.Comp.Crumb : spill.Value;
-            SpawnCoins(spill.At, spill.Victim, spill.Heading, spill.Player, value, rule.Comp, Seed.Mix(NextSalt(), spill.Player.Value));
+            var value = spill.Value == 0 ? rule.Crumb : spill.Value;
+            SpawnCoins(spill.At, spill.Victim, spill.Heading, spill.Player, value, rule, Seed.Mix(NextSalt(), spill.Player.Value));
         }
     }
 
@@ -292,8 +302,12 @@ public sealed partial class EconomyRuleSystem : GameRuleSystem<CoinEconomyRuleCo
     // A trickle that only fills wallets below the threshold: comeback fuel and a
     // guarantee that every hit has something to knock loose, never a reward
     // for hiding while rich
-    void Drip(Entity<CoinEconomyRuleComponent> rule, EntityUid scope)
+    void Drip()
     {
+        if (!Rules.RoundRunning(GameTicker))
+        {
+            return;
+        }
         var now = Now;
         var anchor = Resource<DripAnchor>();
         if (anchor.Last == TimeSpan.Zero)
@@ -307,6 +321,10 @@ public sealed partial class EconomyRuleSystem : GameRuleSystem<CoinEconomyRuleCo
             return;
         }
         anchor.Last += TimeSpan.FromSeconds(seconds);
+        if (Rule() is not { } rule)
+        {
+            return;
+        }
         var standing = new HashSet<PlayerId>();
         var mobs = EntityQueryEnumerator<ControlledBy, Mob>();
         while (mobs.MoveNext(out var body, out var controlled, out _))
@@ -324,9 +342,9 @@ public sealed partial class EconomyRuleSystem : GameRuleSystem<CoinEconomyRuleCo
             {
                 continue;
             }
-            if (record.Comp2.Balance < rule.Comp.DripBelow)
+            if (record.Comp2.Balance < rule.DripBelow)
             {
-                WalletSystem.Credit(record.Comp2, rule.Comp.DripPerSec * seconds);
+                WalletSystem.Credit(record.Comp2, rule.DripPerSec * seconds);
             }
         }
     }
