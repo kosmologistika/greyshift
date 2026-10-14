@@ -12,6 +12,7 @@
         abstract: true,
         components: {
             "WallMount": (),
+            "ZoneLit": (),
             "PlacementLayer": WallMount,
             "Facing": (South),
             // No `Damageable`, so nothing can reach this trigger yet: the

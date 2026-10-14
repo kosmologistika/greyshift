@@ -12,6 +12,7 @@
         components: {
             "PointLight": (),
             "Solid": (),
+            "ZoneLit": (),
             "PlacementLayer": Solid,
             "Appearance": (
                 sprite: (rsi: "textures/structures/lighting/small_light_post", state: "base"),

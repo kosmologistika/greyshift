@@ -6,6 +6,7 @@
         components: {
             "DisplayName": (name: "floor light"),
             "PointLight": (color: (1.0, 0.776, 0.617), energy: 1.2, radius: 6.0),
+            "ZoneLit": (),
             "PlacementLayer": Free,
             "Appearance": (
                 sprite: (rsi: "textures/structures/lighting/light_floor", state: "base"),
@@ -44,6 +45,7 @@
         components: {
             "DisplayName": (name: "banker's lamp"),
             "PointLight": (color: (0.7, 1.0, 0.4), energy: 1.0, radius: 4.0),
+            "ZoneLit": (),
             // Free, so it can stand on a table tile
             "PlacementLayer": Free,
             "Facing": (South),
@@ -62,6 +64,7 @@
         components: {
             "DisplayName": (name: "lantern"),
             "PointLight": (color: (1.0, 0.55, 0.2), energy: 1.0, radius: 4.0),
+            "ZoneLit": (),
             // Free, so it can stand on a bench or tray tile
             "PlacementLayer": Free,
             "Appearance": (
