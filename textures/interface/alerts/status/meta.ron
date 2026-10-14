@@ -6,6 +6,7 @@
         "knocked_down: Taken from space-wizards/space-station-14 Resources/Textures/Interface/Alerts/stunnable.rsi at commit dec2d42a1d1b87924c312dce94ba9c60411ab54d, made by Princess Chesseballs, Pronana on Github https://github.com/Pronana",
         "stun: Taken from space-wizards/space-station-14 Resources/Textures/Objects/Weapons/Melee/stunbaton.rsi stunbaton_off at commit b707b788aca0d98650b305480ac91224f23897af, originally from vgstation at https://github.com/vgstation-coders/vgstation13/commit/1cdfb0230cc96d0ba751fa002d04f8aa2f25ad7d; the icon SS14's own Stun alert shows",
         "critical: frame 0 of space-wizards/space-station-14 Resources/Textures/Interface/Alerts/human_critical.rsi at commit dec2d42a1d1b87924c312dce94ba9c60411ab54d, itself from tgstation icons/hud/screen_gen.dmi",
+        "suffocating, poisoned: frame 0 of not_enough_oxy and too_much_tox in space-wizards/space-station-14 Resources/Textures/Interface/Alerts/breathing.rsi at commit 04c3240726460b9fa3bca5de5872f8a2ee30e5c9, itself from tgstation icons/hud/screen_alert.dmi at commit 2f18e6232ce5897554351194082469a043c5ab06",
         "plate: the template state of https://github.com/tgstation/tgstation/commits/038707f0b1dec77bce817a2ccb804419547b86b0/icons/hud/screen_midnight.dmi, the skin the HUD buttons are cut from",
     ],
     states: [
@@ -15,5 +16,7 @@
         (name: "stun"),
         (name: "plate"),
         (name: "critical"),
+        (name: "suffocating"),
+        (name: "poisoned"),
     ],
 )

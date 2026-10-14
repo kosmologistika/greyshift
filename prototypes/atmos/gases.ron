@@ -1,0 +1,20 @@
+[
+    // Densities are per cell, a full room of air reading its standard and
+    // space reading zero. Every number here is a playtest knob
+    (
+        type: "Gas",
+        id: "gas_air",
+        standard: 100.0,
+        effect: Some("effect_suffocating"),
+        // Below this a breather suffocates; a firelock drops well before, while
+        // there is still air worth keeping in
+        unbreathable_below: Some(40.0),
+        contained_below: Some(70.0),
+    ),
+    (
+        type: "Gas",
+        id: "gas_neurotoxin",
+        effect: Some("effect_poisoned"),
+        harmful_above: Some(10.0),
+    ),
+]

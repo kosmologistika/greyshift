@@ -6,6 +6,8 @@
         components: {
             "DisplayName": (name: "emergency oxygen tank"),
             "Item": (size: Small, held: Bundle),
+            "Internals": (),
+            "ItemToggle": (),
             "Appearance": (sprite: (rsi: "textures/objects/tanks/tank_internals_emergency_oxygen", state: "emergency")),
         },
     ),
@@ -16,6 +18,8 @@
         components: {
             "DisplayName": (name: "oxygen tank"),
             "Item": (size: Medium, held: Bundle),
+            "Internals": (),
+            "ItemToggle": (),
             "Appearance": (sprite: (rsi: "textures/objects/tanks/tank_internals_oxygen_red", state: "oxygen_fr")),
         },
     ),
@@ -36,6 +40,8 @@
         components: {
             "DisplayName": (name: "oxygen tank"),
             "Item": (size: Medium, held: Bundle),
+            "Internals": (),
+            "ItemToggle": (),
             "Appearance": (sprite: (rsi: "textures/objects/tanks/tank_internals_oxygen", state: "oxygen")),
         },
     ),
@@ -46,6 +52,8 @@
         components: {
             "DisplayName": (name: "extended-capacity emergency oxygen tank"),
             "Item": (size: Small, held: Bundle),
+            "Internals": (),
+            "ItemToggle": (),
             "Appearance": (sprite: (rsi: "textures/objects/tanks/tank_internals_emergency_oxygen_engi", state: "emergency_engi")),
         },
     ),
@@ -56,6 +64,8 @@
         components: {
             "DisplayName": (name: "plasma tank"),
             "Item": (size: Medium, held: Bundle),
+            "Internals": (),
+            "ItemToggle": (),
             "Appearance": (sprite: (rsi: "textures/objects/tanks/tank_internals_plasma_full", state: "plasma")),
         },
     ),
@@ -66,6 +76,8 @@
         components: {
             "DisplayName": (name: "anesthetic tank"),
             "Item": (size: Medium, held: Bundle),
+            "Internals": (),
+            "ItemToggle": (),
             "Appearance": (sprite: (rsi: "textures/objects/tanks/tank_internals_anesthetic", state: "anesthetic")),
         },
     ),
@@ -76,6 +88,8 @@
         components: {
             "DisplayName": (name: "oxygen tank"),
             "Item": (size: Medium, held: Bundle),
+            "Internals": (),
+            "ItemToggle": (),
             "Appearance": (sprite: (rsi: "textures/objects/tanks/tank_internals_oxygen_yellow", state: "oxygen_f")),
         },
     ),

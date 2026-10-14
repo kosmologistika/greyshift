@@ -11,3 +11,7 @@ alert-stunned-name = Оглушены
 alert-stunned-desc = Вы не можете двигаться и действовать руками, пока это не пройдёт.
 alert-exhausted-name = Изнеможение
 alert-exhausted-desc = Нет сил стоять; вы подниметесь, когда это пройдёт.
+alert-suffocating-name = Задыхаетесь
+alert-suffocating-desc = Здесь слишком мало воздуха. Доберитесь до помещения, где он есть, или откройте баллон.
+alert-poisoned-name = Отравление
+alert-poisoned-desc = Вы дышите токсином. Выйдите из него или откройте баллон.

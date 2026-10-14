@@ -11,3 +11,7 @@ alert-stunned-name = Stunned
 alert-stunned-desc = You cannot move or use your hands until it wears off.
 alert-exhausted-name = Exhausted
 alert-exhausted-desc = Too winded to stand; you get up when it passes.
+alert-suffocating-name = Suffocating
+alert-suffocating-desc = There is not enough air here to breathe. Get to a room that holds some, or open a tank.
+alert-poisoned-name = Poisoned
+alert-poisoned-desc = You are breathing a toxin. Get out of it, or open a tank.

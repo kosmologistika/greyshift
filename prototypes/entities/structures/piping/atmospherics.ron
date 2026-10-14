@@ -5,6 +5,8 @@
         parents: ["base_prop_scenery"],
         components: {
             "DisplayName": (name: "air scrubber"),
+            // Pulls toxins out of its room, from the floor to nowhere
+            "GasDevice": (flows: [(gas: "gas_neurotoxin", rate: -100.0, target: 0.0)]),
             "Appearance": (sprite: (rsi: "textures/structures/piping/atmospherics_components_unary_vent_scrubber_on", state: "scrub_on"), depth: FloorFixture),
         },
     ),
@@ -13,6 +15,9 @@
         id: "structure_atmospherics_components_unary_vent_pump_on",
         parents: ["base_prop_scenery"],
         components: {
+            // Refills its room to the standard from nowhere; the cap is what
+            // makes one safe in every room
+            "GasDevice": (flows: [(gas: "gas_air", rate: 100.0, target: 100.0)]),
             "DisplayName": (name: "air vent"),
             "Appearance": (sprite: (rsi: "textures/structures/piping/atmospherics_components_unary_vent_pump_on", state: "vent_out"), depth: FloorFixture),
         },

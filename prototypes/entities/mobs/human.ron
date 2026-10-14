@@ -5,6 +5,7 @@
         components: {
             "DisplayName": (name: "human"),
             "Mob": (),
+            "Breathes": (),
             "Movable": (),
             "Glidable": (),
             "Pullable": (),

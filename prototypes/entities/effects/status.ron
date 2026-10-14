@@ -73,4 +73,38 @@
             "GrantsActions": (ids: ["action_blast"], to: EffectMob),
         },
     ),
+    // Held by the breathing loop while a breather's cell is out of a gas's
+    // band; the loop lifts it the step the air is back
+    (
+        type: "Entity",
+        id: "effect_suffocating",
+        hide_spawn_menu: true,
+        components: {
+            "DisplayName": (name: "suffocating"),
+            "StatusEffect": (),
+            // Two thirds of a minute from standing to the floor in vacuum
+            "Hurts": (kind: Asphyxiation, per_second: 1.5),
+            "EffectAlert": (
+                icon: "textures/interface/alerts/status/suffocating.png",
+                name: "alert-suffocating-name",
+                desc: "alert-suffocating-desc",
+            ),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "effect_poisoned",
+        hide_spawn_menu: true,
+        components: {
+            "DisplayName": (name: "poisoned"),
+            "StatusEffect": (),
+            "Hurts": (kind: Toxin, per_second: 2.0),
+            "SlowsBy": (factor: 0.7),
+            "EffectAlert": (
+                icon: "textures/interface/alerts/status/poisoned.png",
+                name: "alert-poisoned-name",
+                desc: "alert-poisoned-desc",
+            ),
+        },
+    ),
 ]
