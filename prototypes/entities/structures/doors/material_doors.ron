@@ -8,6 +8,7 @@
             // No BumpOpen: a door with no motor needs a hand on it, so walking
             // into this one only stops you. No auto-close for the same reason.
             "Door": (auto_close_secs: None),
+            "DoorSafety": (),
             // No CrushDamage: there is no motor behind it to fear.
             "StruckSound": (default: Some((source: Collection("hit_wood"), volume_db: -4.0, pitch_var: 0.1))),
             "Destructible": (thresholds: [

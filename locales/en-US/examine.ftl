@@ -9,6 +9,10 @@ examine-door-shut = It is shut.
 examine-door-bolted = The bolts are down.
 examine-door-emergency = The emergency access light is lit.
 examine-door-unsafe = Its safety sensor is dead.
+examine-firelock-north = North of it the air is at { $percent }%.
+examine-firelock-east = East of it the air is at { $percent }%.
+examine-firelock-south = South of it the air is at { $percent }%.
+examine-firelock-west = West of it the air is at { $percent }%.
 examine-armor-covers = Covers the { $zone ->
     [torso] torso
     [head] head
