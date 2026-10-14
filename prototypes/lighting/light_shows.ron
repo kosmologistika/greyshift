@@ -1,4 +1,15 @@
 [
+    // Every light in a depressurised zone breathes amber: a slow swell, well
+    // under the flash cap, red kept back for fire. `quiet` at 1 since no
+    // track drives it
+    (
+        type: "LightShow",
+        id: "show_depressurised",
+        bpm: 40.0,
+        channels: {
+            "alarm": (low: 0.5, quiet: 1.0, colors: [(1.0, 0.55, 0.1)]),
+        },
+    ),
     (
         type: "LightShow",
         id: "casino",
