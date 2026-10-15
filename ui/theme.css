@@ -921,6 +921,23 @@
     -bevy-line-break: word-or-character;
 }
 
+/* An announcement is a column with a stripe in the style's colour */
+.announcement {
+    flex-direction: column;
+    align-items: stretch;
+    margin: 2px 0px;
+    padding: 2px var(--space-1);
+    border-left: 2px solid var(--accent);
+    background-color: var(--bg-surface);
+}
+
+.announcement-head { color: var(--text-bright); }
+.announcement-title { color: var(--text-dim); }
+.announcement.priority { border-left: 2px solid var(--warning); }
+.announcement.priority .announcement-head { color: var(--warning); }
+.announcement.alert { border-left: 2px solid var(--danger); }
+.announcement.alert .announcement-head { color: var(--danger); }
+
 /* The block colour is Rust-written: a span background is not a stylesheet property */
 .repeat {
     color: var(--bg-screen);
