@@ -1,13 +1,13 @@
 [
-    // Every light in a depressurised zone breathes amber: a slow swell, well
-    // under the flash cap, red kept back for fire. `quiet` at 1 since no
-    // track drives it
+    // Every light in a depressurised zone breathes a dim amber: the room at
+    // under half its usual light, a slow swell well under the flash cap, red
+    // kept back for fire. `quiet` at 1 since no track drives it
     (
         type: "LightShow",
         id: "show_depressurised",
         bpm: 40.0,
         channels: {
-            "alarm": (low: 0.5, quiet: 1.0, colors: [(1.0, 0.55, 0.1)]),
+            "alarm": (low: 0.5, quiet: 1.0, level: 0.4, colors: [(1.0, 0.45, 0.08)]),
         },
     ),
     (
