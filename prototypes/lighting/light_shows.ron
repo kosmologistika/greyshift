@@ -1,20 +1,13 @@
 [
-    // Every fixture in a depressurised zone turns emergency light, tg's way:
-    // the room goes dark but for a narrow alarm-orange cone each one sweeps
-    // round, red kept back for fire. Steady, so `low` at 1 and `quiet` at 1
-    // since no track drives it
+    // Every light in a depressurised zone breathes amber: a slow swell, well
+    // under the flash cap, red kept back for fire. `quiet` at 1 since no
+    // track drives it
     (
         type: "LightShow",
         id: "show_depressurised",
         bpm: 40.0,
         channels: {
-            "alarm": (
-                low: 1.0,
-                quiet: 1.0,
-                colors: [(1.0, 0.25, 0.05)],
-                arc_degrees: Some(70.0),
-                spin_degrees_per_sec: 60.0,
-            ),
+            "alarm": (low: 0.5, quiet: 1.0, colors: [(1.0, 0.55, 0.1)]),
         },
     ),
     (
