@@ -9,6 +9,9 @@
             // Opens for whoever walks into it, and wears the status lights
             // that say why when it doesn't.
             "BumpOpen": (),
+            // The obstruction sensor. Cutting it (wires, an AI override) is
+            // what turns a door with CrushDamage into something that hurts
+            "DoorSafety": (),
             "Airlock": (),
             // What the door does to whoever is in it when the safety is cut
             "CrushDamage": ({Blunt: 15}),

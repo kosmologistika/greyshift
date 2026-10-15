@@ -6,6 +6,7 @@
         components: {
             "DisplayName": (name: "pocket crowbar"),
             "Item": (size: Small, held: Bundle),
+            "PryTool": (),
             "Appearance": (sprite: (rsi: "textures/objects/tools/prop_crowbar", state: "crowbar")),
         },
     ),
@@ -16,6 +17,7 @@
         components: {
             "DisplayName": (name: "pocket crowbar"),
             "Item": (size: Small, held: Bundle),
+            "PryTool": (),
             "Appearance": (sprite: (rsi: "textures/objects/tools/crowbar_red", state: "crowbar_red")),
         },
     ),
@@ -26,6 +28,7 @@
         components: {
             "DisplayName": (name: "large crowbar"),
             "Item": (size: Medium, held: Bundle),
+            "PryTool": (),
             "Appearance": (sprite: (rsi: "textures/objects/tools/crowbar_large", state: "crowbar_large")),
         },
     ),

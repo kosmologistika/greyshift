@@ -9,6 +9,10 @@ examine-door-shut = Закрыта.
 examine-door-bolted = Болты опущены.
 examine-door-emergency = Горит лампа аварийного доступа.
 examine-door-unsafe = Датчик безопасности не работает.
+examine-firelock-north = К северу от него воздуха { $percent }%.
+examine-firelock-east = К востоку от него воздуха { $percent }%.
+examine-firelock-south = К югу от него воздуха { $percent }%.
+examine-firelock-west = К западу от него воздуха { $percent }%.
 examine-armor-covers = Закрывает { $zone ->
     [torso] торс
     [head] голову

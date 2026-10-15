@@ -17,9 +17,8 @@
         abstract: true,
         parents: ["structure_door_frame_base"],
         components: {
-            // The obstruction sensor. Cutting it (wires, an AI override) is
-            // what turns a door with CrushDamage into something that hurts
-            "DoorSafety": (),
+            // No DoorSafety here: each door kind says whether it has the
+            // obstruction sensor, since a firelock is built without one
             "Damageable": (),
             "Door": (state: Closed, open_secs: 0.6, close_secs: 0.6, deny_secs: 0.6),
             "DoorSounds": (
