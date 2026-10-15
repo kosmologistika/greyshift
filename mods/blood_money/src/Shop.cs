@@ -59,6 +59,10 @@ public sealed class CatalogEntry
     public RsiRef? Sprite;
 }
 
+// The catalog as one call's shoppers draw from it: staples cheapest first,
+// the rolled pool by listing id with its draw weight
+sealed record Shelf(List<ShopListing> Listings, List<OfferRow> Staples, List<(OfferRow row, uint weight)> Pool);
+
 // How loudly the reveal celebrates a listing. Derived from the draw weight,
 // never authored: a thing is gold exactly because it barely rolls
 public enum Rarity
@@ -211,7 +215,8 @@ public sealed partial class ShopRuleSystem : GameRuleSystem<ShopRuleComponent>
             bodies.TryAdd(by.Value, body);
         }
         var wallets = _wallets.ByPlayer();
-        CatalogStyle? style = null;
+        Shelf? shelf = null;
+        var shoppers = new List<EntityUid>();
         var sessions = EntityQueryEnumerator<SessionPlayer, Participant>();
         while (sessions.MoveNext(out var connection, out var session, out _))
         {
@@ -240,35 +245,53 @@ public sealed partial class ShopRuleSystem : GameRuleSystem<ShopRuleComponent>
                 AddComp(record, new StakedComponent());
             }
             wallet.Balance = Math.Max(balance, rule.Comp.Floor);
-            var offer = RollOffer(rule.Comp, Seed.Mix(NextSalt(), player.Value));
+            shelf ??= ResolveShelf();
+            var offer = RollOffer(shelf, rule.Comp, Seed.Mix(NextSalt(), player.Value));
             if (offer.Rows.Count == 0)
             {
                 Log($"the `{Catalog}` catalog has no listings; shoppers will be force-respawned bare-handed");
             }
             AddComp(connection, offer);
             AddComp(connection, new CartComponent { Player = player });
-            // The seam's update carries the shelf; the dressing that makes it a
-            // slot machine is this mode's own wire
-            style ??= Style();
-            RaiseNetworkEvent(style, connection);
+            shoppers.Add(connection);
             // A shopping ghost is parked on its death cam: no free flight while
             // the shelf stands. Movable comes back if the match closes the shop
             RemComp<Movable>(body);
         }
+        // The seam's update carries the shelf; the dressing that makes it a
+        // slot machine is this mode's own wire
+        if (shelf is not null)
+        {
+            RaiseNetworkEvent(Style(shelf.Listings), shoppers);
+        }
+    }
+
+    // The catalog read and its rows resolved once per call: every shopper
+    // draws from the same rows, so a full lobby costs one catalog, not one
+    // per player
+    Shelf ResolveShelf()
+    {
+        var listings = _shop.Listings(Catalog);
+        var staples = listings.Where(l => l.Staple).Select(RowFor).ToList();
+        staples.Sort((a, b) => a.Price != b.Price ? a.Price.CompareTo(b.Price) : string.CompareOrdinal(a.Listing, b.Listing));
+        var pool = listings.Where(l => !l.Staple && l.Weight > 0).OrderBy(l => l.Id, StringComparer.Ordinal).Select(l => (RowFor(l), l.Weight)).ToList();
+        return new Shelf(listings, staples, pool);
     }
 
     // Staples always in stock, plus rolled rarity-weighted draws without
     // replacement, all from this mode's catalog only. seed % total, never a
     // scaled float: the top of a 0..=1 range lands past the last slot
-    ShopOffer RollOffer(ShopRuleComponent rule, ulong seed)
+    ShopOffer RollOffer(Shelf shelf, ShopRuleComponent rule, ulong seed)
     {
-        var listings = _shop.Listings(Catalog);
-        var rows = listings.Where(l => l.Staple).Select(RowFor).ToList();
-        rows.Sort((a, b) => a.Price != b.Price ? a.Price.CompareTo(b.Price) : string.CompareOrdinal(a.Listing, b.Listing));
-        var pool = listings.Where(l => !l.Staple && l.Weight > 0).OrderBy(l => l.Id, StringComparer.Ordinal).ToList();
+        var rows = new List<OfferRow>(shelf.Staples);
+        var pool = new List<(OfferRow row, uint weight)>(shelf.Pool);
         for (uint n = 0; n < rule.Rolled; n++)
         {
-            var total = pool.Aggregate(0UL, (sum, l) => sum + l.Weight);
+            var total = 0UL;
+            foreach (var (_, weight) in pool)
+            {
+                total += weight;
+            }
             if (total == 0)
             {
                 break;
@@ -277,18 +300,18 @@ public sealed partial class ShopRuleSystem : GameRuleSystem<ShopRuleComponent>
             var index = -1;
             for (var i = 0; i < pool.Count; i++)
             {
-                if (roll < pool[i].Weight)
+                if (roll < pool[i].weight)
                 {
                     index = i;
                     break;
                 }
-                roll -= pool[i].Weight;
+                roll -= pool[i].weight;
             }
             if (index < 0)
             {
                 break;
             }
-            rows.Add(RowFor(pool[index]));
+            rows.Add(pool[index].row);
             pool.RemoveAt(index);
         }
         var now = Now;
@@ -300,9 +323,8 @@ public sealed partial class ShopRuleSystem : GameRuleSystem<ShopRuleComponent>
 
     // The whole catalog dressed for the reveal, staples included, so the spin
     // is a tour of everything the shelf could hold
-    CatalogStyle Style()
+    CatalogStyle Style(List<ShopListing> listings)
     {
-        var listings = _shop.Listings(Catalog);
         var heaviest = listings.Count == 0 ? 0 : listings.Max(l => l.Weight);
         var entries = listings
             .Select(l => new CatalogEntry { Listing = l.Id, Rarity = RarityOf(l, heaviest), Sprite = _protos.Sprite(l.Product) })
@@ -565,7 +587,8 @@ public sealed partial class CartSystem : EntitySystem
         {
             return _seats.SpreadOver(seats, taken) ?? seats[0];
         }
-        var free = seats.Where(pos => !taken.Contains(pos)).ToList();
+        var occupied = new HashSet<Vector2i>(taken);
+        var free = seats.Where(pos => !occupied.Contains(pos)).ToList();
         if (free.Count == 0)
         {
             return _seats.SpreadOver(seats, []) ?? seats[0];
@@ -575,21 +598,31 @@ public sealed partial class CartSystem : EntitySystem
     }
 
     // The farthest free seats from any enemy, with slack so one wall is not the
-    // only answer, padded out to a few choices when the map has them
+    // only answer, padded out to a few choices when the map has them. Every
+    // seat's distance is taken once: a bare map is nine hundred seats
     static List<Vector2i> FarSeats(List<Vector2i> free, List<Vector2i> enemies)
     {
-        int Nearest(Vector2i pos) => enemies.Count == 0 ? 0 : enemies.Min(enemy => Chebyshev(pos, enemy));
-        free = free.OrderByDescending(Nearest).ThenBy(pos => pos.X).ThenBy(pos => pos.Y).ToList();
-        if (free.Count == 0)
+        var ranked = free.Select(pos => (pos, nearest: Nearest(pos, enemies))).OrderByDescending(seat => seat.nearest).ThenBy(seat => seat.pos.X).ThenBy(seat => seat.pos.Y).ToList();
+        if (ranked.Count == 0)
         {
-            return free;
+            return [];
         }
-        var best = Nearest(free[0]);
+        var best = ranked[0].nearest;
         var reach = best - Math.Min(RespawnSlackTiles, best / 2);
-        var nearBest = free.TakeWhile(pos => Nearest(pos) >= reach).Count();
-        var safe = free.TakeWhile(pos => Nearest(pos) >= RespawnSafeTiles).Count();
+        var nearBest = ranked.TakeWhile(seat => seat.nearest >= reach).Count();
+        var safe = ranked.TakeWhile(seat => seat.nearest >= RespawnSafeTiles).Count();
         var keep = Math.Max(nearBest, Math.Min(safe, RespawnMinChoices));
-        return free.Take(keep).ToList();
+        return ranked.Take(keep).Select(seat => seat.pos).ToList();
+    }
+
+    static int Nearest(Vector2i pos, List<Vector2i> enemies)
+    {
+        var nearest = int.MaxValue;
+        foreach (var enemy in enemies)
+        {
+            nearest = Math.Min(nearest, Chebyshev(pos, enemy));
+        }
+        return nearest;
     }
 
     public static int Chebyshev(Vector2i a, Vector2i b) => Math.Max(Math.Abs(a.X - b.X), Math.Abs(a.Y - b.Y));
