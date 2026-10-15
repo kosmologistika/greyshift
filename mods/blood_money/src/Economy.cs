@@ -129,11 +129,12 @@ public sealed partial class EconomyRuleSystem : GameRuleSystem<CoinEconomyRuleCo
             return;
         }
         var player = controlled.Value;
-        // A blow leaks coins; suffocating on the floor does not
+        // A blow from outside leaks coins; suffocating on the floor or a poison
+        // wearing the body down from within does not
         uint damage = 0;
         foreach (var (kind, amount) in args.Spec)
         {
-            if (kind != DamageType.Asphyxiation)
+            if (kind is not (DamageType.Asphyxiation or DamageType.Toxin))
             {
                 damage += amount;
             }
