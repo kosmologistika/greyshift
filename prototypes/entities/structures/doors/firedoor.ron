@@ -1,6 +1,6 @@
 [
     // A real door that rests open and is worked by the gas model: it drops
-    // while a volume beside it is losing air and lifts once both are back.
+    // while a zone beside it is losing air and lifts once both are back.
     // No motor to bump, no auto-close, and a hand can still cycle it
     (
         type: "Entity",
