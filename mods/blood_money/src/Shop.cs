@@ -60,8 +60,26 @@ public sealed class CatalogEntry
 }
 
 // The catalog as one call's shoppers draw from it: staples cheapest first,
-// the rolled pool by listing id with its draw weight
-sealed record Shelf(List<ShopListing> Listings, List<OfferRow> Staples, List<(OfferRow row, uint weight)> Pool);
+// the rolled pool by listing id. A pool row is resolved on its first draw,
+// so one death pays for its three draws, not the whole pool
+sealed class Shelf(List<ShopListing> listings, List<OfferRow> staples, List<ShopListing> pool, Func<ShopListing, OfferRow> resolve)
+{
+    readonly Dictionary<string, OfferRow> _rows = [];
+
+    public List<ShopListing> Listings => listings;
+    public List<OfferRow> Staples => staples;
+    public List<ShopListing> Pool => pool;
+
+    public OfferRow Row(ShopListing listing)
+    {
+        if (!_rows.TryGetValue(listing.Id, out var row))
+        {
+            row = resolve(listing);
+            _rows[listing.Id] = row;
+        }
+        return row;
+    }
+}
 
 // How loudly the reveal celebrates a listing. Derived from the draw weight,
 // never authored: a thing is gold exactly because it barely rolls
@@ -266,16 +284,15 @@ public sealed partial class ShopRuleSystem : GameRuleSystem<ShopRuleComponent>
         }
     }
 
-    // The catalog read and its rows resolved once per call: every shopper
-    // draws from the same rows, so a full lobby costs one catalog, not one
-    // per player
+    // The catalog read once per call: every shopper draws from the same
+    // rows, so a full lobby costs one catalog, not one per player
     Shelf ResolveShelf()
     {
         var listings = _shop.Listings(Catalog);
         var staples = listings.Where(l => l.Staple).Select(RowFor).ToList();
         staples.Sort((a, b) => a.Price != b.Price ? a.Price.CompareTo(b.Price) : string.CompareOrdinal(a.Listing, b.Listing));
-        var pool = listings.Where(l => !l.Staple && l.Weight > 0).OrderBy(l => l.Id, StringComparer.Ordinal).Select(l => (RowFor(l), l.Weight)).ToList();
-        return new Shelf(listings, staples, pool);
+        var pool = listings.Where(l => !l.Staple && l.Weight > 0).OrderBy(l => l.Id, StringComparer.Ordinal).ToList();
+        return new Shelf(listings, staples, pool, RowFor);
     }
 
     // Staples always in stock, plus rolled rarity-weighted draws without
@@ -284,13 +301,13 @@ public sealed partial class ShopRuleSystem : GameRuleSystem<ShopRuleComponent>
     ShopOffer RollOffer(Shelf shelf, ShopRuleComponent rule, ulong seed)
     {
         var rows = new List<OfferRow>(shelf.Staples);
-        var pool = new List<(OfferRow row, uint weight)>(shelf.Pool);
+        var pool = new List<ShopListing>(shelf.Pool);
         for (uint n = 0; n < rule.Rolled; n++)
         {
             var total = 0UL;
-            foreach (var (_, weight) in pool)
+            foreach (var listing in pool)
             {
-                total += weight;
+                total += listing.Weight;
             }
             if (total == 0)
             {
@@ -300,18 +317,18 @@ public sealed partial class ShopRuleSystem : GameRuleSystem<ShopRuleComponent>
             var index = -1;
             for (var i = 0; i < pool.Count; i++)
             {
-                if (roll < pool[i].weight)
+                if (roll < pool[i].Weight)
                 {
                     index = i;
                     break;
                 }
-                roll -= pool[i].weight;
+                roll -= pool[i].Weight;
             }
             if (index < 0)
             {
                 break;
             }
-            rows.Add(pool[index].row);
+            rows.Add(shelf.Row(pool[index]));
             pool.RemoveAt(index);
         }
         var now = Now;
