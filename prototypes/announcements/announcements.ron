@@ -1,0 +1,9 @@
+[
+    // Fired once on the InRound edge. Late joiners miss it, as in tg
+    (
+        type: "Announcement",
+        id: "welcome",
+        body: "announcement-welcome-body",
+        sound: Some((source: Path("audio/announcements/welcome.ogg"))),
+    ),
+]
