@@ -23,3 +23,4 @@ connect-reason-protocol-mismatch = Версия игры не совпадает
 connect-reason-takeover = Кто-то вошёл под вашим именем и перехватил сессию.
 connect-reason-join-stalled = Сервер принял подключение, но так и не начал сессию.
 connect-reason-login-timeout = Сервер разорвал подключение: он так и не получил ваш вход.
+connect-reason-package-sync = Пакет этого сервера не удалось загрузить или проверить. Какой именно, сказано в логе.
