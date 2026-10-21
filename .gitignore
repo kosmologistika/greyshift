@@ -8,4 +8,11 @@ template/obj/
 sdk/Generators/bin/
 sdk/Generators/obj/
 
+# What an IDE leaves beside a project
+*.user
+*.sln
+*.slnx
+mods/*/Properties/
+template/Properties/
+
 .DS_Store
