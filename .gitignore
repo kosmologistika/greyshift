@@ -1,6 +1,11 @@
-# Built by the engine's `cargo run -p mod-build` from each package's src/
+# Built from each package's src/ and the template's, by the engine's `cargo run -p mod-build` or by hand
 mods/*/server.wasm
 mods/*/src/bin/
 mods/*/src/obj/
+template/server.wasm
+template/src/bin/
+template/src/obj/
+sdk/Generators/bin/
+sdk/Generators/obj/
 
 .DS_Store

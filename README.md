@@ -25,6 +25,9 @@ here has to be cloned to play.
 | `locales` | Fluent `.ftl`, one directory per language |
 | `fonts`, `ui`, `shaders`, `editor` | Client fonts, the UI theme, WGSL shaders, editor presets |
 | `mods/<id>` | A package: `mod.ron`, its prototypes and maps, and `src/` with the C# project its server module is built from |
+| `sdk` | The mod SDK: the `Rs13.Mods` sources, the WIT contract and the generator a package project imports |
+| `template` | A package to copy, with the author kit in its README |
+| `docs` | The mod authoring guide, the decisions behind the mod host, the grants list and the SDK changelog |
 
 The engine pins a commit of this repository and checks it out as its asset
 tree, so a change here reaches the game when the engine moves its pin.
@@ -34,9 +37,13 @@ the mod SDK.
 ## Building a package
 
 A package's `src/` compiles to `mods/<id>/server.wasm`, which the server loads
-and which is never committed. The C# SDK the projects import will be published
-into `sdk/` here, so a package builds from this repository alone; until then a
-package builds from an engine checkout.
+and which is never committed. The project imports `sdk/Rs13.Mods.props`, so a
+package builds from this repository alone with the .NET 10 SDK; `template/README.md`
+is the whole path from a copy of the template to a pull request. `sdk/`,
+`template/` and `docs/` are published here by the engine's CI on every change
+to the mod surface and are not edited in this repository: a change to them
+is overwritten by the next publish. `docs/CHANGELOG.md` says what each
+publish changed.
 
 ## Contributing
 
