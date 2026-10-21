@@ -1,9 +1,8 @@
 (
     size: (x: 32, y: 32),
-    license: "CC0-1.0",
+    license: "CC-BY-SA-3.0",
     copyright: [
         "Taken from CorvaxStation modular_bandastation/objects/icons/turf/wooden/wooden.dmi at commit 5004d984b267, CC BY-SA 3.0",
-        "Taken from space-wizards/space-station-14 Resources/Textures/Tiles/wood_large.png (first 32x32 variant), created by ps3moira (github) for space-station-14",
     ],
     states: [
         (name: "default"),

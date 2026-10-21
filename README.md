@@ -8,9 +8,11 @@ tree alone is not a playable game.
 
 ## Playing
 
-Download a client build from the releases of this repository and start it.
-The client prefills the public server's address, and the content it needs
-ships inside the build, so nothing here has to be cloned to play.
+Download a client build and start it. Builds are published at
+https://gitlab.com/Morbo/rust-station-13-public/-/releases today and will
+move to the releases of this repository. The client prefills the public
+server's address, and the content it needs ships inside the build, so nothing
+here has to be cloned to play.
 
 ## What is here
 
