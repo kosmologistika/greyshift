@@ -1,11 +1,18 @@
 # greyshift
 
-The content of rust-station-13: everything the game loads at runtime, kept
-apart from the engine so it can be public and open to contribution while the
-engine stays private. The engine checks this repository out as its `assets/`
-directory at a pinned commit.
+Greyshift is a multiplayer game about keeping a space station and its crew
+alive through a shift, in the Space Station 13 tradition. This repository is
+the game's content: everything the client and the server load at runtime,
+public and open to contribution. The engine that runs it is not here, so the
+tree alone is not a playable game.
 
-## Layout
+## Playing
+
+Download a client build from the releases of this repository and start it.
+The client prefills the public server's address, and the content it needs
+ships inside the build, so nothing here has to be cloned to play.
+
+## What is here
 
 | Directory | What |
 | --- | --- |
@@ -15,16 +22,18 @@ directory at a pinned commit.
 | `audio` | OGG, one `attributions.ron` per directory |
 | `locales` | Fluent `.ftl`, one directory per language |
 | `fonts`, `ui`, `shaders`, `editor` | Client fonts, the UI theme, WGSL shaders, editor presets |
-| `mods/<id>` | A package: `mod.ron`, its prototypes and maps, and `src/` with the C# project the server module is built from |
+| `mods/<id>` | A package: `mod.ron`, its prototypes and maps, and `src/` with the C# project its server module is built from |
 
+The engine pins a commit of this repository and checks it out as its asset
+tree, so a change here reaches the game when the engine moves its pin.
 `mods/blood_money` is the reference package, a whole gamemode written against
 the mod SDK.
 
 ## Building a package
 
-The engine builds every package's `src/` into `mods/<id>/server.wasm` with
-`cargo run -p mod-build`. The C# SDK the projects import will be published into
-`sdk/` here, so a package builds from this repository alone; until then a
+A package's `src/` compiles to `mods/<id>/server.wasm`, which the server loads
+and which is never committed. The C# SDK the projects import will be published
+into `sdk/` here, so a package builds from this repository alone; until then a
 package builds from an engine checkout.
 
 ## Contributing
