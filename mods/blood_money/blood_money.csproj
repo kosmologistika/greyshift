@@ -17,6 +17,8 @@
     <AssemblyName>blood_money</AssemblyName>
     <!-- mod-build hands the compiler package's host in, see tools/mod-build -->
     <IlcLlvmRid Condition="'$(IlcLlvmRid)' == ''">linux-x64</IlcLlvmRid>
+    <!-- the package's data sits beside the sources and shows in the project; the module built here is not a source -->
+    <DefaultItemExcludes>$(DefaultItemExcludes);server.wasm</DefaultItemExcludes>
   </PropertyGroup>
 
   <ItemGroup>
@@ -26,6 +28,6 @@
 
   <!-- the SDK compiles in as sources: mod-build hands its path in, a build from this repository alone takes the published copy -->
   <Import Project="$(SdkCs)/Rs13.Mods.props" Condition="'$(SdkCs)' != ''" />
-  <Import Project="../../../sdk/Rs13.Mods.props" Condition="'$(SdkCs)' == ''" />
+  <Import Project="../../sdk/Rs13.Mods.props" Condition="'$(SdkCs)' == ''" />
 
 </Project>

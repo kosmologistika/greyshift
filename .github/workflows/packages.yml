@@ -14,7 +14,8 @@ jobs:
       - name: Build every package and the template
         run: |
           set -e
-          for project in mods/*/src/*.csproj template/src/*.csproj; do
+          shopt -s nullglob
+          for project in mods/*/*.csproj template/*.csproj; do
             echo "== $project"
             dotnet build "$project" -c Release
           done

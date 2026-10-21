@@ -1,10 +1,10 @@
 # Built from each package's src/ and the template's, by the engine's `cargo run -p mod-build` or by hand
 mods/*/server.wasm
-mods/*/src/bin/
-mods/*/src/obj/
+mods/*/bin/
+mods/*/obj/
 template/server.wasm
-template/src/bin/
-template/src/obj/
+template/bin/
+template/obj/
 sdk/Generators/bin/
 sdk/Generators/obj/
 

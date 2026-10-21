@@ -42,7 +42,7 @@ The builds are not code-signed, so each OS objects the first time.
 | `audio` | OGG, one `attributions.ron` per directory |
 | `locales` | Fluent `.ftl`, one directory per language |
 | `fonts`, `ui`, `shaders`, `editor` | Client fonts, the UI theme, WGSL shaders, editor presets |
-| `mods/<id>` | A package: `mod.ron`, its prototypes and maps, and `src/` with the C# project its server module is built from |
+| `mods/<id>` | A package: the C# project its server module is built from, with `mod.ron`, its prototypes, maps and the rest of its data beside the sources |
 | `sdk` | The mod SDK: the `Rs13.Mods` sources, the WIT contract and the generator a package project imports |
 | `template` | A package to copy, with the author kit in its README |
 | `docs` | The mod authoring guide, the decisions behind the mod host, the grants list and the SDK changelog |
@@ -54,10 +54,11 @@ the mod SDK.
 
 ## Building a package
 
-A package's `src/` compiles to `mods/<id>/server.wasm`, which the server loads
-and which is never committed. The project imports `sdk/Rs13.Mods.props`, so a
-package builds from this repository alone with the .NET 10 SDK; `template/README.md`
-is the whole path from a copy of the template to a pull request. `sdk/`,
+A package's project compiles to `mods/<id>/server.wasm` beside it, which the
+server loads and which is never committed. The project imports
+`sdk/Rs13.Mods.props`, so a package builds from this repository alone with the
+.NET 10 SDK, and opening the csproj in an IDE shows the whole package;
+`template/README.md` is the whole path from a copy of the template to a pull request. `sdk/`,
 `template/` and `docs/` are published here by the engine's CI on every change
 to the mod surface and are not edited in this repository: a change to them
 is overwritten by the next publish. `docs/CHANGELOG.md` says what each
