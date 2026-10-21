@@ -22,3 +22,4 @@ connect-reason-protocol-mismatch = Your game version does not match the server.
 connect-reason-takeover = Someone logged in with your name and took over the session.
 connect-reason-join-stalled = The server took the connection but never started your session.
 connect-reason-login-timeout = The server dropped the connection because it never received your login.
+connect-reason-package-sync = A package this server runs could not be fetched or did not verify. See the log for which one.
