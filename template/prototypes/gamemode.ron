@@ -1,0 +1,20 @@
+[
+    (
+        type: "GameMode",
+        id: "template",
+        name: "Template",
+        rules: [
+            "rule_load_map",
+            "rule_spawn_players",
+            "rule_template_greeting",
+        ],
+    ),
+    (
+        type: "Entity",
+        id: "rule_template_greeting",
+        hide_spawn_menu: true,
+        components: {
+            "template::GreetingRule": (title: "template-greeting"),
+        },
+    ),
+]

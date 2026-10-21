@@ -1,0 +1,865 @@
+// Generated from the marked types, see crates/server/src/mods/sdk.rs. Do not edit
+
+package rs13:mods@0.1.0;
+
+interface typed-ecs {
+    type entity = u64;
+
+    /// `core::time::Duration`, as serde writes it
+    record duration {
+        secs: u64,
+        nanos: u32,
+    }
+
+    /// Server-private player record. Never replicated; usernames stay off the
+    /// wire until something client-side consumes them.
+    /// 
+    /// `body` is whatever the player currently controls. It may go stale
+    /// (despawned while the player was offline); liveness is re-checked at
+    /// login, and the round cycling back to the lobby clears it for everyone.
+    /// `connection` is the connection entity the player is online through.
+    record player-record {
+        username: string,
+        id: u64,
+    }
+
+    /// Reference to a state inside an `.rsi/` folder. `rsi` is the
+    /// extension-less path to the folder relative to the asset root (e.g.
+    /// `"textures/structures/walls/solid"` → resolves to
+    /// `textures/structures/walls/solid.rsi/meta.ron` and the per-state
+    /// PNGs alongside). `state` names a state declared in that meta.
+    record rsi-ref {
+        rsi: string,
+        state: string,
+    }
+
+    /// Z-layer for the renderer. Higher draws on top.
+    enum draw-depth {
+        floor,
+        floor-overlay,
+        /// Fixed to the deck under whatever stands on it: an open firelock's frame,
+        /// a blast door's track. Over the decals, under walls and grilles, where
+        /// tg's BELOW_OPEN_DOOR_LAYER and BLASTDOOR_LAYER sit
+        floor-fixture,
+        walls,
+        /// Painted onto a wall rather than standing in front of it: blood spatter,
+        /// graffiti, scorch. Above `Walls` so it covers the wall's own art, below
+        /// everything that stands on the floor, so a mob in front still occludes it.
+        wall-overlay,
+        doors,
+        /// Below the floor clutter, so a wrench on a tabletop outranks the table
+        furniture,
+        below-mobs,
+        mobs,
+        /// Bolted to a wall above head height. Above `Mobs` because the fixture
+        /// shares the tile a mob stands on, and under them it reads as lying on the
+        /// floor at their feet
+        wall-mounted,
+        effects,
+        overlays,
+    }
+
+    /// How the lighting passes treat a sprite, weakest claim first: a layer merges
+    /// with the body it covers by taking the stronger of the two. Anything past
+    /// `Lit` draws on an overlay above the lit world, so it ignores `depth` and
+    /// covers whatever stands in front of it
+    enum shading {
+        /// Lit and cut off at the edge of what the eye can see, like everything else
+        lit,
+        /// Glows in the dark but obeys line of sight: skips the lighting multiply,
+        /// keeps the FOV mask. What status lights, indicators and screens want.
+        /// SS14's name for the same thing; PBR would call it emission, except this
+        /// emits nothing - lighting what is around it is still `PointLight`'s job
+        unshaded,
+        /// Unshaded, and throws a soft glow around itself. For the lit part of a
+        /// light fixture, so a lamp reads as on; a screen or an indicator stays
+        /// `Unshaded` and keeps its edges
+        glow,
+        /// Skips the FOV mask as well, so the sprite reads *through walls*. A
+        /// gameplay claim rather than a brightness one: only for something that
+        /// should be seen with no line of sight, like a ghost
+        unlit,
+    }
+
+    /// Eight-way grid direction.
+    enum dir {
+        north,
+        south,
+        east,
+        west,
+        north-east,
+        north-west,
+        south-east,
+        south-west,
+    }
+
+    /// Non-linear standard RGB with alpha.
+    /// <div>
+    /// </div>
+    record srgba {
+        /// The red channel. [0.0, 1.0]
+        red: f32,
+        /// The green channel. [0.0, 1.0]
+        green: f32,
+        /// The blue channel. [0.0, 1.0]
+        blue: f32,
+        /// The alpha channel. [0.0, 1.0]
+        alpha: f32,
+    }
+
+    /// One sprite over the base. Everything it does not name is inherited from the
+    /// entity's [`Appearance`] - the RSI, the draw depth, the shading - so a layer
+    /// is usually two fields
+    record sprite-layer {
+        /// State in the RSI, the one field with no sensible default
+        state: string,
+        /// Names this layer for the system that owns it, and the only way to
+        /// address one. `None` for a layer nothing ever rewrites, like a lamp's
+        /// glow
+        key: option<string>,
+        /// Draw from another RSI than the body's - what a damage overlay wants,
+        /// its art being one sheet shared by everything that can be hurt
+        rsi: option<string>,
+        /// A declared layer waiting for its moment (`visible: false` on an
+        /// airlock's light) costs no child entity until a visualizer shows it
+        visible: bool,
+        /// Raised over the body's own where it asks for more, never lowered. See
+        /// [`Shading`]
+        shading: shading,
+        /// Pick this atlas row rather than following the entity's `Facing`. A
+        /// smoothed tile packs its four quadrants as the four directions of one
+        /// state, so each quadrant asks for a fixed one
+        facing: option<dir>,
+        /// Multiplied over this layer alone, so a grayscale overlay can be red on
+        /// a body and white on a wall. Falls back to the entity's [`SpriteTint`]
+        tint: option<srgba>,
+        /// Draw order against the other layers, low first. Negative for anything
+        /// standing in for the base itself
+        order: s8,
+        /// The displacement map that fits this layer to the body under it, a
+        /// worn jumpsuit pinched to a female torso. Written by the worn visualizer
+        displacement: option<rsi-ref>,
+    }
+
+    /// What an entity is supposed to look like: a base sprite, a draw depth, and
+    /// the layers over it. Carried across the wire so the client and the editor
+    /// compose sprites the same way; the server itself never renders.
+    /// 
+    /// Immutable, so a change arrives as a fresh Insert and the renderer derives
+    /// from it. What is actually on screen is one `DrawnSprite` per drawn sprite,
+    /// which the render crate owns
+    record appearance {
+        sprite: rsi-ref,
+        depth: draw-depth,
+        /// How the lighting passes treat this entity. See [`Shading`]
+        shading: shading,
+        /// Radians to add to a target world rotation so the sprite ends up
+        /// pointing the way callers expect. Encodes the asset's "natural"
+        /// orientation: 0 for an east-pointing sprite, -PI/2 for north-pointing,
+        /// and so on. Read by any system that rotates an entity to face a
+        /// direction (currently the smooth-render projectile path).
+        sprite-offset-radians: f32,
+        /// Sprites drawn over `sprite`: a door's status light, a lamp's glow, a
+        /// damage overlay. A prototype declares them and client-side visualizers
+        /// rewrite the ones they own, through
+        /// [`edit_appearance`][AppearanceCommands::edit_appearance]
+        /// Write through [`set_layer`][Self::set_layer], which keys them; a bare
+        /// push can seat two layers under one key
+        layers: list<sprite-layer>,
+        /// Draw nothing for `sprite` itself and let the layers be the whole
+        /// picture. What a smoothed tile wants
+        hide-base: bool,
+    }
+
+    /// An instant on the [`ServerClock`], as a `Duration` since the UNIX epoch.
+    /// Every read takes the clock, so no side can reach its own wall clock by accident
+    record deadline {
+        ends-at: duration,
+    }
+
+    /// [`FadeIn`]'s exit twin, with fire: the entity is burning away and will be
+    /// despawned when `until` passes. The server owns the clock and the despawn;
+    /// the client renders whatever burning means (a pixel dissolve). Consumers
+    /// insert this instead of despawning outright, so nothing pops
+    record burn-out {
+        until: deadline,
+        secs: f32,
+    }
+
+    /// Kind of harm a hit carries, the axis armor blocks along; new variants are
+    /// added as content needs them
+    enum damage-type {
+        blunt,
+        slash,
+        piercing,
+        heat,
+        /// Not breathing: what a downed body dies of, unarmored and unseen
+        asphyxiation,
+        /// A poison breathed or swallowed, unarmored and unseen like asphyxiation
+        toxin,
+    }
+
+    record vec2 {
+        x: f32,
+        y: f32,
+    }
+
+    /// A hit landed: what `entity` takes after every modifier. Announced before
+    /// the ledgers change, so a consequence sees the world the blow arrived in -
+    /// the killing blow still bleeds, leaks and screams
+    record damage-dealt {
+        entity: entity,
+        spec: list<tuple<damage-type, u32>>,
+        origin: option<entity>,
+        heading: option<vec2>,
+        weapon: option<entity>,
+    }
+
+    /// A controlled body just died, with the kill resolved against the freshness
+    /// of its `LastHitBy` stamp. `killer` is `None` for unattributed deaths -
+    /// environment, self, or a stale stamp - which score nobody. Server-triggered;
+    /// gamemodes observe it for scoring and bounties
+    record killed {
+        /// The corpse
+        entity: entity,
+        victim: u64,
+        killer: option<u64>,
+    }
+
+    /// What ends a flight and what it passes through. Seeded whole by [`launch`]
+    /// and [`launch_ray`], so a launcher authors the rule set in one place and a
+    /// landed entity carries none of it into whatever launches it next
+    record flight-rules {
+        /// Finish on a movement-blocking tile (`Solid` wall, closed door, grille).
+        /// The throw flavor: a thrown wrench stops at a grille because it is bulky
+        stops-at-solid: bool,
+        /// Finish on a [`BlocksAttack`] tile (wall, window, closed door). The
+        /// ranged / hook flavor: a grille is `Solid` only, so bullets cross its mesh
+        stops-at-blocks-attack: bool,
+        /// Finish on a tile carrying a [`Damageable`], once `pierces` is spent.
+        /// Off, a flight passes damageables freely, like a melee thrust
+        stops-on-first-damageable: bool,
+        /// Ricochet off a `stops_at_solid` face instead of landing on it: the
+        /// heading mirrors and the remaining range shrinks by [`BOUNCE_RETENTION`],
+        /// capped so a rebound never boomerangs home past its own leg. A damageable
+        /// stop still ends the flight, so a bank shot hits the man behind cover
+        bounces: bool,
+        /// Skip-budget for `stops_on_first_damageable`: pass this many damageables
+        /// before stopping on the next. Spent as the flight goes
+        pierces: u32,
+        /// Raise no [`Hit`], so nothing this flight crosses is struck by it - a
+        /// blood droplet flies for the look of the thing. Stop rules are
+        /// unaffected: it still comes to rest against a wall
+        hits-nothing: bool,
+    }
+
+    /// An entity in flight, launched by `launcher`. Replicated descriptor the
+    /// client renders from directly: `origin_world + dir * speed * elapsed` is
+    /// the smooth line at the true angle, never tile-snapped. `launcher` is the
+    /// entity that started the flight (thrower, blast source, gun shooter); used
+    /// for excluding the launcher from self-hits and attributing damage.
+    record in-flight {
+        launcher: entity,
+        /// Tiles per second.
+        speed: f32,
+        /// World-space (pixel) launch point.
+        origin-world: vec2,
+        /// Unit heading.
+        dir: vec2,
+        /// Tiles along the ray before the flight runs out and lands. Lets every
+        /// client normalize progress for flight visuals; the authoritative cap
+        /// stays in the unreplicated [`Flight`].
+        range: f32,
+    }
+
+    /// Where a HUD surface docks. The vocabulary is shared because it crosses the
+    /// wire on replicated surfaces, and it is deliberately not owned by any one
+    /// feature: gamemode banners, the control cluster and the vitals rail all
+    /// anchor against the same set, so nothing invents its own geometry.
+    /// 
+    /// Zones with no surface yet are still named, so the feature that fills one
+    /// lands where it was always going to. Surfaces sharing a zone stack inside
+    /// its root; how a surface lays out its own contents is its own business.
+    enum hud-zone {
+        /// The action bar on the top edge, then the standings and the series
+        /// board under it
+        top-left,
+        top-center,
+        /// The status alert strip: one icon per cause on the local body
+        top-right,
+        center,
+        /// The vitals rail: health, and stamina and the rest as they arrive.
+        center-right,
+        /// Hands and anything else centred on the bottom edge.
+        bottom-center,
+        /// The control cluster.
+        bottom-right,
+        /// The equipment tray, tg's pop-up inventory
+        bottom-left,
+    }
+
+    /// A headline with an optional subtitle and countdown. Rules spawn these as
+    /// replicated entities and one generic client plugin renders whatever exists,
+    /// so a new gamemode needs no client code
+    record hud-banner {
+        zone: hud-zone,
+        /// Locale key, never display text
+        title: string,
+        /// Locale key; empty means no subtitle
+        subtitle: string,
+        countdown: option<deadline>,
+    }
+
+    record score-row {
+        /// Player name, shown verbatim
+        name: string,
+        score: s32,
+        highlight: bool,
+        /// Whose row it is, so a client can pin its own to a trimmed board
+        player: u64,
+    }
+
+    /// A live table of participants. Same contract as [`HudBanner`]
+    record hud-scoreboard {
+        zone: hud-zone,
+        /// Locale key, never display text
+        title: string,
+        rows: list<score-row>,
+    }
+
+    /// Fired on a rule entity once it is spawned and live. Rule plugins observe
+    /// this and filter by querying their own marker component, so no generics are
+    /// needed
+    record rule-started {
+        entity: entity,
+    }
+
+    record outcome-place {
+        player: u64,
+        name: string,
+        score: s32,
+    }
+
+    /// Structured result of a scope, not a concatenated string, so the client can
+    /// render it, a replay can keep it, and stats can read it later
+    record scope-outcome {
+        /// Locale key, never display text
+        headline: string,
+        /// Ranked participants, best first
+        places: list<outcome-place>,
+    }
+
+    /// Request to end a scope. Rules never touch `NextState<RoundState>` - they
+    /// trigger this and the driver decides what it means
+    record end-scope {
+        entity: entity,
+        outcome: scope-outcome,
+    }
+
+    /// The rescue window, fired once per accepted teardown and before the cascade.
+    /// Anything that must outlive the scope has to leave its hierarchy here
+    record scope-ending {
+        entity: entity,
+        outcome: scope-outcome,
+    }
+
+    enum hand {
+        left,
+        right,
+    }
+
+    /// Mob's hand state. For MVP, only tracks which hand is active - held-item
+    /// slots land when the inventory system arrives.
+    record hands {
+        active: hand,
+    }
+
+    record i-vec2 {
+        x: s32,
+        y: s32,
+    }
+
+    /// Position of an entity on a map's tile grid. Carries the owning map's
+    /// entity ref so multiple maps (lavaland, centcom, the station) can coexist
+    /// without coordinate collisions.
+    record tile-pos {
+        /// Marked so replication rewrites it into the receiver's own id. Without
+        /// this a peer keeps the sender's raw entity and every by-map lookup
+        /// misses, which reads as an empty map rather than a mismatched one.
+        %map: entity,
+        pos: i-vec2,
+    }
+
+    /// Money moved, the offer still standing; what handing over `product` means
+    /// is the observer's call (a body owed it, an item in hand, a skill granted)
+    record purchased {
+        player: u64,
+        connection: entity,
+        listing: string,
+        product: string,
+        /// What actually left the wallet, so an observer whose delivery fails can
+        /// refund rather than eat the buyer's money
+        price: u32,
+    }
+
+    /// The shopper is finished with the offer, which comes down right after this
+    /// fires; a mode closing a shelf itself goes through the same `close_offer`
+    record shop-done {
+        player: u64,
+        connection: entity,
+    }
+
+    record offer-row {
+        listing: string,
+        /// What the buyer receives, carried on the row so the buy path never
+        /// re-consults the listing registry after the roll
+        product: string,
+        /// Product display name, resolved server-side so the client renders text
+        name: string,
+        /// Product sprite, resolved server-side for the same reason; `None` for a
+        /// product with nothing to draw
+        sprite: option<rsi-ref>,
+        price: u32,
+        staple: bool,
+        /// The staple shelf this row rides, straight off the listing
+        shelf: string,
+        /// A rolled row sells once; a staple never flips this
+        sold: bool,
+    }
+
+    /// What this connection may buy right now, on the connection entity. Absent
+    /// means no shop at all: whoever raised the offer decides when someone may
+    /// spend, and the shop never asks why. Server-side; [`ShopUpdate`] is its
+    /// wire mirror
+    record shop-offer {
+        rows: list<offer-row>,
+        /// Before this, the shelf can be read but not bought from - the pause is
+        /// where a mode puts its reveal
+        unlocks: deadline,
+        /// When the offer stops being the shopper's to act on. The shop itself
+        /// does nothing at this moment - whoever raised the offer does - it is
+        /// carried so the client can count down. `None` means the shelf stands
+        /// until something withdraws it
+        closes-at: option<deadline>,
+    }
+
+    /// A player's money, on their `PlayerRecord` entity so it survives a
+    /// reconnect. `balance` is what they can spend; `earned` accumulates every
+    /// credit and never goes down, for round-level tiebreaks. One component: both
+    /// move on the same credit and reset through the same owner
+    record wallet {
+        balance: u32,
+        earned: u32,
+    }
+
+    /// Marks a [`Container`] as one of a mob's hands - which side, and whose. The
+    /// mob's [`Hands::active`] selects which hand pickup/drop act on; `owner` is
+    /// the replicated slot-to-holder link, so both sides resolve "whose hand is
+    /// this" without relying on `ChildOf` (which is derived, not replicated). A
+    /// container without `HandSlot` (a toolbox) is openable storage, not a hand.
+    record hand-slot {
+        side: hand,
+        owner: entity,
+    }
+
+    /// In-container location source: this entity sits inside `container`, not on a
+    /// tile. The container is any entity with a [`Container`] - a hand or a
+    /// toolbox. Mutually exclusive with [`TilePos`] - the strip
+    /// observers guarantee an entity never carries both. The relationship derive
+    /// forces it immutable, so every re-store is a fresh insert that re-fires the
+    /// invariant
+    record stored {
+        container: entity,
+    }
+
+    /// Fires on the item as it goes off, in a hand, on the floor or mid-flight
+    record triggered {
+        entity: entity,
+        /// Who set it: the mob that lit it
+        by: option<entity>,
+        /// What set it off, when something did: the body that stepped on it
+        on: option<entity>,
+    }
+
+    enum component-kind {
+        child-of,
+        replicated,
+        participant,
+        player-record,
+        appearance,
+        burn-out,
+        dead,
+        facing,
+        flight-rules,
+        in-flight,
+        following,
+        hud-banner,
+        hud-scoreboard,
+        scope-ended,
+        ghost,
+        hands,
+        %map,
+        tile-pos,
+        mob,
+        movable,
+        controlled-by,
+        session-player,
+        role,
+        shop-offer,
+        wallet,
+        gripping,
+        hand-slot,
+        stored,
+    }
+
+    enum event-kind {
+        in-flight-added,
+        shop-offer-added,
+        in-flight-removed,
+        shop-offer-removed,
+        damage-dealt,
+        killed,
+        rule-started,
+        scope-ending,
+        purchased,
+        shop-done,
+        triggered,
+    }
+
+    variant component {
+        /// The entity this one is a child of. Despawning the parent despawns it
+        child-of(entity),
+        /// Marks an entity for replication to clients
+        replicated,
+        /// This connection is playing the current round. The `lobby` writes it at the
+        /// round-start edge and for late joins; gamemode rules read it and nothing else,
+        /// so no rule re-derives participation from ready-up state that was already
+        /// resolved before any rule existed.
+        /// 
+        /// It lives on the connection entity, so a disconnect takes it away for free -
+        /// "playing" and "still here" are the same question.
+        participant,
+        /// Server-private player record. Never replicated; usernames stay off the
+        /// wire until something client-side consumes them.
+        /// 
+        /// `body` is whatever the player currently controls. It may go stale
+        /// (despawned while the player was offline); liveness is re-checked at
+        /// login, and the round cycling back to the lobby clears it for everyone.
+        /// `connection` is the connection entity the player is online through.
+        player-record(player-record),
+        /// What an entity is supposed to look like: a base sprite, a draw depth, and
+        /// the layers over it. Carried across the wire so the client and the editor
+        /// compose sprites the same way; the server itself never renders.
+        /// 
+        /// Immutable, so a change arrives as a fresh Insert and the renderer derives
+        /// from it. What is actually on screen is one `DrawnSprite` per drawn sprite,
+        /// which the render crate owns
+        appearance(appearance),
+        /// [`FadeIn`]'s exit twin, with fire: the entity is burning away and will be
+        /// despawned when `until` passes. The server owns the clock and the despawn;
+        /// the client renders whatever burning means (a pixel dissolve). Consumers
+        /// insert this instead of despawning outright, so nothing pops
+        burn-out(burn-out),
+        /// Marker for a deceased body. Sits on the corpse alongside its accumulated
+        /// `Damageable`. Future revive systems (defib, clone) remove it; future
+        /// medical systems (autopsy, organ harvest, undertaker NPCs) query for it.
+        dead,
+        /// Server-authoritative facing of any entity that can be oriented.
+        /// Default South matches SS14 convention so freshly spawned mobs face
+        /// the camera in a top-down layout. Replicated immutable so observers
+        /// fire on every change - render-side reacts by re-indexing the atlas
+        /// row without resetting animation playback.
+        facing(dir),
+        /// What ends a flight and what it passes through. Seeded whole by [`launch`]
+        /// and [`launch_ray`], so a launcher authors the rule set in one place and a
+        /// landed entity carries none of it into whatever launches it next
+        flight-rules(flight-rules),
+        /// An entity in flight, launched by `launcher`. Replicated descriptor the
+        /// client renders from directly: `origin_world + dir * speed * elapsed` is
+        /// the smooth line at the true angle, never tile-snapped. `launcher` is the
+        /// entity that started the flight (thrower, blast source, gun shooter); used
+        /// for excluding the launcher from self-hits and attributing damage.
+        in-flight(in-flight),
+        /// On a follower (a ghost): the entity it orbits. [`track_target`] keeps the
+        /// follower's `TilePos` equal to the target's; the client derives the orbit
+        /// visual from this. Removed when the follower moves, or when the target
+        /// despawns.
+        following(entity),
+        /// A headline with an optional subtitle and countdown. Rules spawn these as
+        /// replicated entities and one generic client plugin renders whatever exists,
+        /// so a new gamemode needs no client code
+        hud-banner(hud-banner),
+        /// A live table of participants. Same contract as [`HudBanner`]
+        hud-scoreboard(hud-scoreboard),
+        /// Set once a teardown is accepted, so a second [`EndScope`] from a racing rule
+        /// is a no-op
+        scope-ended,
+        /// Marker for the ghost behavior surface: orbit, ghost-only chat, the
+        /// "return to body" verb, future ghost-specific UI. Independent from the
+        /// PVS markers below so non-ghost incorporeal entities can reuse the
+        /// visibility layer without inheriting ghost behaviors.
+        ghost,
+        /// Mob's hand state. For MVP, only tracks which hand is active - held-item
+        /// slots land when the inventory system arrives.
+        hands(hands),
+        /// Marker for a map entity. The map is the parent of every `Tile` entity
+        /// belonging to it (via `ChildOf`), so despawning the map cascades to its
+        /// tiles. Other domain components (atmos defaults, ambient music, parallax
+        /// background) attach here as separate components.
+        /// 
+        /// Requires `Transform` so children's `GlobalTransform` propagates. The render
+        /// crate adds the matching `Visibility` requirement (the `bevy_render` side of
+        /// the same B0004 fix), keeping the headless server free of `bevy_render`.
+        /// 
+        /// Requires `MapLight` because the renderer reads ambient off the map and falls
+        /// back to full brightness when no map carries it, so a map spawned without one
+        /// silently disables lighting for the whole world.
+        /// 
+        /// Requires `NextPlacementSeq` so every path that creates a map (game load,
+        /// editor new-file, a co-op host) can allocate placement order without
+        /// remembering to add the counter
+        %map,
+        /// Position of an entity on a map's tile grid. Carries the owning map's
+        /// entity ref so multiple maps (lavaland, centcom, the station) can coexist
+        /// without coordinate collisions.
+        tile-pos(tile-pos),
+        /// Marks an entity as a mob - the in-world body that can move, be pushed,
+        /// occupy tiles, etc.
+        mob,
+        /// Marker: this entity participates in tile-locked movement. Carries
+        /// `MoveSpeedModifier` + `MoveCooldown` via require so both are always present
+        /// wherever this marker is. `Facing` is also required - every movable
+        /// entity has an orientation, and the movement applier writes it on
+        /// each successful step.
+        movable,
+        /// Marks a controllable entity (a mob, ghost, etc.) as controlled by a
+        /// particular player identified by their stable [`PlayerId`].
+        /// 
+        /// Replicated and currently visible to all clients. Per-client visibility
+        /// filtering is deferred - for MVP it's acceptable for everyone to see who
+        /// controls what.
+        /// 
+        /// Body-swap and possession move this component (or change its inner id)
+        /// between entities. Clients reconstruct their own mob by querying the
+        /// entity carrying `ControlledBy(local_player_id)`. Reconnects never touch
+        /// it: the server just rebinds the connection to the same `PlayerId`.
+        controlled-by(u64),
+        /// The [`PlayerId`] a live connection authenticated as. Server-side only,
+        /// lives on the connection entity next to `AuthorizedClient`; never
+        /// replicated.
+        session-player(u64),
+        /// A `RolePrototype` id. Lives on the connection entity as the assignment
+        /// record, which is what makes a team survive a match change, and is copied
+        /// onto each body so gameplay can read it without walking back to the session.
+        role(string),
+        /// What this connection may buy right now, on the connection entity. Absent
+        /// means no shop at all: whoever raised the offer decides when someone may
+        /// spend, and the shop never asks why. Server-side; [`ShopUpdate`] is its
+        /// wire mirror
+        shop-offer(shop-offer),
+        /// A player's money, on their `PlayerRecord` entity so it survives a
+        /// reconnect. `balance` is what they can spend; `earned` accumulates every
+        /// credit and never goes down, for round-level tiebreaks. One component: both
+        /// move on the same credit and reset through the same owner
+        wallet(wallet),
+        /// On a hand slot: what the hand holds on to without storing it, see ADR 0010
+        gripping(entity),
+        /// Marks a [`Container`] as one of a mob's hands - which side, and whose. The
+        /// mob's [`Hands::active`] selects which hand pickup/drop act on; `owner` is
+        /// the replicated slot-to-holder link, so both sides resolve "whose hand is
+        /// this" without relying on `ChildOf` (which is derived, not replicated). A
+        /// container without `HandSlot` (a toolbox) is openable storage, not a hand.
+        hand-slot(hand-slot),
+        /// In-container location source: this entity sits inside `container`, not on a
+        /// tile. The container is any entity with a [`Container`] - a hand or a
+        /// toolbox. Mutually exclusive with [`TilePos`] - the strip
+        /// observers guarantee an entity never carries both. The relationship derive
+        /// forces it immutable, so every re-store is a fresh insert that re-fires the
+        /// invariant
+        stored(stored),
+    }
+
+    variant event {
+        /// The entity a `shared::flight::components::InFlight` was just added to
+        in-flight-added(entity),
+        /// The entity a `shared::shop::ShopOffer` was just added to
+        shop-offer-added(entity),
+        /// The entity a `shared::flight::components::InFlight` was just taken off, the value still on it
+        in-flight-removed(entity),
+        /// The entity a `shared::shop::ShopOffer` was just taken off, the value still on it
+        shop-offer-removed(entity),
+        /// A hit landed: what `entity` takes after every modifier. Announced before
+        /// the ledgers change, so a consequence sees the world the blow arrived in -
+        /// the killing blow still bleeds, leaks and screams
+        damage-dealt(damage-dealt),
+        /// A controlled body just died, with the kill resolved against the freshness
+        /// of its `LastHitBy` stamp. `killer` is `None` for unattributed deaths -
+        /// environment, self, or a stale stamp - which score nobody. Server-triggered;
+        /// gamemodes observe it for scoring and bounties
+        killed(killed),
+        /// Fired on a rule entity once it is spawned and live. Rule plugins observe
+        /// this and filter by querying their own marker component, so no generics are
+        /// needed
+        rule-started(rule-started),
+        /// The rescue window, fired once per accepted teardown and before the cascade.
+        /// Anything that must outlive the scope has to leave its hierarchy here
+        scope-ending(scope-ending),
+        /// Money moved, the offer still standing; what handing over `product` means
+        /// is the observer's call (a body owed it, an item in hand, a skill granted)
+        purchased(purchased),
+        /// The shopper is finished with the offer, which comes down right after this
+        /// fires; a mode closing a shelf itself goes through the same `close_offer`
+        shop-done(shop-done),
+        /// Fires on the item as it goes off, in a hand, on the floor or mid-flight
+        triggered(triggered),
+    }
+
+    variant trigger-event {
+        /// Request to end a scope. Rules never touch `NextState<RoundState>` - they
+        /// trigger this and the driver decides what it means
+        end-scope(end-scope),
+        /// Zeroes `earned` on every wallet. The wallet's owner stays its only writer:
+        /// a rule that wants a fresh tiebreak asks, it does not reach in
+        clear-earned,
+    }
+
+    record row {
+        entity: entity,
+        /// One value per requested kind, in request order
+        values: list<component>,
+    }
+
+    /// Declares a component the module owns. Its values are the module's own
+    /// bytes and live host-side
+    register-component: func(path: string);
+
+    /// Subscribes `dispatch` to an event. Only valid during `setup`
+    observe: func(event: event-kind);
+
+    /// Every entity holding all of `kinds`
+    query: func(kinds: list<component-kind>) -> list<row>;
+
+    get: func(entity: entity, kind: component-kind) -> option<component>;
+
+    insert: func(entity: entity, value: component);
+
+    /// Replaces the value of a component the entity already holds
+    mutate: func(entity: entity, value: component);
+
+    spawn: func(components: list<component>) -> entity;
+
+    trigger: func(event: trigger-event);
+
+    /// The module's own components, opaque to the host
+    get-own: func(entity: entity, path: string) -> option<list<u8>>;
+    /// Every entity holding the own component at `path`, with its bytes
+    query-own: func(path: string) -> list<tuple<entity, list<u8>>>;
+    insert-own: func(entity: entity, path: string, value: list<u8>);
+
+    /// The module's own singletons, held the same way
+    get-resource: func(path: string) -> option<list<u8>>;
+    insert-resource: func(path: string, value: list<u8>);
+
+    /// Sends an own component to clients through a slot of the pool. Only valid during `setup`
+    replicate-component: func(path: string);
+
+    /// A mod event to every client
+    send-to-clients: func(kind: string, value: list<u8>);
+
+    /// Client events of this kind reach `dispatch-client`. Only valid during `setup`
+    accept-client-event: func(kind: string);
+
+    /// A fresh entity from a prototype, `none` when no prototype has that id
+    spawn-prototype: func(id: string) -> option<entity>;
+
+    /// Takes an own component off an entity
+    remove-own: func(entity: entity, path: string);
+
+    /// Despawns an entity and what it holds
+    despawn: func(entity: entity);
+
+    /// Puts an entity into flight from `from` along `angle` (radians) for `range` tiles
+    launch-ray: func(entity: entity, origin: tile-pos, angle: f32, range: f32, speed: f32, launcher: entity, rules: flight-rules);
+
+    /// A sound at a tile, by its asset path
+    play-sound: func(path: string, at: tile-pos);
+
+    /// The tile under an entity however deep it is stored, `none` when it is nowhere
+    grid-position: func(entity: entity) -> option<tile-pos>;
+
+    /// Whether a round is being played: what a per-tick rule gates on
+    round-live: func() -> bool;
+
+    /// The server's frame count, for a gate that fires once per tick
+    tick: func() -> u64;
+
+    /// The round's phase by name: `PreRoundLobby`, `RoundStarting`, `InRound`, `PostRound`
+    round-state: func() -> string;
+
+    /// A ghost for a player at a tile, the engine's own spawn, controlled by that player
+    spawn-ghost: func(at: tile-pos, player: u64);
+
+    /// Moves a player's control: on to `target`, off `origin`, either may be absent
+    transfer-control: func(player: u64, origin: option<entity>, target: option<entity>);
+
+    /// Where a body of `role` may land on `map`: the map's declared seats, or every open floor tile
+    seats-for: func(%map: entity, role: string) -> list<i-vec2>;
+
+    /// Where an observer lands on `map`
+    observer-seat: func(%map: entity) -> option<i-vec2>;
+
+    /// A seat among `candidates` spread away from `taken`, the engine's rule
+    spread-over: func(candidates: list<i-vec2>, taken: list<i-vec2>) -> option<i-vec2>;
+
+    /// One listing of a shop catalog
+    record shop-listing {
+        id: string,
+        product: string,
+        price: u32,
+        weight: u32,
+        staple: bool,
+        shelf: string,
+    }
+
+    /// The listings of a catalog, by id
+    shop-listings: func(catalog: string) -> list<shop-listing>;
+
+    /// Buys the offer's row at `index` for the player on `connection`: the engine's purchase, the same money and `Purchased` a client's own buy moves
+    execute-purchase: func(connection: entity, player: u64, index: u32);
+
+    /// Closes a player's shop: `ShopDone`, then the offer comes off the connection
+    close-offer: func(connection: entity, player: u64);
+
+    /// The body prototype a role spawns
+    role-body: func(role: string) -> option<string>;
+
+    /// What a prototype declares: its sprite, its display name, whether it carries a component
+    prototype-sprite: func(id: string) -> option<rsi-ref>;
+    prototype-name: func(id: string) -> option<string>;
+    prototype-declares: func(id: string, component: string) -> bool;
+
+    /// A mod event to one client, by its connection entity
+    send-to-client: func(connection: entity, kind: string, value: list<u8>);
+
+    /// Takes an engine component off an entity; what a module may insert, it may remove
+    remove: func(entity: entity, kind: component-kind);
+
+    /// The server clock, milliseconds since the UNIX epoch. Only valid in a handler
+    now: func() -> u64;
+
+    /// `dispatch-timer` runs under `name` every `every-ms`, in every round phase; zero is every tick. Only valid during `setup`
+    schedule: func(name: string, every-ms: u64);
+
+    log: func(message: string);
+}
+
+world typed-module {
+    use typed-ecs.{entity, event};
+    import typed-ecs;
+
+    export setup: func();
+    export dispatch: func(event: event);
+    export dispatch-timer: func(name: string);
+    /// A client's mod event: its kind, the sender's connection entity and the bytes as sent
+    export dispatch-client: func(kind: string, sender: entity, value: list<u8>);
+}
