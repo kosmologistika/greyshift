@@ -8,11 +8,29 @@ tree alone is not a playable game.
 
 ## Playing
 
-Download a client build from this repository's releases and start it: each
-release carries the Linux, Windows and macOS archives and is tagged at the
-content commit the build ships. The client prefills the public server's
-address, and the content it needs ships inside the build, so nothing here has
-to be cloned to play.
+Download a client build from this repository's releases: each release
+carries one archive per platform (`x86_64-windows`, `x86_64-linux`,
+`aarch64-macos` for Apple Silicon) with the `client` and the `editor` inside,
+and is tagged at the content commit the build ships. The client prefills the
+public server's address, and the content it needs ships inside the build, so
+nothing here has to be cloned to play.
+
+### Running
+
+Extract the archive and run a binary from inside the extracted folder: both
+load everything from the `assets` directory beside them, so one moved out on
+its own has nothing to load.
+
+The builds are not code-signed, so each OS objects the first time.
+
+- **Windows**: SmartScreen shows "Windows protected your PC". Click "More
+  info", then "Run anyway".
+- **macOS**: Gatekeeper refuses the first launch. Right-click the binary,
+  choose "Open", then confirm in the dialog; a double-click does not offer
+  that choice. If macOS still blocks it, clear the quarantine flag on the
+  extracted folder: `xattr -dr com.apple.quarantine <folder>`.
+- **Linux**: mark the binaries executable if your extractor dropped the bit:
+  `chmod +x client editor`.
 
 ## What is here
 
