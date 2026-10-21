@@ -1,0 +1,6 @@
+# Built by the engine's `cargo run -p mod-build` from each package's src/
+mods/*/server.wasm
+mods/*/src/bin/
+mods/*/src/obj/
+
+.DS_Store

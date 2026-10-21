@@ -24,8 +24,8 @@
     <PackageReference Include="runtime.$(IlcLlvmRid).microsoft.dotnet.ilcompiler.llvm" Version="10.0.0-rc.1.26306.1" />
   </ItemGroup>
 
-  <!-- the SDK compiles in as sources; in the container it is mounted at /sdk-cs -->
+  <!-- the SDK compiles in as sources: mod-build hands its path in, a build from this repository alone takes the published copy -->
   <Import Project="$(SdkCs)/Rs13.Mods.props" Condition="'$(SdkCs)' != ''" />
-  <Import Project="../sdk-cs/Rs13.Mods.props" Condition="'$(SdkCs)' == ''" />
+  <Import Project="../../../sdk/Rs13.Mods.props" Condition="'$(SdkCs)' == ''" />
 
 </Project>
