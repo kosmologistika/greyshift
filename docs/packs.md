@@ -5,7 +5,9 @@ maps, locales, art, and a C# project whose module the server runs. The server ru
 modules and lets them observe, read and write the world through a small host interface (#324). The decisions behind it are ADRs 0012 to 0018 under `docs/adr/`. Blood Money is the first mode to live there, whole: its rules, its
 prototype-named components, its prototypes, maps and weapons are the `assets/packs/blood_money`
 pack, built from the C# project at its root; the engine keeps only the slot machine the
-client draws (#331, the UI API is #334). The suite's fixture pack is a link to it.
+client draws (#331, the UI API is #334). The station mode's events live in `assets/packs/station`
+the same way, over the engine's storyteller (`storyteller.md`). The suite's fixture packs are links
+to both.
 
 ## The boundary
 
@@ -296,8 +298,9 @@ as a `[Dependency]` like a system: `GameTicker` (`RunLevel`, `IsRoundLive`,
 `CloseOffer`, the same money and `Purchased` a client's own buy moves), `MindSystem`
 (`TransferControl`), `GhostSystem` (`SpawnGhost`), `SeatSystem` (`SeatsFor`, `ObserverSeat`,
 `SpreadOver` for where a body lands), `FlightSystem` (`LaunchRay` puts an entity into flight
-the way a gun or a throw does), `AudioSystem` (`Play` at a tile) and `TransformSystem`
-(`GridPosition` finds the tile under an entity however deep it is stored). `Seed.Mix` is the
+the way a gun or a throw does, `ThrowFromSpace` spawns a prototype past the hull and flies it in),
+`AreaSystem` (`AreaOf` a tile, `StandingFloor` of a room), `AudioSystem` (`Play` at a tile) and
+`TransformSystem` (`GridPosition` finds the tile under an entity however deep it is stored). `Seed.Mix` is the
 seeded roll.
 
 **Diagnostics.** A wiring mistake is a compile error with an `RS130xx` id: a system that is not

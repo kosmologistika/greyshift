@@ -144,6 +144,7 @@ static class EngineWit
         EngineComponent<Replicated>.Fill(Wit.ComponentKind.REPLICATED, _ => new Replicated(), _ => Wit.Component.Replicated());
         EngineComponent<Participant>.Fill(Wit.ComponentKind.PARTICIPANT, _ => new Participant(), _ => Wit.Component.Participant());
         EngineComponent<PlayerRecord>.Fill(Wit.ComponentKind.PLAYER_RECORD, c => From(c.AsPlayerRecord), v => Wit.Component.PlayerRecord(To(v)));
+        EngineComponent<EventTarget>.Fill(Wit.ComponentKind.EVENT_TARGET, c => From(c.AsEventTarget), v => Wit.Component.EventTarget(To(v)));
         EngineComponent<Appearance>.Fill(Wit.ComponentKind.APPEARANCE, c => From(c.AsAppearance), v => Wit.Component.Appearance(To(v)));
         EngineComponent<BurnOut>.Fill(Wit.ComponentKind.BURN_OUT, c => From(c.AsBurnOut), v => Wit.Component.BurnOut(To(v)));
         EngineComponent<Dead>.Fill(Wit.ComponentKind.DEAD, _ => new Dead(), _ => Wit.Component.Dead());
@@ -158,8 +159,10 @@ static class EngineWit
         EngineComponent<Hands>.Fill(Wit.ComponentKind.HANDS, c => From(c.AsHands), v => Wit.Component.Hands(To(v)));
         EngineComponent<Map>.Fill(Wit.ComponentKind.MAP, _ => new Map(), _ => Wit.Component.Map());
         EngineComponent<TilePos>.Fill(Wit.ComponentKind.TILE_POS, c => From(c.AsTilePos), v => Wit.Component.TilePos(To(v)));
+        EngineComponent<RamsThrough>.Fill(Wit.ComponentKind.RAMS_THROUGH, c => From(c.AsRamsThrough), v => Wit.Component.RamsThrough(To(v)));
         EngineComponent<Mob>.Fill(Wit.ComponentKind.MOB, _ => new Mob(), _ => Wit.Component.Mob());
         EngineComponent<Movable>.Fill(Wit.ComponentKind.MOVABLE, _ => new Movable(), _ => Wit.Component.Movable());
+        EngineComponent<DisplayName>.Fill(Wit.ComponentKind.DISPLAY_NAME, c => From(c.AsDisplayName), v => Wit.Component.DisplayName(To(v)));
         EngineComponent<ControlledBy>.Fill(Wit.ComponentKind.CONTROLLED_BY, c => new ControlledBy(new PlayerId(c.AsControlledBy)), v => Wit.Component.ControlledBy(v.Value.Value));
         EngineComponent<SessionPlayer>.Fill(Wit.ComponentKind.SESSION_PLAYER, c => new SessionPlayer(new PlayerId(c.AsSessionPlayer)), v => Wit.Component.SessionPlayer(v.Value.Value));
         EngineComponent<Role>.Fill(Wit.ComponentKind.ROLE, c => new Role(c.AsRole), v => Wit.Component.Role(v.Value));
@@ -178,6 +181,8 @@ static class EngineWit
         EngineEvent<ScopeEnding>.Fill(Wit.EventKind.SCOPE_ENDING, e => From(e.AsScopeEnding));
         EngineEvent<Purchased>.Fill(Wit.EventKind.PURCHASED, e => From(e.AsPurchased));
         EngineEvent<ShopDone>.Fill(Wit.EventKind.SHOP_DONE, e => From(e.AsShopDone));
+        EngineEvent<ChooseTarget>.Fill(Wit.EventKind.CHOOSE_TARGET, e => From(e.AsChooseTarget));
+        EngineEvent<EventStrikes>.Fill(Wit.EventKind.EVENT_STRIKES, e => From(e.AsEventStrikes));
         EngineEvent<Triggered>.Fill(Wit.EventKind.TRIGGERED, e => From(e.AsTriggered));
         EngineTrigger<EndScope>.Fill(t => Wit.TriggerEvent.EndScope(To(t)));
         EngineTrigger<ClearEarned>.Fill(_ => Wit.TriggerEvent.ClearEarned());
@@ -194,6 +199,10 @@ static class EngineWit
     internal static PlayerRecord From(Wit.PlayerRecord x) => new(x.username, new PlayerId(x.id));
 
     internal static Wit.PlayerRecord To(PlayerRecord v) => new(v.Username, v.Id.Value);
+
+    internal static EventTarget From(Wit.EventTarget x) => new(new EntityUid(x.area), x.name);
+
+    internal static Wit.EventTarget To(EventTarget v) => new(v.Area.Bits, v.Name);
 
     internal static RsiRef From(Wit.RsiRef x) => new(x.rsi, x.state);
 
@@ -283,6 +292,14 @@ static class EngineWit
 
     internal static Wit.TilePos To(TilePos v) => new(v.Map.Bits, To(v.Pos));
 
+    internal static RamsThrough From(Wit.RamsThrough x) => new(x.damage.ToDictionary(x0_p0 => (DamageType)x0_p0.Item1, x0_p0 => (uint)(x0_p0.Item2)), x.hits);
+
+    internal static Wit.RamsThrough To(RamsThrough v) => new(v.Damage.Select(x0_p0 => ((Wit.DamageType)x0_p0.Key, x0_p0.Value)).ToList(), v.Hits);
+
+    internal static DisplayName From(Wit.DisplayName x) => new(x.name, x.desc);
+
+    internal static Wit.DisplayName To(DisplayName v) => new(v.Name, v.Desc);
+
     internal static Purchased From(Wit.Purchased x) => new(new PlayerId(x.player), new EntityUid(x.connection), x.listing, x.product, x.price);
 
     internal static Wit.Purchased To(Purchased v) => new(v.Player.Value, v.Connection.Bits, v.Listing, v.Product, v.Price);
@@ -310,6 +327,14 @@ static class EngineWit
     internal static Stored From(Wit.Stored x) => new(new EntityUid(x.container));
 
     internal static Wit.Stored To(Stored v) => new(v.Container.Bits);
+
+    internal static ChooseTarget From(Wit.ChooseTarget x) => new(new EntityUid(x.entity));
+
+    internal static Wit.ChooseTarget To(ChooseTarget v) => new(v.Entity.Bits);
+
+    internal static EventStrikes From(Wit.EventStrikes x) => new(new EntityUid(x.entity));
+
+    internal static Wit.EventStrikes To(EventStrikes v) => new(v.Entity.Bits);
 
     internal static Triggered From(Wit.Triggered x) => new(new EntityUid(x.entity), x.by is { } x1_0 ? new EntityUid(x1_0) : default(EntityUid?), x.on is { } x2_0 ? new EntityUid(x2_0) : default(EntityUid?));
 

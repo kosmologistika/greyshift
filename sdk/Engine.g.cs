@@ -83,6 +83,13 @@ public sealed class PlayerIdJson : JsonConverter<PlayerId>
 public sealed partial record PlayerRecord(string Username, PlayerId Id) : IEngineComponent, IReadable;
 
 /// <summary>
+/// Where a targeted event will land, fixed before the announcement so the
+/// warning stays true when it strikes. The behaviour answering `ChooseTarget`
+/// writes it, a pack's module included
+/// </summary>
+public sealed partial record EventTarget(EntityUid Area, string Name) : IEngineComponent, IReadable, IInsertable, ISpawnable;
+
+/// <summary>
 /// Reference to a state inside an `.rsi/` folder. `rsi` is the
 /// extension-less path to the folder relative to the asset root (e.g.
 /// `"textures/structures/walls/solid"` → resolves to
@@ -517,6 +524,14 @@ public sealed partial record Map : IEngineComponent, IReadable;
 public sealed partial record TilePos(EntityUid Map, Vector2i Pos) : IEngineComponent, IReadable, IInsertable, ISpawnable;
 
 /// <summary>
+/// A flyer that goes through what it hits: every structure on a struck tile
+/// takes `damage`, the flight carries on, and each strike spends one of
+/// `hits`. Running dry ends the flight where it is, which for a meteor is
+/// the blast. Pairs with a `FlightRules` that stops at nothing
+/// </summary>
+public sealed partial record RamsThrough(IReadOnlyDictionary<DamageType, uint> Damage, uint Hits) : IEngineComponent, IReadable;
+
+/// <summary>
 /// Marks an entity as a mob - the in-world body that can move, be pushed,
 /// occupy tiles, etc.
 /// </summary>
@@ -530,6 +545,14 @@ public sealed partial record Mob : IEngineComponent, IReadable;
 /// each successful step.
 /// </summary>
 public sealed partial record Movable : IEngineComponent, IReadable, IInsertable, ISpawnable;
+
+/// <summary>
+/// Human-readable name shown to players (context menu, examine, logs).
+/// Prototype-declared; absent on entities that have no friendly name.
+/// The richer Identity layer (disguises, "unknown" faces, grammar) is deferred.
+/// </summary>
+/// <param name="Desc">Locale key of the description examine prints first, authored per prototype as they earn one</param>
+public sealed partial record DisplayName(string Name, string? Desc) : IEngineComponent, IReadable;
 
 /// <summary>
 /// Marks a controllable entity (a mob, ghost, etc.) as controlled by a
@@ -717,6 +740,24 @@ public sealed partial record HandSlot(Hand Side, EntityUid Owner) : IEngineCompo
 /// invariant
 /// </summary>
 public sealed partial record Stored(EntityUid Container) : IEngineComponent, IReadable, IInsertable, ISpawnable;
+
+/// <summary>
+/// Fired on an event entity whose `Event.targeted` is set, before the
+/// announcement. The behaviour answers in its handler with `EventTarget` or
+/// a despawn; an event still unanswered ten seconds later is dropped
+/// </summary>
+public readonly partial record struct ChooseTarget(EntityUid Entity) : IEngineEvent, IDirectedEvent
+{
+    EntityUid IDirectedEvent.Target => Entity;
+}
+
+/// <summary>
+/// The lead has run out. Behaviours observe this, never `RuleStarted`
+/// </summary>
+public readonly partial record struct EventStrikes(EntityUid Entity) : IEngineEvent, IDirectedEvent
+{
+    EntityUid IDirectedEvent.Target => Entity;
+}
 
 /// <summary>
 /// Fires on the item as it goes off, in a hand, on the floor or mid-flight

@@ -172,6 +172,24 @@ public sealed class SeatSystem : IBuiltIn
     }
 }
 
+/// <summary>The rooms of a map and the floor still standing in them</summary>
+public sealed class AreaSystem : IBuiltIn
+{
+    /// <summary>The area a tile belongs to, null off every room</summary>
+    public EntityUid? AreaOf(TilePos at)
+    {
+        ModRuntime.InCall();
+        return Wit.AreaOf(EngineWit.To(at)) is { } area ? new EntityUid(area) : null;
+    }
+
+    /// <summary>The cells of an area with hull still standing on them: floor to aim at, empty for a room blown open</summary>
+    public List<Vector2i> StandingFloor(EntityUid area)
+    {
+        ModRuntime.InCall();
+        return Wit.StandingFloor(area.Bits).Select(cell => EngineWit.From(cell)).ToList();
+    }
+}
+
 public sealed class FlightSystem : IBuiltIn
 {
     /// <summary>Puts an entity into flight from the origin along the angle (radians) for the range in tiles, the way a gun or a throw does</summary>
@@ -179,6 +197,13 @@ public sealed class FlightSystem : IBuiltIn
     {
         ModRuntime.Writing();
         Wit.LaunchRay(entity.Bits, EngineWit.To(origin), angle, range, speed, launcher.Bits, EngineWit.To(rules));
+    }
+
+    /// <summary>Spawns a prototype in space past the hull along a rolled bearing and flies it at the target, the way a meteor comes in; null when no bearing is clear or no prototype has that id</summary>
+    public EntityUid? ThrowFromSpace(EntityUid map, Vector2i target, EntProtoId kind, ulong seed)
+    {
+        ModRuntime.Writing();
+        return Wit.ThrowFromSpace(map.Bits, EngineWit.To(target), kind.Id, seed) is { } rock ? new EntityUid(rock) : null;
     }
 }
 
@@ -234,6 +259,7 @@ static class BuiltIns
         yield return (typeof(MindSystem), new MindSystem());
         yield return (typeof(GhostSystem), new GhostSystem());
         yield return (typeof(SeatSystem), new SeatSystem());
+        yield return (typeof(AreaSystem), new AreaSystem());
         yield return (typeof(FlightSystem), new FlightSystem());
         yield return (typeof(AudioSystem), new AudioSystem());
         yield return (typeof(TransformSystem), new TransformSystem());
