@@ -101,7 +101,7 @@ slices; it went with #344, so one SDK gets the attention.
 
 The host functions are dynamic (`wasmtime::component::Linker::func_new`), converting each
 reflected value by the type the component declared for it, with fields matched by name, kebab-case
-for snake_case, a newtype as its inner type, a unit struct as a payload-less case. `packs/vals.rs` is
+for snake_case, a newtype as its inner type, a unit struct as a payload-less case. `crates/server/src/mods/vals.rs` is
 that converter and it names no engine type: #327 generates the WIT, the host needs no change per type.
 A `component` variant with one case per engine type is how a query row or an insert names its type,
 and `component-kind` and `event-kind` enums name a type the same way for `observe`, `query` and

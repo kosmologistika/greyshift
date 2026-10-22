@@ -27,7 +27,7 @@ in the manifest and in the prototypes alike).
 
 The module compiles with the .NET 10 SDK and componentize-dotnet, which pulls
 the NativeAOT-LLVM compiler from the experimental feed `nuget.config`
-names and the wasi-sdk on first use. The compiler pack exists for Linux
+names and the wasi-sdk on first use. The compiler package exists for Linux
 only.
 
 Linux:
