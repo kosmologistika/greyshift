@@ -1,4 +1,4 @@
-app-title = GREYSHIFT
+app-title = GRAYSHIFT
 main-menu-join = JOIN SERVER
 main-menu-discord = DISCORD
 main-menu-back = BACK
