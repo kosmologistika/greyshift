@@ -1,0 +1,18 @@
+[
+    // The station's body: a human whose crit holds until the bed lifts it
+    (
+        type: "Entity",
+        id: "mob_crew",
+        parents: ["mob_human"],
+        hide_spawn_menu: true,
+        components: {
+            "MobThresholds": (latch: true),
+        },
+    ),
+    (
+        type: "Role",
+        id: "role_crew",
+        name: "role-crew",
+        body: "mob_crew",
+    ),
+]

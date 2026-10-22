@@ -16,6 +16,15 @@
             "MinPlayersRule": (count: 1),
         },
     ),
+    // Everyone is crew until the roster (#357): a body whose crit sticks
+    (
+        type: "Entity",
+        id: "rule_station_spawn_players",
+        hide_spawn_menu: true,
+        components: {
+            "SpawnPlayersRule": (roles: ["role_crew"]),
+        },
+    ),
     (
         type: "Entity",
         id: "rule_shift",

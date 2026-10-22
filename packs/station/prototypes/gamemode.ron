@@ -6,7 +6,7 @@
         rules: [
             "rule_station_min_players",
             "rule_load_map_cyberiad",
-            "rule_spawn_players",
+            "rule_station_spawn_players",
             "rule_shift",
             "rule_storyteller",
         ],
