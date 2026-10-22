@@ -270,6 +270,12 @@ public readonly partial record struct DamageDealt(EntityUid Entity, IReadOnlyDic
 }
 
 /// <summary>
+/// Downed, tg's soft crit, in both crit tiers. Set by the threshold observer; with
+/// `MobThresholds.latch` it holds like `Dead` and only [`LiftCrit`] takes it off
+/// </summary>
+public sealed partial record Critical : IEngineComponent, IReadable;
+
+/// <summary>
 /// Marker for a deceased body. Sits on the corpse alongside its accumulated
 /// `Damageable`. Future revive systems (defib, clone) remove it; future
 /// medical systems (autopsy, organ harvest, undertaker NPCs) query for it.
@@ -287,6 +293,17 @@ public readonly partial record struct Killed(EntityUid Entity, PlayerId Victim, 
 {
     EntityUid IDirectedEvent.Target => Entity;
 }
+
+/// <summary>
+/// The one way off a latched floor: a full heal triggers it, and so does whatever content
+/// stands a body up, the station's bed and autoinjector
+/// </summary>
+public readonly partial record struct LiftCrit(EntityUid Entity) : ITriggerEvent;
+
+/// <summary>
+/// Field care's hold on a downed body: the dying tick waits while it stands, any blow removes it
+/// </summary>
+public sealed partial record Stabilised : IEngineComponent, IReadable, IInsertable, ISpawnable;
 
 /// <summary>
 /// Server-authoritative facing of any entity that can be oriented.

@@ -234,6 +234,12 @@ interface typed-ecs {
         killer: option<u64>,
     }
 
+    /// The one way off a latched floor: a full heal triggers it, and so does whatever content
+    /// stands a body up, the station's bed and autoinjector
+    record lift-crit {
+        entity: entity,
+    }
+
     /// What ends a flight and what it passes through. Seeded whole by [`launch`]
     /// and [`launch_ray`], so a launcher authors the rule set in one place and a
     /// landed entity carries none of it into whatever launches it next
@@ -528,7 +534,9 @@ interface typed-ecs {
         event-target,
         appearance,
         burn-out,
+        critical,
         dead,
+        stabilised,
         facing,
         flight-rules,
         in-flight,
@@ -608,10 +616,15 @@ interface typed-ecs {
         /// the client renders whatever burning means (a pixel dissolve). Consumers
         /// insert this instead of despawning outright, so nothing pops
         burn-out(burn-out),
+        /// Downed, tg's soft crit, in both crit tiers. Set by the threshold observer; with
+        /// `MobThresholds.latch` it holds like `Dead` and only [`LiftCrit`] takes it off
+        critical,
         /// Marker for a deceased body. Sits on the corpse alongside its accumulated
         /// `Damageable`. Future revive systems (defib, clone) remove it; future
         /// medical systems (autopsy, organ harvest, undertaker NPCs) query for it.
         dead,
+        /// Field care's hold on a downed body: the dying tick waits while it stands, any blow removes it
+        stabilised,
         /// Server-authoritative facing of any entity that can be oriented.
         /// Default South matches SS14 convention so freshly spawned mobs face
         /// the camera in a top-down layout. Replicated immutable so observers
@@ -778,6 +791,9 @@ interface typed-ecs {
     }
 
     variant trigger-event {
+        /// The one way off a latched floor: a full heal triggers it, and so does whatever content
+        /// stands a body up, the station's bed and autoinjector
+        lift-crit(lift-crit),
         /// Request to end a scope. Rules never touch `NextState<RoundState>` - they
         /// trigger this and the driver decides what it means
         end-scope(end-scope),

@@ -147,7 +147,9 @@ static class EngineWit
         EngineComponent<EventTarget>.Fill(Wit.ComponentKind.EVENT_TARGET, c => From(c.AsEventTarget), v => Wit.Component.EventTarget(To(v)));
         EngineComponent<Appearance>.Fill(Wit.ComponentKind.APPEARANCE, c => From(c.AsAppearance), v => Wit.Component.Appearance(To(v)));
         EngineComponent<BurnOut>.Fill(Wit.ComponentKind.BURN_OUT, c => From(c.AsBurnOut), v => Wit.Component.BurnOut(To(v)));
+        EngineComponent<Critical>.Fill(Wit.ComponentKind.CRITICAL, _ => new Critical(), _ => Wit.Component.Critical());
         EngineComponent<Dead>.Fill(Wit.ComponentKind.DEAD, _ => new Dead(), _ => Wit.Component.Dead());
+        EngineComponent<Stabilised>.Fill(Wit.ComponentKind.STABILISED, _ => new Stabilised(), _ => Wit.Component.Stabilised());
         EngineComponent<Facing>.Fill(Wit.ComponentKind.FACING, c => new Facing((Dir)c.AsFacing), v => Wit.Component.Facing((Wit.Dir)v.Value));
         EngineComponent<FlightRules>.Fill(Wit.ComponentKind.FLIGHT_RULES, c => From(c.AsFlightRules), v => Wit.Component.FlightRules(To(v)));
         EngineComponent<InFlight>.Fill(Wit.ComponentKind.IN_FLIGHT, c => From(c.AsInFlight), v => Wit.Component.InFlight(To(v)));
@@ -184,6 +186,7 @@ static class EngineWit
         EngineEvent<ChooseTarget>.Fill(Wit.EventKind.CHOOSE_TARGET, e => From(e.AsChooseTarget));
         EngineEvent<EventStrikes>.Fill(Wit.EventKind.EVENT_STRIKES, e => From(e.AsEventStrikes));
         EngineEvent<Triggered>.Fill(Wit.EventKind.TRIGGERED, e => From(e.AsTriggered));
+        EngineTrigger<LiftCrit>.Fill(t => Wit.TriggerEvent.LiftCrit(To(t)));
         EngineTrigger<EndScope>.Fill(t => Wit.TriggerEvent.EndScope(To(t)));
         EngineTrigger<ClearEarned>.Fill(_ => Wit.TriggerEvent.ClearEarned());
     }
@@ -239,6 +242,10 @@ static class EngineWit
     internal static Killed From(Wit.Killed x) => new(new EntityUid(x.entity), new PlayerId(x.victim), x.killer is { } x2_0 ? new PlayerId(x2_0) : default(PlayerId?));
 
     internal static Wit.Killed To(Killed v) => new(v.Entity.Bits, v.Victim.Value, v.Killer is { } x2_0 ? x2_0.Value : default(ulong?));
+
+    internal static LiftCrit From(Wit.LiftCrit x) => new(new EntityUid(x.entity));
+
+    internal static Wit.LiftCrit To(LiftCrit v) => new(v.Entity.Bits);
 
     internal static FlightRules From(Wit.FlightRules x) => new(x.stopsAtSolid, x.stopsAtBlocksAttack, x.stopsOnFirstDamageable, x.bounces, x.pierces, x.hitsNothing);
 
