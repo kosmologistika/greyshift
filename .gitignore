@@ -1,4 +1,4 @@
-# Built from each pack's project and the template's, by the engine's `cargo run -p mod-build` or by hand
+# Built from each pack's project and the template's, by the engine's `cargo run -p pack-build` or by hand
 packs/*/server.wasm
 packs/*/bin/
 packs/*/obj/

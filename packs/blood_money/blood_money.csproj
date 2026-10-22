@@ -15,7 +15,7 @@
     <InvariantGlobalization>true</InvariantGlobalization>
     <SelfContained>true</SelfContained>
     <AssemblyName>blood_money</AssemblyName>
-    <!-- mod-build hands the compiler package's host in, see tools/mod-build -->
+    <!-- pack-build hands the compiler package's host in, see tools/pack-build -->
     <IlcLlvmRid Condition="'$(IlcLlvmRid)' == ''">linux-x64</IlcLlvmRid>
     <!-- the package's data sits beside the sources and shows in the project; the module built here is not a source -->
     <DefaultItemExcludes>$(DefaultItemExcludes);server.wasm</DefaultItemExcludes>
@@ -26,7 +26,7 @@
     <PackageReference Include="runtime.$(IlcLlvmRid).microsoft.dotnet.ilcompiler.llvm" Version="10.0.0-rc.1.26306.1" />
   </ItemGroup>
 
-  <!-- the SDK compiles in as sources: mod-build hands its path in, a build from this repository alone takes the published copy -->
+  <!-- the SDK compiles in as sources: pack-build hands its path in, a build from this repository alone takes the published copy -->
   <Import Project="$(SdkCs)/Rs13.Packs.props" Condition="'$(SdkCs)' != ''" />
   <Import Project="../../sdk/Rs13.Packs.props" Condition="'$(SdkCs)' == ''" />
 
