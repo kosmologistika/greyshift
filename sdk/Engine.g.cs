@@ -743,7 +743,8 @@ public sealed partial record Stored(EntityUid Container) : IEngineComponent, IRe
 
 /// <summary>
 /// Fired on an event entity whose `Event.targeted` is set, before the
-/// announcement. The behaviour answers with `EventTarget` or a despawn
+/// announcement. The behaviour answers in its handler with `EventTarget` or
+/// a despawn; an event still unanswered ten seconds later is dropped
 /// </summary>
 public readonly partial record struct ChooseTarget(EntityUid Entity) : IEngineEvent, IDirectedEvent
 {

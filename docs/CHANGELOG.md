@@ -2,7 +2,7 @@
 
 One entry per publish, newest first, naming the engine commits that touched the surface, the template or the docs.
 
-## 2026-10-22, engine 680c8e69
+## 2026-10-22, engine df7beaf7
 
 - The meteor shower moves to the station pack as C#: ChooseTarget, EventStrikes and EventTarget join the mod surface, the host gains area-of, standing-floor and throw-from-space, the rock keeps its sound on RamsThrough, and the content pin takes the pack
 
