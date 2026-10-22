@@ -1,4 +1,4 @@
-app-title = GRAYSHIFT
+app-title = GREYSHIFT
 main-menu-join = ПРИСОЕДИНИТЬСЯ
 main-menu-discord = DISCORD
 main-menu-back = НАЗАД

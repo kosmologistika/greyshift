@@ -313,7 +313,7 @@ mode: four `GameRuleSystem`s, a cart, loadout, death cam and stranded-ghost syst
 
 A mod ships as a directory under `assets/mods/` (`tests/packages/` for the suite), reachable
 from asset paths as `mods://<id>/...`. `assets/` is the public content repository
-(`github.com/kosmologistika/grayshift`), so a package's source lives beside its data:
+(`github.com/kosmologistika/greyshift`), so a package's source lives beside its data:
 
 ```
 assets/mods/blood_money/
@@ -394,12 +394,12 @@ probes, C# like everything else.
 ### The published SDK
 
 An author needs no engine checkout: `utils/publish-sdk.sh` lays the SDK into the content
-repository (`github.com/kosmologistika/grayshift`) as `sdk/` (the `Rs13.Mods` sources, the
+repository (`github.com/kosmologistika/greyshift`) as `sdk/` (the `Rs13.Mods` sources, the
 props, `wit/typed.wit` and the `Generators` project), `template/` (`mods/template`) and `docs/`
 (this document, the mod ADRs, `surface.md` and a changelog with one entry per publish listing
 the engine commits that touched the surface), and commits them under the engine commit in
 `sdk/ENGINE_COMMIT`. The `publish:sdk` CI job runs it on every push to main that touched those
-paths and pushes with `GRAYSHIFT_TOKEN`; the three directories are owned by that job, and a
+paths and pushes with `GREYSHIFT_TOKEN`; the three directories are owned by that job, and a
 commit made to them in the content repository is overwritten by the next publish. A package
 there imports `sdk/Rs13.Mods.props` from the repository root, and the content repository's own
 CI builds every `mods/*/src` project and the template on each push, so a package that uses a type

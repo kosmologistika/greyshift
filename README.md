@@ -1,6 +1,6 @@
-# grayshift
+# greyshift
 
-Grayshift is a multiplayer game about keeping a space station and its crew
+Greyshift is a multiplayer game about keeping a space station and its crew
 alive through a shift, in the Space Station 13 tradition. This repository is
 the game's content: everything the client and the server load at runtime,
 public and open to contribution. The engine that runs it is not here, so the
