@@ -76,6 +76,12 @@ public sealed partial class CareSystem : EntitySystem
         {
             return;
         }
+        // The windup breaks on the active hand changing, not on the item leaving
+        // it, and the patient may have been dragged off: both are checked again
+        if (!HeldBy(item, args.Actor) || !InReach(args.Actor, patient))
+        {
+            return;
+        }
         RaiseLocalEvent(new HealDamage(patient, treats.Kinds, treats.Amount));
         if (_critical.HasComp(patient))
         {
@@ -86,5 +92,18 @@ public sealed partial class CareSystem : EntitySystem
         {
             QueueDel(item);
         }
+    }
+
+    bool HeldBy(EntityUid item, EntityUid actor) =>
+        TryComp<Stored>(item, out var stored) && TryComp<HandSlot>(stored.Container, out var hand) && hand.Owner == actor;
+
+    bool InReach(EntityUid actor, EntityUid patient)
+    {
+        if (actor == patient)
+        {
+            return true;
+        }
+        return TryComp<TilePos>(actor, out var at) && TryComp<TilePos>(patient, out var there)
+            && at.Map == there.Map && Math.Max(Math.Abs(at.Pos.X - there.Pos.X), Math.Abs(at.Pos.Y - there.Pos.Y)) <= 1;
     }
 }
