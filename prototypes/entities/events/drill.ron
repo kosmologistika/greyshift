@@ -1,0 +1,20 @@
+[
+    // Announces, logs, does nothing. The lifecycle fixture
+    (
+        type: "Entity",
+        id: "event_drill",
+        hide_spawn_menu: true,
+        components: {
+            "DisplayName": (name: "Comms drill"),
+            "Event": (
+                weight: 1.0,
+                intensity: 0.1,
+                tags: ["drill"],
+                excludes: ["drill"],
+                lead: (2, 4),
+                announcement: Some("event_drill"),
+            ),
+            "Drill": (),
+        },
+    ),
+]

@@ -1,0 +1,57 @@
+[
+    // tg's rock: through every wall on its line, one hit spent per strike,
+    // the blast where it arrives or runs dry. No ExplodesOnImpact: a body in
+    // the way is slammed and passed, not a reason to go off early
+    (
+        type: "Entity",
+        id: "base_meteor",
+        abstract: true,
+        hide_spawn_menu: true,
+        components: {
+            "FlightRules": (),
+            "FlightSpeed": (tiles_per_sec: 6.0),
+            "DespawnOnFlightEnd": (),
+            "Appearance": (depth: Effects),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "meteor_small",
+        parents: ["base_meteor"],
+        hide_spawn_menu: true,
+        components: {
+            "DisplayName": (name: "meteor"),
+            "RamsThrough": (damage: {Blunt: 300}, hits: 4),
+            "Explosive": (
+                radius: 1,
+                damage: {Blunt: 220},
+                falloff: Some((full_tiles: 0.0, end_tiles: 1.0, min: 0.5)),
+                fling: Some(1),
+                effect: Some((effect: "effect_knockdown", secs: 2.0)),
+                sound: Some((source: Collection("explosion_small"), volume_db: 0.0, pitch_var: 0.1, range_tiles: 30.0)),
+                fx: Some("effect_explosion"),
+            ),
+            "Appearance": (sprite: (rsi: "textures/objects/meteor", state: "small1"), depth: Effects),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "meteor_large",
+        parents: ["base_meteor"],
+        hide_spawn_menu: true,
+        components: {
+            "DisplayName": (name: "big meteor"),
+            "RamsThrough": (damage: {Blunt: 300}, hits: 6),
+            "Explosive": (
+                radius: 2,
+                damage: {Blunt: 220},
+                falloff: Some((full_tiles: 0.0, end_tiles: 2.0, min: 0.18)),
+                fling: Some(2),
+                effect: Some((effect: "effect_knockdown", secs: 2.0)),
+                sound: Some((source: Collection("explosion"), volume_db: 0.0, pitch_var: 0.1, range_tiles: 40.0)),
+                fx: Some("effect_explosion"),
+            ),
+            "Appearance": (sprite: (rsi: "textures/objects/meteor", state: "large1"), depth: Effects),
+        },
+    ),
+]

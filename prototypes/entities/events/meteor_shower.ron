@@ -1,0 +1,24 @@
+[
+    // Rocks at a room the crew is in: the first physical event, and the
+    // shape of every one after it. The hull tag stays live until the last
+    // rock has landed
+    (
+        type: "Entity",
+        id: "event_meteor_shower",
+        hide_spawn_menu: true,
+        components: {
+            "DisplayName": (name: "Meteor shower"),
+            "Event": (
+                weight: 1.0,
+                intensity: 0.6,
+                tags: ["hull", "lethal"],
+                excludes: ["hull"],
+                min_players: 4,
+                lead: (120, 300),
+                announcement: Some("meteor_shower_incoming"),
+                targeted: true,
+            ),
+            "MeteorShower": (count: 6, over_secs: 20.0, pool: {"meteor_small": 3.0, "meteor_large": 1.0}),
+        },
+    ),
+]

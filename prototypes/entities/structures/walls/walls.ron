@@ -46,6 +46,7 @@
         // Map shells are built from this. It stays out of the damage model
         // entirely, so making `structure_wall_solid` breakable never perforates one
         components: {
+            "Indestructible": (),
             "DisplayName": (name: "indestructible wall"),
             "IconSmooth": (state_prefix: "plastitanium"),
             "Appearance": (
@@ -58,6 +59,7 @@
         id: "structure_wall_gold_indestructible",
         parents: ["structure_wall_base"],
         components: {
+            "Indestructible": (),
             "DisplayName": (name: "gold wall"),
             "IconSmooth": (state_prefix: "gold"),
             "StruckSound": (default: Some((source: Collection("hit_metal"), volume_db: -4.0, pitch_var: 0.1))),
@@ -71,6 +73,7 @@
         id: "structure_wall_wood_indestructible",
         parents: ["structure_wall_base"],
         components: {
+            "Indestructible": (),
             "DisplayName": (name: "wood panel wall"),
             "IconSmooth": (state_prefix: "wood"),
             "StruckSound": (default: Some((source: Collection("hit_wood"), volume_db: -4.0, pitch_var: 0.1))),

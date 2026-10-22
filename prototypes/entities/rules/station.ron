@@ -1,0 +1,35 @@
+[
+    // Cyberiad stands in until the KiloStation cut lands
+    (
+        type: "Entity",
+        id: "rule_load_map_cyberiad",
+        hide_spawn_menu: true,
+        components: {
+            "LoadMapRule": (map: "cyberiad"),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "rule_station_min_players",
+        hide_spawn_menu: true,
+        components: {
+            "MinPlayersRule": (count: 1),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "rule_shift",
+        hide_spawn_menu: true,
+        components: {
+            "ShiftRule": (secs: 1800),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "rule_storyteller",
+        hide_spawn_menu: true,
+        components: {
+            "StorytellerRule": (storytellers: [(id: "storyteller_odessa", weight: 1.0)]),
+        },
+    ),
+]

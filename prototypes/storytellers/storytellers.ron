@@ -1,0 +1,46 @@
+[
+    // The brief's curve: five quiet minutes, an event every five to seven,
+    // peaking around two thirds in, easing toward the relief
+    (
+        type: "Storyteller",
+        id: "storyteller_odessa",
+        name: "storyteller-odessa-name",
+        description: "storyteller-odessa-description",
+        quiet: 300.0,
+        interval: (300.0, 420.0),
+        intensity: [(0.0, 0.2), (0.5, 0.6), (0.75, 1.0), (1.0, 0.4)],
+        squeeze: 0.5,
+        tag_weights: {"drill": 0.0},
+        tiers: 0.25,
+    ),
+    // A newcomer night: longer gaps, nothing lethal weighs much. Both real
+    // storytellers weight the drill fixture out of the draw
+    (
+        type: "Storyteller",
+        id: "storyteller_benny",
+        name: "storyteller-benny-name",
+        description: "storyteller-benny-description",
+        quiet: 420.0,
+        interval: (420.0, 600.0),
+        intensity: [(0.0, 0.1), (0.6, 0.5), (1.0, 0.2)],
+        squeeze: 0.3,
+        tag_weights: {"lethal": 0.4, "drill": 0.0},
+        tiers: 0.2,
+    ),
+    // Driven runs and the suite: fires within seconds, never offered, and
+    // rolls the drill alone so the lifecycle tests see the fixture
+    (
+        type: "Storyteller",
+        id: "storyteller_test",
+        name: "storyteller-test-name",
+        description: "storyteller-test-description",
+        listed: false,
+        quiet: 2.0,
+        interval: (10.0, 10.0),
+        intensity: [(0.0, 0.5), (1.0, 0.5)],
+        squeeze: 0.0,
+        tag_weights: {"hull": 0.0},
+        tiers: 0.25,
+        repeat_penalty: 1.0,
+    ),
+]

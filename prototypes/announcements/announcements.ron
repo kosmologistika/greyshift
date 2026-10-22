@@ -6,4 +6,18 @@
         body: "announcement-welcome-body",
         sound: Some((source: Path("audio/announcements/welcome.ogg"))),
     ),
+    (
+        type: "Announcement",
+        id: "event_drill",
+        title: Some("announcement-event-drill-title"),
+        body: "announcement-event-drill-body",
+        style: Priority,
+    ),
+    (
+        type: "Announcement",
+        id: "meteor_shower_incoming",
+        title: Some("announcement-meteor-shower-title"),
+        body: "announcement-meteor-shower-body",
+        style: Alert,
+    ),
 ]

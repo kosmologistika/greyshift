@@ -1,0 +1,16 @@
+(
+    size: (x: 32, y: 32),
+    license: "CC-BY-SA-3.0",
+    copyright: [
+        "Taken from tgstation icons/obj/meteor.dmi, CC BY-SA 3.0",
+        "extracted with utils/extract_dmi.py",
+    ],
+    states: [
+        (name: "small"),
+        (name: "large"),
+        (name: "dust"),
+        (name: "flaming"),
+        (name: "small1", delays: [[0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1]]),
+        (name: "large1", delays: [[0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1]]),
+    ],
+)
