@@ -1,0 +1,59 @@
+[
+    // Field care, one consumable per damage family of the event pool: the
+    // engine's Apply verb offers it on a body in reach and the pack's care
+    // answers. A bandage is a bandage: no skill, no roll
+    (
+        type: "Entity",
+        id: "base_medical_consumable",
+        abstract: true,
+        parents: ["base_item"],
+        hide_spawn_menu: true,
+        components: {
+            "Item": (size: Small),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "medical_bandage",
+        parents: ["base_medical_consumable"],
+        components: {
+            "DisplayName": (name: "bandage", desc: Some("item-desc-medical-bandage")),
+            "Applicable": (label: "Apply bandage"),
+            "station::Treats": (kinds: [Blunt, Slash, Piercing], amount: 25, secs: 2.5, uses: 4),
+            "Appearance": (sprite: (rsi: "textures/objects/medical/bandage", state: "icon")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "medical_salve",
+        parents: ["base_medical_consumable"],
+        components: {
+            "DisplayName": (name: "burn salve", desc: Some("item-desc-medical-salve")),
+            "Applicable": (label: "Apply salve"),
+            "station::Treats": (kinds: [Heat], amount: 25, secs: 2.5, uses: 4),
+            "Appearance": (sprite: (rsi: "textures/objects/medical/salve", state: "icon")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "medical_oxygen",
+        parents: ["base_medical_consumable"],
+        components: {
+            "DisplayName": (name: "oxygen canister", desc: Some("item-desc-medical-oxygen")),
+            "Applicable": (label: "Give oxygen"),
+            "station::Treats": (kinds: [Asphyxiation], amount: 40, secs: 2.0, uses: 3),
+            "Appearance": (sprite: (rsi: "textures/objects/medical/oxygen", state: "icon")),
+        },
+    ),
+    (
+        type: "Entity",
+        id: "medical_antidote",
+        parents: ["base_medical_consumable"],
+        components: {
+            "DisplayName": (name: "antidote pen", desc: Some("item-desc-medical-antidote")),
+            "Applicable": (label: "Inject antidote"),
+            "station::Treats": (kinds: [Toxin], amount: 40, secs: 2.0, uses: 3),
+            "Appearance": (sprite: (rsi: "textures/objects/medical/antidote", state: "icon")),
+        },
+    ),
+]
