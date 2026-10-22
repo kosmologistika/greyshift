@@ -147,7 +147,9 @@ static class EngineWit
         EngineComponent<EventTarget>.Fill(Wit.ComponentKind.EVENT_TARGET, c => From(c.AsEventTarget), v => Wit.Component.EventTarget(To(v)));
         EngineComponent<Appearance>.Fill(Wit.ComponentKind.APPEARANCE, c => From(c.AsAppearance), v => Wit.Component.Appearance(To(v)));
         EngineComponent<BurnOut>.Fill(Wit.ComponentKind.BURN_OUT, c => From(c.AsBurnOut), v => Wit.Component.BurnOut(To(v)));
+        EngineComponent<Critical>.Fill(Wit.ComponentKind.CRITICAL, _ => new Critical(), _ => Wit.Component.Critical());
         EngineComponent<Dead>.Fill(Wit.ComponentKind.DEAD, _ => new Dead(), _ => Wit.Component.Dead());
+        EngineComponent<Stabilised>.Fill(Wit.ComponentKind.STABILISED, _ => new Stabilised(), _ => Wit.Component.Stabilised());
         EngineComponent<Facing>.Fill(Wit.ComponentKind.FACING, c => new Facing((Dir)c.AsFacing), v => Wit.Component.Facing((Wit.Dir)v.Value));
         EngineComponent<FlightRules>.Fill(Wit.ComponentKind.FLIGHT_RULES, c => From(c.AsFlightRules), v => Wit.Component.FlightRules(To(v)));
         EngineComponent<InFlight>.Fill(Wit.ComponentKind.IN_FLIGHT, c => From(c.AsInFlight), v => Wit.Component.InFlight(To(v)));
@@ -175,15 +177,19 @@ static class EngineWit
         EngineEdge<ShopOffer>.Added(Wit.EventKind.SHOP_OFFER_ADDED, e => new EntityUid(e.AsShopOfferAdded));
         EngineEdge<InFlight>.Removed(Wit.EventKind.IN_FLIGHT_REMOVED, e => new EntityUid(e.AsInFlightRemoved));
         EngineEdge<ShopOffer>.Removed(Wit.EventKind.SHOP_OFFER_REMOVED, e => new EntityUid(e.AsShopOfferRemoved));
+        EngineEvent<DoAfterFinished>.Fill(Wit.EventKind.DO_AFTER_FINISHED, e => From(e.AsDoAfterFinished));
         EngineEvent<DamageDealt>.Fill(Wit.EventKind.DAMAGE_DEALT, e => From(e.AsDamageDealt));
         EngineEvent<Killed>.Fill(Wit.EventKind.KILLED, e => From(e.AsKilled));
         EngineEvent<RuleStarted>.Fill(Wit.EventKind.RULE_STARTED, e => From(e.AsRuleStarted));
         EngineEvent<ScopeEnding>.Fill(Wit.EventKind.SCOPE_ENDING, e => From(e.AsScopeEnding));
+        EngineEvent<Applied>.Fill(Wit.EventKind.APPLIED, e => From(e.AsApplied));
         EngineEvent<Purchased>.Fill(Wit.EventKind.PURCHASED, e => From(e.AsPurchased));
         EngineEvent<ShopDone>.Fill(Wit.EventKind.SHOP_DONE, e => From(e.AsShopDone));
         EngineEvent<ChooseTarget>.Fill(Wit.EventKind.CHOOSE_TARGET, e => From(e.AsChooseTarget));
         EngineEvent<EventStrikes>.Fill(Wit.EventKind.EVENT_STRIKES, e => From(e.AsEventStrikes));
         EngineEvent<Triggered>.Fill(Wit.EventKind.TRIGGERED, e => From(e.AsTriggered));
+        EngineTrigger<HealDamage>.Fill(t => Wit.TriggerEvent.HealDamage(To(t)));
+        EngineTrigger<LiftCrit>.Fill(t => Wit.TriggerEvent.LiftCrit(To(t)));
         EngineTrigger<EndScope>.Fill(t => Wit.TriggerEvent.EndScope(To(t)));
         EngineTrigger<ClearEarned>.Fill(_ => Wit.TriggerEvent.ClearEarned());
     }
@@ -195,6 +201,10 @@ static class EngineWit
         var (secs, nanos) = SerdeDuration.To(t);
         return new(secs, nanos);
     }
+
+    internal static DoAfterFinished From(Wit.DoAfterFinished x) => new(new EntityUid(x.entity), new EntityUid(x.actor), x.cancelled);
+
+    internal static Wit.DoAfterFinished To(DoAfterFinished v) => new(v.Entity.Bits, v.Actor.Bits, v.Cancelled);
 
     internal static PlayerRecord From(Wit.PlayerRecord x) => new(x.username, new PlayerId(x.id));
 
@@ -236,9 +246,17 @@ static class EngineWit
 
     internal static Wit.DamageDealt To(DamageDealt v) => new(v.Entity.Bits, v.Spec.Select(x1_p0 => ((Wit.DamageType)x1_p0.Key, x1_p0.Value)).ToList(), v.Origin is { } x2_0 ? x2_0.Bits : default(ulong?), v.Heading is { } x3_0 ? To(x3_0) : default(Wit.Vec2?), v.Weapon is { } x4_0 ? x4_0.Bits : default(ulong?));
 
+    internal static HealDamage From(Wit.HealDamage x) => new(new EntityUid(x.entity), x.kinds.Select(x1_0 => (DamageType)x1_0).ToList(), x.amount);
+
+    internal static Wit.HealDamage To(HealDamage v) => new(v.Entity.Bits, v.Kinds.Select(x1_0 => (Wit.DamageType)x1_0).ToList(), v.Amount);
+
     internal static Killed From(Wit.Killed x) => new(new EntityUid(x.entity), new PlayerId(x.victim), x.killer is { } x2_0 ? new PlayerId(x2_0) : default(PlayerId?));
 
     internal static Wit.Killed To(Killed v) => new(v.Entity.Bits, v.Victim.Value, v.Killer is { } x2_0 ? x2_0.Value : default(ulong?));
+
+    internal static LiftCrit From(Wit.LiftCrit x) => new(new EntityUid(x.entity));
+
+    internal static Wit.LiftCrit To(LiftCrit v) => new(v.Entity.Bits);
 
     internal static FlightRules From(Wit.FlightRules x) => new(x.stopsAtSolid, x.stopsAtBlocksAttack, x.stopsOnFirstDamageable, x.bounces, x.pierces, x.hitsNothing);
 
@@ -283,6 +301,10 @@ static class EngineWit
     internal static Hands From(Wit.Hands x) => new((Hand)x.active);
 
     internal static Wit.Hands To(Hands v) => new((Wit.Hand)v.Active);
+
+    internal static Applied From(Wit.Applied x) => new(new EntityUid(x.entity), new EntityUid(x.item), new EntityUid(x.user));
+
+    internal static Wit.Applied To(Applied v) => new(v.Entity.Bits, v.Item.Bits, v.User.Bits);
 
     internal static Vector2i From(Wit.IVec2 x) => new(x.x, x.y);
 

@@ -299,8 +299,13 @@ as a `[Dependency]` like a system: `GameTicker` (`RunLevel`, `IsRoundLive`,
 (`TransferControl`), `GhostSystem` (`SpawnGhost`), `SeatSystem` (`SeatsFor`, `ObserverSeat`,
 `SpreadOver` for where a body lands), `FlightSystem` (`LaunchRay` puts an entity into flight
 the way a gun or a throw does, `ThrowFromSpace` spawns a prototype past the hull and flies it in),
-`AreaSystem` (`AreaOf` a tile, `StandingFloor` of a room), `AudioSystem` (`Play` at a tile) and
-`TransformSystem` (`GridPosition` finds the tile under an entity however deep it is stored). `Seed.Mix` is the
+`AreaSystem` (`AreaOf` a tile, `StandingFloor` of a room), `DoAfterSystem` (`TryStart` a windup on
+an actor with its breaks and duplicate policy, handing back the windup entity the module keeps its
+payload on as an own component, and `Cancel`; `DoAfterFinished` on that entity says how it ended),
+`PopupSystem` (`Note` and `Caution` off an entity for the player controlling it, by locale key),
+`BodySystem` (`Ledger`: a body's wounds by kind, its parts' included), `AudioSystem` (`Play` at a
+tile) and `TransformSystem` (`GridPosition` finds the tile under an entity however deep it is
+stored). `Seed.Mix` is the
 seeded roll.
 
 **Diagnostics.** A wiring mistake is a compile error with an `RS130xx` id: a system that is not

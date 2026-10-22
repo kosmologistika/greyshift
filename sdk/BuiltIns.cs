@@ -207,6 +207,78 @@ public sealed class FlightSystem : IBuiltIn
     }
 }
 
+/// <summary>What interrupts a windup: leaving the tile, a blow, the active hand changing</summary>
+public readonly record struct Breaks(bool OnMove, bool OnDamage, bool OnHandChange)
+{
+    public static readonly Breaks None = new(false, false, false);
+    public static readonly Breaks Damage = new(false, true, false);
+    public static readonly Breaks All = new(true, true, true);
+}
+
+/// <summary>Which running windups a new one is weighed against</summary>
+public enum Duplicate
+{
+    Any,
+    SameKind,
+}
+
+/// <summary>What a duplicate means for the new windup</summary>
+public enum OnDuplicate
+{
+    Block,
+    Replace,
+    Allow,
+}
+
+/// <summary>Timed actions on an actor, the engine's own windups: the bar the actor sees and the cog bystanders see</summary>
+public sealed class DoAfterSystem : IBuiltIn
+{
+    /// <summary>A windup on the actor for the seconds, or null when its hands are blocked, a running windup blocks it, or a break has nothing to watch. Keep the payload as an own component on the returned entity and subscribe to <see cref="DoAfterFinished"/> on it. Every module windup is one kind to the duplicate policy</summary>
+    public EntityUid? TryStart(EntityUid actor, float secs, Breaks breaks, Duplicate duplicate = Duplicate.Any, OnDuplicate onDuplicate = OnDuplicate.Block)
+    {
+        ModRuntime.Writing();
+        var dup = duplicate == Duplicate.Any ? "any" : "same-kind";
+        var on = onDuplicate switch { OnDuplicate.Block => "block", OnDuplicate.Replace => "replace", _ => "allow" };
+        return Wit.StartDoAfter(actor.Bits, secs, breaks.OnMove, breaks.OnDamage, breaks.OnHandChange, dup, on) is { } windup ? new EntityUid(windup) : null;
+    }
+
+    /// <summary>Breaks a running windup</summary>
+    public void Cancel(EntityUid doAfter)
+    {
+        ModRuntime.Writing();
+        Wit.CancelDoAfter(doAfter.Bits);
+    }
+}
+
+/// <summary>Text that rises off an entity for the player controlling it</summary>
+public sealed class PopupSystem : IBuiltIn
+{
+    /// <summary>A note off the anchor, by locale key</summary>
+    public void Note(EntityUid anchor, string key)
+    {
+        ModRuntime.Writing();
+        Wit.Popup(anchor.Bits, key, false);
+    }
+
+    /// <summary>A warning off the anchor, by locale key</summary>
+    public void Caution(EntityUid anchor, string key)
+    {
+        ModRuntime.Writing();
+        Wit.Popup(anchor.Bits, key, true);
+    }
+}
+
+/// <summary>A body's wounds</summary>
+public sealed class BodySystem : IBuiltIn
+{
+    /// <summary>A body's wounds by kind: its own ledger, which already counts what landed on its parts; a body without one is summed from its parts</summary>
+    public IReadOnlyDictionary<DamageType, uint> Ledger(EntityUid body)
+    {
+        ModRuntime.InCall();
+        return Wit.LedgerOf(body.Bits).ToDictionary(x => (DamageType)x.Item1, x => x.Item2);
+    }
+}
+
 public sealed class AudioSystem : IBuiltIn
 {
     /// <summary>A sound at a tile, by its asset path</summary>
@@ -261,6 +333,9 @@ static class BuiltIns
         yield return (typeof(SeatSystem), new SeatSystem());
         yield return (typeof(AreaSystem), new AreaSystem());
         yield return (typeof(FlightSystem), new FlightSystem());
+        yield return (typeof(DoAfterSystem), new DoAfterSystem());
+        yield return (typeof(PopupSystem), new PopupSystem());
+        yield return (typeof(BodySystem), new BodySystem());
         yield return (typeof(AudioSystem), new AudioSystem());
         yield return (typeof(TransformSystem), new TransformSystem());
     }

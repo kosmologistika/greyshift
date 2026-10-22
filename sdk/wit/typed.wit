@@ -11,6 +11,16 @@ interface typed-ecs {
         nanos: u32,
     }
 
+    /// Fired on a windup when it ends, landed or broken. Handlers recognise their
+    /// own by querying the payload component they started it with, which lives on
+    /// the windup `entity` and is still there while the trigger runs; a module
+    /// keeps its payload there as an own component
+    record do-after-finished {
+        entity: entity,
+        actor: entity,
+        cancelled: bool,
+    }
+
     /// Server-private player record. Never replicated; usernames stay off the
     /// wire until something client-side consumes them.
     /// 
@@ -223,6 +233,16 @@ interface typed-ecs {
         weapon: option<entity>,
     }
 
+    /// Takes up to `amount` off `entity`'s ledgers, the body's own and its parts',
+    /// over `kinds` in order: a bandage's worth of blunt, then slash, then
+    /// piercing. Content triggers it; the ledgers are re-inserted, so the
+    /// thresholds, the doll and the examine lines see it the way they see a hit
+    record heal-damage {
+        entity: entity,
+        kinds: list<damage-type>,
+        amount: u32,
+    }
+
     /// A controlled body just died, with the kill resolved against the freshness
     /// of its `LastHitBy` stamp. `killer` is `None` for unattributed deaths -
     /// environment, self, or a stale stamp - which score nobody. Server-triggered;
@@ -232,6 +252,12 @@ interface typed-ecs {
         entity: entity,
         victim: u64,
         killer: option<u64>,
+    }
+
+    /// The one way off a latched floor: a full heal triggers it, and so does whatever content
+    /// stands a body up, the station's bed and autoinjector
+    record lift-crit {
+        entity: entity,
     }
 
     /// What ends a flight and what it passes through. Seeded whole by [`launch`]
@@ -382,6 +408,14 @@ interface typed-ecs {
         active: hand,
     }
 
+    /// A held [`Applicable`] item was used on `entity` by `user`, the gates passed:
+    /// a tangible living body within reach, the item in the user's active hand
+    record applied {
+        entity: entity,
+        item: entity,
+        user: entity,
+    }
+
     record i-vec2 {
         x: s32,
         y: s32,
@@ -528,7 +562,9 @@ interface typed-ecs {
         event-target,
         appearance,
         burn-out,
+        critical,
         dead,
+        stabilised,
         facing,
         flight-rules,
         in-flight,
@@ -559,10 +595,12 @@ interface typed-ecs {
         shop-offer-added,
         in-flight-removed,
         shop-offer-removed,
+        do-after-finished,
         damage-dealt,
         killed,
         rule-started,
         scope-ending,
+        applied,
         purchased,
         shop-done,
         choose-target,
@@ -608,10 +646,15 @@ interface typed-ecs {
         /// the client renders whatever burning means (a pixel dissolve). Consumers
         /// insert this instead of despawning outright, so nothing pops
         burn-out(burn-out),
+        /// Downed, tg's soft crit, in both crit tiers. Set by the threshold observer; with
+        /// `MobThresholds.latch` it holds like `Dead` and only [`LiftCrit`] takes it off
+        critical,
         /// Marker for a deceased body. Sits on the corpse alongside its accumulated
         /// `Damageable`. Future revive systems (defib, clone) remove it; future
         /// medical systems (autopsy, organ harvest, undertaker NPCs) query for it.
         dead,
+        /// Field care's hold on a downed body: the dying tick waits while it stands, any blow removes it
+        stabilised,
         /// Server-authoritative facing of any entity that can be oriented.
         /// Default South matches SS14 convention so freshly spawned mobs face
         /// the camera in a top-down layout. Replicated immutable so observers
@@ -745,6 +788,11 @@ interface typed-ecs {
         in-flight-removed(entity),
         /// The entity a `shared::shop::ShopOffer` was just taken off, the value still on it
         shop-offer-removed(entity),
+        /// Fired on a windup when it ends, landed or broken. Handlers recognise their
+        /// own by querying the payload component they started it with, which lives on
+        /// the windup `entity` and is still there while the trigger runs; a module
+        /// keeps its payload there as an own component
+        do-after-finished(do-after-finished),
         /// A hit landed: what `entity` takes after every modifier. Announced before
         /// the ledgers change, so a consequence sees the world the blow arrived in -
         /// the killing blow still bleeds, leaks and screams
@@ -761,6 +809,9 @@ interface typed-ecs {
         /// The rescue window, fired once per accepted teardown and before the cascade.
         /// Anything that must outlive the scope has to leave its hierarchy here
         scope-ending(scope-ending),
+        /// A held [`Applicable`] item was used on `entity` by `user`, the gates passed:
+        /// a tangible living body within reach, the item in the user's active hand
+        applied(applied),
         /// Money moved, the offer still standing; what handing over `product` means
         /// is the observer's call (a body owed it, an item in hand, a skill granted)
         purchased(purchased),
@@ -778,6 +829,14 @@ interface typed-ecs {
     }
 
     variant trigger-event {
+        /// Takes up to `amount` off `entity`'s ledgers, the body's own and its parts',
+        /// over `kinds` in order: a bandage's worth of blunt, then slash, then
+        /// piercing. Content triggers it; the ledgers are re-inserted, so the
+        /// thresholds, the doll and the examine lines see it the way they see a hit
+        heal-damage(heal-damage),
+        /// The one way off a latched floor: a full heal triggers it, and so does whatever content
+        /// stands a body up, the station's bed and autoinjector
+        lift-crit(lift-crit),
         /// Request to end a scope. Rules never touch `NextState<RoundState>` - they
         /// trigger this and the driver decides what it means
         end-scope(end-scope),
@@ -852,6 +911,18 @@ interface typed-ecs {
 
     /// Spawns a prototype in space past the hull along a rolled bearing and flies it at `target`; `none` when no bearing is clear or no prototype has that id
     throw-from-space: func(%map: entity, target: i-vec2, kind: string, seed: u64) -> option<entity>;
+
+    /// A windup on `actor` for `secs`, breaking on what the flags say; `duplicate` is `any` or `same-kind`, `on-duplicate` is `block`, `replace` or `allow`. `none` when the actor's hands are blocked, a running windup blocks it, or a break has nothing to watch. The module's payload is its own component on the windup, and `do-after-finished` on it says how it ended
+    start-do-after: func(actor: entity, secs: f32, on-move: bool, on-damage: bool, on-hand-change: bool, duplicate: string, on-duplicate: string) -> option<entity>;
+
+    /// Breaks a running windup
+    cancel-do-after: func(do-after: entity);
+
+    /// Text off `anchor` for the player controlling it, by locale key; `caution` picks the warning look
+    popup: func(anchor: entity, key: string, caution: bool);
+
+    /// A body's wounds by kind: its own ledger, which already counts what landed on its parts; a body without one is summed from its parts
+    ledger-of: func(entity: entity) -> list<tuple<damage-type, u32>>;
 
     /// A sound at a tile, by its asset path
     play-sound: func(path: string, at: tile-pos);

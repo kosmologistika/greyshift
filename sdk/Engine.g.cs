@@ -37,6 +37,17 @@ public sealed class ChildOfJson : JsonConverter<ChildOf>
 public sealed partial record Replicated : IEngineComponent, IInsertable, ISpawnable;
 
 /// <summary>
+/// Fired on a windup when it ends, landed or broken. Handlers recognise their
+/// own by querying the payload component they started it with, which lives on
+/// the windup `entity` and is still there while the trigger runs; a module
+/// keeps its payload there as an own component
+/// </summary>
+public readonly partial record struct DoAfterFinished(EntityUid Entity, EntityUid Actor, bool Cancelled) : IEngineEvent, IDirectedEvent
+{
+    EntityUid IDirectedEvent.Target => Entity;
+}
+
+/// <summary>
 /// This connection is playing the current round. The `lobby` writes it at the
 /// round-start edge and for late joins; gamemode rules read it and nothing else,
 /// so no rule re-derives participation from ready-up state that was already
@@ -270,6 +281,20 @@ public readonly partial record struct DamageDealt(EntityUid Entity, IReadOnlyDic
 }
 
 /// <summary>
+/// Takes up to `amount` off `entity`'s ledgers, the body's own and its parts',
+/// over `kinds` in order: a bandage's worth of blunt, then slash, then
+/// piercing. Content triggers it; the ledgers are re-inserted, so the
+/// thresholds, the doll and the examine lines see it the way they see a hit
+/// </summary>
+public readonly partial record struct HealDamage(EntityUid Entity, IReadOnlyList<DamageType> Kinds, uint Amount) : ITriggerEvent;
+
+/// <summary>
+/// Downed, tg's soft crit, in both crit tiers. Set by the threshold observer; with
+/// `MobThresholds.latch` it holds like `Dead` and only [`LiftCrit`] takes it off
+/// </summary>
+public sealed partial record Critical : IEngineComponent, IReadable;
+
+/// <summary>
 /// Marker for a deceased body. Sits on the corpse alongside its accumulated
 /// `Damageable`. Future revive systems (defib, clone) remove it; future
 /// medical systems (autopsy, organ harvest, undertaker NPCs) query for it.
@@ -287,6 +312,17 @@ public readonly partial record struct Killed(EntityUid Entity, PlayerId Victim, 
 {
     EntityUid IDirectedEvent.Target => Entity;
 }
+
+/// <summary>
+/// The one way off a latched floor: a full heal triggers it, and so does whatever content
+/// stands a body up, the station's bed and autoinjector
+/// </summary>
+public readonly partial record struct LiftCrit(EntityUid Entity) : ITriggerEvent;
+
+/// <summary>
+/// Field care's hold on a downed body: the dying tick waits while it stands, any blow removes it
+/// </summary>
+public sealed partial record Stabilised : IEngineComponent, IReadable, IInsertable, ISpawnable;
 
 /// <summary>
 /// Server-authoritative facing of any entity that can be oriented.
@@ -494,6 +530,15 @@ public enum Hand
 /// slots land when the inventory system arrives.
 /// </summary>
 public sealed partial record Hands(Hand Active) : IEngineComponent, IReadable;
+
+/// <summary>
+/// A held [`Applicable`] item was used on `entity` by `user`, the gates passed:
+/// a tangible living body within reach, the item in the user's active hand
+/// </summary>
+public readonly partial record struct Applied(EntityUid Entity, EntityUid Item, EntityUid User) : IEngineEvent, IDirectedEvent
+{
+    EntityUid IDirectedEvent.Target => Entity;
+}
 
 /// <summary>
 /// Marker for a map entity. The map is the parent of every `Tile` entity

@@ -2,6 +2,12 @@
 
 One entry per publish, newest first, naming the engine commits that touched the surface, the template or the docs.
 
+## 2026-10-22, engine 3bed962b
+
+- Field care: a held Applicable item offers its verb on a living body in reach and Applied is the module's to answer, a module starts and cancels windups with DoAfterFinished observable on them, HealDamage takes a bandage's worth off the ledgers by kind and keeps the part ledgers in step, popups and a body's ledger are host calls, and a hold on a standing body is dropped
+- Crit latches on a body whose thresholds say so: Critical holds until LiftCrit, the dying tick runs under the bar, Stabilised holds it and a blow undoes it, a lift clamps the ledger under the bar, Critical, Stabilised and LiftCrit join the mod surface, and the station mode moves into its pack with a crew body that latches
+
+
 ## 2026-10-22, engine df7beaf7
 
 - The meteor shower moves to the station pack as C#: ChooseTarget, EventStrikes and EventTarget join the mod surface, the host gains area-of, standing-floor and throw-from-space, the rock keeps its sound on RamsThrough, and the content pin takes the pack
