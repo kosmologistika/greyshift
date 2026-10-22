@@ -23,6 +23,14 @@ interface typed-ecs {
         id: u64,
     }
 
+    /// Where a targeted event will land, fixed before the announcement so the
+    /// warning stays true when it strikes. The behaviour answering `ChooseTarget`
+    /// writes it, a pack's module included
+    record event-target {
+        area: entity,
+        name: string,
+    }
+
     /// Reference to a state inside an `.rsi/` folder. `rsi` is the
     /// extension-less path to the folder relative to the asset root (e.g.
     /// `"textures/structures/walls/solid"` → resolves to
@@ -390,6 +398,25 @@ interface typed-ecs {
         pos: i-vec2,
     }
 
+    /// A flyer that goes through what it hits: every structure on a struck tile
+    /// takes `damage`, the flight carries on, and each strike spends one of
+    /// `hits`. Running dry ends the flight where it is, which for a meteor is
+    /// the blast. Pairs with a `FlightRules` that stops at nothing
+    record rams-through {
+        damage: list<tuple<damage-type, u32>>,
+        hits: u32,
+    }
+
+    /// Human-readable name shown to players (context menu, examine, logs).
+    /// Prototype-declared; absent on entities that have no friendly name.
+    /// The richer Identity layer (disguises, "unknown" faces, grammar) is deferred.
+    record display-name {
+        name: string,
+        /// Locale key of the description examine prints first, authored per
+        /// prototype as they earn one
+        desc: option<string>,
+    }
+
     /// Money moved, the offer still standing; what handing over `product` means
     /// is the observer's call (a body owed it, an item in hand, a skill granted)
     record purchased {
@@ -472,6 +499,17 @@ interface typed-ecs {
         container: entity,
     }
 
+    /// Fired on an event entity whose `Event.targeted` is set, before the
+    /// announcement. The behaviour answers with `EventTarget` or a despawn
+    record choose-target {
+        entity: entity,
+    }
+
+    /// The lead has run out. Behaviours observe this, never `RuleStarted`
+    record event-strikes {
+        entity: entity,
+    }
+
     /// Fires on the item as it goes off, in a hand, on the floor or mid-flight
     record triggered {
         entity: entity,
@@ -486,6 +524,7 @@ interface typed-ecs {
         replicated,
         participant,
         player-record,
+        event-target,
         appearance,
         burn-out,
         dead,
@@ -500,8 +539,10 @@ interface typed-ecs {
         hands,
         %map,
         tile-pos,
+        rams-through,
         mob,
         movable,
+        display-name,
         controlled-by,
         session-player,
         role,
@@ -523,6 +564,8 @@ interface typed-ecs {
         scope-ending,
         purchased,
         shop-done,
+        choose-target,
+        event-strikes,
         triggered,
     }
 
@@ -547,6 +590,10 @@ interface typed-ecs {
         /// login, and the round cycling back to the lobby clears it for everyone.
         /// `connection` is the connection entity the player is online through.
         player-record(player-record),
+        /// Where a targeted event will land, fixed before the announcement so the
+        /// warning stays true when it strikes. The behaviour answering `ChooseTarget`
+        /// writes it, a pack's module included
+        event-target(event-target),
         /// What an entity is supposed to look like: a base sprite, a draw depth, and
         /// the layers over it. Carried across the wire so the client and the editor
         /// compose sprites the same way; the server itself never renders.
@@ -623,6 +670,11 @@ interface typed-ecs {
         /// entity ref so multiple maps (lavaland, centcom, the station) can coexist
         /// without coordinate collisions.
         tile-pos(tile-pos),
+        /// A flyer that goes through what it hits: every structure on a struck tile
+        /// takes `damage`, the flight carries on, and each strike spends one of
+        /// `hits`. Running dry ends the flight where it is, which for a meteor is
+        /// the blast. Pairs with a `FlightRules` that stops at nothing
+        rams-through(rams-through),
         /// Marks an entity as a mob - the in-world body that can move, be pushed,
         /// occupy tiles, etc.
         mob,
@@ -632,6 +684,10 @@ interface typed-ecs {
         /// entity has an orientation, and the movement applier writes it on
         /// each successful step.
         movable,
+        /// Human-readable name shown to players (context menu, examine, logs).
+        /// Prototype-declared; absent on entities that have no friendly name.
+        /// The richer Identity layer (disguises, "unknown" faces, grammar) is deferred.
+        display-name(display-name),
         /// Marks a controllable entity (a mob, ghost, etc.) as controlled by a
         /// particular player identified by their stable [`PlayerId`].
         /// 
@@ -710,6 +766,11 @@ interface typed-ecs {
         /// The shopper is finished with the offer, which comes down right after this
         /// fires; a mode closing a shelf itself goes through the same `close_offer`
         shop-done(shop-done),
+        /// Fired on an event entity whose `Event.targeted` is set, before the
+        /// announcement. The behaviour answers with `EventTarget` or a despawn
+        choose-target(choose-target),
+        /// The lead has run out. Behaviours observe this, never `RuleStarted`
+        event-strikes(event-strikes),
         /// Fires on the item as it goes off, in a hand, on the floor or mid-flight
         triggered(triggered),
     }
@@ -780,6 +841,15 @@ interface typed-ecs {
 
     /// Puts an entity into flight from `from` along `angle` (radians) for `range` tiles
     launch-ray: func(entity: entity, origin: tile-pos, angle: f32, range: f32, speed: f32, launcher: entity, rules: flight-rules);
+
+    /// The area a tile belongs to, `none` off every room
+    area-of: func(at: tile-pos) -> option<entity>;
+
+    /// The cells of an area with hull still standing on them: floor to aim at, empty for a room blown open
+    standing-floor: func(area: entity) -> list<i-vec2>;
+
+    /// Spawns a prototype in space past the hull along a rolled bearing and flies it at `target`; `none` when no bearing is clear or no prototype has that id
+    throw-from-space: func(%map: entity, target: i-vec2, kind: string, seed: u64) -> option<entity>;
 
     /// A sound at a tile, by its asset path
     play-sound: func(path: string, at: tile-pos);
