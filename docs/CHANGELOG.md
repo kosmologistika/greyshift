@@ -2,6 +2,11 @@
 
 One entry per publish, newest first, naming the engine commits that touched the surface, the template or the docs.
 
+## 2026-10-22, engine e6485cc5
+
+- published from engine e6485cc592fee4b5af9e0de06dad80f46cd809c8
+
+
 ## 2026-10-22, engine 19cbc502
 
 - The host keeps the rs13:mods interface the modules import, the fixtures and the template carry pack.ron, the nuget cache mounts where the SDK image looks, package stays a WIT keyword, the design index links packs.md, and the cache fallback cannot land in the source tree

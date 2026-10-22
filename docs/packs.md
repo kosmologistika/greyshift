@@ -185,7 +185,10 @@ a hash: the shape itself is what gets compared.
 
 A marker's `fields` holds on the host too: a read hands a module only the kept fields, in
 declaration order, and a filtered type cannot carry `insert` or `mutate`, since a module could
-never write a whole value.
+never write a whole value. A marker with no grant at all is not on the surface: it only narrows
+the fields a type shows where another type reaches it (`ScopeOutcome` inside `EndScope` keeps
+its headline and places, not the engine's own story lines), and a value a module sends back
+fills such a field with its default.
 
 ### Writing a C# module
 
