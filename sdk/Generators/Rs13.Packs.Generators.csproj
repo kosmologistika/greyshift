@@ -8,7 +8,7 @@
     <EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>
     <IncludeBuildOutput>false</IncludeBuildOutput>
     <NoWarn>RS2008</NoWarn>
-    <!-- mod-build puts obj under target/, so a stray in-place build's obj must not compile in -->
+    <!-- pack-build puts obj under target/, so a stray in-place build's obj must not compile in -->
     <DefaultItemExcludes>$(DefaultItemExcludes);obj/**;bin/**</DefaultItemExcludes>
   </PropertyGroup>
 

@@ -13,7 +13,7 @@ instead of two half-kept ones.
 ## The rule
 
 A module is a C# project built with componentize-dotnet against the
-`Rs13.Mods` SDK, written as `EntitySystem`s (ADR 0018). `mods/sdk/wit/typed.wit` is the one world, generated from
+`Rs13.Packs` SDK, written as `EntitySystem`s (ADR 0018). `packs/sdk/wit/typed.wit` is the one world, generated from
 the marked types and committed; every value crosses as a WIT record, variant
 or enum, and the bindings carry them as plain structs. A module's own values
 cross as JSON through System.Text.Json contexts the SDK writes at build from
@@ -21,7 +21,7 @@ the attributes on the module's types, since reflection serialization has no
 native code under NativeAOT. A component that does not
 import the typed world is refused at load.
 
-The engine's own packages are written in C# too: Blood Money is the reference
+The engine's own packs are written in C# too: Blood Money is the reference
 module, and a first-party mode gets no shortcut an outside author lacks.
 Rust stays the language of the engine.
 

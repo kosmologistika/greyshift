@@ -1,7 +1,7 @@
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace Rs13.Mods;
+namespace Rs13.Packs;
 
 /// <summary>
 /// A <see cref="TimeSpan"/> in an own value is serde's <c>Duration</c> on the

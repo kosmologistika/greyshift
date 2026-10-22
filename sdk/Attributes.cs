@@ -1,4 +1,4 @@
-namespace Rs13.Mods;
+namespace Rs13.Packs;
 
 /// <summary>
 /// A component of the module's own, registered at build by the SDK generator
@@ -21,7 +21,7 @@ public sealed class RegisterResourceAttribute : Attribute;
 public sealed class NetSerializableAttribute : Attribute;
 
 /// <summary>
-/// Another package's public type, mirrored by hand under the path its package
+/// Another pack's public type, mirrored by hand under the path its pack
 /// declared. Read-only, and read leniently: a key the mirror lacks is skipped
 /// </summary>
 [AttributeUsage(AttributeTargets.Class)]

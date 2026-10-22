@@ -7,7 +7,7 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Text.Json.Serialization.Metadata;
 
-namespace Rs13.Mods;
+namespace Rs13.Packs;
 
 /// <summary>
 /// The entity this one is a child of. Despawning the parent despawns it

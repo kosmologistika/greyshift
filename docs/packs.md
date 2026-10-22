@@ -1,17 +1,18 @@
-# `mods` plugin
+# packs and modules
 
-The server runs wasm components and lets them observe, read and write the world through a small
-host interface (#324). The decisions behind it are ADRs 0012 to 0018 under `docs/adr/`. Blood Money is the first mode to live there, whole: its rules, its
-prototype-named components, its prototypes, maps and weapons are the `assets/mods/blood_money`
-package, built from the C# project in its `src/`; the engine keeps only the slot machine the
-client draws (#331, the UI API is #334). The suite's fixture package is a link to it.
+A pack is a directory of content a server runs and a client fetches before joining: prototypes,
+maps, locales, art, and a C# project whose module the server runs. The server runs those wasm
+modules and lets them observe, read and write the world through a small host interface (#324). The decisions behind it are ADRs 0012 to 0018 under `docs/adr/`. Blood Money is the first mode to live there, whole: its rules, its
+prototype-named components, its prototypes, maps and weapons are the `assets/packs/blood_money`
+pack, built from the C# project at its root; the engine keeps only the slot machine the
+client draws (#331, the UI API is #334). The suite's fixture pack is a link to it.
 
 ## The boundary
 
-`mods/sdk/wit/typed.wit` is the whole contract, generated from the marked types and committed, and
+`packs/sdk/wit/typed.wit` is the whole contract, generated from the marked types and committed, and
 it lives beside the C# SDK because both are what a module author gets. The guest exports `setup`,
 `dispatch` (an engine event), `dispatch-timer` (a scheduled handler by name) and `dispatch-client`
-(a client's mod event with the sender); the host gives it `observe`, `query`, `get`, `insert`,
+(a client's module event with the sender); the host gives it `observe`, `query`, `get`, `insert`,
 `mutate`, `spawn`, `trigger`, the own-value calls, `schedule`, `now` and `log`. Engine values cross
 as the WIT records the file declares, a module's own values as JSON bytes, so the host never knows
 a guest type and the guest never links bevy. An entity is its `to_bits` number on both sides, the
@@ -37,7 +38,7 @@ a component the entity already holds; write access stays narrower than read acce
 through the intent event, not through `TilePos`.
 
 Marked types are exactly what the shipped modules touch, added as a port needs them. The suite pins
-the list, and the SDK generator writes it out as `mods/sdk/surface.md` beside the SDK.
+the list, and the SDK generator writes it out as `packs/sdk/surface.md` beside the SDK.
 
 ## Observers run inside the trigger
 
@@ -75,24 +76,24 @@ takes every one of them back, so a handler that fails halfway leaves nothing beh
 the call see its own pending writes, so a handler reads back what it wrote.
 
 A call runs under three limits: a fuel budget (`FUEL_PER_CALL`, guest instructions), an epoch
-deadline (`mods.call_deadline_ms` of wall time, ticked every 10 ms by a host thread, so a sleep or
+deadline (`packs.call_deadline_ms` of wall time, ticked every 10 ms by a host thread, so a sleep or
 a host-side loop ends too), and a memory cap on the instance (`MEMORY_CAP`). Running out of any is a trap like a panic.
 The host's own call into the guest is wrapped so a host-side panic counts as a trap as well, and
 the server never goes down because of a module.
 
 A trap is logged with the module and the event, and the module comes back as a fresh instance
 with its `setup` re-run. The third trap inside a minute unloads it instead, with a line in the
-log and a system line in chat. A hot reload is the same path: `mods.modules` names the files, a
-changed one is re-instantiated on the next frame, and `mods reload <name>` in the console asks
+log and a system line in chat. A hot reload is the same path: `packs.modules` names the files, a
+changed one is re-instantiated on the next frame, and `modules reload <name>` in the console asks
 for that by hand. Nothing on entities is touched by either.
 
-`mods` in the console lists each module with its traps in the window and, per event since load,
-calls, average wall time and average fuel, so an operator sees what a mod costs on a live server
+`modules` in the console lists each module with its traps in the window and, per event since load,
+calls, average wall time and average fuel, so an operator sees what a module costs on a live server
 with no extra tooling.
 
 ## One world, typed
 
-C# is the mod language, the only one (#324 as amended on 2026-10-09). `mods/sdk/wit/typed.wit` is
+C# is the module language, the only one (#324 as amended on 2026-10-09). `packs/sdk/wit/typed.wit` is
 the one world a module binds, `typed-module`: every value is a WIT record, variant or enum the file
 declares, and the generated C# bindings carry them as plain structs. A component that does not
 import `typed-ecs` is refused at load. There was a bytes world for a Rust SDK during the tracer
@@ -100,7 +101,7 @@ slices; it went with #344, so one SDK gets the attention.
 
 The host functions are dynamic (`wasmtime::component::Linker::func_new`), converting each
 reflected value by the type the component declared for it, with fields matched by name, kebab-case
-for snake_case, a newtype as its inner type, a unit struct as a payload-less case. `mods/vals.rs` is
+for snake_case, a newtype as its inner type, a unit struct as a payload-less case. `packs/vals.rs` is
 that converter and it names no engine type: #327 generates the WIT, the host needs no change per type.
 A `component` variant with one case per engine type is how a query row or an insert names its type,
 and `component-kind` and `event-kind` enums name a type the same way for `observe`, `query` and
@@ -118,13 +119,13 @@ host-side stalls, which cost no fuel. A call that holds the server past one fram
 its cost, once per module per trap window, since under the cap nothing else would say so.
 
 C# modules build with componentize-dotnet, whose NativeAOT-LLVM compiler has no macOS build, so a Mac
-goes through a linux/amd64 container (`mod-build` does this). CI's image carries the .NET SDK and the
+goes through a linux/amd64 container (`pack-build` does this). CI's image carries the .NET SDK and the
 wasi-sdk, so the pipeline builds the C# modules before the suite and their tests run there; locally
 they skip while the module is absent.
 
 ## Replication through a fixed pool
 
-A stock client knows nothing about a server's mods, so no mod type can be a replicated component
+A stock client knows nothing about a server's modules, so no module type can be a replicated component
 of its own: the replicon protocol is hashed from the registered types, and a mismatch refuses the
 connection. Instead the engine registers a fixed pool, `ModSlot<0>` to `ModSlot<127>`, each an
 ordinary replicated component holding opaque bytes. A module that wants an own component on
@@ -132,7 +133,7 @@ clients marks it `[RegisterComponent, NetworkedComponent]`, the host hands it a
 slot of the pool, and every write to that component
 rides its slot to every client that sees the entity. `ModSlotTable`, a component on one replicated
 entity the server spawns, says which (module, type) each slot carries, so a native client system can
-find a mod's bytes. It is an entity rather than a replicated resource because a reconnecting client
+find a module's bytes. It is an entity rather than a replicated resource because a reconnecting client
 still holds its resources, and replicon refuses to replicate one that already exists.
 
 A slot is a component like any other, so PVS, late join, change detection and replays apply
@@ -155,18 +156,18 @@ sender's connection entity, inside a budget of twenty a second per connection.
 `crates/server/src/mods/sdk.rs` walks the marked registry of a finished server and writes four
 files, all committed:
 
-- `mods/sdk/wit/typed.wit`: a record, enum or variant per marked type and everything they reach,
+- `packs/sdk/wit/typed.wit`: a record, enum or variant per marked type and everything they reach,
   the `component`, `event` and `trigger-event` variants with one case per type, and the
   `component-kind` and `event-kind` enums. Doc comments come through `reflect_documentation`, or
   the marker's `doc` override. A marker's `fields` keeps a struct to the named fields, which is how
   `PlayerRecord` exposes two of its five
-- `mods/sdk-cs/Engine.g.cs`: what an author writes against. A record per marked type with its doc,
+- `packs/sdk-cs/Engine.g.cs`: what an author writes against. A record per marked type with its doc,
   typed ids (`EntityUid`, `PlayerId`) in place of bare integers, and a marker interface per grant,
   so `AddComp<Wallet>` on a type that grants no `insert` does not compile
-- `mods/sdk-cs/Engine.Wit.g.cs`: the glue between those records and the bindings
+- `packs/sdk-cs/Engine.Wit.g.cs`: the glue between those records and the bindings
   componentize-dotnet makes from the WIT: the conversions both ways and each type's kind and
   case, lifecycle edges included
-- `mods/sdk/surface.md`: the same list as a table of path, grants and doc, for a reader rather
+- `packs/sdk/surface.md`: the same list as a table of path, grants and doc, for a reader rather
   than a compiler
 
 `cargo test -p tests --test suite -- --ignored generate_mod_sdk` regenerates them, and
@@ -188,15 +189,15 @@ never write a whole value.
 
 ### Writing a C# module
 
-`Rs13.Mods` compiles into the mod project as sources (`mods/sdk-cs/Rs13.Mods.props`), with the
-SDK generator (`mods/sdk-cs/Generators`, built by `mod-build` into `target/mod-sdk`) writing the
+`Rs13.Packs` compiles into the pack project as sources (`packs/sdk-cs/Rs13.Packs.props`), with the
+SDK generator (`packs/sdk-cs/Generators`, built by `pack-build` into `target/pack-sdk`) writing the
 module's registrations from the attributes on its types. The props find the WIT and the generator
-wherever the SDK sits: `mod-build` hands both in, and a copy of the SDK directory with the WIT
+wherever the SDK sits: `pack-build` hands both in, and a copy of the SDK directory with the WIT
 under `wit/` builds the generator itself the first time, which is how the published SDK works. There is no entry point to write: a
 module is its `EntitySystem` subclasses and the types they keep, shaped as Robust's (ADR 0018).
 
 ```csharp
-using Rs13.Mods;
+using Rs13.Packs;
 
 namespace BloodMoney;
 
@@ -237,7 +238,7 @@ public sealed partial class BestOfRuleSystem : GameRuleSystem<BestOfRuleComponen
 
 **Own types.** `[RegisterComponent] partial class XComponent : Component` (plus
 `[NetworkedComponent]` for a slot), `[RegisterResource]` for a singleton, `[NetSerializable]`
-for a client event and `[MirrorComponent("bench_probe::Landed")]` for another package's public
+for a client event and `[MirrorComponent("bench_probe::Landed")]` for another pack's public
 type under its path. Stored members are public, settable and marked `[DataField]`. They are
 JSON on every side, through a `JsonSerializerContext` the props write before compile from the
 same attributes: keys are the members' names in snake_case, enums are their names, a `TimeSpan`
@@ -300,54 +301,63 @@ seeded roll.
 partial or holds state, a `[Dependency]` the generator cannot fill, an own type that is not
 partial or that a store cannot round-trip, two types on one path, an edge subscription the host
 does not relay (`RS13010`), and as a warning a world call from `Initialize` or an override that
-skips a base system's `Initialize` (`RS13008`). `mods/sdk-cs/Generators.Tests` pins each one, and
-`mod-build` runs those tests before it compiles a module.
+skips a base system's `Initialize` (`RS13008`). `packs/sdk-cs/Generators.Tests` pins each one, and
+`pack-build` runs those tests before it compiles a module.
 
-`mods/bench_probe/Module.cs` is the shape whole, `mods/fault_probe/Module.cs` a mirror and
-resources, `mods/template` the smallest package that runs (one rule, one own component, a
-prototype and a locale line, with the author kit in its README), and Blood Money's `src/` a whole
+`packs/bench_probe/Module.cs` is the shape whole, `packs/fault_probe/Module.cs` a mirror and
+resources, `packs/template` the smallest pack that runs (one rule, one own component, a
+prototype and a locale line, with the author kit in its README), and Blood Money's pack a whole
 mode: four `GameRuleSystem`s, a cart, loadout, death cam and stranded-ghost system ordered by
 `UpdatesAfter`, and a `WalletSystem` the others take as a `[Dependency]`.
 
-## Packages
+## Packs
 
-A mod ships as a directory under `assets/mods/` (`tests/packages/` for the suite), reachable
-from asset paths as `mods://<id>/...`. `assets/` is the public content repository
-(`github.com/kosmologistika/greyshift`), so a package's source lives beside its data:
+A pack is a directory under `assets/packs/` (`tests/packs/` for the suite), reachable
+from asset paths as `packs://<id>/...`. `assets/` is the public content repository
+(`github.com/kosmologistika/greyshift`), and a pack is its C# project: the csproj and the
+sources at the root, the data they refer to beside them, so an IDE shows the whole pack as one
+project:
 
 ```
-assets/mods/blood_money/
-    mod.ron           the manifest
-    server.wasm       the module, loaded by the server only, built by mod-build and never committed
-    src/              the C# project the module is built from; a release ships without it
-    prototypes/       RON files the prototype loader layers over the base game
+assets/packs/blood_money/
+    blood_money.csproj  the project the module is built from; a release ships without it
+    *.cs                the systems and their own types
+    pack.ron             the manifest
+    server.wasm         the module, loaded by the server only, built by pack-build and never committed
+    prototypes/         RON files the prototype loader layers over the base game
+    maps/               the mode's maps
 ```
 
-`mod.ron` names the package and what it brings:
+What the project is made of is never an asset: `shared::mods::pack::is_project_file` (`*.cs`,
+`*.csproj`, `nuget.config`, the IDE's `*.user`, `*.sln`) with `is_project_dir` (`bin/`, `obj/`,
+`Properties/` at the pack root only, so a data directory of that name deeper down is data) is
+the one rule the overlay, the pack sync, the release archives and the server image share.
+
+`pack.ron` names the pack and what it brings:
 
 ```ron
 (
     id: "blood_money",
     version: "0.1.0",
-    dependencies: { "probe": ">=0.1" },   // semver requirements on other packages
+    dependencies: { "probe": ">=0.1" },   // semver requirements on other packs
     after: ["probe"],                     // load order without a hard dependency
     components: ["blood_money::Series"],      // own types a prototype may name
     public: ["blood_money::Series"],          // own types other modules may read
-    overrides: ["tool_crowbar"],          // base prototype ids this package replaces
+    overrides: ["tool_crowbar"],          // base prototype ids this pack replaces
 )
 ```
 
-`PackagesPlugin` reads every manifest at build, checks dependencies and orders the set: by
+`PacksPlugin` reads every manifest at build, checks dependencies and orders the set: by
 dependencies and `after`, by id where nothing else decides. The id must be the directory name,
-since `mods://<id>/...` is the asset path. A missing or incompatible dependency, a cycle, or an
+since `packs://<id>/...` is the asset path. A missing or incompatible dependency, a cycle, or an
 id that is not its directory refuses the whole set, the server exits with the reason and the
-client and editor log it and run without packages. `after` only orders: one naming a package
-that is not installed is skipped. Modules load in package order before anything in
-`mods.modules`, so a package's observers run in that order; `mods.packages false` turns them
+client and editor log it and run without packs. `after` only orders: one naming a pack
+that is not installed is skipped. Modules load in pack order before anything in
+`packs.modules`, so a pack's observers run in that order; `packs.enabled false` turns them
 off for a test that brings its own module file.
 
-Prototypes layer: the base game is layer 0, each package the next one up. A prototype id that
-appears on two layers is a clash unless the upper package lists it in `overrides`, so a pack
+Prototypes layer: the base game is layer 0, each pack the next one up. A prototype id that
+appears on two layers is a clash unless the upper pack lists it in `overrides`, so a pack
 cannot replace an item by accident; a declared override wins and the base one is gone. A
 component named in `components` has no Rust type on either side: the loader turns its RON body
 into the JSON serde would write for the same Rust value (`Fire` to `"Fire"`, `Thrust(len: 1)`
@@ -355,57 +365,87 @@ to `{"Thrust": {"len": 1}}`, `Some(1)` to `1`), spawning puts it into `ModCompon
 path, and the module reads it like any own value it wrote itself. That works because a module's
 own values are JSON on every side, written by the module's own `JsonSerializerContext` with
 snake_case names and string enums. A type in `public` is readable by every module, `components` of
-the reader or not, once the package's own module has registered it (a manifest cannot publish
+the reader or not, once the pack's own module has registered it (a manifest cannot publish
 what another module owns), and the reader mirrors its layout by hand. Both lists are promises
 about the module: once its setup has run, a path in `components` or `public` it never registered
 refuses the load naming every missing one (`ModHost::load_error`), so a misspelled `XComponent`
-path is reported at load rather than sitting unread mid-round. The package's prototypes still
+path is reported at load rather than sitting unread mid-round. The pack's prototypes still
 load and author the path, since manifests are read at build; the refusal is the signal.
 
-Everything else in a package is an asset like the base game's. The default asset source reads
-through the packages onto `assets/`, upper layer first, so a pack's prototype names its sprite
+Everything else in a pack is an asset like the base game's. The default asset source reads
+through the packs onto `assets/`, upper layer first, so a pack's prototype names its sprite
 or sound by a bare path (`textures/objects/tools/my_tool`, `audio/items/my_tool.ogg`) and the
 file is found inside the pack, and a folder the engine scans (`locales/`) lists what every layer
 holds, so a pack's `locales/en-US/*.ftl` joins the catalog. A map is a `MapPrototype` under the
 pack's `prototypes/maps/` whose file sits under its `maps/`. A file at a path the base game or a
-lower package also has replaces it, and must be declared in `overrides` like a prototype id,
+lower pack also has replaces it, and must be declared in `overrides` like a prototype id,
 exactly or by glob (`audio/items/*.ogg`, `textures/**/icon.png`); an undeclared shadow refuses
-the set naming the file. `mods://<id>/...` still reaches a package directly. A package's
-`prototypes/`, `mod.ron` and `.wasm` are not served through the overlay.
+the set naming the file. `packs://<id>/...` still reaches a pack directly. A pack's
+`prototypes/`, `pack.ron` and `.wasm` are not served through the overlay.
 
-A client gets a package's data with the rest of the assets and never its module: the release
+A client gets a pack's data with the rest of the assets and never its module: the release
 archive drops the `.wasm` files and keeps the directories.
 
-## Building a module
+### Pack sync
 
-```
-cargo run -p mod-build
-```
+A stock client joining a server that runs a pack it does not carry fetches it before it logs
+in, the fastdl shape. At boot the server hashes each pack's client-side files (everything but
+`server.wasm` and what its project is made of, in sorted order with their paths,
+`shared::mods::sync::hash_pack`)
+and, when `packs.archive_dir` is set, writes `<id>-<hash>.tar.gz` of those files there for a static
+host to serve, beside its name and renamed in so a boot cut short leaves no half archive. The
+moment a client connects, before any login, the server sends it a `PackManifest` (an
+independent replicon event, so it reaches an unauthorized client): the server's protocol hash,
+then per pack id, version, hash, size and, when `packs.download_url` is set, the tarball's URL,
+in load order. A client of another build is refused on the protocol before anything is fetched,
+with the mismatch reason it would have had from the login.
 
-builds each C# project under `mods/` with componentize-dotnet (through a linux/amd64 container
-on a Mac, `dotnet build` on Linux) and writes the component as `server.wasm` into its package
-directory, into the suite's fixture package, and as a bare file under `bench/mods/` for the
-benches. The binaries are gitignored: the CI image carries the .NET SDK and the wasi-sdk, the
-test and release jobs run this before anything loads a module, the worktree warmup and `dev.sh`
-do the same locally. The Linux release job builds them beside the server and strips them out of
-the client archive. `mods/bench_probe` and `mods/fault_probe` are the suite's and the benches'
-probes, C# like everything else.
+The client checks each entry's id and hash before a path is built from them, compares against the
+packs it carried under `assets/packs` at boot (kept in `CarriedPacks`, since a synced set
+replaces `Packs`) and against its cache (`<data dir>/packs/<id>-<hash>/`, or
+`packs.cache_dir`, made absolute), hashing a cache hit again so a copy cut short is fetched over,
+and fetches the rest on a thread of its own, one tarball at a time: a pack past
+`packs.cap_mib` is refused before the request, the archive unpacks into a directory of
+that attempt's own, bounded by the declared size, is hashed with the same function the server used
+and moved under its name only when it matches, keeping a verified copy that got there first. A
+disconnect sets a flag the thread checks between steps. Every fetch of a join shares
+`packs.sync_timeout_secs`; while the sync runs the client is in `JoinState::FetchingPacks`, the
+join watchdog is not armed, and the server adds its own `packs.sync_timeout_secs` to the login
+deadline of a connection while it offers downloads. A pack the client lacks that the server
+offers no URL for, a mismatch, a cap or a timeout refuses the join with the pack named, and the
+connection screen says so (`connect-reason-pack-sync`).
 
-### The published SDK
+With the set in place the client replaces its `Packs` with the server's, in the server's
+order, swaps the asset layers (`shared::asset::PackLayers`, which the overlay reader and the
+`packs://` source read through on every call, so a cached pack serves from the cache directory
+like a shipped one), refreshes the prototype-named components, and runs the prototype folders
+again as a diffed reload (`RelayerPrototypes`, which fires `PrototypesReloaded` and not
+`PrototypesLoaded`, so the screen flow stays where it is). bevy hands a loaded folder back by
+path, so a pack folder is asked for as `packs://<id>~<generation>/prototypes` with the layer
+set's generation once a swap has happened (the first set keeps the bare path the file watcher
+reports), and a swapped set is a new path to it. A pack's `locales/` are its own the same way,
+not served through the overlay: the locale plugin loads the base game's folder plus one
+`packs://<id>~<generation>/locales` per pack that brings any, pack files overriding the
+base game's, and asks for them again on `PacksSynced`. The manifest is the first replicon
+message the shared plugin registers, so its channel is the same in every build and the protocol
+check in it reaches a client of another build. Only then
+does `LoginRequest` go out: the login is an observer of `PacksSynced`, not of the transport
+connecting. A client that already carries everything the server runs syncs in one tick and
+fetches nothing; base assets never sync, a client still ships `assets/`.
 
-An author needs no engine checkout: `utils/publish-sdk.sh` lays the SDK into the content
-repository (`github.com/kosmologistika/greyshift`) as `sdk/` (the `Rs13.Mods` sources, the
-props, `wit/typed.wit` and the `Generators` project), `template/` (`mods/template`) and `docs/`
-(this document, the mod ADRs, `surface.md` and a changelog with one entry per publish listing
-the engine commits that touched the surface), and commits them under the engine commit in
-`sdk/ENGINE_COMMIT`. The `publish:sdk` CI job runs it on every push to main that touched those
-paths and pushes with `GREYSHIFT_TOKEN`; the three directories are owned by that job, and a
-commit made to them in the content repository is overwritten by the next publish. A package
-there imports `sdk/Rs13.Mods.props` from the repository root, and the content repository's own
-CI builds every `mods/*/src` project and the template on each push, so a package that uses a type
-the engine does not grant fails there with the type named. There is no SDK version: a module is
-built against the engine commit the content repository carries, and the host's per-type shape
-check at load is what tells a stale build apart.
+A sync also prunes the cache: of a pack the server runs only the version in use stays, and
+what other servers left is trimmed to `packs.cache_cap_mib` least recently used first, a `.used`
+marker's mtime being the clock. A client holds a shared lock on a `.lease` file in every cache
+directory it runs on, and a prune takes the exclusive lock before deleting, so two clients
+sharing the default cache prune around each other; an attempt directory nobody finished goes
+once it is older than a sync timeout. The archives themselves are immutable and named by hash, so
+any static host or CDN in front of `packs.download_url` may cache them forever.
+
+Textures and sounds a fetched pack brings load lazily through the swapped layers. An asset
+the client already loaded under the same path keeps the loaded copy until it is reloaded: a
+pack overriding a base file, or a new version of a pack whose sprites the client drew
+before (the render crate retains every icon-resolved RSI). That is the one place this falls short
+of a restart; a version change is served whole on the next launch.
 
 ## Measuring a module
 
@@ -418,11 +458,11 @@ cargo bench -p bench --bench mod_relay --bench mod_load --bench mod_tick --bench
 `mod_tick` is the per-tick and per-row side: a timer dispatch with and without a resource write,
 a whole server tick with Blood Money against the base game, a four-wide scan, own rows read and
 written back, a per-row `HasComp` through an `EntityQuery` and through the host, and eight systems
-of one module on one event. Every row loads `mods/bench_probe`, so a new shape is a knob value on
+of one module on one event. Every row loads `packs/bench_probe`, so a new shape is a knob value on
 its `ProbeSystem` and an entity in `bench/src/lib.rs` that carries it.
 
 Each bench prints the fuel its calls burnt beside criterion's time, from the same counters the
-`mods` console shows, so a guest that got slower in instructions is told apart from a host that
+`modules` console shows, so a guest that got slower in instructions is told apart from a host that
 got slower in wall time. A bench whose body dispatches more than one path, a whole tick, prints
 each path's fuel under the total, so the timer that grew is named. A module that traps is restarted by the host, and the third trap unloads
 it, so every bench makes one untimed call first and fails on a trap, or on a call no loaded module

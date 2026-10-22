@@ -15,9 +15,11 @@
     <AssemblyName>template</AssemblyName>
     <!-- the NativeAOT-LLVM compiler package is per build host -->
     <IlcLlvmRid Condition="'$(IlcLlvmRid)' == ''">linux-x64</IlcLlvmRid>
-    <!-- the published SDK: three levels up from a package under mods/, two from the template itself -->
-    <SdkCs Condition="'$(SdkCs)' == '' and Exists('../../../sdk/Rs13.Packs.props')">../../../sdk</SdkCs>
-    <SdkCs Condition="'$(SdkCs)' == ''">../../sdk</SdkCs>
+    <!-- the package's data sits beside the sources and shows in the project; the module built here is not a source -->
+    <DefaultItemExcludes>$(DefaultItemExcludes);server.wasm</DefaultItemExcludes>
+    <!-- the published SDK: two levels up from a package under packs/, one from the template itself -->
+    <SdkCs Condition="'$(SdkCs)' == '' and Exists('../../sdk/Rs13.Packs.props')">../../sdk</SdkCs>
+    <SdkCs Condition="'$(SdkCs)' == ''">../sdk</SdkCs>
   </PropertyGroup>
 
   <ItemGroup>

@@ -3,7 +3,7 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Wit = TypedModuleWorld.wit.Imports.rs13.mods.v0_1_0.ITypedEcsImports;
 
-namespace Rs13.Mods;
+namespace Rs13.Packs;
 
 /// <summary>
 /// What <c>ModEntry.Build</c> fills: the module's own types and its systems.
@@ -17,7 +17,7 @@ public sealed class ModBuilder
     /// <summary>The strict context the props write for the module's own types</summary>
     public JsonSerializerContext? Json { get; set; }
 
-    /// <summary>The lenient context for mirrors of other packages' types</summary>
+    /// <summary>The lenient context for mirrors of other packs' types</summary>
     public JsonSerializerContext? Mirrors { get; set; }
 
     public void Component<T>(string path, bool networked) where T : class
@@ -457,10 +457,10 @@ static class ModRuntime
         var state = Wit.RoundState();
         return state switch
         {
-            "PreRoundLobby" => Mods.RoundState.PreRoundLobby,
-            "RoundStarting" => Mods.RoundState.RoundStarting,
-            "InRound" => Mods.RoundState.InRound,
-            "PostRound" => Mods.RoundState.PostRound,
+            "PreRoundLobby" => Packs.RoundState.PreRoundLobby,
+            "RoundStarting" => Packs.RoundState.RoundStarting,
+            "InRound" => Packs.RoundState.InRound,
+            "PostRound" => Packs.RoundState.PostRound,
             _ => throw new InvalidOperationException($"the host names a round state the SDK does not know: {state}"),
         };
     }

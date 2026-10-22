@@ -2,7 +2,7 @@ using System.Globalization;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace Rs13.Mods;
+namespace Rs13.Packs;
 
 /// <summary>
 /// An entity as the host names it, the bits every own value and slot carries.

@@ -2,7 +2,7 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Text.Json.Serialization.Metadata;
 
-namespace Rs13.Mods;
+namespace Rs13.Packs;
 
 enum OwnKind
 {
@@ -24,7 +24,7 @@ static class OwnType<T> where T : class
     internal static void Fill(string path, JsonSerializerContext? context, OwnKind kind, bool networked)
     {
         var info = context?.GetTypeInfo(typeof(T)) as JsonTypeInfo<T>
-            ?? throw new InvalidOperationException($"{typeof(T).Name} is in no JSON context: the pre-compile scan in Rs13.Mods.props missed its attribute");
+            ?? throw new InvalidOperationException($"{typeof(T).Name} is in no JSON context: the pre-compile scan in Rs13.Packs.props missed its attribute");
         filled = (path, info, kind, networked);
     }
 

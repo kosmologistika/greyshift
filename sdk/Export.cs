@@ -7,14 +7,14 @@ public class TypedModuleWorldExportsImpl : ITypedModuleWorldExports
 {
     public static void Setup()
     {
-        var builder = new Rs13.Mods.ModBuilder();
-        Rs13.Mods.ModEntry.Build(builder);
-        Rs13.Mods.ModRuntime.Start(builder);
+        var builder = new Rs13.Packs.ModBuilder();
+        Rs13.Packs.ModEntry.Build(builder);
+        Rs13.Packs.ModRuntime.Start(builder);
     }
 
-    public static void Dispatch(Event @event) => Rs13.Mods.ModRuntime.Dispatch(@event);
+    public static void Dispatch(Event @event) => Rs13.Packs.ModRuntime.Dispatch(@event);
 
-    public static void DispatchTimer(string name) => Rs13.Mods.ModRuntime.DispatchTimer(name);
+    public static void DispatchTimer(string name) => Rs13.Packs.ModRuntime.DispatchTimer(name);
 
-    public static void DispatchClient(string kind, ulong from, byte[] value) => Rs13.Mods.ModRuntime.DispatchClient(kind, from, value);
+    public static void DispatchClient(string kind, ulong from, byte[] value) => Rs13.Packs.ModRuntime.DispatchClient(kind, from, value);
 }

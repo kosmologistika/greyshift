@@ -1,6 +1,6 @@
 using System.Runtime.CompilerServices;
 
-namespace Rs13.Mods;
+namespace Rs13.Packs;
 
 /// <summary>
 /// A system driving one rule component. A rule is active while the scope it

@@ -1,4 +1,4 @@
-namespace Rs13.Mods;
+namespace Rs13.Packs;
 
 /// <summary>
 /// Base of a module's own components. Its state is what <c>[DataField]</c>

@@ -2,7 +2,7 @@ using System.Numerics;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace Rs13.Mods;
+namespace Rs13.Packs;
 
 /// <summary>A tile offset or position, the engine's <c>IVec2</c></summary>
 [JsonConverter(typeof(Vector2iJson))]

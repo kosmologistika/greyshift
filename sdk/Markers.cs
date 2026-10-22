@@ -1,4 +1,4 @@
-namespace Rs13.Mods;
+namespace Rs13.Packs;
 
 // What a type may do is a constraint, so a grant the host would refuse at
 // runtime does not compile. sdk.rs puts these on the engine's types from
@@ -51,5 +51,5 @@ public interface IOwnResource;
 /// <summary>An event of the module's own, JSON to and from clients</summary>
 public interface INetSerializable;
 
-/// <summary>Another package's public component, read leniently and never written</summary>
+/// <summary>Another pack's public component, read leniently and never written</summary>
 public interface IMirrorComponent : IReadable;

@@ -5,7 +5,7 @@ using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Diagnostics;
 using Microsoft.CodeAnalysis.Operations;
 
-namespace Rs13.Mods.Generators;
+namespace Rs13.Packs.Generators;
 
 /// <summary>
 /// What a system does with the world that would only fail at setup or in a
@@ -15,13 +15,13 @@ namespace Rs13.Mods.Generators;
 [DiagnosticAnalyzer(LanguageNames.CSharp)]
 public sealed class WiringAnalyzer : DiagnosticAnalyzer
 {
-    const string Sdk = "Rs13.Mods.";
+    const string Sdk = "Rs13.Packs.";
 
     static readonly DiagnosticDescriptor InitializeWorld = new(
         "RS13008",
         "Initialize does not only subscribe",
         "{0}.Initialize {1}",
-        "Rs13.Mods",
+        "Rs13.Packs",
         DiagnosticSeverity.Warning,
         true);
 
@@ -29,7 +29,7 @@ public sealed class WiringAnalyzer : DiagnosticAnalyzer
         "RS13010",
         "An edge the host does not relay",
         "{0} cannot be observed being {1}: the host relays only the edges typed.wit grants, and an own component has none",
-        "Rs13.Mods",
+        "Rs13.Packs",
         DiagnosticSeverity.Error,
         true);
 

@@ -1,4 +1,4 @@
-namespace Rs13.Mods;
+namespace Rs13.Packs;
 
 /// <summary>
 /// What the SDK generator writes for a module: the partial methods have an

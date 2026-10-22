@@ -1,4 +1,4 @@
-namespace Rs13.Mods;
+namespace Rs13.Packs;
 
 /// <summary>
 /// A <c>[Dependency]</c> that answers which entities hold a component. The

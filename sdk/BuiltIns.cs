@@ -1,6 +1,6 @@
 using Wit = TypedModuleWorld.wit.Imports.rs13.mods.v0_1_0.ITypedEcsImports;
 
-namespace Rs13.Mods;
+namespace Rs13.Packs;
 
 /// <summary>A service of the SDK a <c>[Dependency]</c> field may hold, filled at setup like a system</summary>
 public interface IBuiltIn;

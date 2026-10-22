@@ -30,7 +30,7 @@ writes through intents and events (ADR 0013), which is how native prediction
 takes its inputs. The road is a shared module run on both sides, the mod
 counterpart of the `shared` crate, whose own components ride the slots and
 whose calls are deterministic: no `now`, no unseeded randomness, no host
-answer that differs by side. A package would ship it beside `server.wasm`,
+answer that differs by side. A pack would ship it beside `server.wasm`,
 and only that part reaches clients. It is done when a mod needs it and the
 station content shows which actions want it, and it gets its own ADR.
 

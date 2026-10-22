@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Wit = TypedModuleWorld.wit.Imports.rs13.mods.v0_1_0.ITypedEcsImports;
 
-namespace Rs13.Mods;
+namespace Rs13.Packs;
 
 /// <summary>An engine component's kind and its case of the bindings' component variant, filled on first use</summary>
 static class EngineComponent<T> where T : class
