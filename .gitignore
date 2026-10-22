@@ -1,7 +1,7 @@
-# Built from each package's src/ and the template's, by the engine's `cargo run -p mod-build` or by hand
-mods/*/server.wasm
-mods/*/bin/
-mods/*/obj/
+# Built from each pack's project and the template's, by the engine's `cargo run -p mod-build` or by hand
+packs/*/server.wasm
+packs/*/bin/
+packs/*/obj/
 template/server.wasm
 template/bin/
 template/obj/
@@ -12,7 +12,7 @@ sdk/Generators/obj/
 *.user
 *.sln
 *.slnx
-mods/*/Properties/
+packs/*/Properties/
 template/Properties/
 
 .DS_Store

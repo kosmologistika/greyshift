@@ -2,7 +2,7 @@
 
 `LICENSE` (MIT) covers everything in this repository that is not listed
 below: prototypes, maps made here, locales, shaders, the UI theme, the editor
-presets and the source of every package under `mods/`.
+presets and the source of every pack under `packs/`.
 
 Art and audio keep the terms of where they came from. The notice sits beside
 the files and is what counts; this table says where to look.

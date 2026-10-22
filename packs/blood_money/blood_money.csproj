@@ -27,7 +27,7 @@
   </ItemGroup>
 
   <!-- the SDK compiles in as sources: mod-build hands its path in, a build from this repository alone takes the published copy -->
-  <Import Project="$(SdkCs)/Rs13.Mods.props" Condition="'$(SdkCs)' != ''" />
-  <Import Project="../../sdk/Rs13.Mods.props" Condition="'$(SdkCs)' == ''" />
+  <Import Project="$(SdkCs)/Rs13.Packs.props" Condition="'$(SdkCs)' != ''" />
+  <Import Project="../../sdk/Rs13.Packs.props" Condition="'$(SdkCs)' == ''" />
 
 </Project>

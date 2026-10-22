@@ -38,7 +38,7 @@ docker run --rm --platform linux/amd64 -v "$PWD:/content" -w /content/mods/<id>/
   mcr.microsoft.com/dotnet/sdk:10.0 dotnet build -c Release
 ```
 
-The project imports `sdk/Rs13.Mods.props` from the repository root, which
+The project imports `sdk/Rs13.Packs.props` from the repository root, which
 compiles the SDK in as sources and builds the generator in `sdk/Generators`
 the first time. A wiring mistake is a compile error with an `RS130xx` id; a
 type the engine does not grant does not compile either, since the records in

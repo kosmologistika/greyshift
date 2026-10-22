@@ -16,7 +16,7 @@
     <!-- the NativeAOT-LLVM compiler package is per build host -->
     <IlcLlvmRid Condition="'$(IlcLlvmRid)' == ''">linux-x64</IlcLlvmRid>
     <!-- the published SDK: three levels up from a package under mods/, two from the template itself -->
-    <SdkCs Condition="'$(SdkCs)' == '' and Exists('../../../sdk/Rs13.Mods.props')">../../../sdk</SdkCs>
+    <SdkCs Condition="'$(SdkCs)' == '' and Exists('../../../sdk/Rs13.Packs.props')">../../../sdk</SdkCs>
     <SdkCs Condition="'$(SdkCs)' == ''">../../sdk</SdkCs>
   </PropertyGroup>
 
@@ -25,6 +25,6 @@
     <PackageReference Include="runtime.$(IlcLlvmRid).microsoft.dotnet.ilcompiler.llvm" Version="10.0.0-rc.1.26306.1" />
   </ItemGroup>
 
-  <Import Project="$(SdkCs)/Rs13.Mods.props" />
+  <Import Project="$(SdkCs)/Rs13.Packs.props" />
 
 </Project>
