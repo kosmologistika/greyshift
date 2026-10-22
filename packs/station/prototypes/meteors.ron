@@ -21,7 +21,7 @@
         hide_spawn_menu: true,
         components: {
             "DisplayName": (name: "meteor"),
-            "RamsThrough": (damage: {Blunt: 300}, hits: 4),
+            "RamsThrough": (damage: {Blunt: 300}, hits: 4, sound: Some((source: Path("audio/effects/meteorimpact.ogg"), range_tiles: 20.0))),
             "Explosive": (
                 radius: 1,
                 damage: {Blunt: 220},
@@ -41,7 +41,7 @@
         hide_spawn_menu: true,
         components: {
             "DisplayName": (name: "big meteor"),
-            "RamsThrough": (damage: {Blunt: 300}, hits: 6),
+            "RamsThrough": (damage: {Blunt: 300}, hits: 6, sound: Some((source: Path("audio/effects/meteorimpact.ogg"), range_tiles: 20.0))),
             "Explosive": (
                 radius: 2,
                 damage: {Blunt: 220},

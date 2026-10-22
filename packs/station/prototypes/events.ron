@@ -18,7 +18,7 @@
                 announcement: Some("meteor_shower_incoming"),
                 targeted: true,
             ),
-            "MeteorShower": (count: 6, over_secs: 20.0, pool: {"meteor_small": 3.0, "meteor_large": 1.0}),
+            "station::MeteorShower": (count: 6, over_secs: 20.0, pool: {"meteor_small": 3.0, "meteor_large": 1.0}),
         },
     ),
 ]

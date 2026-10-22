@@ -13,11 +13,4 @@
         body: "announcement-event-drill-body",
         style: Priority,
     ),
-    (
-        type: "Announcement",
-        id: "meteor_shower_incoming",
-        title: Some("announcement-meteor-shower-title"),
-        body: "announcement-meteor-shower-body",
-        style: Alert,
-    ),
 ]
